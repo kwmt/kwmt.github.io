@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Vps on Androg</title>
+    <link>https://kwmt27.net/categories/vps/</link>
+    <description>Recent content in Vps on Androg</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>ja</language>
+    <lastBuildDate>Sun, 05 Aug 2012 00:00:00 +0000</lastBuildDate>
+    
+	<atom:link href="https://kwmt27.net/categories/vps/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>個人のメモ：さくらVPSの初期にしたこと。</title>
+      <link>https://kwmt27.net/index.php/2012/08/06/%E5%80%8B%E4%BA%BA%E3%81%AE%E3%83%A1%E3%83%A2%E3%81%95%E3%81%8F%E3%82%89vps%E3%81%AE%E5%88%9D%E6%9C%9F%E3%81%AB%E3%81%97%E3%81%9F%E3%81%93%E3%81%A8/</link>
+      <pubDate>Sun, 05 Aug 2012 00:00:00 +0000</pubDate>
+      
+      <guid>https://kwmt27.net/index.php/2012/08/06/%E5%80%8B%E4%BA%BA%E3%81%AE%E3%83%A1%E3%83%A2%E3%81%95%E3%81%8F%E3%82%89vps%E3%81%AE%E5%88%9D%E6%9C%9F%E3%81%AB%E3%81%97%E3%81%9F%E3%81%93%E3%81%A8/</guid>
+      <description>さくらVPSにカスタムOS（Ubuntu12.04）をインストールした。
+それからvpsに接続するsshの設定を忘れそうなので、どこのサイトを参考にしたかぐらいはメモっとく。
+ http://azurite.espel.jp/index.php/2011/04/03/sakuravps-mac-ssh/ http://d.hatena.ne.jp/mickey24/20110210/sakura_vps  </description>
+    </item>
+    
+  </channel>
+</rss>

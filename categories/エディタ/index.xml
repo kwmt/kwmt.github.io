@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>エディタ on Androg</title>
+    <link>https://kwmt27.net/categories/%E3%82%A8%E3%83%87%E3%82%A3%E3%82%BF/</link>
+    <description>Recent content in エディタ on Androg</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>ja</language>
+    <lastBuildDate>Thu, 05 Jan 2017 14:47:25 +0900</lastBuildDate>
+    
+	<atom:link href="https://kwmt27.net/categories/%E3%82%A8%E3%83%87%E3%82%A3%E3%82%BF/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>SublimeText3の設定たち</title>
+      <link>https://kwmt27.net/2017/01/05/sublimetext-settings/</link>
+      <pubDate>Thu, 05 Jan 2017 14:47:25 +0900</pubDate>
+      
+      <guid>https://kwmt27.net/2017/01/05/sublimetext-settings/</guid>
+      <description>はじめに macをクリーンインストールして、Sublime Text3を入れ直したはいいが、シンタックスハイライトされてないのがあったので設定する方法をメモ
+事前準備 パッケージコントロールが入っていなかったらインストールします。
+こちらに書いているとおり、下記のimport~をコピーして、View &amp;gt; Show Consoleを開いて、そこに貼り付けてエンターキーを押します。 https://packagecontrol.io/installation
+コマンドパレットを呼び出すには Command＋Shift＋Pを押す（Tools→Command Pallet…でもOK）
+下図のようなもの 基本的なインストール方法 例えば、 Dockerfile syntax Highlightingを設定したい場合は下記手順のようになります。
+ コマンドパレットを呼び出します。 「Package Control: Install Package」を選択 「Dockerfile Syntax Highlighting」を選択  パッケージ Dockerfileのシンタックスハイライトを設定する Dockerfile syntax Highlighting
+こんな感じになって快適！
+シェルスクリプトのシンタックスハイライト設定 ShellScriptImproved
+Markdownのシンタックスハイライト設定 Monokai Extended Markdown Extended
+Monokai Extendedを入れたら、SublimeText→Preferences→Color Scheme→Monokai Extended→変更したいカラーテーマを選ぶ</description>
+    </item>
+    
+  </channel>
+</rss>

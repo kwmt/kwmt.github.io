@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Googlemap on Androg</title>
+    <link>https://kwmt27.net/tags/googlemap/</link>
+    <description>Recent content in Googlemap on Androg</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>ja</language>
+    <lastBuildDate>Sun, 06 Oct 2019 02:30:00 +0900</lastBuildDate>
+    
+	<atom:link href="https://kwmt27.net/tags/googlemap/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>SwiftUIでGoogleMapsを表示するには</title>
+      <link>https://kwmt27.net/2019/10/06/how-to-googlemap-on-swiftui/</link>
+      <pubDate>Sun, 06 Oct 2019 02:30:00 +0900</pubDate>
+      
+      <guid>https://kwmt27.net/2019/10/06/how-to-googlemap-on-swiftui/</guid>
+      <description> SwiftUIでGoogleMapを表示する方法を調べたのでメモします。
+GoogleMapView.swiftを作成  補足 UIViewRepresentableはUIKitを表すViewです。
+makeUIViewとupdateUIViewは必ず実装する必要があります。
+func makeUIView(context: Self.Context) -&amp;gt; Self.UIViewType  は、表示するUIKitビューを作成します。
+func updateUIView(Self.UIViewType, context: Self.Context)  は、提示されたUIKitビュー（およびその座標）を最新に更新します。
+これからもわかるように、makeUIViewからupdateUIViewの順で呼ばれます。
+作成したGoogleMapViewを表示したい場所に挿入  これだけです。
+完成 補足 もちろん、Google MapsのAPIの有効化やAPIキーの設定は必要です。
+ GoogleMapsの設定に関してはこちらを参照  Get Started | Maps SDK for iOS | Google Developers   </description>
+    </item>
+    
+  </channel>
+</rss>

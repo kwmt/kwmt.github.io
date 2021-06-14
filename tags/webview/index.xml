@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Webview on Androg</title>
+    <link>https://kwmt27.net/tags/webview/</link>
+    <description>Recent content in Webview on Androg</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>ja</language>
+    <lastBuildDate>Wed, 16 Jul 2014 00:00:00 +0000</lastBuildDate>
+    
+	<atom:link href="https://kwmt27.net/tags/webview/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>【Android】【WebView】Cookieの有効期限が切れた場合にどうなるか確認する</title>
+      <link>https://kwmt27.net/index.php/2014/07/16/check-cookie-if-expire/</link>
+      <pubDate>Wed, 16 Jul 2014 00:00:00 +0000</pubDate>
+      
+      <guid>https://kwmt27.net/index.php/2014/07/16/check-cookie-if-expire/</guid>
+      <description>CookieSyncManager.createInstance(context); // &#39;Set-Cookie&#39; HTTP response headerのフォーマットに合わせる SimpleDateFormat simpleDateFormat = new SimpleDateFormat(&#34;EEE, d-MMM-yyyy HH:mm:ss z&#34;, Locale.UK); TimeZone gmt = TimeZone.getTimeZone(&#34;GMT&#34;); simpleDateFormat.setTimeZone(gmt); Calendar calendar = Calendar.getInstance(); calendar.setTimeZone(gmt); // すぐ確認できる時間を設定(ここでは5秒) int afterFiveSeconds = calendar.get(Calendar.SECOND) + 5; calendar.set(Calendar.SECOND, afterFiveSeconds); // 有効期限の書式を作成して、 String expire = &#34;expires=&#34; + simpleDateFormat.format(calendar.getTime()) + &#34;;&#34;; // 上で作った有効期限を含めたクッキーを保存して、 CookieManager.getInstance().setCookie(&amp;lt;URL&amp;gt;, &amp;lt;&#39;Set-Cookie&#39; HTTP response headerのフォーマット&amp;gt;); //6秒ぐらい待って、 Thread.sleep(6000); // クッキーが削除されているか確認 Log.d(TAG,CookieManager.getInstace().getCookie(&amp;lt;クッキーを保存したURL&amp;gt;));  </description>
+    </item>
+    
+  </channel>
+</rss>

@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Icon on Androg</title>
+    <link>https://kwmt27.net/tags/icon/</link>
+    <description>Recent content in Icon on Androg</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>ja</language>
+    <lastBuildDate>Mon, 09 Jul 2018 22:00:00 +0900</lastBuildDate>
+    
+	<atom:link href="https://kwmt27.net/tags/icon/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Flutter アイコンリスト</title>
+      <link>https://kwmt27.net/2018/07/09/flutter-icon-list/</link>
+      <pubDate>Mon, 09 Jul 2018 22:00:00 +0900</pubDate>
+      
+      <guid>https://kwmt27.net/2018/07/09/flutter-icon-list/</guid>
+      <description>Flutterのアイコンリストは公式ドキュメントにある https://docs.flutter.io/flutter/material/Icons-class.html
+以上。</description>
+    </item>
+    
+  </channel>
+</rss>

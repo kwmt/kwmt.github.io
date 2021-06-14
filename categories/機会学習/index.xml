@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>機会学習 on Androg</title>
+    <link>https://kwmt27.net/categories/%E6%A9%9F%E4%BC%9A%E5%AD%A6%E7%BF%92/</link>
+    <description>Recent content in 機会学習 on Androg</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>ja</language>
+    <lastBuildDate>Sun, 28 Feb 2016 12:50:27 +0900</lastBuildDate>
+    
+	<atom:link href="https://kwmt27.net/categories/%E6%A9%9F%E4%BC%9A%E5%AD%A6%E7%BF%92/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>機械学習勉強会メモ</title>
+      <link>https://kwmt27.net/2016/02/28/study-machine-learning/</link>
+      <pubDate>Sun, 28 Feb 2016 12:50:27 +0900</pubDate>
+      
+      <guid>https://kwmt27.net/2016/02/28/study-machine-learning/</guid>
+      <description>2/27に近畿大学で行われた機械学習勉強会に行ってきました。
+波部先生 @habhit slideshareに上がる
+機械学習とは「データの集合からその法則性を学ぶ」 写像で表せるf:x-&amp;gt;y
+x:特徴抽出(特徴ベクトル) y:識別0,1,2,回帰:実数値、異常検知:0,1   人工知能
+ 人間の知能　と同等なものを目指したシステム全体 機会学習 ∈ 人工知能  パターン認識 音声・画像からスタート 機会学習はそれらとは関係無く記号的な世界からスタート 現在ではあまり差はない
+ 問題設定
+ 教師あり フェリーか飛行機がわかってる 教師なし フェリーか飛行機がわからない 半教師 一部はフェリーか飛行機がわかってるが他は不明  学習結果の評価 やったことがどんだけいいのか
+ 汎化性能 限られたデータを使って汎用的な識別規則を学習できるか？ 学習データにはいっていないものが識別できるか 過学習 わかってるデータ Q.過学習してるんじゃないの？ A.交差検証法してますから   主な学習 * 線形回帰の基本 入力と出力の差の2乗の和が最小になるように係数を決める
+ - リッジ回帰 予測誤差だけでは過学習が起こる - ロジスティック回帰 「あるクラスに属する確率」 確信度  まとめ
+基本はf:x-&amp;gt;y
+なにをxにしてなにをyにするかの選択が重要
+機械学習の教育への応用可能性 ###〜安全運転教育を例に〜 多田先生
+交通事故の現状は昨年1年間で57万件
+事故の90%はドライバーエラー　ドライバー側からのアプローチ</description>
+    </item>
+    
+  </channel>
+</rss>

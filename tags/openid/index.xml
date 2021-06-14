@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Openid on Androg</title>
+    <link>https://kwmt27.net/tags/openid/</link>
+    <description>Recent content in Openid on Androg</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>ja</language>
+    <lastBuildDate>Wed, 01 May 2013 00:00:00 +0000</lastBuildDate>
+    
+	<atom:link href="https://kwmt27.net/tags/openid/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>#golang OpenIDのライブラリ</title>
+      <link>https://kwmt27.net/index.php/2013/05/01/openid/</link>
+      <pubDate>Wed, 01 May 2013 00:00:00 +0000</pubDate>
+      
+      <guid>https://kwmt27.net/index.php/2013/05/01/openid/</guid>
+      <description> OpenIDのライブラリ golangのOpenIDのライブラリありまっせというだけ。
+https://github.com/yohcop/openid.go
+別のライブラリもあるけど、上の方がsample{.broken_link}もあって楽チン！?
+https://github.com/fduraffourg/go-openid{.broken_link}
+sampleはOpenIDの仕組みがわかれば簡単。だけど、OpenID発行サイトで認証されたユーザーのIDが返ってくるんだけど、そこからユーザー情報（メールアドレスとか）に変換する方法が不明。。GAEならすぐできそうなんだけど。。。
+セキュリティの参考情報  OpenIDに仕掛けられやすい5つの攻撃 http://thinkit.co.jp/article/835/1 「FacebookやOpenIDでログイン」に複数の弱点――セキュリティ研究者が指摘 http://www.computerworld.jp/topics/592/202071{.broken_link}  </description>
+    </item>
+    
+  </channel>
+</rss>

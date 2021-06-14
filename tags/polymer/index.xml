@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Polymer on Androg</title>
+    <link>https://kwmt27.net/tags/polymer/</link>
+    <description>Recent content in Polymer on Androg</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>ja</language>
+    <lastBuildDate>Tue, 23 Jun 2015 00:00:00 +0000</lastBuildDate>
+    
+	<atom:link href="https://kwmt27.net/tags/polymer/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>はじめてのPolymer1.0(Webコンポーネントの作り方)</title>
+      <link>https://kwmt27.net/index.php/2015/06/23/how-to-make-web-component/</link>
+      <pubDate>Tue, 23 Jun 2015 00:00:00 +0000</pubDate>
+      
+      <guid>https://kwmt27.net/index.php/2015/06/23/how-to-make-web-component/</guid>
+      <description>&lt;h2 id=&#34;はじめに&#34;&gt;はじめに&lt;/h2&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://sites.google.com/site/devfestjapan/&#34; target=&#34;_blank&#34;&gt;Google I/O報告会 2015 東京会場&lt;/a&gt;のブレイクアウトセッションの中でWebコンポーネントの作り方をライブコーディングで紹介して頂きまして、一緒に実際にやって、はじめての自分にとってはすっごくわかりやすくて面白かったので残しておこうとメモ。（公開してもいいことは確認済みです）&lt;/p&gt;
+
+&lt;p&gt;当日は、下記の前提がインストールされてなかったので動かすところはできませんでしたが、いまこの記事を書きながら実際に動かしてみています。&lt;/p&gt;
+
+&lt;h2 id=&#34;前提&#34;&gt;前提&lt;/h2&gt;
+
+&lt;ol&gt;
+&lt;li&gt;&lt;a href=&#34;http://qiita.com/oreo3@github/items/eb790fc091aa28af8d33&#34; target=&#34;_blank&#34;&gt;npmをインストールする&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;http://qiita.com/oreo3@github/items/eb790fc091aa28af8d33&#34; target=&#34;_blank&#34;&gt;Bowerをインストールする&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;$HOME/polymer/devfest&lt;/code&gt;ディレクトリがあるとします。&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;h2 id=&#34;前提の補足&#34;&gt;前提の補足&lt;/h2&gt;
+
+&lt;p&gt;&lt;strong&gt;&lt;code&gt;$ nodebrew install latest&lt;/code&gt;でソースからインストールしたが、&lt;code&gt;node -v&lt;/code&gt;などと打つと&lt;code&gt;command not found: node&lt;/code&gt;と言われた時の対処法&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;→バージョンを指定するだけ。&lt;/p&gt;
+
+&lt;h3 id=&#34;指定するには&#34;&gt;指定するには？&lt;/h3&gt;
+
+&lt;p&gt;1.インストールされてるバージョンを確認&lt;/p&gt;
+
+&lt;pre class=&#34;go&#34;&gt;$ nodebrew ls
+v0.12.5
+&lt;/pre&gt;
+
+&lt;p&gt;2.v0.12.5を指定する&lt;/p&gt;
+
+&lt;pre class=&#34;go&#34;&gt;$ nodebrew use v0.12.5
+&lt;/pre&gt;
+
+&lt;p&gt;3.確認&lt;/p&gt;
+
+&lt;pre class=&#34;go&#34;&gt;% node -v
+v0.12.5
+&lt;/pre&gt;
+
+&lt;h2 id=&#34;webコンポーネントの作り方-ここからライブコーディングでした&#34;&gt;Webコンポーネントの作り方(ここからライブコーディングでした)&lt;/h2&gt;
+
+&lt;p&gt;&lt;/p&gt;</description>
+    </item>
+    
+  </channel>
+</rss>

@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>角丸 on Androg</title>
+    <link>https://kwmt27.net/tags/%E8%A7%92%E4%B8%B8/</link>
+    <description>Recent content in 角丸 on Androg</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>ja</language>
+    <lastBuildDate>Sun, 05 Aug 2018 21:28:00 +0900</lastBuildDate>
+    
+	<atom:link href="https://kwmt27.net/tags/%E8%A7%92%E4%B8%B8/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Flutterで画像を角丸にするには</title>
+      <link>https://kwmt27.net/2018/08/05/flutter-image-rounded-corner/</link>
+      <pubDate>Sun, 05 Aug 2018 21:28:00 +0900</pubDate>
+      
+      <guid>https://kwmt27.net/2018/08/05/flutter-image-rounded-corner/</guid>
+      <description> こんな感じに画像を角丸にするには、ClipRRectを使うと良さそう。
+SizedBox( height: 180.0, child: Container( child: ClipRRect( borderRadius: BorderRadius.circular(8.0), child: Image.network( message.downloadImageUrl.toString(), fit: BoxFit.cover, )), ));  参考  Rounded Corners Image in Flutter  </description>
+    </item>
+    
+  </channel>
+</rss>

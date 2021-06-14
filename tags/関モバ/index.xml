@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>関モバ on Androg</title>
+    <link>https://kwmt27.net/tags/%E9%96%A2%E3%83%A2%E3%83%90/</link>
+    <description>Recent content in 関モバ on Androg</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>ja</language>
+    <lastBuildDate>Wed, 27 Apr 2016 13:01:45 +0900</lastBuildDate>
+    
+	<atom:link href="https://kwmt27.net/tags/%E9%96%A2%E3%83%A2%E3%83%90/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>関西モバイルアプリ研究会 #13に行ってきた</title>
+      <link>https://kwmt27.net/2016/04/27/kanmoba/</link>
+      <pubDate>Wed, 27 Apr 2016 13:01:45 +0900</pubDate>
+      
+      <guid>https://kwmt27.net/2016/04/27/kanmoba/</guid>
+      <description>4&amp;frasl;26(火)は、 関西モバイルアプリ研究会 #13 に参加しました。
+きになったところ http://wantedly.connpass.com/event/29039/の資料を見てみると面白そう。
+RxSwiftは4/24に知ったけど、ReactiveCocoaというのもあるのね。。
+ RxSwiftとの違い  エラーの型付け UIBindingが豊富なRxSwiftに流れていたが、Rexというのがあります。そしてこれをReactiveCocoaのリポジトリへ移そうとしています。Rex込でReactiveCocoaを検討していただけると良い選択肢だと思います。   「エンジニアさんでもデザインできちゃう Adobe Xd のススメ」 https://blogs.adobe.com/creativestation/web-how-to-play-with-adobe-xd ちょっと使ってみたい！</description>
+    </item>
+    
+  </channel>
+</rss>

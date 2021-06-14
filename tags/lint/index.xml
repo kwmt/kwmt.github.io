@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Lint on Androg</title>
+    <link>https://kwmt27.net/tags/lint/</link>
+    <description>Recent content in Lint on Androg</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>ja</language>
+    <lastBuildDate>Sat, 09 Dec 2017 16:25:00 +0900</lastBuildDate>
+    
+	<atom:link href="https://kwmt27.net/tags/lint/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Android Lint</title>
+      <link>https://kwmt27.net/2017/12/09/android-studio-lint-for-kotlin/</link>
+      <pubDate>Sat, 09 Dec 2017 16:25:00 +0900</pubDate>
+      
+      <guid>https://kwmt27.net/2017/12/09/android-studio-lint-for-kotlin/</guid>
+      <description>コマンドラインからlintを実行するには project root で下記を実行します
+./gradlew lint  特定のビルド バリアントに対してのみ lint タスクを実行するには
+（例）
+./gradlew lintDevelopDebug  設定 IDリストを表示するには？ % $ANDROID_HOME/tools/bin/lint --list Valid issue categories: Correctness Correctness:Messages Correctness:Chrome OS Security Performance Usability:Typography Usability:Icons Usability Accessibility Internationalization Internationalization:Bidirectional Text Valid issue id&#39;s: &amp;quot;ContentDescription&amp;quot;: Image without contentDescription &amp;quot;AddJavascriptInterface&amp;quot;: addJavascriptInterface Called &amp;quot;ShortAlarm&amp;quot;: Short or Frequent Alarm &amp;quot;AllCaps&amp;quot;: Combining textAllCaps and markup &amp;quot;AllowAllHostnameVerifier&amp;quot;: Insecure HostnameVerifier &amp;quot;AlwaysShowAction&amp;quot;: Usage of showAsAction=always &amp;quot;InvalidUsesTagAttribute&amp;quot;: Invalid name attribute for uses element.</description>
+    </item>
+    
+  </channel>
+</rss>

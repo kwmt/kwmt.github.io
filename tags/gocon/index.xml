@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Gocon on Androg</title>
+    <link>https://kwmt27.net/tags/gocon/</link>
+    <description>Recent content in Gocon on Androg</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>ja</language>
+    <lastBuildDate>Wed, 27 Apr 2016 10:09:38 +0900</lastBuildDate>
+    
+	<atom:link href="https://kwmt27.net/tags/gocon/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>GoCon 2016 springに行ってきた</title>
+      <link>https://kwmt27.net/2016/04/27/gocon-2016-spring/</link>
+      <pubDate>Wed, 27 Apr 2016 10:09:38 +0900</pubDate>
+      
+      <guid>https://kwmt27.net/2016/04/27/gocon-2016-spring/</guid>
+      <description>4&amp;frasl;23(土)は、GoCon2016 Springに行ってきました。
+イワタプロが資料一覧をまとめてくださってましたので、乗っかります
+資料一覧
+toggeterはこちら
+概要だけ書いておこう。
+ Daveさん:エラーの話 Makiさん:APIサーバーを書きたくない話 motemenさん:Goコードを読む話 shibukawaさん:GUIの話 hirataさん:elastic beatの話 kazegusuriさん:gRPC導入 鶴岡さん:GoとGAEのweb app開発の話 vvakameさん:webフレームワーク(ucon)作成した話 stanakaさん:コントリビュートしたときの話 yoshiki nakagawaさん:Goサーバーのプロダクション環境の話 kaneshinさん:Cloud Vision APIをGoでやってみた話 methaneさん:パフォーマンスチューニングの話  あとLTも盛り沢山 ストリートファイター４をGoをつかって操作の話はもりあがりましたね。 https://github.com/cero-t/cero-macro.go https://twitter.com/cero_t/status/724267524963991553</description>
+    </item>
+    
+    <item>
+      <title>GoCon報告会で報告させて頂きました。</title>
+      <link>https://kwmt27.net/index.php/2013/06/03/gocon/</link>
+      <pubDate>Sun, 02 Jun 2013 00:00:00 +0000</pubDate>
+      
+      <guid>https://kwmt27.net/index.php/2013/06/03/gocon/</guid>
+      <description> イベント 渡米放浪記(Google IOなど) / GoCon報告会 / BigQuery Ideathon + Hackathon
+https://plus.google.com/u/0/events/cb7qvi8rjccej62i79l48mgdcfg
+報告資料 http://go-talks-kwmt.appspot.com/2013/gocon-spring.slide#1
+ブログにそのまま載せれるように文字多めで書きました。
+私にとって人生で大きな出来事もこっそり書いてたりしてます。
+みなさま今後ともよろしくお願い致します。
+GoConに行った時のブログ書いていなかったので、ちょうどよかったです。
+使用プレゼンツール  ツール：https://code.google.com/p/go/source/browse/?repo=talks   GoDoc：https://godoc.org/golang.org/x/tools/cmd/present   ↓↓移動したそうです(2014.5.15追記)   GoDoc：http://godoc.org/code.google.com/p/go.tools/cmd/present   </description>
+    </item>
+    
+  </channel>
+</rss>

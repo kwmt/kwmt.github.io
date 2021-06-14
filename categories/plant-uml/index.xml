@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Plant Uml on Androg</title>
+    <link>https://kwmt27.net/categories/plant-uml/</link>
+    <description>Recent content in Plant Uml on Androg</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>ja</language>
+    <lastBuildDate>Thu, 11 Sep 2014 00:00:00 +0000</lastBuildDate>
+    
+	<atom:link href="https://kwmt27.net/categories/plant-uml/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Intellij IDEAでPlant UMLを使えるようにする。</title>
+      <link>https://kwmt27.net/index.php/2014/09/12/how_to_setup_plant_uml_in_intellij_idea/</link>
+      <pubDate>Thu, 11 Sep 2014 00:00:00 +0000</pubDate>
+      
+      <guid>https://kwmt27.net/index.php/2014/09/12/how_to_setup_plant_uml_in_intellij_idea/</guid>
+      <description>&lt;h2 id=&#34;はじめに&#34;&gt;はじめに&lt;/h2&gt;
+
+&lt;p&gt;&lt;a href=&#34;http://kwmt27.net/index.php/2014/09/11/read_webdbpress_about_webapi_design/&#34; title=&#34;WEB+DB PRESS Vol.82 の「Web APIデザインの鉄則」特集を読んだ。&#34;&gt;WEB+DB PRESS Vol.82 の「Web APIデザインの鉄則」特集を読んで&lt;/a&gt;、&lt;a href=&#34;http://plantuml.sourceforge.net/index.html&#34; target=&#34;_blank&#34;&gt;Plant UML&lt;/a&gt;というツールを知ったのですが、さっそくIntellij IDEAで使えたらいいなぁと思って、使えるようになったので、その設定方法を書いておこうかと思います。といっても、プラグインをインストール＋αぐらいですが、、、&lt;/p&gt;
+
+&lt;p&gt;&lt;/p&gt;</description>
+    </item>
+    
+  </channel>
+</rss>

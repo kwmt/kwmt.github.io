@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Dagger2 on Androg</title>
+    <link>https://kwmt27.net/tags/dagger2/</link>
+    <description>Recent content in Dagger2 on Androg</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>ja</language>
+    <lastBuildDate>Sat, 21 Oct 2017 21:00:00 +0900</lastBuildDate>
+    
+	<atom:link href="https://kwmt27.net/tags/dagger2/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Dagger2でProvidesアノテーションつけてないのに、なぜフィールド注入されるのか</title>
+      <link>https://kwmt27.net/2017/10/21/dagger2-subcomponent/</link>
+      <pubDate>Sat, 21 Oct 2017 21:00:00 +0900</pubDate>
+      
+      <guid>https://kwmt27.net/2017/10/21/dagger2-subcomponent/</guid>
+      <description>Dagger2について分かってなかったこと class MainActivity : DaggerAppCompatActivity() { @Inject lateinit var viewModel: MainViewModel }  MainActivityにviewModelを保持させてくて、@Injectアノテーションを付けてあげれば、インスタンスを注入してくれてる。
+インスタンス注入するには、以下のような準備は必要です。
+下記のようにActivityModuleとAppComonentを定義し、ActivityModuleをAppComponentの@Component(modules=ActivityModule::class)に指定します。
+@Singleton @Component(modules = arrayOf( AndroidSupportInjectionModule::class, AppModule::class, ActivityModule::class ) ) interface AppComponent : AndroidInjector&amp;lt;App&amp;gt; { @Component.Builder interface Builder { @BindsInstance fun application(application: App): Builder fun build():AppComponent } }  @Module abstract class ActivityModule { @ActivityScope @ContributesAndroidInjector internal abstract fun contributeMainActivity(): MainActivity }  ActivityScopeも定義が必要だし、
+@Scope @Retention(AnnotationRetention.RUNTIME) @MustBeDocumented annotation class ActivityScope  AndroidManifest.xmlにAppを指定する必要がありますし、
+&amp;lt;application android:name=&amp;quot;.App&amp;quot;  そもそもAppは、Applicationを継承したクラスで、</description>
+    </item>
+    
+    <item>
+      <title>Dagger2 &#43; Android &#43; ViewModel(with databinding)</title>
+      <link>https://kwmt27.net/2017/10/17/dagger2-android-viewmodel/</link>
+      <pubDate>Tue, 17 Oct 2017 10:00:00 +0900</pubDate>
+      
+      <guid>https://kwmt27.net/2017/10/17/dagger2-android-viewmodel/</guid>
+      <description>はじめに daggerバージョンが2.10になったときに、dagger.androidがリリースされたようで、いままでと少し書き方が変わっていたので、メモを書きました。
+基本的に下記ページを参考にしています。
+https://google.github.io/dagger/android.html
+またサンプルコードは、Dagger 2.12 時点によるものです。
+dagger.android MainActivityが依存しているインスタンスを注入できるようにしてみます。
+ AndroidInjectionModule(あるいは、Support componentを使う場合は AndroidSupportInjectionModule)をアプリケーションコンポーネントに指定してください。
+@Singleton @Component(modules = arrayOf( AndroidSupportInjectionModule::class ) ) interface AppComponent : AndroidInjector&amp;lt;App&amp;gt; { @Component.Builder interface Builder { @BindsInstance fun application(application: App): Builder fun build():AppComponent } }  AndroidInjector.Builder&amp;lt;YourActivity&amp;gt;を継承している@Subcomponent.Builderを持つ AndroidInjector&amp;lt;YourActivity&amp;gt; を実装する@Subcomponent を作成します。
+@Subcomponent interface MainActivitySubComponent:AndroidInjector&amp;lt;MainActivity&amp;gt; { @Subcomponent.Builder abstract class Builder : AndroidInjector.Builder&amp;lt;MainActivity&amp;gt;() }  subcomponentを定義したら、Subcomponent.Builderをバインドするモジュールを定義(ここではMainActivityModule)し、
+@Module(subcomponents = arrayOf(MainActivityModule.MainActivitySubComponent::class)) abstract class MainActivityModule { @Binds @IntoMap @ActivityKey(MainActivity::class) internal abstract fun bindAndroidInjectorFactory( builder: MainActivityModule.</description>
+    </item>
+    
+  </channel>
+</rss>

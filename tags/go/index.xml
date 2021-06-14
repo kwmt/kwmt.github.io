@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Go on Androg</title>
+    <link>https://kwmt27.net/tags/go/</link>
+    <description>Recent content in Go on Androg</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>ja</language>
+    <lastBuildDate>Thu, 26 Mar 2020 00:20:00 +0900</lastBuildDate>
+    
+	<atom:link href="https://kwmt27.net/tags/go/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>dep(Go dependency tool)を自作ライブラリに使ってみた</title>
+      <link>https://kwmt27.net/2020/03/26/i-tried-to-use-dep-in-my-library/</link>
+      <pubDate>Thu, 26 Mar 2020 00:20:00 +0900</pubDate>
+      
+      <guid>https://kwmt27.net/2020/03/26/i-tried-to-use-dep-in-my-library/</guid>
+      <description>はじめに 1個だけの外部ライブラリに依存している（超かんたんな）自作ライブラリgithub.com/kwmt/combineを例に、depコマンドを使ってみた内容をメモしておこうと思います。
+基本的な使い方 インストールと初期化 depのインストールは、プロジェクトルートに移動して、go getします。
+$ cd $GOPATH/src/github.com/kwmt/combine $ go get -u github.com/golang/dep/...  次のコマンドで初期化します。
+$ dep init  でgithubログインを促されましたが、manifest.jsonとlock.jsonが作成されます。1
+このとき、すでに依存ライブラリを見つけてくれていて、下記のように依存ライブラリが記述されています。2
+{ &amp;quot;dependencies&amp;quot;: { &amp;quot;github.com/kwmt/go-utils&amp;quot;: { &amp;quot;branch&amp;quot;: &amp;quot;master&amp;quot; } } }  { &amp;quot;memo&amp;quot;: &amp;quot;&amp;quot;, &amp;quot;projects&amp;quot;: [ { &amp;quot;name&amp;quot;: &amp;quot;github.com/kwmt/go-utils&amp;quot;, &amp;quot;branch&amp;quot;: &amp;quot;master&amp;quot;, &amp;quot;revision&amp;quot;: &amp;quot;7431874e8437574169c0fb50e811d790fc1ed2ab&amp;quot;, &amp;quot;packages&amp;quot;: [ &amp;quot;.&amp;quot; ] } ] }  依存ライブラリのダウンロード ここまでではまだ依存ライブラリはダウンロードされてないので、
+$ dep ensure -update  とします。するとvendorディレクトリが作成されて、そのなかに依存ライブラリがダウンロードされます
+$ ls vendor/github.com/kwmt/ go-utils  状態を確認 dep statusコマンドは、プロジェクトの依存関係の状態を見ることが出来ます。</description>
+    </item>
+    
+    <item>
+      <title>Go Modulesで簡単バージョン管理</title>
+      <link>https://kwmt27.net/2020/03/26/easy-version-control-with-go-modules/</link>
+      <pubDate>Thu, 26 Mar 2020 00:12:00 +0900</pubDate>
+      
+      <guid>https://kwmt27.net/2020/03/26/easy-version-control-with-go-modules/</guid>
+      <description>はじめに go1.11からGo Modulesというのがサポートされていたので、簡単に使い方をご紹介します。
+これは簡単に言うとバージョン管理ツールです。 Go 1.11時点ではexperimentalで、最終的にGo1.13で取り込まれるようです。
+package main import ( &amp;quot;fmt&amp;quot; &amp;quot;rsc.io/quote&amp;quot; ) func main() { fmt.Println(quote.Hello()) }  という&amp;rdquo;rsc.io/quote&amp;rdquo;に依存したプログラムがあるとき、go buildとすると自動的にgo getしてくれるというものです。
+使い方 例として、GOPATHに次のプロジェクトを作成した前提で、使い方を見ていきます。
+$ mkdir -p $GOPATH/github.com/kwmt/gomod-sample $ cd $GOPATH/github.com/kwmt/gomod-sample  まず、go modコマンドというのがあるのですが、そのコマンドを使うためには、GO111MODULEという環境変数をonに設定する必要があります。
+export GO111MODULE=on  次にgo mod initで初期化します。
+% go mod init github.com/kwmt/gomod-sample go: creating new go.mod: module github.com/kwmt/gomod-sample  すると、go.modというファイルが作成されます。
+% ls go.mod  ちなみに、go.modファイルの中身は下記のようになっています。
+module github.com/kwmt/gomod-sample  Quick Startにあるように、下記のような&amp;ldquo;rsc.io/quote&amp;rdquo;というライブラリに依存したプログラムhello.goを作成します。
+% cat &amp;lt;&amp;lt;EOF &amp;gt; hello.go package main import ( &amp;quot;fmt&amp;quot; &amp;quot;rsc.</description>
+    </item>
+    
+    <item>
+      <title>LINE Simple Beaconを触ってみて、自分なりの疑問点をまとめた</title>
+      <link>https://kwmt27.net/2020/03/26/i-tried-to-use-line-simple-beacon-and-summarized-my-own-questions/</link>
+      <pubDate>Thu, 26 Mar 2020 00:06:00 +0900</pubDate>
+      
+      <guid>https://kwmt27.net/2020/03/26/i-tried-to-use-line-simple-beacon-and-summarized-my-own-questions/</guid>
+      <description>基本的にこちらの記事を参考にすれば、すぐ分かる人は分かるかと思いますが、僕自身が少しハマったことや疑問点があったので、それを忘れないうちにまとめておこうかと思います。
+HWID(端末ID)はLINE@ MANAGERページの方にある ブログ記事の通り進めていくと、LINE@ MANAGERとLINE Developerのページの２つのページで確認したり設定することになります。
+HWIDはこちらから発行できるのですが、LINE@ Managerで使用しているbotアカウントを選択して、左メニューのLINE Beacon -&amp;gt; アカウント連携 にある端末IDもHWIDを示していますので、そちらでも確認できます。
+HWIDとは？ スマートフォンがRaspberry Piの受信圏内に出入りしたときに、Beacon EventのWebhookを投げれる状態にするもの。 ブログ記事にあるとおりにラズパイ側で設定するだけでいい。ただ、これだけでは投げる先がわかならないので、投げる先の登録は LINE Developersページで登録する必要があります。
+LINE Developersページに行くには？ LINE@ Managerから設定したいBotアカウントを選択して、左メニューのアカウント設定-&amp;gt;Bot設定とたどります。 すると、下図のようなリンクがあるので、そこをクリックするといけます。
+(LINE Dvelopersページに行くのに、毎回迷子になってました（汗）)
+WebhookのURLは何を指定したらいいの？ サーバーを準備する必要があり、そのURLを指定します。 私はHeroku＋Goを使用しました。Getting Started on Heroku with Goなどを参考にWebhookでBeaconEventを受け取れるようにサーバーを準備します。
+ただ単に受けるだけなら、下記のような感じでいいです。
+http.HandleFunc(&amp;quot;/callback&amp;quot;, func(w http.ResponseWriter, req *http.Request) { log.Println(req) }) http.ListenAndServe(&amp;quot;&amp;quot;, nil)  ただ、これだけだとEventが来たときスルーさせるだけなので、Eventが来たことを知る必要があるのと、Eventが来たらどうするのか、たとえばLINEのメッセージに送るとかをしたいと思いますので、それに必要なのがこちらのline-bot-sdkです。
+Channel SecretとChannel Access Tokenを指定する必要がありますが、これはLINE Developersページに記載されていますので、確認してみてください。
+設定したりパースしたりする部分は省略しますが、Beacon Eventが来たことを判定にするには、下記のように書きます。
+for _, event := range events { if event.Type == linebot.EventTypeBeacon { // Beacon Eventが来た。ここでLINEメッセージを送ったりする。 } }  LINEメッセージを送るには、eventの中にあるreplyTokenを使用して、下記のように書くと、ここでははろーというメッセージが届くようになります。</description>
+    </item>
+    
+    <item>
+      <title>HerokuでGoアプリケーションを動かしたい</title>
+      <link>https://kwmt27.net/2017/03/23/how-to-deploy-go-application-on-heroku/</link>
+      <pubDate>Thu, 23 Mar 2017 12:17:50 +0900</pubDate>
+      
+      <guid>https://kwmt27.net/2017/03/23/how-to-deploy-go-application-on-heroku/</guid>
+      <description>はじめに Goで作ったWebアプリケーションをHerokuにデプロイする手順を書いておこうと思います。最初はDockerを使わずにデプロイし、あとでDocker化してみようと思います。
+セットアップ Herokuのコマンドラインツールのインストール Herokuのコマンドラインツールをインストールしましょう
+こちらから各環境のコマンドラインツールをインストールできます。
+そしてツールをインストールしたら、
+% heroku login  でログインしておきます。
+Heroku側にnew appを作成 HerokuにデプロイするためにHerokuに新規アプリを作成しましょう
+% heroku apps:create heroku-with-go --buildpack heroku/go  --buildpackはHeroku上でビルドするのに必要ですのでGo用のbuildpackを設定しておきます。オープンソースですので、こちらで見ることが出来ます。
+新規アプリが作成されたかブラウザで確認してみます。
+% heroku open --app heroku-with-go  Goアプリケーション作成してからHerokuデプロイまで Goアプリケーションを準備するのですが、Getting Started on Heroku with Goには、Githubからサンプルをクローンしてきて、デプロイしてみようみたな感じですが、ここではこのサンプルは使わず、1から自分で作ってみようと思います。
+プロジェクト（ディレクトリ）作成 $GOPATH にWebアプリケーションプロジェクトを作成しましょう。 今回はheroku-with-goディレクトリを作成しました。
+$ mkdir $GOPATH/src/github.com/kwmt/heroku-with-go  heroku-with-go にWebアプリを書いて行きましょう。
+main.go作成 とりあえず、簡単のためにURLのPathを表示するだけのアプリを書いてみます。(環境変数PORTを取得できるようにする必要があります)
+package main import ( &amp;quot;fmt&amp;quot; &amp;quot;log&amp;quot; &amp;quot;net/http&amp;quot; &amp;quot;os&amp;quot; ) func main() { port := os.Getenv(&amp;quot;PORT&amp;quot;) if port == &amp;quot;&amp;quot; { log.</description>
+    </item>
+    
+  </channel>
+</rss>

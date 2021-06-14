@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Genmai on Androg</title>
+    <link>https://kwmt27.net/tags/genmai/</link>
+    <description>Recent content in Genmai on Androg</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>ja</language>
+    <lastBuildDate>Mon, 22 Sep 2014 00:00:00 +0000</lastBuildDate>
+    
+	<atom:link href="https://kwmt27.net/tags/genmai/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Genmaiを使ってみた。 #golang</title>
+      <link>https://kwmt27.net/index.php/2014/09/22/try-using-genmai-of-orm-for-golang/</link>
+      <pubDate>Mon, 22 Sep 2014 00:00:00 +0000</pubDate>
+      
+      <guid>https://kwmt27.net/index.php/2014/09/22/try-using-genmai-of-orm-for-golang/</guid>
+      <description>&lt;p&gt;ORM for golangの&lt;a href=&#34;http://bit.ly/1ucuNGX&#34; target=&#34;_blank&#34;&gt;Genmai&lt;/a&gt;を使って、MySQLにアクセスしてみた。&lt;/p&gt;
+
+&lt;p&gt;使い方は以下の様な感じです。&lt;/p&gt;
+
+&lt;p&gt;テーブルを定義します。&lt;/p&gt;
+
+&lt;pre class=&#34;go&#34;&gt;// ユーザーテーブル
+type User struct {
+    Id    int `db:&#34;pk&#34;`
+    Name  string
+    genmai.TimeStamp
+}
+&lt;/pre&gt;
+
+&lt;p&gt;&lt;/p&gt;</description>
+    </item>
+    
+  </channel>
+</rss>

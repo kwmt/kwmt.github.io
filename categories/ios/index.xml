@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Ios on Androg</title>
+    <link>https://kwmt27.net/categories/ios/</link>
+    <description>Recent content in Ios on Androg</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>ja</language>
+    <lastBuildDate>Thu, 26 Mar 2020 00:01:00 +0900</lastBuildDate>
+    
+	<atom:link href="https://kwmt27.net/categories/ios/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>UITextFieldで自動校正しないようにするには</title>
+      <link>https://kwmt27.net/2020/03/26/how-to-prevent-automatic-calibration-on-uitext-fields/</link>
+      <pubDate>Thu, 26 Mar 2020 00:01:00 +0900</pubDate>
+      
+      <guid>https://kwmt27.net/2020/03/26/how-to-prevent-automatic-calibration-on-uitext-fields/</guid>
+      <description>メールアドレス等入力中に、自動校正させたくない場合があった。 （たとえば、勝手に最初の文字を大文字にしようとしてくれて候補を表示していたのを、候補を表示しないようにしたい）
+方法 AutolayoutのUITextFieldのAttributeのCorrectionをNoに設定する。
+参考 https://developer.apple.com/library/ios/documentation/UIKit/Reference/UITextInputTraits_Protocol/#//apple_ref/c/tdef/UITextAutocorrectionType</description>
+    </item>
+    
+    <item>
+      <title>SwiftUIでGoogleMapsを表示するには</title>
+      <link>https://kwmt27.net/2019/10/06/how-to-googlemap-on-swiftui/</link>
+      <pubDate>Sun, 06 Oct 2019 02:30:00 +0900</pubDate>
+      
+      <guid>https://kwmt27.net/2019/10/06/how-to-googlemap-on-swiftui/</guid>
+      <description> SwiftUIでGoogleMapを表示する方法を調べたのでメモします。
+GoogleMapView.swiftを作成  補足 UIViewRepresentableはUIKitを表すViewです。
+makeUIViewとupdateUIViewは必ず実装する必要があります。
+func makeUIView(context: Self.Context) -&amp;gt; Self.UIViewType  は、表示するUIKitビューを作成します。
+func updateUIView(Self.UIViewType, context: Self.Context)  は、提示されたUIKitビュー（およびその座標）を最新に更新します。
+これからもわかるように、makeUIViewからupdateUIViewの順で呼ばれます。
+作成したGoogleMapViewを表示したい場所に挿入  これだけです。
+完成 補足 もちろん、Google MapsのAPIの有効化やAPIキーの設定は必要です。
+ GoogleMapsの設定に関してはこちらを参照  Get Started | Maps SDK for iOS | Google Developers   </description>
+    </item>
+    
+    <item>
+      <title>iPhone Xの操作方法</title>
+      <link>https://kwmt27.net/2017/10/05/iphone-x-operations/</link>
+      <pubDate>Thu, 05 Oct 2017 16:00:00 +0900</pubDate>
+      
+      <guid>https://kwmt27.net/2017/10/05/iphone-x-operations/</guid>
+      <description>アプリ起動中にホーム画面を表示するには いままで ホームボタンをタップ
+iPhone X 端末下部から上にスワイプ
+コントロールセンターを表示するには いままで 端末下部から上にスワイプしていた
+iPhone X 右上のWifiとか充電マークがあるところから下にスワイプする
+マルチタスク画面を表示するには いままで ホームボタンをダブルタップしていた。
+iPhone X 端末下部から軽く上にスワイプする
+アプリを強制終了するには 今までは、ホームボタンをダブルタップして、マルチタスク画面が表示されるので、強制終了したいアプリを上にスワイプして終了させていた。
+iPhone X  端末下部から軽く上にスワイプしてマルチタスク画面を表示します. どれでもいいのでアプリを長押しすると、アプリの左上に削除アイコンが表示されるのでそのアイコンをタップするか、上にスワイプで削除できます。  片手で持ったとき、画面の上部を指が届く範囲に下げるには いままで ホームボタンをダブルタップ
+iPhone X 画面下部を下にスワイプ
+ただし、設定で簡易アクセスがONになっている必要があります。
+簡易アクセスをONにするには 設定アプリ起動 → 一般 →　アクセシビリティ → 簡易アクセスのスイッチで切り替える</description>
+    </item>
+    
+    <item>
+      <title>xcode で controlを押しながら接続出来ない場合の対処方法</title>
+      <link>https://kwmt27.net/index.php/2014/10/01/cannot-create-connections-in-xcode6-storyboard/</link>
+      <pubDate>Wed, 01 Oct 2014 00:00:00 +0000</pubDate>
+      
+      <guid>https://kwmt27.net/index.php/2014/10/01/cannot-create-connections-in-xcode6-storyboard/</guid>
+      <description>現象 TableViewなどのViewをcontrol押しながら、ヘッダーファイルにドラッグしても、うんともすんともないことがある。
+原因 ViewControllerとクラスが対応付けがされてないため。
+対処 ViewControllerを選択し、&amp;#8221;Show the identity inspection&amp;#8221;をクリックし、Custom Classで対応付けたいクラスを選択する。</description>
+    </item>
+    
+  </channel>
+</rss>

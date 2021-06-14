@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Firebase on Androg</title>
+    <link>https://kwmt27.net/tags/firebase/</link>
+    <description>Recent content in Firebase on Androg</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>ja</language>
+    <lastBuildDate>Sat, 02 Feb 2019 16:00:00 +0900</lastBuildDate>
+    
+	<atom:link href="https://kwmt27.net/tags/firebase/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Firebaseのセットアップ方法</title>
+      <link>https://kwmt27.net/2019/02/02/how-to-setup-cloud-firestore/</link>
+      <pubDate>Sat, 02 Feb 2019 16:00:00 +0900</pubDate>
+      
+      <guid>https://kwmt27.net/2019/02/02/how-to-setup-cloud-firestore/</guid>
+      <description>はじめに Cloud Firestoreを始めFirebaseのサービスを使えるようにするためには、Firebaseにプロジェクトを追加し設定する必要があります。 ここではFirebaseにプロジェクトを追加しFlutterプロジェクトでAndroidとiOSでFirebaseを使えるようになるまでの設定方法を見ていきたいと思います。
+Firebaseにプロジェクトを追加 こちらのURL(https://console.firebase.google.com/)を開き、プロジェクトを追加します。今回の場合はsd-2019-04-flutterというプロジェクトを追加しました。
+AndroidでFirebaseを使えるようにする AndroidでFirebaseを使えるようにするためには、google-services.jsonというファイルをダウンロードし、Flutterプロジェクトに追加する必要があります。
+google-services.jsonをダウンロードする そのためにはまず、Firebaseのプロジェクト設定からアプリをAndroidアプリを追加する必要があります。
+ドロイド君のアイコンをクリックしてください。
+すると、Androidパッケージの入力が求められますので、パッケージを入力します。
+パッケージ名を確認するには、Flutterプロジェクトの android/app/build.gradleファイルを開き、applicationIdを探してください。その設定値がパッケージ名になります。
+パッケージを入力したらgoogle-services.jsonがダウンロードできるようになりますので、ダウンロードしてください。
+Flutterプロジェクト(Android)でセットアップする Flutterプロジェクトにgoogle-services.jsonを格納する Flutterプロジェクトルート/android/app以下に格納してください。
+build.gradleファイルを編集する Flutterプロジェクトルート/android/ にある build.gradleファイルを開いて、google-serviceプラグインを追加します。
+dependencies { classpath &#39;com.android.tools.build:gradle:3.2.1&#39; classpath &amp;quot;org.jetbrains.kotlin:kotlin-gradle-plugin:$kotlin_version&amp;quot; classpath &#39;com.google.gms:google-services:4.1.0&#39; // ←この行を追加 }  次にFlutterプロジェクトルート/android/appにある build.gradleファイルを開いて、最下行に下記を追記してください。
+apply plugin: &#39;com.google.gms.google-services&#39;  これでAndroidに関してはFirebaseのセットアップは終了です。
+iOSでFirebaseを使えるようにする iOSでFirebaseを使えるようにするためには、GoogleService-Info.plistというファイルをダウンロードし、Flutterプロジェクトに追加する必要があります。
+GoogleService-Info.plistをダウンロードする そのためにはまず、Firebaseのプロジェクト設定からアプリをAndroidアプリを追加する必要があります。
+iOSと書かれたアイコンをクリックしてください。
+すると、iOSのバンドルIDの入力が求められますので、バンドルIDを入力します。
+バンドルIDを確認するには、XcodeでFlutterプロジェクトを開いて確認するのが簡単だと思います。
+XcodeでFlutterプロジェクトを開くには、Android Studioを使っている場合、Toolsメニューから開くことができます。
+dartファイル(例えばmain.dart)を開いている状態で、Tools-&amp;gt;Flutter-&amp;gt;Open iOS module in Xcodeをクリックしてください。
+Xcodeが開いたら、左側のProject NavigatorのRunnerを選択すると右側にBundle Identifierという項目があるのでその設定値がバンドルIDになります。
+バンドルIDを入力する画面に戻って、バンドルIDを入力してアプリを登録します。その後、GoogleService-Info.plistがダウンロードできるようになりますので、ダウンロードしてください。
+Flutterプロジェクト(iOS)でセットアップする FlutterプロジェクトにGoogleService-Info.plistを格納する 上記でも書きましたが、XcodeでFlutterプロジェクトを開いてください。
+Project NavigatorでRunner/Runner以下にGoogleService-Info.plistファイルを追加してください。
+これでiOSに関してFirebaseのセットアップは終了です。</description>
+    </item>
+    
+  </channel>
+</rss>

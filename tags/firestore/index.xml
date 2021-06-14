@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Firestore on Androg</title>
+    <link>https://kwmt27.net/tags/firestore/</link>
+    <description>Recent content in Firestore on Androg</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>ja</language>
+    <lastBuildDate>Sat, 02 Feb 2019 19:55:00 +0900</lastBuildDate>
+    
+	<atom:link href="https://kwmt27.net/tags/firestore/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Cloud Firestoreプラグインのバージョン0.9.0でビルドエラーが出たのでその対策メモ</title>
+      <link>https://kwmt27.net/2019/02/02/build-error-with-cloud-firestore-v0.9.0/</link>
+      <pubDate>Sat, 02 Feb 2019 19:55:00 +0900</pubDate>
+      
+      <guid>https://kwmt27.net/2019/02/02/build-error-with-cloud-firestore-v0.9.0/</guid>
+      <description>はじめに FlutterのCloud Firestoreプラグインのバージョン0.9.0でBreaking changeな変更が入りました。 新規Flutterプロジェクトにバージョン0.9.0を入れてAndroidのビルドでいくつかビルドエラーになったので、そのときの対応したのをメモしておきたいと思います。
+cannot find symbol import androidx.annotation.NonNull;　と出た 現象 次のようなビルドエラーが出ました。
+&amp;lt;HOME&amp;gt;/.pub-cache/hosted/pub.dartlang.org/cloud_firestore-0.9.0/android/src/main/java/io/flutter/plugins/firebase/cloudfirestore/CloudFirestorePlugin.java:9: error: cannot find symbol import androidx.annotation.NonNull; ^ symbol: class NonNull location: package androidx.annotation  対策 &amp;lt;Flutterプロジェクトルート&amp;gt;/android/gradle.propertiesファイルに下記を追加
+android.useAndroidX=true android.enableJetifier=true  参考リンク  https://github.com/flutter/flutter/issues/27156#issuecomment-457951736  Android resource linking failedと出た 現象 `FAILURE: Build failed with an exception. * What went wrong: Execution failed for task &#39;:app:processDebugResources&#39;. &amp;gt; Android resource linking failed Output: &amp;lt;プロジェクトルート&amp;gt;/build/app/intermediates/incremental/mergeDebugResources/merged.dir/values/values.xml:197: error: resource android:attr/fontVariationSettings not found. &amp;lt;プロジェクトルート&amp;gt;/build/app/intermediates/incremental/mergeDebugResources/merged.</description>
+    </item>
+    
+  </channel>
+</rss>

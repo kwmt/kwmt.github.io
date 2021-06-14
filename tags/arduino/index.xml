@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Arduino on Androg</title>
+    <link>https://kwmt27.net/tags/arduino/</link>
+    <description>Recent content in Arduino on Androg</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>ja</language>
+    <lastBuildDate>Mon, 12 Dec 2011 00:00:00 +0000</lastBuildDate>
+    
+	<atom:link href="https://kwmt27.net/tags/arduino/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>2011/12/10-11はArduino三昧だった。</title>
+      <link>https://kwmt27.net/index.php/2011/12/13/20111210-11%E3%81%AFarduino%E4%B8%89%E6%98%A7%E3%81%A0%E3%81%A3%E3%81%9F/</link>
+      <pubDate>Mon, 12 Dec 2011 00:00:00 +0000</pubDate>
+      
+      <guid>https://kwmt27.net/index.php/2011/12/13/20111210-11%E3%81%AFarduino%E4%B8%89%E6%98%A7%E3%81%A0%E3%81%A3%E3%81%9F/</guid>
+      <description>2011/12/10(土曜日)はAndroid日本橋でんでんタウンもくもく会第2回
+に行って来ました。場違いなのを覚悟で。
+Arduinoを動かすための準備 基本的に、以下のY.A.M の 雑記帳を参考にさせて頂きました。
+http://y-anz-m.blogspot.com/2011/05/android-open-accessory-development-kit.html
+Download the Arduino Softwareで各OS（ぼくはMac OS）のリンクをクリックして「arduino-1.0-macosx.zip」をダウンロードして解凍。解凍すると、「Arduino」（アプリケーション）が解凍される。それを起動すると以下のような画面が起動する。
+前のバージョン（1.0以前）までは同時に、FTDIUSBSerialDriver_10_4_10_5_10_6.mpkgが同梱されていたようなのですが1.0からなくて、FTDI chipのサイトから2.2.16(Mac 64bit)をダウンロードすると、FTDIUSBSerialDriver_10_4_10_5_10_6.mpkgがインストールできます。
+
+いま気づいたのですが、3 | Install the Softwareによると、
+ If you&amp;#8217;re using an Arduino Uno or Mga 2560, you don&amp;#8217;t have any drivers to install. Skip ahead to the next step.
+If you&amp;#8217;re using an older board (Duemilanove, Diecimila, or any board with an FTDI driver chip that looks like this:
+ とあるので、FTDIドライバが不要なボードもあるのかな。
+ちょっと脱線しましたが、Arduinoアプリケーションを起動するとこんな感じになります。
+
+Capacitive Sensing Libraryというのもの必要だそうです。</description>
+    </item>
+    
+  </channel>
+</rss>

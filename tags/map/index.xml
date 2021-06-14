@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Map on Androg</title>
+    <link>https://kwmt27.net/tags/map/</link>
+    <description>Recent content in Map on Androg</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>ja</language>
+    <lastBuildDate>Sat, 13 Oct 2018 13:20:00 +0900</lastBuildDate>
+    
+	<atom:link href="https://kwmt27.net/tags/map/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>DartのMapを&lt;String, dynamic&gt;に変換するには？</title>
+      <link>https://kwmt27.net/2018/10/13/dart-map/</link>
+      <pubDate>Sat, 13 Oct 2018 13:20:00 +0900</pubDate>
+      
+      <guid>https://kwmt27.net/2018/10/13/dart-map/</guid>
+      <description>// サンプルデータ Map&amp;lt;String, bool&amp;gt; members = Map&amp;lt;String, bool&amp;gt;() ..putIfAbsent(&amp;quot;userID1&amp;quot;, () =&amp;gt; true) ..putIfAbsent(&amp;quot;userID2&amp;quot;, () =&amp;gt; true); print(members); // output: // {userID1: true, userID2: true} var transMember = members.entries.map((member) { return &amp;lt;String, dynamic&amp;gt;{member.key: member.value}; }); print(transMember); // output: // ({userID1: true}, {userID2: true})  Dartpad 動かして確認するにはこちら</description>
+    </item>
+    
+    <item>
+      <title>#golang mapからstructに変換するには？</title>
+      <link>https://kwmt27.net/index.php/2013/10/13/how-to-convert-from-map-to-struct/</link>
+      <pubDate>Sat, 12 Oct 2013 00:00:00 +0000</pubDate>
+      
+      <guid>https://kwmt27.net/index.php/2013/10/13/how-to-convert-from-map-to-struct/</guid>
+      <description>&lt;h2 id=&#34;reflect-pkgを使った方法&#34;&gt;reflect pkgを使った方法&lt;/h2&gt;
+
+&lt;p&gt;最初はなんとなくリフレクションを使ってやるのかなぁと思って、調べてたらこんな感じのが出てました。（&lt;a href=&#34;http://bit.ly/1axEplM&#34; target=&#34;_blank&#34;&gt;参考リンク&lt;/a&gt;）&lt;/p&gt;
+
+&lt;script type=&#34;text/javascript&#34; src=&#34;https://gist.github.com/6938201.js?file=&#34; &gt;&lt;/script&gt;
+
+&lt;p&gt;&lt;a href=&#34;http://play.golang.org/p/5Inl2jO7zL&#34; target=&#34;_blank&#34;&gt;&lt;a href=&#34;http://play.golang.org/p/5Inl2jO7zL&#34;&gt;http://play.golang.org/p/5Inl2jO7zL&lt;/a&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;/p&gt;</description>
+    </item>
+    
+  </channel>
+</rss>

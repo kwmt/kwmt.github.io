@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Net/Smtp on Androg</title>
+    <link>https://kwmt27.net/tags/net/smtp/</link>
+    <description>Recent content in Net/Smtp on Androg</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>ja</language>
+    <lastBuildDate>Thu, 26 Sep 2013 00:00:00 +0000</lastBuildDate>
+    
+	<atom:link href="https://kwmt27.net/tags/net/smtp/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>#golang メールを送信するには</title>
+      <link>https://kwmt27.net/index.php/2013/09/26/how-to-send-mail-with-golang/</link>
+      <pubDate>Thu, 26 Sep 2013 00:00:00 +0000</pubDate>
+      
+      <guid>https://kwmt27.net/index.php/2013/09/26/how-to-send-mail-with-golang/</guid>
+      <description>&lt;h2 id=&#34;最初に&#34;&gt;最初に&lt;/h2&gt;
+
+&lt;p&gt;Go言語でのメール送信方法について、&lt;a href=&#34;#smtp&#34;&gt;SMTP(ポート25番)を使った方法&lt;/a&gt;と&lt;a href=&#34;#smtpovertls&#34;&gt;Gmailを使ってメールを送信する方法(SMTP over TLS)&lt;/a&gt;をメモしておこうと思います。&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;http://golang.org/pkg/net/smtp/&#34; target=&#34;_blank&#34;&gt;net/smtp&lt;/a&gt;パッケージを使用します。&lt;/p&gt;
+
+&lt;p&gt;基本的には、go-wikiページにある &lt;a href=&#34;http://bit.ly/1dFcSBs&#34; target=&#34;_blank&#34;&gt;SendingMail&lt;/a&gt;を参考にしています。&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;http://www.puni.net/~mimori/smtp/ref.html&#34; target=&#34;_blank&#34;&gt;SMTPコマンドリファレンス&lt;/a&gt;のような仕様を読みながら、&lt;a href=&#34;http://golang.org/pkg/net/smtp/&#34; target=&#34;_blank&#34;&gt;net/smtp&lt;/a&gt;パッケージのソースを読んだら理解が深まりました。感想としては、そのままwrapしてるだけって感じでした。&lt;/p&gt;
+
+&lt;p&gt;&lt;/p&gt;</description>
+    </item>
+    
+  </channel>
+</rss>

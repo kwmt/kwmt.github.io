@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Git on Androg</title>
+    <link>https://kwmt27.net/categories/git/</link>
+    <description>Recent content in Git on Androg</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>ja</language>
+    <lastBuildDate>Wed, 21 May 2014 00:00:00 +0000</lastBuildDate>
+    
+	<atom:link href="https://kwmt27.net/categories/git/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>gitignoreを自動生成</title>
+      <link>https://kwmt27.net/index.php/2014/05/21/auto-create-gitignore/</link>
+      <pubDate>Wed, 21 May 2014 00:00:00 +0000</pubDate>
+      
+      <guid>https://kwmt27.net/index.php/2014/05/21/auto-create-gitignore/</guid>
+      <description>キーワード入れたら、そのキーワードにあったgitignoreを自動生成してくれるサイト
+http://www.gitignore.io/</description>
+    </item>
+    
+    <item>
+      <title>ワークツリー内にある版管理しているすべてのファイルをコミットするには</title>
+      <link>https://kwmt27.net/index.php/2012/08/31/%E3%83%AF%E3%83%BC%E3%82%AF%E3%83%84%E3%83%AA%E3%83%BC%E5%86%85%E3%81%AB%E3%81%82%E3%82%8B%E7%89%88%E7%AE%A1%E7%90%86%E3%81%97%E3%81%A6%E3%81%84%E3%82%8B%E3%81%99%E3%81%B9%E3%81%A6%E3%81%AE%E3%83%95/</link>
+      <pubDate>Thu, 30 Aug 2012 00:00:00 +0000</pubDate>
+      
+      <guid>https://kwmt27.net/index.php/2012/08/31/%E3%83%AF%E3%83%BC%E3%82%AF%E3%83%84%E3%83%AA%E3%83%BC%E5%86%85%E3%81%AB%E3%81%82%E3%82%8B%E7%89%88%E7%AE%A1%E7%90%86%E3%81%97%E3%81%A6%E3%81%84%E3%82%8B%E3%81%99%E3%81%B9%E3%81%A6%E3%81%AE%E3%83%95/</guid>
+      <description>git commit -a  </description>
+    </item>
+    
+    <item>
+      <title>部分的な変更をコミットするには</title>
+      <link>https://kwmt27.net/index.php/2012/08/30/%E9%83%A8%E5%88%86%E7%9A%84%E3%81%AA%E5%A4%89%E6%9B%B4%E3%82%92%E3%82%B3%E3%83%9F%E3%83%83%E3%83%88%E3%81%99%E3%82%8B%E3%81%AB%E3%81%AF/</link>
+      <pubDate>Thu, 30 Aug 2012 00:00:00 +0000</pubDate>
+      
+      <guid>https://kwmt27.net/index.php/2012/08/30/%E9%83%A8%E5%88%86%E7%9A%84%E3%81%AA%E5%A4%89%E6%9B%B4%E3%82%92%E3%82%B3%E3%83%9F%E3%83%83%E3%83%88%E3%81%99%E3%82%8B%E3%81%AB%E3%81%AF/</guid>
+      <description>git add -p  とした後、コミットとして記録したい情報だけをyと答える。</description>
+    </item>
+    
+    <item>
+      <title>gitの一連の流れ</title>
+      <link>https://kwmt27.net/index.php/2011/06/15/git%E3%81%AE%E4%B8%80%E9%80%A3%E3%81%AE%E6%B5%81%E3%82%8C/</link>
+      <pubDate>Wed, 15 Jun 2011 00:00:00 +0000</pubDate>
+      
+      <guid>https://kwmt27.net/index.php/2011/06/15/git%E3%81%AE%E4%B8%80%E9%80%A3%E3%81%AE%E6%B5%81%E3%82%8C/</guid>
+      <description>gitの一連の流れをすぐ忘れるのでメモっておく。
+【リポジトリ側】 Dropbox/repo/
+にリポジトリを作成する
+mkdir test.git
+cd test.git
+git &amp;#8211;bare init
+【実際のソース側】 管理したいソースがあるディレクトリ内に移動し、初期化
+cd workspace/test
+git init
+版管理対象外のファイルを読み込む
+git config core.excludesfile &amp;#8220;$HOME&amp;#8221;/.git-excludes
+※版管理対象外とする下記パターンを ~/.git-excludes に記入済み。
+*~
+.project
+.DS_Store
+.classpath
+gen/
+bin/
+git add .　←①
+git commit でエディタ起動　←②
+（書式例）</description>
+    </item>
+    
+  </channel>
+</rss>

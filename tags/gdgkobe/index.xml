@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Gdgkobe on Androg</title>
+    <link>https://kwmt27.net/tags/gdgkobe/</link>
+    <description>Recent content in Gdgkobe on Androg</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>ja</language>
+    <lastBuildDate>Sun, 02 Jun 2013 00:00:00 +0000</lastBuildDate>
+    
+	<atom:link href="https://kwmt27.net/tags/gdgkobe/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>GoCon報告会で報告させて頂きました。</title>
+      <link>https://kwmt27.net/index.php/2013/06/03/gocon/</link>
+      <pubDate>Sun, 02 Jun 2013 00:00:00 +0000</pubDate>
+      
+      <guid>https://kwmt27.net/index.php/2013/06/03/gocon/</guid>
+      <description> イベント 渡米放浪記(Google IOなど) / GoCon報告会 / BigQuery Ideathon + Hackathon
+https://plus.google.com/u/0/events/cb7qvi8rjccej62i79l48mgdcfg
+報告資料 http://go-talks-kwmt.appspot.com/2013/gocon-spring.slide#1
+ブログにそのまま載せれるように文字多めで書きました。
+私にとって人生で大きな出来事もこっそり書いてたりしてます。
+みなさま今後ともよろしくお願い致します。
+GoConに行った時のブログ書いていなかったので、ちょうどよかったです。
+使用プレゼンツール  ツール：https://code.google.com/p/go/source/browse/?repo=talks   GoDoc：https://godoc.org/golang.org/x/tools/cmd/present   ↓↓移動したそうです(2014.5.15追記)   GoDoc：http://godoc.org/code.google.com/p/go.tools/cmd/present   </description>
+    </item>
+    
+  </channel>
+</rss>

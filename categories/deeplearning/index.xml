@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Deeplearning on Androg</title>
+    <link>https://kwmt27.net/categories/deeplearning/</link>
+    <description>Recent content in Deeplearning on Androg</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>ja</language>
+    <lastBuildDate>Fri, 06 Mar 2020 12:00:00 +0900</lastBuildDate>
+    
+	<atom:link href="https://kwmt27.net/categories/deeplearning/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>ゼロから始めるDeepLearning</title>
+      <link>https://kwmt27.net/2020/03/06/zero-deep-learning/</link>
+      <pubDate>Fri, 06 Mar 2020 12:00:00 +0900</pubDate>
+      
+      <guid>https://kwmt27.net/2020/03/06/zero-deep-learning/</guid>
+      <description>$$\begin{eqnarray} y = \begin{cases} 0 &amp;amp; ( w_1 x_1 + w_2 x_2 \leqq \theta ) \
+1 &amp;amp; ( w_1 x_1 + w_2 x_2 \gt \theta ) \end{cases} \tag{1} \end{eqnarray}$$
+(1)の$\theta$を$-b$と置くと、
+$$\begin{eqnarray} y = \begin{cases} 0 &amp;amp; ( b + w_1 x_1 + w_2 x_2 \leqq 0 ) \
+1 &amp;amp; ( b + w_1 x_1 + w_2 x_2 \gt 0 ) \end{cases} \tag{2} \end{eqnarray}$$
+となり、$b$をバイアスと命名。 重みの$w_1$や$w_2$は入力信号への重要度をコントロールするパラメータとして機能。 バイアスは、発火のしやすさ（出力信号が1を出力度合い）を調整するパラメータとして機能。
+たとえば、バイアス$b$が-0.1であれば、入力信号の重み付き和が0.1を上回るだけでニューロンが発火します。しかしもしbが-20であれば、入力信号の重み付き和が20を上回らなければニューロンは発火しません。</description>
+    </item>
+    
+  </channel>
+</rss>

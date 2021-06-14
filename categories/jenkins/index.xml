@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Jenkins on Androg</title>
+    <link>https://kwmt27.net/categories/jenkins/</link>
+    <description>Recent content in Jenkins on Androg</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>ja</language>
+    <lastBuildDate>Fri, 30 Sep 2011 00:00:00 +0000</lastBuildDate>
+    
+	<atom:link href="https://kwmt27.net/categories/jenkins/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>JenkinsにGit Pluginをインストールする</title>
+      <link>https://kwmt27.net/index.php/2011/09/30/jenkins%E3%81%ABgit-plugin%E3%82%92%E3%82%A4%E3%83%B3%E3%82%B9%E3%83%88%E3%83%BC%E3%83%AB%E3%81%99%E3%82%8B/</link>
+      <pubDate>Fri, 30 Sep 2011 00:00:00 +0000</pubDate>
+      
+      <guid>https://kwmt27.net/index.php/2011/09/30/jenkins%E3%81%ABgit-plugin%E3%82%92%E3%82%A4%E3%83%B3%E3%82%B9%E3%83%88%E3%83%BC%E3%83%AB%E3%81%99%E3%82%8B/</guid>
+      <description>Git Pluginをイントールする TopページのJenkinsの管理　→　プラグインの管理をクリックする。
+下図のようなタブがあり、「アップデート」タブが選択されている状態なので、「利用可能」タブをクリックする。
+Gitで検索すると、ソース管理システムの表の中に「Git Plugin」の左側にチェックボックスがあるので、チェックする。
+最下部に「インストール」ボタンがあるので、それをクリックするすると、インストールが始まります。
+Jenkinsを再起動する。（「インストール完了後、ジョブがなければJenkinsを再起動する」にチェックを入れとけば、勝手に再起動してくれる）
+確認 「新しいジョブを作る」で、「ソースコード管理システム」に初期では、CVS・Subversion・なしの3つだったのが、Gitが追加されていれば、インストール完了</description>
+    </item>
+    
+    <item>
+      <title>Jenkinsのインストール</title>
+      <link>https://kwmt27.net/index.php/2011/09/30/jenkins%E3%81%AE%E3%82%A4%E3%83%B3%E3%82%B9%E3%83%88%E3%83%BC%E3%83%AB/</link>
+      <pubDate>Fri, 30 Sep 2011 00:00:00 +0000</pubDate>
+      
+      <guid>https://kwmt27.net/index.php/2011/09/30/jenkins%E3%81%AE%E3%82%A4%E3%83%B3%E3%82%B9%E3%83%88%E3%83%BC%E3%83%AB/</guid>
+      <description>jenkins.warのダウンロード 下記のWelcome to Jenkins CI! | Jenkins CIページの「Java Web Archive (.war)」の「Latest and greatest (x.xxx)」から、「jenkins.war」をダウンロードする。
+http://jenkins-ci.org/
+jenkins.warのインストール $ java -jar jenkins.war Running from: 絶対パス/jenkins.war webroot: $user.home/.jenkins [Winstone 2011/09/23 15:32:13] - Beginning extraction from war file Jenkins home directory: /Users/&amp;lt;ユーザー名/.jenkins found at: $user.home/.jenkins [Winstone 2011/09/23 15:32:15] - HTTP Listener started: port=8080 [Winstone 2011/09/23 15:32:15] - AJP13 Listener started: port=8009 [Winstone 2011/09/23 15:32:15] - Winstone Servlet Engine v0.9.10 running: controlPort=disabled 2011/09/23 15:32:15 jenkins.</description>
+    </item>
+    
+  </channel>
+</rss>

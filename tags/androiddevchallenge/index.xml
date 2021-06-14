@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Androiddevchallenge on Androg</title>
+    <link>https://kwmt27.net/tags/androiddevchallenge/</link>
+    <description>Recent content in Androiddevchallenge on Androg</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>ja</language>
+    <lastBuildDate>Sun, 28 Mar 2021 19:00:00 +0900</lastBuildDate>
+    
+	<atom:link href="https://kwmt27.net/tags/androiddevchallenge/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Jetpack Compose PlayGround</title>
+      <link>https://kwmt27.net/2021/03/28/jetpack-compose-playground/</link>
+      <pubDate>Sun, 28 Mar 2021 19:00:00 +0900</pubDate>
+      
+      <guid>https://kwmt27.net/2021/03/28/jetpack-compose-playground/</guid>
+      <description>はじめに ※こちらは更新予定です。
+確認環境は下記です。
+ compose_version: 1.0.0-beta02 kotlin version: 1.4.31 Android Studio version: Android Studio Arctic Fox | 2020.3.1 Canary 12  確認したコードはGitHubにおいてます。
+https://github.com/kwmt/JetpackComposePlayGround
+縦方向（Vertical）のリスト表示するには 縦方向（Vertical）のリストを表示するには、LazyColumn を使います。
+import androidx.compose.foundation.lazy.LazyColumn @Composable fun SampleList() { LazyColumn { items(5) { index -&amp;gt; // 各要素で表示したいUIを書く。 ListItem(index) } } }  多くのアイテムやサイズのわからないリストを表示する必要がある場合、Columnのようなレイアウトを使用すると、全てのアイテムが表示されるかどうかに関わらずレイアウトされるので、パフォーマンスに影響があります。 LazyColumnやLazyRowは表示されるアイテムのみをレイアウトするコンポーネントになります。（RecyclerViewと同じ概念）
+ついでに、リストの各要素はComposableListItemは自作のComposable関数で、リストアイテムのUIを定義しています。
+@Composable fun ListItem(index: Int = 0) { Column { Box( modifier = Modifier .height(200.dp) .background(Color.Blue) .fillMaxWidth() ) { Text( modifier = Modifier.</description>
+    </item>
+    
+    <item>
+      <title>Jetpack Compose Dev Challenge Week3で学んだことまとめ</title>
+      <link>https://kwmt27.net/2021/03/15/jetpack-compose-dev-challenge-week3/</link>
+      <pubDate>Mon, 15 Mar 2021 12:00:00 +0900</pubDate>
+      
+      <guid>https://kwmt27.net/2021/03/15/jetpack-compose-dev-challenge-week3/</guid>
+      <description>jetpack compose
+全体にかかわること(テーマなど) 背景を入れるには Surface(color = MaterialTheme.colors.primary)  が大事
+Welcome画面 Login画面 Textの途中でリンクを入れる https://stackoverflow.com/questions/65567412/jetpack-compose-text-hyperlink-some-section-of-the-text
+EditTextの枠線の色を変更するには outlinedTextFieldColorsの部分
+OutlinedTextField( modifier = Modifier .height(56.dp) .fillMaxWidth(), value = &amp;quot;&amp;quot;, onValueChange = { /*TODO*/ }, placeholder = { Text( text = &amp;quot;Password (8+ characters)&amp;quot;, style = DevChallengeTheme.typography.body1, color = DevChallengeTheme.colors.textBody1, ) }, colors = outlinedTextFieldColors( cursorColor = DevChallengeTheme.colors.textBody1, focusedBorderColor = DevChallengeTheme.colors.textBody1.copy(alpha = ContentAlpha.high), unfocusedBorderColor = DevChallengeTheme.colors.textBody1, ), singleLine = true, )  検索ボックスを作成（SearchBar) ここが参考になりそう。 https://github.com/android/compose-samples/blob/main/Jetsnack/app/src/main/java/com/example/jetsnack/ui/home/search/Search.kt</description>
+    </item>
+    
+  </channel>
+</rss>

@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Go言語 on Androg</title>
+    <link>https://kwmt27.net/categories/go%E8%A8%80%E8%AA%9E/</link>
+    <description>Recent content in Go言語 on Androg</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>ja</language>
+    <lastBuildDate>Thu, 23 Mar 2017 12:17:50 +0900</lastBuildDate>
+    
+	<atom:link href="https://kwmt27.net/categories/go%E8%A8%80%E8%AA%9E/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>HerokuでGoアプリケーションを動かしたい</title>
+      <link>https://kwmt27.net/2017/03/23/how-to-deploy-go-application-on-heroku/</link>
+      <pubDate>Thu, 23 Mar 2017 12:17:50 +0900</pubDate>
+      
+      <guid>https://kwmt27.net/2017/03/23/how-to-deploy-go-application-on-heroku/</guid>
+      <description>はじめに Goで作ったWebアプリケーションをHerokuにデプロイする手順を書いておこうと思います。最初はDockerを使わずにデプロイし、あとでDocker化してみようと思います。
+セットアップ Herokuのコマンドラインツールのインストール Herokuのコマンドラインツールをインストールしましょう
+こちらから各環境のコマンドラインツールをインストールできます。
+そしてツールをインストールしたら、
+% heroku login  でログインしておきます。
+Heroku側にnew appを作成 HerokuにデプロイするためにHerokuに新規アプリを作成しましょう
+% heroku apps:create heroku-with-go --buildpack heroku/go  --buildpackはHeroku上でビルドするのに必要ですのでGo用のbuildpackを設定しておきます。オープンソースですので、こちらで見ることが出来ます。
+新規アプリが作成されたかブラウザで確認してみます。
+% heroku open --app heroku-with-go  Goアプリケーション作成してからHerokuデプロイまで Goアプリケーションを準備するのですが、Getting Started on Heroku with Goには、Githubからサンプルをクローンしてきて、デプロイしてみようみたな感じですが、ここではこのサンプルは使わず、1から自分で作ってみようと思います。
+プロジェクト（ディレクトリ）作成 $GOPATH にWebアプリケーションプロジェクトを作成しましょう。 今回はheroku-with-goディレクトリを作成しました。
+$ mkdir $GOPATH/src/github.com/kwmt/heroku-with-go  heroku-with-go にWebアプリを書いて行きましょう。
+main.go作成 とりあえず、簡単のためにURLのPathを表示するだけのアプリを書いてみます。(環境変数PORTを取得できるようにする必要があります)
+package main import ( &amp;quot;fmt&amp;quot; &amp;quot;log&amp;quot; &amp;quot;net/http&amp;quot; &amp;quot;os&amp;quot; ) func main() { port := os.Getenv(&amp;quot;PORT&amp;quot;) if port == &amp;quot;&amp;quot; { log.</description>
+    </item>
+    
+    <item>
+      <title>ginを軽く読んでみる</title>
+      <link>https://kwmt27.net/2016/12/11/reading-gin-gonic/</link>
+      <pubDate>Sun, 11 Dec 2016 20:49:46 +0900</pubDate>
+      
+      <guid>https://kwmt27.net/2016/12/11/reading-gin-gonic/</guid>
+      <description>はじめに [大阪]Goモク会を開催しました。 https://connpass.com/event/13696/ gomobileを使ってアニメーションさせたりレコメンドシステムを作ったりしてる人がいる中、僕はginのコードリーディングをしました。
+読んでみる Readmeに書いてるサンプル
+package main import &amp;quot;gopkg.in/gin-gonic/gin.v1&amp;quot; func main() { r := gin.Default() r.GET(&amp;quot;/ping&amp;quot;, func(c *gin.Context) { c.JSON(200, gin.H{ &amp;quot;message&amp;quot;: &amp;quot;pong&amp;quot;, }) }) r.Run() // listen and serve on 0.0.0.0:8080 }  gin.Default() gin.Default()  から見ていきます
+// Default returns an Engine instance with the Logger and Recovery middleware already attached. func Default() *Engine { engine := New() engine.Use(Logger(), Recovery()) return engine }  まずは、New() ですね。 コメントにありますが、Logger と Recovery ミドルウェア付き　Engineインスタンスを作成します。</description>
+    </item>
+    
+  </channel>
+</rss>

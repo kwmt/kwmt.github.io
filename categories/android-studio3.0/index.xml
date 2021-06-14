@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Android Studio3.0 on Androg</title>
+    <link>https://kwmt27.net/categories/android-studio3.0/</link>
+    <description>Recent content in Android Studio3.0 on Androg</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>ja</language>
+    <lastBuildDate>Thu, 02 Nov 2017 00:07:00 +0900</lastBuildDate>
+    
+	<atom:link href="https://kwmt27.net/categories/android-studio3.0/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Android Studio 2.3.3 から3.0にしたときのメモ</title>
+      <link>https://kwmt27.net/2017/11/02/migrate-android-studio2.0-to-3.0/</link>
+      <pubDate>Thu, 02 Nov 2017 00:07:00 +0900</pubDate>
+      
+      <guid>https://kwmt27.net/2017/11/02/migrate-android-studio2.0-to-3.0/</guid>
+      <description>はじめに  dependencies { - classpath &#39;com.android.tools.build:gradle:2.3.3&#39; + classpath &#39;com.android.tools.build:gradle:3.0.0&#39; classpath &amp;quot;org.jetbrains.kotlin:kotlin-gradle-plugin:$kotlin_version&amp;quot;  と3.0.0にverupしたさいにエラーが出たのでその原因と対策をメモ
+All flavors must now belong to a named flavor dimension. エラー内容 app/build.gradle Error:All flavors must now belong to a named flavor dimension. Learn more at https://d.android.com/r/tools/flavorDimensions-missing-error-message.html
+原因  The plugin now requires that all flavors belong to a named flavor dimension—even if you intend to use only a single dimension.
+ すべてのフレーバーに
+対策  To resolve this error, you need to first declare one or more dimensions using the flavorDimensions property.</description>
+    </item>
+    
+  </channel>
+</rss>

@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>モバもく会 on Androg</title>
+    <link>https://kwmt27.net/tags/%E3%83%A2%E3%83%90%E3%82%82%E3%81%8F%E4%BC%9A/</link>
+    <description>Recent content in モバもく会 on Androg</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>ja</language>
+    <lastBuildDate>Fri, 01 Dec 2017 15:00:00 +0900</lastBuildDate>
+    
+	<atom:link href="https://kwmt27.net/tags/%E3%83%A2%E3%83%90%E3%82%82%E3%81%8F%E4%BC%9A/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>モバもく会#8 を開催</title>
+      <link>https://kwmt27.net/2017/12/01/mobile-mockmock-8/</link>
+      <pubDate>Fri, 01 Dec 2017 15:00:00 +0900</pubDate>
+      
+      <guid>https://kwmt27.net/2017/12/01/mobile-mockmock-8/</guid>
+      <description>2017/11/12(日)にモバもく会#8という、だいたい２，３週間に１回やっているモバイルに関連したもくもく会を開催しました。
+今回は3人でした。毎回ありがとうございます！自分が毎回勉強させてもらっています（感謝）
+今回みなさんがやったことは次のとおりです。
+ Devfestの参加レポートを書いた  参加レポートは[こちら]()です  Instant Appsについての調査  newyork times、crosswordがインスタントアップ対応しているとのこと   僕は、Kotlin ConfのソースのAndroidを読みました。 読んだ内容は、別記事にしました.
+こちらはモバもく会のイメージです。GoogleHomeの素晴らしさについて語っています。</description>
+    </item>
+    
+    <item>
+      <title>モバもく会#6 を開催</title>
+      <link>https://kwmt27.net/2017/10/16/mobile-mockmock-6/</link>
+      <pubDate>Mon, 16 Oct 2017 15:00:00 +0900</pubDate>
+      
+      <guid>https://kwmt27.net/2017/10/16/mobile-mockmock-6/</guid>
+      <description>2017/10/15(日)にモバもく会#6という、だいたい２，３週間に１回やっているモバイルに関連したもくもく会を開催しました。
+今回は3人でした。毎回ありがとうございます！自分が毎回勉強させてもらっています（感謝）
+今回みなさんがやったことは次のとおりです。
+ CircleCI2.0についての調査 COSMOのAndroid SDKを使ってみる  聞いた話ですが、FIDOというものがあるらしいですね。
+僕はクリーンアーキテクチャのサンプル を参考に自分なりに実装しようとしました。
+ 参考:Architecting Android&amp;hellip;The clean way?  しようと思ったのですが、DIを実現するためにdaggerを使っているといろいろハマってしまって、それに時間取られてしまいました。。。
+結論：公式ドキュメントをちゃんと読め！ということでした。
+Daggerについては、別記事に書きました。
+以上です。</description>
+    </item>
+    
+    <item>
+      <title>モバもく会#5 を開催</title>
+      <link>https://kwmt27.net/2017/10/10/mobile-mockmock-5/</link>
+      <pubDate>Tue, 10 Oct 2017 21:10:00 +0900</pubDate>
+      
+      <guid>https://kwmt27.net/2017/10/10/mobile-mockmock-5/</guid>
+      <description>10月になってしまいましたが、2017/09/24(日)にモバもく会#5という、だいたい２，３週間に１回やっているモバイルに関連したもくもく会を開催しました。
+今回は5人でした。毎回ありがとうございます！自分が毎回勉強させてもらっています（感謝）
+今回みなさんがやったことは次のとおりです。
+ Enumのメモリ消費についての調査 Spark(分散処理)の事始め iOSのUITableViewのHeightが異なるときに対応方法についての調査＆実装 以前に開催されたAndroid Thingsハッカソンの続き  僕は、support design libraryのBottomSheetのサンプル を読んで実際に試してみました。
+実装コードまで読めてないのですが、軽くマテリアルデザインガイドラインを軽く呼んでみて、DeepLinkについて気になったので実装を試してみました。
+主に参考にしたブログは、Bottom sheet everythingを参考にしました。
+DeepLinkは、「こんな簡単な実装で、こんなことができるんですよ」といいたかったんですが、実際はバックの黒透明の背景（ダイアログの背景のみ）が出るだけで、内容がでるところまで出来ませんでした。。。（この日はちょっといろいろありまして。。。←言い訳^^;）</description>
+    </item>
+    
+    <item>
+      <title>モバもく会 #4 を開催</title>
+      <link>https://kwmt27.net/2017/09/19/mobile-mockmock-4/</link>
+      <pubDate>Tue, 19 Sep 2017 15:00:00 +0900</pubDate>
+      
+      <guid>https://kwmt27.net/2017/09/19/mobile-mockmock-4/</guid>
+      <description>2017/09/03(日)にモバもく会#4という、モバイルに関連したもくもく会を開催しました。
+今回は5人でした。今回みなさんがやったことは次のとおりです。
+ 一人はVR（前回の続き） 個人でAndroidアプリ(ゲーム)を作る 個人でiOSアプリを作っているが、終盤に入っていろいろ不具合を発見したので、その修正 Androidのインストール広告についての技術調査  僕は、個人的にiOSアプリを作っていて、AWSのDynamoDB・Lambda・API GatewayつかってCRUDを構築するところやっていきました。
+自分的には、アプリを作るのもいいけど、ちょこちょこ時間とってできるので、こういうまとまった時間をってやるもくもく会では、やっぱり気になるソースコードとかを読んだりした方がいい気がしてきました。（参加者のみなさんが、アプリを作ったらいけないとかいう話じゃないです。念のため）
+あと、もくもく会するとだいたいお腹すく時間なので、ご飯いける方いきましょーと終わる頃に聞いていて、なんか行かないと悪いなという雰囲気にさせちゃってるかもなので申し訳ないんですが、ぜんぜん必須じゃないですよー
+今回は簡単ですが、以上です。</description>
+    </item>
+    
+    <item>
+      <title>モバもく会 #3 を開催して、Support Design LibraryのBottomNavigationViewを読んだ</title>
+      <link>https://kwmt27.net/2017/08/13/mobile-mockmock-3/</link>
+      <pubDate>Sun, 13 Aug 2017 20:00:00 +0900</pubDate>
+      
+      <guid>https://kwmt27.net/2017/08/13/mobile-mockmock-3/</guid>
+      <description> はじめに モバもく会#3という、モバイルに関連したもくもく会を開催しました。
+今回は2人でした。
+ 一人はVR（前回の続き）  僕は、support design libraryの特にBottomNavigationViewを読んでみました。
+ガイドライン原文日本語訳 に書いてあるのがどのようにコードで書かれているのかという視点で見てみました。
+ちなみに、BottomNavigationというのはこのようなものです。
+まとめた内容 まとめた内容は長くなったので別記事にしました。
+終わりに  いままであんまり深く知らなかったことを見ることが出来たので、とても勉強になりました。 Support Design Librayのコードは、そんなに複雑なコードじゃなかったので、読みやすいかなと思いました。  </description>
+    </item>
+    
+    <item>
+      <title>モバもく会 #2 を開催して、Github Trending(java)を軽く読んでみた</title>
+      <link>https://kwmt27.net/2017/07/30/mobile-mockmock-2/</link>
+      <pubDate>Sun, 30 Jul 2017 18:00:00 +0900</pubDate>
+      
+      <guid>https://kwmt27.net/2017/07/30/mobile-mockmock-2/</guid>
+      <description>はじめに モバもく会 #2という、モバイルに関連したもくもく会を開催しました。
+一人は前回来ていただいた方の話を聞いて行ってみようと思って来てくださったり、 東京中心に活動されてる方がたまたま大阪に来ていて、大阪の宿泊している場所ではやりにくいので、参加してくださったり、 家にいるとスプラトゥーンをやってしまうから、こういうもくもく会はありがたいというお声を頂き、嬉しい限りです。
+モバもく会としては、途中で帰られる方がいらっしゃったのでせっかく足を運んで来てくださってるので、帰られる方の話も聞きたいし、その方に対しても何かしら持ち帰ってほしかったので、途中で発表し合うようにしました。
+今回みなさんがやったことは次のとおりです。
+ 一人は次の勉強会のための資料作成(マテリアルデザイン) 一人も次の勉強会のための資料作成（Notificationに関すること） 一人はVR 一人はお仕事でMonakcaについての調査  僕は、前回に引き続き、2017/07/30の時点のGithub Trending(java)の中から2つレポジトリを見てみました。
+下記は除外しています。
+ SmartRefreshLayoutは前回よんだので除外 android-interview-questions spring-boot  StormPlane https://github.com/HurTeng/StormPlane
+飛行機のゲームです。apkをAndroid端末にインストールして遊んだだけですｗ 飛行機を動かすのに、飛行機をタッチしないといけないのですが、指が邪魔で飛行機が全然見えなくて、ちょっとやりにくかったです。
+コードとしては、SurfaceViewを使ってゴリゴリ書いてるだけなので、僕にとって特にこれと言って新しいことはありませんでした。
+あと、Readmeとかが中国語なのでGoogle翻訳に頼りました。
+PLDroidShortVideo https://github.com/pili-engineering/PLDroidShortVideo
+snowアプリみたいなことができるライブラリのようです。
+起動してスタンプを選択して、顔にカメラを向けると、
+このようになり、保存できます。
+あと動画も撮れるようですが、スタンプを入れたまま動画の作成は出来ませんでした。
+これも中国語でした。
+まとめ 中国語のレポジトリがトレンドに入ってる来てるので、中国語も勉強しないといけないと思いましたが、よくよく考えると中国製のライブラリを実運用で使うことは無さそうなので、次からは中国製のライブラリはやめてみようかと思います。</description>
+    </item>
+    
+    <item>
+      <title>モバもく会を開催して、Github Trendingを軽く読んでみた</title>
+      <link>https://kwmt27.net/2017/07/20/mobile-mockmock/</link>
+      <pubDate>Thu, 20 Jul 2017 22:00:00 +0900</pubDate>
+      
+      <guid>https://kwmt27.net/2017/07/20/mobile-mockmock/</guid>
+      <description>はじめに モバもく会という、モバイルに関連したもくもく会を開催しました。 一人はOpenSourceにプルリクを投げたり、一人は読書をしていました。
+僕は、2017/07/17の時点のTrending in open sourceのAndroidに関係ある上位３つのサンプルをうごかしてみたのですが、そのときのまとめです。(※android-interview-questionsは除外しています)
+https://github.com/trending/java?since=weekly
+SmartRefreshLayout https://github.com/scwang90/SmartRefreshLayout
+Pull to refreshのいい感じのライブラリです。 動きはReadmeに書かれてるので見てみてください。
+基本的にはRecyclerViewをSmartRefreshLayoutで包めばよいだけのようです。
+&amp;lt;android.support.v7.widget.Toolbar style=&amp;quot;@style/AppTheme.Toolbar&amp;quot; android:id=&amp;quot;@+id/toolbar&amp;quot; app:title=&amp;quot;@string/fragment_refresh_styles&amp;quot;/&amp;gt; &amp;lt;com.scwang.smartrefresh.layout.SmartRefreshLayout android:id=&amp;quot;@+id/refreshLayout&amp;quot; android:layout_width=&amp;quot;match_parent&amp;quot; android:layout_height=&amp;quot;match_parent&amp;quot; app:srlEnableLoadmore=&amp;quot;false&amp;quot; app:srlEnableHeaderTranslationContent=&amp;quot;true&amp;quot;&amp;gt; &amp;lt;android.support.v7.widget.RecyclerView android:id=&amp;quot;@+id/recyclerView&amp;quot; android:layout_width=&amp;quot;match_parent&amp;quot; android:layout_height=&amp;quot;match_parent&amp;quot; android:background=&amp;quot;@android:color/white&amp;quot; tools:listitem=&amp;quot;@android:layout/simple_list_item_2&amp;quot;/&amp;gt; &amp;lt;/com.scwang.smartrefresh.layout.SmartRefreshLayout&amp;gt;  サンプル動かしてみました。
+「下拉可以刷新」などの中国語で書かれてるところを変更したいなぁと思ってソースを見てみました。
+
+こちらを見る限り、おそらくmHeaderTextにセットすればいいのかなぁと思ってみてたら、mHeaderTextに外から自由にセットできるメソッドがないっぽい。。
+public static String REFRESH_HEADER_PULLDOWN = &amp;quot;下拉可以刷新&amp;quot;;  とpublic static Stringでfinalではなかったので、直接書き換えてみたところ、
+index 2b056cd..fbdf4a7 100644 --- a/app/src/main/java/com/scwang/refreshlayout/fragment/RefreshStylesFragment.java +++ b/app/src/main/java/com/scwang/refreshlayout/fragment/RefreshStylesFragment.java @@ -85,6 +85,7 @@ public class RefreshStylesFragment extends Fragment implements AdapterView.OnIte @Override public void onViewCreated(View root, @Nullable Bundle savedInstanceState) { super.</description>
+    </item>
+    
+  </channel>
+</rss>

@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Flutter_inapp_purchase on Androg</title>
+    <link>https://kwmt27.net/tags/flutter_inapp_purchase/</link>
+    <description>Recent content in Flutter_inapp_purchase on Androg</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>ja</language>
+    <lastBuildDate>Sun, 17 Mar 2019 00:12:00 +0900</lastBuildDate>
+    
+	<atom:link href="https://kwmt27.net/tags/flutter_inapp_purchase/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Flutterプラグインのテストで正しくMethodCallが呼ばれてるかテストするには</title>
+      <link>https://kwmt27.net/2019/03/17/flutter_ismethodcall/</link>
+      <pubDate>Sun, 17 Mar 2019 00:12:00 +0900</pubDate>
+      
+      <guid>https://kwmt27.net/2019/03/17/flutter_ismethodcall/</guid>
+      <description>下記のコードは、flutter_inapp_purchaseのdartコードの1つのメソッドで、実装はわかりやすいように1つのinvokedMethodに修正したものですが、Flutterプラグインでネイティブのメソッドを呼び出すにはMethodChannelのinvokedMethod(文字列,パラメータ)のような感じで呼び出します。
+static final MethodChannel _channel = const MethodChannel(&#39;flutter_inapp&#39;); static Future&amp;lt;List&amp;lt;IAPItem&amp;gt;&amp;gt; getProducts(List&amp;lt;String&amp;gt; skus) async { dynamic result = await _channel.invokeMethod( &#39;getItemsByType&#39;, &amp;lt;String, dynamic&amp;gt;{ &#39;type&#39;: &#39;inapp&#39;, &#39;skus&#39;: skus, }, ); return extractItems(result); }  invokedMethodは文字列を渡すので、例えば &#39;getItemsByType&#39;が 極端ですが&#39;get&#39;とかになっていてもコンパイルできてしまいます。
+そこで、getProductsが正しく&#39;getItemsByType&#39;が呼ばれている確認するには、下記のコードのようにisMethodCallを使います。
+test(&#39;invokes correct method&#39;, () async { await FlutterInappPurchase.getProducts(skus); expect(log, &amp;lt;Matcher&amp;gt;[ isMethodCall( &#39;getItemsByType&#39;, arguments: &amp;lt;String, dynamic&amp;gt;{ &#39;type&#39;: &#39;inapp&#39;, &#39;skus&#39;: skus, }, ), ]); });  このようにすると、たとえば先程の例のように&#39;getItemsByType&#39;が getになっていた場合、テストを実行すると、期待する文字列は&#39;getItemsByType&#39;だけど実際はgetになっているよ、と教えてくれます。
+Expected: [ &amp;lt;has method name: &#39;getItemsByType&#39; with arguments: {&#39;type&#39;: &#39;inapp&#39;, &#39;skus&#39;: [&#39;testsku&#39;]}&amp;gt; ] Actual: [MethodCall:MethodCall(get, {type: inapp, skus: [testsku]})] Which: does not match has method name: &#39;getItemsByType&#39; with arguments: {&#39;type&#39;: &#39;inapp&#39;, &#39;skus&#39;: [&#39;testsku&#39;]} at location [0]  </description>
+    </item>
+    
+  </channel>
+</rss>

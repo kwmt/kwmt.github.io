@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Ambient on Androg</title>
+    <link>https://kwmt27.net/tags/ambient/</link>
+    <description>Recent content in Ambient on Androg</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>ja</language>
+    <lastBuildDate>Sun, 17 Jan 2021 22:50:00 +0900</lastBuildDate>
+    
+	<atom:link href="https://kwmt27.net/tags/ambient/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Jetpack ComposeのAmbientについて</title>
+      <link>https://kwmt27.net/2021/01/17/jetpack-compose-about-ambient/</link>
+      <pubDate>Sun, 17 Jan 2021 22:50:00 +0900</pubDate>
+      
+      <guid>https://kwmt27.net/2021/01/17/jetpack-compose-about-ambient/</guid>
+      <description>はじめに Jetpack Composeでステータスバーのカラーを変更するにはどうすればいいか調べていたら、ambientというキーワードが出てきて、なにものかがわからなかったのでメモです。
+Ambientとは Ambientとは、FlutterのProviderのようなものです。
+サンプルコードを見たほうがわかりやすいと思いますので、見てみましょう。
+// ① Ambientを作ります。 val ActiveUser = ambientOf&amp;lt;User&amp;gt; { error(&amp;quot;No active user found!&amp;quot;) } @Composable fun App(user: User) { // ② `Providers`コンポーネントを使用して、ambinentに値を渡します。 Providers(ActiveUser provides user) { SomeScreen() } } // ③ツリーの間にあるコンポーネントはAmbientの値を知る必要はありません。 @Composable fun SomeScreen() { UserPhoto() } @Composable fun UserPhoto() { // ④ `current`プロパティを使うことでAmbinentの値を使うことができます。 val user = ActiveUser.current ProfileIcon(src = user.profilePhotoUrl) }  もしAmbientを使わなければ、コンポーネントに引数で渡していくことになり、渡された値が必要のないコンポーネントまで余計なものを知る必要が出てきてしまいます。
+ambientOfとstaticAmbinentOfの違いについて Jetpack Compose - What is the Difference Between ambientOf and staticAmbientOf こちらが詳しいです。</description>
+    </item>
+    
+  </channel>
+</rss>
