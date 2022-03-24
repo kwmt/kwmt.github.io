@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>トラックバッド on Androg</title>
+    <link>https://kwmt27.net/tags/%E3%83%88%E3%83%A9%E3%83%83%E3%82%AF%E3%83%90%E3%83%83%E3%83%89/</link>
+    <description>Recent content in トラックバッド on Androg</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>ja</language>
+    <lastBuildDate>Thu, 05 Jan 2017 17:52:06 +0900</lastBuildDate>
+    
+	<atom:link href="https://kwmt27.net/tags/%E3%83%88%E3%83%A9%E3%83%83%E3%82%AF%E3%83%90%E3%83%83%E3%83%89/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>3本タップでウィンドウを動かしたい</title>
+      <link>https://kwmt27.net/2017/01/05/i-want-to-move-window-with-three-fingers/</link>
+      <pubDate>Thu, 05 Jan 2017 17:52:06 +0900</pubDate>
+      
+      <guid>https://kwmt27.net/2017/01/05/i-want-to-move-window-with-three-fingers/</guid>
+      <description>困ったこと いままで3本指でウィンドウを動かしていたので、クリーンインストール後も3本指で動かしたいと思ったが、システム環境設定のトラックパッドでどうしても見つからない。
+ので、しらべて見つけたのでメモ。
+対処法 下記の記事通り。 https://support.apple.com/ja-jp/HT204609
+システム環境設定→アクセシビリティ に行き、左側の「マウス/トラックパッド」を選択後、「トラックパッドオプション」をクリックする。
+「ドラッグを有効にする」にチェックが入っていないのでチェックを入れ、右側のリストで「3本指のドラッグ」を選択してOKを押せば3本指でウィンドウの移動が可能になる。
+以上</description>
+    </item>
+    
+  </channel>
+</rss>

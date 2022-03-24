@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Intellij Idea on Androg</title>
+    <link>https://kwmt27.net/tags/intellij-idea/</link>
+    <description>Recent content in Intellij Idea on Androg</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>ja</language>
+    <lastBuildDate>Thu, 26 Mar 2020 00:00:00 +0900</lastBuildDate>
+    
+	<atom:link href="https://kwmt27.net/tags/intellij-idea/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>IntelliJ IdeaのCreate New ProjectでIntelliJ Platform Pluginが無い場合の出し方</title>
+      <link>https://kwmt27.net/2020/03/26/how-to-create-a-new-project-without-intellij-platform-plugin-in-create-new-project-of-intellij-ide/</link>
+      <pubDate>Thu, 26 Mar 2020 00:00:00 +0900</pubDate>
+      
+      <guid>https://kwmt27.net/2020/03/26/how-to-create-a-new-project-without-intellij-platform-plugin-in-create-new-project-of-intellij-ide/</guid>
+      <description> IntelliJ IDEAのプラグインを作ろう！を参考に、プラグインを作ろうと思って、プロジェクトの作成をしようとしたら、”IntelliJ Platform Plugin&amp;rdquo;がない！！！
+&amp;rdquo;)
+”IntelliJ Platform Plugin&amp;rdquo;でググったりしてたんですが、”IntelliJ Platform Plugin&amp;rdquo;の出し方を書いた記事が見つからない。
+いろいろIntelliJ IdeaのPluginあたりを見ててやっと見つけました！
+この&amp;rdquo;Plugin DevKit&amp;rdquo;が有効でなかったためです。 これを有効にしてOKして再起動すると &amp;rdquo;)
+&amp;ldquo;IntelliJ Platform Plugin&amp;rdquo;が出ました！！
+あとでよくよくGetting Started with Plugin DevelopmentのPreliminary Stepsを見てみると、 &amp;gt; Plugin DevKit &amp;gt; Please make sure that the &amp;ldquo;Plugin DevKit&amp;rdquo; plugin is enabled in Settings | Plugins.
+「Plugin設定で、&amp;rdquo;Plugin DevKit&amp;rdquo;プラグインが有効になっていることを確認してください」って書いてました…（汗）
+あわせてよむ  IntelliJ IdeaのCreate New ProjectでIntelliJ Platform Pluginを指定した時、右ペインのProject SDKを指定する方法  </description>
+    </item>
+    
+    <item>
+      <title>IntelliJ IdeaのCreate New ProjectでIntelliJ Platform Pluginを指定した時、右ペイン</title>
+      <link>https://kwmt27.net/2020/03/26/when-you-specify-the-intellij-platform-plugin-in-the-create-new-project-of-intellij-idea-the-right-pane/</link>
+      <pubDate>Thu, 26 Mar 2020 00:00:00 +0900</pubDate>
+      
+      <guid>https://kwmt27.net/2020/03/26/when-you-specify-the-intellij-platform-plugin-in-the-create-new-project-of-intellij-idea-the-right-pane/</guid>
+      <description>IntelliJ IdeaのCreate New ProjectでIntelliJ Platform Pluginが無い場合の出し方でIntelliJ Platform Pluginを表示することができました。
+IntelliJ IDEAのプラグインを作ろう！を参考に、プラグインを作ろうと思って、プロジェクトの作成で、Create New Project - &amp;gt; IntelliJ Platform Pluginを指定した時、Project SDKがで何も選択するものがない。
+これを選択できるようにするには、
+ 右側にある&amp;rdquo;New&amp;rdquo;をクリックします。 IntelliJ Ideaのインストールディレクトリを選択します。(Newしたときにデフォルトでインストールディレクトリにいるので、そのままChooseをクリックするだけです。)  使用したいJava SDKバージョンを指定しOKをクリックします。 これでNoneからIDEA IU-xxx.xxx.xのように選択できるようになります。   これは、Getting Started with Plugin DevelopmentのConfiguring IntelliJ IDEA SDKの
+ Using the Select Path dialog box that opens, select the IntelliJ IDEA installation directory directory, and then click OK.
+Note, that by default, this dialog box automatically selects the home directory of the currently running IntelliJ IDEA installation.</description>
+    </item>
+    
+    <item>
+      <title>Intellij IDEAでPlant UMLを使えるようにする。</title>
+      <link>https://kwmt27.net/index.php/2014/09/12/how_to_setup_plant_uml_in_intellij_idea/</link>
+      <pubDate>Thu, 11 Sep 2014 00:00:00 +0000</pubDate>
+      
+      <guid>https://kwmt27.net/index.php/2014/09/12/how_to_setup_plant_uml_in_intellij_idea/</guid>
+      <description>&lt;h2 id=&#34;はじめに&#34;&gt;はじめに&lt;/h2&gt;
+
+&lt;p&gt;&lt;a href=&#34;http://kwmt27.net/index.php/2014/09/11/read_webdbpress_about_webapi_design/&#34; title=&#34;WEB+DB PRESS Vol.82 の「Web APIデザインの鉄則」特集を読んだ。&#34;&gt;WEB+DB PRESS Vol.82 の「Web APIデザインの鉄則」特集を読んで&lt;/a&gt;、&lt;a href=&#34;http://plantuml.sourceforge.net/index.html&#34; target=&#34;_blank&#34;&gt;Plant UML&lt;/a&gt;というツールを知ったのですが、さっそくIntellij IDEAで使えたらいいなぁと思って、使えるようになったので、その設定方法を書いておこうかと思います。といっても、プラグインをインストール＋αぐらいですが、、、&lt;/p&gt;
+
+&lt;p&gt;&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>Intellij IDEAで #golang を使えるようにする。</title>
+      <link>https://kwmt27.net/index.php/2014/09/10/how-to-use-golang-with-intellij-idea/</link>
+      <pubDate>Wed, 10 Sep 2014 00:00:00 +0000</pubDate>
+      
+      <guid>https://kwmt27.net/index.php/2014/09/10/how-to-use-golang-with-intellij-idea/</guid>
+      <description>&lt;p&gt;ひさびさGoの記事を書く気がします。いままで、どちらかというとIDEなんて不要だ！秀丸で十分だ！ｗ と思ってた人でしたが、Intellij IDEAは素晴らしい！ので、Intellij IDEAでGo言語を使えるようにする設定を書いておこうかと思います。&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Intellij IDEA version:13.1.2&lt;/li&gt;
+&lt;li&gt;go-lang-idea-plugin version:0.9.15.3&lt;/li&gt;
+&lt;li&gt;golang version:1.2 darwin/amd64&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;/p&gt;</description>
+    </item>
+    
+  </channel>
+</rss>

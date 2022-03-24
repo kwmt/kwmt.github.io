@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Android Studio on Androg</title>
+    <link>https://kwmt27.net/tags/android-studio/</link>
+    <description>Recent content in Android Studio on Androg</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>ja</language>
+    <lastBuildDate>Wed, 05 Sep 2018 19:45:00 +0900</lastBuildDate>
+    
+	<atom:link href="https://kwmt27.net/tags/android-studio/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Android Studio3.1のrecentProjects.xmlファイルのパス</title>
+      <link>https://kwmt27.net/2018/09/05/android-studio-recentprojects/</link>
+      <pubDate>Wed, 05 Sep 2018 19:45:00 +0900</pubDate>
+      
+      <guid>https://kwmt27.net/2018/09/05/android-studio-recentprojects/</guid>
+      <description>最近なぜかAndroid StudioのFileメニューのOpen Recentから開くと、Android Studioが固まってしまうという現象に陥ってしまっています。
+プロセスをkillして再起動してもダメで、recentから起動するとダメだからそのあたりを消してしまおうということで探した結果、下記にありました。
+~/Library/Preferences/AndroidStudio3.1/options/recentProjects.xml  このファイルを下記のような感じにして保存してAndroid Studioを開き直したら動いてくれました。
+&amp;lt;application&amp;gt; &amp;lt;component name=&amp;quot;RecentProjectsManager&amp;quot;&amp;gt; &amp;lt;/component&amp;gt; &amp;lt;/application&amp;gt;  </description>
+    </item>
+    
+    <item>
+      <title>Android Studio 2.3.3 から3.0にしたときのメモ</title>
+      <link>https://kwmt27.net/2017/11/02/migrate-android-studio2.0-to-3.0/</link>
+      <pubDate>Thu, 02 Nov 2017 00:07:00 +0900</pubDate>
+      
+      <guid>https://kwmt27.net/2017/11/02/migrate-android-studio2.0-to-3.0/</guid>
+      <description>はじめに  dependencies { - classpath &#39;com.android.tools.build:gradle:2.3.3&#39; + classpath &#39;com.android.tools.build:gradle:3.0.0&#39; classpath &amp;quot;org.jetbrains.kotlin:kotlin-gradle-plugin:$kotlin_version&amp;quot;  と3.0.0にverupしたさいにエラーが出たのでその原因と対策をメモ
+All flavors must now belong to a named flavor dimension. エラー内容 app/build.gradle Error:All flavors must now belong to a named flavor dimension. Learn more at https://d.android.com/r/tools/flavorDimensions-missing-error-message.html
+原因  The plugin now requires that all flavors belong to a named flavor dimension—even if you intend to use only a single dimension.
+ すべてのフレーバーに
+対策  To resolve this error, you need to first declare one or more dimensions using the flavorDimensions property.</description>
+    </item>
+    
+    <item>
+      <title>Android Studioを1.0にバージョンアップしたら、Gradle DSL method not found: &amp;#8216;runProguard()&amp;#8217;って怒られた場合</title>
+      <link>https://kwmt27.net/index.php/2014/12/09/android-studio-1-0-gradle-dsl-method-not-found-runproguard/</link>
+      <pubDate>Tue, 09 Dec 2014 00:00:00 +0000</pubDate>
+      
+      <guid>https://kwmt27.net/index.php/2014/12/09/android-studio-1-0-gradle-dsl-method-not-found-runproguard/</guid>
+      <description>Android Studioがついに1.0になりましたね。ということでダウンロードして、起動したらgradleのバージョンを1.0.0にしろとかいろいろ怒られたんですが、そこらへんは自動で修正してくれたのに、下記のエラーは自動で修正してくれませんでしたのでメモ。
+Error:(32, 0) Gradle DSL method not found: &#39;runProguard()&#39;  対応はrunProguardをminifyEnabledに変更します。
+diff --git a/app/build.gradle b/app/build.gradle index 351288d..08b53f8 100644 --- a/app/build.gradle +++ b/app/build.gradle @@ -29,7 +29,7 @@ android { - runProguard false + minifyEnabled false proguardFiles getDefaultProguardFile(&#39;proguard-android.txt&#39;), &#39;proguard-rules.pro&#39; } }  詳しくは、Migrating Gradle Projects to version 1.0.0 &amp;#8211; Android Tools Project Site に記載してあります。</description>
+    </item>
+    
+    <item>
+      <title>TwitterのFabric SDKをAndroid Studioで使ってみる</title>
+      <link>https://kwmt27.net/index.php/2014/11/10/how-to-use-twitter-fabric-sdk-with-android-studio/</link>
+      <pubDate>Mon, 10 Nov 2014 00:00:00 +0000</pubDate>
+      
+      <guid>https://kwmt27.net/index.php/2014/11/10/how-to-use-twitter-fabric-sdk-with-android-studio/</guid>
+      <description>&lt;h2 id=&#34;はじめに&#34;&gt;はじめに&lt;/h2&gt;
+
+&lt;p&gt;ひさびさTwitterをつかってアプリつくろうと思って&lt;a href=&#34;https://dev.twitter.com/&#34; target=&#34;_blank&#34;&gt;ディベロッパーサイト&lt;/a&gt;に行ったら、fabric?????とか出てきてなんじゃこれ？と思って調べてたら、10/22(現地時間)に発表されたTwitterのモバイル向け新SDKとやららしい。&lt;/p&gt;
+
+&lt;blockquote&gt;
+&lt;p&gt;&lt;a href=&#34;http://bit.ly/1CYl4HO&#34; target=&#34;_blank&#34;&gt;Twitter、モバイルアプリ向け新SDK「Fabric」発表　パスワード不要の次世代認証「Digits」リリース &amp;#8211; ITmedia ニュース&lt;/a&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;まぁ英語でもいいんだけど、日本語の情報ないかなぁと探してみたけど、全然ない(´・ω・`)&lt;/p&gt;
+
+&lt;p&gt;ということで、Android StudioでFabric SDKのセットアップしてから、ツイートできるようになるまでを書いてみようと思います。&lt;/p&gt;
+
+&lt;h2 id=&#34;android版fabricの公式サイト&#34;&gt;Android版Fabricの公式サイト&lt;/h2&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://dev.twitter.com/twitter-kit/android&#34; target=&#34;_blank&#34;&gt;&lt;a href=&#34;https://dev.twitter.com/twitter-kit/android&#34;&gt;https://dev.twitter.com/twitter-kit/android&lt;/a&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;h2 id=&#34;確認したバージョン&#34;&gt;確認したバージョン&lt;/h2&gt;
+
+&lt;pre class=&#34;go&#34;&gt;Android Studio：0.9.2
+Fabric SDK：1.0.1
+&lt;/pre&gt;
+
+&lt;p&gt;&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>Android StudiodでgreenDaoを使う</title>
+      <link>https://kwmt27.net/index.php/2014/09/17/how-to-use-greendao-library/</link>
+      <pubDate>Wed, 17 Sep 2014 00:00:00 +0000</pubDate>
+      
+      <guid>https://kwmt27.net/index.php/2014/09/17/how-to-use-greendao-library/</guid>
+      <description>&lt;h2 id=&#34;はじめに&#34;&gt;はじめに&lt;/h2&gt;
+
+&lt;p&gt;AndroidのORMライブラリについて調べてみてまして、ORMLite、Active Android、greenDaoが有名のようです。&lt;/p&gt;
+
+&lt;p&gt;ORMLite、Active Androidは、アノテーションを使っていて、greenDaoは使っていません。&lt;/p&gt;
+
+&lt;p&gt;アノテーションはリフレクションに依存しているため、特にAndroidデバイスにおいては、パフォーマンスに影響出ますので、greenDaoを使おうかと思います。(&lt;a href=&#34;#sanko&#34;&gt;参考1&lt;/a&gt;などをみますと、パフォーマンスにクリティカルに影響があるアプリでなければどれつかっても良さそうですが・・・）&lt;/p&gt;
+
+&lt;h2 id=&#34;使い方としては&#34;&gt;使い方としては、&lt;/h2&gt;
+
+&lt;p&gt;２ステップ必要で、１ステップ目は、モデル定義しgreendao-generatorでコードを自動生成します。(普通のjava)&lt;/p&gt;
+
+&lt;p&gt;２ステップ目として、自動生成したコードをAndroidに組み込みます。&lt;/p&gt;
+
+&lt;p&gt;それで、自動生成するために新規にjavaプロジェクトを作る必要があると書いてある参考サイトが多くて、確かにそれでもいいのですが、別プロジェクトを作るのが面倒くさいし、プロジェクトが別なので管理がバラバラになりそうなので、なんとかしてのプロジェクトで出来ないか調べていた所、ちょ～分かりやすく書いて下さっていたサイトがありましたので、リンク張らせて頂きます。&lt;/p&gt;
+
+&lt;p&gt;&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>Android Stuio(0.5.7)でNavigation Drawerでエラーになる。</title>
+      <link>https://kwmt27.net/index.php/2014/05/05/android-studio-navigationdrawer/</link>
+      <pubDate>Mon, 05 May 2014 00:00:00 +0000</pubDate>
+      
+      <guid>https://kwmt27.net/index.php/2014/05/05/android-studio-navigationdrawer/</guid>
+      <description>Android Studio(0.5.7)でNavigation DrawerをNew Projectしたら、getFragmentManager()のところで、Fragmentを継承したNavigationDrawerFragmentにキャストできないってエラーが出たので、その原因と対策です。
+[Android Studio(0.5.7)でNavigation DrawerをNew Projectしたら、getFragmentManager()のところで、Fragmentを継承したNavigationDrawerFragmentにキャストできないってエラーが出たので、その原因と対策です。
+]1
+Looking for wrong fragment class with Android compatibility library &amp;#8211; Stack Overflow</description>
+    </item>
+    
+    <item>
+      <title>Android Studio(0.5.7)のNew ProjectでTabbed Activityを選んだらエラーになる</title>
+      <link>https://kwmt27.net/index.php/2014/05/03/android-studio-tabbed-activity-error/</link>
+      <pubDate>Sat, 03 May 2014 00:00:00 +0000</pubDate>
+      
+      <guid>https://kwmt27.net/index.php/2014/05/03/android-studio-tabbed-activity-error/</guid>
+      <description>Android StudioのNew ProjectでTabbed Activityを選んだらいきなり下のエラーが出て困った。
+Error:Execution failed for task &#39;:app:processDebugResources&#39;.  com.android.ide.common.internal.LoggedErrorException: Failed to run command: &amp;lt;android SDK&amp;gt;/build-tools/19.0.0/aapt package -f --no-crunch -I &amp;lt;android SDK&amp;gt;/platforms/android-19/android.jar -M &amp;lt;my project&amp;gt;/app/build/manifests/debug/AndroidManifest.xml -S &amp;lt;my project&amp;gt;/app/build/res/all/debug -A &amp;lt;my project&amp;gt;/app/build/assets/debug -m -J &amp;lt;my project&amp;gt;/app/build/source/r/debug -F &amp;lt;my project&amp;gt;/app/build/libs/app-debug.ap_ --debug-mode --custom-package &amp;lt;my package Error Code: 138  このエラーから検索していったらハマった。stack overflowとかではaaptのバグだよとか書かれてるし、しょうがないのかなぁとか思ってて、よくよく考えると、MainActivityはActionBarActivityを継承しているのですが、ただ単にActionBarActivityがみつからないって言われてただけでした。
+つまり、import android.support.v7.app.ActionBarActivity;を追加する。ただし、最初のプロジェクトの自動生成では、support.v7ライブラリは追加されていないので、FileメニューからProject Structure(⌘;)から、Dependenciesタブを選択し、下部の+からcom.android.support:appcompat-v7を追加する
+これでActionBarActivityのエラーは消えるのですが、Runすると、
+You need to use a Theme.AppCompat theme (or descendant) with this activity. at android.app.ActivityThread.performLaunchActivity(ActivityThread.java:2295)  のようなエラーが出るので、AndroidManifest.xmlのthemeの部分を
+android:theme=&#34;@style/Theme.AppCompat&#34;  に変更する。これで無事起動した。</description>
+    </item>
+    
+  </channel>
+</rss>

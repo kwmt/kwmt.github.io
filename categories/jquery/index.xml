@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Jquery on Androg</title>
+    <link>https://kwmt27.net/categories/jquery/</link>
+    <description>Recent content in Jquery on Androg</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>ja</language>
+    <lastBuildDate>Wed, 14 Dec 2011 00:00:00 +0000</lastBuildDate>
+    
+	<atom:link href="https://kwmt27.net/categories/jquery/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>JQueryを使えるようにするには</title>
+      <link>https://kwmt27.net/index.php/2011/12/14/jquery%E3%82%92%E4%BD%BF%E3%81%88%E3%82%8B%E3%82%88%E3%81%86%E3%81%AB%E3%81%99%E3%82%8B%E3%81%AB%E3%81%AF/</link>
+      <pubDate>Wed, 14 Dec 2011 00:00:00 +0000</pubDate>
+      
+      <guid>https://kwmt27.net/index.php/2011/12/14/jquery%E3%82%92%E4%BD%BF%E3%81%88%E3%82%8B%E3%82%88%E3%81%86%E3%81%AB%E3%81%99%E3%82%8B%E3%81%AB%E3%81%AF/</guid>
+      <description>headに、以下を記述する。（GoogleのCDN（コンテンツデリバリーネットワーク）というサービスを使っている）</description>
+    </item>
+    
+  </channel>
+</rss>

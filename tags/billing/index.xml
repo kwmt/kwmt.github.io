@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Billing on Androg</title>
+    <link>https://kwmt27.net/tags/billing/</link>
+    <description>Recent content in Billing on Androg</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>ja</language>
+    <lastBuildDate>Mon, 15 Oct 2018 09:45:00 +0900</lastBuildDate>
+    
+	<atom:link href="https://kwmt27.net/tags/billing/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Androidのアプリ内課金のテスト購入して取り消すには？</title>
+      <link>https://kwmt27.net/2018/10/15/android-cancel-billiing/</link>
+      <pubDate>Mon, 15 Oct 2018 09:45:00 +0900</pubDate>
+      
+      <guid>https://kwmt27.net/2018/10/15/android-cancel-billiing/</guid>
+      <description>問題 Androidのアプリ内課金(定期購入ではない方)をテストしていて、一度購入して、再度購入テストしようとすると、 ITEM_ALREADY_OWNED とすでに購入済みというエラーが出て購入テストができません。
+ちなみにここでのテスト購入時のプロダクトIDは、たとえばandroid.test.purchased です。 これで購入しようとすると、購入したとみなしてレスポンスを返してくれます。
+対策 で、本題ですが、購入を取り消すには次の手順で取り消すことができました。
+ アプリをアンインストール % adb shell pm clear com.android.vending を実行  注意 アプリをアンインストールせずに、上記2番のコマンドを叩くだけだと、うまくいかないようです。
+参考 https://stackoverflow.com/a/30178861</description>
+    </item>
+    
+  </channel>
+</rss>

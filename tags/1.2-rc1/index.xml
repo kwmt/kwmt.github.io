@@ -1,0 +1,197 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>1.2 Rc1 on Androg</title>
+    <link>https://kwmt27.net/tags/1.2-rc1/</link>
+    <description>Recent content in 1.2 Rc1 on Androg</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>ja</language>
+    <lastBuildDate>Sat, 12 Oct 2013 00:00:00 +0000</lastBuildDate>
+    
+	<atom:link href="https://kwmt27.net/tags/1.2-rc1/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>#golang mapからstructに変換するには？</title>
+      <link>https://kwmt27.net/index.php/2013/10/13/how-to-convert-from-map-to-struct/</link>
+      <pubDate>Sat, 12 Oct 2013 00:00:00 +0000</pubDate>
+      
+      <guid>https://kwmt27.net/index.php/2013/10/13/how-to-convert-from-map-to-struct/</guid>
+      <description>&lt;h2 id=&#34;reflect-pkgを使った方法&#34;&gt;reflect pkgを使った方法&lt;/h2&gt;
+
+&lt;p&gt;最初はなんとなくリフレクションを使ってやるのかなぁと思って、調べてたらこんな感じのが出てました。（&lt;a href=&#34;http://bit.ly/1axEplM&#34; target=&#34;_blank&#34;&gt;参考リンク&lt;/a&gt;）&lt;/p&gt;
+
+&lt;script type=&#34;text/javascript&#34; src=&#34;https://gist.github.com/6938201.js?file=&#34; &gt;&lt;/script&gt;
+
+&lt;p&gt;&lt;a href=&#34;http://play.golang.org/p/5Inl2jO7zL&#34; target=&#34;_blank&#34;&gt;&lt;a href=&#34;http://play.golang.org/p/5Inl2jO7zL&#34;&gt;http://play.golang.org/p/5Inl2jO7zL&lt;/a&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>#golang リフレクションを使って、キャストするには？</title>
+      <link>https://kwmt27.net/index.php/2013/10/09/how-to-cast-with-reflect-of-golang/</link>
+      <pubDate>Wed, 09 Oct 2013 00:00:00 +0000</pubDate>
+      
+      <guid>https://kwmt27.net/index.php/2013/10/09/how-to-cast-with-reflect-of-golang/</guid>
+      <description>  http://play.golang.org/p/gvadP4k1Bo
+strconv.FormatIntの第一引数は&amp;#8221;int64&amp;#8243;型で、strconv.FormatUintの第一引数は&amp;#8221;uint64&amp;#8243;型です。
+たとえば、ただ100と書くとint型になりますので、fv.Callの引数のところで、キャストしてあげる必要があります。キャストするには、reflectパッケージのConvertメソッドを使います。
+ほとんど同じ処理で、ある一部分だけ異なる関数を使っているという場合に役に立つと思います。
+ちなみに、このConvertメソッドは、go1.1のリリース時に追加されました。
+http://golang.org/doc/go1.1#reflect
+参考  goken/goken08-reflect.md at master · goken/goken http://golang.org/pkg/reflect/#Value.Convert #golang リフレクションを使って、関数の引数の型を取得するには？ | Androg #golang リフレクションを使って、関数をコールするには？ | Androg  </description>
+    </item>
+    
+    <item>
+      <title>#golang リフレクションを使って、関数の引数の型を取得するには？</title>
+      <link>https://kwmt27.net/index.php/2013/10/09/how-to-get-function-arg-type-with-reflect-of-golang/</link>
+      <pubDate>Wed, 09 Oct 2013 00:00:00 +0000</pubDate>
+      
+      <guid>https://kwmt27.net/index.php/2013/10/09/how-to-get-function-arg-type-with-reflect-of-golang/</guid>
+      <description>  参考  goken/goken08-reflect.md at master · goken/goken http://golang.org/src/pkg/reflect/type.go?#L157  </description>
+    </item>
+    
+    <item>
+      <title>#golang リフレクションを使って、関数をコールするには？</title>
+      <link>https://kwmt27.net/index.php/2013/10/09/how-to-call-function-with-reflect-of-golang/</link>
+      <pubDate>Wed, 09 Oct 2013 00:00:00 +0000</pubDate>
+      
+      <guid>https://kwmt27.net/index.php/2013/10/09/how-to-call-function-with-reflect-of-golang/</guid>
+      <description>  参考  goken/goken08-reflect.md at master · goken/goken http://golang.org/pkg/reflect/#Value.Call  </description>
+    </item>
+    
+    <item>
+      <title>#golang 文字数をカウントするには？</title>
+      <link>https://kwmt27.net/index.php/2013/10/10/how-to-count-number-of-string-golang/</link>
+      <pubDate>Wed, 09 Oct 2013 00:00:00 +0000</pubDate>
+      
+      <guid>https://kwmt27.net/index.php/2013/10/10/how-to-count-number-of-string-golang/</guid>
+      <description>文字数をカウントしたい！ そう思ってすぐ思いついたのは、stringsパッケージのCount関数。
+Exampleのあったので、確認のためRunしてみる。
+なぜか期待する文字数の +1 になる。srcを見てみたところ、+1されてる・・・。なんで？
+とツイートしたら、ロブ・パイク先生からお返事頂きました！
+@yasi_kawamoto All strings contain the empty string.  &amp;mdash; Rob Pike (@rob_pike) October 9, 2013  でも、あれ？ strings#Countの例にあるけど、
+fmt.Println(strings.Count(&#34;cheese&#34;, &#34;e&#34;))  これは、3と出力しますよね。
+fmt.Println(strings.Count(&#34;five&#34;, &#34;&#34;))  これは、なんで5を出力するの？すべての文字列にempty stringが&amp;#8221;含まれてる&amp;#8221;んなら、1じゃないのかな！？この答えは、たぶんプログラミング言語の基本な気がする&amp;#8230;ちょっと調べてみよう。
+とにかく、期待する文字数をカウントするには、Count関数でも使われているunicode/utf8パッケージのRuneCountInString関数を使えばよさそうだ。</description>
+    </item>
+    
+    <item>
+      <title>#golang リフレクションを使って関数名を取得するには？</title>
+      <link>https://kwmt27.net/index.php/2013/10/05/golang-how-to-get-function-name-with-reflection/</link>
+      <pubDate>Sat, 05 Oct 2013 00:00:00 +0000</pubDate>
+      
+      <guid>https://kwmt27.net/index.php/2013/10/05/golang-how-to-get-function-name-with-reflection/</guid>
+      <description> &amp;#8220;reflect&amp;#8221;パッケージだけでは取得できないようで、&amp;#8220;runtime&amp;#8221;パッケージの&amp;lt;a href=&amp;quot;http://golang.org/pkg/runtime/#FuncForPC&amp;quot; target=&amp;quot;_blank&amp;quot;&amp;gt;FuncForPC&amp;lt;/a&amp;gt;という関数を使うようです。
+ 参考  reflection &amp;#8211; How to get the name of a function in Go? &amp;#8211; Stack Overflow goken/goken08-reflect.md at master · goken/goken  </description>
+    </item>
+    
+    <item>
+      <title>#golang 関数の引数をオプション的に扱うには？</title>
+      <link>https://kwmt27.net/index.php/2013/10/06/golang-function-arg-option/</link>
+      <pubDate>Sat, 05 Oct 2013 00:00:00 +0000</pubDate>
+      
+      <guid>https://kwmt27.net/index.php/2013/10/06/golang-function-arg-option/</guid>
+      <description>分かりやすい言葉が思いつかなかったのすが、関数の引数をオプション的に扱うというのは、関数の引数をとってもとならなくても良いように関数を定義することです。それには&amp;lt;a href=&amp;quot;http://golang.org/ref/spec#Passing_arguments_to_..._parameters&amp;quot; target=&amp;quot;_blank&amp;quot;&amp;gt;...&amp;lt;/a&amp;gt;パラメータを使うと良さそうです。
+ http://play.golang.org/p/kRLQLIWkxN
+ただし、&amp;lt;a href=&amp;quot;http://golang.org/ref/spec#Passing_arguments_to_..._parameters&amp;quot; target=&amp;quot;_blank&amp;quot;&amp;gt;...&amp;lt;/a&amp;gt;パラメータは、引数の最後でしか使えませんので、注意が必要です。つまり、
+func f(s ...string, i int)  のようなことはできないということです。ちなみに、こうすると次のエラーがでます。
+can only use ... as final argument in list  </description>
+    </item>
+    
+    <item>
+      <title>#Nginx &#43; #golang (FastCGI)&#43; #MySQL を使ったWebアプリケーションを書くための準備</title>
+      <link>https://kwmt27.net/index.php/2013/10/03/nginx-golang-fcgi-mysql/</link>
+      <pubDate>Wed, 02 Oct 2013 00:00:00 +0000</pubDate>
+      
+      <guid>https://kwmt27.net/index.php/2013/10/03/nginx-golang-fcgi-mysql/</guid>
+      <description>&lt;h2 id=&#34;はじめに&#34;&gt;はじめに&lt;/h2&gt;
+
+&lt;p&gt;下記の記事をみたら分かりやすいかもしれませんが、英語なので、実際にやった方法も交えてメモしておこうと思います。（似てるところもありますが、翻訳ではありません。）&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;http://mwholt.blogspot.jp/2013/05/writing-go-golang-web-app-with-nginx.html&#34; target=&#34;_blank&#34;&gt;Writing a Go (&amp;#8220;golang&amp;#8221;) Web App with nginx, FastCGI, MySQL, JSON&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;前提として、Go言語でWebサーバーをつくって動かすと言うと２種類の方法があります。&lt;/p&gt;
+
+&lt;p&gt;１つは、Go言語の&lt;a href=&#34;http://golang.org/pkg/net/http/&#34; target=&#34;_blank&#34;&gt;&amp;#8220;net/http&amp;#8221;&lt;/a&gt;パッケージというのがありますので、これを使ってGo自体でWebサーバーを作ってしまうことができます。&lt;/p&gt;
+
+&lt;p&gt;もう1つは、ApacheやNginxなどのWebサーバー上で、CGI(正確にはFastCGI)としてGo言語を動かす方法です。これはNginx+PHP-FPMのようなもに近いイメージだと思います。&lt;/p&gt;
+
+&lt;p&gt;Nginxを使うか使わないかは、こちらの&lt;a href=&#34;http://stackoverflow.com/questions/17776584/webserver-for-go-golang-webservices-using-nginx-or-not&#34; title=&#34;Webserver for Go (golang) webservices: using NGINX or not?&#34; target=&#34;_blank&#34;&gt;Stackoverflow&lt;/a&gt;をみると、&lt;/p&gt;
+
+&lt;blockquote&gt;
+&lt;p&gt;Go HTTPサーバーはいいんだけど、Webサーバーを一から作るのは大変だよ、Nginxを使った方が簡単だよ&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;みたいな感じで、Nginxつかった方がいいよという結論になってます。&lt;/p&gt;
+
+&lt;p&gt;この記事では、2つ目の方法のNginx+golang(FastCGI)でWebアプリケーションを作る準備をメモしたいと思います。&lt;/p&gt;
+
+&lt;p&gt;データベースとしては、MySQLを使いたいと思います。&lt;/p&gt;
+
+&lt;h2 id=&#34;使用環境&#34;&gt;使用環境&lt;/h2&gt;
+
+&lt;pre class=&#34;go&#34;&gt;サーバOS:CentOS release 6.4
+Webサーバ:nginx-1.4.1
+データベース:mysql  Ver 14.14 Distrib 5.5.27
+&lt;/pre&gt;
+
+&lt;p&gt;&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>#golang リフレクションを使って、構造体フィールドの値を取得するには？</title>
+      <link>https://kwmt27.net/index.php/2013/10/02/get-field-value-of-struct-with-reflect-golang/</link>
+      <pubDate>Wed, 02 Oct 2013 00:00:00 +0000</pubDate>
+      
+      <guid>https://kwmt27.net/index.php/2013/10/02/get-field-value-of-struct-with-reflect-golang/</guid>
+      <description> リフレクションを使って、構造体フィールドの値を取得するには？
+ http://play.golang.org/p/Tp5S6AVDB8
+参考  Go研 Vol.8  </description>
+    </item>
+    
+    <item>
+      <title>#golang リフレクションを使って、構造体フィールドの値を変更するには？</title>
+      <link>https://kwmt27.net/index.php/2013/10/02/change-struct-field-value-with-reflect-golang/</link>
+      <pubDate>Wed, 02 Oct 2013 00:00:00 +0000</pubDate>
+      
+      <guid>https://kwmt27.net/index.php/2013/10/02/change-struct-field-value-with-reflect-golang/</guid>
+      <description> リフレクションを使って、構造体フィールドの値を変更するには？
+ 参考  Go研 Vol.8  </description>
+    </item>
+    
+    <item>
+      <title>#golang 画像ファイルをbase64 encode/decode するには</title>
+      <link>https://kwmt27.net/index.php/2013/09/29/golang-base64-encode-decode/</link>
+      <pubDate>Sun, 29 Sep 2013 00:00:00 +0000</pubDate>
+      
+      <guid>https://kwmt27.net/index.php/2013/09/29/golang-base64-encode-decode/</guid>
+      <description>&lt;p&gt;ある適当な画像（ここでは&amp;#8221;image.jpg&amp;#8221;）をbase64エンコードした文字列に変換したあと、変換された文字列をデコードして画像ファイル（ここでは&amp;#8221;encode_and_decord.jpg&amp;#8221;）を作成する。&lt;/p&gt;
+
+&lt;p&gt;（同じ画像ファイルが作成されるだけですが&amp;#8230;）&lt;/p&gt;
+
+&lt;p&gt;&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>#golang メールを送信するには</title>
+      <link>https://kwmt27.net/index.php/2013/09/26/how-to-send-mail-with-golang/</link>
+      <pubDate>Thu, 26 Sep 2013 00:00:00 +0000</pubDate>
+      
+      <guid>https://kwmt27.net/index.php/2013/09/26/how-to-send-mail-with-golang/</guid>
+      <description>&lt;h2 id=&#34;最初に&#34;&gt;最初に&lt;/h2&gt;
+
+&lt;p&gt;Go言語でのメール送信方法について、&lt;a href=&#34;#smtp&#34;&gt;SMTP(ポート25番)を使った方法&lt;/a&gt;と&lt;a href=&#34;#smtpovertls&#34;&gt;Gmailを使ってメールを送信する方法(SMTP over TLS)&lt;/a&gt;をメモしておこうと思います。&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;http://golang.org/pkg/net/smtp/&#34; target=&#34;_blank&#34;&gt;net/smtp&lt;/a&gt;パッケージを使用します。&lt;/p&gt;
+
+&lt;p&gt;基本的には、go-wikiページにある &lt;a href=&#34;http://bit.ly/1dFcSBs&#34; target=&#34;_blank&#34;&gt;SendingMail&lt;/a&gt;を参考にしています。&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;http://www.puni.net/~mimori/smtp/ref.html&#34; target=&#34;_blank&#34;&gt;SMTPコマンドリファレンス&lt;/a&gt;のような仕様を読みながら、&lt;a href=&#34;http://golang.org/pkg/net/smtp/&#34; target=&#34;_blank&#34;&gt;net/smtp&lt;/a&gt;パッケージのソースを読んだら理解が深まりました。感想としては、そのままwrapしてるだけって感じでした。&lt;/p&gt;
+
+&lt;p&gt;&lt;/p&gt;</description>
+    </item>
+    
+  </channel>
+</rss>

@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Python on Androg</title>
+    <link>https://kwmt27.net/tags/python/</link>
+    <description>Recent content in Python on Androg</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>ja</language>
+    <lastBuildDate>Sat, 26 Dec 2020 19:24:00 +0900</lastBuildDate>
+    
+	<atom:link href="https://kwmt27.net/tags/python/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Python勉強</title>
+      <link>https://kwmt27.net/2020/12/26/python/</link>
+      <pubDate>Sat, 26 Dec 2020 19:24:00 +0900</pubDate>
+      
+      <guid>https://kwmt27.net/2020/12/26/python/</guid>
+      <description>こちらをやるにあたってメモしていこうと思う。 https://qiita.com/yoshizaki_kkgk/items/79f4056901dd9c059afb
+仮想通貨のデータを取得する Poloniexを使ってBitcoinのデータを取得することが出来る。
+requirements.txtに以下のように追加した。
+# 仮想通貨データを取得するPoloniexのwrapper # https://github.com/s4w3d0ff/python-poloniex poloniexapi==0.5.7  使い方の例として、
+from poloniex import Poloniex polo = Poloniex() json = polo.returnChartData(currencyPair=&#39;USDT_BTC&#39;, period=polo.DAY, start=time.time() - polo.DAY * 500, end=time.time())  このように書き、これで - 1日間隔で、現在から500日前までのUSDT_BTCのJSON形式のデータを取得することができる。
+JSONをPandasに変換する Pandasとば、データ解析を支援する機能を提供するライブラリとのこと(https://qiita.com/ysdyt/items/9ccca82fc5b504e7913a) データを扱うにはPandasを使うのが扱いやすいとのことで、JSONからPandasのDataFrameという型に変換するには、
+import pandas as pd df = pd.DataFrame(json)  とするだけで良い。
+ちなみに、下記のように書くとdate,low,high,open,closeのデータなどが取れる。
+print(df.loc[0:9,[&#39;date&#39;, &#39;low&#39;, &#39;high&#39;, &#39;open&#39;, &#39;close&#39;]])   date low high open close 0 1565758004 10052.17796145 10052.17796145 10052.17796145 10052.17796145 1 1565827200 9523.4400982 10445.99999999 10054.59980013 10311.</description>
+    </item>
+    
+    <item>
+      <title>#golang bzip2データから復元するには？</title>
+      <link>https://kwmt27.net/index.php/2013/08/31/golang-compress-bzip2/</link>
+      <pubDate>Sat, 31 Aug 2013 00:00:00 +0000</pubDate>
+      
+      <guid>https://kwmt27.net/index.php/2013/08/31/golang-compress-bzip2/</guid>
+      <description>compress/bzip2の使い方
+golang編  bzip2.NewReaderするだけで復元できるのですね。
+関数名が少し微妙な気もするけど、まぁいいか。
+python編  参考 http://golang.org/pkg/compress/bzip2/</description>
+    </item>
+    
+    <item>
+      <title>#golang zipファイルのコメントを取得するには？</title>
+      <link>https://kwmt27.net/index.php/2013/08/31/golang-archive-zip/</link>
+      <pubDate>Sat, 31 Aug 2013 00:00:00 +0000</pubDate>
+      
+      <guid>https://kwmt27.net/index.php/2013/08/31/golang-archive-zip/</guid>
+      <description>archive/zipパッケージの使い方
+golang編  下記で実行できる
+% go run archive_zip.go 90052 ※引数の数字はchannel.zipにreadme.txtに書いてある。
+python編  参考 http://golang.org/pkg/archive/zip/</description>
+    </item>
+    
+    <item>
+      <title>#python でPILを使って、jpegファイルを扱った時に「decoder jpeg not available」というエラーが出た場合の対処法</title>
+      <link>https://kwmt27.net/index.php/2013/07/14/python-pil-error-decoder-jpeg-not-available/</link>
+      <pubDate>Sat, 13 Jul 2013 00:00:00 +0000</pubDate>
+      
+      <guid>https://kwmt27.net/index.php/2013/07/14/python-pil-error-decoder-jpeg-not-available/</guid>
+      <description>環境：Mac OS X 10.7.5
+問題 PILを使って、jpgファイルをオープンして、オープンしたファイルに対してアクセスしようとすると（今回の場合、getpixelの部分）、下記のような「decoder jpeg not available」というエラーがでる。
+% python hoge.py Traceback (most recent call last): File &#34;hoge.py&#34;, line 9, in p= img.getpixel((x,y)) File &#34;/Library/Python/2.7/site-packages/PIL/Image.py&#34;, line 949, in getpixel self.load() File &#34;/Library/Python/2.7/site-packages/PIL/ImageFile.py&#34;, line 189, in load d = Image._getdecoder(self.mode, d, a, self.decoderconfig) File &#34;/Library/Python/2.7/site-packages/PIL/Image.py&#34;, line 385, in _getdecoder raise IOError(&#34;decoder %s not available&#34; % decoder_name) IOError: decoder jpeg not available  確認 libjpegが入ってないから？ということをtwitterで教えて頂き、インストールされているか確認したところ入ってなさげ。
+portからインストールしてた場合 % port installed | grep libjpeg % ソースからインストールしていた場合 % ll /usr/local/lib/ | grep jpeg %  対策  libjpegをソースからインストールする http://www.</description>
+    </item>
+    
+  </channel>
+</rss>

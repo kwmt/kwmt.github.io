@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Bitmap on Androg</title>
+    <link>https://kwmt27.net/tags/bitmap/</link>
+    <description>Recent content in Bitmap on Androg</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>ja</language>
+    <lastBuildDate>Sun, 31 Jan 2021 22:50:00 +0900</lastBuildDate>
+    
+	<atom:link href="https://kwmt27.net/tags/bitmap/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Jetpack ComposeでBitmapを表示するには</title>
+      <link>https://kwmt27.net/2021/01/31/jetpack-compose-about-bitmap/</link>
+      <pubDate>Sun, 31 Jan 2021 22:50:00 +0900</pubDate>
+      
+      <guid>https://kwmt27.net/2021/01/31/jetpack-compose-about-bitmap/</guid>
+      <description>Jetpack ComposeでBitmapを表示するには、Image関数を使い、引数にBitmapを渡せばいいのですが、そのときImageBitmapに変換する必要があるようで、 そのためにasImageBitmap()という拡張関数が生えてるので、それを使えばよさそうです。
+import androidx.compose.foundation.Image import androidx.compose.ui.graphics.asImageBitmap Image( bitmap.asImageBitmap(), )  </description>
+    </item>
+    
+  </channel>
+</rss>

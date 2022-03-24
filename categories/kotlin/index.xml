@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Kotlin on Androg</title>
+    <link>https://kwmt27.net/categories/kotlin/</link>
+    <description>Recent content in Kotlin on Androg</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>ja</language>
+    <lastBuildDate>Sun, 18 Aug 2019 18:50:00 +0900</lastBuildDate>
+    
+	<atom:link href="https://kwmt27.net/categories/kotlin/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>KotlinのDelegateについて</title>
+      <link>https://kwmt27.net/2019/08/18/iosched-2019-kotlin-delegate/</link>
+      <pubDate>Sun, 18 Aug 2019 18:50:00 +0900</pubDate>
+      
+      <guid>https://kwmt27.net/2019/08/18/iosched-2019-kotlin-delegate/</guid>
+      <description>はじめに Google I/O 2019のソースが公開されたのでさっそく読み始めたところ、下記のコードが気になった。 KotlinのDelegated propertyであることは知っていたが、あんまり詳しく知らなかったので、今回はDelegateについて調べてみたので、それについてのメモです。
+override var onboardingCompleted by BooleanPreference(prefs, PREF_ONBOARDING, false)  ちなみに、試したコードはこちらです。
+https://github.com/kwmt/Kotlin-Playground/tree/master/src/main/kotlin/delegation
+まずはDelegationの基本について Javaでは処理をクラスに委譲するには次のようにやっていたと思います。(下記サンプルはJavaではないが、Javaで書くならこんな感じになる)
+package delegation interface Nameble { var name: String } class JackName : Nameble { override var name: String = &amp;quot;Jack&amp;quot; } class Person(name: Nameble) : Nameble { override var name: String = name.name } fun main() { val person = Person(JackName()) println(person.name) }  つまり、PersonクラスのnameをNamebleのnameに委譲したい場合、
+override var name: String = name.name  と書かないといけません。</description>
+    </item>
+    
+    <item>
+      <title>Kotlin Enum</title>
+      <link>https://kwmt27.net/2017/10/19/kotlin-enum/</link>
+      <pubDate>Thu, 19 Oct 2017 22:36:00 +0900</pubDate>
+      
+      <guid>https://kwmt27.net/2017/10/19/kotlin-enum/</guid>
+      <description>はじめに KotlinでEnumを定義して、IntからEnumに変換したいときどうしたらいいのかをメモ。
+Javaの場合 ItemTypeというのをこんな感じで定義して、staticなvalueOfメソッドで、ItemTypeのintが見つかればItemTypeを返していた。
+public enum ItemType { Normal(0), Progress(1), Ad(2); private int typeId; ItemType(int typeId) { this.typeId = typeId; } public int getTypeId() { return typeId; } public static ItemType valueOf(int id) { for (ItemType itemType : values()) { if (itemType.getTypeId() == id) { return itemType; } } throw new IllegalArgumentException(&amp;quot;no such enum object for the id: &amp;quot; + id); } }  Kotlin Kotlinでも同様にしてやればよい。
+enum class ItemType(val typeId:Int) { Normal(0), Progress(1), Ad(2); companion object { fun valueOf(typeId:Int) :ItemType { val filtered = ItemType.</description>
+    </item>
+    
+    <item>
+      <title>Kotlin kapt error</title>
+      <link>https://kwmt27.net/2017/10/15/kotlin-error/</link>
+      <pubDate>Sun, 15 Oct 2017 21:18:00 +0900</pubDate>
+      
+      <guid>https://kwmt27.net/2017/10/15/kotlin-error/</guid>
+      <description>困ったこと Kotlin + Dagger2を使って、下記のようなエラーが出た。
+ See log for more details
+ とあるけど、どこ見たらいいのでしょうか。。。
+対策 Android Studioからは見れないので、ターミナルでassembleDevelopDebugを実行してみましょう。
+% ./gradlew assembleDevelopDebug  すると下記のような感じで詳細なエラーログを見ることができます。
+:app:kaptDevelopDebugKotlin e: app/build/tmp/kapt3/stubs/developDebug/net/kwmt27/codesearch/presentation/internal/di/components/AppComponent.java:6: エラー: [dagger.android.AndroidInjector.inject(T)] java.util.Map&amp;lt;java.lang.Class&amp;lt;? extends android.support.v4.app.Fragment&amp;gt;,javax.inject.Provider&amp;lt;dagger.android.AndroidInjector.Factory&amp;lt;? extends android.support.v4.app.Fragment&amp;gt;&amp;gt;&amp;gt; cannot be provided without an @Provides-annotated method. e: e: public abstract interface AppComponent extends dagger.android.AndroidInjector&amp;lt;net.kwmt27.codesearch.presentation.App&amp;gt; { e: ^ e: java.util.Map&amp;lt;java.lang.Class&amp;lt;? extends android.support.v4.app.Fragment&amp;gt;,javax.inject.Provider&amp;lt;dagger.android.AndroidInjector.Factory&amp;lt;? extends android.support.v4.app.Fragment&amp;gt;&amp;gt;&amp;gt; is injected at e: dagger.android.DispatchingAndroidInjector.&amp;lt;init&amp;gt;(injectorFactories) e: dagger.android.DispatchingAndroidInjector&amp;lt;android.support.v4.app.Fragment&amp;gt; is injected at e: dagger.android.support.DaggerAppCompatActivity.supportFragmentInjector e: net.kwmt27.codesearch.presentation.view.MainActivity is injected at e: dagger.</description>
+    </item>
+    
+  </channel>
+</rss>

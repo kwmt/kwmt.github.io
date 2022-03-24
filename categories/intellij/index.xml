@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Intellij on Androg</title>
+    <link>https://kwmt27.net/categories/intellij/</link>
+    <description>Recent content in Intellij on Androg</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>ja</language>
+    <lastBuildDate>Thu, 26 Mar 2020 00:00:00 +0900</lastBuildDate>
+    
+	<atom:link href="https://kwmt27.net/categories/intellij/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>IntelliJ IdeaのCreate New ProjectでIntelliJ Platform Pluginが無い場合の出し方</title>
+      <link>https://kwmt27.net/2020/03/26/how-to-create-a-new-project-without-intellij-platform-plugin-in-create-new-project-of-intellij-ide/</link>
+      <pubDate>Thu, 26 Mar 2020 00:00:00 +0900</pubDate>
+      
+      <guid>https://kwmt27.net/2020/03/26/how-to-create-a-new-project-without-intellij-platform-plugin-in-create-new-project-of-intellij-ide/</guid>
+      <description> IntelliJ IDEAのプラグインを作ろう！を参考に、プラグインを作ろうと思って、プロジェクトの作成をしようとしたら、”IntelliJ Platform Plugin&amp;rdquo;がない！！！
+&amp;rdquo;)
+”IntelliJ Platform Plugin&amp;rdquo;でググったりしてたんですが、”IntelliJ Platform Plugin&amp;rdquo;の出し方を書いた記事が見つからない。
+いろいろIntelliJ IdeaのPluginあたりを見ててやっと見つけました！
+この&amp;rdquo;Plugin DevKit&amp;rdquo;が有効でなかったためです。 これを有効にしてOKして再起動すると &amp;rdquo;)
+&amp;ldquo;IntelliJ Platform Plugin&amp;rdquo;が出ました！！
+あとでよくよくGetting Started with Plugin DevelopmentのPreliminary Stepsを見てみると、 &amp;gt; Plugin DevKit &amp;gt; Please make sure that the &amp;ldquo;Plugin DevKit&amp;rdquo; plugin is enabled in Settings | Plugins.
+「Plugin設定で、&amp;rdquo;Plugin DevKit&amp;rdquo;プラグインが有効になっていることを確認してください」って書いてました…（汗）
+あわせてよむ  IntelliJ IdeaのCreate New ProjectでIntelliJ Platform Pluginを指定した時、右ペインのProject SDKを指定する方法  </description>
+    </item>
+    
+    <item>
+      <title>IntelliJ IdeaのCreate New ProjectでIntelliJ Platform Pluginを指定した時、右ペイン</title>
+      <link>https://kwmt27.net/2020/03/26/when-you-specify-the-intellij-platform-plugin-in-the-create-new-project-of-intellij-idea-the-right-pane/</link>
+      <pubDate>Thu, 26 Mar 2020 00:00:00 +0900</pubDate>
+      
+      <guid>https://kwmt27.net/2020/03/26/when-you-specify-the-intellij-platform-plugin-in-the-create-new-project-of-intellij-idea-the-right-pane/</guid>
+      <description>IntelliJ IdeaのCreate New ProjectでIntelliJ Platform Pluginが無い場合の出し方でIntelliJ Platform Pluginを表示することができました。
+IntelliJ IDEAのプラグインを作ろう！を参考に、プラグインを作ろうと思って、プロジェクトの作成で、Create New Project - &amp;gt; IntelliJ Platform Pluginを指定した時、Project SDKがで何も選択するものがない。
+これを選択できるようにするには、
+ 右側にある&amp;rdquo;New&amp;rdquo;をクリックします。 IntelliJ Ideaのインストールディレクトリを選択します。(Newしたときにデフォルトでインストールディレクトリにいるので、そのままChooseをクリックするだけです。)  使用したいJava SDKバージョンを指定しOKをクリックします。 これでNoneからIDEA IU-xxx.xxx.xのように選択できるようになります。   これは、Getting Started with Plugin DevelopmentのConfiguring IntelliJ IDEA SDKの
+ Using the Select Path dialog box that opens, select the IntelliJ IDEA installation directory directory, and then click OK.
+Note, that by default, this dialog box automatically selects the home directory of the currently running IntelliJ IDEA installation.</description>
+    </item>
+    
+  </channel>
+</rss>

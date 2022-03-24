@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Image on Androg</title>
+    <link>https://kwmt27.net/tags/image/</link>
+    <description>Recent content in Image on Androg</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>ja</language>
+    <lastBuildDate>Thu, 11 Jul 2013 00:00:00 +0000</lastBuildDate>
+    
+	<atom:link href="https://kwmt27.net/tags/image/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>#golang 座標点となるリストからその座標点間に線を引くには？</title>
+      <link>https://kwmt27.net/index.php/2013/07/11/draw-line-from-list/</link>
+      <pubDate>Thu, 11 Jul 2013 00:00:00 +0000</pubDate>
+      
+      <guid>https://kwmt27.net/index.php/2013/07/11/draw-line-from-list/</guid>
+      <description>Pythonの http://effbot.org/imagingbook/imagedraw.htm#tag-ImageDraw.Draw.line のようなことしたい
+ 参考 golang-nuts MLでいろいろ教えていただきました。
+https://groups.google.com/forum/#!topic/golang-nuts/xyO1FpegElE
+あと、image/drawのサンプルをpushしました。
+https://github.com/golang-samples/image/blob/master/draw/main.go</description>
+    </item>
+    
+  </channel>
+</rss>

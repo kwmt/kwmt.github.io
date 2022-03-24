@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Google Signin on Androg</title>
+    <link>https://kwmt27.net/tags/google-signin/</link>
+    <description>Recent content in Google Signin on Androg</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>ja</language>
+    <lastBuildDate>Fri, 22 Jun 2018 09:50:00 +0900</lastBuildDate>
+    
+	<atom:link href="https://kwmt27.net/tags/google-signin/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>flutter Google SignInのexampleをやってみた</title>
+      <link>https://kwmt27.net/2018/06/22/flutter-google-signin/</link>
+      <pubDate>Fri, 22 Jun 2018 09:50:00 +0900</pubDate>
+      
+      <guid>https://kwmt27.net/2018/06/22/flutter-google-signin/</guid>
+      <description>はじめに flutter で google singinをやってみた
+https://github.com/flutter/plugins/tree/master/packages/google_sign_in
+   iOS Android          メモ  Firebaseのプロジェクトつくったりgoogle-services.jsonやplistを作ってプロジェクトに格納したりするのは、このYoutubeがわかりやすいかも
+ AndroidはSHA1のフィンガープリントを追加する必要がある
+ デバッグ用のフィンガープリントの確認方法(パスワードはandroid) shell % keytool -exportcert -list -v \-alias androiddebugkey -keystore ~/.android/debug.keystore  SHA256も表示されるが、そっちじゃなくてSHA1の方なので注意  iOSはInfo.plistに下記を設定(READMEに記載あり)
+&amp;lt;!-- Put me in the [my_project]/ios/Runner/Info.plist file --&amp;gt; &amp;lt;!-- Google Sign-in Section --&amp;gt; &amp;lt;key&amp;gt;CFBundleURLTypes&amp;lt;/key&amp;gt; &amp;lt;array&amp;gt; &amp;lt;dict&amp;gt; &amp;lt;key&amp;gt;CFBundleTypeRole&amp;lt;/key&amp;gt; &amp;lt;string&amp;gt;Editor&amp;lt;/string&amp;gt; &amp;lt;key&amp;gt;CFBundleURLSchemes&amp;lt;/key&amp;gt; &amp;lt;array&amp;gt; &amp;lt;!-- TODO Replace this value: --&amp;gt; &amp;lt;!-- Copied from GoogleServices-Info.</description>
+    </item>
+    
+  </channel>
+</rss>

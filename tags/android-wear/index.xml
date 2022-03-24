@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Android Wear on Androg</title>
+    <link>https://kwmt27.net/tags/android-wear/</link>
+    <description>Recent content in Android Wear on Androg</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>ja</language>
+    <lastBuildDate>Wed, 19 Nov 2014 00:00:00 +0000</lastBuildDate>
+    
+	<atom:link href="https://kwmt27.net/tags/android-wear/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>android wear appのインストール時の注意点</title>
+      <link>https://kwmt27.net/index.php/2014/11/19/notice_when_install_android_wearable_apps/</link>
+      <pubDate>Wed, 19 Nov 2014 00:00:00 +0000</pubDate>
+      
+      <guid>https://kwmt27.net/index.php/2014/11/19/notice_when_install_android_wearable_apps/</guid>
+      <description>開発時（といいますか、デバッグキーを使ってビルドしている時）は、携帯端末とWearable端末に別々にインストールしないと、携帯端末だけにインストールしても自動的にWearable端末にインストールされません。
+リリースキーを使って署名している場合は、自動的にインストールされます。
+参考 Install the Wearable App</description>
+    </item>
+    
+  </channel>
+</rss>

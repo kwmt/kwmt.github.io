@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Lt on Androg</title>
+    <link>https://kwmt27.net/tags/lt/</link>
+    <description>Recent content in Lt on Androg</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>ja</language>
+    <lastBuildDate>Thu, 16 Aug 2018 19:35:00 +0900</lastBuildDate>
+    
+	<atom:link href="https://kwmt27.net/tags/lt/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Flutterあるある</title>
+      <link>https://kwmt27.net/2018/08/16/flutter-workshop/</link>
+      <pubDate>Thu, 16 Aug 2018 19:35:00 +0900</pubDate>
+      
+      <guid>https://kwmt27.net/2018/08/16/flutter-workshop/</guid>
+      <description>はじめに 2018/08/12(日)にGDG神戸主催のFlutter勉強会が開催されました。勉強会全体に関しては こちらのブログを見ていただいて、ここでは僕が「Flutterあるある」というタイトルでLT(LT資料はこちら)したので、それについて書きたいと思います。
+基本的に原稿をもとに加筆・修正しています。
+Flutterあるある まず自己紹介でチャットアプリを作成中で下記の動画で紹介しました。
+ このアプリを作成中にいろいろあったので、これあるあるだなぁと思ったことを３つほど共有したいと思います。
+このチャットアプリはまだ公開できる状態じゃないのですが、インストールしてためしていただくこともできますので、ご興味があれば声かけてください。
+公式ドキュメントに書いてるプラグインが動かないことがある 本題です。まず、あるあるの１つ目は、公式ドキュメントに書いてるプラグインが動かないことがある。です。
+公式ドキュメントの書いてある以上、動いてほしいよねという話なのですが、 たとえば、画像キャッシュしたいと思って、「flutter cache image」と検索すると、 cached_network_imageプラグインというのが公式ドキュメントに載っているのが見つかります。
+これを使おうとして、flutter packages getすると、「cached_network_imageはuuidプラグインに依存していてバージョン0.5.3が必要です」というエラーが出てしまいました。これはuuidプラグインのバージョン1.0.0以上を使っている場合にエラーになります。
+issueを見てみると、29日前にissueが上がってたり、
+プルリクエストまで出ているのに、とくにメンテされる気配がなさそうでした。。。そんなときは、pubspec.yamlは直接githubリポジトリを参照することができるので、動かないgithubリポジトリをforkして修正すれば、本家のプラグインが動かなくても大丈夫です！
+ここでは、pubspec.yamlはgitリポジトリを参照できますよ、ということを言いたかっただけです。
+Google製プラグインが動かないことがある 2つ目はGoogle製プラグインが動かないことがありました。 firebase_messagingプラグインを使って Androidにプッシュ通知を送ったところ、送った時点でクラッシュするという致命的な現象に遭遇しました。
+これはissueがあって、プルリクエストがない状況でして、たまたま原因がわかったのでプルリクエストを送りました。
+プルリクエストを送ったところ、2週間弱ぐらい反応なくて、他の人が突っついたら動き始めてくれました。
+このプルリクエスト自体は他のプラグインの絡みでマージされなかったのですが、修正してもらって、現在のバージョンではプッシュ通知が届いたときにクラッシュしなくなっています。
+ここでは、プルリクエストは気軽にできるよ！ってことを伝えたかったです。
+AndroidとiOSで動きが異なる 最後は、AndroidとiOSで動きが異なるというあるあるです。これが一番あるあるかなぁなと思いますが、僕が遭遇したのはQRコードリーダーのプラグインです。
+QRコードを読み取るプラグインはいくつかあって、たとえば、qr_readerというプラグインがあります。
+Androidで動かすとカメラ画面が全画面になっていますが、
+iOSでは全画面ではなく、中央部分のみカメラ画面があるという感じになっていました。
+ほかにはbarcode_scanというプラグインがあります。
+これもちょっと異なっていて、iOSは全画面表示でとくに枠とかないのですが、
+Androidは全画面表示で枠があるデザインになっていました。
+今回のチャットアプリに関してはこれで妥協しているのですが、必要ならプルリクエストするか、自分でプラグインを作る必要がありそうかなぁと思います。
+まとめ 動かなかったり、AndroidとiOSで期待する動きと異なっている場合がありますが、githubリポジトリを参照できるのでなんとかなりますし、たとえ一部でも修正できればプルリクエストを送ってみてください。なんとかなります。 ということで、まとめとしては「なんとかなる」ですｗ
+まだまだ微妙なところがあるflutterですが、ワンソースで両OS対応できるのは魅力的なので今後も追っかけていきたいと思います。
+付録 と、まぁLTはここまでだったんですが、他にも2つほど考えていたけどLT時間内に入り切らなかったので泣く泣く除いたあるあるをここでご紹介。
+Dart Packagesサイトとgithubの情報が違うことがある プラグインの情報は、pub.dartlang.org(ここではDart Packagesサイトと呼ぶことにします)で探すか、ググったらだいたいここに行き着くと思います。
+それで、Dart PackagesサイトのREADMEをまずは見ると思いますが、Dart Packagesサイト側のREADMEを読んでもうまく動かず、GithubのREADMEを読んだらうまくいったということがありました。
+具体的には、いまは修正されてるのですが、image_pickerというプラグインで、iOSではNSMicrophoneUsageDescriptionの設定が必要なのに、Dart PackagesサイトのREADMEには書いてなく、GithubのREADMEには書かれていたという事がありました。
+これはTwitterで教えて頂いたのですが、Dart PackagesサイトはpublishしたときにしかREADME更新できないようで、publishするにはバージョンを上げる必要があるみたいで、README更新するだけのためにバージョンを上げるのも、、、感があるのかもということでした。
+pub.dartlangの方はpublishしたときにしかREADME更新できないんですよね&amp;hellip;
+README更新するためだけにバージョン上げるのも感があるのかもです
+(同期はして欲しい)
+&amp;mdash; 月見ふそやんUnderground (@azihsoyn) 2018年6月29日 
+ですので、Dart Packagesサイトを見るのもいいですが、できるだけGithubの方を見ておくと幸せになれるかもしれませんね。
+masterチャンネルで動かないことがある もう1つは、masterチャンネルで動かないのことがある、ですが、flutterには channelというgitのブランチのようなものがあって(というか実態はgitのブランチだと思いますが)、flutter channelというコマンドで自分がいまどのチャンネルにいるか確認できます。下記の例だとmasterチャンネルにいます。</description>
+    </item>
+    
+  </channel>
+</rss>

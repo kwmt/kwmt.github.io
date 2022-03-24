@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Node.js on Androg</title>
+    <link>https://kwmt27.net/tags/node.js/</link>
+    <description>Recent content in Node.js on Androg</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>ja</language>
+    <lastBuildDate>Mon, 13 May 2013 00:00:00 +0000</lastBuildDate>
+    
+	<atom:link href="https://kwmt27.net/tags/node.js/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>大阪Node学園入学式2013に行ってきた。 #ong5</title>
+      <link>https://kwmt27.net/index.php/2013/05/13/osaka-node-gakuen/</link>
+      <pubDate>Mon, 13 May 2013 00:00:00 +0000</pubDate>
+      
+      <guid>https://kwmt27.net/index.php/2013/05/13/osaka-node-gakuen/</guid>
+      <description>はじめに 大阪Node学園入学式2013に行ってきました。
+ひとまずnode.jsはどうやったら動かせるのかというところから、expressというウェブアプリケーションフレームワークを使って、いろいろイジって使い方を学びました。
+nodejsのインストール node.jsをインストールし、使えることを確認した後、ウェブアプリケーションフレームワークであるexpressをインストールして動かしてみるところまで。
+ nodemonをインストールしておくと便利  expressのハンズオンの記録はこっちに置いた。 https://github.com/kwmt/nodejs-handson
+ハンズオンやりながらコミットしていったんだけど、コミットログがイケてない(´・ω・`)
+感想 CUIベースで話が進んでいたので、unixコマンドを知らない人は結構そこだけで苦痛だったかも。
+実際行くなら、基本コマンドは覚えていくといいと思う。
+しかし知ってる人が教えていたので、なんとかなるとは思うけれど。
+個人的には、ちょうどいいペースだったと思います。シェルなどの環境が違うと少しハマったりもしましたが。。。
+websoketの話もあるみたいので、次あればそこまでは聞きたい。
+ありがとうございました！</description>
+    </item>
+    
+  </channel>
+</rss>

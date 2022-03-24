@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Androidstudio on Androg</title>
+    <link>https://kwmt27.net/tags/androidstudio/</link>
+    <description>Recent content in Androidstudio on Androg</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>ja</language>
+    <lastBuildDate>Thu, 26 Mar 2020 00:00:00 +0900</lastBuildDate>
+    
+	<atom:link href="https://kwmt27.net/tags/androidstudio/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Android Studioを2.1に上げると、ActiveAndroidでエラーが出た場合の対処法</title>
+      <link>https://kwmt27.net/2020/03/26/what-to-do-if-you-get-an-error-in--activeandroid-when-you-increase-android-studio-to-2.1/</link>
+      <pubDate>Thu, 26 Mar 2020 00:00:00 +0900</pubDate>
+      
+      <guid>https://kwmt27.net/2020/03/26/what-to-do-if-you-get-an-error-in--activeandroid-when-you-increase-android-studio-to-2.1/</guid>
+      <description>問題 Android Studioを2.1にあげると、com.android.tools.build:gradleも2.1.0に上げれるのですが、上げてしまうと、以下のようなエラーがでて、Android6.0で落ちるようになってしまいました。
+Caused by: java.lang.NullPointerException: Attempt to invoke virtual method &#39;java.lang.String com.activeandroid.TableInfo.getIdName()&#39; on a null object reference at com.activeandroid.Model.&amp;lt;init&amp;gt;(Model.java:55)  対策 調べてみるとActiveAndroidのissueに書いてあったが、AA_MODELSに com.activeandroid.Model を継承しているクラスを指定したmeta-dataを追加すると良いとのとこ。 https://github.com/pardom/ActiveAndroid/issues/461#issuecomment-207252708
+こんな感じになりました。
+&amp;lt;meta-data android:name=&amp;quot;AA_MODELS&amp;quot; android:value=&amp;quot;com.my.db.ModelAxx, com.my.db.ModelBxx&amp;quot;/&amp;gt;  原因 まったく同じソースで、com.android.tools.build:gradleが2.0.0だったら問題なかったので、このバージョンアップのなにかが原因だと思うが、詳しくは調べていません。
+ちなみに、 AA_MODELS とはなにかについては、 ここ に書かれてあるように、AcitveAndroidは全部のファイルの中からModelクラスを探しますが、AA_MODELSにModelクラスを明示的に指定することで処理を早くするために指定するものとのことです。</description>
+    </item>
+    
+  </channel>
+</rss>

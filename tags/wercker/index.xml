@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Wercker on Androg</title>
+    <link>https://kwmt27.net/tags/wercker/</link>
+    <description>Recent content in Wercker on Androg</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>ja</language>
+    <lastBuildDate>Thu, 26 Mar 2020 00:20:00 +0900</lastBuildDate>
+    
+	<atom:link href="https://kwmt27.net/tags/wercker/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>dep(Go dependency tool)を自作ライブラリに使ってみた</title>
+      <link>https://kwmt27.net/2020/03/26/i-tried-to-use-dep-in-my-library/</link>
+      <pubDate>Thu, 26 Mar 2020 00:20:00 +0900</pubDate>
+      
+      <guid>https://kwmt27.net/2020/03/26/i-tried-to-use-dep-in-my-library/</guid>
+      <description>はじめに 1個だけの外部ライブラリに依存している（超かんたんな）自作ライブラリgithub.com/kwmt/combineを例に、depコマンドを使ってみた内容をメモしておこうと思います。
+基本的な使い方 インストールと初期化 depのインストールは、プロジェクトルートに移動して、go getします。
+$ cd $GOPATH/src/github.com/kwmt/combine $ go get -u github.com/golang/dep/...  次のコマンドで初期化します。
+$ dep init  でgithubログインを促されましたが、manifest.jsonとlock.jsonが作成されます。1
+このとき、すでに依存ライブラリを見つけてくれていて、下記のように依存ライブラリが記述されています。2
+{ &amp;quot;dependencies&amp;quot;: { &amp;quot;github.com/kwmt/go-utils&amp;quot;: { &amp;quot;branch&amp;quot;: &amp;quot;master&amp;quot; } } }  { &amp;quot;memo&amp;quot;: &amp;quot;&amp;quot;, &amp;quot;projects&amp;quot;: [ { &amp;quot;name&amp;quot;: &amp;quot;github.com/kwmt/go-utils&amp;quot;, &amp;quot;branch&amp;quot;: &amp;quot;master&amp;quot;, &amp;quot;revision&amp;quot;: &amp;quot;7431874e8437574169c0fb50e811d790fc1ed2ab&amp;quot;, &amp;quot;packages&amp;quot;: [ &amp;quot;.&amp;quot; ] } ] }  依存ライブラリのダウンロード ここまでではまだ依存ライブラリはダウンロードされてないので、
+$ dep ensure -update  とします。するとvendorディレクトリが作成されて、そのなかに依存ライブラリがダウンロードされます
+$ ls vendor/github.com/kwmt/ go-utils  状態を確認 dep statusコマンドは、プロジェクトの依存関係の状態を見ることが出来ます。</description>
+    </item>
+    
+    <item>
+      <title>werckerの独自stepの作り方</title>
+      <link>https://kwmt27.net/2020/03/26/how-to-make-a-werckers-own-step/</link>
+      <pubDate>Thu, 26 Mar 2020 00:03:00 +0900</pubDate>
+      
+      <guid>https://kwmt27.net/2020/03/26/how-to-make-a-werckers-own-step/</guid>
+      <description>はじめに wercker CIでApplicationを新規作成したときにGoのテンプレートに下記のような記述を見かけました。
+steps: - setup-go-workspace  これは、主にGoパッケージを作ったとき向けのセットアップっぽく、オレオレフレームワークなどには使いにくかったので、ここを変更できたらいいなと思って調べていたら、どうも このレポジトリにあるrun.shを実行してるっぽく、setup-go-workspaceはwercker-step.ymlで定義されてるっぽい。
+なんとなく、wercker-step.ymlとrun.shが必要そうってことはわかったけど、どうやって使うんだろうと思ったのがきっかけです。 そしてすぐにはわからなかったのでメモしておこうと思います。
+stepの作成からそのstepの使用まで 独自stepの作成 ということで、まずwercker-step.ymlとrun.shという名前のファイルを用意します。
+% mkdir wercker-step-helloworld &amp;amp;&amp;amp; cd wercker-step-helloworld % echo &#39;name: helloworld\nversion: 1.0.0&#39; &amp;gt; wercker-step.yml % echo &#39;echo &amp;quot;hello world!&amp;quot;&#39; &amp;gt; run.sh  ドキュメントにあるようにwercker-step.ymlには、nameとversionだけが必須です。
+run.shには、hello world!と表示するだけのスクリプトを書いておきます。
+GitHubにレポジトリを作ってプッシュします。 ということで、プッシュしたものがこちら。 https://github.com/kwmt/wercker-step-helloworld
+Wercker directoryにデプロイ 先ほど作成したものをwerckerに登録して公開する必要があります。
+こちらからhttps://app.wercker.com/stepを作成します。
+このとき先ほどwercker-step.ymlとかをプッシュしたレポジトリを指定します。
+これでビルドが走ると思います。
+これだけではまだ使えなくて、Wercker directoryというところにDeployする必要があります。 Wercker directoryにDeployするには、deploy targetを指定する必要がありますが、新しく追加しなくても、publish-stepというDeploy targetがすでに作成されてるはずなので、それを使います。
+先ほどのビルドが成功したら、ビルドの詳細画面でBuild passedと出ている右側にDeploy toというドロップダウンがあるので、そこをクリックして、publish-stepというDeploy targetを指定し、Start deployをクリックするとデプロイされます。
+デプロイされると下記URLのような感じになります。 https://app.wercker.com/applications/585f2630d8cb9e0100c142c4/tab/details/
+自作したstepをwercker.ymlで使う 自作したstepを使うには、wercker.ymlに次のように記述します。
+steps: - kwmt/helloworld  これでwerckerを走らせると、
+hello world!が出力されてることがわかると思います。</description>
+    </item>
+    
+    <item>
+      <title>werckerの独自stepの作り方</title>
+      <link>https://kwmt27.net/2016/12/25/how-to-create-wercker-step/</link>
+      <pubDate>Sun, 25 Dec 2016 14:08:59 +0900</pubDate>
+      
+      <guid>https://kwmt27.net/2016/12/25/how-to-create-wercker-step/</guid>
+      <description>はじめに wercker CIでApplicationを新規作成したときにGoのテンプレートに下記のような記述を見かけました。
+steps: - setup-go-workspace  これは、主にGoパッケージを作ったとき向けのセットアップっぽく、オレオレフレームワークなどには使いにくかったので、ここを変更できたらいいなと思って調べていたら、どうも このレポジトリにあるrun.shを実行してるっぽく、setup-go-workspaceはwercker-step.ymlで定義されてるっぽい。
+なんとなく、wercker-step.ymlとrun.shが必要そうってことはわかったけど、どうやって使うんだろうと思ったのがきっかけです。 そしてすぐにはわからなかったのでメモしておこうと思います。
+stepの作成からそのstepの使用まで 独自stepの作成 ということで、まずwercker-step.ymlとrun.shという名前のファイルを用意します。
+% mkdir wercker-step-helloworld &amp;amp;&amp;amp; cd wercker-step-helloworld % echo &#39;name: helloworld\nversion: 1.0.0&#39; &amp;gt; wercker-step.yml % echo &#39;echo &amp;quot;hello world!&amp;quot;&#39; &amp;gt; run.sh  ドキュメントにあるようにwercker-step.ymlには、nameとversionだけが必須です。
+run.shには、hello world!と表示するだけのスクリプトを書いておきます。
+GitHubにレポジトリを作ってプッシュします。 ということで、プッシュしたものがこちら。 https://github.com/kwmt/wercker-step-helloworld
+Wercker directoryにデプロイ 先ほど作成したものをwerckerに登録して公開する必要があります。
+こちらからhttps://app.wercker.com/stepを作成します。 このとき先ほどwercker-step.ymlとかをプッシュしたレポジトリを指定します。
+これでビルドが走ると思います。
+これだけではまだ使えなくて、Wercker directoryというところにDeployする必要があります。 Wercker directoryにDeployするには、deploy targetを指定する必要がありますが、新しく追加しなくても、publish-stepというDeploy targetがすでに作成されてるはずなので、それを使います。
+先ほどのビルドが成功したら、ビルドの詳細画面でBuild passedと出ている右側にDeploy toというドロップダウンがあるので、そこをクリックして、publish-stepというDeploy targetを指定し、Start deployをクリックするとデプロイされます。
+デプロイされると下記URLのような感じになります。 https://app.wercker.com/applications/585f2630d8cb9e0100c142c4/tab/details/
+自作したstepをwercker.ymlで使う 自作したstepを使うには、wercker.ymlに次のように記述します。
+steps: - kwmt/helloworld  これでwerckerを走らせると、
+hello world!が出力されてることがわかると思います。</description>
+    </item>
+    
+  </channel>
+</rss>

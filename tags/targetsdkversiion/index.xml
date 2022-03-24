@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Targetsdkversiion on Androg</title>
+    <link>https://kwmt27.net/tags/targetsdkversiion/</link>
+    <description>Recent content in Targetsdkversiion on Androg</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>ja</language>
+    <lastBuildDate>Sat, 12 Jun 2021 18:00:00 +0900</lastBuildDate>
+    
+	<atom:link href="https://kwmt27.net/tags/targetsdkversiion/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Android targetSdkVersionを28から30への変更したときのメモ</title>
+      <link>https://kwmt27.net/2021/06/12/android-update-targertsdk-from-28-to-30/</link>
+      <pubDate>Sat, 12 Jun 2021 18:00:00 +0900</pubDate>
+      
+      <guid>https://kwmt27.net/2021/06/12/android-update-targertsdk-from-28-to-30/</guid>
+      <description>Activity エラー内容 e: /Users/kwmt/work/personal/QRCodeReader/core/presentation/src/main/java/net/kwmt27/presentation/MainActivity.kt: (61, 5): &#39;onRestoreInstanceState&#39; overrides nothing  原因 onRestoreInstanceStateメソッドの引数のsavedInstanceStateに@NonNullアノテーションがついたため、 protected void onRestoreInstanceState(@NonNull Bundle savedInstanceState)
+対策 - override fun onRestoreInstanceState(savedInstanceState: Bundle?) { + override fun onRestoreInstanceState(savedInstanceState: Bundle) { super.onRestoreInstanceState(savedInstanceState)  該当箇所  API level 28 https://cs.android.com/android/platform/superproject/+/android-9.0.0_r8:frameworks/base/core/java/android/app/Activity.java;bpv=1;bpt=1;l=1131
+ API Level 29 https://cs.android.com/android/platform/superproject/+/android-10.0.0_r30:frameworks/base/core/java/android/app/Activity.java;l=1566
+  ConnectivityManager エラー内容 e: /Users/kwmt/work/personal/QRCodeReader/core/presentation/src/main/java/net/kwmt27/presentation/WifiLifeCycle.kt: (66, 17): &#39;onAvailable&#39; overrides nothing e: /Users/kwmt/work/personal/QRCodeReader/core/presentation/src/main/java/net/kwmt27/presentation/WifiLifeCycle.kt: (71, 17): &#39;onLost&#39; overrides nothing  原因 これもNonNullアノテーションがついたため
+対策 該当箇所  onAvailable https://cs.android.com/android/platform/superproject/+/master:frameworks/base/core/java/android/net/ConnectivityManager.java;l=3409?q=ConnectivityManager&amp;amp;ss=android%2Fplatform%2Fsuperproject</description>
+    </item>
+    
+  </channel>
+</rss>

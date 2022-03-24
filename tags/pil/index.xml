@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Pil on Androg</title>
+    <link>https://kwmt27.net/tags/pil/</link>
+    <description>Recent content in Pil on Androg</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>ja</language>
+    <lastBuildDate>Sat, 13 Jul 2013 00:00:00 +0000</lastBuildDate>
+    
+	<atom:link href="https://kwmt27.net/tags/pil/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>#python でPILを使って、jpegファイルを扱った時に「decoder jpeg not available」というエラーが出た場合の対処法</title>
+      <link>https://kwmt27.net/index.php/2013/07/14/python-pil-error-decoder-jpeg-not-available/</link>
+      <pubDate>Sat, 13 Jul 2013 00:00:00 +0000</pubDate>
+      
+      <guid>https://kwmt27.net/index.php/2013/07/14/python-pil-error-decoder-jpeg-not-available/</guid>
+      <description>環境：Mac OS X 10.7.5
+問題 PILを使って、jpgファイルをオープンして、オープンしたファイルに対してアクセスしようとすると（今回の場合、getpixelの部分）、下記のような「decoder jpeg not available」というエラーがでる。
+% python hoge.py Traceback (most recent call last): File &#34;hoge.py&#34;, line 9, in p= img.getpixel((x,y)) File &#34;/Library/Python/2.7/site-packages/PIL/Image.py&#34;, line 949, in getpixel self.load() File &#34;/Library/Python/2.7/site-packages/PIL/ImageFile.py&#34;, line 189, in load d = Image._getdecoder(self.mode, d, a, self.decoderconfig) File &#34;/Library/Python/2.7/site-packages/PIL/Image.py&#34;, line 385, in _getdecoder raise IOError(&#34;decoder %s not available&#34; % decoder_name) IOError: decoder jpeg not available  確認 libjpegが入ってないから？ということをtwitterで教えて頂き、インストールされているか確認したところ入ってなさげ。
+portからインストールしてた場合 % port installed | grep libjpeg % ソースからインストールしていた場合 % ll /usr/local/lib/ | grep jpeg %  対策  libjpegをソースからインストールする http://www.</description>
+    </item>
+    
+  </channel>
+</rss>

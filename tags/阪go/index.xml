@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>阪go on Androg</title>
+    <link>https://kwmt27.net/tags/%E9%98%AAgo/</link>
+    <description>Recent content in 阪go on Androg</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>ja</language>
+    <lastBuildDate>Tue, 19 Nov 2013 00:00:00 +0000</lastBuildDate>
+    
+	<atom:link href="https://kwmt27.net/tags/%E9%98%AAgo/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>第1回大阪Go勉強会の課題をやってなかったので、いまさらながらやってみた。 #阪Go</title>
+      <link>https://kwmt27.net/index.php/2013/11/19/hango-exercises/</link>
+      <pubDate>Tue, 19 Nov 2013 00:00:00 +0000</pubDate>
+      
+      <guid>https://kwmt27.net/index.php/2013/11/19/hango-exercises/</guid>
+      <description>&lt;p&gt;課題は、&lt;a href=&#34;https://github.com/todoa2c/hango/blob/master/vol01.md&#34;&gt;こちら&lt;/a&gt;です。&lt;/p&gt;
+
+&lt;p&gt;先生のコードとは少し違かったので、めもっとく。&lt;/p&gt;
+
+&lt;p&gt;&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>第1回 #阪Go で GDG Kobeの活動内容を紹介してきました。</title>
+      <link>https://kwmt27.net/index.php/2013/09/20/hango/</link>
+      <pubDate>Fri, 20 Sep 2013 00:00:00 +0000</pubDate>
+      
+      <guid>https://kwmt27.net/index.php/2013/09/20/hango/</guid>
+      <description>というのを、GDG Kobeブログに投稿しました。（初投稿）
+GDG Kobeの活動内容の紹介 in 第1回 #阪Go</description>
+    </item>
+    
+  </channel>
+</rss>

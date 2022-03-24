@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Greendao on Androg</title>
+    <link>https://kwmt27.net/tags/greendao/</link>
+    <description>Recent content in Greendao on Androg</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>ja</language>
+    <lastBuildDate>Wed, 17 Sep 2014 00:00:00 +0000</lastBuildDate>
+    
+	<atom:link href="https://kwmt27.net/tags/greendao/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Android StudiodでgreenDaoを使う</title>
+      <link>https://kwmt27.net/index.php/2014/09/17/how-to-use-greendao-library/</link>
+      <pubDate>Wed, 17 Sep 2014 00:00:00 +0000</pubDate>
+      
+      <guid>https://kwmt27.net/index.php/2014/09/17/how-to-use-greendao-library/</guid>
+      <description>&lt;h2 id=&#34;はじめに&#34;&gt;はじめに&lt;/h2&gt;
+
+&lt;p&gt;AndroidのORMライブラリについて調べてみてまして、ORMLite、Active Android、greenDaoが有名のようです。&lt;/p&gt;
+
+&lt;p&gt;ORMLite、Active Androidは、アノテーションを使っていて、greenDaoは使っていません。&lt;/p&gt;
+
+&lt;p&gt;アノテーションはリフレクションに依存しているため、特にAndroidデバイスにおいては、パフォーマンスに影響出ますので、greenDaoを使おうかと思います。(&lt;a href=&#34;#sanko&#34;&gt;参考1&lt;/a&gt;などをみますと、パフォーマンスにクリティカルに影響があるアプリでなければどれつかっても良さそうですが・・・）&lt;/p&gt;
+
+&lt;h2 id=&#34;使い方としては&#34;&gt;使い方としては、&lt;/h2&gt;
+
+&lt;p&gt;２ステップ必要で、１ステップ目は、モデル定義しgreendao-generatorでコードを自動生成します。(普通のjava)&lt;/p&gt;
+
+&lt;p&gt;２ステップ目として、自動生成したコードをAndroidに組み込みます。&lt;/p&gt;
+
+&lt;p&gt;それで、自動生成するために新規にjavaプロジェクトを作る必要があると書いてある参考サイトが多くて、確かにそれでもいいのですが、別プロジェクトを作るのが面倒くさいし、プロジェクトが別なので管理がバラバラになりそうなので、なんとかしてのプロジェクトで出来ないか調べていた所、ちょ～分かりやすく書いて下さっていたサイトがありましたので、リンク張らせて頂きます。&lt;/p&gt;
+
+&lt;p&gt;&lt;/p&gt;</description>
+    </item>
+    
+  </channel>
+</rss>

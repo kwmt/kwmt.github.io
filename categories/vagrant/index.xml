@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Vagrant on Androg</title>
+    <link>https://kwmt27.net/categories/vagrant/</link>
+    <description>Recent content in Vagrant on Androg</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>ja</language>
+    <lastBuildDate>Wed, 06 Aug 2014 00:00:00 +0000</lastBuildDate>
+    
+	<atom:link href="https://kwmt27.net/categories/vagrant/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>RuntimeError: Couldn&amp;#8217;t determine Berks versionエラーが出たら</title>
+      <link>https://kwmt27.net/index.php/2014/08/06/runtimeerror-couldnt-determine-berks-version/</link>
+      <pubDate>Wed, 06 Aug 2014 00:00:00 +0000</pubDate>
+      
+      <guid>https://kwmt27.net/index.php/2014/08/06/runtimeerror-couldnt-determine-berks-version/</guid>
+      <description>下記のパスを環境変数(PATH)に追加する。
+/opt/chefdk/bin  以上。
+参考 Could not determine Berks version. v3.0.0</description>
+    </item>
+    
+    <item>
+      <title>VagrantでPHP開発環境構築方法</title>
+      <link>https://kwmt27.net/index.php/2014/01/31/how-to-create-php-dev-env-with-eclipse/</link>
+      <pubDate>Fri, 31 Jan 2014 00:00:00 +0000</pubDate>
+      
+      <guid>https://kwmt27.net/index.php/2014/01/31/how-to-create-php-dev-env-with-eclipse/</guid>
+      <description>vagrantのインストール 参考サイト
+http://qiita.com/inouet@github/items/b36638adc2b5772db457
+1.vagrantインストール 2.VirtualBox を公式サイトからインストール ※VirtualBoxはインストール済みの為、ここでは作業してない
+3.Boxの追加
+vagrant box add centos64 http://developer.nrel.gov/downloads/vagrant-boxes/CentOS-6.4-x86_64-v20130731.box  4.仮想マシンを作る
+$ mkdir -p ~/Vagrant/CentOS64 $ cd ~/Vagrant/CentOS64 $ vagrant init centos64  5.仮想マシンを起動する
+$ vagrant up  6.仮想マシンへ接続
+$ vagrant ssh  7.ネットワークの設定
+$ vim Vagrantfile # config.vm.network :private_network, ip: &amp;quot;192.168.33.10&amp;quot; ↑ ここのコメントアウトを削除  8.vagrant のリロード
+$ vagrant reload  これで、192.168.33.10 というIPでアクセスできる
+9.cent os6からは下記をいれておくと何か早くなる設定
+sudo vi /etc/resolv.conf options single-request-reopen  10.ファイアーウォールを切る ローカルの開発環境なので、必要がないため。
+$ sudo service iptables stop  再起動したときに有効にならないようにする</description>
+    </item>
+    
+  </channel>
+</rss>

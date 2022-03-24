@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Nginx on Androg</title>
+    <link>https://kwmt27.net/tags/nginx/</link>
+    <description>Recent content in Nginx on Androg</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>ja</language>
+    <lastBuildDate>Fri, 12 Dec 2014 00:00:00 +0000</lastBuildDate>
+    
+	<atom:link href="https://kwmt27.net/tags/nginx/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Dockerを導入した際の作業メモ</title>
+      <link>https://kwmt27.net/index.php/2014/12/12/docker/</link>
+      <pubDate>Fri, 12 Dec 2014 00:00:00 +0000</pubDate>
+      
+      <guid>https://kwmt27.net/index.php/2014/12/12/docker/</guid>
+      <description>&lt;h2 id=&#34;はじめに&#34;&gt;はじめに&lt;/h2&gt;
+
+&lt;p&gt;AWSで運用していたこのWordpressをさくらVPSに移行するにあたって、ついでに&lt;a href=&#34;https://www.docker.com/&#34; target=&#34;_blank&#34;&gt;Docker&lt;/a&gt;も勉強しようかなぁと思って、さくらVPSに&lt;a href=&#34;https://coreos.com/&#34; target=&#34;_blank&#34;&gt;CoreOS&lt;/a&gt;を載せて、Dockerでnginx + wordpressを動かすためにDockerについていろいろ調べたので、それのメモ。&lt;/p&gt;
+
+&lt;p&gt;&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>#Nginx &#43; #golang (FastCGI)&#43; #MySQL を使ったWebアプリケーションを書くための準備</title>
+      <link>https://kwmt27.net/index.php/2013/10/03/nginx-golang-fcgi-mysql/</link>
+      <pubDate>Wed, 02 Oct 2013 00:00:00 +0000</pubDate>
+      
+      <guid>https://kwmt27.net/index.php/2013/10/03/nginx-golang-fcgi-mysql/</guid>
+      <description>&lt;h2 id=&#34;はじめに&#34;&gt;はじめに&lt;/h2&gt;
+
+&lt;p&gt;下記の記事をみたら分かりやすいかもしれませんが、英語なので、実際にやった方法も交えてメモしておこうと思います。（似てるところもありますが、翻訳ではありません。）&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;http://mwholt.blogspot.jp/2013/05/writing-go-golang-web-app-with-nginx.html&#34; target=&#34;_blank&#34;&gt;Writing a Go (&amp;#8220;golang&amp;#8221;) Web App with nginx, FastCGI, MySQL, JSON&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;前提として、Go言語でWebサーバーをつくって動かすと言うと２種類の方法があります。&lt;/p&gt;
+
+&lt;p&gt;１つは、Go言語の&lt;a href=&#34;http://golang.org/pkg/net/http/&#34; target=&#34;_blank&#34;&gt;&amp;#8220;net/http&amp;#8221;&lt;/a&gt;パッケージというのがありますので、これを使ってGo自体でWebサーバーを作ってしまうことができます。&lt;/p&gt;
+
+&lt;p&gt;もう1つは、ApacheやNginxなどのWebサーバー上で、CGI(正確にはFastCGI)としてGo言語を動かす方法です。これはNginx+PHP-FPMのようなもに近いイメージだと思います。&lt;/p&gt;
+
+&lt;p&gt;Nginxを使うか使わないかは、こちらの&lt;a href=&#34;http://stackoverflow.com/questions/17776584/webserver-for-go-golang-webservices-using-nginx-or-not&#34; title=&#34;Webserver for Go (golang) webservices: using NGINX or not?&#34; target=&#34;_blank&#34;&gt;Stackoverflow&lt;/a&gt;をみると、&lt;/p&gt;
+
+&lt;blockquote&gt;
+&lt;p&gt;Go HTTPサーバーはいいんだけど、Webサーバーを一から作るのは大変だよ、Nginxを使った方が簡単だよ&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;みたいな感じで、Nginxつかった方がいいよという結論になってます。&lt;/p&gt;
+
+&lt;p&gt;この記事では、2つ目の方法のNginx+golang(FastCGI)でWebアプリケーションを作る準備をメモしたいと思います。&lt;/p&gt;
+
+&lt;p&gt;データベースとしては、MySQLを使いたいと思います。&lt;/p&gt;
+
+&lt;h2 id=&#34;使用環境&#34;&gt;使用環境&lt;/h2&gt;
+
+&lt;pre class=&#34;go&#34;&gt;サーバOS:CentOS release 6.4
+Webサーバ:nginx-1.4.1
+データベース:mysql  Ver 14.14 Distrib 5.5.27
+&lt;/pre&gt;
+
+&lt;p&gt;&lt;/p&gt;</description>
+    </item>
+    
+  </channel>
+</rss>

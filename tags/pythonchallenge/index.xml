@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Pythonchallenge on Androg</title>
+    <link>https://kwmt27.net/tags/pythonchallenge/</link>
+    <description>Recent content in Pythonchallenge on Androg</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>ja</language>
+    <lastBuildDate>Sat, 31 Aug 2013 00:00:00 +0000</lastBuildDate>
+    
+	<atom:link href="https://kwmt27.net/tags/pythonchallenge/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>#golang bzip2データから復元するには？</title>
+      <link>https://kwmt27.net/index.php/2013/08/31/golang-compress-bzip2/</link>
+      <pubDate>Sat, 31 Aug 2013 00:00:00 +0000</pubDate>
+      
+      <guid>https://kwmt27.net/index.php/2013/08/31/golang-compress-bzip2/</guid>
+      <description>compress/bzip2の使い方
+golang編  bzip2.NewReaderするだけで復元できるのですね。
+関数名が少し微妙な気もするけど、まぁいいか。
+python編  参考 http://golang.org/pkg/compress/bzip2/</description>
+    </item>
+    
+    <item>
+      <title>#golang zipファイルのコメントを取得するには？</title>
+      <link>https://kwmt27.net/index.php/2013/08/31/golang-archive-zip/</link>
+      <pubDate>Sat, 31 Aug 2013 00:00:00 +0000</pubDate>
+      
+      <guid>https://kwmt27.net/index.php/2013/08/31/golang-archive-zip/</guid>
+      <description>archive/zipパッケージの使い方
+golang編  下記で実行できる
+% go run archive_zip.go 90052 ※引数の数字はchannel.zipにreadme.txtに書いてある。
+python編  参考 http://golang.org/pkg/archive/zip/</description>
+    </item>
+    
+  </channel>
+</rss>

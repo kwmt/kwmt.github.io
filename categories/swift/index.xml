@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Swift on Androg</title>
+    <link>https://kwmt27.net/categories/swift/</link>
+    <description>Recent content in Swift on Androg</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>ja</language>
+    <lastBuildDate>Wed, 27 Apr 2016 11:02:08 +0900</lastBuildDate>
+    
+	<atom:link href="https://kwmt27.net/categories/swift/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>集まれSwift好き！Swift愛好会 #6に行ってきた</title>
+      <link>https://kwmt27.net/2016/04/27/love-swift-6/</link>
+      <pubDate>Wed, 27 Apr 2016 11:02:08 +0900</pubDate>
+      
+      <guid>https://kwmt27.net/2016/04/27/love-swift-6/</guid>
+      <description>はじめに 4&amp;frasl;24(日)は集まれSwift好き！Swift愛好会 #6に参加させて頂きました。
+結論から言うと、朝10:30から23:30までずっと飲みっぱなしの勉強会でしたｗ
+toggeter
+勉強会の概要と感想 午前中はモクモクしてました。swift1.2ぐらいのプロジェクトがあり、それを2.2対応して2.2の文法などを見なおしていていました。
+午後からも少しもくもくしてからの談義（プレゼン）が行われました。
+Reproの奥澤さんと川上さんはプロトコルについて発表されて、ひさしぶりswift触る自分としては、プロトコルについて思い出せてよかったです。 継承よりプロトコル使ったほうがなんでいいのかもすごい分かりやすかったです。
+熊谷さんの 「Swift 標準プロトコルを旅して Swift と楽しく会話してみよう」の話はLTといいつつ40分の超対策でとてもおもしろかったです。 CollectionTypeなどのプロトコルの中身(コード)を見ていったのですが、どのように考えながら見て行ったらより理解が深まるかを教えて頂きました。 プロトコルを眺めていったん想像してみることが大事だと思いました。
+さかいさんのUIPageViewControllerとContainerViewの話もすごい丁寧な発表で勉強になりましたね。 https://twitter.com/fumisac/status/724155827003613184
+ひろせさんの自作ライブラリ（下記）の紹介でした。SegueAddtionはクロージャでprepareForSegureを書けて、コードが離れないのがいいなと思いました。 ResourceKitは文字列として扱うのではなくて、定数として使えて補完も効くようになるのがいいなと思いましたが、導入がちょっとめんどくさい？という印象でした。 * https://github.com/bannzai/SegueAddition * https://github.com/bannzai/ResourceKit
+Reproの七島さんから RxSwift触ってみたという発表がありました。 RxSwiftしらなかったですが、超いいかんじにかけるじゃんって思いました。
+ほか懇親会などでお聞きした情報をメモ。 サーバーサイドSwiftはIBMの Kituraしか知らなかったんですが他にも Vaporというのがあると聞きました。まだバージョンアップしてるらしく、古い情報だと動かないらしいので、最新（公式）の情報をみるといいのかなと思いました。
+また、swift2.2から Swift Package Managerなるものが導入されてると聞いてCocoa Podsが要らなくなる日がくるのかなと。こちらは早めに試してみたいところです。
+写真 #love_swift お疲れ様でした！ #theta360 - Spherical Image - RICOH THETA</description>
+    </item>
+    
+  </channel>
+</rss>

@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Aws on Androg</title>
+    <link>https://kwmt27.net/tags/aws/</link>
+    <description>Recent content in Aws on Androg</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>ja</language>
+    <lastBuildDate>Sun, 26 Nov 2017 00:02:00 +0900</lastBuildDate>
+    
+	<atom:link href="https://kwmt27.net/tags/aws/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Amazon S3でWebサイトホスティングのメモ</title>
+      <link>https://kwmt27.net/2017/11/26/s3-web-hosting/</link>
+      <pubDate>Sun, 26 Nov 2017 00:02:00 +0900</pubDate>
+      
+      <guid>https://kwmt27.net/2017/11/26/s3-web-hosting/</guid>
+      <description>参考  Amazon S3による静的Webサイトホスティング  独自ドメインの設定が超絶参考になった。  ウェブサイトのホスティングの有効化  以下が必要なのに気づくのに時間かかってしまった。  バケット選択 プロパティ Static website hostingで有効化  SSL化 https://qiita.com/jasbulilit/items/73d70a01a5d3b520450f</description>
+    </item>
+    
+  </channel>
+</rss>

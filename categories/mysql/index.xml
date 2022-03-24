@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Mysql on Androg</title>
+    <link>https://kwmt27.net/categories/mysql/</link>
+    <description>Recent content in Mysql on Androg</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>ja</language>
+    <lastBuildDate>Thu, 27 Feb 2014 00:00:00 +0000</lastBuildDate>
+    
+	<atom:link href="https://kwmt27.net/categories/mysql/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>ERROR 2002 (HY000): Can&amp;#8217;t connect to local MySQL server through socket &amp;#8216;/var/lib/mysql/mysql.sock&amp;#8217; (111)</title>
+      <link>https://kwmt27.net/index.php/2014/02/27/mysql_error_2002/</link>
+      <pubDate>Thu, 27 Feb 2014 00:00:00 +0000</pubDate>
+      
+      <guid>https://kwmt27.net/index.php/2014/02/27/mysql_error_2002/</guid>
+      <description>VirtualBoxの仮想マシンが中断になってて、vagrant upで起動して、vagrant sshで入って、mysqlにログインしようとしたら、以下のエラーが出た。
+ERROR 2002 (HY000): Can&#39;t connect to local MySQL server through socket &#39;/var/lib/mysql/mysql.sock&#39; (111)  いろいろ調べてて、mysqldをrestartとしてもstartに失敗するし、どうしようかと思って諦めかけようとしたそのとき、下記のサイト様で解決しました。うれしくて、メモとしてリンク張らせて頂きました。ありがとうございます。
+mysqlソケットエラー解決法 &amp;#8211; ウマい話、ちょいくれや。 http://bit.ly/1bOmUmS</description>
+    </item>
+    
+  </channel>
+</rss>

@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Navigation on Androg</title>
+    <link>https://kwmt27.net/tags/navigation/</link>
+    <description>Recent content in Navigation on Androg</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>ja</language>
+    <lastBuildDate>Fri, 11 Oct 2019 16:40:00 +0900</lastBuildDate>
+    
+	<atom:link href="https://kwmt27.net/tags/navigation/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Navigation Architecture ComponentでToolbarのバックボタンを非表示にするには</title>
+      <link>https://kwmt27.net/2019/10/11/how-to-remove-back-button-of-toolbar-with-navigation-component/</link>
+      <pubDate>Fri, 11 Oct 2019 16:40:00 +0900</pubDate>
+      
+      <guid>https://kwmt27.net/2019/10/11/how-to-remove-back-button-of-toolbar-with-navigation-component/</guid>
+      <description>こちらを参照 https://stackoverflow.com/a/57169105/2520998
+トップレベルのDestinationだったら非表示になるから、非表示にしたいDestinationをトップレベルに設定すればいい、とのこと。
+こちらのサンプルを例にした場合、次のようにするとよさそう。
+ </description>
+    </item>
+    
+    <item>
+      <title>navigation-uiライブラリは、既存のアプリを置き換えることができないかもしれない</title>
+      <link>https://kwmt27.net/2018/06/09/umeda-apk/</link>
+      <pubDate>Sat, 09 Jun 2018 15:00:00 +0900</pubDate>
+      
+      <guid>https://kwmt27.net/2018/06/09/umeda-apk/</guid>
+      <description>はじめに umeda.apk #4でLTした内容です。
+スライドはこちらです。
+スライドの概要 navigation-uiライブラリというのがあって、Navigation Drawerとか使うのに超便利になったんですが、startDestination以外の画面に遷移すると、ハンバーガーアイコンが戻る矢印に変わってしまうので、微妙に使えないんじゃないかという話です。
+戻る矢印に変わってしまうと、ユーザーは絶対気づかないやつだと思うし、既存のNavigation Drawerを使ったアプリを置き換えることができないと思うのですが、僕だけでしょうか。。。
+もしこれが問題だと思う方は、このissueにスターやコメントして、改善してもらえるような方向になると、いいかなと思いますので、ぜひよろしくお願い致します。</description>
+    </item>
+    
+    <item>
+      <title>Principles of Navigationの翻訳</title>
+      <link>https://kwmt27.net/2018/05/23/android-principles-of-navigation/</link>
+      <pubDate>Wed, 23 May 2018 10:00:00 +0900</pubDate>
+      
+      <guid>https://kwmt27.net/2018/05/23/android-principles-of-navigation/</guid>
+      <description> はじめに Principles of Navigation(Navigationの原則)を一度読んでみたほうが良さそうと思って読んでみた時のメモというか翻訳です。
+Principles of Navigation(Navigationの原則) アプリ内ナビゲーションの目標は、ユーザーに一貫した予測可能なエクスペリエンスを提供することです。この目標を達成するために、ナビゲーションアーキテクチャコンポーネントは、以下の各ナビゲーション原則に準拠したアプリを構築するのに役立ちます。
+アプリは決まった最初の遷移先がある アプリにはユーザーがランチャーからアプリを起動したときに見る決まった遷移先の画面があります。この遷移先は、戻るボタンを押した後、ランチャーに戻るときの最後に表示される画面になるはずです。
+注意: アプリに1回限りの設定や一連のログイン画面がある可能性があります。これらの条件付き画面は、アプリの最初の遷移先とみなすべきではありません。
+スタックは、アプリの「ナビゲーション状態」を表すために使用 アプリのナビゲーション状態は、LIFO(後入れ先出し構造)で表される必要があります。 この「ナビゲーションスタック」は、スタックの一番下にアプリの最初の遷移先があり、スタックの一番上に現在の遷移先があるはずです。
+ナビゲーションスタックを変更する操作は、新しい遷移先をスタックの先頭に「プッシュ」するか、最上部の遷移先をスタックから「ポップ」することによって、常にナビゲーションスタックの一番上で操作する必要があります。
+Upボタンはアプリを終了させない ユーザーが最初の遷移先にいる場合は、Upボタンを表示すべきではありません。他のアプリのタスク上でディープリンクを使用してアプリを起動すると、Upボタンは階層的に親の遷移先に戻り、他のアプリに戻るべきではありません。
+UpボタンとBackボタンはアプリのタスク内で同等 自分のアプリのタスク上にいて最初の遷移先にいないときのような、システムのバックボタンがアプリを終了しない場合、Upボタンはシステムのバックボタンと同等に機能すべきです。
+ディープリンクで遷移する場合や通所の遷移で同じ同じ遷移先への遷移する場合、同じスタック状態となるべき ユーザーは最初の遷移先でアプリに入って、別の遷移先に遷移します。また同じ遷移先に遷移するために、可能ならディープリンクも使います。 両方のケースで、ナビゲーションスタックは遷移先が同じスタック状態になるべきです。 特に、ユーザーは、どのように遷移先に到達したかにかかわらず、バックボタンやUpボタンを使って、最初の遷移先まで戻れるべきです。 既存のナビゲーションスタックは削除され、ディープリンクのナビゲーションスタックに置き換えられます。
+翻訳について  Destination  遷移先  ※DestinationはNavigationにおいて、画面の意味があるので、遷移先の画面としてしまおうかと思ったり、Destinationのままにしようかと悩みましたが、遷移先に統一しました。   start destination  最初の遷移先  ※Navigationにおいて、アプリ起動時の画面を意味しています。また開始先のような訳も考えましたが、上記Destinationを遷移先としたので、最初の遷移先としました。   navigation stack  ナビゲーションスタック   </description>
+    </item>
+    
+  </channel>
+</rss>
