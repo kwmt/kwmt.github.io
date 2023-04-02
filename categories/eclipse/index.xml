@@ -1,68 +1,17 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
-  <channel>
-    <title>Eclipse on Androg</title>
-    <link>https://kwmt27.net/categories/eclipse/</link>
-    <description>Recent content in Eclipse on Androg</description>
-    <generator>Hugo -- gohugo.io</generator>
-    <language>ja</language>
-    <lastBuildDate>Tue, 19 Oct 2010 00:00:00 +0000</lastBuildDate>
-    
-	<atom:link href="https://kwmt27.net/categories/eclipse/index.xml" rel="self" type="application/rss+xml" />
-    
-    
-    <item>
-      <title>Java SDKのインストールディレクトリはデフォルトで。</title>
-      <link>https://kwmt27.net/index.php/2010/10/19/java-sdk%E3%81%AE%E3%82%A4%E3%83%B3%E3%82%B9%E3%83%88%E3%83%BC%E3%83%AB%E3%83%87%E3%82%A3%E3%83%AC%E3%82%AF%E3%83%88%E3%83%AA%E3%81%AF%E3%83%87%E3%83%95%E3%82%A9%E3%83%AB%E3%83%88%E3%81%A7/</link>
-      <pubDate>Tue, 19 Oct 2010 00:00:00 +0000</pubDate>
-      
-      <guid>https://kwmt27.net/index.php/2010/10/19/java-sdk%E3%81%AE%E3%82%A4%E3%83%B3%E3%82%B9%E3%83%88%E3%83%BC%E3%83%AB%E3%83%87%E3%82%A3%E3%83%AC%E3%82%AF%E3%83%88%E3%83%AA%E3%81%AF%E3%83%87%E3%83%95%E3%82%A9%E3%83%AB%E3%83%88%E3%81%A7/</guid>
-      <description>Java SDKをデフォルト以外の場所に変更してインストールしたため、Android開発環境がおかしくなった。
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Eclipse on Androg</title><link>https://kwmt27.net/categories/eclipse/</link><description>Recent content in Eclipse on Androg</description><generator>Hugo -- gohugo.io</generator><language>ja</language><lastBuildDate>Tue, 19 Oct 2010 00:00:00 +0000</lastBuildDate><atom:link href="https://kwmt27.net/categories/eclipse/index.xml" rel="self" type="application/rss+xml"/><item><title>Java SDKのインストールディレクトリはデフォルトで。</title><link>https://kwmt27.net/index.php/2010/10/19/java-sdk%E3%81%AE%E3%82%A4%E3%83%B3%E3%82%B9%E3%83%88%E3%83%BC%E3%83%AB%E3%83%87%E3%82%A3%E3%83%AC%E3%82%AF%E3%83%88%E3%83%AA%E3%81%AF%E3%83%87%E3%83%95%E3%82%A9%E3%83%AB%E3%83%88%E3%81%A7/</link><pubDate>Tue, 19 Oct 2010 00:00:00 +0000</pubDate><guid>https://kwmt27.net/index.php/2010/10/19/java-sdk%E3%81%AE%E3%82%A4%E3%83%B3%E3%82%B9%E3%83%88%E3%83%BC%E3%83%AB%E3%83%87%E3%82%A3%E3%83%AC%E3%82%AF%E3%83%88%E3%83%AA%E3%81%AF%E3%83%87%E3%83%95%E3%82%A9%E3%83%AB%E3%83%88%E3%81%A7/</guid><description>Java SDKをデフォルト以外の場所に変更してインストールしたため、Android開発環境がおかしくなった。
 ※以下は初心者の僕がデフォルトにした方がよさそうと思っているだけで、対処しようと思えばいくらでもできるかもしれません。
 Eclipseが起動しない
- * *問題が生じたのは、Eclipseが起動できないという問題。   しかし、これはググると解決方法があった。
+*問題が生じたのは、Eclipseが起動できないという問題。 しかし、これはググると解決方法があった。
 これは eclipse/eclipse.iniに
-&amp;lt;your path&amp;gt;/java/bin/javaw.exe  を追加すればOK
+&amp;lt;your path&amp;gt;/java/bin/javaw.exe を追加すればOK
 emulatorが起動しない
- emulator を起動しようとすると、次のようなエラーが出た。
-  emulator: ERROR: unknown virtual device name: &#39;エミュレータ名&#39;  これもググるとすぐに出てきたが、avdファイル（正確にはおそらくuserdata.img）が見つからないよというエラーで、これが出た人は、おそらく、USERPROFILEを変更した人だと思う。
+emulator を起動しようとすると、次のようなエラーが出た。 emulator: ERROR: unknown virtual device name: &amp;#39;エミュレータ名&amp;#39; これもググるとすぐに出てきたが、avdファイル（正確にはおそらくuserdata.img）が見つからないよというエラーで、これが出た人は、おそらく、USERPROFILEを変更した人だと思う。
 （おそらくばっかりで申し訳ない）
 これの対処方法としては、
-C:\users\&amp;lt;ユーザー名&amp;gt;\.android  にavdファイルがあるので（正確にはAVD Managerで作成したAVDを選択してDetails&amp;#8230;をクリックして確認できる）、それをUSERPROFILEにジャンクション(mklink)を貼れば良いらしい（僕は未確認だが、ほかの人はそれでいけてるみたい）
+C:\users\&amp;lt;ユーザー名&amp;gt;\.android にavdファイルがあるので（正確にはAVD Managerで作成したAVDを選択してDetails…をクリックして確認できる）、それをUSERPROFILEにジャンクション(mklink)を貼れば良いらしい（僕は未確認だが、ほかの人はそれでいけてるみたい）
 しかし、僕はリンクを貼るのは嫌で実体をおきたかったので、何かいい方法ないかなぁと探していたら、
 Default location of AVD files | Managing AVDs from the Command Lineに書いてあった。
- If you want to use a custom location for the AVD directory, you can do so by using the -p &amp;lt;path&amp;gt; option when you create the AVD: android create avd -n my_android1.</description>
-    </item>
-    
-    <item>
-      <title>Grepのショートカットキー</title>
-      <link>https://kwmt27.net/index.php/2010/08/08/grep%E3%81%AE%E3%82%B7%E3%83%A7%E3%83%BC%E3%83%88%E3%82%AB%E3%83%83%E3%83%88%E3%82%AD%E3%83%BC/</link>
-      <pubDate>Sat, 07 Aug 2010 00:00:00 +0000</pubDate>
-      
-      <guid>https://kwmt27.net/index.php/2010/08/08/grep%E3%81%AE%E3%82%B7%E3%83%A7%E3%83%BC%E3%83%88%E3%82%AB%E3%83%83%E3%83%88%E3%82%AD%E3%83%BC/</guid>
-      <description>Eclipseのgrepのショートカットキー Ctrl + H</description>
-    </item>
-    
-    <item>
-      <title>New Android Project</title>
-      <link>https://kwmt27.net/index.php/2010/08/07/new-android-project/</link>
-      <pubDate>Sat, 07 Aug 2010 00:00:00 +0000</pubDate>
-      
-      <guid>https://kwmt27.net/index.php/2010/08/07/new-android-project/</guid>
-      <description>Eclipseで新しいプロジェクトを作るとき、ここの設定をいつも忘れるので。
+If you want to use a custom location for the AVD directory, you can do so by using the -p &amp;lt;path&amp;gt; option when you create the AVD: android create avd -n my_android1.</description></item><item><title>Grepのショートカットキー</title><link>https://kwmt27.net/index.php/2010/08/08/grep%E3%81%AE%E3%82%B7%E3%83%A7%E3%83%BC%E3%83%88%E3%82%AB%E3%83%83%E3%83%88%E3%82%AD%E3%83%BC/</link><pubDate>Sat, 07 Aug 2010 00:00:00 +0000</pubDate><guid>https://kwmt27.net/index.php/2010/08/08/grep%E3%81%AE%E3%82%B7%E3%83%A7%E3%83%BC%E3%83%88%E3%82%AB%E3%83%83%E3%83%88%E3%82%AD%E3%83%BC/</guid><description>EclipseのgrepのショートカットキーCtrl + H</description></item><item><title>New Android Project</title><link>https://kwmt27.net/index.php/2010/08/07/new-android-project/</link><pubDate>Sat, 07 Aug 2010 00:00:00 +0000</pubDate><guid>https://kwmt27.net/index.php/2010/08/07/new-android-project/</guid><description>Eclipseで新しいプロジェクトを作るとき、ここの設定をいつも忘れるので。
 [File]-[Projcet]
 [Select a Wizard]画面で、[Android Project]を選択し、Next。
-この後がよく忘れる。</description>
-    </item>
-    
-    <item>
-      <title>Runのショートカットキー</title>
-      <link>https://kwmt27.net/index.php/2010/08/08/run%E3%81%AE%E3%82%B7%E3%83%A7%E3%83%BC%E3%83%88%E3%82%AB%E3%83%83%E3%83%88%E3%82%AD%E3%83%BC/</link>
-      <pubDate>Sat, 07 Aug 2010 00:00:00 +0000</pubDate>
-      
-      <guid>https://kwmt27.net/index.php/2010/08/08/run%E3%81%AE%E3%82%B7%E3%83%A7%E3%83%BC%E3%83%88%E3%82%AB%E3%83%83%E3%83%88%E3%82%AD%E3%83%BC/</guid>
-      <description>EclipseのRunのショートカットキー Ctrl + F11</description>
-    </item>
-    
-  </channel>
-</rss>
+この後がよく忘れる。</description></item><item><title>Runのショートカットキー</title><link>https://kwmt27.net/index.php/2010/08/08/run%E3%81%AE%E3%82%B7%E3%83%A7%E3%83%BC%E3%83%88%E3%82%AB%E3%83%83%E3%83%88%E3%82%AD%E3%83%BC/</link><pubDate>Sat, 07 Aug 2010 00:00:00 +0000</pubDate><guid>https://kwmt27.net/index.php/2010/08/08/run%E3%81%AE%E3%82%B7%E3%83%A7%E3%83%BC%E3%83%88%E3%82%AB%E3%83%83%E3%83%88%E3%82%AD%E3%83%BC/</guid><description>EclipseのRunのショートカットキーCtrl + F11</description></item></channel></rss>

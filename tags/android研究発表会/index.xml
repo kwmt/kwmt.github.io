@@ -1,78 +1,39 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
-  <channel>
-    <title>Android研究発表会 on Androg</title>
-    <link>https://kwmt27.net/tags/android%E7%A0%94%E7%A9%B6%E7%99%BA%E8%A1%A8%E4%BC%9A/</link>
-    <description>Recent content in Android研究発表会 on Androg</description>
-    <generator>Hugo -- gohugo.io</generator>
-    <language>ja</language>
-    <lastBuildDate>Fri, 06 Dec 2019 20:25:00 +0900</lastBuildDate>
-    
-	<atom:link href="https://kwmt27.net/tags/android%E7%A0%94%E7%A9%B6%E7%99%BA%E8%A1%A8%E4%BC%9A/index.xml" rel="self" type="application/rss+xml" />
-    
-    
-    <item>
-      <title>Android研究&amp;発表会#3 開催レポート</title>
-      <link>https://kwmt27.net/2019/12/06/android-research-and-presentation-3/</link>
-      <pubDate>Fri, 06 Dec 2019 20:25:00 +0900</pubDate>
-      
-      <guid>https://kwmt27.net/2019/12/06/android-research-and-presentation-3/</guid>
-      <description>はじめに 2019/11/30(土)にAndroid研究&amp;amp;発表会#3という勉強会を開催したので、レポートです。
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Android研究&amp;発表会 on Androg</title><link>https://kwmt27.net/tags/android%E7%A0%94%E7%A9%B6%E7%99%BA%E8%A1%A8%E4%BC%9A/</link><description>Recent content in Android研究&amp;発表会 on Androg</description><generator>Hugo -- gohugo.io</generator><language>ja</language><lastBuildDate>Fri, 06 Dec 2019 20:25:00 +0900</lastBuildDate><atom:link href="https://kwmt27.net/tags/android%E7%A0%94%E7%A9%B6%E7%99%BA%E8%A1%A8%E4%BC%9A/index.xml" rel="self" type="application/rss+xml"/><item><title>Android研究&amp;発表会#3 開催レポート</title><link>https://kwmt27.net/2019/12/06/android-research-and-presentation-3/</link><pubDate>Fri, 06 Dec 2019 20:25:00 +0900</pubDate><guid>https://kwmt27.net/2019/12/06/android-research-and-presentation-3/</guid><description>はじめに2019/11/30(土)にAndroid研究&amp;amp;発表会#3という勉強会を開催したので、レポートです。
 今回は7名参加頂きました！これまで3回開催のうち一番多い人数です。 人数が多ければいいとは思ってませんが、興味を持ってくださり、一緒に勉強したい思ってくださる方が多いのはとてもうれしく思っています！ありがとうございますm(_ _)m
-会場変更について イベント公開時の会場を、3名ほど参加登録頂いたぐらいで、途中で会場を変更させていただきました。 理由としては、イベント公開後に、今回の会場をお借りしたakippa社の移転パーティーに参加させて頂いた時に、エンジニアの方が会場を使っていいとおっしゃってくださったので、お言葉に甘えてお借りすることにしたためです。 このことが影響したためかは不明ですが、当日1人の方が来られなくて、このことが原因であれば大変申し訳無いことをしたなと思いました。
-勉強会の様子 当日の勉強会の様子です。
+会場変更についてイベント公開時の会場を、3名ほど参加登録頂いたぐらいで、途中で会場を変更させていただきました。 理由としては、イベント公開後に、今回の会場をお借りしたakippa社の移転パーティーに参加させて頂いた時に、エンジニアの方が会場を使っていいとおっしゃってくださったので、お言葉に甘えてお借りすることにしたためです。 このことが影響したためかは不明ですが、当日1人の方が来られなくて、このことが原因であれば大変申し訳無いことをしたなと思いました。
+勉強会の様子当日の勉強会の様子です。
 まず、エントランスです。 完結でわかりやすい会場の案内を書いてくださってて、とても嬉しかったです！
-スゴイ！案内を準備してくださってる〜 感謝感謝！　#arap_osaka pic.twitter.com/DPQKfrxtKh
-&amp;mdash; yasi kawamoto (@yasi_kawamoto) November 30, 2019 
 おみやげの通りもんを持っていきました！ 無理やり感あったかもしれませんが、ぜんぶ食べて頂きました。
-Kotlin Coroutines ことはじめ 14:30から10分ほど会場案内と、この勉強会についてを軽く説明したあと、早速最初の発表として「Kotlin Coroutines ことはじめ」というタイトルで約30分ほど発表頂きました。
+Kotlin Coroutines ことはじめ14:30から10分ほど会場案内と、この勉強会についてを軽く説明したあと、早速最初の発表として「Kotlin Coroutines ことはじめ」というタイトルで約30分ほど発表頂きました。
 資料はこちらを参照ください。Coroutineの基本と仕組みが、わかりやすい図と一緒に説明いただき、理解が深まりました。
-Kotlin Coroutines ことはじめ、というお題で登壇しました。発表資料はこちらです。https://t.co/2HqHVRmpkc#arap_osaka #kotlin #android
-&amp;mdash; Mitsuhiro Inomata (@ino2222) November 30, 2019 
 会場の雰囲気はこんな感じでした。
-Jetpack compose をちょっと触ってみた 次に、「Jetpack compose をちょっと触ってみた」というタイトルで発表頂きました。
-#arap_osaka
-昨日、発表した資料です！
-Jetpack compose をちょっと触ってみたhttps://t.co/KeBdG4vcPI
-&amp;mdash; charcoJp (@charco_jp) December 1, 2019 
-こちらの方は当初Motion Layoutについての予定だったので、褒めタイムのときに「Motion Layout楽しみにしてた」というご意見も頂いたりもしました。ちなみに僕も楽しみにしてましたｗ</description>
-    </item>
-    
-    <item>
-      <title>Android研究&amp;発表会#2 開催レポート</title>
-      <link>https://kwmt27.net/2019/12/06/android-research-and-presentation-2/</link>
-      <pubDate>Fri, 06 Dec 2019 20:00:00 +0900</pubDate>
-      
-      <guid>https://kwmt27.net/2019/12/06/android-research-and-presentation-2/</guid>
-      <description>はじめに 2019/10/26(土)にAndroid研究&amp;amp;発表会#2というAndroidの勉強会を開催したので、レポートです。
-勉強会の様子 今回は主催の僕1名と参加者1名の合計2名で開催しました。 で、発表者が僕だけでしたので、参加者1名の方に発表するシュールなスタイルとなりましたw
+Jetpack compose をちょっと触ってみた次に、「Jetpack compose をちょっと触ってみた」というタイトルで発表頂きました。
+こちらの方は当初Motion Layoutについての予定だったので、褒めタイムのときに「Motion Layout楽しみにしてた」というご意見も頂いたりもしました。ちなみに僕も楽しみにしてましたｗ
+Android本体の開発について申し込み時点では発表予定なかったのですが、当日の10時ぐらいから資料を作り始めたらしく、飛び込みで発表してくださいました。
+Androidのコアな話が聞けて、とても勉強になりました。
+ということで、飛び込みLT大歓迎です！
+Retrofit2の仕組み 〜CallAdapterを理解する〜最後は僕の発表です。RetrofitというライブラリのCallAdapterについて発表しました。
+懇親会今回はconnpassで懇親会参加のアンケートをとっていたため、ぼくの独断でえんやという焼き鳥屋さんを予約してました。 参加予定の方のご都合が悪くなったみたいで、人数が大幅に減りそうでしたが、なんとか懇親できました！
+ただ、全員知っているという状況でしたがｗ
+次回次回は第4回になりますが、12月末はやはり年末で参加者も少ないだろうと予想されるので、2020/01/25(土)を予定しております。 イベント(connpass)は後ほど、#arap_osakaでお知らせしたいと思います。
+最後に発表頂いた後、褒めタイムというのを設けているのですが、今回もいろいろ褒めたり質問がたくさんでたので、よかったかなと思います。
+今回は合計参加人数が7名で、初めて参加の方が4名、発表してくださった方が3名、過去に参加くださった方が1名という感じでした。 その中で、ほんとにはじめましての方は1名でほかは面識ありでした。 仲間うち感をできるだけ出さないようにしようとしたんですが、少し難しかったかもしれません。。
+また、勉強会に関するフィードバックを頂きました。
+connpassの説明では対象者がわかりにくい これは参加者だけでなく発表者からも言われたフィードバックでした。参加者はAndroid初学者の方からでしたが、全体を通して発表が難しかった（中・上級者向け）ので、実際どこをターゲットにしているかというような内容でした。 発表者からは、資料を準備する際にどのレベルでは説明すればいいか迷ったとのことでした。 これをうけて、もう少しイベント説明内容を見直そうと思います。 会場変更前の会場だったから応募したというのもある すみません、気をつけます。。 「研究」という言葉に引っかかる Wikipediaによると「研究とは、ある特定の物事について、人間の知識を集めて考察し、実験、観察、調査などを通して調べて、その物事についての事実を深く追求する一連の過程のことである。」とのことで、深く追求したいという思いがありますのでこの言葉を使いましたが、ちょっと安易に考えた言葉でもあるので、見直してもいいかもしれません。 勉強会の主催って難しいなぁと思いつつ、また続けてほしいとのお言葉もあり、楽しく続けていきたいと思います。
+会場をお借りしましたakippa様ありがとうございました！</description></item><item><title>Android研究&amp;発表会#2 開催レポート</title><link>https://kwmt27.net/2019/12/06/android-research-and-presentation-2/</link><pubDate>Fri, 06 Dec 2019 20:00:00 +0900</pubDate><guid>https://kwmt27.net/2019/12/06/android-research-and-presentation-2/</guid><description>はじめに2019/10/26(土)にAndroid研究&amp;amp;発表会#2というAndroidの勉強会を開催したので、レポートです。
+勉強会の様子今回は主催の僕1名と参加者1名の合計2名で開催しました。 で、発表者が僕だけでしたので、参加者1名の方に発表するシュールなスタイルとなりましたw
 雰囲気です。 僕の発表資料はこちらです。
-発表資料 公開しました！https://t.co/RNnKxTuwl0 #arap_osaka
-&amp;mdash; yasi kawamoto (@yasi_kawamoto) October 26, 2019 
-途中からモクモク会に変更 お気づきかもしれませんが、発表がだいたい20分ぐらいで終わりましたので、もちろん時間が余ります。 そこで何したかっていうと、モクモク会に切り替えました。 事前にconnpass上から、「時間余ったらモクモク会するので、ノートPC持ってきて下さい」と連絡させていただいてて、持ってきて頂いてたのでもくもく会に変更できました。
+途中からモクモク会に変更お気づきかもしれませんが、発表がだいたい20分ぐらいで終わりましたので、もちろん時間が余ります。 そこで何したかっていうと、モクモク会に切り替えました。 事前にconnpass上から、「時間余ったらモクモク会するので、ノートPC持ってきて下さい」と連絡させていただいてて、持ってきて頂いてたのでもくもく会に変更できました。
 もくもく会の進め方としては、まずどんなことをもくもくするかいいあって、時間が経ったら最後にどうだったか成果のようなものを軽く発表するという形にしました。これは以前モクモク会だけのイベントをしたときにやってたことでした。
-今日は発表者が僕一人だったため、残りの時間はもくもく会になってますー #arap_osaka
-&amp;mdash; yasi kawamoto (@yasi_kawamoto) October 26, 2019 
 1人の参加者がやっていたことは、Android端末からラズパイだったかな？ちょっと忘れましたが、そういった端末にBloothoothでファイル送信して、送信したら通知がでるのを検知してアプリ上でダイアログとかを出したいとのことでした。
 やられてることも興味深かったのですが、通知領域にくる通知を自分のアプリでしることができるというのをしらなかったので、勉強になりました。 ついでにサンプル作ってみたので、ご興味ある方は見てみてください。
-NotificationLisntenerServiceで困ってた人がいたので、サンプル作った！ https://t.co/hvyEXvwMgR #arap_osaka
-&amp;mdash; yasi kawamoto (@yasi_kawamoto) October 26, 2019 
 僕の方は、 Kotlin Multiplatform project(MPP)でAndroidアプリを作っていたので、その続きをしてました。 MPPはAndroidアプリにGoogleMapを表示して、サーバーにあるストアを表示する簡単なものです。 サーバーはKtorを使っています。今回はマップにストアが表示されない不具合中だったので、その改修をしていました。
-最後に 今回は懇親会はありませんでした。 3回目もすでに終わった状態でこのレポートをかいているので、特に次回の連絡はありませんが、参加者2人以上でいれば開催していきたいと思っていますので、勉強したい方、一緒に勉強しませんか？！</description>
-    </item>
-    
-    <item>
-      <title>Android研究&amp;発表会#1 開催レポート</title>
-      <link>https://kwmt27.net/2019/10/20/android-research-and-presentation-1/</link>
-      <pubDate>Sun, 20 Oct 2019 20:25:00 +0900</pubDate>
-      
-      <guid>https://kwmt27.net/2019/10/20/android-research-and-presentation-1/</guid>
-      <description>はじめに だいぶ時間が経ってしまいましたが、Android研究&amp;amp;発表会#1 開催レポートを書いておきたいと思います。
-初の発表スタイルの勉強会を主催 2019/09/28(土)にAndroid研究&amp;amp;発表会 #1という勉強会を開催しました。
+最後に今回は懇親会はありませんでした。 3回目もすでに終わった状態でこのレポートをかいているので、特に次回の連絡はありませんが、参加者2人以上でいれば開催していきたいと思っていますので、勉強したい方、一緒に勉強しませんか？！</description></item><item><title>Android研究&amp;発表会#1 開催レポート</title><link>https://kwmt27.net/2019/10/20/android-research-and-presentation-1/</link><pubDate>Sun, 20 Oct 2019 20:25:00 +0900</pubDate><guid>https://kwmt27.net/2019/10/20/android-research-and-presentation-1/</guid><description>はじめにだいぶ時間が経ってしまいましたが、Android研究&amp;amp;発表会#1 開催レポートを書いておきたいと思います。
+初の発表スタイルの勉強会を主催2019/09/28(土)にAndroid研究&amp;amp;発表会 #1という勉強会を開催しました。
 いままでモバもく会などのもくもく会という形では主催したことありますが、発表形式での勉強会を主催したのは今回が初めてです。
 なぜ主催しようと思ったのかとかは、connpassに記載しているので、ここでは実際勉強会がどんな感じだったかを書きます。
 参加人数としては、発表してくださる方が3人、聞きに来てくださった方が2人の合計5人です。
-全体的な写真 勉強会の様子 14:00に開場、14:20から会場説明の予定でしたが、14時過ぎには全員来てくださいまして、待っててもしょうがないので勉強会をスタートさせました。
+全体的な写真 勉強会の様子14:00に開場、14:20から会場説明の予定でしたが、14時過ぎには全員来てくださいまして、待っててもしょうがないので勉強会をスタートさせました。
 画像が全体が入ってないし、荒いのですが会場案内とこの勉強会について説明しているところがこんな感じです。
 毎月月末の土曜日に開催していきたいという話しをしているところあたりです。12月は28日だからめっちゃ月末やん、まぁ忘年会も一緒にやれたらいいかもですね、とかいう会話も混ざったりして、なごやかな雰囲気でした。
 続いて、僕のLifecycleについて発表しました。その時の写真ですが、ぜんぜん写ってない・・・。時間的には40分話しました。
@@ -83,12 +44,8 @@ Android Thingsを持ってきて実演してくださったりもしました。
 時間については短くなったりオーバーしたりしてもいいとは言ったものもの、ある程度調整は必要かと思いましたw
 これでだいたい17:30ぐらいで、最初はだいぶ時間があまるんじゃないかとドキドキしていましたが、思いのほかいい感じの時間になったので、勉強会は終了して、ご飯いけるひとだけ行きました。
 そのときのビールの写真ですｗこれしかなかった。。。
-感想 という感じで、発表してくださる方もいらっしゃったし、懇親会もできて一旦成功と言っていいかなと思っています。
+感想という感じで、発表してくださる方もいらっしゃったし、懇親会もできて一旦成功と言っていいかなと思っています。
 初回なのに僕以外の人が発表してくださるのがとても嬉しかったです。
 やはり褒めるのはなかなかはずかしいのか、そんなに褒めることはなかったように思いますが、少人数だからというのもあるのでしょうが、質問がたくさん出たのはとてもよかったと思いました。
-次回 第2回もやります！のでぜひ遊びにきて下さい。 発表枠が余ってます！w
-Android研究&amp;amp;発表会 #2</description>
-    </item>
-    
-  </channel>
-</rss>
+次回第2回もやります！のでぜひ遊びにきて下さい。 発表枠が余ってます！w
+Android研究&amp;amp;発表会 #2</description></item></channel></rss>

@@ -1,39 +1,7 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
-  <channel>
-    <title>ショートカットキー on Androg</title>
-    <link>https://kwmt27.net/tags/%E3%82%B7%E3%83%A7%E3%83%BC%E3%83%88%E3%82%AB%E3%83%83%E3%83%88%E3%82%AD%E3%83%BC/</link>
-    <description>Recent content in ショートカットキー on Androg</description>
-    <generator>Hugo -- gohugo.io</generator>
-    <language>ja</language>
-    <lastBuildDate>Sun, 13 Dec 2020 19:24:00 +0900</lastBuildDate>
-    
-	<atom:link href="https://kwmt27.net/tags/%E3%82%B7%E3%83%A7%E3%83%BC%E3%83%88%E3%82%AB%E3%83%83%E3%83%88%E3%82%AD%E3%83%BC/index.xml" rel="self" type="application/rss+xml" />
-    
-    
-    <item>
-      <title>macOSのダイアログでフォーカスをタブで移動させるには</title>
-      <link>https://kwmt27.net/2020/12/13/shortcut-for-moving-daialog-focus/</link>
-      <pubDate>Sun, 13 Dec 2020 19:24:00 +0900</pubDate>
-      
-      <guid>https://kwmt27.net/2020/12/13/shortcut-for-moving-daialog-focus/</guid>
-      <description>macOSで保存していないときなど下のようなダイアログが出ると思いますが、saveにフォーカスがあたっていてEnterキーを押すと保存されてしまいます。 しかし保存したくないときはDont&#39;t Saveをクリックすればいいのですが、マウスやトラックパッドを使わずキーボードだけでDont&#39;t Saveを押したい場合ないですか？ それがしばらく分からなかった（調べようともしてませんでしたが）のですが、ようやく調べたのでメモしておこうと思います。
-System Preferences &amp;gt; Keyboard -&amp;gt; Shortcutタブ  といき、下部に
-Use Keyboard navigation to move focus between controls  というチェックボックスがあるので、そこをチェックするだけです。
-これでダイアログが出ている状態でタブを押すとフォーカスが移動してくれて、冒頭の例だとDont&#39;t Saveの位置にタブで移動し、Enterキーを押せばキーボードだけで保存しないようにできます。
-ちなみに、確認したOSはBig Surです。</description>
-    </item>
-    
-    <item>
-      <title>macのコマンド＋F1（⌘&#43;F1）でウィンドウ切り替えができないときの対処法</title>
-      <link>https://kwmt27.net/2017/01/05/command-f1-dont-switch-window/</link>
-      <pubDate>Thu, 05 Jan 2017 15:18:39 +0900</pubDate>
-      
-      <guid>https://kwmt27.net/2017/01/05/command-f1-dont-switch-window/</guid>
-      <description>困ったこと El Capitanをクリーンインストールしたのですが、⌘+F1キーでウィンドウの切り替えができない！
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>ショートカットキー on Androg</title><link>https://kwmt27.net/tags/%E3%82%B7%E3%83%A7%E3%83%BC%E3%83%88%E3%82%AB%E3%83%83%E3%83%88%E3%82%AD%E3%83%BC/</link><description>Recent content in ショートカットキー on Androg</description><generator>Hugo -- gohugo.io</generator><language>ja</language><lastBuildDate>Sun, 13 Dec 2020 19:24:00 +0900</lastBuildDate><atom:link href="https://kwmt27.net/tags/%E3%82%B7%E3%83%A7%E3%83%BC%E3%83%88%E3%82%AB%E3%83%83%E3%83%88%E3%82%AD%E3%83%BC/index.xml" rel="self" type="application/rss+xml"/><item><title>macOSのダイアログでフォーカスをタブで移動させるには</title><link>https://kwmt27.net/2020/12/13/shortcut-for-moving-daialog-focus/</link><pubDate>Sun, 13 Dec 2020 19:24:00 +0900</pubDate><guid>https://kwmt27.net/2020/12/13/shortcut-for-moving-daialog-focus/</guid><description>macOSで保存していないときなど下のようなダイアログが出ると思いますが、saveにフォーカスがあたっていてEnterキーを押すと保存されてしまいます。 しかし保存したくないときはDont't Saveをクリックすればいいのですが、マウスやトラックパッドを使わずキーボードだけでDont't Saveを押したい場合ないですか？ それがしばらく分からなかった（調べようともしてませんでしたが）のですが、ようやく調べたのでメモしておこうと思います。
+System Preferences &amp;gt; Keyboard -&amp;gt; Shortcutタブ といき、下部に
+Use Keyboard navigation to move focus between controls というチェックボックスがあるので、そこをチェックするだけです。
+これでダイアログが出ている状態でタブを押すとフォーカスが移動してくれて、冒頭の例だとDont't Saveの位置にタブで移動し、Enterキーを押せばキーボードだけで保存しないようにできます。
+ちなみに、確認したOSはBig Surです。</description></item><item><title>macのコマンド＋F1（⌘+F1）でウィンドウ切り替えができないときの対処法</title><link>https://kwmt27.net/2017/01/05/command-f1-dont-switch-window/</link><pubDate>Thu, 05 Jan 2017 15:18:39 +0900</pubDate><guid>https://kwmt27.net/2017/01/05/command-f1-dont-switch-window/</guid><description>困ったことEl Capitanをクリーンインストールしたのですが、⌘+F1キーでウィンドウの切り替えができない！
 設定方法がすぐにはわからなかったのでメモ。
-対処法 システム環境設定→「キーボード」→「キーボード」タブに行くと下図のような画面がでます。 そこで、「F1、F2などのすべてのキーを標準のファンクションキーとして使用」にチェックが入ってないと思いますので、そこにチェックを入れるだけで⌘+F1でウィンドウの切り替えができるようになります。</description>
-    </item>
-    
-  </channel>
-</rss>
+対処法システム環境設定→「キーボード」→「キーボード」タブに行くと下図のような画面がでます。 そこで、「F1、F2などのすべてのキーを標準のファンクションキーとして使用」にチェックが入ってないと思いますので、そこにチェックを入れるだけで⌘+F1でウィンドウの切り替えができるようになります。</description></item></channel></rss>

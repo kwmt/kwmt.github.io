@@ -1,45 +1,4 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
-  <channel>
-    <title>Eclipse on Androg</title>
-    <link>https://kwmt27.net/tags/eclipse/</link>
-    <description>Recent content in Eclipse on Androg</description>
-    <generator>Hugo -- gohugo.io</generator>
-    <language>ja</language>
-    <lastBuildDate>Sat, 07 Aug 2010 00:00:00 +0000</lastBuildDate>
-    
-	<atom:link href="https://kwmt27.net/tags/eclipse/index.xml" rel="self" type="application/rss+xml" />
-    
-    
-    <item>
-      <title>Grepのショートカットキー</title>
-      <link>https://kwmt27.net/index.php/2010/08/08/grep%E3%81%AE%E3%82%B7%E3%83%A7%E3%83%BC%E3%83%88%E3%82%AB%E3%83%83%E3%83%88%E3%82%AD%E3%83%BC/</link>
-      <pubDate>Sat, 07 Aug 2010 00:00:00 +0000</pubDate>
-      
-      <guid>https://kwmt27.net/index.php/2010/08/08/grep%E3%81%AE%E3%82%B7%E3%83%A7%E3%83%BC%E3%83%88%E3%82%AB%E3%83%83%E3%83%88%E3%82%AD%E3%83%BC/</guid>
-      <description>Eclipseのgrepのショートカットキー Ctrl + H</description>
-    </item>
-    
-    <item>
-      <title>New Android Project</title>
-      <link>https://kwmt27.net/index.php/2010/08/07/new-android-project/</link>
-      <pubDate>Sat, 07 Aug 2010 00:00:00 +0000</pubDate>
-      
-      <guid>https://kwmt27.net/index.php/2010/08/07/new-android-project/</guid>
-      <description>Eclipseで新しいプロジェクトを作るとき、ここの設定をいつも忘れるので。
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Eclipse on Androg</title><link>https://kwmt27.net/tags/eclipse/</link><description>Recent content in Eclipse on Androg</description><generator>Hugo -- gohugo.io</generator><language>ja</language><lastBuildDate>Sat, 07 Aug 2010 00:00:00 +0000</lastBuildDate><atom:link href="https://kwmt27.net/tags/eclipse/index.xml" rel="self" type="application/rss+xml"/><item><title>Grepのショートカットキー</title><link>https://kwmt27.net/index.php/2010/08/08/grep%E3%81%AE%E3%82%B7%E3%83%A7%E3%83%BC%E3%83%88%E3%82%AB%E3%83%83%E3%83%88%E3%82%AD%E3%83%BC/</link><pubDate>Sat, 07 Aug 2010 00:00:00 +0000</pubDate><guid>https://kwmt27.net/index.php/2010/08/08/grep%E3%81%AE%E3%82%B7%E3%83%A7%E3%83%BC%E3%83%88%E3%82%AB%E3%83%83%E3%83%88%E3%82%AD%E3%83%BC/</guid><description>EclipseのgrepのショートカットキーCtrl + H</description></item><item><title>New Android Project</title><link>https://kwmt27.net/index.php/2010/08/07/new-android-project/</link><pubDate>Sat, 07 Aug 2010 00:00:00 +0000</pubDate><guid>https://kwmt27.net/index.php/2010/08/07/new-android-project/</guid><description>Eclipseで新しいプロジェクトを作るとき、ここの設定をいつも忘れるので。
 [File]-[Projcet]
 [Select a Wizard]画面で、[Android Project]を選択し、Next。
-この後がよく忘れる。</description>
-    </item>
-    
-    <item>
-      <title>Runのショートカットキー</title>
-      <link>https://kwmt27.net/index.php/2010/08/08/run%E3%81%AE%E3%82%B7%E3%83%A7%E3%83%BC%E3%83%88%E3%82%AB%E3%83%83%E3%83%88%E3%82%AD%E3%83%BC/</link>
-      <pubDate>Sat, 07 Aug 2010 00:00:00 +0000</pubDate>
-      
-      <guid>https://kwmt27.net/index.php/2010/08/08/run%E3%81%AE%E3%82%B7%E3%83%A7%E3%83%BC%E3%83%88%E3%82%AB%E3%83%83%E3%83%88%E3%82%AD%E3%83%BC/</guid>
-      <description>EclipseのRunのショートカットキー Ctrl + F11</description>
-    </item>
-    
-  </channel>
-</rss>
+この後がよく忘れる。</description></item><item><title>Runのショートカットキー</title><link>https://kwmt27.net/index.php/2010/08/08/run%E3%81%AE%E3%82%B7%E3%83%A7%E3%83%BC%E3%83%88%E3%82%AB%E3%83%83%E3%83%88%E3%82%AD%E3%83%BC/</link><pubDate>Sat, 07 Aug 2010 00:00:00 +0000</pubDate><guid>https://kwmt27.net/index.php/2010/08/08/run%E3%81%AE%E3%82%B7%E3%83%A7%E3%83%BC%E3%83%88%E3%82%AB%E3%83%83%E3%83%88%E3%82%AD%E3%83%BC/</guid><description>EclipseのRunのショートカットキーCtrl + F11</description></item></channel></rss>

@@ -1,139 +1,59 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
-  <channel>
-    <title>Flutter on Androg</title>
-    <link>https://kwmt27.net/categories/flutter/</link>
-    <description>Recent content in Flutter on Androg</description>
-    <generator>Hugo -- gohugo.io</generator>
-    <language>ja</language>
-    <lastBuildDate>Wed, 06 May 2020 13:00:00 +0900</lastBuildDate>
-    
-	<atom:link href="https://kwmt27.net/categories/flutter/index.xml" rel="self" type="application/rss+xml" />
-    
-    
-    <item>
-      <title>Flutterでバックボタンの色を変更するには</title>
-      <link>https://kwmt27.net/2020/05/06/how-to-change-backbutton-color/</link>
-      <pubDate>Wed, 06 May 2020 13:00:00 +0900</pubDate>
-      
-      <guid>https://kwmt27.net/2020/05/06/how-to-change-backbutton-color/</guid>
-      <description>FlutterでたとえばNavigator.pushした先の画面で、バックボタンを表示しているとき、そのボタンのカラーを変えたい。
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>flutter on Androg</title><link>https://kwmt27.net/categories/flutter/</link><description>Recent content in flutter on Androg</description><generator>Hugo -- gohugo.io</generator><language>ja</language><lastBuildDate>Wed, 06 May 2020 13:00:00 +0900</lastBuildDate><atom:link href="https://kwmt27.net/categories/flutter/index.xml" rel="self" type="application/rss+xml"/><item><title>Flutterでバックボタンの色を変更するには</title><link>https://kwmt27.net/2020/05/06/how-to-change-backbutton-color/</link><pubDate>Wed, 06 May 2020 13:00:00 +0900</pubDate><guid>https://kwmt27.net/2020/05/06/how-to-change-backbutton-color/</guid><description>FlutterでたとえばNavigator.pushした先の画面で、バックボタンを表示しているとき、そのボタンのカラーを変えたい。
 たとえば、下図の例では白色に変えていますが、このようにしたいという話です。
 何もしなかったら、下図のように黒色になります（正確には primaryColor によって、黒か白か決まります1）。
 その色を変更する方法として、AppBar に iconTheme を設定できますので、そこに次のようにIconThemeData を使って変更したいカラーを設定します。
- return Scaffold( appBar: AppBar( title: Text(&amp;quot;プロフィールの編集&amp;quot;), iconTheme: IconThemeData(color: Colors.white), // ここで色を決めることができる。  ただ、これだと、画面ごとに毎回設定しなくてはならないので、アプリ全体として設定したくなると思います。それをするには、
-MaterialApp( theme: ThemeData( primaryColor: AppColors.appBar, primaryTextTheme: TextTheme(title: TextStyle(color: Colors.white)), primaryIconTheme: IconThemeData(color: Colors.white), // ここを追加  のように、MaterialApp の theme に ThemeData を設定できますが、さらに ThemeData の primaryIconTheme でバックボタンのカラー設定することで、アプリ全体のカラーを変更することができます。
+return Scaffold( appBar: AppBar( title: Text(&amp;#34;プロフィールの編集&amp;#34;), iconTheme: IconThemeData(color: Colors.white), // ここで色を決めることができる。 ただ、これだと、画面ごとに毎回設定しなくてはならないので、アプリ全体として設定したくなると思います。それをするには、
+MaterialApp( theme: ThemeData( primaryColor: AppColors.appBar, primaryTextTheme: TextTheme(title: TextStyle(color: Colors.white)), primaryIconTheme: IconThemeData(color: Colors.white), // ここを追加 のように、MaterialApp の theme に ThemeData を設定できますが、さらに ThemeData の primaryIconTheme でバックボタンのカラー設定することで、アプリ全体のカラーを変更することができます。
 ちなみに、両方（MaterialAppでprimaryIconThemeと、AppBarでiconThemeの両方）を設定していた場合、AppBarで設定したiconThemeが優先されます。
- theme_data.dart を参照ください。primaryIconTheme は primaryIsDark によって白か黒かを決めていて、primaryIsDarkは estimateBrightnessForColor(primaryColor) と primaryColorによって決まっているのが分かるかと思います。 [return]   </description>
-    </item>
-    
-    <item>
-      <title>Flutterでの画面遷移まとめ</title>
-      <link>https://kwmt27.net/2020/03/26/summary-of-screen-transitions-in-flutter/</link>
-      <pubDate>Thu, 26 Mar 2020 02:00:00 +0900</pubDate>
-      
-      <guid>https://kwmt27.net/2020/03/26/summary-of-screen-transitions-in-flutter/</guid>
-      <description>はじめに 先日Flutter製チャットアプリを支える技術でチャットアプリを作ったときの内容を書いて今年は終わりかなと思っていたら、こちらの枠が空いていたので前回触れなかった画面遷移について書きたいと思います。
+theme_data.dart を参照ください。primaryIconTheme は primaryIsDark によって白か黒かを決めていて、primaryIsDarkは estimateBrightnessForColor(primaryColor) と primaryColorによって決まっているのが分かるかと思います。&amp;#160;&amp;#x21a9;&amp;#xfe0e;</description></item><item><title>Flutterでの画面遷移まとめ</title><link>https://kwmt27.net/2020/03/26/summary-of-screen-transitions-in-flutter/</link><pubDate>Thu, 26 Mar 2020 02:00:00 +0900</pubDate><guid>https://kwmt27.net/2020/03/26/summary-of-screen-transitions-in-flutter/</guid><description>はじめに先日Flutter製チャットアプリを支える技術でチャットアプリを作ったときの内容を書いて今年は終わりかなと思っていたら、こちらの枠が空いていたので前回触れなかった画面遷移について書きたいと思います。
 Flutterの画面遷移についてはNavigation &amp;amp; routingを見ると基本的には良いと思います。
 ですが、実際アプリを作った際にこれだけでは足りないと思いますので、画面遷移をiOS・Androidのそれぞれの動画＋実装という形でまとめておきたいと思います。
-別の画面に遷移したい    iOS Android          たとえば、ルーム一覧画面からパスを&amp;rdquo;/rooms/&amp;lt;roomId&amp;gt;&amp;ldquo;とするルーム詳細画面(RoomScreen)に遷移したいときは次のようにします。1
-Navigator.push( context, MaterialPageRoute( settings: RouteSettings(name: &amp;quot;/rooms/&amp;lt;roomId&amp;gt;&amp;quot;), builder: (BuildContext context) =&amp;gt; RoomScreen(roomId)), );  前の画面に戻りたい    iOS Android          Navigator.pushを使って画面遷移したあと、左上のバックボタンをタップして戻る場合は特に処理は必要ありませんが、それ以外のボタンから戻りたい場合もあるかと思います。その場合は戻りたいタイミングで次のようにします。(上の動画では、下部のバツボタンをタップしています）
-Navigator.pop(context);  ダイアログを出したい    iOS Android          showDialogとAlertDialogの組み合わせです。AlertDialogの方のドキュメントにもサンプルが載っています。</description>
-    </item>
-    
-    <item>
-      <title>Flutter製チャットアプリを支える技術</title>
-      <link>https://kwmt27.net/2020/03/26/the-technology-behind-flutter-chat-app/</link>
-      <pubDate>Thu, 26 Mar 2020 02:00:00 +0900</pubDate>
-      
-      <guid>https://kwmt27.net/2020/03/26/the-technology-behind-flutter-chat-app/</guid>
-      <description>はじめに 今年はGoogle I/Oに行ってFlutterを知って6月ぐらいからFlutterを触りだし、いろいろ勉強会に行ったりFlutter温泉に行ったり、今年の後半はFlutter三昧でした。
+別の画面に遷移したい iOS Android たとえば、ルーム一覧画面からパスを&amp;quot;/rooms/&amp;lt;roomId&amp;gt;&amp;ldquo;とするルーム詳細画面(RoomScreen)に遷移したいときは次のようにします。1
+Navigator.push( context, MaterialPageRoute( settings: RouteSettings(name: &amp;#34;/rooms/&amp;lt;roomId&amp;gt;&amp;#34;), builder: (BuildContext context) =&amp;gt; RoomScreen(roomId)), ); 前の画面に戻りたい iOS Android Navigator.pushを使って画面遷移したあと、左上のバックボタンをタップして戻る場合は特に処理は必要ありませんが、それ以外のボタンから戻りたい場合もあるかと思います。その場合は戻りたいタイミングで次のようにします。(上の動画では、下部のバツボタンをタップしています）
+Navigator.pop(context); ダイアログを出したい iOS Android showDialogとAlertDialogの組み合わせです。AlertDialogの方のドキュメントにもサンプルが載っています。
+Future&amp;lt;bool&amp;gt; showDialogMessage(BuildContext context, {String title, String message, bool isOkOnly = false}) { return showDialog&amp;lt;bool&amp;gt;( context: context, builder: (context) =&amp;gt; _buildDialog(context, title, message, isOkOnly: isOkOnly), ); } Widget _buildDialog(BuildContext context, String title, String message, {bool isOkOnly = false}) { if (title == null &amp;amp;&amp;amp; message == null) { throw ArgumentError(&amp;#34;titleとmessageのどちらともnullです。どちらかは指定してください。&amp;#34;); } List&amp;lt;Widget&amp;gt; actions = List(); if (!</description></item><item><title>Flutter製チャットアプリを支える技術</title><link>https://kwmt27.net/2020/03/26/the-technology-behind-flutter-chat-app/</link><pubDate>Thu, 26 Mar 2020 02:00:00 +0900</pubDate><guid>https://kwmt27.net/2020/03/26/the-technology-behind-flutter-chat-app/</guid><description>はじめに今年はGoogle I/Oに行ってFlutterを知って6月ぐらいからFlutterを触りだし、いろいろ勉強会に行ったりFlutter温泉に行ったり、今年の後半はFlutter三昧でした。
 そんな中チャットアプリを作ったので、それぞれ機能をどのように実装したかコードを交えつつ少しずつご紹介したいと思います。
 開発環境は下記のとおりです。
-% flutter doctor Doctor summary (to see all details, run flutter doctor -v): [✓] Flutter (Channel beta, v1.0.0, on Mac OS X 10.14.1 18B75, locale en-JP) [✓] Android toolchain - develop for Android devices (Android SDK 28.0.3) [✓] iOS toolchain - develop for iOS devices (Xcode 10.1) [✓] Android Studio (version 3.2) [✓] VS Code (version 1.29.1) [✓] Connected device (2 available)  まずどんな機能を作ったか？ 大きく分けると次のようになるかなと思います。</description>
-    </item>
-    
-    <item>
-      <title>Pragmatic State Management in Flutter (Google I/O&#39;19)のメモ</title>
-      <link>https://kwmt27.net/2019/05/18/googleio_flutter_state_management/</link>
-      <pubDate>Sat, 18 May 2019 11:50:00 +0900</pubDate>
-      
-      <guid>https://kwmt27.net/2019/05/18/googleio_flutter_state_management/</guid>
-      <description>問題点 ネットワークから、他のwidgetからシステムコールなどから、widgetの状態変更したい場合は多くあります。
+% flutter doctor Doctor summary (to see all details, run flutter doctor -v): [✓] Flutter (Channel beta, v1.0.0, on Mac OS X 10.14.1 18B75, locale en-JP) [✓] Android toolchain - develop for Android devices (Android SDK 28.0.3) [✓] iOS toolchain - develop for iOS devices (Xcode 10.1) [✓] Android Studio (version 3.2) [✓] VS Code (version 1.29.1) [✓] Connected device (2 available) まずどんな機能を作ったか？大きく分けると次のようになるかなと思います。
+会員登録・ログイン チャットルーム（以下、ルーム）作成できる ルーム一覧を見ることができる ルームでチャット(テキスト、画像の送信)ができる 既存のルームにユーザーが参加できる 自分のプロフィールを見ることができる アプリ内課金で定期購読できる それぞれ見ていきます。</description></item><item><title>Pragmatic State Management in Flutter (Google I/O'19)のメモ</title><link>https://kwmt27.net/2019/05/18/googleio_flutter_state_management/</link><pubDate>Sat, 18 May 2019 11:50:00 +0900</pubDate><guid>https://kwmt27.net/2019/05/18/googleio_flutter_state_management/</guid><description>問題点ネットワークから、他のwidgetからシステムコールなどから、widgetの状態変更したい場合は多くあります。
 たとえば３つのWidgetがあったとき、MySliderからMyChartの状態を変更する場合、下図のようにしたくなるかもしれませんが、これにはいくつか問題があります。
 1.widgetが強参照している(strongly coupling widget)
 つまりMySliderはMyChartのことを知っている→これは拡張性がなくなります。not very scalable
 2.グローバルの状態を持っている
 多くのチャートがある場合、同期されてしまいます。
-3.外のwidgetからsetStateを呼んでいること これは最悪 - どこから状態が変わったのか把握できない - クラッシュする可能性がある
-下図は、UI is a functional of stateです。UI=レイアウトは、現在のアプリケーションの状態がビルドメソッドを介して決まります。
+3.外のwidgetからsetStateを呼んでいること これは最悪
+どこから状態が変わったのか把握できない クラッシュする可能性がある 下図は、UI is a functional of stateです。UI=レイアウトは、現在のアプリケーションの状態がビルドメソッドを介して決まります。
 つまりは、UIは他のUIから変更されません。 findViewByIdのようなものはありません。
-対策 これを解決するためには、両方のwidgetにアプローチ、アクセスできる何かが必要です。 これを今回はMyScheduleと呼びましょう。
+対策これを解決するためには、両方のwidgetにアプローチ、アクセスできる何かが必要です。 これを今回はMyScheduleと呼びましょう。
 これはMyHomePageにアタッチされます。なぜなら両方のwidgetをしっているから。
 MySliderが直接MyChartを触る代わりにMyScheduleを通してMyChartに伝えます。
 MySlider -&amp;gt; MyScheduler -&amp;gt; MyChartに通知notify MyChart -&amp;gt; MySchedular -&amp;gt; MySliderに変更したよ結果を通知
-コードはどのようになるか？ そのためにGoogleの状態管理アプローチの歴史を見る
- Scoped model  widgetのトップにモデルがあり子孫があるとき、 モデルが変更されたら、それらの子孫は通知される、。
+コードはどのようになるか？そのためにGoogleの状態管理アプローチの歴史を見る
+Scoped model widgetのトップにモデルがあり子孫があるとき、 モデルが変更されたら、それらの子孫は通知される、。
 これは使われているが、いくつかの機能が不足している
- BLoC 複雑なアプリが複数あるAdwordsのためにつくられた。 Rxとstremaベース これは複雑すぎるという意見を聞いた  あるいは、Flutterをやるにはnewアプローチをしないと
- package:provider コミュニティベース これをGoogle内部で使っている Scopedモデルに近い  Providerを使うには まずMyScheduleを定義しましょう。
-import &#39;package:flutter/widgets.dart&#39;; class MySchedule with ChangeNotifier { double _stateManagementTime = 0.</description>
-    </item>
-    
-    <item>
-      <title>Flutter for webのサンプルを動かしてみた</title>
-      <link>https://kwmt27.net/2019/05/11/flutter_for_web/</link>
-      <pubDate>Sat, 11 May 2019 18:10:00 +0900</pubDate>
-      
-      <guid>https://kwmt27.net/2019/05/11/flutter_for_web/</guid>
-      <description>&lt;p&gt;&lt;/p&gt;</description>
-    </item>
-    
-    <item>
-      <title>Flutterプラグインのテストで正しくMethodCallが呼ばれてるかテストするには</title>
-      <link>https://kwmt27.net/2019/03/17/flutter_ismethodcall/</link>
-      <pubDate>Sun, 17 Mar 2019 00:12:00 +0900</pubDate>
-      
-      <guid>https://kwmt27.net/2019/03/17/flutter_ismethodcall/</guid>
-      <description>下記のコードは、flutter_inapp_purchaseのdartコードの1つのメソッドで、実装はわかりやすいように1つのinvokedMethodに修正したものですが、Flutterプラグインでネイティブのメソッドを呼び出すにはMethodChannelのinvokedMethod(文字列,パラメータ)のような感じで呼び出します。
-static final MethodChannel _channel = const MethodChannel(&#39;flutter_inapp&#39;); static Future&amp;lt;List&amp;lt;IAPItem&amp;gt;&amp;gt; getProducts(List&amp;lt;String&amp;gt; skus) async { dynamic result = await _channel.invokeMethod( &#39;getItemsByType&#39;, &amp;lt;String, dynamic&amp;gt;{ &#39;type&#39;: &#39;inapp&#39;, &#39;skus&#39;: skus, }, ); return extractItems(result); }  invokedMethodは文字列を渡すので、例えば &#39;getItemsByType&#39;が 極端ですが&#39;get&#39;とかになっていてもコンパイルできてしまいます。
-そこで、getProductsが正しく&#39;getItemsByType&#39;が呼ばれている確認するには、下記のコードのようにisMethodCallを使います。
-test(&#39;invokes correct method&#39;, () async { await FlutterInappPurchase.getProducts(skus); expect(log, &amp;lt;Matcher&amp;gt;[ isMethodCall( &#39;getItemsByType&#39;, arguments: &amp;lt;String, dynamic&amp;gt;{ &#39;type&#39;: &#39;inapp&#39;, &#39;skus&#39;: skus, }, ), ]); });  このようにすると、たとえば先程の例のように&#39;getItemsByType&#39;が getになっていた場合、テストを実行すると、期待する文字列は&#39;getItemsByType&#39;だけど実際はgetになっているよ、と教えてくれます。
-Expected: [ &amp;lt;has method name: &#39;getItemsByType&#39; with arguments: {&#39;type&#39;: &#39;inapp&#39;, &#39;skus&#39;: [&#39;testsku&#39;]}&amp;gt; ] Actual: [MethodCall:MethodCall(get, {type: inapp, skus: [testsku]})] Which: does not match has method name: &#39;getItemsByType&#39; with arguments: {&#39;type&#39;: &#39;inapp&#39;, &#39;skus&#39;: [&#39;testsku&#39;]} at location [0]  </description>
-    </item>
-    
-    <item>
-      <title>Cloud Firestoreプラグインのバージョン0.9.0でビルドエラーが出たのでその対策メモ</title>
-      <link>https://kwmt27.net/2019/02/02/build-error-with-cloud-firestore-v0.9.0/</link>
-      <pubDate>Sat, 02 Feb 2019 19:55:00 +0900</pubDate>
-      
-      <guid>https://kwmt27.net/2019/02/02/build-error-with-cloud-firestore-v0.9.0/</guid>
-      <description>はじめに FlutterのCloud Firestoreプラグインのバージョン0.9.0でBreaking changeな変更が入りました。 新規Flutterプロジェクトにバージョン0.9.0を入れてAndroidのビルドでいくつかビルドエラーになったので、そのときの対応したのをメモしておきたいと思います。
-cannot find symbol import androidx.annotation.NonNull;　と出た 現象 次のようなビルドエラーが出ました。
-&amp;lt;HOME&amp;gt;/.pub-cache/hosted/pub.dartlang.org/cloud_firestore-0.9.0/android/src/main/java/io/flutter/plugins/firebase/cloudfirestore/CloudFirestorePlugin.java:9: error: cannot find symbol import androidx.annotation.NonNull; ^ symbol: class NonNull location: package androidx.annotation  対策 &amp;lt;Flutterプロジェクトルート&amp;gt;/android/gradle.propertiesファイルに下記を追加
-android.useAndroidX=true android.enableJetifier=true  参考リンク  https://github.com/flutter/flutter/issues/27156#issuecomment-457951736  Android resource linking failedと出た 現象 `FAILURE: Build failed with an exception. * What went wrong: Execution failed for task &#39;:app:processDebugResources&#39;. &amp;gt; Android resource linking failed Output: &amp;lt;プロジェクトルート&amp;gt;/build/app/intermediates/incremental/mergeDebugResources/merged.dir/values/values.xml:197: error: resource android:attr/fontVariationSettings not found. &amp;lt;プロジェクトルート&amp;gt;/build/app/intermediates/incremental/mergeDebugResources/merged.</description>
-    </item>
-    
-    <item>
-      <title>Firebaseのセットアップ方法</title>
-      <link>https://kwmt27.net/2019/02/02/how-to-setup-cloud-firestore/</link>
-      <pubDate>Sat, 02 Feb 2019 16:00:00 +0900</pubDate>
-      
-      <guid>https://kwmt27.net/2019/02/02/how-to-setup-cloud-firestore/</guid>
-      <description>はじめに Cloud Firestoreを始めFirebaseのサービスを使えるようにするためには、Firebaseにプロジェクトを追加し設定する必要があります。 ここではFirebaseにプロジェクトを追加しFlutterプロジェクトでAndroidとiOSでFirebaseを使えるようになるまでの設定方法を見ていきたいと思います。
-Firebaseにプロジェクトを追加 こちらのURL(https://console.firebase.google.com/)を開き、プロジェクトを追加します。今回の場合はsd-2019-04-flutterというプロジェクトを追加しました。
-AndroidでFirebaseを使えるようにする AndroidでFirebaseを使えるようにするためには、google-services.jsonというファイルをダウンロードし、Flutterプロジェクトに追加する必要があります。
-google-services.jsonをダウンロードする そのためにはまず、Firebaseのプロジェクト設定からアプリをAndroidアプリを追加する必要があります。
+BLoC 複雑なアプリが複数あるAdwordsのためにつくられた。 Rxとstremaベース これは複雑すぎるという意見を聞いた あるいは、Flutterをやるにはnewアプローチをしないと
+package:provider コミュニティベース これをGoogle内部で使っている Scopedモデルに近い Providerを使うにはまずMyScheduleを定義しましょう。
+import &amp;#39;package:flutter/widgets.dart&amp;#39;; class MySchedule with ChangeNotifier { double _stateManagementTime = 0.5; double get stateManagementTime =&amp;gt; _stateManagementTime; set stateManagementTime(double newValue) { _stateManagementTime = newValue; notifyListeners(); } } このMyScheduleをMyHomePageにアタッチするには、 トップにchangenotifierproviderを次のようにラップします</description></item><item><title>Flutter for webのサンプルを動かしてみた</title><link>https://kwmt27.net/2019/05/11/flutter_for_web/</link><pubDate>Sat, 11 May 2019 18:10:00 +0900</pubDate><guid>https://kwmt27.net/2019/05/11/flutter_for_web/</guid><description/></item><item><title>Flutterプラグインのテストで正しくMethodCallが呼ばれてるかテストするには</title><link>https://kwmt27.net/2019/03/17/flutter_ismethodcall/</link><pubDate>Sun, 17 Mar 2019 00:12:00 +0900</pubDate><guid>https://kwmt27.net/2019/03/17/flutter_ismethodcall/</guid><description>下記のコードは、flutter_inapp_purchaseのdartコードの1つのメソッドで、実装はわかりやすいように1つのinvokedMethodに修正したものですが、Flutterプラグインでネイティブのメソッドを呼び出すにはMethodChannelのinvokedMethod(文字列,パラメータ)のような感じで呼び出します。
+static final MethodChannel _channel = const MethodChannel(&amp;#39;flutter_inapp&amp;#39;); static Future&amp;lt;List&amp;lt;IAPItem&amp;gt;&amp;gt; getProducts(List&amp;lt;String&amp;gt; skus) async { dynamic result = await _channel.invokeMethod( &amp;#39;getItemsByType&amp;#39;, &amp;lt;String, dynamic&amp;gt;{ &amp;#39;type&amp;#39;: &amp;#39;inapp&amp;#39;, &amp;#39;skus&amp;#39;: skus, }, ); return extractItems(result); } invokedMethodは文字列を渡すので、例えば 'getItemsByType'が 極端ですが'get'とかになっていてもコンパイルできてしまいます。
+そこで、getProductsが正しく'getItemsByType'が呼ばれている確認するには、下記のコードのようにisMethodCallを使います。
+test(&amp;#39;invokes correct method&amp;#39;, () async { await FlutterInappPurchase.getProducts(skus); expect(log, &amp;lt;Matcher&amp;gt;[ isMethodCall( &amp;#39;getItemsByType&amp;#39;, arguments: &amp;lt;String, dynamic&amp;gt;{ &amp;#39;type&amp;#39;: &amp;#39;inapp&amp;#39;, &amp;#39;skus&amp;#39;: skus, }, ), ]); }); このようにすると、たとえば先程の例のように'getItemsByType'が getになっていた場合、テストを実行すると、期待する文字列は'getItemsByType'だけど実際はgetになっているよ、と教えてくれます。
+Expected: [ &amp;lt;has method name: &amp;#39;getItemsByType&amp;#39; with arguments: {&amp;#39;type&amp;#39;: &amp;#39;inapp&amp;#39;, &amp;#39;skus&amp;#39;: [&amp;#39;testsku&amp;#39;]}&amp;gt; ] Actual: [MethodCall:MethodCall(get, {type: inapp, skus: [testsku]})] Which: does not match has method name: &amp;#39;getItemsByType&amp;#39; with arguments: {&amp;#39;type&amp;#39;: &amp;#39;inapp&amp;#39;, &amp;#39;skus&amp;#39;: [&amp;#39;testsku&amp;#39;]} at location [0]</description></item><item><title>Cloud Firestoreプラグインのバージョン0.9.0でビルドエラーが出たのでその対策メモ</title><link>https://kwmt27.net/2019/02/02/build-error-with-cloud-firestore-v0.9.0/</link><pubDate>Sat, 02 Feb 2019 19:55:00 +0900</pubDate><guid>https://kwmt27.net/2019/02/02/build-error-with-cloud-firestore-v0.9.0/</guid><description>はじめにFlutterのCloud Firestoreプラグインのバージョン0.9.0でBreaking changeな変更が入りました。 新規Flutterプロジェクトにバージョン0.9.0を入れてAndroidのビルドでいくつかビルドエラーになったので、そのときの対応したのをメモしておきたいと思います。
+cannot find symbol import androidx.annotation.NonNull;　と出た現象次のようなビルドエラーが出ました。
+&amp;lt;HOME&amp;gt;/.pub-cache/hosted/pub.dartlang.org/cloud_firestore-0.9.0/android/src/main/java/io/flutter/plugins/firebase/cloudfirestore/CloudFirestorePlugin.java:9: error: cannot find symbol import androidx.annotation.NonNull; ^ symbol: class NonNull location: package androidx.annotation 対策&amp;lt;Flutterプロジェクトルート&amp;gt;/android/gradle.propertiesファイルに下記を追加
+android.useAndroidX=true android.enableJetifier=true 参考リンク https://github.com/flutter/flutter/issues/27156#issuecomment-457951736 Android resource linking failedと出た現象`FAILURE: Build failed with an exception. * What went wrong: Execution failed for task &amp;#39;:app:processDebugResources&amp;#39;. &amp;gt; Android resource linking failed Output: &amp;lt;プロジェクトルート&amp;gt;/build/app/intermediates/incremental/mergeDebugResources/merged.dir/values/values.xml:197: error: resource android:attr/fontVariationSettings not found. &amp;lt;プロジェクトルート&amp;gt;/build/app/intermediates/incremental/mergeDebugResources/merged.dir/values/values.xml:198: error: resource android:attr/ttcIndex not found. error: failed linking references. Command: /Users/kwmt/.</description></item><item><title>Firebaseのセットアップ方法</title><link>https://kwmt27.net/2019/02/02/how-to-setup-cloud-firestore/</link><pubDate>Sat, 02 Feb 2019 16:00:00 +0900</pubDate><guid>https://kwmt27.net/2019/02/02/how-to-setup-cloud-firestore/</guid><description>はじめにCloud Firestoreを始めFirebaseのサービスを使えるようにするためには、Firebaseにプロジェクトを追加し設定する必要があります。 ここではFirebaseにプロジェクトを追加しFlutterプロジェクトでAndroidとiOSでFirebaseを使えるようになるまでの設定方法を見ていきたいと思います。
+Firebaseにプロジェクトを追加こちらのURL(https://console.firebase.google.com/)を開き、プロジェクトを追加します。今回の場合はsd-2019-04-flutterというプロジェクトを追加しました。
+AndroidでFirebaseを使えるようにするAndroidでFirebaseを使えるようにするためには、google-services.jsonというファイルをダウンロードし、Flutterプロジェクトに追加する必要があります。
+google-services.jsonをダウンロードするそのためにはまず、Firebaseのプロジェクト設定からアプリをAndroidアプリを追加する必要があります。
 ドロイド君のアイコンをクリックしてください。
 すると、Androidパッケージの入力が求められますので、パッケージを入力します。
 パッケージ名を確認するには、Flutterプロジェクトの android/app/build.gradleファイルを開き、applicationIdを探してください。その設定値がパッケージ名になります。
 パッケージを入力したらgoogle-services.jsonがダウンロードできるようになりますので、ダウンロードしてください。
-Flutterプロジェクト(Android)でセットアップする Flutterプロジェクトにgoogle-services.jsonを格納する Flutterプロジェクトルート/android/app以下に格納してください。
-build.gradleファイルを編集する Flutterプロジェクトルート/android/ にある build.gradleファイルを開いて、google-serviceプラグインを追加します。
-dependencies { classpath &#39;com.android.tools.build:gradle:3.2.1&#39; classpath &amp;quot;org.jetbrains.kotlin:kotlin-gradle-plugin:$kotlin_version&amp;quot; classpath &#39;com.google.gms:google-services:4.1.0&#39; // ←この行を追加 }  次にFlutterプロジェクトルート/android/appにある build.gradleファイルを開いて、最下行に下記を追記してください。
-apply plugin: &#39;com.google.gms.google-services&#39;  これでAndroidに関してはFirebaseのセットアップは終了です。
-iOSでFirebaseを使えるようにする iOSでFirebaseを使えるようにするためには、GoogleService-Info.plistというファイルをダウンロードし、Flutterプロジェクトに追加する必要があります。
-GoogleService-Info.plistをダウンロードする そのためにはまず、Firebaseのプロジェクト設定からアプリをAndroidアプリを追加する必要があります。
+Flutterプロジェクト(Android)でセットアップするFlutterプロジェクトにgoogle-services.jsonを格納するFlutterプロジェクトルート/android/app以下に格納してください。
+build.gradleファイルを編集するFlutterプロジェクトルート/android/ にある build.gradleファイルを開いて、google-serviceプラグインを追加します。
+dependencies { classpath &amp;#39;com.android.tools.build:gradle:3.2.1&amp;#39; classpath &amp;#34;org.jetbrains.kotlin:kotlin-gradle-plugin:$kotlin_version&amp;#34; classpath &amp;#39;com.google.gms:google-services:4.1.0&amp;#39; // ←この行を追加 } 次にFlutterプロジェクトルート/android/appにある build.gradleファイルを開いて、最下行に下記を追記してください。
+apply plugin: &amp;#39;com.google.gms.google-services&amp;#39; これでAndroidに関してはFirebaseのセットアップは終了です。
+iOSでFirebaseを使えるようにするiOSでFirebaseを使えるようにするためには、GoogleService-Info.plistというファイルをダウンロードし、Flutterプロジェクトに追加する必要があります。
+GoogleService-Info.plistをダウンロードするそのためにはまず、Firebaseのプロジェクト設定からアプリをAndroidアプリを追加する必要があります。
 iOSと書かれたアイコンをクリックしてください。
 すると、iOSのバンドルIDの入力が求められますので、バンドルIDを入力します。
 バンドルIDを確認するには、XcodeでFlutterプロジェクトを開いて確認するのが簡単だと思います。
@@ -141,59 +61,32 @@ XcodeでFlutterプロジェクトを開くには、Android Studioを使ってい
 dartファイル(例えばmain.dart)を開いている状態で、Tools-&amp;gt;Flutter-&amp;gt;Open iOS module in Xcodeをクリックしてください。
 Xcodeが開いたら、左側のProject NavigatorのRunnerを選択すると右側にBundle Identifierという項目があるのでその設定値がバンドルIDになります。
 バンドルIDを入力する画面に戻って、バンドルIDを入力してアプリを登録します。その後、GoogleService-Info.plistがダウンロードできるようになりますので、ダウンロードしてください。
-Flutterプロジェクト(iOS)でセットアップする FlutterプロジェクトにGoogleService-Info.plistを格納する 上記でも書きましたが、XcodeでFlutterプロジェクトを開いてください。
+Flutterプロジェクト(iOS)でセットアップするFlutterプロジェクトにGoogleService-Info.plistを格納する上記でも書きましたが、XcodeでFlutterプロジェクトを開いてください。
 Project NavigatorでRunner/Runner以下にGoogleService-Info.plistファイルを追加してください。
-これでiOSに関してFirebaseのセットアップは終了です。</description>
-    </item>
-    
-    <item>
-      <title>Flutterパッケージを作るにあたって実行の仕方がわからなかったのでメモ</title>
-      <link>https://kwmt27.net/2018/11/28/flutter-create-and-run-package/</link>
-      <pubDate>Wed, 28 Nov 2018 08:25:00 +0900</pubDate>
-      
-      <guid>https://kwmt27.net/2018/11/28/flutter-create-and-run-package/</guid>
-      <description> 作成したい名前でパッケージプロジェクトを作成する。 % flutter create --org net.kwmt27 --template=plugin -i swift -a kotlin flutter_crashlytics  ビルド確認する exampleまで移動し、Android,iOSともにビルドして、エラーが出ないことを確認します。
-% cd flutter_crashlytics/example  % flutter build apk  % flutter build ios --no-codesign  実行してみる 実行するには、exampleを開いて、Flutterプロジェクトを実行するだけです。
+これでiOSに関してFirebaseのセットアップは終了です。</description></item><item><title>Flutterパッケージを作るにあたって実行の仕方がわからなかったのでメモ</title><link>https://kwmt27.net/2018/11/28/flutter-create-and-run-package/</link><pubDate>Wed, 28 Nov 2018 08:25:00 +0900</pubDate><guid>https://kwmt27.net/2018/11/28/flutter-create-and-run-package/</guid><description>作成したい名前でパッケージプロジェクトを作成する。% flutter create --org net.kwmt27 --template=plugin -i swift -a kotlin flutter_crashlytics ビルド確認するexampleまで移動し、Android,iOSともにビルドして、エラーが出ないことを確認します。
+% cd flutter_crashlytics/example % flutter build apk % flutter build ios --no-codesign 実行してみる実行するには、exampleを開いて、Flutterプロジェクトを実行するだけです。
 具体的には、最初に作成したパッケージプロジェクト(flutter_crashlytics)をAndroid StudioやVSCodeで開きます。
 Android Studioの場合は、すでにmain.dartが指定されているはずなので、実行ボタンをおすだけ。
 VSCodeの場合は、example/lib/main.dartを開いた状態で実行すれば実行できました。
-パッケージ開発 パッケージの開発するには、
- Androidの場合は、Android Studioで example/androd/build.gradleを開いて、FlutterCrashlyticsPlugin.ktあたりを触ればよさそう。 iOSの場合は、Xcodeでexample/ios/Runner.xcworkspaceを開いて、Pods/Development Pods/flutter_crashlytics/../../example/ios/.symlinks/plugins/flutter_crashlytics/ios/Classes/SwiftFlutterCrashlyticsPlugin.swiftをさわることになりそう。（こんな長いのか？？）  </description>
-    </item>
-    
-    <item>
-      <title>FlutterのAndroid Studio3.2.1対応したらエラーが出たので修正した</title>
-      <link>https://kwmt27.net/2018/10/27/flutter-android-gradle-plugin-3.2.1/</link>
-      <pubDate>Sat, 27 Oct 2018 16:15:00 +0900</pubDate>
-      
-      <guid>https://kwmt27.net/2018/10/27/flutter-android-gradle-plugin-3.2.1/</guid>
-      <description> 現象 gradleプラグイン(android/build.gradle)のバージョンを3.2.1にしたら、
-&#39;Could not find lint-gradle-api.jar&#39;  と出て、Androidでビルドができなくなった。。
-原因 直接的な原因はFlutterがAndroid Stdio3.2に対応していないから。
-対策 FlutterSDKにある
-flutter/packages/flutter_tools/gradle/flutter.gradle  を開いて次のように変更するだけでよさそう。
-index 390bb2deb..1e0f35c47 100644 --- a/packages/flutter_tools/gradle/flutter.gradle +++ b/packages/flutter_tools/gradle/flutter.gradle @@ -18,10 +18,8 @@ import org.gradle.api.tasks.bundling.Jar buildscript { repositories { + google() jcenter() - maven { - url &#39;https://dl.google.com/dl/android/maven2&#39; - } } dependencies { classpath &#39;com.android.tools.build:gradle:3.1.2&#39;  あるいは、flutterリポジトリのmasterブランチは修正されているので、Flutter channelをmasterにするといいかもしれいない。
-参考  関節的な原因: https://developer.android.com/studio/releases/#aapt2_gmaven  </description>
-    </item>
-    
-    <item>
-      <title>AndroidやiOSのアプリ開発でいつも私がやっていることをFlutterでやってみた</title>
-      <link>https://kwmt27.net/2018/09/30/try-develop-like-native-development-with-flutter/</link>
-      <pubDate>Sun, 30 Sep 2018 15:45:00 +0900</pubDate>
-      
-      <guid>https://kwmt27.net/2018/09/30/try-develop-like-native-development-with-flutter/</guid>
-      <description>はじめに 2018/09/29(土)にGDG神戸さん主催のFlutter勉強会 (9&amp;frasl;29)が開催されました。そこで「AndroidやiOSのアプリ開発でいつも私がやっていることをFlutterでやってみた」というタイトルで約30分間発表させて頂きました。
+パッケージ開発パッケージの開発するには、
+Androidの場合は、Android Studioで example/androd/build.gradleを開いて、FlutterCrashlyticsPlugin.ktあたりを触ればよさそう。 iOSの場合は、Xcodeでexample/ios/Runner.xcworkspaceを開いて、Pods/Development Pods/flutter_crashlytics/../../example/ios/.symlinks/plugins/flutter_crashlytics/ios/Classes/SwiftFlutterCrashlyticsPlugin.swiftをさわることになりそう。（こんな長いのか？？）</description></item><item><title>FlutterのAndroid Studio3.2.1対応したらエラーが出たので修正した</title><link>https://kwmt27.net/2018/10/27/flutter-android-gradle-plugin-3.2.1/</link><pubDate>Sat, 27 Oct 2018 16:15:00 +0900</pubDate><guid>https://kwmt27.net/2018/10/27/flutter-android-gradle-plugin-3.2.1/</guid><description>現象gradleプラグイン(android/build.gradle)のバージョンを3.2.1にしたら、
+&amp;#39;Could not find lint-gradle-api.jar&amp;#39; と出て、Androidでビルドができなくなった。。
+原因直接的な原因はFlutterがAndroid Stdio3.2に対応していないから。
+対策FlutterSDKにある
+flutter/packages/flutter_tools/gradle/flutter.gradle を開いて次のように変更するだけでよさそう。
+index 390bb2deb..1e0f35c47 100644 --- a/packages/flutter_tools/gradle/flutter.gradle +++ b/packages/flutter_tools/gradle/flutter.gradle @@ -18,10 +18,8 @@ import org.gradle.api.tasks.bundling.Jar buildscript { repositories { + google() jcenter() - maven { - url &amp;#39;https://dl.google.com/dl/android/maven2&amp;#39; - } } dependencies { classpath &amp;#39;com.android.tools.build:gradle:3.1.2&amp;#39; あるいは、flutterリポジトリのmasterブランチは修正されているので、Flutter channelをmasterにするといいかもしれいない。
+参考 関節的な原因: https://developer.android.com/studio/releases/#aapt2_gmaven</description></item><item><title>AndroidやiOSのアプリ開発でいつも私がやっていることをFlutterでやってみた</title><link>https://kwmt27.net/2018/09/30/try-develop-like-native-development-with-flutter/</link><pubDate>Sun, 30 Sep 2018 15:45:00 +0900</pubDate><guid>https://kwmt27.net/2018/09/30/try-develop-like-native-development-with-flutter/</guid><description>はじめに2018/09/29(土)にGDG神戸さん主催のFlutter勉強会 (9/29)が開催されました。そこで「AndroidやiOSのアプリ開発でいつも私がやっていることをFlutterでやってみた」というタイトルで約30分間発表させて頂きました。
 スライドはこちら
 その時の発表内容を書いておきたいと思います。基本的に原稿をもとにブログ用に加筆・修正しています。また図を参照しているところは基本的にスライドを参照いただいて、必要そうなところだけブログ内に画像を貼っています。
-冒頭 現在Flutterでチャットアプリを作っていてリリース間近なのですが、そのアプリ開発の目的の1つとして、AndroidやiOSのアプリ開発でいつも自分がやっていることはFlutterでできるのか、できるならどうするのかというのを目的に開発していました。
+冒頭現在Flutterでチャットアプリを作っていてリリース間近なのですが、そのアプリ開発の目的の1つとして、AndroidやiOSのアプリ開発でいつも自分がやっていることはFlutterでできるのか、できるならどうするのかというのを目的に開発していました。
 いつもやっていることっていうのは、3つあります。
- 1つ目は、アプリの設計をクリーンアーキテクチャという設計でやっています。 2つ目は、例えばサーバーの向き先を変えるなど、開発と本番での設定を切り替えることをやっています。 3つ目は、CI/CDサービスを使って、たとえば、git pushしたらビルドやテストを実行し、masterブランチにマージされたら関係者にアプリを配信したりしています。  これらが実現できれば、仕事にも使える可能性はありそうだなという思いで開発し始めまして、結論から言うとできそうということがわかりましたので、それぞれについて紹介したいと思います。
-クリーンアーキテクチャが実現できるか？ について見ていきましょう。
+1つ目は、アプリの設計をクリーンアーキテクチャという設計でやっています。 2つ目は、例えばサーバーの向き先を変えるなど、開発と本番での設定を切り替えることをやっています。 3つ目は、CI/CDサービスを使って、たとえば、git pushしたらビルドやテストを実行し、masterブランチにマージされたら関係者にアプリを配信したりしています。 これらが実現できれば、仕事にも使える可能性はありそうだなという思いで開発し始めまして、結論から言うとできそうということがわかりましたので、それぞれについて紹介したいと思います。
+クリーンアーキテクチャが実現できるか？について見ていきましょう。
 クリーンアーキテクチャはおそらくボブおじさんという方が考えたんだと思うんですが、ソフトウェア開発の設計方針の一つです。
 この図は下のURLから引用したものですが、 アプリのクラスがこの円のように何層かに分かれていて、ここの矢印の方向で、クラスの依存関係を決めましょうと言っているだけです。たとえば、UIはPresenterに依存できますが、PresenterはUIに依存してはいけません。ちなみにこの円の層は何層でも構いません。
 このようにすることで、
- アプリの根幹となるビジネスロジック部分がフレームワークと切り離すことができ、 ビジネスロジックをテストしやすくなったり、 UIが独立し、ビジネスロジックの変更なしにUIを変更できるようになります。 またデータベースとも独立し、たとえば、いまはFirestoreを使っているけど、AWSのdynamoDBに切り替えたりすることが容易になります。  ここまでが先程のURLにも書いてあるメリットですが、僕がもう1つ思うのは
- 基本的にどんなアプリやサーバーのソフトウェア開発でも採用できるので、どこに何があるかが統一出来て分かりやすい  ということもメリットの一つかなとも思っています。まぁ一言で言うと、メンテナンスしやすい設計ということになります。
+アプリの根幹となるビジネスロジック部分がフレームワークと切り離すことができ、 ビジネスロジックをテストしやすくなったり、 UIが独立し、ビジネスロジックの変更なしにUIを変更できるようになります。 またデータベースとも独立し、たとえば、いまはFirestoreを使っているけど、AWSのdynamoDBに切り替えたりすることが容易になります。 ここまでが先程のURLにも書いてあるメリットですが、僕がもう1つ思うのは
+基本的にどんなアプリやサーバーのソフトウェア開発でも採用できるので、どこに何があるかが統一出来て分かりやすい ということもメリットの一つかなとも思っています。まぁ一言で言うと、メンテナンスしやすい設計ということになります。
 もうちょっと図を変えて説明しますね。
 顔アイコンはアプリを使うユーザーと思ってください。 その下のScreenというのは、ユーザーがみてる画面で、何でも良いのですが、ここでは例えばチャットルーム一覧画面とします。 チャットルーム一覧のデータは、Firestoreというクラウドのデータベースに保存されているとします。 クリーンアーキテクチャは、このチャットルーム一覧画面がFirestoreからどうやって取得するかの方針になります。
 チャットルーム一覧画面は、チャットルームの一覧を表示したいので、チャットルーム一覧を取得するUseCaseというクラスに依頼します。
@@ -203,105 +96,83 @@ index 390bb2deb..1e0f35c47 100644 --- a/packages/flutter_tools/gradle/flutter.gr
 先程のボブおじさんの図と重ねるとこんなイメージです。
 ごちゃっとしててわかりにくいですかね、、、なんとなく関係ありそうなことがわかりますかね？
 次に、この設計をどのように実現しているかを見ていきたいと思いますが、実現するためにには、
- 言語としてインターフェイスがあることと、 DIができること  が必要になります。
+言語としてインターフェイスがあることと、 DIができること が必要になります。
 まずDartにインターフェイスがあるかですが、結論から言うとあります。 interfaceというキーワードのインターフェイスではないのですが、クラスを定義すると、そのクラスの同名のインタフェースが暗黙的に定義されるという仕様です。また抽象メソッドのみをもつjavaのインターフェイスのようにするには、abstractキーワードで抽象クラスを作成して実現できます。
 次にDIですが、詳しくは説明しませんが、DIとはDependency injectionの略で、一言で言うと、「必要なものを外から渡すこと」です。これはだいたいコンストラクタの引数にインスタンスを渡せればよくって、Dartは普通にそれができるので、DIができるかというよりは、依存関係を簡単に解決してくれるDIプラグインはあるか？に言いかえた方が良いかもしれません。 AndroidではDagger2やkodein、iOSではSwinjectとか使っている方が多いでしょうか。このようなプラグインをpub.dartで探しますと、 flutter_simple_dependency_injection というプラグインがあったので、それを使います。
 後ほど使い方の例をお見せしますが、名前にあるように使い方はほんとにsimpleです。AndroidのDagger2のように、なぜビルドエラーになるのか悩まされることはありません。
 さて、インターフェイスがあって、DIプラグインもあるので、先程の例で挙げたチャットルーム一覧画面のところを具体的に実装して行きたいと思います。
 まずチャットルーム一覧を表示したいのでRoomというクラスを作り、あるユーザーのルーム一覧を取得したいのでUserというクラスを、ドメインのモデルに作っておきます。
 次にルームリストを取得するというUseCaseの名前を FetchRoomListUseCase としてUseCaseを作ります。これにはexecuteメソッドをもたせ、抽象クラスとして定義します。 これを抽象クラスにしているのは、presentation層とdomain層の境界を疎結合にしたいためです。 また、executeメソッドの戻り値の型をFutureとしていますが、これはJavascriptのPromiseのようなもので、infrastructure層からpresentation層にデータを伝えるために重要な役割になるものです。
-FetchRoomListUseCaseを実装するのは、FetchRoomListUseCaseImplクラスです。 FetchRoomListUseCaseImplクラスは、Repositoryからチャットルーム一覧を取得したいので、まだ作成していないですが、RoomRepositoryをもたせています。</description>
-    </item>
-    
-    <item>
-      <title>Intro to Flutter</title>
-      <link>https://kwmt27.net/2018/09/15/intro-to-flutter/</link>
-      <pubDate>Sat, 15 Sep 2018 16:30:00 +0900</pubDate>
-      
-      <guid>https://kwmt27.net/2018/09/15/intro-to-flutter/</guid>
-      <description>はじめに 2018/09/15(日)にクラスメソッドさん主催のモバイルメソッド大阪第二回が開催されました。そこで「Intro to Flutter」というタイトルで発表させて頂きました。
+FetchRoomListUseCaseを実装するのは、FetchRoomListUseCaseImplクラスです。 FetchRoomListUseCaseImplクラスは、Repositoryからチャットルーム一覧を取得したいので、まだ作成していないですが、RoomRepositoryをもたせています。
+RoomRepositoryは抽象クラスとし、 fetchRoomListという抽象メソッドを定義しておきます。 このfetchRoomListメソッドを実装するのは、ここではFirestoreからデータを取得したいのでFirestoreDatasourceというクラスを作成し、そのクラスで実装します。
+具体的にFirestoreに保存してあるチャットルーム一覧を取得する処理を書きます。 この取得に成功すると、先程のFutureの仕組みでpresentation層のチャットルーム一覧画面に伝わるようになります。
+これでUseCase以降のチャットルーム一覧を取得するのに必要なクラスを作成したので、あとはそれをつなぎます。
+たとえば、これは先程のFirestoreDatasourceのコンストラクタの部分ですが 、FirestoreDatasouceはfirestoreがほしいと要求しているので、firestoreインスタンスを生成して、DIプラグインから取得したinjectorにfirestoreをセットします。真ん中あたりのところです。
+次に一番下のあたりで、injectorにFirestoreDatasourceインスタンスを生成してセットしたいのですが、このときinjectorからFirestoreインスタンスを取得することができるようになっているので、Firestoreインスタンスを取得して、FirestoreDatasourceの引数に渡してあげます。 このようにして依存関係を解決していくだけです。
+UseCaseなども同様に依存関係を解決すると、このようになります。 ここまででFetchRoomListUseCaseまでインスタンス生成できたことになります。</description></item><item><title>Intro to Flutter</title><link>https://kwmt27.net/2018/09/15/intro-to-flutter/</link><pubDate>Sat, 15 Sep 2018 16:30:00 +0900</pubDate><guid>https://kwmt27.net/2018/09/15/intro-to-flutter/</guid><description>はじめに2018/09/15(日)にクラスメソッドさん主催のモバイルメソッド大阪第二回が開催されました。そこで「Intro to Flutter」というタイトルで発表させて頂きました。
 スライドはこちら
 その時の発表内容を書いておきたいと思います。基本的に原稿をもとにブログ用に加筆・修正しています。
-冒頭 こんばんは！新しいiPhone出ましたね！ なんか新しいサイズが増えたとかなんとか。。 この資料作ってて全然キャッチアップできてないので、懇親会とかで教えて頂けたら嬉しいです。
+冒頭こんばんは！新しいiPhone出ましたね！ なんか新しいサイズが増えたとかなんとか。。 この資料作ってて全然キャッチアップできてないので、懇親会とかで教えて頂けたら嬉しいです。
 余談でしたが、始めます。
 今、僕自身がFlutterというものを使ってモバイルアプリを作成するのにハマっているので、Flutterの紹介させて頂きたと思います。
 まず自己紹介でチャットアプリを作成中で下記の動画で紹介しました。
- 現在Flutterでチャットアプリを作成中でして、ちょっと動画あるので再生しますね。 SNSログインして、チャットルームを作成します。このときチャットルームの写真を撮っています。チャットルーム名にGopherと入れて、Gopherという名前のチャットルームができました。 そのGopherのチャットルームに入って、メッセージを送信しているという動画です。
+現在Flutterでチャットアプリを作成中でして、ちょっと動画あるので再生しますね。 SNSログインして、チャットルームを作成します。このときチャットルームの写真を撮っています。チャットルーム名にGopherと入れて、Gopherという名前のチャットルームができました。 そのGopherのチャットルームに入って、メッセージを送信しているという動画です。
 このチャットアプリは現在Deploygateにて配信中で、インストールしてためしていただくこともできますので、もしご興味があればお声がけください。
 さて、本題に入ります。
 今日持って帰って頂きたいものは、Flutterというものがどういうものか知って、Fluttterを触ってみたくなることが目標です。
 話さないことととしては、Flutterは時折、React NativeやXamarinと比較されることがありますが、僕自身React NativeとXamarinは触ったことがありませんので、違いについては話しません。
-突然ですが ここにモバイルアプリを開発できるエンジニアが一人いるとします。
+突然ですがここにモバイルアプリを開発できるエンジニアが一人いるとします。
 このとき、たとえば
- お客さんからAndroidとiOSのアプリを作ってくださいと言われたら、 個人開発でAndroidとiOS応のアプリを作りたいなぁと思ったら、 みなさんならどうしますか？  お仕事の場合は、例えば日本人向けのアプリだからまずはiOSからつくったりして、 お客さんからもうちょっとこうしたいなぁ、という要望だったり このパターンでおちるんだけど、、、というクレームだったり
+お客さんからAndroidとiOSのアプリを作ってくださいと言われたら、 個人開発でAndroidとiOS応のアプリを作りたいなぁと思ったら、 みなさんならどうしますか？ お仕事の場合は、例えば日本人向けのアプリだからまずはiOSからつくったりして、 お客さんからもうちょっとこうしたいなぁ、という要望だったり このパターンでおちるんだけど、、、というクレームだったり
 とかいろいろ対応していたら1ヶ月予定が2ヶ月、3ヶ月と過ぎてしまい、なかなかAndroidの開発できない・・・
 個人の場合も、
- 例えば日本人向けのアプリだからまずはiOSからつくって、 大体できたんだけど、ここ使いにくいから、もうちょっとこうしたいなぁ。 あ、使ってみて思ったけど、あの機能絶対リリースまでにはいるやん！  とか対応していたら、こちらの場合も1ヶ月予定が2ヶ月、3ヶ月過ぎてしまい、なかなかAndroidの開発できない・・・
+例えば日本人向けのアプリだからまずはiOSからつくって、 大体できたんだけど、ここ使いにくいから、もうちょっとこうしたいなぁ。 あ、使ってみて思ったけど、あの機能絶対リリースまでにはいるやん！ とか対応していたら、こちらの場合も1ヶ月予定が2ヶ月、3ヶ月過ぎてしまい、なかなかAndroidの開発できない・・・
 となって、例えばiOSリリースだけで満足してしまうことってないですか？
 もちろんお仕事の場合はスケジュール管理しながら進めていくと思いますのでそんなことはないと思いますが。
 このようなとき、
- もし、ネィティブ並みにサクサク動くアプリが１つのソースコードコードで書けるとしたら？ もし、プログラミング言語がkotlinやswiftとは違うけど、そこそこいい感じの言語だったとしたら？ もし、開発スピードを上げれるとしたら？  iOSだけ作ってAndroidができないとか、またはリリース時期が遅くなるということはなくなりそうな気がしませんか？
+もし、ネィティブ並みにサクサク動くアプリが１つのソースコードコードで書けるとしたら？ もし、プログラミング言語がkotlinやswiftとは違うけど、そこそこいい感じの言語だったとしたら？ もし、開発スピードを上げれるとしたら？ iOSだけ作ってAndroidができないとか、またはリリース時期が遅くなるということはなくなりそうな気がしませんか？
 これらを解決できるのがFlutterです。
-Flutterとは FlutterとはAndroidと iOSアプリを１つのソースコードで開発できるtool kit です。
+FlutterとはFlutterとはAndroidと iOSアプリを１つのソースコードで開発できるtool kit です。
 プログラミング言語にはDartを採用しています。
 Flutterはハイパフォーマンスのレンダリングエンジンを持っていて、DartコードはネイティブARMコードにコンパイルされます。
 そのため、こちらのFlutterで作成されたアプリの動画を見ていただきたいのですが、
-         どうですか？なかなかきれいでサクサク動いてそうなイメージ湧きませんか？</description>
-    </item>
-    
-    <item>
-      <title>Flutterでスクロールを検知し、ある位置までスクロールしたらWidgetを表示するには</title>
-      <link>https://kwmt27.net/2018/09/03/flutter-scroll/</link>
-      <pubDate>Mon, 03 Sep 2018 11:15:00 +0900</pubDate>
-      
-      <guid>https://kwmt27.net/2018/09/03/flutter-scroll/</guid>
-      <description>やりたいこと Flutterで、下図のように上にスクロールしてある一定の位置まで来たらWidgetを表示させ、下にスクロールしてある一定の位置まで来たら表示したWidgetを消すというのをやりたい。
-どうやって？  スクロールを検知するListenerをセットする そのListenerでスクロール位置を計算してWidgetの表示・非表示を切り替える。  1. スクロールを検知するListenerをセットする Flutter標準のScrollControllerクラスを使って、ScrollController _scrollController;と変数宣言し、initState()で初期化、dispose()で後処理しておきます。
-ScrollController _scrollController; @override void initState() { super.initState(); _scrollController = ScrollController(); } @override void dispose() { _scrollController.dispose(); super.dispose(); }  ListView.builderにScrollControllerをセットできるので、先程宣言した_scrollControllerをセットします。
-Widget _buildListView() { return ListView.builder( controller: _scrollController, reverse: true, itemCount: messages != null ? messages.length : 0, itemBuilder: (BuildContext context, int position) { return _buildMessageRow(context, position); }, ); }  _scrollControllerにスクロールを検知したときに処理をしたいリスナー(ここでは_scrollListener)を追加します。
-@override void initState() { super.initState(); _scrollController = ScrollController(); _scrollController.</description>
-    </item>
-    
-    <item>
-      <title>Flutterでテキストフィールドが最大3行になるようにするには</title>
-      <link>https://kwmt27.net/2018/08/22/flutter-textfield/</link>
-      <pubDate>Wed, 22 Aug 2018 23:35:00 +0900</pubDate>
-      
-      <guid>https://kwmt27.net/2018/08/22/flutter-textfield/</guid>
-      <description>やりたいこと Flutterで、LINEでメッセージ入力するときのように、テキストフィールドが最大3行になるようにしたい。 つまり、下の動画のようにしたい。
- コード例とポイント説明 ポイントとなる部分だけのコードと説明します。
- TextEditingControllerを使って、TextFieldに入力されたテキスト取得できるようにしておきます。
+どうですか？なかなかきれいでサクサク動いてそうなイメージ湧きませんか？
+これらのUIがどのように構成されているかですが、 画像もボタンもテキストもアイコンもこれらすべてWidgetとよばれるものから構成されています。 ちょっと別の例を見てみましょう。
+こんなレイアウトがあるとします。 これがどのような構成になっているか、分けてみますと、
+一番上から画像、星印の行、電話とかRouteとかShareボタンの行、あとは説明の行と、縦に並んでいることが分かるかと思います。 その下の図は飛ばして、下図はボタンの行がどのようなレイアウト構成になっているかを示したものですが、
+まずCALLやROUTEボタンなどが横に並んでいて、それぞれのボタンはアイコンとテキストが縦に並んでいるのがわかるかと思います。 この一つのボタンに注目して、コードではどのように書くのかを見てみたいと思います。
+左の画像は、先程SHAREボタン部分を拡大したものです。 右のコードは左のボタンを表すコードになります。 FlutterではレイアウトはDartコードで書きます。AndroidのようなレイアウトxmlやiOSのようなinterface builderのようなものありません。ザッツ・オールです。
+このSHAREボタンはアイコンとテキストが縦に並んでいるというレイアウトです。
+まずColumnで囲った縦方向にレイアウトしますよと宣言します。このColumはWidgetです。 何を縦方向にレイアウトするかですが、ここではアイコンとテキストを入れます。 これらのアイコンとTextもWidgetです。 他の複雑なレイアウトも同じようにしていくだけです。 こうして構築したレイアウトはAndroidとiOSの両方で動きます。
+Dartはそこそこ良いコードを少し見たので、次にDartがそこそこ良いということについてお話します。 少し言語仕様を紹介すると、DartはJavaやjavascriptに似た言語だと思います。</description></item><item><title>Flutterでスクロールを検知し、ある位置までスクロールしたらWidgetを表示するには</title><link>https://kwmt27.net/2018/09/03/flutter-scroll/</link><pubDate>Mon, 03 Sep 2018 11:15:00 +0900</pubDate><guid>https://kwmt27.net/2018/09/03/flutter-scroll/</guid><description>やりたいことFlutterで、下図のように上にスクロールしてある一定の位置まで来たらWidgetを表示させ、下にスクロールしてある一定の位置まで来たら表示したWidgetを消すというのをやりたい。
+どうやって？ スクロールを検知するListenerをセットする そのListenerでスクロール位置を計算してWidgetの表示・非表示を切り替える。 1. スクロールを検知するListenerをセットするFlutter標準のScrollControllerクラスを使って、ScrollController _scrollController;と変数宣言し、initState()で初期化、dispose()で後処理しておきます。
+ScrollController _scrollController; @override void initState() { super.initState(); _scrollController = ScrollController(); } @override void dispose() { _scrollController.dispose(); super.dispose(); } ListView.builderにScrollControllerをセットできるので、先程宣言した_scrollControllerをセットします。
+Widget _buildListView() { return ListView.builder( controller: _scrollController, reverse: true, itemCount: messages != null ? messages.length : 0, itemBuilder: (BuildContext context, int position) { return _buildMessageRow(context, position); }, ); } _scrollControllerにスクロールを検知したときに処理をしたいリスナー(ここでは_scrollListener)を追加します。
+@override void initState() { super.initState(); _scrollController = ScrollController(); _scrollController.addListener(_scrollListener); // ←追加 } void _scrollListener() { // スクロールを検知したときに呼ばれる } これで、スクロールを検知することができるようになりました。</description></item><item><title>Flutterでテキストフィールドが最大3行になるようにするには</title><link>https://kwmt27.net/2018/08/22/flutter-textfield/</link><pubDate>Wed, 22 Aug 2018 23:35:00 +0900</pubDate><guid>https://kwmt27.net/2018/08/22/flutter-textfield/</guid><description>やりたいことFlutterで、LINEでメッセージ入力するときのように、テキストフィールドが最大3行になるようにしたい。 つまり、下の動画のようにしたい。
+コード例とポイント説明ポイントとなる部分だけのコードと説明します。
+TextEditingControllerを使って、TextFieldに入力されたテキスト取得できるようにしておきます。
 また、TextFieldになにか変更があったら通知されるlistenerを登録します。
-_textEditingController.addListener(_textEditListener);  このとき通知される関数はここでは_textEditListenerとしていて、変更があるたびに _maxLinesにセットされます。
+_textEditingController.addListener(_textEditListener); このとき通知される関数はここでは_textEditListenerとしていて、変更があるたびに _maxLinesにセットされます。
 次に、TextFormFieldのプロパティのkeyboardTypeは複数行に最適なmultilineを設定し、キーボードのエンターキーに当たる部分の改行できるように変更します。
-keyboardType: TextInputType.multiline, textInputAction: TextInputAction.newline,  maxLinesはnullを指定すると、どこまででも改行します。
-maxLines: _maxLines  これらを組み合わせて、テキストが入力されるたびに改行コードを数え、改行コードが2つ以上(全体としては3行になっている)の場合は、maxLinesを3に設定すればいいので、_textEditListener関数で次のようにしています。
-void _textEditListener() { setState(() { // TextFieldに改行が2つ以上入っていたら、3行以上になるので、3行までに止める。 _maxLines = &#39;\n&#39;.allMatches(_textEditingController.text).length &amp;gt;= 2 ? 3 : null; }); }  これで最初の動画のような動きになります。</description>
-    </item>
-    
-    <item>
-      <title>Flutterあるある</title>
-      <link>https://kwmt27.net/2018/08/16/flutter-workshop/</link>
-      <pubDate>Thu, 16 Aug 2018 19:35:00 +0900</pubDate>
-      
-      <guid>https://kwmt27.net/2018/08/16/flutter-workshop/</guid>
-      <description>はじめに 2018/08/12(日)にGDG神戸主催のFlutter勉強会が開催されました。勉強会全体に関しては こちらのブログを見ていただいて、ここでは僕が「Flutterあるある」というタイトルでLT(LT資料はこちら)したので、それについて書きたいと思います。
+keyboardType: TextInputType.multiline, textInputAction: TextInputAction.newline, maxLinesはnullを指定すると、どこまででも改行します。
+maxLines: _maxLines これらを組み合わせて、テキストが入力されるたびに改行コードを数え、改行コードが2つ以上(全体としては3行になっている)の場合は、maxLinesを3に設定すればいいので、_textEditListener関数で次のようにしています。
+void _textEditListener() { setState(() { // TextFieldに改行が2つ以上入っていたら、3行以上になるので、3行までに止める。 _maxLines = &amp;#39;\n&amp;#39;.allMatches(_textEditingController.text).length &amp;gt;= 2 ? 3 : null; }); } これで最初の動画のような動きになります。</description></item><item><title>Flutterあるある</title><link>https://kwmt27.net/2018/08/16/flutter-workshop/</link><pubDate>Thu, 16 Aug 2018 19:35:00 +0900</pubDate><guid>https://kwmt27.net/2018/08/16/flutter-workshop/</guid><description>はじめに2018/08/12(日)にGDG神戸主催のFlutter勉強会が開催されました。勉強会全体に関しては こちらのブログを見ていただいて、ここでは僕が「Flutterあるある」というタイトルでLT(LT資料はこちら)したので、それについて書きたいと思います。
 基本的に原稿をもとに加筆・修正しています。
-Flutterあるある まず自己紹介でチャットアプリを作成中で下記の動画で紹介しました。
- このアプリを作成中にいろいろあったので、これあるあるだなぁと思ったことを３つほど共有したいと思います。
+Flutterあるあるまず自己紹介でチャットアプリを作成中で下記の動画で紹介しました。
+このアプリを作成中にいろいろあったので、これあるあるだなぁと思ったことを３つほど共有したいと思います。
 このチャットアプリはまだ公開できる状態じゃないのですが、インストールしてためしていただくこともできますので、ご興味があれば声かけてください。
-公式ドキュメントに書いてるプラグインが動かないことがある 本題です。まず、あるあるの１つ目は、公式ドキュメントに書いてるプラグインが動かないことがある。です。
+公式ドキュメントに書いてるプラグインが動かないことがある本題です。まず、あるあるの１つ目は、公式ドキュメントに書いてるプラグインが動かないことがある。です。
 公式ドキュメントの書いてある以上、動いてほしいよねという話なのですが、 たとえば、画像キャッシュしたいと思って、「flutter cache image」と検索すると、 cached_network_imageプラグインというのが公式ドキュメントに載っているのが見つかります。
 これを使おうとして、flutter packages getすると、「cached_network_imageはuuidプラグインに依存していてバージョン0.5.3が必要です」というエラーが出てしまいました。これはuuidプラグインのバージョン1.0.0以上を使っている場合にエラーになります。
 issueを見てみると、29日前にissueが上がってたり、
-プルリクエストまで出ているのに、とくにメンテされる気配がなさそうでした。。。そんなときは、pubspec.yamlは直接githubリポジトリを参照することができるので、動かないgithubリポジトリをforkして修正すれば、本家のプラグインが動かなくても大丈夫です！
+プルリクエストまで出ているのに、とくにメンテされる気配がなさそうでした。。。 そんなときは、pubspec.yamlは直接githubリポジトリを参照することができるので、動かないgithubリポジトリをforkして修正すれば、本家のプラグインが動かなくても大丈夫です！
 ここでは、pubspec.yamlはgitリポジトリを参照できますよ、ということを言いたかっただけです。
-Google製プラグインが動かないことがある 2つ目はGoogle製プラグインが動かないことがありました。 firebase_messagingプラグインを使って Androidにプッシュ通知を送ったところ、送った時点でクラッシュするという致命的な現象に遭遇しました。
+Google製プラグインが動かないことがある2つ目はGoogle製プラグインが動かないことがありました。 firebase_messagingプラグインを使って Androidにプッシュ通知を送ったところ、送った時点でクラッシュするという致命的な現象に遭遇しました。
 これはissueがあって、プルリクエストがない状況でして、たまたま原因がわかったのでプルリクエストを送りました。
 プルリクエストを送ったところ、2週間弱ぐらい反応なくて、他の人が突っついたら動き始めてくれました。
 このプルリクエスト自体は他のプラグインの絡みでマージされなかったのですが、修正してもらって、現在のバージョンではプッシュ通知が届いたときにクラッシュしなくなっています。
 ここでは、プルリクエストは気軽にできるよ！ってことを伝えたかったです。
-AndroidとiOSで動きが異なる 最後は、AndroidとiOSで動きが異なるというあるあるです。これが一番あるあるかなぁなと思いますが、僕が遭遇したのはQRコードリーダーのプラグインです。
+AndroidとiOSで動きが異なる最後は、AndroidとiOSで動きが異なるというあるあるです。これが一番あるあるかなぁなと思いますが、僕が遭遇したのはQRコードリーダーのプラグインです。
 QRコードを読み取るプラグインはいくつかあって、たとえば、qr_readerというプラグインがあります。
 Androidで動かすとカメラ画面が全画面になっていますが、
 iOSでは全画面ではなく、中央部分のみカメラ画面があるという感じになっていました。
@@ -309,145 +180,56 @@ iOSでは全画面ではなく、中央部分のみカメラ画面があると�
 これもちょっと異なっていて、iOSは全画面表示でとくに枠とかないのですが、
 Androidは全画面表示で枠があるデザインになっていました。
 今回のチャットアプリに関してはこれで妥協しているのですが、必要ならプルリクエストするか、自分でプラグインを作る必要がありそうかなぁと思います。
-まとめ 動かなかったり、AndroidとiOSで期待する動きと異なっている場合がありますが、githubリポジトリを参照できるのでなんとかなりますし、たとえ一部でも修正できればプルリクエストを送ってみてください。なんとかなります。 ということで、まとめとしては「なんとかなる」ですｗ
+まとめ動かなかったり、AndroidとiOSで期待する動きと異なっている場合がありますが、githubリポジトリを参照できるのでなんとかなりますし、たとえ一部でも修正できればプルリクエストを送ってみてください。なんとかなります。 ということで、まとめとしては「なんとかなる」ですｗ
 まだまだ微妙なところがあるflutterですが、ワンソースで両OS対応できるのは魅力的なので今後も追っかけていきたいと思います。
-付録 と、まぁLTはここまでだったんですが、他にも2つほど考えていたけどLT時間内に入り切らなかったので泣く泣く除いたあるあるをここでご紹介。
-Dart Packagesサイトとgithubの情報が違うことがある プラグインの情報は、pub.dartlang.org(ここではDart Packagesサイトと呼ぶことにします)で探すか、ググったらだいたいここに行き着くと思います。
+付録と、まぁLTはここまでだったんですが、他にも2つほど考えていたけどLT時間内に入り切らなかったので泣く泣く除いたあるあるをここでご紹介。
+Dart Packagesサイトとgithubの情報が違うことがあるプラグインの情報は、pub.dartlang.org(ここではDart Packagesサイトと呼ぶことにします)で探すか、ググったらだいたいここに行き着くと思います。
 それで、Dart PackagesサイトのREADMEをまずは見ると思いますが、Dart Packagesサイト側のREADMEを読んでもうまく動かず、GithubのREADMEを読んだらうまくいったということがありました。
 具体的には、いまは修正されてるのですが、image_pickerというプラグインで、iOSではNSMicrophoneUsageDescriptionの設定が必要なのに、Dart PackagesサイトのREADMEには書いてなく、GithubのREADMEには書かれていたという事がありました。
 これはTwitterで教えて頂いたのですが、Dart PackagesサイトはpublishしたときにしかREADME更新できないようで、publishするにはバージョンを上げる必要があるみたいで、README更新するだけのためにバージョンを上げるのも、、、感があるのかもということでした。
-pub.dartlangの方はpublishしたときにしかREADME更新できないんですよね&amp;hellip;
-README更新するためだけにバージョン上げるのも感があるのかもです
-(同期はして欲しい)
-&amp;mdash; 月見ふそやんUnderground (@azihsoyn) 2018年6月29日 
 ですので、Dart Packagesサイトを見るのもいいですが、できるだけGithubの方を見ておくと幸せになれるかもしれませんね。
-masterチャンネルで動かないことがある もう1つは、masterチャンネルで動かないのことがある、ですが、flutterには channelというgitのブランチのようなものがあって(というか実態はgitのブランチだと思いますが)、flutter channelというコマンドで自分がいまどのチャンネルにいるか確認できます。下記の例だとmasterチャンネルにいます。</description>
-    </item>
-    
-    <item>
-      <title>Flutterで画像を角丸にするには</title>
-      <link>https://kwmt27.net/2018/08/05/flutter-image-rounded-corner/</link>
-      <pubDate>Sun, 05 Aug 2018 21:28:00 +0900</pubDate>
-      
-      <guid>https://kwmt27.net/2018/08/05/flutter-image-rounded-corner/</guid>
-      <description> こんな感じに画像を角丸にするには、ClipRRectを使うと良さそう。
-SizedBox( height: 180.0, child: Container( child: ClipRRect( borderRadius: BorderRadius.circular(8.0), child: Image.network( message.downloadImageUrl.toString(), fit: BoxFit.cover, )), ));  参考  Rounded Corners Image in Flutter  </description>
-    </item>
-    
-    <item>
-      <title>Flutterのキーボードを閉じるには</title>
-      <link>https://kwmt27.net/2018/07/29/flutter-dismiss-keyboard/</link>
-      <pubDate>Sun, 29 Jul 2018 03:50:00 +0900</pubDate>
-      
-      <guid>https://kwmt27.net/2018/07/29/flutter-dismiss-keyboard/</guid>
-      <description> はじめに FlutterでLINEのようなチャットアプリを作っていて、TextFormでキーボードが表示されたら、Androidはバックキーでキーボードを閉じれるけど、iOSはバックキーないので閉じることができなかったので、キーボードを閉じる方法をメモ。
-キーボードを閉じるには GestureDetector( onTap: () =&amp;gt; FocusScope.of(context).requestFocus(FocusNode()), child: listView, )  このようにタップイベントでキーボードのフォーカスを外すことで、キーボードを閉じるようです。 listViewだけにGestureを設定しているのは、TextFormFieldを含むWidgetに対してGestureを設定すると、キーボードが上がってる状態でTextFormFiledをタップすると、一旦閉じてまたキーボードが立ち上がってしまうため、listViewのみに設定しています。
-キーボードを閉じるには 別の方法(2020/04/07追記) FocusScope.of(context).unfocus()  参考  https://github.com/flutter/flutter/issues/7247#issuecomment-406178161 https://stackoverflow.com/questions/44991968/how-can-i-dismiss-the-on-screen-keyboard#44991969  </description>
-    </item>
-    
-    <item>
-      <title>Flutterの画面遷移をモーダルにするには</title>
-      <link>https://kwmt27.net/2018/07/28/flutter-navigator-modal/</link>
-      <pubDate>Sat, 28 Jul 2018 23:43:00 +0900</pubDate>
-      
-      <guid>https://kwmt27.net/2018/07/28/flutter-navigator-modal/</guid>
-      <description>結論 PageRouteクラスに、fullscreenDialogプロパティがあるので、trueを設定するだけ。
+masterチャンネルで動かないことがあるもう1つは、masterチャンネルで動かないのことがある、ですが、flutterには channelというgitのブランチのようなものがあって(というか実態はgitのブランチだと思いますが)、flutter channelというコマンドで自分がいまどのチャンネルにいるか確認できます。下記の例だとmasterチャンネルにいます。
+$ flutter channel Flutter channels: beta dev * master この状態で開発していると、ビルドエラーにビルドエラーになることがありました。具体的には、ランチャーアイコンを生成するflutter_launcher_iconsプラグインを使って、アイコンを生成するコマンドを叩くと、下記のようにエラーが出ました。
+% flutter pub pub run flutter_launcher_icons:main Failed to precompile flutter_launcher_icons:main: file:///usr/local/flutter/.</description></item><item><title>Flutterで画像を角丸にするには</title><link>https://kwmt27.net/2018/08/05/flutter-image-rounded-corner/</link><pubDate>Sun, 05 Aug 2018 21:28:00 +0900</pubDate><guid>https://kwmt27.net/2018/08/05/flutter-image-rounded-corner/</guid><description> こんな感じに画像を角丸にするには、ClipRRectを使うと良さそう。
+SizedBox( height: 180.0, child: Container( child: ClipRRect( borderRadius: BorderRadius.circular(8.0), child: Image.network( message.downloadImageUrl.toString(), fit: BoxFit.cover, )), )); 参考 Rounded Corners Image in Flutter</description></item><item><title>Flutterのキーボードを閉じるには</title><link>https://kwmt27.net/2018/07/29/flutter-dismiss-keyboard/</link><pubDate>Sun, 29 Jul 2018 03:50:00 +0900</pubDate><guid>https://kwmt27.net/2018/07/29/flutter-dismiss-keyboard/</guid><description>はじめにFlutterでLINEのようなチャットアプリを作っていて、TextFormでキーボードが表示されたら、Androidはバックキーでキーボードを閉じれるけど、iOSはバックキーないので閉じることができなかったので、キーボードを閉じる方法をメモ。
+キーボードを閉じるにはGestureDetector( onTap: () =&amp;gt; FocusScope.of(context).requestFocus(FocusNode()), child: listView, ) このようにタップイベントでキーボードのフォーカスを外すことで、キーボードを閉じるようです。 listViewだけにGestureを設定しているのは、TextFormFieldを含むWidgetに対してGestureを設定すると、キーボードが上がってる状態でTextFormFiledをタップすると、一旦閉じてまたキーボードが立ち上がってしまうため、listViewのみに設定しています。
+キーボードを閉じるには 別の方法(2020/04/07追記)FocusScope.of(context).unfocus() 参考 https://github.com/flutter/flutter/issues/7247#issuecomment-406178161 https://stackoverflow.com/questions/44991968/how-can-i-dismiss-the-on-screen-keyboard#44991969</description></item><item><title>Flutterの画面遷移をモーダルにするには</title><link>https://kwmt27.net/2018/07/28/flutter-navigator-modal/</link><pubDate>Sat, 28 Jul 2018 23:43:00 +0900</pubDate><guid>https://kwmt27.net/2018/07/28/flutter-navigator-modal/</guid><description>結論PageRouteクラスに、fullscreenDialogプロパティがあるので、trueを設定するだけ。
 これで、iOSのUINavivationControllerのpushの画面遷移の仕方でなく、モーダルで立ち上がるような遷移になる。
 左上のボタンも←から☓に変わってくれる。
-実装例 いま作ってるアプリでは、こんな感じのメソッドを自分のAppNavigatorみたいなクラスに書いてます。
-Future&amp;lt;T&amp;gt; _showScreen&amp;lt;T extends dynamic&amp;gt;( BuildContext context, String routePath, Widget destinationScreenWidget, {bool modal = false}) { return Navigator.push( context, MaterialPageRoute&amp;lt;T&amp;gt;( settings: new RouteSettings(name: routePath), builder: (BuildContext context) { return new Theme( data: AppConfig.kTheme .copyWith(platform: Theme.of(context).platform), child: destinationScreenWidget, ); }, fullscreenDialog: modal), );  参考  Flutter GalleryのMaterial -&amp;gt; Dialogs -&amp;gt; FULLSCREENで動きを確認できる Flutter Galleryのソースはこちら  最後に &amp;ldquo;flutter modal&amp;rdquo;とググっていて、全然引っかからなくて、しばらく諦めてたんですが、絶対あるはずということで根気よく調べたら、&amp;ldquo;flutter popup screen&amp;rdquo;で検索したら、こちらのブログを見つけて、「あー、モーダルってダイアログでしたね。。」となっているところです。。。</description>
-    </item>
-    
-    <item>
-      <title>FlutterでFileのファイル名を取得するには</title>
-      <link>https://kwmt27.net/2018/07/25/flutter-file-name/</link>
-      <pubDate>Wed, 25 Jul 2018 01:00:00 +0900</pubDate>
-      
-      <guid>https://kwmt27.net/2018/07/25/flutter-file-name/</guid>
-      <description> pathパッケージをimportして、
-import &#39;package:path/path.dart&#39;;  basenameを使う。
-File file = File(&amp;quot;dir/name.png&amp;quot;); print(basename(file.path)); /// output: /// name.png  参考  https://stackoverflow.com/a/50439988 https://pub.dartlang.org/documentation/path/1.3.6//path/path-library.html  </description>
-    </item>
-    
-    <item>
-      <title>Flutterでバックキーイベントを検知するには</title>
-      <link>https://kwmt27.net/2018/07/18/flutter-onbackpressed/</link>
-      <pubDate>Wed, 18 Jul 2018 16:00:00 +0900</pubDate>
-      
-      <guid>https://kwmt27.net/2018/07/18/flutter-onbackpressed/</guid>
-      <description> 方法 Flutterでバックキー(AndroidのonBackPressed)イベントを検知するには、WillPopScopeクラスを使う。
-サンプル @override Widget build(BuildContext context) { return WillPopScope( onWillPop: () { // バックキーを押すとここに来る。 // popしてあげないと、閉じてくれない。 Navigator.of(context).pop(); }, child: Scaffold( // 省略 ), ); }  参考  https://stackoverflow.com/a/50459239 https://docs.flutter.io/flutter/widgets/WillPopScope-class.html  </description>
-    </item>
-    
-    <item>
-      <title>Flutter アイコンリスト</title>
-      <link>https://kwmt27.net/2018/07/09/flutter-icon-list/</link>
-      <pubDate>Mon, 09 Jul 2018 22:00:00 +0900</pubDate>
-      
-      <guid>https://kwmt27.net/2018/07/09/flutter-icon-list/</guid>
-      <description>Flutterのアイコンリストは公式ドキュメントにある https://docs.flutter.io/flutter/material/Icons-class.html
-以上。</description>
-    </item>
-    
-    <item>
-      <title>Building Layouts in Flutterを読んだときのメモ</title>
-      <link>https://kwmt27.net/2018/06/24/building-layouts-in-flutter/</link>
-      <pubDate>Sun, 24 Jun 2018 16:30:00 +0900</pubDate>
-      
-      <guid>https://kwmt27.net/2018/06/24/building-layouts-in-flutter/</guid>
-      <description>はじめに Building Layouts in Flutterを読みながら実際にコードを書いていったときのメモです。
-メモ  Containerはその子供のWidgetをカスタマイズすることができる
- パディング、マージン、ボーダー、背景色などを追加したいとき、Containerを使う  レイアウトを基本要素に分割
- RowとCoumnを見分ける レイアウトにグリッドはあるか？ オーバーラップする要素はあるか？ UIはタブが必要か？ アライメントやパディング、ボーダーが必要なエリアに注目   プロジェクト内の画像の使うには  画像はプロジェクトルートにimagesディレクトリを作ってその中に配置し、pubspec.yamlにassets項目を追加する。 ```yaml assets:
- images/lake.jpg ```  画像を使いたいところで、たとえばImage.asset()を使う
-body: new ListView( children: &amp;lt;Widget&amp;gt;[ new Image.asset( &#39;images/lake.jpg&#39;, width: 600.0, height: 240.0, fit: BoxFit.cover, ),  fitプロパティの指定は、ドキュメントに画像付きで書かれてるいるのでわかりやすい
- https://docs.flutter.io/flutter/painting/BoxFit-class.html BoxFit.coverはAndroidのImageView.ScaleTypeでいうところのCENTER_CROPかな？！  Image Classのドキュメント
- https://docs.flutter.io/flutter/widgets/Image-class.html   左寄せにするには crossAxisAlignment: CrossAxisAlignment.start,   ドキュメント  https://docs.flutter.io/flutter/rendering/CrossAxisAlignment-class.html#constants   余白を追加するには Containerでラップして、paddingにEdgeInsetsを使う。</description>
-    </item>
-    
-    <item>
-      <title>Dart2のコンストラクタがわからなかったのでメモ</title>
-      <link>https://kwmt27.net/2018/06/23/dartlang-class/</link>
-      <pubDate>Sat, 23 Jun 2018 15:30:00 +0900</pubDate>
-      
-      <guid>https://kwmt27.net/2018/06/23/dartlang-class/</guid>
-      <description>はじめに flutterを触りはじめて、rxあるのかな？と思って調べたら
+実装例いま作ってるアプリでは、こんな感じのメソッドを自分のAppNavigatorみたいなクラスに書いてます。
+Future&amp;lt;T&amp;gt; _showScreen&amp;lt;T extends dynamic&amp;gt;( BuildContext context, String routePath, Widget destinationScreenWidget, {bool modal = false}) { return Navigator.push( context, MaterialPageRoute&amp;lt;T&amp;gt;( settings: new RouteSettings(name: routePath), builder: (BuildContext context) { return new Theme( data: AppConfig.kTheme .copyWith(platform: Theme.of(context).platform), child: destinationScreenWidget, ); }, fullscreenDialog: modal), ); 参考 Flutter GalleryのMaterial -&amp;gt; Dialogs -&amp;gt; FULLSCREENで動きを確認できる Flutter Galleryのソースはこちら 最後に&amp;ldquo;flutter modal&amp;quot;とググっていて、全然引っかからなくて、しばらく諦めてたんですが、絶対あるはずということで根気よく調べたら、&amp;ldquo;flutter popup screen&amp;rdquo;で検索したら、こちらのブログを見つけて、「あー、モーダルってダイアログでしたね。。」となっているところです。。。</description></item><item><title>FlutterでFileのファイル名を取得するには</title><link>https://kwmt27.net/2018/07/25/flutter-file-name/</link><pubDate>Wed, 25 Jul 2018 01:00:00 +0900</pubDate><guid>https://kwmt27.net/2018/07/25/flutter-file-name/</guid><description>pathパッケージをimportして、
+import &amp;#39;package:path/path.dart&amp;#39;; basenameを使う。
+File file = File(&amp;#34;dir/name.png&amp;#34;); print(basename(file.path)); /// output: /// name.png 参考 https://stackoverflow.com/a/50439988 https://pub.dartlang.org/documentation/path/1.3.6//path/path-library.html</description></item><item><title>Flutterでバックキーイベントを検知するには</title><link>https://kwmt27.net/2018/07/18/flutter-onbackpressed/</link><pubDate>Wed, 18 Jul 2018 16:00:00 +0900</pubDate><guid>https://kwmt27.net/2018/07/18/flutter-onbackpressed/</guid><description>方法Flutterでバックキー(AndroidのonBackPressed)イベントを検知するには、WillPopScopeクラスを使う。
+サンプル @override Widget build(BuildContext context) { return WillPopScope( onWillPop: () { // バックキーを押すとここに来る。 // popしてあげないと、閉じてくれない。 Navigator.of(context).pop(); }, child: Scaffold( // 省略 ), ); } 参考 https://stackoverflow.com/a/50459239 https://docs.flutter.io/flutter/widgets/WillPopScope-class.html</description></item><item><title>Flutter アイコンリスト</title><link>https://kwmt27.net/2018/07/09/flutter-icon-list/</link><pubDate>Mon, 09 Jul 2018 22:00:00 +0900</pubDate><guid>https://kwmt27.net/2018/07/09/flutter-icon-list/</guid><description>Flutterのアイコンリストは公式ドキュメントにあるhttps://docs.flutter.io/flutter/material/Icons-class.html
+以上。</description></item><item><title>Building Layouts in Flutterを読んだときのメモ</title><link>https://kwmt27.net/2018/06/24/building-layouts-in-flutter/</link><pubDate>Sun, 24 Jun 2018 16:30:00 +0900</pubDate><guid>https://kwmt27.net/2018/06/24/building-layouts-in-flutter/</guid><description>はじめにBuilding Layouts in Flutterを読みながら実際にコードを書いていったときのメモです。
+メモ Containerはその子供のWidgetをカスタマイズすることができる
+パディング、マージン、ボーダー、背景色などを追加したいとき、Containerを使う レイアウトを基本要素に分割
+RowとCoumnを見分ける レイアウトにグリッドはあるか？ オーバーラップする要素はあるか？ UIはタブが必要か？ アライメントやパディング、ボーダーが必要なエリアに注目 プロジェクト内の画像の使うには 画像はプロジェクトルートにimagesディレクトリを作ってその中に配置し、pubspec.yamlにassets項目を追加する。
+assets: - images/lake.jpg 画像を使いたいところで、たとえばImage.asset()を使う
+body: new ListView( children: &amp;lt;Widget&amp;gt;[ new Image.asset( &amp;#39;images/lake.jpg&amp;#39;, width: 600.0, height: 240.0, fit: BoxFit.cover, ), fitプロパティの指定は、ドキュメントに画像付きで書かれてるいるのでわかりやすい
+https://docs.flutter.io/flutter/painting/BoxFit-class.html BoxFit.coverはAndroidのImageView.ScaleTypeでいうところのCENTER_CROPかな？！ Image Classのドキュメント
+https://docs.flutter.io/flutter/widgets/Image-class.html 左寄せにするにはcrossAxisAlignment: CrossAxisAlignment.start, ドキュメント https://docs.flutter.io/flutter/rendering/CrossAxisAlignment-class.html#constants 余白を追加するにはContainerでラップして、paddingにEdgeInsetsを使う。
+例えば、&amp;lsquo;Oeschinen Lake Campground&amp;rsquo;というテキストと&amp;rsquo;Kandersteg, Switzerland&amp;rsquo;というテキストの間に8px余白を取りたい場合は次のようになる。
+child: new Column( crossAxisAlignment: CrossAxisAlignment.start, children: &amp;lt;Widget&amp;gt;[ new Container( padding: const EdgeInsets.only(bottom: 8.0), child: new Text(&amp;#39;Oeschinen Lake Campground&amp;#39;), ), new Text(&amp;#39;Kandersteg, Switzerland&amp;#39;) ], ) これをビルドすると、下図の赤枠の部分の余白ができる。</description></item><item><title>Dart2のコンストラクタがわからなかったのでメモ</title><link>https://kwmt27.net/2018/06/23/dartlang-class/</link><pubDate>Sat, 23 Jun 2018 15:30:00 +0900</pubDate><guid>https://kwmt27.net/2018/06/23/dartlang-class/</guid><description>はじめにflutterを触りはじめて、rxあるのかな？と思って調べたら
 https://github.com/ReactiveX/rxdart
 ありました。どのように使うかサンプルを読んでたんですが、クラスのコンストラクタ部分が分からない・・・
 サンプルでいうと下記の部分です。
-class SearchBloc { final Sink&amp;lt;String&amp;gt; onTextChanged; final Stream&amp;lt;SearchState&amp;gt; state; SearchBloc._(this.onTextChanged, this.state); factory SearchBloc(GithubApi api) { final onTextChanged = new StreamController&amp;lt;String&amp;gt;(); final state = new Observable&amp;lt;String&amp;gt;(onTextChanged.stream) // If the text has not changed, do not perform a new search .distinct() // Wait for the user to stop typing for 250ms before running a search .debounce(const Duration(milliseconds: 250)) // Call the Github api with the given search term and convert it to a // State.</description>
-    </item>
-    
-    <item>
-      <title>flutter Google SignInのexampleをやってみた</title>
-      <link>https://kwmt27.net/2018/06/22/flutter-google-signin/</link>
-      <pubDate>Fri, 22 Jun 2018 09:50:00 +0900</pubDate>
-      
-      <guid>https://kwmt27.net/2018/06/22/flutter-google-signin/</guid>
-      <description>はじめに flutter で google singinをやってみた
+class SearchBloc { final Sink&amp;lt;String&amp;gt; onTextChanged; final Stream&amp;lt;SearchState&amp;gt; state; SearchBloc._(this.onTextChanged, this.state); factory SearchBloc(GithubApi api) { final onTextChanged = new StreamController&amp;lt;String&amp;gt;(); final state = new Observable&amp;lt;String&amp;gt;(onTextChanged.stream) // If the text has not changed, do not perform a new search .distinct() // Wait for the user to stop typing for 250ms before running a search .debounce(const Duration(milliseconds: 250)) // Call the Github api with the given search term and convert it to a // State.</description></item><item><title>flutter Google SignInのexampleをやってみた</title><link>https://kwmt27.net/2018/06/22/flutter-google-signin/</link><pubDate>Fri, 22 Jun 2018 09:50:00 +0900</pubDate><guid>https://kwmt27.net/2018/06/22/flutter-google-signin/</guid><description>はじめにflutter で google singinをやってみた
 https://github.com/flutter/plugins/tree/master/packages/google_sign_in
-   iOS Android          メモ  Firebaseのプロジェクトつくったりgoogle-services.jsonやplistを作ってプロジェクトに格納したりするのは、このYoutubeがわかりやすいかも
- AndroidはSHA1のフィンガープリントを追加する必要がある
- デバッグ用のフィンガープリントの確認方法(パスワードはandroid) shell % keytool -exportcert -list -v \-alias androiddebugkey -keystore ~/.android/debug.keystore  SHA256も表示されるが、そっちじゃなくてSHA1の方なので注意  iOSはInfo.plistに下記を設定(READMEに記載あり)
-&amp;lt;!-- Put me in the [my_project]/ios/Runner/Info.plist file --&amp;gt; &amp;lt;!-- Google Sign-in Section --&amp;gt; &amp;lt;key&amp;gt;CFBundleURLTypes&amp;lt;/key&amp;gt; &amp;lt;array&amp;gt; &amp;lt;dict&amp;gt; &amp;lt;key&amp;gt;CFBundleTypeRole&amp;lt;/key&amp;gt; &amp;lt;string&amp;gt;Editor&amp;lt;/string&amp;gt; &amp;lt;key&amp;gt;CFBundleURLSchemes&amp;lt;/key&amp;gt; &amp;lt;array&amp;gt; &amp;lt;!-- TODO Replace this value: --&amp;gt; &amp;lt;!-- Copied from GoogleServices-Info.</description>
-    </item>
-    
-    <item>
-      <title>flutter codelabをやってみた</title>
-      <link>https://kwmt27.net/2018/06/21/flutter-codelab/</link>
-      <pubDate>Thu, 21 Jun 2018 15:00:00 +0900</pubDate>
-      
-      <guid>https://kwmt27.net/2018/06/21/flutter-codelab/</guid>
-      <description>はじめに flutter codelabをやりました。
+iOS Android メモ Firebaseのプロジェクトつくったりgoogle-services.jsonやplistを作ってプロジェクトに格納したりするのは、このYoutubeがわかりやすいかも
+AndroidはSHA1のフィンガープリントを追加する必要がある
+デバッグ用のフィンガープリントの確認方法(パスワードはandroid) % keytool -exportcert -list -v \-alias androiddebugkey -keystore ~/.android/debug.keystore SHA256も表示されるが、そっちじゃなくてSHA1の方なので注意 iOSはInfo.plistに下記を設定(READMEに記載あり)
+&amp;lt;!-- Put me in the [my_project]/ios/Runner/Info.plist file --&amp;gt; &amp;lt;!-- Google Sign-in Section --&amp;gt; &amp;lt;key&amp;gt;CFBundleURLTypes&amp;lt;/key&amp;gt; &amp;lt;array&amp;gt; &amp;lt;dict&amp;gt; &amp;lt;key&amp;gt;CFBundleTypeRole&amp;lt;/key&amp;gt; &amp;lt;string&amp;gt;Editor&amp;lt;/string&amp;gt; &amp;lt;key&amp;gt;CFBundleURLSchemes&amp;lt;/key&amp;gt; &amp;lt;array&amp;gt; &amp;lt;!-- TODO Replace this value: --&amp;gt; &amp;lt;!-- Copied from GoogleServices-Info.plist key REVERSED_CLIENT_ID --&amp;gt; &amp;lt;string&amp;gt;com.googleusercontent.apps.861823949799-vc35cprkp249096uujjn0vvnmcvjppkn&amp;lt;/string&amp;gt; &amp;lt;/array&amp;gt; &amp;lt;/dict&amp;gt; &amp;lt;/array&amp;gt; &amp;lt;!-- End of the Google Sign-in Section --&amp;gt; google signinのexampleはPeople APIを有効にしないと403が返ってくる</description></item><item><title>flutter codelabをやってみた</title><link>https://kwmt27.net/2018/06/21/flutter-codelab/</link><pubDate>Thu, 21 Jun 2018 15:00:00 +0900</pubDate><guid>https://kwmt27.net/2018/06/21/flutter-codelab/</guid><description>はじめにflutter codelabをやりました。
 そのときのメモです。やった成果はこちら
 https://github.com/kwmt/flutter-codelab
-メモ  Android StudioでiOS,Androidビルドできてインストールできる ⌘+sでホットリロード  反映されるのが早すぎて感動 iOS、Android両方同時にはできないのか？  コード上でレイアウトを作成する(xmlとかない？) アイコンもコードから書ける
-trailing: new Icon( alreadySaved ? Icons.favorite : Icons.favorite_border, color: alreadySaved ? Colors.red : null, ),  タップイベントは、onTapで
- リストのitemやcell上のタップイベントはListTileのonTapで書ける リストにnofifyするのはsetStateになる
-onTap: () { setState(() { if (alreadySaved) { _saved.remove(pair); } else { _saved.add(pair); } }); },   AppBarにボタンをおける
- 画面遷移はNavigator.pushで遷移
- iOSはUINavigtaionControllerの動き AndroidはstartActivityの動きになる（が、少しぎこちない？ので対策はあるのだろうか・・・）  テーマ変更が超簡単 ```dart Widget build(BuildContext context) { return new MaterialApp( title: &amp;lsquo;Welcome to Flutter&amp;rsquo;,</description>
-    </item>
-    
-  </channel>
-</rss>
+メモ Android StudioでiOS,Androidビルドできてインストールできる
+⌘+sでホットリロード
+反映されるのが早すぎて感動 iOS、Android両方同時にはできないのか？ コード上でレイアウトを作成する(xmlとかない？)
+アイコンもコードから書ける
+trailing: new Icon( alreadySaved ? Icons.favorite : Icons.favorite_border, color: alreadySaved ? Colors.red : null, ), タップイベントは、onTapで
+リストのitemやcell上のタップイベントはListTileのonTapで書ける
+リストにnofifyするのはsetStateになる
+onTap: () { setState(() { if (alreadySaved) { _saved.remove(pair); } else { _saved.add(pair); } }); }, AppBarにボタンをおける
+画面遷移はNavigator.pushで遷移
+iOSはUINavigtaionControllerの動き AndroidはstartActivityの動きになる（が、少しぎこちない？ので対策はあるのだろうか・・・） テーマ変更が超簡単
+Widget build(BuildContext context) { return new MaterialApp( title: &amp;#39;Welcome to Flutter&amp;#39;, + theme: new ThemeData( + primaryColor: Colors.white + ), home: new RandomWords(), ); } デフォルトテーマ 変更後</description></item></channel></rss>

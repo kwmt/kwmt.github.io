@@ -1,51 +1,10 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
-  <channel>
-    <title>Python on Androg</title>
-    <link>https://kwmt27.net/categories/python/</link>
-    <description>Recent content in Python on Androg</description>
-    <generator>Hugo -- gohugo.io</generator>
-    <language>ja</language>
-    <lastBuildDate>Sat, 31 Aug 2013 00:00:00 +0000</lastBuildDate>
-    
-	<atom:link href="https://kwmt27.net/categories/python/index.xml" rel="self" type="application/rss+xml" />
-    
-    
-    <item>
-      <title>#golang bzip2データから復元するには？</title>
-      <link>https://kwmt27.net/index.php/2013/08/31/golang-compress-bzip2/</link>
-      <pubDate>Sat, 31 Aug 2013 00:00:00 +0000</pubDate>
-      
-      <guid>https://kwmt27.net/index.php/2013/08/31/golang-compress-bzip2/</guid>
-      <description>compress/bzip2の使い方
-golang編  bzip2.NewReaderするだけで復元できるのですね。
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>python on Androg</title><link>https://kwmt27.net/categories/python/</link><description>Recent content in python on Androg</description><generator>Hugo -- gohugo.io</generator><language>ja</language><lastBuildDate>Sat, 31 Aug 2013 00:00:00 +0000</lastBuildDate><atom:link href="https://kwmt27.net/categories/python/index.xml" rel="self" type="application/rss+xml"/><item><title>#golang bzip2データから復元するには？</title><link>https://kwmt27.net/index.php/2013/08/31/golang-compress-bzip2/</link><pubDate>Sat, 31 Aug 2013 00:00:00 +0000</pubDate><guid>https://kwmt27.net/index.php/2013/08/31/golang-compress-bzip2/</guid><description>compress/bzip2の使い方
+golang編 bzip2.NewReaderするだけで復元できるのですね。
 関数名が少し微妙な気もするけど、まぁいいか。
-python編  参考 http://golang.org/pkg/compress/bzip2/</description>
-    </item>
-    
-    <item>
-      <title>#golang zipファイルのコメントを取得するには？</title>
-      <link>https://kwmt27.net/index.php/2013/08/31/golang-archive-zip/</link>
-      <pubDate>Sat, 31 Aug 2013 00:00:00 +0000</pubDate>
-      
-      <guid>https://kwmt27.net/index.php/2013/08/31/golang-archive-zip/</guid>
-      <description>archive/zipパッケージの使い方
-golang編  下記で実行できる
-% go run archive_zip.go 90052 ※引数の数字はchannel.zipにreadme.txtに書いてある。
-python編  参考 http://golang.org/pkg/archive/zip/</description>
-    </item>
-    
-    <item>
-      <title>#python でPILを使って、jpegファイルを扱った時に「decoder jpeg not available」というエラーが出た場合の対処法</title>
-      <link>https://kwmt27.net/index.php/2013/07/14/python-pil-error-decoder-jpeg-not-available/</link>
-      <pubDate>Sat, 13 Jul 2013 00:00:00 +0000</pubDate>
-      
-      <guid>https://kwmt27.net/index.php/2013/07/14/python-pil-error-decoder-jpeg-not-available/</guid>
-      <description>環境：Mac OS X 10.7.5
-問題 PILを使って、jpgファイルをオープンして、オープンしたファイルに対してアクセスしようとすると（今回の場合、getpixelの部分）、下記のような「decoder jpeg not available」というエラーがでる。
-% python hoge.py Traceback (most recent call last): File &#34;hoge.py&#34;, line 9, in p= img.getpixel((x,y)) File &#34;/Library/Python/2.7/site-packages/PIL/Image.py&#34;, line 949, in getpixel self.load() File &#34;/Library/Python/2.7/site-packages/PIL/ImageFile.py&#34;, line 189, in load d = Image._getdecoder(self.mode, d, a, self.decoderconfig) File &#34;/Library/Python/2.7/site-packages/PIL/Image.py&#34;, line 385, in _getdecoder raise IOError(&#34;decoder %s not available&#34; % decoder_name) IOError: decoder jpeg not available  確認 libjpegが入ってないから？ということをtwitterで教えて頂き、インストールされているか確認したところ入ってなさげ。
-portからインストールしてた場合 % port installed | grep libjpeg % ソースからインストールしていた場合 % ll /usr/local/lib/ | grep jpeg %  対策  libjpegをソースからインストールする http://www.</description>
-    </item>
-    
-  </channel>
-</rss>
+python編 参考http://golang.org/pkg/compress/bzip2/</description></item><item><title>#golang zipファイルのコメントを取得するには？</title><link>https://kwmt27.net/index.php/2013/08/31/golang-archive-zip/</link><pubDate>Sat, 31 Aug 2013 00:00:00 +0000</pubDate><guid>https://kwmt27.net/index.php/2013/08/31/golang-archive-zip/</guid><description>archive/zipパッケージの使い方
+golang編 下記で実行できる
+※引数の数字はchannel.zipにreadme.txtに書いてある。
+python編 参考http://golang.org/pkg/archive/zip/</description></item><item><title>#python でPILを使って、jpegファイルを扱った時に「decoder jpeg not available」というエラーが出た場合の対処法</title><link>https://kwmt27.net/index.php/2013/07/14/python-pil-error-decoder-jpeg-not-available/</link><pubDate>Sat, 13 Jul 2013 00:00:00 +0000</pubDate><guid>https://kwmt27.net/index.php/2013/07/14/python-pil-error-decoder-jpeg-not-available/</guid><description>環境：Mac OS X 10.7.5
+問題PILを使って、jpgファイルをオープンして、オープンしたファイルに対してアクセスしようとすると（今回の場合、getpixelの部分）、下記のような「decoder jpeg not available」というエラーがでる。
+確認libjpegが入ってないから？ということをtwitterで教えて頂き、インストールされているか確認したところ入ってなさげ。
+対策 libjpegをソースからインストールする PILをインストールしなおす 最初の問題が起こったpythonプログラムを再実行 エラーが出なくなった。 参考 Python Imaging Library (PIL) Decoder jpeg not available — how to fix? http://apple.stackexchange.com/questions/59718/python-imaging-library-pil-decoder-jpeg-not-available-how-to-fix/59719#59719</description></item></channel></rss>

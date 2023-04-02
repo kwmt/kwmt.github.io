@@ -1,36 +1,5 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
-  <channel>
-    <title>Advent Calendar on Androg</title>
-    <link>https://kwmt27.net/tags/advent-calendar/</link>
-    <description>Recent content in Advent Calendar on Androg</description>
-    <generator>Hugo -- gohugo.io</generator>
-    <language>ja</language>
-    <lastBuildDate>Wed, 18 Dec 2013 00:00:00 +0000</lastBuildDate>
-    
-	<atom:link href="https://kwmt27.net/tags/advent-calendar/index.xml" rel="self" type="application/rss+xml" />
-    
-    
-    <item>
-      <title>#golang でマッチングサイトを作った時の感想。</title>
-      <link>https://kwmt27.net/index.php/2013/12/18/golang-advent-calendar-2013/</link>
-      <pubDate>Wed, 18 Dec 2013 00:00:00 +0000</pubDate>
-      
-      <guid>https://kwmt27.net/index.php/2013/12/18/golang-advent-calendar-2013/</guid>
-      <description>&lt;p&gt;この記事は &lt;a href=&#34;http://qiita.com/advent-calendar/2013/go&#34; target=&#34;_blank&#34;&gt;Go Advent Calendar 2013&lt;/a&gt; の 18 日目の投稿です。&lt;/p&gt;
-
-&lt;h2 id=&#34;はじめに&#34;&gt;はじめに&lt;/h2&gt;
-
-&lt;p&gt;今年もいろいろと行われていますAdvent Calendarですが、初めて参加させて頂きます。プログラミング界隈のプロフェッショナルな方々の中で書くというのは、ただ1人で家で書いてるだけなのに、ちょっと緊張しちゃってます(^^ゞ　&lt;/p&gt;
-
-&lt;p&gt;簡単にGo歴を。&lt;a href=&#34;http://bit.ly/1dJqET7&#34; target=&#34;_blank&#34;&gt;2012年1月に勉強会&lt;/a&gt;に参加してから、シンプルで守備範囲が広そうで強力で、なにより楽しいと感じ、それから自分で勉強したりして発表させて頂いたりしました(&lt;a href=&#34;http://www.slideshare.net/yasi_life/presentations&#34; target=&#34;_blank&#34;&gt;slideshare&lt;/a&gt;)。&lt;a href=&#34;http://go-talks-kwmt.appspot.com/2013/gocon-spring.slide#1&#34; target=&#34;_blank&#34;&gt;神戸からGoCon Springに参加&lt;/a&gt;したり、&lt;a href=&#34;http://bit.ly/1dJqv20&#34; target=&#34;_blank&#34;&gt;神戸から名古屋の勉強会に参加&lt;/a&gt;したりしました。&lt;/p&gt;
-
-&lt;p&gt;そんな中、今年の10月に、マッチングサイトを作ってほしいという話があり、言語は何でもいいとのことだったので、担当者に&amp;#8221;Goはキマスよ&amp;#8221;と訴え続け、Goで作らせて頂きました。&lt;/p&gt;
-
-&lt;p&gt;そこで、よく「Goで何ができるの？」って聞かれますので、「マッチングサイトが作れますよ」という事例を紹介したいところなのですが、そのマッチングサイトは、まだオープンしておらず、残念ながらリンクやスクリーンショットを貼ることができません。ので、そのマッチングサイトを作った時の&amp;#8221;機能&amp;#8221;と&amp;#8221;構成&amp;#8221;を簡単に説明した後、&amp;#8221;感想&amp;#8221;を書いていきたいと思います。&lt;/p&gt;
-
-&lt;p&gt;&lt;/p&gt;</description>
-    </item>
-    
-  </channel>
-</rss>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Advent Calendar on Androg</title><link>https://kwmt27.net/tags/advent-calendar/</link><description>Recent content in Advent Calendar on Androg</description><generator>Hugo -- gohugo.io</generator><language>ja</language><lastBuildDate>Wed, 18 Dec 2013 00:00:00 +0000</lastBuildDate><atom:link href="https://kwmt27.net/tags/advent-calendar/index.xml" rel="self" type="application/rss+xml"/><item><title>#golang でマッチングサイトを作った時の感想。</title><link>https://kwmt27.net/index.php/2013/12/18/golang-advent-calendar-2013/</link><pubDate>Wed, 18 Dec 2013 00:00:00 +0000</pubDate><guid>https://kwmt27.net/index.php/2013/12/18/golang-advent-calendar-2013/</guid><description>&lt;p>この記事は &lt;!-- raw HTML omitted -->Go Advent Calendar 2013&lt;!-- raw HTML omitted --> の 18 日目の投稿です。&lt;/p>
+&lt;h2 id="はじめに">はじめに&lt;a class="anchorjs-link" href="#%e3%81%af%e3%81%98%e3%82%81%e3%81%ab">&lt;/a>&lt;/h2>&lt;p>今年もいろいろと行われていますAdvent Calendarですが、初めて参加させて頂きます。プログラミング界隈のプロフェッショナルな方々の中で書くというのは、ただ1人で家で書いてるだけなのに、ちょっと緊張しちゃってます(^^ゞ　&lt;/p>
+&lt;p>簡単にGo歴を。&lt;!-- raw HTML omitted -->2012年1月に勉強会&lt;!-- raw HTML omitted -->に参加してから、シンプルで守備範囲が広そうで強力で、なにより楽しいと感じ、それから自分で勉強したりして発表させて頂いたりしました(&lt;!-- raw HTML omitted -->slideshare&lt;!-- raw HTML omitted -->)。&lt;!-- raw HTML omitted -->神戸からGoCon Springに参加&lt;!-- raw HTML omitted -->したり、&lt;!-- raw HTML omitted -->神戸から名古屋の勉強会に参加&lt;!-- raw HTML omitted -->したりしました。&lt;/p>
+&lt;p>そんな中、今年の10月に、マッチングサイトを作ってほしいという話があり、言語は何でもいいとのことだったので、担当者に”Goはキマスよ”と訴え続け、Goで作らせて頂きました。&lt;/p>
+&lt;p>そこで、よく「Goで何ができるの？」って聞かれますので、「マッチングサイトが作れますよ」という事例を紹介したいところなのですが、そのマッチングサイトは、まだオープンしておらず、残念ながらリンクやスクリーンショットを貼ることができません。ので、そのマッチングサイトを作った時の”機能”と”構成”を簡単に説明した後、”感想”を書いていきたいと思います。&lt;/p></description></item></channel></rss>

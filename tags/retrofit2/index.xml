@@ -1,29 +1,6 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
-  <channel>
-    <title>Retrofit2 on Androg</title>
-    <link>https://kwmt27.net/tags/retrofit2/</link>
-    <description>Recent content in Retrofit2 on Androg</description>
-    <generator>Hugo -- gohugo.io</generator>
-    <language>ja</language>
-    <lastBuildDate>Sun, 20 Oct 2019 20:25:00 +0900</lastBuildDate>
-    
-	<atom:link href="https://kwmt27.net/tags/retrofit2/index.xml" rel="self" type="application/rss+xml" />
-    
-    
-    <item>
-      <title>Retrofitパースエラー一覧</title>
-      <link>https://kwmt27.net/2019/10/20/retrofit-error-list/</link>
-      <pubDate>Sun, 20 Oct 2019 20:25:00 +0900</pubDate>
-      
-      <guid>https://kwmt27.net/2019/10/20/retrofit-error-list/</guid>
-      <description>はじめに Retrofitのエラー一覧です。
-interface GitHubService { @GET(&amp;quot;users/{user}/repos&amp;quot;) fun listRepos(@Path(&amp;quot;user&amp;quot;) user: String): Call&amp;lt;List&amp;lt;Repo&amp;gt;&amp;gt; } val retrofit = Retrofit.Builder() .baseUrl(&amp;quot;https://api.github.com/&amp;quot;) .build() val gitHubService = retrofit.create(GitHubService::class.java)  このように定義したとき、次のように呼び出すときに、内部でリフレクション使ってパースして、ちゃんとHTTPメソッドのアノテーションつけてるかとか、 ServiceMethod#parseAnnotations メソッドでやっていました。
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Retrofit2 on Androg</title><link>https://kwmt27.net/tags/retrofit2/</link><description>Recent content in Retrofit2 on Androg</description><generator>Hugo -- gohugo.io</generator><language>ja</language><lastBuildDate>Sun, 20 Oct 2019 20:25:00 +0900</lastBuildDate><atom:link href="https://kwmt27.net/tags/retrofit2/index.xml" rel="self" type="application/rss+xml"/><item><title>Retrofitパースエラー一覧</title><link>https://kwmt27.net/2019/10/20/retrofit-error-list/</link><pubDate>Sun, 20 Oct 2019 20:25:00 +0900</pubDate><guid>https://kwmt27.net/2019/10/20/retrofit-error-list/</guid><description>はじめにRetrofitのエラー一覧です。
+interface GitHubService { @GET(&amp;#34;users/{user}/repos&amp;#34;) fun listRepos(@Path(&amp;#34;user&amp;#34;) user: String): Call&amp;lt;List&amp;lt;Repo&amp;gt;&amp;gt; } val retrofit = Retrofit.Builder() .baseUrl(&amp;#34;https://api.github.com/&amp;#34;) .build() val gitHubService = retrofit.create(GitHubService::class.java) このように定義したとき、次のように呼び出すときに、内部でリフレクション使ってパースして、ちゃんとHTTPメソッドのアノテーションつけてるかとか、 ServiceMethod#parseAnnotations メソッドでやっていました。
 そのパース時にいろいろチェックしていたので、そのときのエラーを一覧でまとめて起きたいと思います。
-ServiceMethod#parseAnnotations RequestFactory#parseAnnotation アノテーションチェックしていて、以下の場合IllegalArgumentExceptionをスローします。
-HTTPメソッドのアノテーションを複数指定してる場合 例 @GET(&amp;quot;users/{user}/repos&amp;quot;) @POST()  エラーメッセージ Only one HTTP method is allowed. Found: GET and POST.
-該当コード if (this.httpMethod != null) { throw methodError(method, &amp;quot;Only one HTTP method is allowed. Found: %s and %s.&amp;quot;, this.httpMethod, httpMethod); }  クエリパラメータに{}がある場合 例 @GET(&amp;quot;users/{user}/repos?</description>
-    </item>
-    
-  </channel>
-</rss>
+ServiceMethod#parseAnnotationsRequestFactory#parseAnnotationアノテーションチェックしていて、以下の場合IllegalArgumentExceptionをスローします。
+HTTPメソッドのアノテーションを複数指定してる場合例@GET(&amp;#34;users/{user}/repos&amp;#34;) @POST() エラーメッセージOnly one HTTP method is allowed. Found: GET and POST.
+該当コードif (this.httpMethod != null) { throw methodError(method, &amp;#34;Only one HTTP method is allowed. Found: %s and %s.&amp;#34;, this.httpMethod, httpMethod); } クエリパラメータに{}がある場合例@GET(&amp;#34;users/{user}/repos?limit={limit}&amp;#34;) エラーメッセージURL query string &amp;ldquo;limit={limit}&amp;rdquo; must not have replace block. For dynamic query parameters use @Query.</description></item></channel></rss>

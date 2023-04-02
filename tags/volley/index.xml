@@ -1,41 +1,8 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
-  <channel>
-    <title>Volley on Androg</title>
-    <link>https://kwmt27.net/tags/volley/</link>
-    <description>Recent content in Volley on Androg</description>
-    <generator>Hugo -- gohugo.io</generator>
-    <language>ja</language>
-    <lastBuildDate>Thu, 10 Jul 2014 00:00:00 +0000</lastBuildDate>
-    
-	<atom:link href="https://kwmt27.net/tags/volley/index.xml" rel="self" type="application/rss+xml" />
-    
-    
-    <item>
-      <title>Androidプロジェクトを新規作成してVolleyが使えるようになるまで</title>
-      <link>https://kwmt27.net/index.php/2014/07/10/how-to-use-volley-library/</link>
-      <pubDate>Thu, 10 Jul 2014 00:00:00 +0000</pubDate>
-      
-      <guid>https://kwmt27.net/index.php/2014/07/10/how-to-use-volley-library/</guid>
-      <description>&lt;p&gt;サンプルプロジェクトは、&lt;a href=&#34;https://github.com/kwmt/volleysample&#34; target=&#34;_blank&#34;&gt;github&lt;/a&gt;におきました。&lt;/p&gt;
-
-&lt;h2 id=&#34;androidプロジェクトを新規作成する&#34;&gt;Androidプロジェクトを新規作成する&lt;/h2&gt;
-
-&lt;p&gt;Android StudioでNew Projectを作成する (例プロジェクト名：VolleySample)&lt;/p&gt;
-
-&lt;h2 id=&#34;volleyプロジェクトを追加する&#34;&gt;volleyプロジェクトを追加する&lt;/h2&gt;
-
-&lt;p&gt;volleyプロジェクトを作成したAndroidプロジェクトにsubmoduleとして追加・設定する&lt;/p&gt;
-
-&lt;p&gt;1.作成したプロジェクトに移動してgit init
-&lt;pre class=&#34;go&#34;&gt;$ cd VolleySample
-$ git init
-&lt;/pre&gt;&lt;/p&gt;
-
-&lt;p&gt;2.必要なら.gitignoreに追加してコミット
-  3.volleyプロジェクトを追加する
-&lt;/p&gt;</description>
-    </item>
-    
-  </channel>
-</rss>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Volley on Androg</title><link>https://kwmt27.net/tags/volley/</link><description>Recent content in Volley on Androg</description><generator>Hugo -- gohugo.io</generator><language>ja</language><lastBuildDate>Thu, 10 Jul 2014 00:00:00 +0000</lastBuildDate><atom:link href="https://kwmt27.net/tags/volley/index.xml" rel="self" type="application/rss+xml"/><item><title>Androidプロジェクトを新規作成してVolleyが使えるようになるまで</title><link>https://kwmt27.net/index.php/2014/07/10/how-to-use-volley-library/</link><pubDate>Thu, 10 Jul 2014 00:00:00 +0000</pubDate><guid>https://kwmt27.net/index.php/2014/07/10/how-to-use-volley-library/</guid><description>&lt;p>サンプルプロジェクトは、&lt;!-- raw HTML omitted -->github&lt;!-- raw HTML omitted -->におきました。&lt;/p>
+&lt;h2 id="androidプロジェクトを新規作成する">Androidプロジェクトを新規作成する&lt;a class="anchorjs-link" href="#android%e3%83%97%e3%83%ad%e3%82%b8%e3%82%a7%e3%82%af%e3%83%88%e3%82%92%e6%96%b0%e8%a6%8f%e4%bd%9c%e6%88%90%e3%81%99%e3%82%8b">&lt;/a>&lt;/h2>&lt;p>Android StudioでNew Projectを作成する (例プロジェクト名：VolleySample)&lt;/p>
+&lt;h2 id="volleyプロジェクトを追加する">volleyプロジェクトを追加する&lt;a class="anchorjs-link" href="#volley%e3%83%97%e3%83%ad%e3%82%b8%e3%82%a7%e3%82%af%e3%83%88%e3%82%92%e8%bf%bd%e5%8a%a0%e3%81%99%e3%82%8b">&lt;/a>&lt;/h2>&lt;p>volleyプロジェクトを作成したAndroidプロジェクトにsubmoduleとして追加・設定する&lt;/p>
+&lt;p>1.作成したプロジェクトに移動してgit init&lt;/p>
+&lt;!-- raw HTML omitted -->
+&lt;!-- raw HTML omitted -->
+&lt;p>2.必要なら.gitignoreに追加してコミット
+3.volleyプロジェクトを追加する&lt;/p></description></item></channel></rss>

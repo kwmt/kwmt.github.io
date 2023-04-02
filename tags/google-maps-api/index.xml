@@ -1,26 +1,3 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
-  <channel>
-    <title>Google Maps Api on Androg</title>
-    <link>https://kwmt27.net/tags/google-maps-api/</link>
-    <description>Recent content in Google Maps Api on Androg</description>
-    <generator>Hugo -- gohugo.io</generator>
-    <language>ja</language>
-    <lastBuildDate>Fri, 16 Dec 2011 00:00:00 +0000</lastBuildDate>
-    
-	<atom:link href="https://kwmt27.net/tags/google-maps-api/index.xml" rel="self" type="application/rss+xml" />
-    
-    
-    <item>
-      <title>Google Maps APIでGoogle Mapを表示させるには</title>
-      <link>https://kwmt27.net/index.php/2011/12/17/google-maps-api%E3%81%A7google-map%E3%82%92%E8%A1%A8%E7%A4%BA%E3%81%95%E3%81%9B%E3%82%8B%E3%81%AB%E3%81%AF/</link>
-      <pubDate>Fri, 16 Dec 2011 00:00:00 +0000</pubDate>
-      
-      <guid>https://kwmt27.net/index.php/2011/12/17/google-maps-api%E3%81%A7google-map%E3%82%92%E8%A1%A8%E7%A4%BA%E3%81%95%E3%81%9B%E3%82%8B%E3%81%AB%E3%81%AF/</guid>
-      <description>とりあえず、以下をheadで読み込んでおいて、
-&amp;lt;script type=&#34;text/javascript&#34; src=&#34;http://maps.google.com/maps/api/js?sensor=true&#34;&amp;gt;&amp;lt;/script&amp;gt;  詳しいことは、以下を参考にするメモ、
- Google Maps JavaScript API V3 &amp;#8211; 基本&amp;lt;/dt? http://code.google.com/intl/ja/apis/maps/documentation/javascript/basics.html   特にチュートリアルが分かりやすい。</description>
-    </item>
-    
-  </channel>
-</rss>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Google Maps API on Androg</title><link>https://kwmt27.net/tags/google-maps-api/</link><description>Recent content in Google Maps API on Androg</description><generator>Hugo -- gohugo.io</generator><language>ja</language><lastBuildDate>Fri, 16 Dec 2011 00:00:00 +0000</lastBuildDate><atom:link href="https://kwmt27.net/tags/google-maps-api/index.xml" rel="self" type="application/rss+xml"/><item><title>Google Maps APIでGoogle Mapを表示させるには</title><link>https://kwmt27.net/index.php/2011/12/17/google-maps-api%E3%81%A7google-map%E3%82%92%E8%A1%A8%E7%A4%BA%E3%81%95%E3%81%9B%E3%82%8B%E3%81%AB%E3%81%AF/</link><pubDate>Fri, 16 Dec 2011 00:00:00 +0000</pubDate><guid>https://kwmt27.net/index.php/2011/12/17/google-maps-api%E3%81%A7google-map%E3%82%92%E8%A1%A8%E7%A4%BA%E3%81%95%E3%81%9B%E3%82%8B%E3%81%AB%E3%81%AF/</guid><description>とりあえず、以下をheadで読み込んでおいて、
+詳しいことは、以下を参考にするメモ、
+Google Maps JavaScript API V3 – 基本&amp;lt;/dt? http://code.google.com/intl/ja/apis/maps/documentation/javascript/basics.html 特にチュートリアルが分かりやすい。</description></item></channel></rss>

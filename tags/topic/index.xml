@@ -1,37 +1,14 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
-  <channel>
-    <title>Topic on Androg</title>
-    <link>https://kwmt27.net/tags/topic/</link>
-    <description>Recent content in Topic on Androg</description>
-    <generator>Hugo -- gohugo.io</generator>
-    <language>ja</language>
-    <lastBuildDate>Sat, 04 Aug 2018 22:00:11 +0900</lastBuildDate>
-    
-	<atom:link href="https://kwmt27.net/tags/topic/index.xml" rel="self" type="application/rss+xml" />
-    
-    
-    <item>
-      <title>Firebase Cloud Messaging(FCM)のトピックについて</title>
-      <link>https://kwmt27.net/2018/08/04/firebase-messaging-topic-condition/</link>
-      <pubDate>Sat, 04 Aug 2018 22:00:11 +0900</pubDate>
-      
-      <guid>https://kwmt27.net/2018/08/04/firebase-messaging-topic-condition/</guid>
-      <description> Firebase Cloud Messaging(FCM)はTopicをSubscribeすることができて、サーバーはそのSubscribeしたTopicに対して送信することができます。
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>topic on Androg</title><link>https://kwmt27.net/tags/topic/</link><description>Recent content in topic on Androg</description><generator>Hugo -- gohugo.io</generator><language>ja</language><lastBuildDate>Sat, 04 Aug 2018 22:00:11 +0900</lastBuildDate><atom:link href="https://kwmt27.net/tags/topic/index.xml" rel="self" type="application/rss+xml"/><item><title>Firebase Cloud Messaging(FCM)のトピックについて</title><link>https://kwmt27.net/2018/08/04/firebase-messaging-topic-condition/</link><pubDate>Sat, 04 Aug 2018 22:00:11 +0900</pubDate><guid>https://kwmt27.net/2018/08/04/firebase-messaging-topic-condition/</guid><description>Firebase Cloud Messaging(FCM)はTopicをSubscribeすることができて、サーバーはそのSubscribeしたTopicに対して送信することができます。
 複数のTopicをSubscribeすることができるのですが、複数のTopicに対して送信するにはconditionを使うことができます。これはドキュメントに記載してあり、引用すると、
- &amp;ldquo;condition&amp;rdquo;: &amp;ldquo;&amp;lsquo;dogs&amp;rsquo; in topics || &amp;lsquo;cats&amp;rsquo; in topics&amp;rdquo;,
- このように、dogsトピックを購読しているかcatsトピックを購読している端末に送信することができます。
+&amp;ldquo;condition&amp;rdquo;: &amp;ldquo;&amp;lsquo;dogs&amp;rsquo; in topics || &amp;lsquo;cats&amp;rsquo; in topics&amp;rdquo;,
+このように、dogsトピックを購読しているかcatsトピックを購読している端末に送信することができます。
 では、たとえばanimalトピックを購読している端末には送信したいんだけど、dogsトピックを購読している端末には送信したくない場合はどのようにするか。
 次のようにすることができます。
- &amp;ldquo;condition&amp;rdquo;: &amp;ldquo;&amp;lsquo;animal&amp;rsquo; in topics &amp;amp;&amp;amp; !(&amp;lsquo;dogs&amp;rsquo; in topics)&amp;ldquo;,
- これはドキュメントに記載してあります。
+&amp;ldquo;condition&amp;rdquo;: &amp;ldquo;&amp;lsquo;animal&amp;rsquo; in topics &amp;amp;&amp;amp; !(&amp;lsquo;dogs&amp;rsquo; in topics)&amp;rdquo;,
+これはドキュメントに記載してあります。
 ちょっとハマったのが変数の使い方です。結論からいうとシングルクォートが必要だったのですが、
-const condition = `\&#39;${animal}\&#39; in topics`  animalが変数とした場合、このようにすればOKでした。
-どのTopicを購読しているかを知りたい どのtopicをsubscribeしているかを確認するには、下記のエンドポイントを使います。
-https://iid.googleapis.com/iid/info/IID_TOKEN  ドキュメントはこちらです。
+const condition = `\&amp;#39;${animal}\&amp;#39; in topics` animalが変数とした場合、このようにすればOKでした。
+どのTopicを購読しているかを知りたいどのtopicをsubscribeしているかを確認するには、下記のエンドポイントを使います。
+https://iid.googleapis.com/iid/info/IID_TOKEN ドキュメントはこちらです。
 以下はサンプルのリクエストとレスポンスです。
- リクエスト  curl -H &amp;quot;Authorization: key=&amp;lt;Server Key&amp;gt;&amp;quot; https://iid.googleapis.com/iid/info/&amp;lt;registration_token&amp;gt;?details=true   レスポンス  { &amp;quot;applicationVersion&amp;quot;: &amp;quot;1&amp;quot;, &amp;quot;connectDate&amp;quot;: &amp;quot;2018-08-03&amp;quot;, &amp;quot;attestStatus&amp;quot;: &amp;quot;NOT_ROOTED&amp;quot;, &amp;quot;application&amp;quot;: &amp;quot;&amp;lt;application id&amp;gt;&amp;quot;, &amp;quot;scope&amp;quot;: &amp;quot;*&amp;quot;, &amp;quot;authorizedEntity&amp;quot;: &amp;quot;xxxxxxxxxxxx&amp;quot;, &amp;quot;rel&amp;quot;: { &amp;quot;topics&amp;quot;: { &amp;quot;topic1&amp;quot;: { &amp;quot;addDate&amp;quot;: &amp;quot;2018-08-02&amp;quot; }, &amp;quot;topic2&amp;quot;: { &amp;quot;addDate&amp;quot;: &amp;quot;2018-08-01&amp;quot; }, &amp;quot;topic13&amp;quot;: { &amp;quot;addDate&amp;quot;: &amp;quot;2018-08-01&amp;quot; } } }, &amp;quot;connectionType&amp;quot;: &amp;quot;WIFI&amp;quot;, &amp;quot;appSigner&amp;quot;: &amp;quot;d9xxxxxxx&amp;quot;, &amp;quot;platform&amp;quot;: &amp;quot;ANDROID&amp;quot; }  </description>
-    </item>
-    
-  </channel>
-</rss>
+リクエスト curl -H &amp;#34;Authorization: key=&amp;lt;Server Key&amp;gt;&amp;#34; https://iid.googleapis.com/iid/info/&amp;lt;registration_token&amp;gt;?details=true レスポンス { &amp;#34;applicationVersion&amp;#34;: &amp;#34;1&amp;#34;, &amp;#34;connectDate&amp;#34;: &amp;#34;2018-08-03&amp;#34;, &amp;#34;attestStatus&amp;#34;: &amp;#34;NOT_ROOTED&amp;#34;, &amp;#34;application&amp;#34;: &amp;#34;&amp;lt;application id&amp;gt;&amp;#34;, &amp;#34;scope&amp;#34;: &amp;#34;*&amp;#34;, &amp;#34;authorizedEntity&amp;#34;: &amp;#34;xxxxxxxxxxxx&amp;#34;, &amp;#34;rel&amp;#34;: { &amp;#34;topics&amp;#34;: { &amp;#34;topic1&amp;#34;: { &amp;#34;addDate&amp;#34;: &amp;#34;2018-08-02&amp;#34; }, &amp;#34;topic2&amp;#34;: { &amp;#34;addDate&amp;#34;: &amp;#34;2018-08-01&amp;#34; }, &amp;#34;topic13&amp;#34;: { &amp;#34;addDate&amp;#34;: &amp;#34;2018-08-01&amp;#34; } } }, &amp;#34;connectionType&amp;#34;: &amp;#34;WIFI&amp;#34;, &amp;#34;appSigner&amp;#34;: &amp;#34;d9xxxxxxx&amp;#34;, &amp;#34;platform&amp;#34;: &amp;#34;ANDROID&amp;#34; }</description></item></channel></rss>

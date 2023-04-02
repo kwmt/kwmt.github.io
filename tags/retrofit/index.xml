@@ -1,31 +1,8 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
-  <channel>
-    <title>Retrofit on Androg</title>
-    <link>https://kwmt27.net/tags/retrofit/</link>
-    <description>Recent content in Retrofit on Androg</description>
-    <generator>Hugo -- gohugo.io</generator>
-    <language>ja</language>
-    <lastBuildDate>Thu, 26 Mar 2020 00:13:00 +0900</lastBuildDate>
-    
-	<atom:link href="https://kwmt27.net/tags/retrofit/index.xml" rel="self" type="application/rss+xml" />
-    
-    
-    <item>
-      <title>RxJavaのサンプルを作るにあたって、Androidアプリを作ってみた。</title>
-      <link>https://kwmt27.net/2020/03/26/to-make-a-sample-of-rxjava-i-tried-to-make-an-android-app/</link>
-      <pubDate>Thu, 26 Mar 2020 00:13:00 +0900</pubDate>
-      
-      <guid>https://kwmt27.net/2020/03/26/to-make-a-sample-of-rxjava-i-tried-to-make-an-android-app/</guid>
-      <description> 最近RxJavaを使い始めたら、めちゃめちゃ便利！ ということを知って、使い方のサンプルを書いておこうと、書きました。サンプルとして割りきってしまえば、これはこれでありなんだと思うんですが、実際はいろんなライブラリと組み合わせて使うわけで、たとえばRetrofitと一緒に使うのはどうするんだろうとか思って書き始めていたら、何かアプリを作ってみた方が実用的になるかもと思って、Androidアプリを作ってみました。
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Retrofit on Androg</title><link>https://kwmt27.net/tags/retrofit/</link><description>Recent content in Retrofit on Androg</description><generator>Hugo -- gohugo.io</generator><language>ja</language><lastBuildDate>Thu, 26 Mar 2020 00:13:00 +0900</lastBuildDate><atom:link href="https://kwmt27.net/tags/retrofit/index.xml" rel="self" type="application/rss+xml"/><item><title>RxJavaのサンプルを作るにあたって、Androidアプリを作ってみた。</title><link>https://kwmt27.net/2020/03/26/to-make-a-sample-of-rxjava-i-tried-to-make-an-android-app/</link><pubDate>Thu, 26 Mar 2020 00:13:00 +0900</pubDate><guid>https://kwmt27.net/2020/03/26/to-make-a-sample-of-rxjava-i-tried-to-make-an-android-app/</guid><description>最近RxJavaを使い始めたら、めちゃめちゃ便利！ということを知って、使い方のサンプルを書いておこうと、書きました。サンプルとして割りきってしまえば、これはこれでありなんだと思うんですが、実際はいろんなライブラリと組み合わせて使うわけで、たとえばRetrofitと一緒に使うのはどうするんだろうとか思って書き始めていたら、何かアプリを作ってみた方が実用的になるかもと思って、Androidアプリを作ってみました。
 アプリの詳細はPlay Storeの説明を見ていただきたいのですが、簡単に言うと、リストをGithubAPIから取得して表示し、そのリストの各項目をタップすると詳細がみれるという、よくあるアプリです。
 このアプリは、自分の実験アプリで、自分のなかで試してみたいことを試してみてます。
- いままでMVCでコード書いてたのですが、MVPにしてみよう！とか、 Retrofit使ったことなかったので使ってみようとか、 RxBinding使ってスクロールの一番下で行ったら読み込んでみよう RecyclerViewで一部のitemを異なるviewTypeにしたい Firebase使ってみよう！ wercker CIを使ってみようとか、 Google Play Developer Publishing APIを使ってPlay Storeに自動アップロードしてみようとか、 Retrolambdaを使わずにラムダ式が使える(一部だけ)ので使ってみようとか。  です。
+いままでMVCでコード書いてたのですが、MVPにしてみよう！とか、 Retrofit使ったことなかったので使ってみようとか、 RxBinding使ってスクロールの一番下で行ったら読み込んでみよう RecyclerViewで一部のitemを異なるviewTypeにしたい Firebase使ってみよう！ wercker CIを使ってみようとか、 Google Play Developer Publishing APIを使ってPlay Storeに自動アップロードしてみようとか、 Retrolambdaを使わずにラムダ式が使える(一部だけ)ので使ってみようとか。 です。
 最後のラムダ式を使うに関して、Retrolambdaを使わずラムダ式を使うには、Jackを有効にしないといけなくて、Jackを有効にすると、 Instant Run is disabled when Jack compiler is used. と表示されるようにInstant runが無効になってしまいますので、短く書けるのを取るかコンパイル速度を取るか、悩みどころです。いずれJackでもInstant runができることを期待しているので、コンパイル速度は諦めてます。
-レポジトリ https://github.com/kwmt/GitHubSearch
-ちなみに、自分がRxJavaを使うと便利になった思うこと  ModelからViewへの通知を今までObserverパターンを自作していたが、それが不要になった 連続して複数回APIを呼ぶなどするとコールバック地獄になるので読みにくくなってしまうのを、1回のコールバックで受けれるので読みやすくなった リスト操作やAPIコールをObservable(Stream)として同じように扱える  ただnew Func1とか書きたくないから、早く世の中の端末がAndroid N以降になってくれないかな。
-RxJavaの課題というか悩みどころ  subscription はModelで持つべきか、Viewで持ったほうがいいか悩みます。 リスト操作はfor文使わなくてよくなったけど、全部が全部RxJavaを使うかどうか再利用の関係で悩みます。ユーティリティ系のクラスは別のプロジェクトでも使いまわせたりしますが、RxJavaでリスト操作してしまうとそのユーティリティを使うなら必ずRxJavaの導入が必要になってきます。RxJavaが導入されてないプロジェクトだったりすると、そのユーティリティクラスは使えないので、for文の方がいいんじゃないかと思ってしまいます。  </description>
-    </item>
-    
-  </channel>
-</rss>
+レポジトリhttps://github.com/kwmt/GitHubSearch
+ちなみに、自分がRxJavaを使うと便利になった思うこと ModelからViewへの通知を今までObserverパターンを自作していたが、それが不要になった 連続して複数回APIを呼ぶなどするとコールバック地獄になるので読みにくくなってしまうのを、1回のコールバックで受けれるので読みやすくなった リスト操作やAPIコールをObservable(Stream)として同じように扱える ただnew Func1とか書きたくないから、早く世の中の端末がAndroid N以降になってくれないかな。
+RxJavaの課題というか悩みどころ subscription はModelで持つべきか、Viewで持ったほうがいいか悩みます。 リスト操作はfor文使わなくてよくなったけど、全部が全部RxJavaを使うかどうか再利用の関係で悩みます。ユーティリティ系のクラスは別のプロジェクトでも使いまわせたりしますが、RxJavaでリスト操作してしまうとそのユーティリティを使うなら必ずRxJavaの導入が必要になってきます。RxJavaが導入されてないプロジェクトだったりすると、そのユーティリティクラスは使えないので、for文の方がいいんじゃないかと思ってしまいます。</description></item></channel></rss>

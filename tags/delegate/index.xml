@@ -1,29 +1,8 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
-  <channel>
-    <title>Delegate on Androg</title>
-    <link>https://kwmt27.net/tags/delegate/</link>
-    <description>Recent content in Delegate on Androg</description>
-    <generator>Hugo -- gohugo.io</generator>
-    <language>ja</language>
-    <lastBuildDate>Sun, 18 Aug 2019 18:50:00 +0900</lastBuildDate>
-    
-	<atom:link href="https://kwmt27.net/tags/delegate/index.xml" rel="self" type="application/rss+xml" />
-    
-    
-    <item>
-      <title>KotlinのDelegateについて</title>
-      <link>https://kwmt27.net/2019/08/18/iosched-2019-kotlin-delegate/</link>
-      <pubDate>Sun, 18 Aug 2019 18:50:00 +0900</pubDate>
-      
-      <guid>https://kwmt27.net/2019/08/18/iosched-2019-kotlin-delegate/</guid>
-      <description>はじめに Google I/O 2019のソースが公開されたのでさっそく読み始めたところ、下記のコードが気になった。 KotlinのDelegated propertyであることは知っていたが、あんまり詳しく知らなかったので、今回はDelegateについて調べてみたので、それについてのメモです。
-override var onboardingCompleted by BooleanPreference(prefs, PREF_ONBOARDING, false)  ちなみに、試したコードはこちらです。
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Delegate on Androg</title><link>https://kwmt27.net/tags/delegate/</link><description>Recent content in Delegate on Androg</description><generator>Hugo -- gohugo.io</generator><language>ja</language><lastBuildDate>Sun, 18 Aug 2019 18:50:00 +0900</lastBuildDate><atom:link href="https://kwmt27.net/tags/delegate/index.xml" rel="self" type="application/rss+xml"/><item><title>KotlinのDelegateについて</title><link>https://kwmt27.net/2019/08/18/iosched-2019-kotlin-delegate/</link><pubDate>Sun, 18 Aug 2019 18:50:00 +0900</pubDate><guid>https://kwmt27.net/2019/08/18/iosched-2019-kotlin-delegate/</guid><description>はじめにGoogle I/O 2019のソースが公開されたのでさっそく読み始めたところ、下記のコードが気になった。 KotlinのDelegated propertyであることは知っていたが、あんまり詳しく知らなかったので、今回はDelegateについて調べてみたので、それについてのメモです。
+override var onboardingCompleted by BooleanPreference(prefs, PREF_ONBOARDING, false) ちなみに、試したコードはこちらです。
 https://github.com/kwmt/Kotlin-Playground/tree/master/src/main/kotlin/delegation
-まずはDelegationの基本について Javaでは処理をクラスに委譲するには次のようにやっていたと思います。(下記サンプルはJavaではないが、Javaで書くならこんな感じになる)
-package delegation interface Nameble { var name: String } class JackName : Nameble { override var name: String = &amp;quot;Jack&amp;quot; } class Person(name: Nameble) : Nameble { override var name: String = name.name } fun main() { val person = Person(JackName()) println(person.name) }  つまり、PersonクラスのnameをNamebleのnameに委譲したい場合、
-override var name: String = name.name  と書かないといけません。</description>
-    </item>
-    
-  </channel>
-</rss>
+まずはDelegationの基本についてJavaでは処理をクラスに委譲するには次のようにやっていたと思います。(下記サンプルはJavaではないが、Javaで書くならこんな感じになる)
+package delegation interface Nameble { var name: String } class JackName : Nameble { override var name: String = &amp;#34;Jack&amp;#34; } class Person(name: Nameble) : Nameble { override var name: String = name.name } fun main() { val person = Person(JackName()) println(person.name) } つまり、PersonクラスのnameをNamebleのnameに委譲したい場合、
+override var name: String = name.name と書かないといけません。
+しかし、kotlinのdelegationを使うと、次のように書けます。
+package delegation interface Nameble { var name: String } class JackName : Nameble { override var name: String = &amp;#34;Jack&amp;#34; } class Person(name: Nameble) : Nameble by name fun main() { val person = Person(JackName()) println(person.</description></item></channel></rss>

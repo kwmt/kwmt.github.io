@@ -1,34 +1,11 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
-  <channel>
-    <title>Flow on Androg</title>
-    <link>https://kwmt27.net/tags/flow/</link>
-    <description>Recent content in Flow on Androg</description>
-    <generator>Hugo -- gohugo.io</generator>
-    <language>ja</language>
-    <lastBuildDate>Thu, 29 Apr 2021 13:00:00 +0900</lastBuildDate>
-    
-	<atom:link href="https://kwmt27.net/tags/flow/index.xml" rel="self" type="application/rss+xml" />
-    
-    
-    <item>
-      <title>コールバックをFlowに変換するには</title>
-      <link>https://kwmt27.net/2021/04/29/coroutine-flow-callbackflow/</link>
-      <pubDate>Thu, 29 Apr 2021 13:00:00 +0900</pubDate>
-      
-      <guid>https://kwmt27.net/2021/04/29/coroutine-flow-callbackflow/</guid>
-      <description> はじめに interface OnChangeListener { fun onChange() }  のようなコールバックを、Flowに変換するにはどうすればいいかを調べました。
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Flow on Androg</title><link>https://kwmt27.net/tags/flow/</link><description>Recent content in Flow on Androg</description><generator>Hugo -- gohugo.io</generator><language>ja</language><lastBuildDate>Thu, 29 Apr 2021 13:00:00 +0900</lastBuildDate><atom:link href="https://kwmt27.net/tags/flow/index.xml" rel="self" type="application/rss+xml"/><item><title>コールバックをFlowに変換するには</title><link>https://kwmt27.net/2021/04/29/coroutine-flow-callbackflow/</link><pubDate>Thu, 29 Apr 2021 13:00:00 +0900</pubDate><guid>https://kwmt27.net/2021/04/29/coroutine-flow-callbackflow/</guid><description>はじめにinterface OnChangeListener { fun onChange() } のようなコールバックを、Flowに変換するにはどうすればいいかを調べました。
 RxJavaでいうところ、Observable.create のようなことを実現するにはどうすればいいかという記事です。
-結論 callbackFlowというAPIがcoroutineに用意されてるので、それを使うと良さそうです。
+結論callbackFlowというAPIがcoroutineに用意されてるので、それを使うと良さそうです。
 これは、cold flowを生成します。つまり、collectされるまで動きません。
-サンプル サンプルを書いてみました。
- flowFlow関数で、callbackFlowを使ってコールバックからFlowに変換しています。 OnChangeListener#onChangeの実装でofferを使用してチャンネルに追加しています。 容量がいっぱいの場合は例外がなげられるとのこと。
+サンプルサンプルを書いてみました。
+flowFlow関数で、callbackFlowを使ってコールバックからFlowに変換しています。 OnChangeListener#onChangeの実装でofferを使用してチャンネルに追加しています。 容量がいっぱいの場合は例外がなげられるとのこと。
 awaitClose でunregsiterやcancel処理を実装する必要があります。 これを実装しなければ、実行時に
- IllegalStateException: &amp;lsquo;awaitClose { yourCallbackOrListener.cancel() }&amp;rsquo; should be used in the end of callbackFlow block.
- というエラーがでます。（感想ですが、クローズ処理を忘れないので、良い仕組みだと思います！）
+IllegalStateException: &amp;lsquo;awaitClose { yourCallbackOrListener.cancel() }&amp;rsquo; should be used in the end of callbackFlow block.
+というエラーがでます。（感想ですが、クローズ処理を忘れないので、良い仕組みだと思います！）
 callbackからflowに変換できたので、あとはcollectしてあげるだけです。 このサンプルでは、1秒ごとにログに値が出力されます。
-onchange: 1 onchange: 2 onchange: 3 onchange: 4 onchange: 5 onchange: 6 onchange: 7 ...  </description>
-    </item>
-    
-  </channel>
-</rss>
+onchange: 1 onchange: 2 onchange: 3 onchange: 4 onchange: 5 onchange: 6 onchange: 7 ...</description></item></channel></rss>

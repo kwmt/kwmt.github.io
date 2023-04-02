@@ -1,39 +1,20 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
-  <channel>
-    <title>Livedata on Androg</title>
-    <link>https://kwmt27.net/tags/livedata/</link>
-    <description>Recent content in Livedata on Androg</description>
-    <generator>Hugo -- gohugo.io</generator>
-    <language>ja</language>
-    <lastBuildDate>Thu, 19 Sep 2019 21:10:00 +0900</lastBuildDate>
-    
-	<atom:link href="https://kwmt27.net/tags/livedata/index.xml" rel="self" type="application/rss+xml" />
-    
-    
-    <item>
-      <title>Android Lifecycle関連コンポーネントについて</title>
-      <link>https://kwmt27.net/2019/09/19/android-lifecycle-codelab/</link>
-      <pubDate>Thu, 19 Sep 2019 21:10:00 +0900</pubDate>
-      
-      <guid>https://kwmt27.net/2019/09/19/android-lifecycle-codelab/</guid>
-      <description>はじめに Android Lifecycleのコードラボをやりつつ、ViewModelやLiveDataの仕組みを調べたのでメモしておこと思います。
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>LiveData on Androg</title><link>https://kwmt27.net/tags/livedata/</link><description>Recent content in LiveData on Androg</description><generator>Hugo -- gohugo.io</generator><language>ja</language><lastBuildDate>Thu, 19 Sep 2019 21:10:00 +0900</lastBuildDate><atom:link href="https://kwmt27.net/tags/livedata/index.xml" rel="self" type="application/rss+xml"/><item><title>Android Lifecycle関連コンポーネントについて</title><link>https://kwmt27.net/2019/09/19/android-lifecycle-codelab/</link><pubDate>Thu, 19 Sep 2019 21:10:00 +0900</pubDate><guid>https://kwmt27.net/2019/09/19/android-lifecycle-codelab/</guid><description>はじめにAndroid Lifecycleのコードラボをやりつつ、ViewModelやLiveDataの仕組みを調べたのでメモしておこと思います。
 https://codelabs.developers.google.com/codelabs/android-lifecycles
 コードラボのコードベースでいろいろ試したソースはこちら
 https://github.com/kwmt/android-lifecycles
-Step1,2 ViewModel step1はアプリが起動したらタイマーがカウントアップし、画面回転するとタイマーのカウントがクリアされてしまう、という問題にViewModelというものを使ってどう対処するのかという話です。
-ViewModelとは ViewModelを使えば、ActivityやFragmentのライフサイクル全体でデータを保持できます。 ActivityやFragmentは、ユーザーの操作でCreatedとDestroyedを繰り返す生存期間の短いオブジェクトです。
+Step1,2 ViewModelstep1はアプリが起動したらタイマーがカウントアップし、画面回転するとタイマーのカウントがクリアされてしまう、という問題にViewModelというものを使ってどう対処するのかという話です。
+ViewModelとはViewModelを使えば、ActivityやFragmentのライフサイクル全体でデータを保持できます。 ActivityやFragmentは、ユーザーの操作でCreatedとDestroyedを繰り返す生存期間の短いオブジェクトです。
 ViewModelクラスを作成するには、ViewModel()を継承します。（中身は空っぽですが）
-class ChronoViewModel: ViewModel() { }  ViewModelは、ViewModelインスタンスが破棄されるときに呼ばれるonClearedというメソッドを持っています。
-ViewModelインスタンスの取得方法 このViewModelインスタンスをActivityやFragmentで取得するには、
-private val viewModel by viewModels&amp;lt;ChronoViewModel&amp;gt;()  のようにKotlin property delegateを使って取得するか、
-viewModel = ViewModelProvider(this).get(ChronoViewModel::class.java)  このように取得することになります。
+class ChronoViewModel: ViewModel() { } ViewModelは、ViewModelインスタンスが破棄されるときに呼ばれるonClearedというメソッドを持っています。
+ViewModelインスタンスの取得方法このViewModelインスタンスをActivityやFragmentで取得するには、
+private val viewModel by viewModels&amp;lt;ChronoViewModel&amp;gt;() のようにKotlin property delegateを使って取得するか、
+viewModel = ViewModelProvider(this).get(ChronoViewModel::class.java) このように取得することになります。
 以前は、ViewModelProvider.of(activity)のように取得していましたが、lifecycleのバージョン2.2.0-alpha03からDeprecatedになっていました。 https://developer.android.com/jetpack/androidx/releases/lifecycle#2.2.0-alpha03
 また、kotlin propertey Delegationを使うにはfragment-ktxの1.1.0以上を使う必要があります。
-implementation &amp;quot;androidx.fragment:fragment-ktx:1.1.0&amp;quot;  https://developer.android.com/jetpack/androidx/releases/fragment#1.1.0
-ViewModelの生存期間 ViewModelの生存期間はActivityやFragmentよりも長いです。 下図はActivityを起動して、画面を回転させ、バックボタンでアプリを終了したときの状態遷移です。
-起動 onCreate viewModel created(正確にはLazyなのでアクセスしたタイミング) onStart onResume 回転 onPause onStop onDestroy onCreate onStart onResume バックボタンでアプリ終了 onPause onStop viewModel onCleared onDestroy  画面回転時に、ActivityはonDestroyされていますが、ViewModelはonClearedが呼ばれていません。</description>
-    </item>
-    
-  </channel>
-</rss>
+implementation &amp;#34;androidx.fragment:fragment-ktx:1.1.0&amp;#34; https://developer.android.com/jetpack/androidx/releases/fragment#1.1.0
+ViewModelの生存期間ViewModelの生存期間はActivityやFragmentよりも長いです。 下図はActivityを起動して、画面を回転させ、バックボタンでアプリを終了したときの状態遷移です。
+起動 onCreate viewModel created(正確にはLazyなのでアクセスしたタイミング) onStart onResume 回転 onPause onStop onDestroy onCreate onStart onResume バックボタンでアプリ終了 onPause onStop viewModel onCleared onDestroy 画面回転時に、ActivityはonDestroyされていますが、ViewModelはonClearedが呼ばれていません。
+ViewModelの仕組みここで、
+ViewModelがどのような仕組みで保持されているか 画面回転時にもonDestroyが呼ばれているにも関わらずonClearedは呼ばれず、アプリ終了時にのみonClearedが呼ばれている仕組み をみてみます。
+1. ViewModelがどのような仕組みで保持されているかまず、Activityは
+ChronoActivity -&amp;gt; AppCompatActivty -&amp;gt; FragmentActivity -&amp;gt; ComponentActivity -&amp;gt; Activity このような継承関係になっています。</description></item></channel></rss>

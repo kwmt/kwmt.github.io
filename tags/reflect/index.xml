@@ -1,96 +1,13 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
-  <channel>
-    <title>Reflect on Androg</title>
-    <link>https://kwmt27.net/tags/reflect/</link>
-    <description>Recent content in Reflect on Androg</description>
-    <generator>Hugo -- gohugo.io</generator>
-    <language>ja</language>
-    <lastBuildDate>Sat, 12 Oct 2013 00:00:00 +0000</lastBuildDate>
-    
-	<atom:link href="https://kwmt27.net/tags/reflect/index.xml" rel="self" type="application/rss+xml" />
-    
-    
-    <item>
-      <title>#golang mapからstructに変換するには？</title>
-      <link>https://kwmt27.net/index.php/2013/10/13/how-to-convert-from-map-to-struct/</link>
-      <pubDate>Sat, 12 Oct 2013 00:00:00 +0000</pubDate>
-      
-      <guid>https://kwmt27.net/index.php/2013/10/13/how-to-convert-from-map-to-struct/</guid>
-      <description>&lt;h2 id=&#34;reflect-pkgを使った方法&#34;&gt;reflect pkgを使った方法&lt;/h2&gt;
-
-&lt;p&gt;最初はなんとなくリフレクションを使ってやるのかなぁと思って、調べてたらこんな感じのが出てました。（&lt;a href=&#34;http://bit.ly/1axEplM&#34; target=&#34;_blank&#34;&gt;参考リンク&lt;/a&gt;）&lt;/p&gt;
-
-&lt;script type=&#34;text/javascript&#34; src=&#34;https://gist.github.com/6938201.js?file=&#34; &gt;&lt;/script&gt;
-
-&lt;p&gt;&lt;a href=&#34;http://play.golang.org/p/5Inl2jO7zL&#34; target=&#34;_blank&#34;&gt;&lt;a href=&#34;http://play.golang.org/p/5Inl2jO7zL&#34;&gt;http://play.golang.org/p/5Inl2jO7zL&lt;/a&gt;&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;/p&gt;</description>
-    </item>
-    
-    <item>
-      <title>#golang リフレクションを使って、キャストするには？</title>
-      <link>https://kwmt27.net/index.php/2013/10/09/how-to-cast-with-reflect-of-golang/</link>
-      <pubDate>Wed, 09 Oct 2013 00:00:00 +0000</pubDate>
-      
-      <guid>https://kwmt27.net/index.php/2013/10/09/how-to-cast-with-reflect-of-golang/</guid>
-      <description>  http://play.golang.org/p/gvadP4k1Bo
-strconv.FormatIntの第一引数は&amp;#8221;int64&amp;#8243;型で、strconv.FormatUintの第一引数は&amp;#8221;uint64&amp;#8243;型です。
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>reflect on Androg</title><link>https://kwmt27.net/tags/reflect/</link><description>Recent content in reflect on Androg</description><generator>Hugo -- gohugo.io</generator><language>ja</language><lastBuildDate>Sat, 12 Oct 2013 00:00:00 +0000</lastBuildDate><atom:link href="https://kwmt27.net/tags/reflect/index.xml" rel="self" type="application/rss+xml"/><item><title>#golang mapからstructに変換するには？</title><link>https://kwmt27.net/index.php/2013/10/13/how-to-convert-from-map-to-struct/</link><pubDate>Sat, 12 Oct 2013 00:00:00 +0000</pubDate><guid>https://kwmt27.net/index.php/2013/10/13/how-to-convert-from-map-to-struct/</guid><description>&lt;h2 id="reflect-pkgを使った方法">reflect pkgを使った方法&lt;a class="anchorjs-link" href="#reflect-pkg%e3%82%92%e4%bd%bf%e3%81%a3%e3%81%9f%e6%96%b9%e6%b3%95">&lt;/a>&lt;/h2>&lt;p>最初はなんとなくリフレクションを使ってやるのかなぁと思って、調べてたらこんな感じのが出てました。（&lt;!-- raw HTML omitted -->参考リンク&lt;!-- raw HTML omitted -->）&lt;/p>
+&lt;script type="text/javascript" src="https://gist.github.com/6938201.js?file=" >&lt;/script>
+&lt;p>&lt;!-- raw HTML omitted -->&lt;a href="http://play.golang.org/p/5Inl2jO7zL" target="_blank">http://play.golang.org/p/5Inl2jO7zL&lt;/a>&lt;!-- raw HTML omitted -->&lt;/p></description></item><item><title>#golang リフレクションを使って、キャストするには？</title><link>https://kwmt27.net/index.php/2013/10/09/how-to-cast-with-reflect-of-golang/</link><pubDate>Wed, 09 Oct 2013 00:00:00 +0000</pubDate><guid>https://kwmt27.net/index.php/2013/10/09/how-to-cast-with-reflect-of-golang/</guid><description> http://play.golang.org/p/gvadP4k1Bo
+strconv.FormatIntの第一引数は”int64″型で、strconv.FormatUintの第一引数は”uint64″型です。
 たとえば、ただ100と書くとint型になりますので、fv.Callの引数のところで、キャストしてあげる必要があります。キャストするには、reflectパッケージのConvertメソッドを使います。
 ほとんど同じ処理で、ある一部分だけ異なる関数を使っているという場合に役に立つと思います。
 ちなみに、このConvertメソッドは、go1.1のリリース時に追加されました。
 http://golang.org/doc/go1.1#reflect
-参考  goken/goken08-reflect.md at master · goken/goken http://golang.org/pkg/reflect/#Value.Convert #golang リフレクションを使って、関数の引数の型を取得するには？ | Androg #golang リフレクションを使って、関数をコールするには？ | Androg  </description>
-    </item>
-    
-    <item>
-      <title>#golang リフレクションを使って、関数の引数の型を取得するには？</title>
-      <link>https://kwmt27.net/index.php/2013/10/09/how-to-get-function-arg-type-with-reflect-of-golang/</link>
-      <pubDate>Wed, 09 Oct 2013 00:00:00 +0000</pubDate>
-      
-      <guid>https://kwmt27.net/index.php/2013/10/09/how-to-get-function-arg-type-with-reflect-of-golang/</guid>
-      <description>  参考  goken/goken08-reflect.md at master · goken/goken http://golang.org/src/pkg/reflect/type.go?#L157  </description>
-    </item>
-    
-    <item>
-      <title>#golang リフレクションを使って、関数をコールするには？</title>
-      <link>https://kwmt27.net/index.php/2013/10/09/how-to-call-function-with-reflect-of-golang/</link>
-      <pubDate>Wed, 09 Oct 2013 00:00:00 +0000</pubDate>
-      
-      <guid>https://kwmt27.net/index.php/2013/10/09/how-to-call-function-with-reflect-of-golang/</guid>
-      <description>  参考  goken/goken08-reflect.md at master · goken/goken http://golang.org/pkg/reflect/#Value.Call  </description>
-    </item>
-    
-    <item>
-      <title>#golang リフレクションを使って関数名を取得するには？</title>
-      <link>https://kwmt27.net/index.php/2013/10/05/golang-how-to-get-function-name-with-reflection/</link>
-      <pubDate>Sat, 05 Oct 2013 00:00:00 +0000</pubDate>
-      
-      <guid>https://kwmt27.net/index.php/2013/10/05/golang-how-to-get-function-name-with-reflection/</guid>
-      <description> &amp;#8220;reflect&amp;#8221;パッケージだけでは取得できないようで、&amp;#8220;runtime&amp;#8221;パッケージの&amp;lt;a href=&amp;quot;http://golang.org/pkg/runtime/#FuncForPC&amp;quot; target=&amp;quot;_blank&amp;quot;&amp;gt;FuncForPC&amp;lt;/a&amp;gt;という関数を使うようです。
- 参考  reflection &amp;#8211; How to get the name of a function in Go? &amp;#8211; Stack Overflow goken/goken08-reflect.md at master · goken/goken  </description>
-    </item>
-    
-    <item>
-      <title>#golang リフレクションを使って、構造体フィールドの値を取得するには？</title>
-      <link>https://kwmt27.net/index.php/2013/10/02/get-field-value-of-struct-with-reflect-golang/</link>
-      <pubDate>Wed, 02 Oct 2013 00:00:00 +0000</pubDate>
-      
-      <guid>https://kwmt27.net/index.php/2013/10/02/get-field-value-of-struct-with-reflect-golang/</guid>
-      <description> リフレクションを使って、構造体フィールドの値を取得するには？
- http://play.golang.org/p/Tp5S6AVDB8
-参考  Go研 Vol.8  </description>
-    </item>
-    
-    <item>
-      <title>#golang リフレクションを使って、構造体フィールドの値を変更するには？</title>
-      <link>https://kwmt27.net/index.php/2013/10/02/change-struct-field-value-with-reflect-golang/</link>
-      <pubDate>Wed, 02 Oct 2013 00:00:00 +0000</pubDate>
-      
-      <guid>https://kwmt27.net/index.php/2013/10/02/change-struct-field-value-with-reflect-golang/</guid>
-      <description> リフレクションを使って、構造体フィールドの値を変更するには？
- 参考  Go研 Vol.8  </description>
-    </item>
-    
-  </channel>
-</rss>
+参考 goken/goken08-reflect.md at master · goken/goken http://golang.org/pkg/reflect/#Value.Convert #golang リフレクションを使って、関数の引数の型を取得するには？ | Androg #golang リフレクションを使って、関数をコールするには？ | Androg</description></item><item><title>#golang リフレクションを使って、関数の引数の型を取得するには？</title><link>https://kwmt27.net/index.php/2013/10/09/how-to-get-function-arg-type-with-reflect-of-golang/</link><pubDate>Wed, 09 Oct 2013 00:00:00 +0000</pubDate><guid>https://kwmt27.net/index.php/2013/10/09/how-to-get-function-arg-type-with-reflect-of-golang/</guid><description> 参考 goken/goken08-reflect.md at master · goken/goken http://golang.org/src/pkg/reflect/type.go?#L157</description></item><item><title>#golang リフレクションを使って、関数をコールするには？</title><link>https://kwmt27.net/index.php/2013/10/09/how-to-call-function-with-reflect-of-golang/</link><pubDate>Wed, 09 Oct 2013 00:00:00 +0000</pubDate><guid>https://kwmt27.net/index.php/2013/10/09/how-to-call-function-with-reflect-of-golang/</guid><description> 参考 goken/goken08-reflect.md at master · goken/goken http://golang.org/pkg/reflect/#Value.Call</description></item><item><title>#golang リフレクションを使って関数名を取得するには？</title><link>https://kwmt27.net/index.php/2013/10/05/golang-how-to-get-function-name-with-reflection/</link><pubDate>Sat, 05 Oct 2013 00:00:00 +0000</pubDate><guid>https://kwmt27.net/index.php/2013/10/05/golang-how-to-get-function-name-with-reflection/</guid><description>“reflect”パッケージだけでは取得できないようで、“runtime”パッケージの&amp;lt;a href=&amp;quot;http://golang.org/pkg/runtime/#FuncForPC&amp;quot; target=&amp;quot;_blank&amp;quot;&amp;gt;FuncForPC&amp;lt;/a&amp;gt;という関数を使うようです。
+参考 reflection – How to get the name of a function in Go? – Stack Overflow goken/goken08-reflect.md at master · goken/goken</description></item><item><title>#golang リフレクションを使って、構造体フィールドの値を取得するには？</title><link>https://kwmt27.net/index.php/2013/10/02/get-field-value-of-struct-with-reflect-golang/</link><pubDate>Wed, 02 Oct 2013 00:00:00 +0000</pubDate><guid>https://kwmt27.net/index.php/2013/10/02/get-field-value-of-struct-with-reflect-golang/</guid><description>リフレクションを使って、構造体フィールドの値を取得するには？
+http://play.golang.org/p/Tp5S6AVDB8
+参考 Go研 Vol.8</description></item><item><title>#golang リフレクションを使って、構造体フィールドの値を変更するには？</title><link>https://kwmt27.net/index.php/2013/10/02/change-struct-field-value-with-reflect-golang/</link><pubDate>Wed, 02 Oct 2013 00:00:00 +0000</pubDate><guid>https://kwmt27.net/index.php/2013/10/02/change-struct-field-value-with-reflect-golang/</guid><description>リフレクションを使って、構造体フィールドの値を変更するには？
+参考 Go研 Vol.8</description></item></channel></rss>

@@ -1,38 +1,21 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
-  <channel>
-    <title>Oreo on Androg</title>
-    <link>https://kwmt27.net/tags/oreo/</link>
-    <description>Recent content in Oreo on Androg</description>
-    <generator>Hugo -- gohugo.io</generator>
-    <language>ja</language>
-    <lastBuildDate>Sat, 21 Apr 2018 14:00:00 +0900</lastBuildDate>
-    
-	<atom:link href="https://kwmt27.net/tags/oreo/index.xml" rel="self" type="application/rss+xml" />
-    
-    
-    <item>
-      <title>Android Oreoのプッシュ通知対応でハマった３つのこと</title>
-      <link>https://kwmt27.net/2018/04/21/push-notification-for-android-oreo/</link>
-      <pubDate>Sat, 21 Apr 2018 14:00:00 +0900</pubDate>
-      
-      <guid>https://kwmt27.net/2018/04/21/push-notification-for-android-oreo/</guid>
-      <description>はじめに  In the second half of 2018, Play will require that new apps and app updates target a recent Android API level.
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Oreo on Androg</title><link>https://kwmt27.net/tags/oreo/</link><description>Recent content in Oreo on Androg</description><generator>Hugo -- gohugo.io</generator><language>ja</language><lastBuildDate>Sat, 21 Apr 2018 14:00:00 +0900</lastBuildDate><atom:link href="https://kwmt27.net/tags/oreo/index.xml" rel="self" type="application/rss+xml"/><item><title>Android Oreoのプッシュ通知対応でハマった３つのこと</title><link>https://kwmt27.net/2018/04/21/push-notification-for-android-oreo/</link><pubDate>Sat, 21 Apr 2018 14:00:00 +0900</pubDate><guid>https://kwmt27.net/2018/04/21/push-notification-for-android-oreo/</guid><description>はじめに In the second half of 2018, Play will require that new apps and app updates target a recent Android API level.
 引用元: https://android-developers.googleblog.com/2017/12/improving-app-security-and-performance.html
 日本語訳: https://developers-jp.googleblog.com/2017/12/improving-app-security-and-performance.html
- 突然ですが、PlayStoreでアプリを公開するにあたり、ターゲットSDKバージョンを最新に指定することが義務化されることはご存知でしょうか。 新規アプリの公開で、2018年8月から、既存アプリのアップデートで2018年11月からAPIレベル26以降つまりAndroid 8.0オレオ以降の対応が必須になります。
+突然ですが、PlayStoreでアプリを公開するにあたり、ターゲットSDKバージョンを最新に指定することが義務化されることはご存知でしょうか。 新規アプリの公開で、2018年8月から、既存アプリのアップデートで2018年11月からAPIレベル26以降つまりAndroid 8.0オレオ以降の対応が必須になります。
 今年の11月というと半年後ぐらいですので、オレオ対応はそろそろ開始し始めないと遅いかもしれません。
 ということでオレオ対応をしていたのですが、そのときに僕がハマったことを３つのこと共有させていただきたいと思います。
 話さないこととしては、
- プッシュ通知の仕組みや実装の仕方 プッシュ通知の大切さ  これらについては話しません。 プッシュ通知の大切さにつきましては、 去年9月のiOSDCで、「頼むからプッシュ通知の使い方をおろそかにしないでくれ！」(YouTube, スライド )というタイトルで発表されていて、とてもよい発表でしたのでぜひそちらを見て頂きたいです。
-ハマった3つのこと ハマったこととは次の３つになります。
- 通知が来ない！ 通知アイコンが真っ白になった！ 通知をオフにしても通知が来る！  ひとつひとつ詳しく見ていきましょう。
-そもそも通知が来ない！ MarshmallowやNougatでは通知が来ていたのですが、targetSdkVersionをたとえば26にすると通知が来なくなりました。
+プッシュ通知の仕組みや実装の仕方 プッシュ通知の大切さ これらについては話しません。 プッシュ通知の大切さにつきましては、 去年9月のiOSDCで、「頼むからプッシュ通知の使い方をおろそかにしないでくれ！」(YouTube, スライド )というタイトルで発表されていて、とてもよい発表でしたのでぜひそちらを見て頂きたいです。
+ハマった3つのことハマったこととは次の３つになります。
+通知が来ない！ 通知アイコンが真っ白になった！ 通知をオフにしても通知が来る！ ひとつひとつ詳しく見ていきましょう。
+そもそも通知が来ない！MarshmallowやNougatでは通知が来ていたのですが、targetSdkVersionをたとえば26にすると通知が来なくなりました。
 どういうことかと言いますと、targetSdkVersionを26に設定すると、そのアプリはちゃんとOreo対応していますよ、と宣言したことになります。 通知をOreo対応するために必ず必要なことがあります。それは
- all notifications must be assigned to a channel.
+all notifications must be assigned to a channel.
 引用元: https://developer.android.com/training/notify-user/channels.html
- すべての通知はチャンネルに割り当てなければなりません。</description>
-    </item>
-    
-  </channel>
-</rss>
+すべての通知はチャンネルに割り当てなければなりません。
+チャンネルというのは、例えばGoogle Play Musicアプリを参考しますと、下図の赤枠で囲んだ部分になります。
+チャンネルごとに通知をON/OFFすることができたり、カラーやサウンドもチャンネルごとに設定できます。 同じアプリ内で、通知が来て欲しいチャンネルは通知をONにし、通知が不快だなと思うチャンネルだけを通知が来ないようにOFFできるという機能です。
+これらのチャンネルは、targetSdkVersionを上げただけでは作成されません。 つまり、通知が来ない原因は、開発者がチャンネルを明示的に作成する必要があったのですが、ただバージョンを上げただけなので、チャンネルは作成されず通知が来なかったというわけです。
+通知アイコンが真っ白になった！次にAndroid Oreoで通知アイコンが真っ白になるという現象に遭遇しました。下図の矢印のところです。
+これをみたとき最初は、Lolipopから、アイコン画像の透過でない部分は白くレンダリングされるため、アイコン画像自体が対応していないのなかな？と思ったんですが、手元にあったMarshmallow端末で確認した所、ちゃんと表示されていたので、それは違いました。
+いろいろ調べた所、Firebase SDK version11.</description></item></channel></rss>

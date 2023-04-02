@@ -1,39 +1,7 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
-  <channel>
-    <title>Room on Androg</title>
-    <link>https://kwmt27.net/tags/room/</link>
-    <description>Recent content in Room on Androg</description>
-    <generator>Hugo -- gohugo.io</generator>
-    <language>ja</language>
-    <lastBuildDate>Sat, 15 May 2021 13:20:00 +0900</lastBuildDate>
-    
-	<atom:link href="https://kwmt27.net/tags/room/index.xml" rel="self" type="application/rss+xml" />
-    
-    
-    <item>
-      <title>Jetpack Composeでインクリメンタルサーチ(SearchBar UI)を実装するには</title>
-      <link>https://kwmt27.net/2021/05/15/jetpack-compose-searchbar/</link>
-      <pubDate>Sat, 15 May 2021 13:20:00 +0900</pubDate>
-      
-      <guid>https://kwmt27.net/2021/05/15/jetpack-compose-searchbar/</guid>
-      <description>はじめに composeバージョンは 1.0.0-beta04 です。
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Room on Androg</title><link>https://kwmt27.net/tags/room/</link><description>Recent content in Room on Androg</description><generator>Hugo -- gohugo.io</generator><language>ja</language><lastBuildDate>Sat, 15 May 2021 13:20:00 +0900</lastBuildDate><atom:link href="https://kwmt27.net/tags/room/index.xml" rel="self" type="application/rss+xml"/><item><title>Jetpack Composeでインクリメンタルサーチ(SearchBar UI)を実装するには</title><link>https://kwmt27.net/2021/05/15/jetpack-compose-searchbar/</link><pubDate>Sat, 15 May 2021 13:20:00 +0900</pubDate><guid>https://kwmt27.net/2021/05/15/jetpack-compose-searchbar/</guid><description>はじめにcomposeバージョンは 1.0.0-beta04 です。
 検索入力欄に検索した文字列を入れるとリストが絞り込まれる、いわゆるインクリメンタルサーチを実装したいとおもいます。下の動画のようなイメージです。
-SearchBarのUIを作るには？  だいたいこんな感じで作れます。
-ROOMで部分検索するには @Dao interface QrResultDao { @Query(&amp;quot;SELECT * from qr_results WHERE text LIKE &#39;%&#39; || :query || &#39;%&#39; &amp;quot; + &amp;quot;OR name LIKE &#39;%&#39; || :query || &#39;%&#39; ORDER BY updated_at DESC&amp;quot;) suspend fun search(query: String): List&amp;lt;QrResultEntity&amp;gt; }  こんな感じ。
-ViewModelの実装は  SearchQrResultUseCaseを使ってますが、基本的にはDaoのsearchまでの橋渡しなので省略。型変換とかはしています。
-SearchBarとリストをくっつけると  listを監視して、検索されたらUIに通知するみたいな感じです。
-以上です。</description>
-    </item>
-    
-    <item>
-      <title>Android Room with a View - KotlinというCodelabをやってみた</title>
-      <link>https://kwmt27.net/2019/05/04/android-room-with-view/</link>
-      <pubDate>Sat, 04 May 2019 10:50:00 +0900</pubDate>
-      
-      <guid>https://kwmt27.net/2019/05/04/android-room-with-view/</guid>
-      <description>&lt;p&gt;&lt;/p&gt;</description>
-    </item>
-    
-  </channel>
-</rss>
+SearchBarのUIを作るには？ だいたいこんな感じで作れます。
+ROOMで部分検索するには@Dao interface QrResultDao { @Query(&amp;#34;SELECT * from qr_results WHERE text LIKE &amp;#39;%&amp;#39; || :query || &amp;#39;%&amp;#39; &amp;#34; + &amp;#34;OR name LIKE &amp;#39;%&amp;#39; || :query || &amp;#39;%&amp;#39; ORDER BY updated_at DESC&amp;#34;) suspend fun search(query: String): List&amp;lt;QrResultEntity&amp;gt; } こんな感じ。
+ViewModelの実装は SearchQrResultUseCaseを使ってますが、基本的にはDaoのsearchまでの橋渡しなので省略。型変換とかはしています。
+SearchBarとリストをくっつけると listを監視して、検索されたらUIに通知するみたいな感じです。
+以上です。</description></item><item><title>Android Room with a View - KotlinというCodelabをやってみた</title><link>https://kwmt27.net/2019/05/04/android-room-with-view/</link><pubDate>Sat, 04 May 2019 10:50:00 +0900</pubDate><guid>https://kwmt27.net/2019/05/04/android-room-with-view/</guid><description/></item></channel></rss>

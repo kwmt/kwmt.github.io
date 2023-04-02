@@ -1,42 +1,19 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
-  <channel>
-    <title>Provider on Androg</title>
-    <link>https://kwmt27.net/tags/provider/</link>
-    <description>Recent content in Provider on Androg</description>
-    <generator>Hugo -- gohugo.io</generator>
-    <language>ja</language>
-    <lastBuildDate>Sat, 18 May 2019 11:50:00 +0900</lastBuildDate>
-    
-	<atom:link href="https://kwmt27.net/tags/provider/index.xml" rel="self" type="application/rss+xml" />
-    
-    
-    <item>
-      <title>Pragmatic State Management in Flutter (Google I/O&#39;19)のメモ</title>
-      <link>https://kwmt27.net/2019/05/18/googleio_flutter_state_management/</link>
-      <pubDate>Sat, 18 May 2019 11:50:00 +0900</pubDate>
-      
-      <guid>https://kwmt27.net/2019/05/18/googleio_flutter_state_management/</guid>
-      <description>問題点 ネットワークから、他のwidgetからシステムコールなどから、widgetの状態変更したい場合は多くあります。
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Provider on Androg</title><link>https://kwmt27.net/tags/provider/</link><description>Recent content in Provider on Androg</description><generator>Hugo -- gohugo.io</generator><language>ja</language><lastBuildDate>Sat, 18 May 2019 11:50:00 +0900</lastBuildDate><atom:link href="https://kwmt27.net/tags/provider/index.xml" rel="self" type="application/rss+xml"/><item><title>Pragmatic State Management in Flutter (Google I/O'19)のメモ</title><link>https://kwmt27.net/2019/05/18/googleio_flutter_state_management/</link><pubDate>Sat, 18 May 2019 11:50:00 +0900</pubDate><guid>https://kwmt27.net/2019/05/18/googleio_flutter_state_management/</guid><description>問題点ネットワークから、他のwidgetからシステムコールなどから、widgetの状態変更したい場合は多くあります。
 たとえば３つのWidgetがあったとき、MySliderからMyChartの状態を変更する場合、下図のようにしたくなるかもしれませんが、これにはいくつか問題があります。
 1.widgetが強参照している(strongly coupling widget)
 つまりMySliderはMyChartのことを知っている→これは拡張性がなくなります。not very scalable
 2.グローバルの状態を持っている
 多くのチャートがある場合、同期されてしまいます。
-3.外のwidgetからsetStateを呼んでいること これは最悪 - どこから状態が変わったのか把握できない - クラッシュする可能性がある
-下図は、UI is a functional of stateです。UI=レイアウトは、現在のアプリケーションの状態がビルドメソッドを介して決まります。
+3.外のwidgetからsetStateを呼んでいること これは最悪
+どこから状態が変わったのか把握できない クラッシュする可能性がある 下図は、UI is a functional of stateです。UI=レイアウトは、現在のアプリケーションの状態がビルドメソッドを介して決まります。
 つまりは、UIは他のUIから変更されません。 findViewByIdのようなものはありません。
-対策 これを解決するためには、両方のwidgetにアプローチ、アクセスできる何かが必要です。 これを今回はMyScheduleと呼びましょう。
+対策これを解決するためには、両方のwidgetにアプローチ、アクセスできる何かが必要です。 これを今回はMyScheduleと呼びましょう。
 これはMyHomePageにアタッチされます。なぜなら両方のwidgetをしっているから。
 MySliderが直接MyChartを触る代わりにMyScheduleを通してMyChartに伝えます。
 MySlider -&amp;gt; MyScheduler -&amp;gt; MyChartに通知notify MyChart -&amp;gt; MySchedular -&amp;gt; MySliderに変更したよ結果を通知
-コードはどのようになるか？ そのためにGoogleの状態管理アプローチの歴史を見る
- Scoped model  widgetのトップにモデルがあり子孫があるとき、 モデルが変更されたら、それらの子孫は通知される、。
+コードはどのようになるか？そのためにGoogleの状態管理アプローチの歴史を見る
+Scoped model widgetのトップにモデルがあり子孫があるとき、 モデルが変更されたら、それらの子孫は通知される、。
 これは使われているが、いくつかの機能が不足している
- BLoC 複雑なアプリが複数あるAdwordsのためにつくられた。 Rxとstremaベース これは複雑すぎるという意見を聞いた  あるいは、Flutterをやるにはnewアプローチをしないと
- package:provider コミュニティベース これをGoogle内部で使っている Scopedモデルに近い  Providerを使うには まずMyScheduleを定義しましょう。
-import &#39;package:flutter/widgets.dart&#39;; class MySchedule with ChangeNotifier { double _stateManagementTime = 0.</description>
-    </item>
-    
-  </channel>
-</rss>
+BLoC 複雑なアプリが複数あるAdwordsのためにつくられた。 Rxとstremaベース これは複雑すぎるという意見を聞いた あるいは、Flutterをやるにはnewアプローチをしないと
+package:provider コミュニティベース これをGoogle内部で使っている Scopedモデルに近い Providerを使うにはまずMyScheduleを定義しましょう。
+import &amp;#39;package:flutter/widgets.dart&amp;#39;; class MySchedule with ChangeNotifier { double _stateManagementTime = 0.5; double get stateManagementTime =&amp;gt; _stateManagementTime; set stateManagementTime(double newValue) { _stateManagementTime = newValue; notifyListeners(); } } このMyScheduleをMyHomePageにアタッチするには、 トップにchangenotifierproviderを次のようにラップします</description></item></channel></rss>

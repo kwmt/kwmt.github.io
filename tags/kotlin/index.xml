@@ -1,122 +1,51 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
-  <channel>
-    <title>Kotlin on Androg</title>
-    <link>https://kwmt27.net/tags/kotlin/</link>
-    <description>Recent content in Kotlin on Androg</description>
-    <generator>Hugo -- gohugo.io</generator>
-    <language>ja</language>
-    <lastBuildDate>Thu, 19 Sep 2019 21:10:00 +0900</lastBuildDate>
-    
-	<atom:link href="https://kwmt27.net/tags/kotlin/index.xml" rel="self" type="application/rss+xml" />
-    
-    
-    <item>
-      <title>Android Lifecycle関連コンポーネントについて</title>
-      <link>https://kwmt27.net/2019/09/19/android-lifecycle-codelab/</link>
-      <pubDate>Thu, 19 Sep 2019 21:10:00 +0900</pubDate>
-      
-      <guid>https://kwmt27.net/2019/09/19/android-lifecycle-codelab/</guid>
-      <description>はじめに Android Lifecycleのコードラボをやりつつ、ViewModelやLiveDataの仕組みを調べたのでメモしておこと思います。
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Kotlin on Androg</title><link>https://kwmt27.net/tags/kotlin/</link><description>Recent content in Kotlin on Androg</description><generator>Hugo -- gohugo.io</generator><language>ja</language><lastBuildDate>Thu, 19 Sep 2019 21:10:00 +0900</lastBuildDate><atom:link href="https://kwmt27.net/tags/kotlin/index.xml" rel="self" type="application/rss+xml"/><item><title>Android Lifecycle関連コンポーネントについて</title><link>https://kwmt27.net/2019/09/19/android-lifecycle-codelab/</link><pubDate>Thu, 19 Sep 2019 21:10:00 +0900</pubDate><guid>https://kwmt27.net/2019/09/19/android-lifecycle-codelab/</guid><description>はじめにAndroid Lifecycleのコードラボをやりつつ、ViewModelやLiveDataの仕組みを調べたのでメモしておこと思います。
 https://codelabs.developers.google.com/codelabs/android-lifecycles
 コードラボのコードベースでいろいろ試したソースはこちら
 https://github.com/kwmt/android-lifecycles
-Step1,2 ViewModel step1はアプリが起動したらタイマーがカウントアップし、画面回転するとタイマーのカウントがクリアされてしまう、という問題にViewModelというものを使ってどう対処するのかという話です。
-ViewModelとは ViewModelを使えば、ActivityやFragmentのライフサイクル全体でデータを保持できます。 ActivityやFragmentは、ユーザーの操作でCreatedとDestroyedを繰り返す生存期間の短いオブジェクトです。
+Step1,2 ViewModelstep1はアプリが起動したらタイマーがカウントアップし、画面回転するとタイマーのカウントがクリアされてしまう、という問題にViewModelというものを使ってどう対処するのかという話です。
+ViewModelとはViewModelを使えば、ActivityやFragmentのライフサイクル全体でデータを保持できます。 ActivityやFragmentは、ユーザーの操作でCreatedとDestroyedを繰り返す生存期間の短いオブジェクトです。
 ViewModelクラスを作成するには、ViewModel()を継承します。（中身は空っぽですが）
-class ChronoViewModel: ViewModel() { }  ViewModelは、ViewModelインスタンスが破棄されるときに呼ばれるonClearedというメソッドを持っています。
-ViewModelインスタンスの取得方法 このViewModelインスタンスをActivityやFragmentで取得するには、
-private val viewModel by viewModels&amp;lt;ChronoViewModel&amp;gt;()  のようにKotlin property delegateを使って取得するか、
-viewModel = ViewModelProvider(this).get(ChronoViewModel::class.java)  このように取得することになります。
+class ChronoViewModel: ViewModel() { } ViewModelは、ViewModelインスタンスが破棄されるときに呼ばれるonClearedというメソッドを持っています。
+ViewModelインスタンスの取得方法このViewModelインスタンスをActivityやFragmentで取得するには、
+private val viewModel by viewModels&amp;lt;ChronoViewModel&amp;gt;() のようにKotlin property delegateを使って取得するか、
+viewModel = ViewModelProvider(this).get(ChronoViewModel::class.java) このように取得することになります。
 以前は、ViewModelProvider.of(activity)のように取得していましたが、lifecycleのバージョン2.2.0-alpha03からDeprecatedになっていました。 https://developer.android.com/jetpack/androidx/releases/lifecycle#2.2.0-alpha03
 また、kotlin propertey Delegationを使うにはfragment-ktxの1.1.0以上を使う必要があります。
-implementation &amp;quot;androidx.fragment:fragment-ktx:1.1.0&amp;quot;  https://developer.android.com/jetpack/androidx/releases/fragment#1.1.0
-ViewModelの生存期間 ViewModelの生存期間はActivityやFragmentよりも長いです。 下図はActivityを起動して、画面を回転させ、バックボタンでアプリを終了したときの状態遷移です。
-起動 onCreate viewModel created(正確にはLazyなのでアクセスしたタイミング) onStart onResume 回転 onPause onStop onDestroy onCreate onStart onResume バックボタンでアプリ終了 onPause onStop viewModel onCleared onDestroy  画面回転時に、ActivityはonDestroyされていますが、ViewModelはonClearedが呼ばれていません。</description>
-    </item>
-    
-    <item>
-      <title>KotlinのDelegateについて</title>
-      <link>https://kwmt27.net/2019/08/18/iosched-2019-kotlin-delegate/</link>
-      <pubDate>Sun, 18 Aug 2019 18:50:00 +0900</pubDate>
-      
-      <guid>https://kwmt27.net/2019/08/18/iosched-2019-kotlin-delegate/</guid>
-      <description>はじめに Google I/O 2019のソースが公開されたのでさっそく読み始めたところ、下記のコードが気になった。 KotlinのDelegated propertyであることは知っていたが、あんまり詳しく知らなかったので、今回はDelegateについて調べてみたので、それについてのメモです。
-override var onboardingCompleted by BooleanPreference(prefs, PREF_ONBOARDING, false)  ちなみに、試したコードはこちらです。
+implementation &amp;#34;androidx.fragment:fragment-ktx:1.1.0&amp;#34; https://developer.android.com/jetpack/androidx/releases/fragment#1.1.0
+ViewModelの生存期間ViewModelの生存期間はActivityやFragmentよりも長いです。 下図はActivityを起動して、画面を回転させ、バックボタンでアプリを終了したときの状態遷移です。
+起動 onCreate viewModel created(正確にはLazyなのでアクセスしたタイミング) onStart onResume 回転 onPause onStop onDestroy onCreate onStart onResume バックボタンでアプリ終了 onPause onStop viewModel onCleared onDestroy 画面回転時に、ActivityはonDestroyされていますが、ViewModelはonClearedが呼ばれていません。
+ViewModelの仕組みここで、
+ViewModelがどのような仕組みで保持されているか 画面回転時にもonDestroyが呼ばれているにも関わらずonClearedは呼ばれず、アプリ終了時にのみonClearedが呼ばれている仕組み をみてみます。
+1. ViewModelがどのような仕組みで保持されているかまず、Activityは
+ChronoActivity -&amp;gt; AppCompatActivty -&amp;gt; FragmentActivity -&amp;gt; ComponentActivity -&amp;gt; Activity このような継承関係になっています。</description></item><item><title>KotlinのDelegateについて</title><link>https://kwmt27.net/2019/08/18/iosched-2019-kotlin-delegate/</link><pubDate>Sun, 18 Aug 2019 18:50:00 +0900</pubDate><guid>https://kwmt27.net/2019/08/18/iosched-2019-kotlin-delegate/</guid><description>はじめにGoogle I/O 2019のソースが公開されたのでさっそく読み始めたところ、下記のコードが気になった。 KotlinのDelegated propertyであることは知っていたが、あんまり詳しく知らなかったので、今回はDelegateについて調べてみたので、それについてのメモです。
+override var onboardingCompleted by BooleanPreference(prefs, PREF_ONBOARDING, false) ちなみに、試したコードはこちらです。
 https://github.com/kwmt/Kotlin-Playground/tree/master/src/main/kotlin/delegation
-まずはDelegationの基本について Javaでは処理をクラスに委譲するには次のようにやっていたと思います。(下記サンプルはJavaではないが、Javaで書くならこんな感じになる)
-package delegation interface Nameble { var name: String } class JackName : Nameble { override var name: String = &amp;quot;Jack&amp;quot; } class Person(name: Nameble) : Nameble { override var name: String = name.name } fun main() { val person = Person(JackName()) println(person.name) }  つまり、PersonクラスのnameをNamebleのnameに委譲したい場合、
-override var name: String = name.name  と書かないといけません。</description>
-    </item>
-    
-    <item>
-      <title>Kotlin Style Guideメモ</title>
-      <link>https://kwmt27.net/2017/12/02/kotlin-style-guide/</link>
-      <pubDate>Sat, 02 Dec 2017 22:17:00 +0900</pubDate>
-      
-      <guid>https://kwmt27.net/2017/12/02/kotlin-style-guide/</guid>
-      <description>https://android.github.io/kotlin-guides/style.html</description>
-    </item>
-    
-    <item>
-      <title>Kotlin Conf Android Codeを読んだときのメモ</title>
-      <link>https://kwmt27.net/2017/12/01/read-kotlin-conf-android-app/</link>
-      <pubDate>Fri, 01 Dec 2017 14:30:00 +0900</pubDate>
-      
-      <guid>https://kwmt27.net/2017/12/01/read-kotlin-conf-android-app/</guid>
-      <description># はじめに
+まずはDelegationの基本についてJavaでは処理をクラスに委譲するには次のようにやっていたと思います。(下記サンプルはJavaではないが、Javaで書くならこんな感じになる)
+package delegation interface Nameble { var name: String } class JackName : Nameble { override var name: String = &amp;#34;Jack&amp;#34; } class Person(name: Nameble) : Nameble { override var name: String = name.name } fun main() { val person = Person(JackName()) println(person.name) } つまり、PersonクラスのnameをNamebleのnameに委譲したい場合、
+override var name: String = name.name と書かないといけません。
+しかし、kotlinのdelegationを使うと、次のように書けます。
+package delegation interface Nameble { var name: String } class JackName : Nameble { override var name: String = &amp;#34;Jack&amp;#34; } class Person(name: Nameble) : Nameble by name fun main() { val person = Person(JackName()) println(person.</description></item><item><title>Kotlin Style Guideメモ</title><link>https://kwmt27.net/2017/12/02/kotlin-style-guide/</link><pubDate>Sat, 02 Dec 2017 22:17:00 +0900</pubDate><guid>https://kwmt27.net/2017/12/02/kotlin-style-guide/</guid><description>https://android.github.io/kotlin-guides/style.html</description></item><item><title>Kotlin Conf Android Codeを読んだときのメモ</title><link>https://kwmt27.net/2017/12/01/read-kotlin-conf-android-app/</link><pubDate>Fri, 01 Dec 2017 14:30:00 +0900</pubDate><guid>https://kwmt27.net/2017/12/01/read-kotlin-conf-android-app/</guid><description># はじめに
 Kotlin ConfのソースのAndroidを読みました。4時間ぐらいで読めた所までですが。
 コードをおいやすくするために、Android Studio 3.0でプロジェクトを開きます。
-kotlinconf-app/android/build.gradleを見る maven { url &amp;quot;http://dl.bintray.com/kotlin/kotlin-eap-1.2&amp;quot; }  まず、これが気になり調べたところ、Kotlinのアーリーアクセスプログラムのmavenリポジトリのようです。
+kotlinconf-app/android/build.gradleを見るmaven { url &amp;#34;http://dl.bintray.com/kotlin/kotlin-eap-1.2&amp;#34; } まず、これが気になり調べたところ、Kotlinのアーリーアクセスプログラムのmavenリポジトリのようです。
 bintrayには、
- Builds of Kotlin released under the Early Access Program
- このように書いてありました。
-kotlinconf-app/android/app/build.gradleを見る appモジュールのbuild.gradleのdependeciesを見ると、全体がだいたいどんな感じのアプリか分かるかもなので、みてみます。
-dependencies { compile fileTree(dir: &#39;libs&#39;, include: [&#39;*.jar&#39;]) compile &#39;com.android.support:appcompat-v7:26.1.0&#39; compile &#39;com.android.support:recyclerview-v7:26.1.0&#39; compile &#39;com.android.support.constraint:constraint-layout:1.0.2&#39; testCompile &#39;junit:junit:4.12&#39; androidTestCompile(&#39;com.android.support.test.espresso:espresso-core:3.0.1&#39;, { exclude group: &#39;com.android.support&#39;, module: &#39;support-annotations&#39; }) compile &#39;com.android.support:design:26.1.0&#39; compile&amp;quot;org.jetbrains.kotlin:kotlin-stdlib-jre7:$kotlin_version&amp;quot; compile &amp;quot;android.arch.lifecycle:runtime:1.0.0&amp;quot; compile &amp;quot;android.arch.lifecycle:extensions:1.0.0-alpha9-1&amp;quot; kapt &amp;quot;android.arch.lifecycle:compiler:1.0.0-alpha9-1&amp;quot; compile &amp;quot;org.jetbrains.anko:anko-sdk25:$anko_version&amp;quot; compile &amp;quot;org.jetbrains.anko:anko-appcompat-v7:$anko_version&amp;quot; compile &amp;quot;org.jetbrains.anko:anko-recyclerview-v7:$anko_version&amp;quot; compile &amp;quot;org.</description>
-    </item>
-    
-    <item>
-      <title>KotlinでMockito2を使ってfinal classをモック化するには</title>
-      <link>https://kwmt27.net/2017/10/30/mock-kotlin-class-with-mockito2/</link>
-      <pubDate>Mon, 30 Oct 2017 11:20:00 +0900</pubDate>
-      
-      <guid>https://kwmt27.net/2017/10/30/mock-kotlin-class-with-mockito2/</guid>
-      <description> 環境 Android Studio: 2.3.3 Kotlin: 1.1.51 Mokito: 2.11.0
+Builds of Kotlin released under the Early Access Program
+このように書いてありました。
+kotlinconf-app/android/app/build.gradleを見るappモジュールのbuild.gradleのdependeciesを見ると、全体がだいたいどんな感じのアプリか分かるかもなので、みてみます。
+dependencies { compile fileTree(dir: &amp;#39;libs&amp;#39;, include: [&amp;#39;*.jar&amp;#39;]) compile &amp;#39;com.android.support:appcompat-v7:26.1.0&amp;#39; compile &amp;#39;com.android.support:recyclerview-v7:26.1.0&amp;#39; compile &amp;#39;com.android.support.constraint:constraint-layout:1.0.2&amp;#39; testCompile &amp;#39;junit:junit:4.12&amp;#39; androidTestCompile(&amp;#39;com.android.support.test.espresso:espresso-core:3.0.1&amp;#39;, { exclude group: &amp;#39;com.android.support&amp;#39;, module: &amp;#39;support-annotations&amp;#39; }) compile &amp;#39;com.android.support:design:26.1.0&amp;#39; compile&amp;#34;org.jetbrains.kotlin:kotlin-stdlib-jre7:$kotlin_version&amp;#34; compile &amp;#34;android.arch.lifecycle:runtime:1.0.0&amp;#34; compile &amp;#34;android.arch.lifecycle:extensions:1.0.0-alpha9-1&amp;#34; kapt &amp;#34;android.arch.lifecycle:compiler:1.0.0-alpha9-1&amp;#34; compile &amp;#34;org.jetbrains.anko:anko-sdk25:$anko_version&amp;#34; compile &amp;#34;org.jetbrains.anko:anko-appcompat-v7:$anko_version&amp;#34; compile &amp;#34;org.jetbrains.anko:anko-recyclerview-v7:$anko_version&amp;#34; compile &amp;#34;org.jetbrains.anko:anko-commons:$anko_version&amp;#34; compile &amp;#34;org.jetbrains.anko:anko-design:$anko_version&amp;#34; compile &amp;#34;org.jetbrains.anko:anko-coroutines:$anko_version&amp;#34; compile &amp;#39;com.</description></item><item><title>KotlinでMockito2を使ってfinal classをモック化するには</title><link>https://kwmt27.net/2017/10/30/mock-kotlin-class-with-mockito2/</link><pubDate>Mon, 30 Oct 2017 11:20:00 +0900</pubDate><guid>https://kwmt27.net/2017/10/30/mock-kotlin-class-with-mockito2/</guid><description>環境Android Studio: 2.3.3 Kotlin: 1.1.51 Mokito: 2.11.0
 build.gradleにはmockito-coreを指定
-testCompile &amp;quot;org.mockito:mockito-core:2.11.0&amp;quot;  問題 kotlinで普通にクラスを作成すると、final classです。
-class EventsDataSourceManager @Inject constructor(private val eventsRemoteDataSource: EventsRemoteDataSource) { fun eventEntities(user:String, page:Int): Single&amp;lt;List&amp;lt;EventEntity&amp;gt;&amp;gt; { // リモートかキャッシュを使うかの判断をココでやるとよさそう return eventsRemoteDataSource.eventEntities(user, page) } }  その状態でmockitoを使って、モック化しようとすると、「Mockitoはfinal classはモック化できない」とエラーにになります。
-org.mockito.exceptions.base.MockitoException: Cannot mock/spy class net.kwmt27.codesearch.infrastructure.repository.datesource.EventsDataSourceManager Mockito cannot mock/spy because : - final class  対策 これを可能にするには、
-test/resources/mockito-extensions  フォルダを作成し、mockito-extensionsフォルダに、org.mockito.plugins.MockMakerファイルを作成します。 org.mockito.plugins.MockMakerファイルには、下記のテキストを入力しておきます。
-mock-maker-inline  この状態でもう一度テストを実行します。 すると、テストが実行されます。
-参考  How to mock final classes on Kotlin using Mockito 2 (KAD 23) Mock the unmockable: opt-in mocking of final classes/methods(公式wiki)  </description>
-    </item>
-    
-    <item>
-      <title>Kotlinプロジェクトで「Parameter specified as non-null is null: method kotlin.jvm.internal.Intrinsics.checkParameterIsNotNull, parameter favicon」というエラーが出たときの対処法</title>
-      <link>https://kwmt27.net/2017/10/24/webview-error-with-kotlin/</link>
-      <pubDate>Tue, 24 Oct 2017 23:20:00 +0900</pubDate>
-      
-      <guid>https://kwmt27.net/2017/10/24/webview-error-with-kotlin/</guid>
-      <description>現象 Kotlin+DatabindingでViewModel側でwebview.loadURLをしてロードしようとしたら上記のエラーが出た。
-E/AndroidRuntime: FATAL EXCEPTION: main Process: &amp;lt;package&amp;gt;, PID: 29932 java.lang.IllegalArgumentException: Parameter specified as non-null is null: method kotlin.jvm.internal.Intrinsics.checkParameterIsNotNull, parameter favicon at &amp;lt;package&amp;gt;.HomeViewModel$setupWebView$webViewClient$1.onPageStarted(HomeViewModel.kt:0)at com.android.webview.chromium.WebViewContentsClientAdapter.onPageStarted(WebViewContentsClientAdapter.java:190) at org.chromium.android_webview.AwContentsClientCallbackHelper$MyHandler.handleMessage(AwContentsClientCallbackHelper.java:20) at android.os.Handler.dispatchMessage(Handler.java:102) at android.os.Looper.loop(Looper.java:148) at android.app.ActivityThread.main(ActivityThread.java:5417) at java.lang.reflect.Method.invoke(Native Method) at com.android.internal.os.ZygoteInit$MethodAndArgsCaller.run(ZygoteInit.java:726) at com.android.internal.os.ZygoteInit.main(ZygoteInit.java:616)  原因 WebViewClientのonPageStartedメソッドの引数のBitmapのところが、favicon:Bitmap と、non-nullが指定されていたことだった。
-対策 override fun onPageStarted(view: WebView, url: String, favicon: Bitmap?) {  Bitmap?をnull許容にしてあげればいい。
-最後に ある別プロジェクトからjavaソースをコピペして、Android Studioの自動変換機能にまかせてたので、大丈夫だろうと思っていたことで、気づくのに時間をとってしまった。。 よくエラー内容を見るとparameter faviconと書いてはいるんだけど、コピペしているからフレームワークの内部のことかと思ってしまって見過ごしていた。
-Android Studioのkotlinへの自動変換を信じすぎないようにしよう。</description>
-    </item>
-    
-    <item>
-      <title>Kotlin kapt error</title>
-      <link>https://kwmt27.net/2017/10/15/kotlin-error/</link>
-      <pubDate>Sun, 15 Oct 2017 21:18:00 +0900</pubDate>
-      
-      <guid>https://kwmt27.net/2017/10/15/kotlin-error/</guid>
-      <description>困ったこと Kotlin + Dagger2を使って、下記のようなエラーが出た。
- See log for more details
- とあるけど、どこ見たらいいのでしょうか。。。
-対策 Android Studioからは見れないので、ターミナルでassembleDevelopDebugを実行してみましょう。
-% ./gradlew assembleDevelopDebug  すると下記のような感じで詳細なエラーログを見ることができます。
-:app:kaptDevelopDebugKotlin e: app/build/tmp/kapt3/stubs/developDebug/net/kwmt27/codesearch/presentation/internal/di/components/AppComponent.java:6: エラー: [dagger.android.AndroidInjector.inject(T)] java.util.Map&amp;lt;java.lang.Class&amp;lt;? extends android.support.v4.app.Fragment&amp;gt;,javax.inject.Provider&amp;lt;dagger.android.AndroidInjector.Factory&amp;lt;? extends android.support.v4.app.Fragment&amp;gt;&amp;gt;&amp;gt; cannot be provided without an @Provides-annotated method. e: e: public abstract interface AppComponent extends dagger.android.AndroidInjector&amp;lt;net.kwmt27.codesearch.presentation.App&amp;gt; { e: ^ e: java.util.Map&amp;lt;java.lang.Class&amp;lt;? extends android.support.v4.app.Fragment&amp;gt;,javax.inject.Provider&amp;lt;dagger.android.AndroidInjector.Factory&amp;lt;? extends android.support.v4.app.Fragment&amp;gt;&amp;gt;&amp;gt; is injected at e: dagger.android.DispatchingAndroidInjector.&amp;lt;init&amp;gt;(injectorFactories) e: dagger.android.DispatchingAndroidInjector&amp;lt;android.support.v4.app.Fragment&amp;gt; is injected at e: dagger.android.support.DaggerAppCompatActivity.supportFragmentInjector e: net.kwmt27.codesearch.presentation.view.MainActivity is injected at e: dagger.</description>
-    </item>
-    
-  </channel>
-</rss>
+testCompile &amp;#34;org.mockito:mockito-core:2.11.0&amp;#34; 問題kotlinで普通にクラスを作成すると、final classです。
+class EventsDataSourceManager @Inject constructor(private val eventsRemoteDataSource: EventsRemoteDataSource) { fun eventEntities(user:String, page:Int): Single&amp;lt;List&amp;lt;EventEntity&amp;gt;&amp;gt; { // リモートかキャッシュを使うかの判断をココでやるとよさそう return eventsRemoteDataSource.eventEntities(user, page) } } その状態でmockitoを使って、モック化しようとすると、「Mockitoはfinal classはモック化できない」とエラーにになります。
+org.mockito.exceptions.base.MockitoException: Cannot mock/spy class net.kwmt27.codesearch.infrastructure.repository.datesource.EventsDataSourceManager Mockito cannot mock/spy because : - final class 対策これを可能にするには、
+test/resources/mockito-extensions フォルダを作成し、mockito-extensionsフォルダに、org.mockito.plugins.MockMakerファイルを作成します。 org.mockito.plugins.MockMakerファイルには、下記のテキストを入力しておきます。
+mock-maker-inline この状態でもう一度テストを実行します。 すると、テストが実行されます。
+参考 How to mock final classes on Kotlin using Mockito 2 (KAD 23) Mock the unmockable: opt-in mocking of final classes/methods(公式wiki)</description></item><item><title>Kotlinプロジェクトで「Parameter specified as non-null is null: method kotlin.jvm.internal.Intrinsics.checkParameterIsNotNull, parameter favicon」というエラーが出たときの対処法</title><link>https://kwmt27.net/2017/10/24/webview-error-with-kotlin/</link><pubDate>Tue, 24 Oct 2017 23:20:00 +0900</pubDate><guid>https://kwmt27.net/2017/10/24/webview-error-with-kotlin/</guid><description>現象Kotlin+DatabindingでViewModel側でwebview.loadURLをしてロードしようとしたら上記のエラーが出た。
+E/AndroidRuntime: FATAL EXCEPTION: main Process: &amp;lt;package&amp;gt;, PID: 29932 java.lang.IllegalArgumentException: Parameter specified as non-null is null: method kotlin.jvm.internal.Intrinsics.checkParameterIsNotNull, parameter favicon at &amp;lt;package&amp;gt;.HomeViewModel$setupWebView$webViewClient$1.onPageStarted(HomeViewModel.kt:0)at com.android.webview.chromium.WebViewContentsClientAdapter.onPageStarted(WebViewContentsClientAdapter.java:190) at org.chromium.android_webview.AwContentsClientCallbackHelper$MyHandler.handleMessage(AwContentsClientCallbackHelper.java:20) at android.os.Handler.dispatchMessage(Handler.java:102) at android.os.Looper.loop(Looper.java:148) at android.app.ActivityThread.main(ActivityThread.java:5417) at java.lang.reflect.Method.invoke(Native Method) at com.android.internal.os.ZygoteInit$MethodAndArgsCaller.run(ZygoteInit.java:726) at com.android.internal.os.ZygoteInit.main(ZygoteInit.java:616) 原因WebViewClientのonPageStartedメソッドの引数のBitmapのところが、favicon:Bitmap と、non-nullが指定されていたことだった。
+対策override fun onPageStarted(view: WebView, url: String, favicon: Bitmap?) { Bitmap?をnull許容にしてあげればいい。
+最後にある別プロジェクトからjavaソースをコピペして、Android Studioの自動変換機能にまかせてたので、大丈夫だろうと思っていたことで、気づくのに時間をとってしまった。。 よくエラー内容を見るとparameter faviconと書いてはいるんだけど、コピペしているからフレームワークの内部のことかと思ってしまって見過ごしていた。
+Android Studioのkotlinへの自動変換を信じすぎないようにしよう。</description></item><item><title>Kotlin kapt error</title><link>https://kwmt27.net/2017/10/15/kotlin-error/</link><pubDate>Sun, 15 Oct 2017 21:18:00 +0900</pubDate><guid>https://kwmt27.net/2017/10/15/kotlin-error/</guid><description>困ったことKotlin + Dagger2を使って、下記のようなエラーが出た。
+See log for more details
+とあるけど、どこ見たらいいのでしょうか。。。
+対策Android Studioからは見れないので、ターミナルでassembleDevelopDebugを実行してみましょう。
+% ./gradlew assembleDevelopDebug すると下記のような感じで詳細なエラーログを見ることができます。
+:app:kaptDevelopDebugKotlin e: app/build/tmp/kapt3/stubs/developDebug/net/kwmt27/codesearch/presentation/internal/di/components/AppComponent.java:6: エラー: [dagger.android.AndroidInjector.inject(T)] java.util.Map&amp;lt;java.lang.Class&amp;lt;? extends android.support.v4.app.Fragment&amp;gt;,javax.inject.Provider&amp;lt;dagger.android.AndroidInjector.Factory&amp;lt;? extends android.support.v4.app.Fragment&amp;gt;&amp;gt;&amp;gt; cannot be provided without an @Provides-annotated method. e: e: public abstract interface AppComponent extends dagger.android.AndroidInjector&amp;lt;net.kwmt27.codesearch.presentation.App&amp;gt; { e: ^ e: java.util.Map&amp;lt;java.lang.Class&amp;lt;? extends android.support.v4.app.Fragment&amp;gt;,javax.inject.Provider&amp;lt;dagger.android.AndroidInjector.Factory&amp;lt;? extends android.support.v4.app.Fragment&amp;gt;&amp;gt;&amp;gt; is injected at e: dagger.android.DispatchingAndroidInjector.&amp;lt;init&amp;gt;(injectorFactories) e: dagger.android.DispatchingAndroidInjector&amp;lt;android.support.v4.app.Fragment&amp;gt; is injected at e: dagger.android.support.DaggerAppCompatActivity.supportFragmentInjector e: net.kwmt27.codesearch.presentation.view.MainActivity is injected at e: dagger.android.AndroidInjector.inject(arg0) e: java.lang.IllegalStateException: failed to analyze: org.</description></item></channel></rss>

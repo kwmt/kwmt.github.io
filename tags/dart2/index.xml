@@ -1,28 +1,5 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
-  <channel>
-    <title>Dart2 on Androg</title>
-    <link>https://kwmt27.net/tags/dart2/</link>
-    <description>Recent content in Dart2 on Androg</description>
-    <generator>Hugo -- gohugo.io</generator>
-    <language>ja</language>
-    <lastBuildDate>Sat, 23 Jun 2018 15:30:00 +0900</lastBuildDate>
-    
-	<atom:link href="https://kwmt27.net/tags/dart2/index.xml" rel="self" type="application/rss+xml" />
-    
-    
-    <item>
-      <title>Dart2のコンストラクタがわからなかったのでメモ</title>
-      <link>https://kwmt27.net/2018/06/23/dartlang-class/</link>
-      <pubDate>Sat, 23 Jun 2018 15:30:00 +0900</pubDate>
-      
-      <guid>https://kwmt27.net/2018/06/23/dartlang-class/</guid>
-      <description>はじめに flutterを触りはじめて、rxあるのかな？と思って調べたら
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>dart2 on Androg</title><link>https://kwmt27.net/tags/dart2/</link><description>Recent content in dart2 on Androg</description><generator>Hugo -- gohugo.io</generator><language>ja</language><lastBuildDate>Sat, 23 Jun 2018 15:30:00 +0900</lastBuildDate><atom:link href="https://kwmt27.net/tags/dart2/index.xml" rel="self" type="application/rss+xml"/><item><title>Dart2のコンストラクタがわからなかったのでメモ</title><link>https://kwmt27.net/2018/06/23/dartlang-class/</link><pubDate>Sat, 23 Jun 2018 15:30:00 +0900</pubDate><guid>https://kwmt27.net/2018/06/23/dartlang-class/</guid><description>はじめにflutterを触りはじめて、rxあるのかな？と思って調べたら
 https://github.com/ReactiveX/rxdart
 ありました。どのように使うかサンプルを読んでたんですが、クラスのコンストラクタ部分が分からない・・・
 サンプルでいうと下記の部分です。
-class SearchBloc { final Sink&amp;lt;String&amp;gt; onTextChanged; final Stream&amp;lt;SearchState&amp;gt; state; SearchBloc._(this.onTextChanged, this.state); factory SearchBloc(GithubApi api) { final onTextChanged = new StreamController&amp;lt;String&amp;gt;(); final state = new Observable&amp;lt;String&amp;gt;(onTextChanged.stream) // If the text has not changed, do not perform a new search .distinct() // Wait for the user to stop typing for 250ms before running a search .debounce(const Duration(milliseconds: 250)) // Call the Github api with the given search term and convert it to a // State.</description>
-    </item>
-    
-  </channel>
-</rss>
+class SearchBloc { final Sink&amp;lt;String&amp;gt; onTextChanged; final Stream&amp;lt;SearchState&amp;gt; state; SearchBloc._(this.onTextChanged, this.state); factory SearchBloc(GithubApi api) { final onTextChanged = new StreamController&amp;lt;String&amp;gt;(); final state = new Observable&amp;lt;String&amp;gt;(onTextChanged.stream) // If the text has not changed, do not perform a new search .distinct() // Wait for the user to stop typing for 250ms before running a search .debounce(const Duration(milliseconds: 250)) // Call the Github api with the given search term and convert it to a // State.</description></item></channel></rss>

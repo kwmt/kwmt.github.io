@@ -1,28 +1,5 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
-  <channel>
-    <title>Databinding on Androg</title>
-    <link>https://kwmt27.net/tags/databinding/</link>
-    <description>Recent content in Databinding on Androg</description>
-    <generator>Hugo -- gohugo.io</generator>
-    <language>ja</language>
-    <lastBuildDate>Tue, 24 Oct 2017 23:20:00 +0900</lastBuildDate>
-    
-	<atom:link href="https://kwmt27.net/tags/databinding/index.xml" rel="self" type="application/rss+xml" />
-    
-    
-    <item>
-      <title>Kotlinプロジェクトで「Parameter specified as non-null is null: method kotlin.jvm.internal.Intrinsics.checkParameterIsNotNull, parameter favicon」というエラーが出たときの対処法</title>
-      <link>https://kwmt27.net/2017/10/24/webview-error-with-kotlin/</link>
-      <pubDate>Tue, 24 Oct 2017 23:20:00 +0900</pubDate>
-      
-      <guid>https://kwmt27.net/2017/10/24/webview-error-with-kotlin/</guid>
-      <description>現象 Kotlin+DatabindingでViewModel側でwebview.loadURLをしてロードしようとしたら上記のエラーが出た。
-E/AndroidRuntime: FATAL EXCEPTION: main Process: &amp;lt;package&amp;gt;, PID: 29932 java.lang.IllegalArgumentException: Parameter specified as non-null is null: method kotlin.jvm.internal.Intrinsics.checkParameterIsNotNull, parameter favicon at &amp;lt;package&amp;gt;.HomeViewModel$setupWebView$webViewClient$1.onPageStarted(HomeViewModel.kt:0)at com.android.webview.chromium.WebViewContentsClientAdapter.onPageStarted(WebViewContentsClientAdapter.java:190) at org.chromium.android_webview.AwContentsClientCallbackHelper$MyHandler.handleMessage(AwContentsClientCallbackHelper.java:20) at android.os.Handler.dispatchMessage(Handler.java:102) at android.os.Looper.loop(Looper.java:148) at android.app.ActivityThread.main(ActivityThread.java:5417) at java.lang.reflect.Method.invoke(Native Method) at com.android.internal.os.ZygoteInit$MethodAndArgsCaller.run(ZygoteInit.java:726) at com.android.internal.os.ZygoteInit.main(ZygoteInit.java:616)  原因 WebViewClientのonPageStartedメソッドの引数のBitmapのところが、favicon:Bitmap と、non-nullが指定されていたことだった。
-対策 override fun onPageStarted(view: WebView, url: String, favicon: Bitmap?) {  Bitmap?をnull許容にしてあげればいい。
-最後に ある別プロジェクトからjavaソースをコピペして、Android Studioの自動変換機能にまかせてたので、大丈夫だろうと思っていたことで、気づくのに時間をとってしまった。。 よくエラー内容を見るとparameter faviconと書いてはいるんだけど、コピペしているからフレームワークの内部のことかと思ってしまって見過ごしていた。
-Android Studioのkotlinへの自動変換を信じすぎないようにしよう。</description>
-    </item>
-    
-  </channel>
-</rss>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Databinding on Androg</title><link>https://kwmt27.net/tags/databinding/</link><description>Recent content in Databinding on Androg</description><generator>Hugo -- gohugo.io</generator><language>ja</language><lastBuildDate>Tue, 24 Oct 2017 23:20:00 +0900</lastBuildDate><atom:link href="https://kwmt27.net/tags/databinding/index.xml" rel="self" type="application/rss+xml"/><item><title>Kotlinプロジェクトで「Parameter specified as non-null is null: method kotlin.jvm.internal.Intrinsics.checkParameterIsNotNull, parameter favicon」というエラーが出たときの対処法</title><link>https://kwmt27.net/2017/10/24/webview-error-with-kotlin/</link><pubDate>Tue, 24 Oct 2017 23:20:00 +0900</pubDate><guid>https://kwmt27.net/2017/10/24/webview-error-with-kotlin/</guid><description>現象Kotlin+DatabindingでViewModel側でwebview.loadURLをしてロードしようとしたら上記のエラーが出た。
+E/AndroidRuntime: FATAL EXCEPTION: main Process: &amp;lt;package&amp;gt;, PID: 29932 java.lang.IllegalArgumentException: Parameter specified as non-null is null: method kotlin.jvm.internal.Intrinsics.checkParameterIsNotNull, parameter favicon at &amp;lt;package&amp;gt;.HomeViewModel$setupWebView$webViewClient$1.onPageStarted(HomeViewModel.kt:0)at com.android.webview.chromium.WebViewContentsClientAdapter.onPageStarted(WebViewContentsClientAdapter.java:190) at org.chromium.android_webview.AwContentsClientCallbackHelper$MyHandler.handleMessage(AwContentsClientCallbackHelper.java:20) at android.os.Handler.dispatchMessage(Handler.java:102) at android.os.Looper.loop(Looper.java:148) at android.app.ActivityThread.main(ActivityThread.java:5417) at java.lang.reflect.Method.invoke(Native Method) at com.android.internal.os.ZygoteInit$MethodAndArgsCaller.run(ZygoteInit.java:726) at com.android.internal.os.ZygoteInit.main(ZygoteInit.java:616) 原因WebViewClientのonPageStartedメソッドの引数のBitmapのところが、favicon:Bitmap と、non-nullが指定されていたことだった。
+対策override fun onPageStarted(view: WebView, url: String, favicon: Bitmap?) { Bitmap?をnull許容にしてあげればいい。
+最後にある別プロジェクトからjavaソースをコピペして、Android Studioの自動変換機能にまかせてたので、大丈夫だろうと思っていたことで、気づくのに時間をとってしまった。。 よくエラー内容を見るとparameter faviconと書いてはいるんだけど、コピペしているからフレームワークの内部のことかと思ってしまって見過ごしていた。
+Android Studioのkotlinへの自動変換を信じすぎないようにしよう。</description></item></channel></rss>

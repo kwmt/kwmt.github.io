@@ -1,27 +1,4 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
-  <channel>
-    <title>Archive/Zip on Androg</title>
-    <link>https://kwmt27.net/tags/archive/zip/</link>
-    <description>Recent content in Archive/Zip on Androg</description>
-    <generator>Hugo -- gohugo.io</generator>
-    <language>ja</language>
-    <lastBuildDate>Sat, 31 Aug 2013 00:00:00 +0000</lastBuildDate>
-    
-	<atom:link href="https://kwmt27.net/tags/archive/zip/index.xml" rel="self" type="application/rss+xml" />
-    
-    
-    <item>
-      <title>#golang zipファイルのコメントを取得するには？</title>
-      <link>https://kwmt27.net/index.php/2013/08/31/golang-archive-zip/</link>
-      <pubDate>Sat, 31 Aug 2013 00:00:00 +0000</pubDate>
-      
-      <guid>https://kwmt27.net/index.php/2013/08/31/golang-archive-zip/</guid>
-      <description>archive/zipパッケージの使い方
-golang編  下記で実行できる
-% go run archive_zip.go 90052 ※引数の数字はchannel.zipにreadme.txtに書いてある。
-python編  参考 http://golang.org/pkg/archive/zip/</description>
-    </item>
-    
-  </channel>
-</rss>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>archive/zip on Androg</title><link>https://kwmt27.net/tags/archive/zip/</link><description>Recent content in archive/zip on Androg</description><generator>Hugo -- gohugo.io</generator><language>ja</language><atom:link href="https://kwmt27.net/tags/archive/zip/index.xml" rel="self" type="application/rss+xml"/><item><title>#golang zipファイルのコメントを取得するには？</title><link>https://kwmt27.net/index.php/2013/08/31/golang-archive-zip/</link><pubDate>Sat, 31 Aug 2013 00:00:00 +0000</pubDate><guid>https://kwmt27.net/index.php/2013/08/31/golang-archive-zip/</guid><description>archive/zipパッケージの使い方
+golang編 下記で実行できる
+※引数の数字はchannel.zipにreadme.txtに書いてある。
+python編 参考http://golang.org/pkg/archive/zip/</description></item></channel></rss>

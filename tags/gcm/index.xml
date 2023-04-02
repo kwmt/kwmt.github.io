@@ -1,49 +1,17 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
-  <channel>
-    <title>Gcm on Androg</title>
-    <link>https://kwmt27.net/tags/gcm/</link>
-    <description>Recent content in Gcm on Androg</description>
-    <generator>Hugo -- gohugo.io</generator>
-    <language>ja</language>
-    <lastBuildDate>Thu, 26 Mar 2020 00:11:00 +0900</lastBuildDate>
-    
-	<atom:link href="https://kwmt27.net/tags/gcm/index.xml" rel="self" type="application/rss+xml" />
-    
-    
-    <item>
-      <title>Androidプロジェクトの新規作成からプッシュ通知受信確認まで</title>
-      <link>https://kwmt27.net/2020/03/26/from-creating-a-new-android-project-to-confirming-receipt-of-push-notifications/</link>
-      <pubDate>Thu, 26 Mar 2020 00:11:00 +0900</pubDate>
-      
-      <guid>https://kwmt27.net/2020/03/26/from-creating-a-new-android-project-to-confirming-receipt-of-push-notifications/</guid>
-      <description>はじめに 1年ぐらい前にプッシュ通知を実装したときから設定方法が若干変わっていたので、この記事がいつまで有効かはわかりませんが、Androidプロジェクトの新規作成からプッシュ通知受信確認までを書いておこうと思います。
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>GCM on Androg</title><link>https://kwmt27.net/tags/gcm/</link><description>Recent content in GCM on Androg</description><generator>Hugo -- gohugo.io</generator><language>ja</language><lastBuildDate>Thu, 26 Mar 2020 00:11:00 +0900</lastBuildDate><atom:link href="https://kwmt27.net/tags/gcm/index.xml" rel="self" type="application/rss+xml"/><item><title>Androidプロジェクトの新規作成からプッシュ通知受信確認まで</title><link>https://kwmt27.net/2020/03/26/from-creating-a-new-android-project-to-confirming-receipt-of-push-notifications/</link><pubDate>Thu, 26 Mar 2020 00:11:00 +0900</pubDate><guid>https://kwmt27.net/2020/03/26/from-creating-a-new-android-project-to-confirming-receipt-of-push-notifications/</guid><description>はじめに1年ぐらい前にプッシュ通知を実装したときから設定方法が若干変わっていたので、この記事がいつまで有効かはわかりませんが、Androidプロジェクトの新規作成からプッシュ通知受信確認までを書いておこうと思います。
 この記事を書いている時点で使用しているAndroid Studioバージョンは2.0です。
 さて、最初にAndroid StudioでEmptyActivityを指定して、PushNotificationSampleという名前のNewProjectを作成しておきます。その前提で以下、話を進めていきます。
-サンプルプロジェクトリポジトリ 全体のプロジェクトはkwmt/PushNotificationSampleに置いています。
-Configurationファイル(JSONファイル)を準備する Add Google Services にアクセスして、Configuration fileを作成します。
+サンプルプロジェクトリポジトリ全体のプロジェクトはkwmt/PushNotificationSampleに置いています。
+Configurationファイル(JSONファイル)を準備するAdd Google Services にアクセスして、Configuration fileを作成します。
 作成したgoogle-services.jsonをapp/の直下に置きます。
 ※Flavor毎に異なったgoogle-services.jsonを使いたい場合は、 google-services:2.0.0-bata3からできそうという話があったが、実際動かないらしいので、betaとれるの待つしかなのかなぁ。 → 2.1.0-beta1で出来るようになりました。(2016/04/18追記)
 ※google-services-gcmを追加したあと、gradleをsyncする時にgoogle-services.jsonファイルがないと、たとえばBuild Variantをdebugに指定しているときは、下記のようなエラーが出ますのでご注意下さい。
-Error:Execution failed for task &#39;:app:processDebugGoogleServices&#39;. &amp;gt; File google-services.json is missing. The Google Services Plugin cannot function without it. Searched Location: PushNotificationSample/app/src/debug/google-services.json PushNotificationSample/app/google-services.json  build.gradleを編集 google-servicesを追加する プロジェクトトップのbuild.gradleを編集します。 --- a/build.gradle +++ b/build.gradle @@ -5,8 +5,9 @@ buildscript { jcenter() } dependencies { - classpath &#39;com.android.tools.build:gradle:1.5.0&#39; - + classpath &#39;com.android.tools.build:gradle:2.1.0-beta1&#39; + // https://develop ers.</description>
-    </item>
-    
-    <item>
-      <title>Androidプロジェクトの新規作成からプッシュ通知受信確認まで</title>
-      <link>https://kwmt27.net/2016/02/27/how-to-setting-push-notification-on-android/</link>
-      <pubDate>Sat, 27 Feb 2016 12:50:27 +0900</pubDate>
-      
-      <guid>https://kwmt27.net/2016/02/27/how-to-setting-push-notification-on-android/</guid>
-      <description>はじめに 1年ぐらい前にプッシュ通知を実装したときから設定方法が若干変わっていたので、この記事がいつまで有効かはわかりませんが、Androidプロジェクトの新規作成からプッシュ通知受信確認までを書いておこうと思います。
+Error:Execution failed for task &amp;#39;:app:processDebugGoogleServices&amp;#39;. &amp;gt; File google-services.json is missing. The Google Services Plugin cannot function without it. Searched Location: PushNotificationSample/app/src/debug/google-services.json PushNotificationSample/app/google-services.json build.gradleを編集google-servicesを追加するプロジェクトトップのbuild.gradleを編集します。--- a/build.gradle +++ b/build.gradle @@ -5,8 +5,9 @@ buildscript { jcenter() } dependencies { - classpath &amp;#39;com.android.tools.build:gradle:1.5.0&amp;#39; - + classpath &amp;#39;com.android.tools.build:gradle:2.1.0-beta1&amp;#39; + // https://develop ers.google.com/cloud-messaging/android/client + classpath &amp;#39;com.google.gms:google-services:2.1.0-beta1&amp;#39; // NOTE: Do not place your application dependencies here; they belong // in the individual module build.</description></item><item><title>Androidプロジェクトの新規作成からプッシュ通知受信確認まで</title><link>https://kwmt27.net/2016/02/27/how-to-setting-push-notification-on-android/</link><pubDate>Sat, 27 Feb 2016 12:50:27 +0900</pubDate><guid>https://kwmt27.net/2016/02/27/how-to-setting-push-notification-on-android/</guid><description>はじめに1年ぐらい前にプッシュ通知を実装したときから設定方法が若干変わっていたので、この記事がいつまで有効かはわかりませんが、Androidプロジェクトの新規作成からプッシュ通知受信確認までを書いておこうと思います。
 この記事を書いている時点で使用しているAndroid Studioのバージョンは1.5.1です。(AS2.0.0beta6が出ててバージョンアップしようか迷ってるという時期です。)
 さて、最初にAndroid StudioでEmptyActivityを指定して、PushNotificationSampleという名前のNewProjectを作成しておきます。その前提で以下、話を進めていきます。
-サンプルプロジェクトリポジトリ 全体のプロジェクトはkwmt/PushNotificationSampleに置いています。
-Configurationファイル(JSONファイル)を準備する Add Google Services にアクセスして、Configuration fileを作成します。
+サンプルプロジェクトリポジトリ全体のプロジェクトはkwmt/PushNotificationSampleに置いています。
+Configurationファイル(JSONファイル)を準備するAdd Google Services にアクセスして、Configuration fileを作成します。
 作成したgoogle-services.jsonをapp/の直下に置きます。
 ※Flavor毎に異なったgoogle-services.jsonを使いたい場合は、 google-services:2.0.0-bata3からできそうという話があったが、実際動かないらしいので、betaとれるの待つしかなのかなぁ。
 ※google-services-gcmを追加したあと、gradleをsyncする時にgoogle-services.jsonファイルがないと下記のようなエラーが出ますのでご注意下さい。
-Error:Execution failed for task &#39;:app:processDebugGoogleServices&#39;. &amp;gt; File google-services.json is missing from module root folder. The Google Services Plugin cannot function without it.  build.gradleを編集 google-servicesを追加する プロジェクトトップのbuild.gradleを編集します。 --- a/build.gradle +++ b/build.gradle @@ -5,8 +5,9 @@ buildscript { jcenter() } dependencies { - classpath &#39;com.android.tools.build:gradle:1.5.0&#39; - + classpath &#39;com.android.tools.build:gradle:2.0.0-beta6&#39; + // https://develop ers.google.com/cloud-messaging/android/client + classpath &#39;com.</description>
-    </item>
-    
-  </channel>
-</rss>
+Error:Execution failed for task &amp;#39;:app:processDebugGoogleServices&amp;#39;. &amp;gt; File google-services.json is missing from module root folder. The Google Services Plugin cannot function without it. build.gradleを編集google-servicesを追加するプロジェクトトップのbuild.gradleを編集します。--- a/build.gradle +++ b/build.gradle @@ -5,8 +5,9 @@ buildscript { jcenter() } dependencies { - classpath &amp;#39;com.android.tools.build:gradle:1.5.0&amp;#39; - + classpath &amp;#39;com.android.tools.build:gradle:2.0.0-beta6&amp;#39; + // https://develop ers.google.com/cloud-messaging/android/client + classpath &amp;#39;com.google.gms:google-services:2.0.0-beta6&amp;#39; // NOTE: Do not place your application dependencies here; they belong // in the individual module build.</description></item></channel></rss>

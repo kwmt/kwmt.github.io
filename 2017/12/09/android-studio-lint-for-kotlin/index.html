@@ -1,934 +1,25 @@
-
-<!DOCTYPE html>
-<html lang="ja">
-
-    <head>
-
-        <meta charset="utf-8" />
-        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-
-        <meta property="og:title" content=" Android Lint &middot;  Androg" />
-        <meta property="og:site_name" content="Androg" />
-        <meta property="og:url" content="https://kwmt27.net/2017/12/09/android-studio-lint-for-kotlin/" />
-
-        
-
-  
-    <meta name="twitter:card" content="summary"/>
-  
-  
-  <meta property="og:url" content="https://kwmt27.net/2017/12/09/android-studio-lint-for-kotlin/"/>
-  <meta property="og:type" content="article"/>
-  <meta property="og:title" content="Android Lint - Androg"/>
-  <meta property="og:description" content="コマンドラインからlintを実行するには project root で下記を実行します
-./gradlew lint  特定のビルド バリアントに対してのみ lint タスクを実行するには
+<!doctype html><html lang=en><head><meta charset=utf-8><meta http-equiv=x-ua-compatible content="ie=edge"><meta name=viewport content="width=device-width,initial-scale=1,shrink-to-fit=no"><title>Android Lint | Androg</title><meta name=description content="コマンドラインからlintを実行するにはproject root で下記を実行します
+./gradlew lint 特定のビルド バリアントに対してのみ lint タスクを実行するには
 （例）
-./gradlew lintDevelopDebug  設定 IDリストを表示するには？ % $ANDROID_HOME/tools/bin/lint --list Valid issue categories: Correctness Correctness:Messages Correctness:Chrome OS Security Performance Usability:Typography Usability:Icons Usability Accessibility Internationalization Internationalization:Bidirectional Text Valid issue id&#39;s: &quot;ContentDescription&quot;: Image without contentDescription &quot;AddJavascriptInterface&quot;: addJavascriptInterface Called &quot;ShortAlarm&quot;: Short or Frequent Alarm &quot;AllCaps&quot;: Combining textAllCaps and markup &quot;AllowAllHostnameVerifier&quot;: Insecure HostnameVerifier &quot;AlwaysShowAction&quot;: Usage of showAsAction=always &quot;InvalidUsesTagAttribute&quot;: Invalid name attribute for uses element."/>
-  
-  <meta name="twitter:title" content="Android Lint - Androg"/>
-  <meta name="twitter:description" content="コマンドラインからlintを実行するには project root で下記を実行します
-./gradlew lint  特定のビルド バリアントに対してのみ lint タスクを実行するには
+./gradlew lintDevelopDebug 設定IDリストを表示するには？% $ANDROID_HOME/tools/bin/lint --list Valid issue categories: Correctness Correctness:Messages Correctness:Chrome OS Security Performance Usability:Typography Usability:Icons Usability Accessibility Internationalization Internationalization:Bidirectional Text Valid issue id's: &#34;ContentDescription&#34;: Image without contentDescription &#34;AddJavascriptInterface&#34;: addJavascriptInterface Called &#34;ShortAlarm&#34;: Short or Frequent Alarm &#34;AllCaps&#34;: Combining textAllCaps and markup &#34;AllowAllHostnameVerifier&#34;: Insecure HostnameVerifier &#34;AlwaysShowAction&#34;: Usage of showAsAction=always &#34;InvalidUsesTagAttribute&#34;: Invalid name attribute for uses element. &#34;MissingIntentFilterForMediaSearch&#34;: Missing intent-filter with action android."><meta name=keywords content><meta name=twitter:card content="summary"><meta name=twitter:title content="Android Lint"><meta name=twitter:description content="コマンドラインからlintを実行するにはproject root で下記を実行します
+./gradlew lint 特定のビルド バリアントに対してのみ lint タスクを実行するには
 （例）
-./gradlew lintDevelopDebug  設定 IDリストを表示するには？ % $ANDROID_HOME/tools/bin/lint --list Valid issue categories: Correctness Correctness:Messages Correctness:Chrome OS Security Performance Usability:Typography Usability:Icons Usability Accessibility Internationalization Internationalization:Bidirectional Text Valid issue id&#39;s: &quot;ContentDescription&quot;: Image without contentDescription &quot;AddJavascriptInterface&quot;: addJavascriptInterface Called &quot;ShortAlarm&quot;: Short or Frequent Alarm &quot;AllCaps&quot;: Combining textAllCaps and markup &quot;AllowAllHostnameVerifier&quot;: Insecure HostnameVerifier &quot;AlwaysShowAction&quot;: Usage of showAsAction=always &quot;InvalidUsesTagAttribute&quot;: Invalid name attribute for uses element."/>
-  
-  
-  
-
-    
-
-        <title> Android Lint &middot;  Androg</title>
-
-    
-        <meta name="description" content="" />
-    
-
-        <meta name="p:domain_verify" content="fc173d84e3a4de948ed4bda2908afd3e"/>
-        <meta name="HandheldFriendly" content="True" />
-        <meta name="MobileOptimized" content="320" />
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-
-        
-        
-
-    
-        <link href="https://kwmt27.net/index.xml" rel="alternate" type="application/rss+xml" title="Androg" />
-    
-
-    
-        <link rel="canonical" href="https://kwmt27.net/2017/12/09/android-studio-lint-for-kotlin/" />
-
-    
-    <script type="application/ld+json">
-    {
-        "@context": "http://schema.org",
-        "@type": "Article",
-        "headline": "Android Lint",
-        "author": {
-            "@type": "Person",
-            "name": "http://profiles.google.com/?rel=author"
-        },
-        "datePublished": "2017-12-09",
-        "description": "",
-        "wordCount": 1778
-    }
-    </script>
-    
-
-    
-    
-    <link rel="stylesheet" href="https://kwmt27.net//css/crisp.css" type="text/css" />
-
-    
-    
-    
-    <script src="https://apis.google.com/js/platform.js" async defer>
-      {lang: 'ja'}
-    </script>
-
-    
-    <script data-ad-client="ca-pub-3131366896030715" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
-    </head>
-    <body>
-
-        
-        <div id="fb-root"></div>
-        <script>(function(d, s, id) {
-          var js, fjs = d.getElementsByTagName(s)[0];
-          if (d.getElementById(id)) return;
-          js = d.createElement(s); js.id = id;
-          js.src = "//connect.facebook.net/ja_JP/sdk.js#xfbml=1&version=v2.5&appId=221529537867804";
-          fjs.parentNode.insertBefore(js, fjs);
-        }(document, 'script', 'facebook-jssdk'));
-        </script>
-
-        <header id="header">
-            <a id="logo" href="https://kwmt27.net/"><img src="https://ja.gravatar.com/userimage/93860812/00b6ee3c5005fbd5ca9a4571908ce3ee.jpg?size=200" alt="Androg" /></a>
-            <h1><a href="https://kwmt27.net/">Androg</a></h1>
-            <p></p>
-
-            <div id="follow-icons">
-	
-	<a href="http://twitter.com/kwmt27" rel="me"><i class="fa fa-twitter-square fa-2x"></i></a>
-	
-	<a href="http://github.com/kwmt" rel="me"><i class="fa fa-github-square fa-2x"></i></a>
-	<a href="http://plus.google.com/+YasutakaKawamoto" rel="author"><i class="fa fa-google-plus-square fa-2x"></i></a>
-	<a href="https://kwmt27.net/index.xml" rel="me"><i class="fa fa-rss-square fa-2x"></i></a> 
-</div>  
-            
-
-            <div class="tags">
-                <div>タグ</div>
-                <span class="taglist">
-                    
-                        <a href="https://kwmt27.net//tags/1.2/">
-                            <div>1.2<span class="badge">1</span></div>
-                        </a>
-                    
-                        <a href="https://kwmt27.net//tags/1.2-rc1/">
-                            <div>1.2-rc1<span class="badge">12</span></div>
-                        </a>
-                    
-                        <a href="https://kwmt27.net//tags/adb/">
-                            <div>adb<span class="badge">2</span></div>
-                        </a>
-                    
-                        <a href="https://kwmt27.net//tags/advent-calendar/">
-                            <div>advent-calendar<span class="badge">1</span></div>
-                        </a>
-                    
-                        <a href="https://kwmt27.net//tags/ambient/">
-                            <div>ambient<span class="badge">1</span></div>
-                        </a>
-                    
-                        <a href="https://kwmt27.net//tags/android/">
-                            <div>android<span class="badge">87</span></div>
-                        </a>
-                    
-                        <a href="https://kwmt27.net//tags/android-n/">
-                            <div>android-n<span class="badge">1</span></div>
-                        </a>
-                    
-                        <a href="https://kwmt27.net//tags/android-studio/">
-                            <div>android-studio<span class="badge">7</span></div>
-                        </a>
-                    
-                        <a href="https://kwmt27.net//tags/android-studio-3.6/">
-                            <div>android-studio-3.6<span class="badge">1</span></div>
-                        </a>
-                    
-                        <a href="https://kwmt27.net//tags/android-wear/">
-                            <div>android-wear<span class="badge">1</span></div>
-                        </a>
-                    
-                        <a href="https://kwmt27.net//tags/androiddevchallenge/">
-                            <div>androiddevchallenge<span class="badge">2</span></div>
-                        </a>
-                    
-                        <a href="https://kwmt27.net//tags/androidstudio/">
-                            <div>androidstudio<span class="badge">1</span></div>
-                        </a>
-                    
-                        <a href="https://kwmt27.net//tags/android%e7%a0%94%e7%a9%b6%e7%99%ba%e8%a1%a8%e4%bc%9a/">
-                            <div>android研究発表会<span class="badge">3</span></div>
-                        </a>
-                    
-                        <a href="https://kwmt27.net//tags/animation/">
-                            <div>animation<span class="badge">1</span></div>
-                        </a>
-                    
-                        <a href="https://kwmt27.net//tags/archive/zip/">
-                            <div>archive/zip<span class="badge">1</span></div>
-                        </a>
-                    
-                        <a href="https://kwmt27.net//tags/arduino/">
-                            <div>arduino<span class="badge">1</span></div>
-                        </a>
-                    
-                        <a href="https://kwmt27.net//tags/aws/">
-                            <div>aws<span class="badge">1</span></div>
-                        </a>
-                    
-                        <a href="https://kwmt27.net//tags/beacon/">
-                            <div>beacon<span class="badge">1</span></div>
-                        </a>
-                    
-                        <a href="https://kwmt27.net//tags/billing/">
-                            <div>billing<span class="badge">1</span></div>
-                        </a>
-                    
-                        <a href="https://kwmt27.net//tags/bitmap/">
-                            <div>bitmap<span class="badge">1</span></div>
-                        </a>
-                    
-                        <a href="https://kwmt27.net//tags/camera2/">
-                            <div>camera2<span class="badge">1</span></div>
-                        </a>
-                    
-                        <a href="https://kwmt27.net//tags/camerax/">
-                            <div>camerax<span class="badge">2</span></div>
-                        </a>
-                    
-                        <a href="https://kwmt27.net//tags/cd/">
-                            <div>cd<span class="badge">1</span></div>
-                        </a>
-                    
-                        <a href="https://kwmt27.net//tags/ci/">
-                            <div>ci<span class="badge">1</span></div>
-                        </a>
-                    
-                        <a href="https://kwmt27.net//tags/ci/cd/">
-                            <div>ci/cd<span class="badge">1</span></div>
-                        </a>
-                    
-                        <a href="https://kwmt27.net//tags/clean-architecture/">
-                            <div>clean-architecture<span class="badge">1</span></div>
-                        </a>
-                    
-                        <a href="https://kwmt27.net//tags/cloud-vision-api/">
-                            <div>cloud-vision-api<span class="badge">1</span></div>
-                        </a>
-                    
-                        <a href="https://kwmt27.net//tags/codelab/">
-                            <div>codelab<span class="badge">1</span></div>
-                        </a>
-                    
-                        <a href="https://kwmt27.net//tags/compose/">
-                            <div>compose<span class="badge">11</span></div>
-                        </a>
-                    
-                        <a href="https://kwmt27.net//tags/compress/bzip2/">
-                            <div>compress/bzip2<span class="badge">1</span></div>
-                        </a>
-                    
-                        <a href="https://kwmt27.net//tags/coroutine/">
-                            <div>coroutine<span class="badge">1</span></div>
-                        </a>
-                    
-                        <a href="https://kwmt27.net//tags/css/">
-                            <div>css<span class="badge">1</span></div>
-                        </a>
-                    
-                        <a href="https://kwmt27.net//tags/dagger2/">
-                            <div>dagger2<span class="badge">2</span></div>
-                        </a>
-                    
-                        <a href="https://kwmt27.net//tags/dark-theme/">
-                            <div>dark-theme<span class="badge">1</span></div>
-                        </a>
-                    
-                        <a href="https://kwmt27.net//tags/dart/">
-                            <div>dart<span class="badge">5</span></div>
-                        </a>
-                    
-                        <a href="https://kwmt27.net//tags/dart2/">
-                            <div>dart2<span class="badge">1</span></div>
-                        </a>
-                    
-                        <a href="https://kwmt27.net//tags/databinding/">
-                            <div>databinding<span class="badge">1</span></div>
-                        </a>
-                    
-                        <a href="https://kwmt27.net//tags/deeplearning/">
-                            <div>deeplearning<span class="badge">1</span></div>
-                        </a>
-                    
-                        <a href="https://kwmt27.net//tags/delegate/">
-                            <div>delegate<span class="badge">1</span></div>
-                        </a>
-                    
-                        <a href="https://kwmt27.net//tags/docker/">
-                            <div>docker<span class="badge">3</span></div>
-                        </a>
-                    
-                        <a href="https://kwmt27.net//tags/eclipse/">
-                            <div>eclipse<span class="badge">3</span></div>
-                        </a>
-                    
-                        <a href="https://kwmt27.net//tags/encoding/base64/">
-                            <div>encoding/base64<span class="badge">1</span></div>
-                        </a>
-                    
-                        <a href="https://kwmt27.net//tags/encoding/json/">
-                            <div>encoding/json<span class="badge">2</span></div>
-                        </a>
-                    
-                        <a href="https://kwmt27.net//tags/enum/">
-                            <div>enum<span class="badge">1</span></div>
-                        </a>
-                    
-                        <a href="https://kwmt27.net//tags/fabric-sdk/">
-                            <div>fabric-sdk<span class="badge">1</span></div>
-                        </a>
-                    
-                        <a href="https://kwmt27.net//tags/fcm/">
-                            <div>fcm<span class="badge">1</span></div>
-                        </a>
-                    
-                        <a href="https://kwmt27.net//tags/firebase/">
-                            <div>firebase<span class="badge">1</span></div>
-                        </a>
-                    
-                        <a href="https://kwmt27.net//tags/firestore/">
-                            <div>firestore<span class="badge">1</span></div>
-                        </a>
-                    
-                        <a href="https://kwmt27.net//tags/flow/">
-                            <div>flow<span class="badge">1</span></div>
-                        </a>
-                    
-                        <a href="https://kwmt27.net//tags/flutter/">
-                            <div>flutter<span class="badge">28</span></div>
-                        </a>
-                    
-                        <a href="https://kwmt27.net//tags/flutter_inapp_purchase/">
-                            <div>flutter_inapp_purchase<span class="badge">1</span></div>
-                        </a>
-                    
-                        <a href="https://kwmt27.net//tags/flutter_web/">
-                            <div>flutter_web<span class="badge">1</span></div>
-                        </a>
-                    
-                        <a href="https://kwmt27.net//tags/gae/go/">
-                            <div>gae/go<span class="badge">1</span></div>
-                        </a>
-                    
-                        <a href="https://kwmt27.net//tags/gcm/">
-                            <div>gcm<span class="badge">2</span></div>
-                        </a>
-                    
-                        <a href="https://kwmt27.net//tags/gdgkobe/">
-                            <div>gdgkobe<span class="badge">1</span></div>
-                        </a>
-                    
-                        <a href="https://kwmt27.net//tags/gds/">
-                            <div>gds<span class="badge">1</span></div>
-                        </a>
-                    
-                        <a href="https://kwmt27.net//tags/genmai/">
-                            <div>genmai<span class="badge">1</span></div>
-                        </a>
-                    
-                        <a href="https://kwmt27.net//tags/gin/">
-                            <div>gin<span class="badge">1</span></div>
-                        </a>
-                    
-                        <a href="https://kwmt27.net//tags/git/">
-                            <div>git<span class="badge">4</span></div>
-                        </a>
-                    
-                        <a href="https://kwmt27.net//tags/go/">
-                            <div>go<span class="badge">4</span></div>
-                        </a>
-                    
-                        <a href="https://kwmt27.net//tags/gocon/">
-                            <div>gocon<span class="badge">2</span></div>
-                        </a>
-                    
-                        <a href="https://kwmt27.net//tags/godoc/">
-                            <div>godoc<span class="badge">1</span></div>
-                        </a>
-                    
-                        <a href="https://kwmt27.net//tags/golang/">
-                            <div>golang<span class="badge">57</span></div>
-                        </a>
-                    
-                        <a href="https://kwmt27.net//tags/google&#43;api/">
-                            <div>google&#43;api<span class="badge">1</span></div>
-                        </a>
-                    
-                        <a href="https://kwmt27.net//tags/google-i/o-2018/">
-                            <div>google-i/o-2018<span class="badge">1</span></div>
-                        </a>
-                    
-                        <a href="https://kwmt27.net//tags/google-mapa-api/">
-                            <div>google-mapa-api<span class="badge">1</span></div>
-                        </a>
-                    
-                        <a href="https://kwmt27.net//tags/google-maps-api/">
-                            <div>google-maps-api<span class="badge">1</span></div>
-                        </a>
-                    
-                        <a href="https://kwmt27.net//tags/google-play/">
-                            <div>google-play<span class="badge">1</span></div>
-                        </a>
-                    
-                        <a href="https://kwmt27.net//tags/google-signin/">
-                            <div>google-signin<span class="badge">1</span></div>
-                        </a>
-                    
-                        <a href="https://kwmt27.net//tags/googlei/o-2019/">
-                            <div>googlei/o-2019<span class="badge">2</span></div>
-                        </a>
-                    
-                        <a href="https://kwmt27.net//tags/googlemap/">
-                            <div>googlemap<span class="badge">1</span></div>
-                        </a>
-                    
-                        <a href="https://kwmt27.net//tags/go%e8%a8%80%e8%aa%9e/">
-                            <div>go言語<span class="badge">53</span></div>
-                        </a>
-                    
-                        <a href="https://kwmt27.net//tags/greendao/">
-                            <div>greendao<span class="badge">1</span></div>
-                        </a>
-                    
-                        <a href="https://kwmt27.net//tags/heroku/">
-                            <div>heroku<span class="badge">1</span></div>
-                        </a>
-                    
-                        <a href="https://kwmt27.net//tags/hugo/">
-                            <div>hugo<span class="badge">1</span></div>
-                        </a>
-                    
-                        <a href="https://kwmt27.net//tags/icon/">
-                            <div>icon<span class="badge">1</span></div>
-                        </a>
-                    
-                        <a href="https://kwmt27.net//tags/image/">
-                            <div>image<span class="badge">1</span></div>
-                        </a>
-                    
-                        <a href="https://kwmt27.net//tags/intellij-idea/">
-                            <div>intellij-idea<span class="badge">4</span></div>
-                        </a>
-                    
-                        <a href="https://kwmt27.net//tags/ios/">
-                            <div>ios<span class="badge">2</span></div>
-                        </a>
-                    
-                        <a href="https://kwmt27.net//tags/java/">
-                            <div>java<span class="badge">1</span></div>
-                        </a>
-                    
-                        <a href="https://kwmt27.net//tags/jenkins/">
-                            <div>jenkins<span class="badge">2</span></div>
-                        </a>
-                    
-                        <a href="https://kwmt27.net//tags/jetpack/">
-                            <div>jetpack<span class="badge">13</span></div>
-                        </a>
-                    
-                        <a href="https://kwmt27.net//tags/jquery/">
-                            <div>jquery<span class="badge">1</span></div>
-                        </a>
-                    
-                        <a href="https://kwmt27.net//tags/json-schema/">
-                            <div>json-schema<span class="badge">1</span></div>
-                        </a>
-                    
-                        <a href="https://kwmt27.net//tags/kotlin/">
-                            <div>kotlin<span class="badge">7</span></div>
-                        </a>
-                    
-                        <a href="https://kwmt27.net//tags/kug2/">
-                            <div>kug2<span class="badge">1</span></div>
-                        </a>
-                    
-                        <a href="https://kwmt27.net//tags/layout/">
-                            <div>layout<span class="badge">2</span></div>
-                        </a>
-                    
-                        <a href="https://kwmt27.net//tags/lifecycle/">
-                            <div>lifecycle<span class="badge">1</span></div>
-                        </a>
-                    
-                        <a href="https://kwmt27.net//tags/line/">
-                            <div>line<span class="badge">1</span></div>
-                        </a>
-                    
-                        <a href="https://kwmt27.net//tags/linebot/">
-                            <div>linebot<span class="badge">1</span></div>
-                        </a>
-                    
-                        <a href="https://kwmt27.net//tags/lint/">
-                            <div>lint<span class="badge">1</span></div>
-                        </a>
-                    
-                        <a href="https://kwmt27.net//tags/livedata/">
-                            <div>livedata<span class="badge">1</span></div>
-                        </a>
-                    
-                        <a href="https://kwmt27.net//tags/lt/">
-                            <div>lt<span class="badge">1</span></div>
-                        </a>
-                    
-                        <a href="https://kwmt27.net//tags/macos/">
-                            <div>macos<span class="badge">2</span></div>
-                        </a>
-                    
-                        <a href="https://kwmt27.net//tags/map/">
-                            <div>map<span class="badge">2</span></div>
-                        </a>
-                    
-                        <a href="https://kwmt27.net//tags/mockito2/">
-                            <div>mockito2<span class="badge">1</span></div>
-                        </a>
-                    
-                        <a href="https://kwmt27.net//tags/mysql/">
-                            <div>mysql<span class="badge">4</span></div>
-                        </a>
-                    
-                        <a href="https://kwmt27.net//tags/navigation/">
-                            <div>navigation<span class="badge">3</span></div>
-                        </a>
-                    
-                        <a href="https://kwmt27.net//tags/net/http/fcgi/">
-                            <div>net/http/fcgi<span class="badge">2</span></div>
-                        </a>
-                    
-                        <a href="https://kwmt27.net//tags/net/smtp/">
-                            <div>net/smtp<span class="badge">1</span></div>
-                        </a>
-                    
-                        <a href="https://kwmt27.net//tags/nginx/">
-                            <div>nginx<span class="badge">2</span></div>
-                        </a>
-                    
-                        <a href="https://kwmt27.net//tags/node.js/">
-                            <div>node.js<span class="badge">1</span></div>
-                        </a>
-                    
-                        <a href="https://kwmt27.net//tags/okhttp/">
-                            <div>okhttp<span class="badge">1</span></div>
-                        </a>
-                    
-                        <a href="https://kwmt27.net//tags/openid/">
-                            <div>openid<span class="badge">1</span></div>
-                        </a>
-                    
-                        <a href="https://kwmt27.net//tags/oreo/">
-                            <div>oreo<span class="badge">1</span></div>
-                        </a>
-                    
-                        <a href="https://kwmt27.net//tags/package/">
-                            <div>package<span class="badge">1</span></div>
-                        </a>
-                    
-                        <a href="https://kwmt27.net//tags/php/">
-                            <div>php<span class="badge">2</span></div>
-                        </a>
-                    
-                        <a href="https://kwmt27.net//tags/pil/">
-                            <div>pil<span class="badge">1</span></div>
-                        </a>
-                    
-                        <a href="https://kwmt27.net//tags/plant-uml/">
-                            <div>plant-uml<span class="badge">2</span></div>
-                        </a>
-                    
-                        <a href="https://kwmt27.net//tags/polymer/">
-                            <div>polymer<span class="badge">1</span></div>
-                        </a>
-                    
-                        <a href="https://kwmt27.net//tags/provider/">
-                            <div>provider<span class="badge">1</span></div>
-                        </a>
-                    
-                        <a href="https://kwmt27.net//tags/push%e9%80%9a%e7%9f%a5/">
-                            <div>push通知<span class="badge">1</span></div>
-                        </a>
-                    
-                        <a href="https://kwmt27.net//tags/python/">
-                            <div>python<span class="badge">4</span></div>
-                        </a>
-                    
-                        <a href="https://kwmt27.net//tags/pythonchallenge/">
-                            <div>pythonchallenge<span class="badge">2</span></div>
-                        </a>
-                    
-                        <a href="https://kwmt27.net//tags/reflect/">
-                            <div>reflect<span class="badge">7</span></div>
-                        </a>
-                    
-                        <a href="https://kwmt27.net//tags/retrofit/">
-                            <div>retrofit<span class="badge">1</span></div>
-                        </a>
-                    
-                        <a href="https://kwmt27.net//tags/retrofit2/">
-                            <div>retrofit2<span class="badge">1</span></div>
-                        </a>
-                    
-                        <a href="https://kwmt27.net//tags/riot.js/">
-                            <div>riot.js<span class="badge">1</span></div>
-                        </a>
-                    
-                        <a href="https://kwmt27.net//tags/room/">
-                            <div>room<span class="badge">2</span></div>
-                        </a>
-                    
-                        <a href="https://kwmt27.net//tags/runtime/">
-                            <div>runtime<span class="badge">1</span></div>
-                        </a>
-                    
-                        <a href="https://kwmt27.net//tags/rxjava/">
-                            <div>rxjava<span class="badge">1</span></div>
-                        </a>
-                    
-                        <a href="https://kwmt27.net//tags/s3/">
-                            <div>s3<span class="badge">1</span></div>
-                        </a>
-                    
-                        <a href="https://kwmt27.net//tags/sensor/">
-                            <div>sensor<span class="badge">1</span></div>
-                        </a>
-                    
-                        <a href="https://kwmt27.net//tags/server/">
-                            <div>server<span class="badge">1</span></div>
-                        </a>
-                    
-                        <a href="https://kwmt27.net//tags/sketch/">
-                            <div>sketch<span class="badge">1</span></div>
-                        </a>
-                    
-                        <a href="https://kwmt27.net//tags/state/">
-                            <div>state<span class="badge">1</span></div>
-                        </a>
-                    
-                        <a href="https://kwmt27.net//tags/statusbar/">
-                            <div>statusbar<span class="badge">1</span></div>
-                        </a>
-                    
-                        <a href="https://kwmt27.net//tags/strconv/">
-                            <div>strconv<span class="badge">1</span></div>
-                        </a>
-                    
-                        <a href="https://kwmt27.net//tags/strings/">
-                            <div>strings<span class="badge">1</span></div>
-                        </a>
-                    
-                        <a href="https://kwmt27.net//tags/struct/">
-                            <div>struct<span class="badge">1</span></div>
-                        </a>
-                    
-                        <a href="https://kwmt27.net//tags/sublime-text/">
-                            <div>sublime-text<span class="badge">1</span></div>
-                        </a>
-                    
-                        <a href="https://kwmt27.net//tags/swift/">
-                            <div>swift<span class="badge">2</span></div>
-                        </a>
-                    
-                        <a href="https://kwmt27.net//tags/swiftui/">
-                            <div>swiftui<span class="badge">1</span></div>
-                        </a>
-                    
-                        <a href="https://kwmt27.net//tags/targetsdkversiion/">
-                            <div>targetsdkversiion<span class="badge">1</span></div>
-                        </a>
-                    
-                        <a href="https://kwmt27.net//tags/template/">
-                            <div>template<span class="badge">4</span></div>
-                        </a>
-                    
-                        <a href="https://kwmt27.net//tags/tensorflow/">
-                            <div>tensorflow<span class="badge">1</span></div>
-                        </a>
-                    
-                        <a href="https://kwmt27.net//tags/test/">
-                            <div>test<span class="badge">1</span></div>
-                        </a>
-                    
-                        <a href="https://kwmt27.net//tags/textformfield/">
-                            <div>textformfield<span class="badge">1</span></div>
-                        </a>
-                    
-                        <a href="https://kwmt27.net//tags/topic/">
-                            <div>topic<span class="badge">1</span></div>
-                        </a>
-                    
-                        <a href="https://kwmt27.net//tags/twitter/">
-                            <div>twitter<span class="badge">1</span></div>
-                        </a>
-                    
-                        <a href="https://kwmt27.net//tags/unicode/utf8/">
-                            <div>unicode/utf8<span class="badge">1</span></div>
-                        </a>
-                    
-                        <a href="https://kwmt27.net//tags/vagrant/">
-                            <div>vagrant<span class="badge">2</span></div>
-                        </a>
-                    
-                        <a href="https://kwmt27.net//tags/view-binding/">
-                            <div>view-binding<span class="badge">1</span></div>
-                        </a>
-                    
-                        <a href="https://kwmt27.net//tags/viewmodel/">
-                            <div>viewmodel<span class="badge">1</span></div>
-                        </a>
-                    
-                        <a href="https://kwmt27.net//tags/volley/">
-                            <div>volley<span class="badge">1</span></div>
-                        </a>
-                    
-                        <a href="https://kwmt27.net//tags/vps/">
-                            <div>vps<span class="badge">2</span></div>
-                        </a>
-                    
-                        <a href="https://kwmt27.net//tags/web-api/">
-                            <div>web-api<span class="badge">1</span></div>
-                        </a>
-                    
-                        <a href="https://kwmt27.net//tags/webview/">
-                            <div>webview<span class="badge">1</span></div>
-                        </a>
-                    
-                        <a href="https://kwmt27.net//tags/wercker/">
-                            <div>wercker<span class="badge">3</span></div>
-                        </a>
-                    
-                        <a href="https://kwmt27.net//tags/wercker-step/">
-                            <div>wercker-step<span class="badge">1</span></div>
-                        </a>
-                    
-                        <a href="https://kwmt27.net//tags/windows/">
-                            <div>windows<span class="badge">1</span></div>
-                        </a>
-                    
-                        <a href="https://kwmt27.net//tags/wordpress/">
-                            <div>wordpress<span class="badge">2</span></div>
-                        </a>
-                    
-                        <a href="https://kwmt27.net//tags/xcode/">
-                            <div>xcode<span class="badge">1</span></div>
-                        </a>
-                    
-                        <a href="https://kwmt27.net//tags/y/">
-                            <div>y<span class="badge">1</span></div>
-                        </a>
-                    
-                        <a href="https://kwmt27.net//tags/%e3%82%a2%e3%83%97%e3%83%aa%e5%86%85%e8%aa%b2%e9%87%91/">
-                            <div>アプリ内課金<span class="badge">1</span></div>
-                        </a>
-                    
-                        <a href="https://kwmt27.net//tags/%e3%82%a4%e3%83%99%e3%83%b3%e3%83%88/">
-                            <div>イベント<span class="badge">9</span></div>
-                        </a>
-                    
-                        <a href="https://kwmt27.net//tags/%e3%82%a8%e3%83%9f%e3%83%a5%e3%83%ac%e3%83%bc%e3%82%bf/">
-                            <div>エミュレータ<span class="badge">1</span></div>
-                        </a>
-                    
-                        <a href="https://kwmt27.net//tags/%e3%82%b7%e3%83%a7%e3%83%bc%e3%83%88%e3%82%ab%e3%83%83%e3%83%88%e3%82%ad%e3%83%bc/">
-                            <div>ショートカットキー<span class="badge">2</span></div>
-                        </a>
-                    
-                        <a href="https://kwmt27.net//tags/%e3%82%b7%e3%83%b3%e3%82%bf%e3%83%83%e3%82%af%e3%82%b9%e3%83%8f%e3%82%a4%e3%83%a9%e3%82%a4%e3%83%88/">
-                            <div>シンタックスハイライト<span class="badge">1</span></div>
-                        </a>
-                    
-                        <a href="https://kwmt27.net//tags/%e3%82%b9%e3%82%af%e3%83%ad%e3%83%bc%e3%83%ab/">
-                            <div>スクロール<span class="badge">1</span></div>
-                        </a>
-                    
-                        <a href="https://kwmt27.net//tags/%e3%83%88%e3%83%a9%e3%83%83%e3%82%af%e3%83%90%e3%83%83%e3%83%89/">
-                            <div>トラックバッド<span class="badge">1</span></div>
-                        </a>
-                    
-                        <a href="https://kwmt27.net//tags/%e3%83%97%e3%83%a9%e3%82%a4%e3%83%90%e3%82%b7%e3%83%bc%e3%83%9d%e3%83%aa%e3%82%b7%e3%83%bc/">
-                            <div>プライバシーポリシー<span class="badge">1</span></div>
-                        </a>
-                    
-                        <a href="https://kwmt27.net//tags/%e3%83%a1%e3%83%ab%e3%83%81%e3%83%a3%e3%83%aa/">
-                            <div>メルチャリ<span class="badge">1</span></div>
-                        </a>
-                    
-                        <a href="https://kwmt27.net//tags/%e3%83%a2%e3%83%90%e3%82%82%e3%81%8f%e4%bc%9a/">
-                            <div>モバもく会<span class="badge">7</span></div>
-                        </a>
-                    
-                        <a href="https://kwmt27.net//tags/%e4%bd%93%e9%a8%93/">
-                            <div>体験<span class="badge">1</span></div>
-                        </a>
-                    
-                        <a href="https://kwmt27.net//tags/%e5%8b%89%e5%bc%b7%e4%bc%9a/">
-                            <div>勉強会<span class="badge">10</span></div>
-                        </a>
-                    
-                        <a href="https://kwmt27.net//tags/%e6%8c%af%e3%82%8a%e8%bf%94%e3%82%8a/">
-                            <div>振り返り<span class="badge">8</span></div>
-                        </a>
-                    
-                        <a href="https://kwmt27.net//tags/%e6%97%85%e8%a1%8c%e8%a8%98/">
-                            <div>旅行記<span class="badge">1</span></div>
-                        </a>
-                    
-                        <a href="https://kwmt27.net//tags/%e6%97%a5%e8%a8%98/">
-                            <div>日記<span class="badge">13</span></div>
-                        </a>
-                    
-                        <a href="https://kwmt27.net//tags/%e6%a9%9f%e4%bc%9a%e5%ad%a6%e7%bf%92/">
-                            <div>機会学習<span class="badge">1</span></div>
-                        </a>
-                    
-                        <a href="https://kwmt27.net//tags/%e6%a9%9f%e6%a2%b0%e5%ad%a6%e7%bf%92/">
-                            <div>機械学習<span class="badge">1</span></div>
-                        </a>
-                    
-                        <a href="https://kwmt27.net//tags/%e7%99%bb%e5%a3%87/">
-                            <div>登壇<span class="badge">2</span></div>
-                        </a>
-                    
-                        <a href="https://kwmt27.net//tags/%e7%bf%bb%e8%a8%b3/">
-                            <div>翻訳<span class="badge">1</span></div>
-                        </a>
-                    
-                        <a href="https://kwmt27.net//tags/%e8%a7%92%e4%b8%b8/">
-                            <div>角丸<span class="badge">1</span></div>
-                        </a>
-                    
-                        <a href="https://kwmt27.net//tags/%e8%a8%ad%e5%ae%9a%e5%88%87%e3%82%8a%e6%9b%bf%e3%81%88/">
-                            <div>設定切り替え<span class="badge">1</span></div>
-                        </a>
-                    
-                        <a href="https://kwmt27.net//tags/%e9%96%a2%e3%83%a2%e3%83%90/">
-                            <div>関モバ<span class="badge">1</span></div>
-                        </a>
-                    
-                        <a href="https://kwmt27.net//tags/%e9%98%aago/">
-                            <div>阪go<span class="badge">2</span></div>
-                        </a>
-                    
-                </span>
-            </div>
-
-
-        </header>
-
-<main id="content">
-
-<article id="" class="post">
-    <div class="post-stamp">
-        <time datetime="2017-12-09T16:25:00&#43;09:00">
-            9 Dec 2017
-        </time>
-        <span class="taglist">
-        
-        &middot; 
-        
-            <a href="https://kwmt27.net/tags/android/">Android</a>
-        
-            <a href="https://kwmt27.net/tags/lint/">Lint</a>
-        
-        
-        </span>
-    </div>
-    <h1 class="post-title">Android Lint</h1>
-
-    <div id="share-top">
-    <ul class="clearfix">
-        
-        <li>
-            <a href="http://b.hatena.ne.jp/entry/https://kwmt27.net/2017/12/09/android-studio-lint-for-kotlin/" class="hatena-bookmark-button"
-               data-hatena-bookmark-title="Android Lint" data-hatena-bookmark-layout="standard-balloon"
-               data-hatena-bookmark-lang="ja" title="このエントリーをはてなブックマークに追加"><img
-                    src="https://b.st-hatena.com/images/entry-button/button-only@2x.png" alt="このエントリーをはてなブックマークに追加"
-                    width="20" height="20" style="border: none;"/></a>
-            <script type="text/javascript" src="https://b.st-hatena.com/js/bookmark_button.js" charset="utf-8"
-                    async="async"></script>
-
-        </li>
-        
-        
-        <li>
-            <div class="g-plusone" data-href="https://kwmt27.net/2017/12/09/android-studio-lint-for-kotlin/"></div>
-        </li>
-
-        
-        <li>
-
-            <div class="fb-like" data-href="https://kwmt27.net/2017/12/09/android-studio-lint-for-kotlin/" data-layout="button_count" data-action="like"
-                 data-show-faces="false" data-share="false"></div>
-        </li>
-
-        
-        <li>
-            <a data-pocket-label="pocket" data-pocket-count="horizontal" class="pocket-btn" data-lang="en"></a>
-            <script type="text/javascript">
-                !function(d,i){if(!d.getElementById(i)){var j=d.createElement("script");j.id=i;j.src="https://widgets.getpocket.com/v1/j/btn.js?v=1";var w=d.getElementById(i);d.body.appendChild(j);}}(document,"pocket-btn-js");
-            </script>
-        </li>
-
-    </ul>
-</div>
-    <div id="ad">
-    <aside>
-        <p>スポンサーリンク</p>
-        <div class="responsive-unit">
-            <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
-            
-            <ins class="adsbygoogle"
-                 style="display:block"
-                 data-ad-client="ca-pub-3131366896030715"
-                 data-ad-slot="5415567707"
-                 data-ad-format="auto"></ins>
-            <script>
-(adsbygoogle = window.adsbygoogle || []).push({});
-
-            </script>
-        </div>
-    </aside>
-</div>
-    
-
-<h2 id="コマンドラインからlintを実行するには">コマンドラインからlintを実行するには</h2>
-
-<p>project root で下記を実行します</p>
-
-<pre><code>./gradlew lint
-</code></pre>
-
-<p>特定のビルド バリアントに対してのみ lint タスクを実行するには</p>
-
-<p>（例）</p>
-
-<pre><code>./gradlew lintDevelopDebug
-</code></pre>
-
-<h2 id="設定">設定</h2>
-
-<h3 id="idリストを表示するには">IDリストを表示するには？</h3>
-
-<pre><code>%  $ANDROID_HOME/tools/bin/lint --list
+./gradlew lintDevelopDebug 設定IDリストを表示するには？% $ANDROID_HOME/tools/bin/lint --list Valid issue categories: Correctness Correctness:Messages Correctness:Chrome OS Security Performance Usability:Typography Usability:Icons Usability Accessibility Internationalization Internationalization:Bidirectional Text Valid issue id's: &#34;ContentDescription&#34;: Image without contentDescription &#34;AddJavascriptInterface&#34;: addJavascriptInterface Called &#34;ShortAlarm&#34;: Short or Frequent Alarm &#34;AllCaps&#34;: Combining textAllCaps and markup &#34;AllowAllHostnameVerifier&#34;: Insecure HostnameVerifier &#34;AlwaysShowAction&#34;: Usage of showAsAction=always &#34;InvalidUsesTagAttribute&#34;: Invalid name attribute for uses element. &#34;MissingIntentFilterForMediaSearch&#34;: Missing intent-filter with action android."><meta property="og:title" content="Android Lint"><meta property="og:description" content="コマンドラインからlintを実行するにはproject root で下記を実行します
+./gradlew lint 特定のビルド バリアントに対してのみ lint タスクを実行するには
+（例）
+./gradlew lintDevelopDebug 設定IDリストを表示するには？% $ANDROID_HOME/tools/bin/lint --list Valid issue categories: Correctness Correctness:Messages Correctness:Chrome OS Security Performance Usability:Typography Usability:Icons Usability Accessibility Internationalization Internationalization:Bidirectional Text Valid issue id's: &#34;ContentDescription&#34;: Image without contentDescription &#34;AddJavascriptInterface&#34;: addJavascriptInterface Called &#34;ShortAlarm&#34;: Short or Frequent Alarm &#34;AllCaps&#34;: Combining textAllCaps and markup &#34;AllowAllHostnameVerifier&#34;: Insecure HostnameVerifier &#34;AlwaysShowAction&#34;: Usage of showAsAction=always &#34;InvalidUsesTagAttribute&#34;: Invalid name attribute for uses element. &#34;MissingIntentFilterForMediaSearch&#34;: Missing intent-filter with action android."><meta property="og:type" content="article"><meta property="og:url" content="https://kwmt27.net/2017/12/09/android-studio-lint-for-kotlin/"><meta property="article:section" content="post"><meta property="article:published_time" content="2017-12-09T16:25:00+09:00"><meta property="article:modified_time" content="2017-12-09T16:25:00+09:00"><link rel=stylesheet href=/css/bootstrap.min.css crossorigin=anonymous><link href=https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.2.1/css/all.min.css rel=stylesheet type=text/css><link rel=stylesheet href=/sass/main.css><link rel=stylesheet href=/zoomjs/zoom.min.css><script src=/js/lazysizes.min.js></script>
+<link rel=apple-touch-icon href=/apple-touch-icon.png><link rel="shortcut icon" href=/favicon.png type=image/x-icon><link rel="shortcut icon" href=/favicon.ico type=image/x-icon><link rel=icon href=/logo.svg sizes=any type=image/svg+xml></head><body><nav class="navbar navbar-default navbar-custom navbar-fixed-top invert"><div class=container-fluid><div class="navbar-header page-scroll"><button type=button class=navbar-toggle>
+<span class=sr-only>Toggle navigation</span>
+<span class=icon-bar></span>
+<span class=icon-bar></span>
+<span class=icon-bar></span></button>
+<a class=navbar-brand href=https://kwmt27.net/>Androg</a></div><div id=huxblog_navbar><div class=navbar-collapse><ul class="nav navbar-nav navbar-right"><li class=search-icon><a href=javascript:void(0)><i class="fa fa-search"></i></a></li></ul></div></div></div></nav><script>var $body=document.body,$toggle=document.querySelector(".navbar-toggle"),$navbar=document.querySelector("#huxblog_navbar"),$collapse=document.querySelector(".navbar-collapse"),__HuxNav__={close:function(){$navbar.className=" ",setTimeout(function(){$navbar.className.indexOf("in")<0&&($collapse.style.height="0px")},400)},open:function(){$collapse.style.height="auto",$navbar.className+=" in"}};$toggle.addEventListener("click",function(){$navbar.className.indexOf("in")>0?__HuxNav__.close():__HuxNav__.open()}),document.addEventListener("click",function(e){if(e.target==$toggle)return;if(e.target.className=="icon-bar")return;__HuxNav__.close()})</script><div class=search-page><div class=search-icon-close-container><span class=search-icon-close><i class="fa fa-chevron-down"></i></span></div><div class="search-main container"><div class=row><div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1"><form></form><input type=text id=search-input placeholder="$ grep..."></form><div id=search-results class=mini-post-list></div></div></div></div></div><style type=text/css>header.intro-header{position:relative;background-image:url('')}</style><header class="intro-header style-text"><div class=header-mask></div><div class=container><div class=row><div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1"><div class=post-heading><div class=tags><a class=tag href=/tags/android/ title=Android>Android</a>
+<a class=tag href=/tags/lint/ title=Lint>Lint</a></div><h1>Android Lint</h1><h2 class=subheading></h2><span class=meta>Posted by
+on Sat, Dec 9, 2017</span></div></div></div></div></header><article><div class=container><div class=row><div class="col-lg-8 col-lg-offset-2
+col-md-10 col-md-offset-1
+post-container"><h2 id=コマンドラインからlintを実行するには>コマンドラインからlintを実行するには<a class=anchorjs-link href=#%e3%82%b3%e3%83%9e%e3%83%b3%e3%83%89%e3%83%a9%e3%82%a4%e3%83%b3%e3%81%8b%e3%82%89lint%e3%82%92%e5%ae%9f%e8%a1%8c%e3%81%99%e3%82%8b%e3%81%ab%e3%81%af></a></h2><p>project root で下記を実行します</p><pre tabindex=0><code>./gradlew lint
+</code></pre><p>特定のビルド バリアントに対してのみ lint タスクを実行するには</p><p>（例）</p><pre tabindex=0><code>./gradlew lintDevelopDebug
+</code></pre><h2 id=設定>設定<a class=anchorjs-link href=#%e8%a8%ad%e5%ae%9a></a></h2><h3 id=idリストを表示するには>IDリストを表示するには？<a class=anchorjs-link href=#id%e3%83%aa%e3%82%b9%e3%83%88%e3%82%92%e8%a1%a8%e7%a4%ba%e3%81%99%e3%82%8b%e3%81%ab%e3%81%af></a></h3><pre tabindex=0><code>%  $ANDROID_HOME/tools/bin/lint --list
 Valid issue categories:
     Correctness
     Correctness:Messages
@@ -942,342 +33,338 @@ Valid issue categories:
     Internationalization
     Internationalization:Bidirectional Text
 
-Valid issue id's:
-&quot;ContentDescription&quot;: Image without contentDescription
-&quot;AddJavascriptInterface&quot;: addJavascriptInterface Called
-&quot;ShortAlarm&quot;: Short or Frequent Alarm
-&quot;AllCaps&quot;: Combining textAllCaps and markup
-&quot;AllowAllHostnameVerifier&quot;: Insecure HostnameVerifier
-&quot;AlwaysShowAction&quot;: Usage of showAsAction=always
-&quot;InvalidUsesTagAttribute&quot;: Invalid name attribute for uses element.
-&quot;MissingIntentFilterForMediaSearch&quot;: Missing intent-filter with action
+Valid issue id&#39;s:
+&#34;ContentDescription&#34;: Image without contentDescription
+&#34;AddJavascriptInterface&#34;: addJavascriptInterface Called
+&#34;ShortAlarm&#34;: Short or Frequent Alarm
+&#34;AllCaps&#34;: Combining textAllCaps and markup
+&#34;AllowAllHostnameVerifier&#34;: Insecure HostnameVerifier
+&#34;AlwaysShowAction&#34;: Usage of showAsAction=always
+&#34;InvalidUsesTagAttribute&#34;: Invalid name attribute for uses element.
+&#34;MissingIntentFilterForMediaSearch&#34;: Missing intent-filter with action
       android.media.action.MEDIA_PLAY_FROM_SEARCH
-&quot;MissingMediaBrowserServiceIntentFilter&quot;: Missing intent-filter with action
+&#34;MissingMediaBrowserServiceIntentFilter&#34;: Missing intent-filter with action
       android.media.browse.MediaBrowserService.
-&quot;MissingOnPlayFromSearch&quot;: Missing onPlayFromSearch.
-&quot;ImpliedTouchscreenHardware&quot;: Hardware feature touchscreen not explicitly
+&#34;MissingOnPlayFromSearch&#34;: Missing onPlayFromSearch.
+&#34;ImpliedTouchscreenHardware&#34;: Hardware feature touchscreen not explicitly
       marked as optional
-&quot;MissingTvBanner&quot;: TV Missing Banner
-&quot;MissingLeanbackLauncher&quot;: Missing Leanback Launcher Intent Filter.
-&quot;MissingLeanbackSupport&quot;: Missing Leanback Support.
-&quot;PermissionImpliesUnsupportedHardware&quot;: Permission Implies Unsupported
+&#34;MissingTvBanner&#34;: TV Missing Banner
+&#34;MissingLeanbackLauncher&#34;: Missing Leanback Launcher Intent Filter.
+&#34;MissingLeanbackSupport&#34;: Missing Leanback Support.
+&#34;PermissionImpliesUnsupportedHardware&#34;: Permission Implies Unsupported
       Hardware
-&quot;UnsupportedTvHardware&quot;: Unsupported TV Hardware Feature
-&quot;SupportAnnotationUsage&quot;: Incorrect support annotation usage
-&quot;ShiftFlags&quot;: Dangerous Flag Constant Declaration
-&quot;LocalSuppress&quot;: @SuppressLint on invalid element
-&quot;SwitchIntDef&quot;: Missing @IntDef in Switch
-&quot;UniqueConstants&quot;: Overlapping Enumeration Constants
-&quot;InlinedApi&quot;: Using inlined constants on older versions
-&quot;Override&quot;: Method conflicts with new inherited method
-&quot;ObsoleteSdkInt&quot;: Obsolete SDK_INT Version Check
-&quot;NewApi&quot;: Calling new methods on older versions
-&quot;UnusedAttribute&quot;: Attribute unused on older versions
-&quot;AppCompatMethod&quot;: Using Wrong AppCompat Method
-&quot;AppCompatCustomView&quot;: Appcompat Custom Widgets
-&quot;AppCompatResource&quot;: Menu namespace
-&quot;GoogleAppIndexingApiWarning&quot;: Missing support for Firebase App Indexing Api
-&quot;GoogleAppIndexingWarning&quot;: Missing support for Firebase App Indexing
-&quot;AppLinksAutoVerifyError&quot;: App Links Auto Verification Failure
-&quot;AppLinksAutoVerifyWarning&quot;: Potential App Links Auto Verification Failure
-&quot;AppLinkUrlError&quot;: URL not supported by app for Firebase App Indexing
-&quot;TestAppLink&quot;: Unmatched URLs
-&quot;InconsistentArrays&quot;: Inconsistencies in array element counts
-&quot;Assert&quot;: Assertions
-&quot;BadHostnameVerifier&quot;: Insecure HostnameVerifier
-&quot;BatteryLife&quot;: Battery Life Issues
-&quot;BackButton&quot;: Back button
-&quot;ButtonCase&quot;: Cancel/OK dialog button capitalization
-&quot;ButtonOrder&quot;: Button order
-&quot;ButtonStyle&quot;: Button should be borderless
-&quot;ByteOrderMark&quot;: Byte order mark inside files
-&quot;MissingSuperCall&quot;: Missing Super Call
-&quot;AdapterViewChildren&quot;: AdapterViews cannot have children in XML
-&quot;ScrollViewCount&quot;: ScrollViews can have only one child
-&quot;PermissionImpliesUnsupportedChromeOsHardware&quot;: Permission Implies Unsupported
+&#34;UnsupportedTvHardware&#34;: Unsupported TV Hardware Feature
+&#34;SupportAnnotationUsage&#34;: Incorrect support annotation usage
+&#34;ShiftFlags&#34;: Dangerous Flag Constant Declaration
+&#34;LocalSuppress&#34;: @SuppressLint on invalid element
+&#34;SwitchIntDef&#34;: Missing @IntDef in Switch
+&#34;UniqueConstants&#34;: Overlapping Enumeration Constants
+&#34;InlinedApi&#34;: Using inlined constants on older versions
+&#34;Override&#34;: Method conflicts with new inherited method
+&#34;ObsoleteSdkInt&#34;: Obsolete SDK_INT Version Check
+&#34;NewApi&#34;: Calling new methods on older versions
+&#34;UnusedAttribute&#34;: Attribute unused on older versions
+&#34;AppCompatMethod&#34;: Using Wrong AppCompat Method
+&#34;AppCompatCustomView&#34;: Appcompat Custom Widgets
+&#34;AppCompatResource&#34;: Menu namespace
+&#34;GoogleAppIndexingApiWarning&#34;: Missing support for Firebase App Indexing Api
+&#34;GoogleAppIndexingWarning&#34;: Missing support for Firebase App Indexing
+&#34;AppLinksAutoVerifyError&#34;: App Links Auto Verification Failure
+&#34;AppLinksAutoVerifyWarning&#34;: Potential App Links Auto Verification Failure
+&#34;AppLinkUrlError&#34;: URL not supported by app for Firebase App Indexing
+&#34;TestAppLink&#34;: Unmatched URLs
+&#34;InconsistentArrays&#34;: Inconsistencies in array element counts
+&#34;Assert&#34;: Assertions
+&#34;BadHostnameVerifier&#34;: Insecure HostnameVerifier
+&#34;BatteryLife&#34;: Battery Life Issues
+&#34;BackButton&#34;: Back button
+&#34;ButtonCase&#34;: Cancel/OK dialog button capitalization
+&#34;ButtonOrder&#34;: Button order
+&#34;ButtonStyle&#34;: Button should be borderless
+&#34;ByteOrderMark&#34;: Byte order mark inside files
+&#34;MissingSuperCall&#34;: Missing Super Call
+&#34;AdapterViewChildren&#34;: AdapterViews cannot have children in XML
+&#34;ScrollViewCount&#34;: ScrollViews can have only one child
+&#34;PermissionImpliesUnsupportedChromeOsHardware&#34;: Permission Implies Unsupported
       Chrome OS Hardware
-&quot;UnsupportedChromeOsHardware&quot;: Unsupported Chrome OS Hardware Feature
-&quot;GetInstance&quot;: Cipher.getInstance with ECB
-&quot;CommitTransaction&quot;: Missing commit() calls
-&quot;Recycle&quot;: Missing recycle() calls
-&quot;CommitPrefEdits&quot;: Missing commit() on SharedPreference editor
-&quot;ApplySharedPref&quot;: Use apply() on SharedPreferences
-&quot;ClickableViewAccessibility&quot;: Accessibility in Custom Views
-&quot;EasterEgg&quot;: Code contains easter egg
-&quot;StopShip&quot;: Code contains STOPSHIP marker
-&quot;MissingConstraints&quot;: Missing Constraints in ConstraintLayout
-&quot;VulnerableCordovaVersion&quot;: Vulnerable Cordova Version
-&quot;CustomViewStyleable&quot;: Mismatched Styleable/Custom View Name
-&quot;CutPasteId&quot;: Likely cut &amp; paste mistakes
-&quot;SimpleDateFormat&quot;: Implied locale in date format
-&quot;SetTextI18n&quot;: TextView Internationalization
-&quot;Deprecated&quot;: Using deprecated resources
-&quot;MissingPrefix&quot;: Missing Android XML namespace
-&quot;MangledCRLF&quot;: Mangled file line endings
-&quot;DuplicateIncludedIds&quot;: Duplicate ids across layouts combined with include
+&#34;UnsupportedChromeOsHardware&#34;: Unsupported Chrome OS Hardware Feature
+&#34;GetInstance&#34;: Cipher.getInstance with ECB
+&#34;CommitTransaction&#34;: Missing commit() calls
+&#34;Recycle&#34;: Missing recycle() calls
+&#34;CommitPrefEdits&#34;: Missing commit() on SharedPreference editor
+&#34;ApplySharedPref&#34;: Use apply() on SharedPreferences
+&#34;ClickableViewAccessibility&#34;: Accessibility in Custom Views
+&#34;EasterEgg&#34;: Code contains easter egg
+&#34;StopShip&#34;: Code contains STOPSHIP marker
+&#34;MissingConstraints&#34;: Missing Constraints in ConstraintLayout
+&#34;VulnerableCordovaVersion&#34;: Vulnerable Cordova Version
+&#34;CustomViewStyleable&#34;: Mismatched Styleable/Custom View Name
+&#34;CutPasteId&#34;: Likely cut &amp; paste mistakes
+&#34;SimpleDateFormat&#34;: Implied locale in date format
+&#34;SetTextI18n&#34;: TextView Internationalization
+&#34;Deprecated&#34;: Using deprecated resources
+&#34;MissingPrefix&#34;: Missing Android XML namespace
+&#34;MangledCRLF&#34;: Mangled file line endings
+&#34;DuplicateIncludedIds&#34;: Duplicate ids across layouts combined with include
       tags
-&quot;DuplicateIds&quot;: Duplicate ids within a single layout
-&quot;DuplicateDefinition&quot;: Duplicate definitions of resources
-&quot;ReferenceType&quot;: Incorrect reference types
-&quot;StringEscaping&quot;: Invalid string escapes
-&quot;UnpackedNativeCode&quot;: Missing android:extractNativeLibs=false
-&quot;UnsafeDynamicallyLoadedCode&quot;: load used to dynamically load code
-&quot;UnsafeNativeCodeLocation&quot;: Native code outside library directory
-&quot;EllipsizeMaxLines&quot;: Combining Ellipsize and Maxlines
-&quot;ExifInterface&quot;: Using android.media.ExifInterface
-&quot;ExtraText&quot;: Extraneous text in resource files
-&quot;FieldGetter&quot;: Using getter instead of field
-&quot;InvalidAnalyticsName&quot;: Invalid Analytics Name
-&quot;MissingFirebaseInstanceTokenRefresh&quot;: Missing Firebase Instance ID Token
+&#34;DuplicateIds&#34;: Duplicate ids within a single layout
+&#34;DuplicateDefinition&#34;: Duplicate definitions of resources
+&#34;ReferenceType&#34;: Incorrect reference types
+&#34;StringEscaping&#34;: Invalid string escapes
+&#34;UnpackedNativeCode&#34;: Missing android:extractNativeLibs=false
+&#34;UnsafeDynamicallyLoadedCode&#34;: load used to dynamically load code
+&#34;UnsafeNativeCodeLocation&#34;: Native code outside library directory
+&#34;EllipsizeMaxLines&#34;: Combining Ellipsize and Maxlines
+&#34;ExifInterface&#34;: Using android.media.ExifInterface
+&#34;ExtraText&#34;: Extraneous text in resource files
+&#34;FieldGetter&#34;: Using getter instead of field
+&#34;InvalidAnalyticsName&#34;: Invalid Analytics Name
+&#34;MissingFirebaseInstanceTokenRefresh&#34;: Missing Firebase Instance ID Token
       Refresh
-&quot;FontValidationError&quot;: Validation of font files
-&quot;FontValidationWarning&quot;: Validation of font files
-&quot;FullBackupContent&quot;: Valid Full Backup Content File
-&quot;ValidFragment&quot;: Fragment not instantiatable
-&quot;GetContentDescriptionOverride&quot;: Overriding getContentDescription() on a View
-&quot;PackageManagerGetSignatures&quot;: Potential Multiple Certificate Exploit
-&quot;AccidentalOctal&quot;: Accidental Octal
-&quot;UseOfBundledGooglePlayServices&quot;: Use of bundled version of Google Play
+&#34;FontValidationError&#34;: Validation of font files
+&#34;FontValidationWarning&#34;: Validation of font files
+&#34;FullBackupContent&#34;: Valid Full Backup Content File
+&#34;ValidFragment&#34;: Fragment not instantiatable
+&#34;GetContentDescriptionOverride&#34;: Overriding getContentDescription() on a View
+&#34;PackageManagerGetSignatures&#34;: Potential Multiple Certificate Exploit
+&#34;AccidentalOctal&#34;: Accidental Octal
+&#34;UseOfBundledGooglePlayServices&#34;: Use of bundled version of Google Play
       services
-&quot;GradleCompatible&quot;: Incompatible Gradle Versions
-&quot;GradleDependency&quot;: Obsolete Gradle Dependency
-&quot;GradleDeprecated&quot;: Deprecated Gradle Construct
-&quot;DevModeObsolete&quot;: Dev Mode Obsolete
-&quot;DuplicatePlatformClasses&quot;: Duplicate Platform Classes
-&quot;GradleGetter&quot;: Gradle Implicit Getter Call
-&quot;GradlePluginVersion&quot;: Incompatible Android Gradle Plugin
-&quot;HighAppVersionCode&quot;: VersionCode too high
-&quot;GradleIdeError&quot;: Gradle IDE Support Issues
-&quot;GradlePath&quot;: Gradle Path Issues
-&quot;GradleDynamicVersion&quot;: Gradle Dynamic Version
-&quot;NotInterpolated&quot;: Incorrect Interpolation
-&quot;StringShouldBeInt&quot;: String should be int
-&quot;NewerVersionAvailable&quot;: Newer Library Versions Available
-&quot;MinSdkTooLow&quot;: API Version Too Low
-&quot;GridLayout&quot;: GridLayout validation
-&quot;HandlerLeak&quot;: Handler reference leaks
-&quot;HardcodedDebugMode&quot;: Hardcoded value of android:debuggable in the manifest
-&quot;HardcodedText&quot;: Hardcoded text
-&quot;HardwareIds&quot;: Hardware Id Usage
-&quot;IconDuplicatesConfig&quot;: Identical bitmaps across various configurations
-&quot;IconDuplicates&quot;: Duplicated icons under different names
-&quot;GifUsage&quot;: Using .gif format for bitmaps is discouraged
-&quot;IconColors&quot;: Icon colors do not follow the recommended visual style
-&quot;IconDensities&quot;: Icon densities validation
-&quot;IconDipSize&quot;: Icon density-independent size validation
-&quot;IconExpectedSize&quot;: Icon has incorrect size
-&quot;IconExtension&quot;: Icon format does not match the file extension
-&quot;IconLauncherShape&quot;: The launcher icon shape should use a distinct silhouette
-&quot;IconLocation&quot;: Image defined in density-independent drawable folder
-&quot;IconMissingDensityFolder&quot;: Missing density folder
-&quot;IconMixedNinePatch&quot;: Clashing PNG and 9-PNG files
-&quot;IconNoDpi&quot;: Icon appears in both -nodpi and dpi folders
-&quot;IconXmlAndPng&quot;: Icon is specified both as .xml file and as a bitmap
-&quot;ConvertToWebp&quot;: Convert to WebP
-&quot;WebpUnsupported&quot;: WebP Unsupported
-&quot;IncludeLayoutParam&quot;: Ignored layout params on include
-&quot;DisableBaselineAlignment&quot;: Missing baselineAligned attribute
-&quot;InefficientWeight&quot;: Inefficient layout weight
-&quot;NestedWeights&quot;: Nested layout weights
-&quot;Orientation&quot;: Missing explicit orientation
-&quot;Suspicious0dp&quot;: Suspicious 0dp dimension
-&quot;InstantApps&quot;: Instant App Issues
-&quot;DuplicateDivider&quot;: Unnecessary Divider Copy
-&quot;TrustAllX509TrustManager&quot;: Insecure TLS/SSL trust manager
-&quot;InvalidImeActionId&quot;: Invalid imeActionId declaration
-&quot;InvalidPackage&quot;: Package not included in Android
-&quot;DrawAllocation&quot;: Memory allocations within drawing code
-&quot;UseSparseArrays&quot;: HashMap can be replaced with SparseArray
-&quot;UseValueOf&quot;: Should use valueOf instead of new
-&quot;JavascriptInterface&quot;: Missing @JavascriptInterface on methods
-&quot;JobSchedulerService&quot;: JobScheduler problems
-&quot;KeyboardInaccessibleWidget&quot;: Keyboard inaccessible widget
-&quot;LabelFor&quot;: Missing labelFor attribute
-&quot;InconsistentLayout&quot;: Inconsistent Layouts
-&quot;InflateParams&quot;: Layout Inflation without a Parent
-&quot;StaticFieldLeak&quot;: Static Field Leaks
-&quot;DefaultLocale&quot;: Implied default locale in case conversion
-&quot;LocaleFolder&quot;: Wrong locale name
-&quot;GetLocales&quot;: Locale crash
-&quot;InvalidResourceFolder&quot;: Invalid Resource Folder
-&quot;WrongRegion&quot;: Suspicious Language/Region Combination
-&quot;UseAlpha2&quot;: Using 3-letter Codes
-&quot;LogConditional&quot;: Unconditional Logging Calls
-&quot;LongLogTag&quot;: Too Long Log Tags
-&quot;LogTagMismatch&quot;: Mismatched Log Tags
-&quot;AllowBackup&quot;: AllowBackup/FullBackupContent Problems
-&quot;MissingApplicationIcon&quot;: Missing application icon
-&quot;DeviceAdmin&quot;: Malformed Device Admin
-&quot;DuplicateActivity&quot;: Activity registered more than once
-&quot;DuplicateUsesFeature&quot;: Feature declared more than once
-&quot;GradleOverrides&quot;: Value overridden by Gradle build script
-&quot;IllegalResourceRef&quot;: Name and version must be integer or string, not
+&#34;GradleCompatible&#34;: Incompatible Gradle Versions
+&#34;GradleDependency&#34;: Obsolete Gradle Dependency
+&#34;GradleDeprecated&#34;: Deprecated Gradle Construct
+&#34;DevModeObsolete&#34;: Dev Mode Obsolete
+&#34;DuplicatePlatformClasses&#34;: Duplicate Platform Classes
+&#34;GradleGetter&#34;: Gradle Implicit Getter Call
+&#34;GradlePluginVersion&#34;: Incompatible Android Gradle Plugin
+&#34;HighAppVersionCode&#34;: VersionCode too high
+&#34;GradleIdeError&#34;: Gradle IDE Support Issues
+&#34;GradlePath&#34;: Gradle Path Issues
+&#34;GradleDynamicVersion&#34;: Gradle Dynamic Version
+&#34;NotInterpolated&#34;: Incorrect Interpolation
+&#34;StringShouldBeInt&#34;: String should be int
+&#34;NewerVersionAvailable&#34;: Newer Library Versions Available
+&#34;MinSdkTooLow&#34;: API Version Too Low
+&#34;GridLayout&#34;: GridLayout validation
+&#34;HandlerLeak&#34;: Handler reference leaks
+&#34;HardcodedDebugMode&#34;: Hardcoded value of android:debuggable in the manifest
+&#34;HardcodedText&#34;: Hardcoded text
+&#34;HardwareIds&#34;: Hardware Id Usage
+&#34;IconDuplicatesConfig&#34;: Identical bitmaps across various configurations
+&#34;IconDuplicates&#34;: Duplicated icons under different names
+&#34;GifUsage&#34;: Using .gif format for bitmaps is discouraged
+&#34;IconColors&#34;: Icon colors do not follow the recommended visual style
+&#34;IconDensities&#34;: Icon densities validation
+&#34;IconDipSize&#34;: Icon density-independent size validation
+&#34;IconExpectedSize&#34;: Icon has incorrect size
+&#34;IconExtension&#34;: Icon format does not match the file extension
+&#34;IconLauncherShape&#34;: The launcher icon shape should use a distinct silhouette
+&#34;IconLocation&#34;: Image defined in density-independent drawable folder
+&#34;IconMissingDensityFolder&#34;: Missing density folder
+&#34;IconMixedNinePatch&#34;: Clashing PNG and 9-PNG files
+&#34;IconNoDpi&#34;: Icon appears in both -nodpi and dpi folders
+&#34;IconXmlAndPng&#34;: Icon is specified both as .xml file and as a bitmap
+&#34;ConvertToWebp&#34;: Convert to WebP
+&#34;WebpUnsupported&#34;: WebP Unsupported
+&#34;IncludeLayoutParam&#34;: Ignored layout params on include
+&#34;DisableBaselineAlignment&#34;: Missing baselineAligned attribute
+&#34;InefficientWeight&#34;: Inefficient layout weight
+&#34;NestedWeights&#34;: Nested layout weights
+&#34;Orientation&#34;: Missing explicit orientation
+&#34;Suspicious0dp&#34;: Suspicious 0dp dimension
+&#34;InstantApps&#34;: Instant App Issues
+&#34;DuplicateDivider&#34;: Unnecessary Divider Copy
+&#34;TrustAllX509TrustManager&#34;: Insecure TLS/SSL trust manager
+&#34;InvalidImeActionId&#34;: Invalid imeActionId declaration
+&#34;InvalidPackage&#34;: Package not included in Android
+&#34;DrawAllocation&#34;: Memory allocations within drawing code
+&#34;UseSparseArrays&#34;: HashMap can be replaced with SparseArray
+&#34;UseValueOf&#34;: Should use valueOf instead of new
+&#34;JavascriptInterface&#34;: Missing @JavascriptInterface on methods
+&#34;JobSchedulerService&#34;: JobScheduler problems
+&#34;KeyboardInaccessibleWidget&#34;: Keyboard inaccessible widget
+&#34;LabelFor&#34;: Missing labelFor attribute
+&#34;InconsistentLayout&#34;: Inconsistent Layouts
+&#34;InflateParams&#34;: Layout Inflation without a Parent
+&#34;StaticFieldLeak&#34;: Static Field Leaks
+&#34;DefaultLocale&#34;: Implied default locale in case conversion
+&#34;LocaleFolder&#34;: Wrong locale name
+&#34;GetLocales&#34;: Locale crash
+&#34;InvalidResourceFolder&#34;: Invalid Resource Folder
+&#34;WrongRegion&#34;: Suspicious Language/Region Combination
+&#34;UseAlpha2&#34;: Using 3-letter Codes
+&#34;LogConditional&#34;: Unconditional Logging Calls
+&#34;LongLogTag&#34;: Too Long Log Tags
+&#34;LogTagMismatch&#34;: Mismatched Log Tags
+&#34;AllowBackup&#34;: AllowBackup/FullBackupContent Problems
+&#34;MissingApplicationIcon&#34;: Missing application icon
+&#34;DeviceAdmin&#34;: Malformed Device Admin
+&#34;DuplicateActivity&#34;: Activity registered more than once
+&#34;DuplicateUsesFeature&#34;: Feature declared more than once
+&#34;GradleOverrides&#34;: Value overridden by Gradle build script
+&#34;IllegalResourceRef&#34;: Name and version must be integer or string, not
       resource
-&quot;MipmapIcons&quot;: Use Mipmap Launcher Icons
-&quot;MockLocation&quot;: Using mock location provider in production
-&quot;MultipleUsesSdk&quot;: Multiple &lt;uses-sdk&gt; elements in the manifest
-&quot;ManifestOrder&quot;: Incorrect order of elements in manifest
-&quot;MissingVersion&quot;: Missing application name/version
-&quot;OldTargetApi&quot;: Target SDK attribute is not targeting latest version
-&quot;UniquePermission&quot;: Permission names are not unique
-&quot;UsesMinSdkAttributes&quot;: Minimum SDK and target SDK attributes not defined
-&quot;WearableBindListener&quot;: Usage of Android Wear BIND_LISTENER is deprecated
-&quot;WrongManifestParent&quot;: Wrong manifest parent
-&quot;InvalidPermission&quot;: Invalid Permission Attribute
-&quot;ManifestResource&quot;: Manifest Resource References
-&quot;ManifestTypo&quot;: Typos in manifest tags
-&quot;FloatMath&quot;: Using FloatMath instead of Math
-&quot;MergeMarker&quot;: Code contains merge marker
-&quot;MergeRootFrame&quot;: FrameLayout can be replaced with &lt;merge&gt; tag
-&quot;IncompatibleMediaBrowserServiceCompatVersion&quot;: Obsolete version of
+&#34;MipmapIcons&#34;: Use Mipmap Launcher Icons
+&#34;MockLocation&#34;: Using mock location provider in production
+&#34;MultipleUsesSdk&#34;: Multiple &lt;uses-sdk&gt; elements in the manifest
+&#34;ManifestOrder&#34;: Incorrect order of elements in manifest
+&#34;MissingVersion&#34;: Missing application name/version
+&#34;OldTargetApi&#34;: Target SDK attribute is not targeting latest version
+&#34;UniquePermission&#34;: Permission names are not unique
+&#34;UsesMinSdkAttributes&#34;: Minimum SDK and target SDK attributes not defined
+&#34;WearableBindListener&#34;: Usage of Android Wear BIND_LISTENER is deprecated
+&#34;WrongManifestParent&#34;: Wrong manifest parent
+&#34;InvalidPermission&#34;: Invalid Permission Attribute
+&#34;ManifestResource&#34;: Manifest Resource References
+&#34;ManifestTypo&#34;: Typos in manifest tags
+&#34;FloatMath&#34;: Using FloatMath instead of Math
+&#34;MergeMarker&#34;: Code contains merge marker
+&#34;MergeRootFrame&#34;: FrameLayout can be replaced with &lt;merge&gt; tag
+&#34;IncompatibleMediaBrowserServiceCompatVersion&#34;: Obsolete version of
       MediaBrowserServiceCompat
-&quot;InnerclassSeparator&quot;: Inner classes should use $ rather than .
-&quot;Instantiatable&quot;: Registered class is not instantiatable
-&quot;MissingRegistered&quot;: Missing registered class
-&quot;MissingId&quot;: Fragments should specify an id or tag
-&quot;LibraryCustomView&quot;: Custom views in libraries should use res-auto-namespace
-&quot;ResAuto&quot;: Hardcoded Package in Namespace
-&quot;NamespaceTypo&quot;: Misspelled namespace declaration
-&quot;UnusedNamespace&quot;: Unused namespace
-&quot;NegativeMargin&quot;: Negative Margins
-&quot;NestedScrolling&quot;: Nested scrolling widgets
-&quot;NetworkSecurityConfig&quot;: Valid Network Security Config File
-&quot;MissingBackupPin&quot;: Missing Backup Pin
-&quot;PinSetExpiry&quot;: Validate &lt;pin-set&gt; expiration attribute
-&quot;NfcTechWhitespace&quot;: Whitespace in NFC tech lists
-&quot;UnlocalizedSms&quot;: SMS phone number missing country code
-&quot;ObjectAnimatorBinding&quot;: Incorrect ObjectAnimator Property
-&quot;AnimatorKeep&quot;: Missing @Keep for Animated Properties
-&quot;ObsoleteLayoutParam&quot;: Obsolete layout params
-&quot;OnClick&quot;: onClick method does not exist
-&quot;Overdraw&quot;: Overdraw: Painting regions more than once
-&quot;DalvikOverride&quot;: Method considered overridden by Dalvik
-&quot;OverrideAbstract&quot;: Not overriding abstract methods on older platforms
-&quot;ParcelCreator&quot;: Missing Parcelable CREATOR field
-&quot;UnusedQuantity&quot;: Unused quantity translations
-&quot;MissingQuantity&quot;: Missing quantity translation
-&quot;ImpliedQuantity&quot;: Implied Quantities
-&quot;ExportedPreferenceActivity&quot;: PreferenceActivity should not be exported
-&quot;PrivateApi&quot;: Using Private APIs
-&quot;PackagedPrivateKey&quot;: Packaged private key
-&quot;PrivateResource&quot;: Using private resources
-&quot;ProguardSplit&quot;: Proguard.cfg file contains generic Android rules
-&quot;Proguard&quot;: Using obsolete ProGuard configuration
-&quot;PropertyEscape&quot;: Incorrect property escapes
-&quot;UsingHttp&quot;: Using HTTP instead of HTTPS
-&quot;SpUsage&quot;: Using dp instead of sp for text sizes
-&quot;InOrMmUsage&quot;: Using mm or in dimensions
-&quot;PxUsage&quot;: Using 'px' dimension
-&quot;SmallSp&quot;: Text size is too small
-&quot;ParcelClassLoader&quot;: Default Parcel Class Loader
-&quot;PendingBindings&quot;: Missing Pending Bindings
-&quot;RecyclerView&quot;: RecyclerView Problems
-&quot;Registered&quot;: Class is not registered in the manifest
-&quot;RelativeOverlap&quot;: Overlapping items in RelativeLayout
-&quot;RequiredSize&quot;: Missing layout_width or layout_height attributes
-&quot;AaptCrash&quot;: Potential AAPT crash
-&quot;ResourceCycle&quot;: Cycle in resource definitions
-&quot;ResourceName&quot;: Resource with Wrong Prefix
-&quot;ValidRestrictions&quot;: Invalid Restrictions Descriptor
-&quot;RtlCompat&quot;: Right-to-left text compatibility issues
-&quot;RtlEnabled&quot;: Using RTL attributes without enabling RTL support
-&quot;RtlSymmetry&quot;: Padding and margin symmetry
-&quot;RtlHardcoded&quot;: Using left/right instead of start/end attributes
-&quot;ScrollViewSize&quot;: ScrollView size validation
-&quot;SdCardPath&quot;: Hardcoded reference to /sdcard
-&quot;SecureRandom&quot;: Using a fixed seed with SecureRandom
-&quot;TrulyRandom&quot;: Weak RNG
-&quot;ExportedContentProvider&quot;: Content provider does not require permission
-&quot;ExportedReceiver&quot;: Receiver does not require permission
-&quot;ExportedService&quot;: Exported service does not require permission
-&quot;SetWorldReadable&quot;: File.setReadable() used to make file world-readable
-&quot;SetWorldWritable&quot;: File.setWritable() used to make file world-writable
-&quot;GrantAllUris&quot;: Content provider shares everything
-&quot;WorldReadableFiles&quot;: openFileOutput() or similar call passing
+&#34;InnerclassSeparator&#34;: Inner classes should use $ rather than .
+&#34;Instantiatable&#34;: Registered class is not instantiatable
+&#34;MissingRegistered&#34;: Missing registered class
+&#34;MissingId&#34;: Fragments should specify an id or tag
+&#34;LibraryCustomView&#34;: Custom views in libraries should use res-auto-namespace
+&#34;ResAuto&#34;: Hardcoded Package in Namespace
+&#34;NamespaceTypo&#34;: Misspelled namespace declaration
+&#34;UnusedNamespace&#34;: Unused namespace
+&#34;NegativeMargin&#34;: Negative Margins
+&#34;NestedScrolling&#34;: Nested scrolling widgets
+&#34;NetworkSecurityConfig&#34;: Valid Network Security Config File
+&#34;MissingBackupPin&#34;: Missing Backup Pin
+&#34;PinSetExpiry&#34;: Validate &lt;pin-set&gt; expiration attribute
+&#34;NfcTechWhitespace&#34;: Whitespace in NFC tech lists
+&#34;UnlocalizedSms&#34;: SMS phone number missing country code
+&#34;ObjectAnimatorBinding&#34;: Incorrect ObjectAnimator Property
+&#34;AnimatorKeep&#34;: Missing @Keep for Animated Properties
+&#34;ObsoleteLayoutParam&#34;: Obsolete layout params
+&#34;OnClick&#34;: onClick method does not exist
+&#34;Overdraw&#34;: Overdraw: Painting regions more than once
+&#34;DalvikOverride&#34;: Method considered overridden by Dalvik
+&#34;OverrideAbstract&#34;: Not overriding abstract methods on older platforms
+&#34;ParcelCreator&#34;: Missing Parcelable CREATOR field
+&#34;UnusedQuantity&#34;: Unused quantity translations
+&#34;MissingQuantity&#34;: Missing quantity translation
+&#34;ImpliedQuantity&#34;: Implied Quantities
+&#34;ExportedPreferenceActivity&#34;: PreferenceActivity should not be exported
+&#34;PrivateApi&#34;: Using Private APIs
+&#34;PackagedPrivateKey&#34;: Packaged private key
+&#34;PrivateResource&#34;: Using private resources
+&#34;ProguardSplit&#34;: Proguard.cfg file contains generic Android rules
+&#34;Proguard&#34;: Using obsolete ProGuard configuration
+&#34;PropertyEscape&#34;: Incorrect property escapes
+&#34;UsingHttp&#34;: Using HTTP instead of HTTPS
+&#34;SpUsage&#34;: Using dp instead of sp for text sizes
+&#34;InOrMmUsage&#34;: Using mm or in dimensions
+&#34;PxUsage&#34;: Using &#39;px&#39; dimension
+&#34;SmallSp&#34;: Text size is too small
+&#34;ParcelClassLoader&#34;: Default Parcel Class Loader
+&#34;PendingBindings&#34;: Missing Pending Bindings
+&#34;RecyclerView&#34;: RecyclerView Problems
+&#34;Registered&#34;: Class is not registered in the manifest
+&#34;RelativeOverlap&#34;: Overlapping items in RelativeLayout
+&#34;RequiredSize&#34;: Missing layout_width or layout_height attributes
+&#34;AaptCrash&#34;: Potential AAPT crash
+&#34;ResourceCycle&#34;: Cycle in resource definitions
+&#34;ResourceName&#34;: Resource with Wrong Prefix
+&#34;ValidRestrictions&#34;: Invalid Restrictions Descriptor
+&#34;RtlCompat&#34;: Right-to-left text compatibility issues
+&#34;RtlEnabled&#34;: Using RTL attributes without enabling RTL support
+&#34;RtlSymmetry&#34;: Padding and margin symmetry
+&#34;RtlHardcoded&#34;: Using left/right instead of start/end attributes
+&#34;ScrollViewSize&#34;: ScrollView size validation
+&#34;SdCardPath&#34;: Hardcoded reference to /sdcard
+&#34;SecureRandom&#34;: Using a fixed seed with SecureRandom
+&#34;TrulyRandom&#34;: Weak RNG
+&#34;ExportedContentProvider&#34;: Content provider does not require permission
+&#34;ExportedReceiver&#34;: Receiver does not require permission
+&#34;ExportedService&#34;: Exported service does not require permission
+&#34;SetWorldReadable&#34;: File.setReadable() used to make file world-readable
+&#34;SetWorldWritable&#34;: File.setWritable() used to make file world-writable
+&#34;GrantAllUris&#34;: Content provider shares everything
+&#34;WorldReadableFiles&#34;: openFileOutput() or similar call passing
       MODE_WORLD_READABLE
-&quot;WorldWriteableFiles&quot;: openFileOutput() or similar call passing
+&#34;WorldWriteableFiles&#34;: openFileOutput() or similar call passing
       MODE_WORLD_WRITEABLE
-&quot;ServiceCast&quot;: Wrong system service casts
-&quot;WifiManagerLeak&quot;: WifiManager Leak
-&quot;WifiManagerPotentialLeak&quot;: WifiManager Potential Leak
-&quot;SetJavaScriptEnabled&quot;: Using setJavaScriptEnabled
-&quot;SignatureOrSystemPermissions&quot;: signatureOrSystem permissions declared
-&quot;SQLiteString&quot;: Using STRING instead of TEXT
-&quot;SSLCertificateSocketFactoryCreateSocket&quot;: Insecure call to
+&#34;ServiceCast&#34;: Wrong system service casts
+&#34;WifiManagerLeak&#34;: WifiManager Leak
+&#34;WifiManagerPotentialLeak&#34;: WifiManager Potential Leak
+&#34;SetJavaScriptEnabled&#34;: Using setJavaScriptEnabled
+&#34;SignatureOrSystemPermissions&#34;: signatureOrSystem permissions declared
+&#34;SQLiteString&#34;: Using STRING instead of TEXT
+&#34;SSLCertificateSocketFactoryCreateSocket&#34;: Insecure call to
       SSLCertificateSocketFactory.createSocket()
-&quot;SSLCertificateSocketFactoryGetInsecure&quot;: Call to
+&#34;SSLCertificateSocketFactoryGetInsecure&#34;: Call to
       SSLCertificateSocketFactory.getInsecure()
-&quot;StateListReachable&quot;: Unreachable state in a &lt;selector&gt;
-&quot;AuthLeak&quot;: Code might contain an auth leak
-&quot;StringFormatCount&quot;: Formatting argument types incomplete or inconsistent
-&quot;StringFormatMatches&quot;: String.format string doesn't match the XML format
+&#34;StateListReachable&#34;: Unreachable state in a &lt;selector&gt;
+&#34;AuthLeak&#34;: Code might contain an auth leak
+&#34;StringFormatCount&#34;: Formatting argument types incomplete or inconsistent
+&#34;StringFormatMatches&#34;: String.format string doesn&#39;t match the XML format
       string
-&quot;StringFormatInvalid&quot;: Invalid format string
-&quot;PluralsCandidate&quot;: Potential Plurals
-&quot;UseCheckPermission&quot;: Using the result of check permission calls
-&quot;CheckResult&quot;: Ignoring results
-&quot;ResourceAsColor&quot;: Should pass resolved color instead of resource id
-&quot;MissingPermission&quot;: Missing Permissions
-&quot;Range&quot;: Outside Range
-&quot;ResourceType&quot;: Wrong Resource Type
-&quot;RestrictedApi&quot;: Restricted API
-&quot;WrongThread&quot;: Wrong Thread
-&quot;WrongConstant&quot;: Incorrect constant
-&quot;VisibleForTests&quot;: Visible Only For Tests
-&quot;ProtectedPermissions&quot;: Using system app permission
-&quot;TextFields&quot;: Missing inputType or hint
-&quot;TextViewEdits&quot;: TextView should probably be an EditText instead
-&quot;SelectableText&quot;: Dynamic text should probably be selectable
-&quot;MenuTitle&quot;: Missing menu title
-&quot;ShowToast&quot;: Toast created but not shown
-&quot;TooDeepLayout&quot;: Layout hierarchy is too deep
-&quot;TooManyViews&quot;: Layout has too many views
-&quot;ExtraTranslation&quot;: Extra translation
-&quot;MissingTranslation&quot;: Incomplete translation
-&quot;Typos&quot;: Spelling error
-&quot;TypographyDashes&quot;: Hyphen can be replaced with dash
-&quot;TypographyEllipsis&quot;: Ellipsis string can be replaced with ellipsis character
-&quot;TypographyFractions&quot;: Fraction string can be replaced with fraction
+&#34;StringFormatInvalid&#34;: Invalid format string
+&#34;PluralsCandidate&#34;: Potential Plurals
+&#34;UseCheckPermission&#34;: Using the result of check permission calls
+&#34;CheckResult&#34;: Ignoring results
+&#34;ResourceAsColor&#34;: Should pass resolved color instead of resource id
+&#34;MissingPermission&#34;: Missing Permissions
+&#34;Range&#34;: Outside Range
+&#34;ResourceType&#34;: Wrong Resource Type
+&#34;RestrictedApi&#34;: Restricted API
+&#34;WrongThread&#34;: Wrong Thread
+&#34;WrongConstant&#34;: Incorrect constant
+&#34;VisibleForTests&#34;: Visible Only For Tests
+&#34;ProtectedPermissions&#34;: Using system app permission
+&#34;TextFields&#34;: Missing inputType or hint
+&#34;TextViewEdits&#34;: TextView should probably be an EditText instead
+&#34;SelectableText&#34;: Dynamic text should probably be selectable
+&#34;MenuTitle&#34;: Missing menu title
+&#34;ShowToast&#34;: Toast created but not shown
+&#34;TooDeepLayout&#34;: Layout hierarchy is too deep
+&#34;TooManyViews&#34;: Layout has too many views
+&#34;ExtraTranslation&#34;: Extra translation
+&#34;MissingTranslation&#34;: Incomplete translation
+&#34;Typos&#34;: Spelling error
+&#34;TypographyDashes&#34;: Hyphen can be replaced with dash
+&#34;TypographyEllipsis&#34;: Ellipsis string can be replaced with ellipsis character
+&#34;TypographyFractions&#34;: Fraction string can be replaced with fraction
       character
-&quot;TypographyOther&quot;: Other typographical problems
-&quot;TypographyQuotes&quot;: Straight quotes can be replaced with curvy quotes
-&quot;UnsafeProtectedBroadcastReceiver&quot;: Unsafe Protected BroadcastReceiver
-&quot;UnprotectedSMSBroadcastReceiver&quot;: Unprotected SMS BroadcastReceiver
-&quot;UnusedResources&quot;: Unused resources
-&quot;UnusedIds&quot;: Unused id
-&quot;UseCompoundDrawables&quot;: Node can be replaced by a TextView with compound
+&#34;TypographyOther&#34;: Other typographical problems
+&#34;TypographyQuotes&#34;: Straight quotes can be replaced with curvy quotes
+&#34;UnsafeProtectedBroadcastReceiver&#34;: Unsafe Protected BroadcastReceiver
+&#34;UnprotectedSMSBroadcastReceiver&#34;: Unprotected SMS BroadcastReceiver
+&#34;UnusedResources&#34;: Unused resources
+&#34;UnusedIds&#34;: Unused id
+&#34;UseCompoundDrawables&#34;: Node can be replaced by a TextView with compound
       drawables
-&quot;UselessLeaf&quot;: Useless leaf layout
-&quot;UselessParent&quot;: Useless parent layout
-&quot;EnforceUTF8&quot;: Encoding used in resource files is not UTF-8
-&quot;VectorRaster&quot;: Vector Image Generation
-&quot;VectorDrawableCompat&quot;: Using VectorDrawableCompat
-&quot;VectorPath&quot;: Long vector paths
-&quot;InvalidVectorPath&quot;: Invalid vector paths
-&quot;ViewConstructor&quot;: Missing View constructors for XML inflation
-&quot;ViewHolder&quot;: View Holder Candidates
-&quot;ViewTag&quot;: Tagged object leaks
-&quot;WrongViewCast&quot;: Mismatched view type
-&quot;FindViewByIdCast&quot;: Add Explicit Cast
-&quot;Wakelock&quot;: Incorrect WakeLock usage
-&quot;WakelockTimeout&quot;: Using wakeLock without timeout
-&quot;InvalidWearFeatureAttribute&quot;: Invalid attribute for Wear uses-feature
-&quot;WearStandaloneAppFlag&quot;: Invalid or missing Wear standalone app flag
-&quot;WebViewLayout&quot;: WebViews in wrap_content parents
-&quot;WrongCall&quot;: Using wrong draw/layout method
-&quot;WrongCase&quot;: Wrong case for view tag
-&quot;InvalidId&quot;: Invalid ID declaration
-&quot;NotSibling&quot;: RelativeLayout Invalid Constraints
-&quot;UnknownId&quot;: Reference to an unknown id
-&quot;UnknownIdInLayout&quot;: Reference to an id that is not in the current layout
-&quot;SuspiciousImport&quot;: 'import android.R' statement
-&quot;WrongFolder&quot;: Resource file in the wrong res folder
-&quot;WrongThreadInterprocedural&quot;: Wrong Thread (Interprocedural)
-</code></pre>
-
-<h3 id="idの詳細を知るには">IDの詳細を知るには</h3>
-
-<pre><code>% $ANDROID_HOME/tools/bin/lint --show  HardcodedText
+&#34;UselessLeaf&#34;: Useless leaf layout
+&#34;UselessParent&#34;: Useless parent layout
+&#34;EnforceUTF8&#34;: Encoding used in resource files is not UTF-8
+&#34;VectorRaster&#34;: Vector Image Generation
+&#34;VectorDrawableCompat&#34;: Using VectorDrawableCompat
+&#34;VectorPath&#34;: Long vector paths
+&#34;InvalidVectorPath&#34;: Invalid vector paths
+&#34;ViewConstructor&#34;: Missing View constructors for XML inflation
+&#34;ViewHolder&#34;: View Holder Candidates
+&#34;ViewTag&#34;: Tagged object leaks
+&#34;WrongViewCast&#34;: Mismatched view type
+&#34;FindViewByIdCast&#34;: Add Explicit Cast
+&#34;Wakelock&#34;: Incorrect WakeLock usage
+&#34;WakelockTimeout&#34;: Using wakeLock without timeout
+&#34;InvalidWearFeatureAttribute&#34;: Invalid attribute for Wear uses-feature
+&#34;WearStandaloneAppFlag&#34;: Invalid or missing Wear standalone app flag
+&#34;WebViewLayout&#34;: WebViews in wrap_content parents
+&#34;WrongCall&#34;: Using wrong draw/layout method
+&#34;WrongCase&#34;: Wrong case for view tag
+&#34;InvalidId&#34;: Invalid ID declaration
+&#34;NotSibling&#34;: RelativeLayout Invalid Constraints
+&#34;UnknownId&#34;: Reference to an unknown id
+&#34;UnknownIdInLayout&#34;: Reference to an id that is not in the current layout
+&#34;SuspiciousImport&#34;: &#39;import android.R&#39; statement
+&#34;WrongFolder&#34;: Resource file in the wrong res folder
+&#34;WrongThreadInterprocedural&#34;: Wrong Thread (Interprocedural)
+</code></pre><h3 id=idの詳細を知るには>IDの詳細を知るには<a class=anchorjs-link href=#id%e3%81%ae%e8%a9%b3%e7%b4%b0%e3%82%92%e7%9f%a5%e3%82%8b%e3%81%ab%e3%81%af></a></h3><pre tabindex=0><code>% $ANDROID_HOME/tools/bin/lint --show  HardcodedText
 HardcodedText
 -------------
 Summary: Hardcoded text
@@ -1298,277 +385,189 @@ translations for existing string resources.
 
 There are quickfixes to automatically extract this hardcoded string into a
 resource lookup.
-</code></pre>
-
-<h1 id="参考">参考</h1>
-
-<ul>
-<li><a href="https://developer.android.com/studio/write/lint.html">Lint によるコードの改善</a></li>
-</ul>
-
-    <div id="ad">
-    <aside>
-        <p>スポンサーリンク</p>
-        <div class="responsive-unit">
-            <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
-            
-            <ins class="adsbygoogle"
-                 style="display:block"
-                 data-ad-client="ca-pub-3131366896030715"
-                 data-ad-slot="5415567707"
-                 data-ad-format="auto"></ins>
-            <script>
-(adsbygoogle = window.adsbygoogle || []).push({});
-
-            </script>
-        </div>
-    </aside>
-</div>
-    <div id="share-top">
-    <ul class="clearfix">
-        
-        <li>
-            <a href="http://b.hatena.ne.jp/entry/https://kwmt27.net/2017/12/09/android-studio-lint-for-kotlin/" class="hatena-bookmark-button"
-               data-hatena-bookmark-title="Android Lint" data-hatena-bookmark-layout="vertical-balloon"
-               data-hatena-bookmark-lang="ja" title="このエントリーをはてなブックマークに追加"><img
-                    src="https://b.st-hatena.com/images/entry-button/button-only@2x.png" alt="このエントリーをはてなブックマークに追加"
-                    width="20" height="20" style="border: none;"/></a>
-            <script type="text/javascript" src="https://b.st-hatena.com/js/bookmark_button.js" charset="utf-8"
-                    async="async"></script>
-
-        </li>
-        
-        
-        <li>
-            <div class="g-plusone" data-size="tall" data-href="https://kwmt27.net/2017/12/09/android-studio-lint-for-kotlin/"></div>
-        </li>
-
-        
-        <li>
-
-            <div class="fb-like" data-href="https://kwmt27.net/2017/12/09/android-studio-lint-for-kotlin/" data-layout="box_count" data-action="like"
-                 data-show-faces="false" data-share="false"></div>
-        </li>
-
-        
-        <li>
-            <a data-pocket-label="pocket" data-pocket-count="vertical" class="pocket-btn" data-lang="en"></a>
-            <script type="text/javascript">
-                !function(d,i){if(!d.getElementById(i)){var j=d.createElement("script");j.id=i;j.src="https://widgets.getpocket.com/v1/j/btn.js?v=1";var w=d.getElementById(i);d.body.appendChild(j);}}(document,"pocket-btn-js");
-            </script>
-        </li>
-
-    </ul>
-</div>
-    <div id="social-bar">
-	<ul class="rrssb-buttons clearfix">
-      <li class="email">
-          <a href="mailto:?subject=Android%20Lint&amp;body=https://kwmt27.net/2017/12/09/android-studio-lint-for-kotlin/">
-              <span class="icon">
-                  <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="28px" height="28px" viewBox="0 0 28 28" enable-background="new 0 0 28 28" xml:space="preserve">
-                      <path transform="scale(0.014,-0.014) translate(0,-1670)" d="M1792 826v-794q0 -66 -47 -113t-113 -47h-1472q-66 0 -113 47t-47 113v794q44 -49 101 -87q362 -246 497 -345q57 -42 92.5 -65.5t94.5 -48t110 -24.5h1h1q51 0 110 24.5t94.5 48t92.5 65.5q170 123 498 345q57 39 100 87zM1792 1120q0 -79 -49 -151t-122 -123 q-376 -261 -468 -325q-10 -7 -42.5 -30.5t-54 -38t-52 -32.5t-57.5 -27t-50 -9h-1h-1q-23 0 -50 9t-57.5 27t-52 32.5t-54 38t-42.5 30.5q-91 64 -262 182.5t-205 142.5q-62 42 -117 115.5t-55 136.5q0 78 41.5 130t118.5 52h1472q65 0 112.5 -47t47.5 -113z"/>
-                  </svg>
-              </span>
-              <span class="text">Email</span>
-          </a>
-      </li>
-      <li class="facebook">
-          <a href="https://www.facebook.com/sharer/sharer.php?u=https://kwmt27.net/2017/12/09/android-studio-lint-for-kotlin/" class="popup">
-              <span class="icon">
-                  <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="28px" height="28px" viewBox="0 0 28 28" enable-background="new 0 0 28 28" xml:space="preserve">
-                      <path d="M27.825,4.783c0-2.427-2.182-4.608-4.608-4.608H4.783c-2.422,0-4.608,2.182-4.608,4.608v18.434 c0,2.427,2.181,4.608,4.608,4.608H14V17.379h-3.379v-4.608H14v-1.795c0-3.089,2.335-5.885,5.192-5.885h3.718v4.608h-3.726 c-0.408,0-0.884,0.492-0.884,1.236v1.836h4.609v4.608h-4.609v10.446h4.916c2.422,0,4.608-2.188,4.608-4.608V4.783z"/>
-                  </svg>
-              </span>
-              <span class="text">Facebook</span>
-          </a>
-      </li>
-			<li class="twitter">
-          <a href="http://twitter.com/home?status=Android%20Lint%20https://kwmt27.net/2017/12/09/android-studio-lint-for-kotlin/" class="popup">
-              <span class="icon">
-                  <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="28px" height="28px" viewBox="0 0 28 28" enable-background="new 0 0 28 28" xml:space="preserve">
-		                  <path d="M24.253,8.756C24.689,17.08,18.297,24.182,9.97,24.62c-3.122,0.162-6.219-0.646-8.861-2.32 c2.703,0.179,5.376-0.648,7.508-2.321c-2.072-0.247-3.818-1.661-4.489-3.638c0.801,0.128,1.62,0.076,2.399-0.155 C4.045,15.72,2.215,13.6,2.115,11.077c0.688,0.275,1.426,0.407,2.168,0.386c-2.135-1.65-2.729-4.621-1.394-6.965 C5.575,7.816,9.54,9.84,13.803,10.071c-0.842-2.739,0.694-5.64,3.434-6.482c2.018-0.623,4.212,0.044,5.546,1.683 c1.186-0.213,2.318-0.662,3.329-1.317c-0.385,1.256-1.247,2.312-2.399,2.942c1.048-0.106,2.069-0.394,3.019-0.851 C26.275,7.229,25.39,8.196,24.253,8.756z"/>
-                  </svg>
-              </span>
-              <span class="text">Twitter</span>
-          </a>
-      </li>
-			<li class="linkedin">
-          <a href="http://www.linkedin.com/shareArticle?mini=true&amp;url=https://kwmt27.net/2017/12/09/android-studio-lint-for-kotlin/&amp;title=Android%20Lint&amp;summary=%e3%82%b3%e3%83%9e%e3%83%b3%e3%83%89%e3%83%a9%e3%82%a4%e3%83%b3%e3%81%8b%e3%82%89lint%e3%82%92%e5%ae%9f%e8%a1%8c%e3%81%99%e3%82%8b%e3%81%ab%e3%81%af%20project%20root%20%e3%81%a7%e4%b8%8b%e8%a8%98%e3%82%92%e5%ae%9f%e8%a1%8c%e3%81%97%e3%81%be%e3%81%99%0a.%2fgradlew%20lint%20%20%e7%89%b9%e5%ae%9a%e3%81%ae%e3%83%93%e3%83%ab%e3%83%89%20%e3%83%90%e3%83%aa%e3%82%a2%e3%83%b3%e3%83%88%e3%81%ab%e5%af%be%e3%81%97%e3%81%a6%e3%81%ae%e3%81%bf%20lint%20%e3%82%bf%e3%82%b9%e3%82%af%e3%82%92%e5%ae%9f%e8%a1%8c%e3%81%99%e3%82%8b%e3%81%ab%e3%81%af%0a%ef%bc%88%e4%be%8b%ef%bc%89%0a.%2fgradlew%20lintDevelopDebug%20%20%e8%a8%ad%e5%ae%9a%20ID%e3%83%aa%e3%82%b9%e3%83%88%e3%82%92%e8%a1%a8%e7%a4%ba%e3%81%99%e3%82%8b%e3%81%ab%e3%81%af%ef%bc%9f%20%25%20%24ANDROID_HOME%2ftools%2fbin%2flint%20--list%20Valid%20issue%20categories%3a%20Correctness%20Correctness%3aMessages%20Correctness%3aChrome%20OS%20Security%20Performance%20Usability%3aTypography%20Usability%3aIcons%20Usability%20Accessibility%20Internationalization%20Internationalization%3aBidirectional%20Text%20Valid%20issue%20id%27s%3a%20%26quot%3bContentDescription%26quot%3b%3a%20Image%20without%20contentDescription%20%26quot%3bAddJavascriptInterface%26quot%3b%3a%20addJavascriptInterface%20Called%20%26quot%3bShortAlarm%26quot%3b%3a%20Short%20or%20Frequent%20Alarm%20%26quot%3bAllCaps%26quot%3b%3a%20Combining%20textAllCaps%20and%20markup%20%26quot%3bAllowAllHostnameVerifier%26quot%3b%3a%20Insecure%20HostnameVerifier%20%26quot%3bAlwaysShowAction%26quot%3b%3a%20Usage%20of%20showAsAction%3dalways%20%26quot%3bInvalidUsesTagAttribute%26quot%3b%3a%20Invalid%20name%20attribute%20for%20uses%20element...." class="popup">
-              <span class="icon">
-                  <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="28px" height="28px" viewBox="0 0 28 28" enable-background="new 0 0 28 28" xml:space="preserve">
-                      <path d="M25.424,15.887v8.447h-4.896v-7.882c0-1.979-0.709-3.331-2.48-3.331c-1.354,0-2.158,0.911-2.514,1.803 c-0.129,0.315-0.162,0.753-0.162,1.194v8.216h-4.899c0,0,0.066-13.349,0-14.731h4.899v2.088c-0.01,0.016-0.023,0.032-0.033,0.048 h0.033V11.69c0.65-1.002,1.812-2.435,4.414-2.435C23.008,9.254,25.424,11.361,25.424,15.887z M5.348,2.501 c-1.676,0-2.772,1.092-2.772,2.539c0,1.421,1.066,2.538,2.717,2.546h0.032c1.709,0,2.771-1.132,2.771-2.546 C8.054,3.593,7.019,2.501,5.343,2.501H5.348z M2.867,24.334h4.897V9.603H2.867V24.334z"/>
-                  </svg>
-              </span>
-              <span class="text">LinkedIn</span>
-          </a>
-      </li>
-      <li class="tumblr">
-					<script>
-						document.write('<a href="http://www.tumblr.com/share?v=3&amp;u=' + encodeURIComponent('https:\/\/kwmt27.net\/2017\/12\/09\/android-studio-lint-for-kotlin\/') + '&amp;t=Android Lint" class="popup">');
-					</script>
-              <span class="icon">
-                  <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" x="0px" y="0px" width="28px" height="28px" viewBox="0 0 28 28" enable-background="new 0 0 28 28" xml:space="preserve">
-											<path d="M18.02 21.842c-2.029 0.052-2.422-1.396-2.439-2.446v-7.294h4.729V7.874h-4.71V1.592c0 0-3.653 0-3.714 0 s-0.167 0.053-0.182 0.186c-0.218 1.935-1.144 5.33-4.988 6.688v3.637h2.927v7.677c0 2.8 1.7 6.7 7.3 6.6 c1.863-0.03 3.934-0.795 4.392-1.453l-1.22-3.539C19.595 21.6 18.7 21.8 18 21.842z"/>
-									</svg>
-              </span>
-              <span class="text">Tumblr</span>
-          <script>document.write('</a>');</script>
-      </li>
-      <li class="reddit">
-          <a href="http://www.reddit.com/submit?url=https://kwmt27.net/2017/12/09/android-studio-lint-for-kotlin/">
-              <span class="icon">
-                  <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" x="0px" y="0px" width="28px" height="28px" viewBox="0 0 28 28" enable-background="new 0 0 28 28" xml:space="preserve">
-											<g>
-													<path d="M11.794 15.316c0-1.029-0.835-1.895-1.866-1.895c-1.03 0-1.893 0.865-1.893 1.895s0.863 1.9 1.9 1.9 C10.958 17.2 11.8 16.3 11.8 15.316z"/>
-													<path d="M18.1 13.422c-1.029 0-1.895 0.864-1.895 1.895c0 1 0.9 1.9 1.9 1.865c1.031 0 1.869-0.836 1.869-1.865 C19.969 14.3 19.1 13.4 18.1 13.422z"/>
-													<path d="M17.527 19.791c-0.678 0.678-1.826 1.006-3.514 1.006c-0.004 0-0.009 0-0.014 0c-0.004 0-0.01 0-0.015 0 c-1.686 0-2.834-0.328-3.51-1.005c-0.264-0.265-0.693-0.265-0.958 0c-0.264 0.265-0.264 0.7 0 1 c0.943 0.9 2.4 1.4 4.5 1.402c0.005 0 0 0 0 0c0.005 0 0 0 0 0c2.066 0 3.527-0.459 4.47-1.402 c0.265-0.264 0.265-0.693 0.002-0.958C18.221 19.5 17.8 19.5 17.5 19.791z"/>
-													<path d="M27.707 13.267c0-1.785-1.453-3.237-3.236-3.237c-0.793 0-1.518 0.287-2.082 0.761c-2.039-1.295-4.646-2.069-7.438-2.219 l1.483-4.691l4.062 0.956c0.071 1.4 1.3 2.6 2.7 2.555c1.488 0 2.695-1.208 2.695-2.695C25.881 3.2 24.7 2 23.2 2 c-1.059 0-1.979 0.616-2.42 1.508l-4.633-1.091c-0.344-0.081-0.693 0.118-0.803 0.455l-1.793 5.7 C10.548 8.6 7.7 9.4 5.6 10.75C5.006 10.3 4.3 10 3.5 10.029c-1.785 0-3.237 1.452-3.237 3.2 c0 1.1 0.6 2.1 1.4 2.69c-0.04 0.272-0.061 0.551-0.061 0.831c0 2.3 1.3 4.4 3.7 5.9 c2.299 1.5 5.3 2.3 8.6 2.325c3.228 0 6.271-0.825 8.571-2.325c2.387-1.56 3.7-3.66 3.7-5.917 c0-0.26-0.016-0.514-0.051-0.768C27.088 15.5 27.7 14.4 27.7 13.267z M23.186 3.355c0.74 0 1.3 0.6 1.3 1.3 c0 0.738-0.6 1.34-1.34 1.34s-1.342-0.602-1.342-1.34C21.844 4 22.4 3.4 23.2 3.355z M1.648 13.3 c0-1.038 0.844-1.882 1.882-1.882c0.31 0 0.6 0.1 0.9 0.209c-1.049 0.868-1.813 1.861-2.26 2.9 C1.832 14.2 1.6 13.8 1.6 13.267z M21.773 21.57c-2.082 1.357-4.863 2.105-7.831 2.105c-2.967 0-5.747-0.748-7.828-2.105 c-1.991-1.301-3.088-3-3.088-4.782c0-1.784 1.097-3.484 3.088-4.784c2.081-1.358 4.861-2.106 7.828-2.106 c2.967 0 5.7 0.7 7.8 2.106c1.99 1.3 3.1 3 3.1 4.784C24.859 18.6 23.8 20.3 21.8 21.57z M25.787 14.6 c-0.432-1.084-1.191-2.095-2.244-2.977c0.273-0.156 0.59-0.245 0.928-0.245c1.035 0 1.9 0.8 1.9 1.9 C26.354 13.8 26.1 14.3 25.8 14.605z"/>
-											</g>
-									</svg>
-              </span>
-              <span class="text">Reddit</span>
-          </a>
-      </li>
-      <li class="googleplus">
-          <a href="https://plus.google.com/share?url=https://kwmt27.net/2017/12/09/android-studio-lint-for-kotlin/" class="popup">
-              <span class="icon">
-                  <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="28px" height="28px" viewBox="0 0 28 28" enable-background="new 0 0 28 28" xml:space="preserve">
-                      <g>
-                          <path d="M14.703,15.854l-1.219-0.948c-0.372-0.308-0.88-0.715-0.88-1.459c0-0.748,0.508-1.223,0.95-1.663 c1.42-1.119,2.839-2.309,2.839-4.817c0-2.58-1.621-3.937-2.399-4.581h2.097l2.202-1.383h-6.67c-1.83,0-4.467,0.433-6.398,2.027 C3.768,4.287,3.059,6.018,3.059,7.576c0,2.634,2.022,5.328,5.604,5.328c0.339,0,0.71-0.033,1.083-0.068 c-0.167,0.408-0.336,0.748-0.336,1.324c0,1.04,0.551,1.685,1.011,2.297c-1.524,0.104-4.37,0.273-6.467,1.562 c-1.998,1.188-2.605,2.916-2.605,4.137c0,2.512,2.358,4.84,7.289,4.84c5.822,0,8.904-3.223,8.904-6.41 c0.008-2.327-1.359-3.489-2.829-4.731H14.703z M10.269,11.951c-2.912,0-4.231-3.765-4.231-6.037c0-0.884,0.168-1.797,0.744-2.511 c0.543-0.679,1.489-1.12,2.372-1.12c2.807,0,4.256,3.798,4.256,6.242c0,0.612-0.067,1.694-0.845,2.478 c-0.537,0.55-1.438,0.948-2.295,0.951V11.951z M10.302,25.609c-3.621,0-5.957-1.732-5.957-4.142c0-2.408,2.165-3.223,2.911-3.492 c1.421-0.479,3.25-0.545,3.555-0.545c0.338,0,0.52,0,0.766,0.034c2.574,1.838,3.706,2.757,3.706,4.479 c-0.002,2.073-1.736,3.665-4.982,3.649L10.302,25.609z"/>
-                          <polygon points="23.254,11.89 23.254,8.521 21.569,8.521 21.569,11.89 18.202,11.89 18.202,13.604 21.569,13.604 21.569,17.004 23.254,17.004 23.254,13.604 26.653,13.604 26.653,11.89"/>
-                      </g>
-                  </svg>
-              </span>
-              <span class="text">Google+</span>
-          </a>
-      </li>
-      <li class="pinterest">
-          <script>
-						var imgurl = "https:\/\/kwmt27.net\/logo.png";
-						var firstimg = document.getElementsByClassName("post")[0].getElementsByTagName("img")[0];
-						if (firstimg !== undefined) {
-							imgurl = firstimg.src;
-						}
-						document.write('<a href="http://pinterest.com/pin/create/button/?url=https:\/\/kwmt27.net\/2017\/12\/09\/android-studio-lint-for-kotlin\/&amp;media=' + imgurl + '&amp;description=Android Lint" class="popup">');
-					</script>
-              <span class="icon">
-                  <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="28px" height="28px" viewBox="0 0 28 28" enable-background="new 0 0 28 28" xml:space="preserve">
-		                  <path d="M14.021,1.57C6.96,1.57,1.236,7.293,1.236,14.355c0,7.062,5.724,12.785,12.785,12.785c7.061,0,12.785-5.725,12.785-12.785 C26.807,7.294,21.082,1.57,14.021,1.57z M15.261,18.655c-1.161-0.09-1.649-0.666-2.559-1.219c-0.501,2.626-1.113,5.145-2.925,6.458 c-0.559-3.971,0.822-6.951,1.462-10.116c-1.093-1.84,0.132-5.545,2.438-4.632c2.837,1.123-2.458,6.842,1.099,7.557 c3.711,0.744,5.227-6.439,2.925-8.775c-3.325-3.374-9.678-0.077-8.897,4.754c0.19,1.178,1.408,1.538,0.489,3.168 C7.165,15.378,6.53,13.7,6.611,11.462c0.131-3.662,3.291-6.227,6.46-6.582c4.007-0.448,7.771,1.474,8.29,5.239 c0.579,4.255-1.816,8.865-6.102,8.533L15.261,18.655z"/>
-                  </svg>
-              </span>
-              <span class="text">Pinterest</span>
-          <script>document.write('</a>');</script>
-      </li>
-      <li class="pocket">
-          <a href="https://getpocket.com/save?url=https://kwmt27.net/2017/12/09/android-studio-lint-for-kotlin/"  class="popup">
-              <span class="icon">
-                  <svg width="32px" height="28px" viewBox="0 0 32 28" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:sketch="http://www.bohemiancoding.com/sketch/ns">
-                      <path d="M28.7817528,0.00172488695 C30.8117487,0.00431221738 31.9749312,1.12074529 31.9644402,3.10781507 C31.942147,6.67703739 32.1336065,10.2669583 31.8057648,13.8090137 C30.7147076,25.5813672 17.2181194,31.8996281 7.20714461,25.3808491 C2.71833574,22.4571656 0.196577202,18.3122624 0.0549495772,12.9357897 C-0.0342233715,9.5774348 0.00642900214,6.21519891 0.0300336062,2.85555035 C0.0405245414,1.1129833 1.21157517,0.0146615391 3.01995012,0.00819321302 C7.34746087,-0.00603710433 11.6775944,0.00431221738 16.0064164,0.00172488695 C20.2644248,0.00172488695 24.5237444,-0.00215610869 28.7817528,0.00172488695 L28.7817528,0.00172488695 Z M8.64885184,7.85611511 C7.38773662,7.99113854 6.66148108,8.42606978 6.29310958,9.33228474 C5.90114134,10.2969233 6.17774769,11.1421181 6.89875951,11.8276216 C9.35282156,14.161969 11.8108164,16.4924215 14.2976518,18.7943114 C15.3844131,19.7966007 16.5354102,19.7836177 17.6116843,18.7813283 C20.0185529,16.5495467 22.4070683,14.2982907 24.7824746,12.0327533 C25.9845979,10.8850542 26.1012707,9.56468083 25.1469132,8.60653379 C24.1361858,7.59255976 22.8449191,7.6743528 21.5890476,8.85191291 C19.9936451,10.3488554 18.3680912,11.8172352 16.8395462,13.3777945 C16.1342655,14.093159 15.7200114,14.0048744 15.0566806,13.3440386 C13.4599671,11.7484252 11.8081945,10.2060421 10.1262706,8.70001155 C9.65564653,8.27936164 9.00411403,8.05345704 8.64885184,7.85611511 L8.64885184,7.85611511 L8.64885184,7.85611511 Z"></path>
-                  </svg>
-              </span>
-              <span class="text">Pocket</span>
-          </a>
-      </li>
-  </ul>
-</div>
-
-    <div id="recent">
-  <section>
-    <h5>Recent Posts:</h5>
-    <ul>
-      
-      <li>
-        <a href="https://kwmt27.net/2021/12/31/looking-back-2021/">2021年振り返り - 1 Minutes</a>
-      </li>
-      
-      <li>
-        <a href="https://kwmt27.net/2021/07/30/android-camera2-light-on-by-light-sensor/">Camera2APIでカメラプレビュー中に光センサーの値によってライトを自動でON/OFFにする - 1 Minutes</a>
-      </li>
-      
-      <li>
-        <a href="https://kwmt27.net/2021/06/12/jetpack-compose-camerax/">Jetpack ComposeでCameraXを実装する - 1 Minutes</a>
-      </li>
-      
-      <li>
-        <a href="https://kwmt27.net/2021/06/12/android-update-targertsdk-from-28-to-30/">Android targetSdkVersionを28から30への変更したときのメモ - 1 Minutes</a>
-      </li>
-      
-      <li>
-        <a href="https://kwmt27.net/2021/05/15/jetpack-compose-searchbar/">Jetpack Composeでインクリメンタルサーチ(SearchBar UI)を実装するには - 1 Minutes</a>
-      </li>
-      
-    </ul>
-  </section>
-</div>
-
-    
-    <div id="comments">
-    
-    
-    
-    <div id="disqus_thread"></div>
-    <script type="text/javascript">
-      var disqus_shortname = 'kwmt27';
-      var disqus_identifier = 'https:\/\/kwmt27.net\/2017\/12\/09\/android-studio-lint-for-kotlin\/';
-      var disqus_title = 'Android Lint';
-      var disqus_url = 'https:\/\/kwmt27.net\/2017\/12\/09\/android-studio-lint-for-kotlin\/';
-      (function() {
-        var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
-        dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
-        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
-      })();
-    </script>
-    <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
-    
-    
-</div>
-
-</article>  
-
-</main>
-		<footer id="footer">
-			<section id="footer-message">&copy; Androg. All rights reserved. Powered by <a href="http://gohugo.io" target="_blank">Hugo</a>. <a href="https://github.com/kathyqian/crisp-ghost-theme" target="_blank">Crisp</a> theme by <a href="http://kathyqian.com" target="_blank">Kathy Qian</a>.</section>
-		</footer>
-
-    <script>
-      (function(c,f){asyncLoader=function(i,h){i.foreach(function(k,j){e(j,d(j),h)});if(typeof h.callback=="function"){var g=setInterval(function(){if(f.readyState==="complete"){clearInterval(g);h.callback()}},10)}};var d=function(g){var h=g.split(".");return h[h.length-1]},e=function(h,i,g){switch(i){case"js":a(h,g);break;case"css":b(h);break;default:break}},a=function(i,h){var g=document.createElement("script");g.type="text/javascript";g.async=true;g.src=i;document.getElementsByTagName("head")[0].appendChild(g)},b=function(g){var h=document.createElement("link");h.type="text/css";h.rel="stylesheet";h.href=g;document.getElementsByTagName("head")[0].appendChild(h)};Array.prototype.foreach=function(h){for(var g=0;g<this.length;g++){h(g,this[g])}}})(this,document);
-
-      var WebFontConfig={google:{families:["Open Sans:300italic,700italic,300,700","Bree+Serif"]}};
-      asyncLoader([
-        "//netdna.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.css",
-        "//cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js",
-        "//cdnjs.cloudflare.com/ajax/libs/webfont/1.5.16/webfontloader.js",
-        "//cdnjs.cloudflare.com/ajax/libs/highlight.js/8.5/highlight.min.js",
-        "//cdnjs.cloudflare.com/ajax/libs/mathjax/3.0.1/es5/tex-mml-chtml.js"
-      ],{
-        callback:function(){
-          asyncLoader([
-            "https:\/\/kwmt27.net\/css/rrssb.css",
-            "https:\/\/kwmt27.net\/js/gist.min.js", 
-            "https:\/\/kwmt27.net\/js/rrssb.min.js",
-            "//cdnjs.cloudflare.com/ajax/libs/highlight.js/8.5/styles/default.min.css"
-          ], { callback:function() {
-              hljs.initHighlighting();
-          }});
-        }
-      });
-    </script>
-    <script>
-      window.MathJax = {
-        tex: {
-          inlineMath: [['$','$'], ['\\(','\\)']]
-        }
-      };
-    </script>    
-	
-    <script>
-    	(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-      	(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-      	m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-      	})(window,document,'script','//www.google-analytics.com/analytics.js','ga');
-      	ga('create', 'UA-39334884-1', 'auto');
-      	ga('send', 'pageview');
-    </script>
-  
-	</body>
-</html>
+</code></pre><h1 id=参考>参考<a class=anchorjs-link href=#%e5%8f%82%e8%80%83></a></h1><ul><li><a href=https://developer.android.com/studio/write/lint.html target=_blank>Lint によるコードの改善</a></li></ul><hr style=visibility:hidden><ul class=pager><li class=previous><a href=/2017/12/02/kotlin-style-guide/ data-toggle=tooltip data-placement=top title="Kotlin Style Guideメモ">Previous<br><span>Kotlin Style Guideメモ</span></a></li><li class=next><a href=/2017/12/31/looking-back-2017/ data-toggle=tooltip data-placement=top title=2017振り返り>Next<br><span>2017振り返り</span></a></li></ul><hr style=visibility:hidden><div id=disqus_thread></div><script type=application/javascript>window.disqus_config=function(){},function(){if(["localhost","127.0.0.1"].indexOf(window.location.hostname)!=-1){document.getElementById("disqus_thread").innerHTML="Disqus comments not available by default when the website is previewed locally.";return}var t=document,e=t.createElement("script");e.async=!0,e.src="//kwmt27.disqus.com/embed.js",e.setAttribute("data-timestamp",+new Date),(t.head||t.body).appendChild(e)}()</script><noscript>Please enable JavaScript to view the <a href=https://disqus.com/?ref_noscript>comments powered by Disqus.</a></noscript><a href=https://disqus.com class=dsq-brlink>comments powered by <span class=logo-disqus>Disqus</span></a><div class=giscus id=comments></div><script src=https://giscus.app/client.js data-repo data-repo-id=kwmt27 data-category=General data-category-id data-mapping=pathname data-strict=0 data-reactions-enabled=1 data-emit-metadata=0 data-input-position=top data-theme=light data-lang=en crossorigin=anonymous async></script></div><div class="col-lg-8 col-lg-offset-2
+col-md-10 col-md-offset-1
+sidebar-container"><section><hr class="hidden-sm hidden-xs"><h5>FEATURED TAGS</h5><div class=tags><a href=/tags/1.2/>1.2</a>
+<a href=/tags/1.2-rc1/>1.2 rc1</a>
+<a href=/tags/adb/>adb</a>
+<a href=/tags/advent-calendar/>Advent Calendar</a>
+<a href=/tags/ambient/>Ambient</a>
+<a href=/tags/android/>Android</a>
+<a href=/tags/android-n/>Android N</a>
+<a href=/tags/android-studio/>Android Studio</a>
+<a href=/tags/android-studio-3.6/>Android Studio 3.6</a>
+<a href=/tags/android-wear/>android wear</a>
+<a href=/tags/androiddevchallenge/>AndroidDevChallenge</a>
+<a href=/tags/androidstudio/>AndroidStudio</a>
+<a href=/tags/android%E7%A0%94%E7%A9%B6%E7%99%BA%E8%A1%A8%E4%BC%9A/>Android研究&発表会</a>
+<a href=/tags/animation/>Animation</a>
+<a href=/tags/archive/zip/>archive/zip</a>
+<a href=/tags/arduino/>Arduino</a>
+<a href=/tags/aws/>AWS</a>
+<a href=/tags/beacon/>beacon</a>
+<a href=/tags/billing/>Billing</a>
+<a href=/tags/bitmap/>Bitmap</a>
+<a href=/tags/camera2/>Camera2</a>
+<a href=/tags/camerax/>CameraX</a>
+<a href=/tags/cd/>CD</a>
+<a href=/tags/ci/>CI</a>
+<a href=/tags/ci/>CI</a>
+<a href=/tags/clean-architecture/>Clean Architecture</a>
+<a href=/tags/cloud-vision-api/>Cloud Vision API</a>
+<a href=/tags/codelab/>codelab</a>
+<a href=/tags/compose/>Compose</a>
+<a href=/tags/compress/bzip2/>compress/bzip2</a>
+<a href=/tags/coroutine/>coroutine</a>
+<a href=/tags/css/>CSS</a>
+<a href=/tags/dagger2/>Dagger2</a>
+<a href=/tags/dark-theme/>Dark Theme</a>
+<a href=/tags/dart/>Dart</a>
+<a href=/tags/dart2/>dart2</a>
+<a href=/tags/databinding/>Databinding</a>
+<a href=/tags/deeplearning/>DeepLearning</a>
+<a href=/tags/delegate/>Delegate</a>
+<a href=/tags/docker/>Docker</a>
+<a href=/tags/eclipse/>Eclipse</a>
+<a href=/tags/encoding/base64/>encoding/base64</a>
+<a href=/tags/encoding/json/>encoding/json</a>
+<a href=/tags/enum/>enum</a>
+<a href=/tags/fabric-sdk/>Fabric SDK</a>
+<a href=/tags/fcm/>FCM</a>
+<a href=/tags/firebase/>Firebase</a>
+<a href=/tags/firestore/>Firestore</a>
+<a href=/tags/flow/>Flow</a>
+<a href=/tags/flutter/>flutter</a>
+<a href=/tags/flutter_inapp_purchase/>flutter_inapp_purchase</a>
+<a href=/tags/flutter_web/>flutter_web</a>
+<a href=/tags/gae/go/>GAE/Go</a>
+<a href=/tags/gcm/>GCM</a>
+<a href=/tags/gdgkobe/>gdgkobe</a>
+<a href=/tags/gds/>GDS</a>
+<a href=/tags/genmai/>Genmai</a>
+<a href=/tags/gin/>gin</a>
+<a href=/tags/git/>git</a>
+<a href=/tags/go/>Go</a>
+<a href=/tags/gocon/>gocon</a>
+<a href=/tags/godoc/>godoc</a>
+<a href=/tags/golang/>golang</a>
+<a href=/tags/google+api/>Google+API</a>
+<a href=/tags/google-i/o-2018/>Google I/O 2018</a>
+<a href=/tags/google-mapa-api/>Google Mapa API</a>
+<a href=/tags/google-maps-api/>Google Maps API</a>
+<a href=/tags/google-play/>Google Play</a>
+<a href=/tags/google-signin/>Google SignIn</a>
+<a href=/tags/googlei/o-2019/>GoogleI/O 2019</a>
+<a href=/tags/googlemap/>GoogleMap</a>
+<a href=/tags/go%E8%A8%80%E8%AA%9E/>Go言語</a>
+<a href=/tags/greendao/>greenDao</a>
+<a href=/tags/heroku/>Heroku</a>
+<a href=/tags/hugo/>Hugo</a>
+<a href=/tags/icon/>icon</a>
+<a href=/tags/image/>image</a>
+<a href=/tags/intellij-idea/>Intellij IDEA</a>
+<a href=/tags/ios/>iOS</a>
+<a href=/tags/java/>Java</a>
+<a href=/tags/jenkins/>Jenkins</a>
+<a href=/tags/jetpack/>Jetpack</a>
+<a href=/tags/jquery/>Jquery</a>
+<a href=/tags/json-schema/>JSON Schema</a>
+<a href=/tags/kotlin/>Kotlin</a>
+<a href=/tags/kug2/>kug2</a>
+<a href=/tags/layout/>layout</a>
+<a href=/tags/lifecycle/>Lifecycle</a>
+<a href=/tags/line/>Line</a>
+<a href=/tags/linebot/>linebot</a>
+<a href=/tags/lint/>Lint</a>
+<a href=/tags/livedata/>LiveData</a>
+<a href=/tags/lt/>LT</a>
+<a href=/tags/macos/>macOS</a>
+<a href=/tags/map/>map</a>
+<a href=/tags/mockito2/>Mockito2</a>
+<a href=/tags/mysql/>MySQL</a>
+<a href=/tags/navigation/>Navigation</a>
+<a href=/tags/net/http/fcgi/>net/http/fcgi</a>
+<a href=/tags/net/smtp/>net/smtp</a>
+<a href=/tags/nginx/>Nginx</a>
+<a href=/tags/node.js/>Node.js</a>
+<a href=/tags/okhttp/>OkHttp</a>
+<a href=/tags/openid/>OpenID</a>
+<a href=/tags/oreo/>Oreo</a>
+<a href=/tags/package/>package</a>
+<a href=/tags/php/>PHP</a>
+<a href=/tags/pil/>PIL</a>
+<a href=/tags/plant-uml/>Plant UML</a>
+<a href=/tags/polymer/>polymer</a>
+<a href=/tags/provider/>Provider</a>
+<a href=/tags/push%E9%80%9A%E7%9F%A5/>Push通知</a>
+<a href=/tags/python/>python</a>
+<a href=/tags/pythonchallenge/>pythonchallenge</a>
+<a href=/tags/reflect/>reflect</a>
+<a href=/tags/retrofit/>Retrofit</a>
+<a href=/tags/retrofit2/>Retrofit2</a>
+<a href=/tags/riot.js/>Riot.js</a>
+<a href=/tags/room/>Room</a>
+<a href=/tags/runtime/>runtime</a>
+<a href=/tags/rxjava/>RxJava</a>
+<a href=/tags/s3/>S3</a>
+<a href=/tags/sensor/>Sensor</a>
+<a href=/tags/server/>Server</a>
+<a href=/tags/sketch/>sketch</a>
+<a href=/tags/state/>State</a>
+<a href=/tags/statusbar/>StatusBar</a>
+<a href=/tags/strconv/>strconv</a>
+<a href=/tags/strings/>strings</a>
+<a href=/tags/struct/>struct</a>
+<a href=/tags/sublime-text/>Sublime Text</a>
+<a href=/tags/swift/>swift</a>
+<a href=/tags/swiftui/>SwiftUI</a>
+<a href=/tags/targetsdkversiion/>targetSdkVersiion</a>
+<a href=/tags/template/>template</a>
+<a href=/tags/tensorflow/>Tensorflow</a>
+<a href=/tags/test/>test</a>
+<a href=/tags/textformfield/>TextFormField</a>
+<a href=/tags/topic/>topic</a>
+<a href=/tags/twitter/>Twitter</a>
+<a href=/tags/unicode/utf8/>unicode/utf8</a>
+<a href=/tags/vagrant/>Vagrant</a>
+<a href=/tags/view-binding/>View Binding</a>
+<a href=/tags/viewmodel/>ViewModel</a>
+<a href=/tags/volley/>Volley</a>
+<a href=/tags/vps/>VPS</a>
+<a href=/tags/web-api/>Web API</a>
+<a href=/tags/webview/>WebView</a>
+<a href=/tags/wercker/>wercker</a>
+<a href=/tags/wercker-step/>wercker-step</a>
+<a href=/tags/windows/>windows</a>
+<a href=/tags/wordpress/>wordpress</a>
+<a href=/tags/xcode/>xcode</a>
+<a href=/tags/y/>y</a>
+<a href=/tags/%E3%82%A2%E3%83%97%E3%83%AA%E5%86%85%E8%AA%B2%E9%87%91/>アプリ内課金</a>
+<a href=/tags/%E3%82%A4%E3%83%99%E3%83%B3%E3%83%88/>イベント</a>
+<a href=/tags/%E3%82%A8%E3%83%9F%E3%83%A5%E3%83%AC%E3%83%BC%E3%82%BF/>エミュレータ</a>
+<a href=/tags/%E3%82%B7%E3%83%A7%E3%83%BC%E3%83%88%E3%82%AB%E3%83%83%E3%83%88%E3%82%AD%E3%83%BC/>ショートカットキー</a>
+<a href=/tags/%E3%82%B7%E3%83%B3%E3%82%BF%E3%83%83%E3%82%AF%E3%82%B9%E3%83%8F%E3%82%A4%E3%83%A9%E3%82%A4%E3%83%88/>シンタックスハイライト</a>
+<a href=/tags/%E3%82%B9%E3%82%AF%E3%83%AD%E3%83%BC%E3%83%AB/>スクロール</a>
+<a href=/tags/%E3%83%88%E3%83%A9%E3%83%83%E3%82%AF%E3%83%90%E3%83%83%E3%83%89/>トラックバッド</a>
+<a href=/tags/%E3%83%97%E3%83%A9%E3%82%A4%E3%83%90%E3%82%B7%E3%83%BC%E3%83%9D%E3%83%AA%E3%82%B7%E3%83%BC/>プライバシーポリシー</a>
+<a href=/tags/%E3%83%A1%E3%83%AB%E3%83%81%E3%83%A3%E3%83%AA/>メルチャリ</a>
+<a href=/tags/%E3%83%A2%E3%83%90%E3%82%82%E3%81%8F%E4%BC%9A/>モバもく会</a>
+<a href=/tags/%E4%BD%93%E9%A8%93/>体験</a>
+<a href=/tags/%E5%8B%89%E5%BC%B7%E4%BC%9A/>勉強会</a>
+<a href=/tags/%E6%8C%AF%E3%82%8A%E8%BF%94%E3%82%8A/>振り返り</a>
+<a href=/tags/%E6%97%85%E8%A1%8C%E8%A8%98/>旅行記</a>
+<a href=/tags/%E6%97%A5%E8%A8%98/>日記</a>
+<a href=/tags/%E6%A9%9F%E4%BC%9A%E5%AD%A6%E7%BF%92/>機会学習</a>
+<a href=/tags/%E6%A9%9F%E6%A2%B0%E5%AD%A6%E7%BF%92/>機械学習</a>
+<a href=/tags/%E7%99%BB%E5%A3%87/>登壇</a>
+<a href=/tags/%E7%BF%BB%E8%A8%B3/>翻訳</a>
+<a href=/tags/%E8%A7%92%E4%B8%B8/>角丸</a>
+<a href=/tags/%E8%A8%AD%E5%AE%9A%E5%88%87%E3%82%8A%E6%9B%BF%E3%81%88/>設定切り替え</a>
+<a href=/tags/%E9%96%A2%E3%83%A2%E3%83%90/>関モバ</a>
+<a href=/tags/%E9%98%AAgo/>阪Go</a></div></section></div></div></div></article><footer><div class=container><div class=row><div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1"><ul class="list-inline text-center"><li><a href=https://github.com/kwmt target=_blank><span class="fa-stack fa-lg"><i class="fa fa-circle fa-stack-2x"></i>
+<i class="fab fa-github fa-stack-1x fa-inverse"></i></span></a></li><li><a href=https://twitter.com/yasi_kawamoto target=_blank><span class="fa-stack fa-lg"><i class="fa fa-circle fa-stack-2x"></i>
+<i class="fab fa-twitter fa-stack-1x fa-inverse"></i></span></a></li></ul><p class="copyright text-muted">Copyright &copy; Androg 2023<br>Powered by <a href=https://gohugo.io>Hugo</a></p></div></div></div></footer><script src=/js/jquery.min.js></script>
+<script src=/js/bootstrap.min.js crossorigin=anonymous></script>
+<script src=/js/hux-blog.min.c4ea77041cd3edbfc8b2622cd887a9a5d8760a4162d14489e36d2a3fa4c90172.js></script>
+<script src=/js/simple-jekyll-search.min.js></script>
+<script src=/js/search.min.53bce5da475b4d362500e5ce5dddfa22e20e1b9018777411d2020b4b839c9310.js></script>
+<script type=application/javascript>var doNotTrack=!1;doNotTrack||(function(e,t,n,s,o,i,a){e.GoogleAnalyticsObject=o,e[o]=e[o]||function(){(e[o].q=e[o].q||[]).push(arguments)},e[o].l=1*new Date,i=t.createElement(n),a=t.getElementsByTagName(n)[0],i.async=1,i.src=s,a.parentNode.insertBefore(i,a)}(window,document,"script","https://www.google-analytics.com/analytics.js","ga"),ga("create","UA-39334884-1","auto"),ga("send","pageview"))</script><script src=/zoomjs/zoom.min.js></script></body></html>

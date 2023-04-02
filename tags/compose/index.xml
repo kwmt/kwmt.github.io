@@ -1,166 +1,63 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
-  <channel>
-    <title>Compose on Androg</title>
-    <link>https://kwmt27.net/tags/compose/</link>
-    <description>Recent content in Compose on Androg</description>
-    <generator>Hugo -- gohugo.io</generator>
-    <language>ja</language>
-    <lastBuildDate>Sat, 12 Jun 2021 21:25:00 +0900</lastBuildDate>
-    
-	<atom:link href="https://kwmt27.net/tags/compose/index.xml" rel="self" type="application/rss+xml" />
-    
-    
-    <item>
-      <title>Jetpack ComposeでCameraXを実装する</title>
-      <link>https://kwmt27.net/2021/06/12/jetpack-compose-camerax/</link>
-      <pubDate>Sat, 12 Jun 2021 21:25:00 +0900</pubDate>
-      
-      <guid>https://kwmt27.net/2021/06/12/jetpack-compose-camerax/</guid>
-      <description>はじめに composeバージョンは下記です。
-   Jetpack ComposeでのCameraXの実装を試したのでメモしておきたいと思います。 下の動画のようなイメージです。
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Compose on Androg</title><link>https://kwmt27.net/tags/compose/</link><description>Recent content in Compose on Androg</description><generator>Hugo -- gohugo.io</generator><language>ja</language><lastBuildDate>Sat, 12 Jun 2021 21:25:00 +0900</lastBuildDate><atom:link href="https://kwmt27.net/tags/compose/index.xml" rel="self" type="application/rss+xml"/><item><title>Jetpack ComposeでCameraXを実装する</title><link>https://kwmt27.net/2021/06/12/jetpack-compose-camerax/</link><pubDate>Sat, 12 Jun 2021 21:25:00 +0900</pubDate><guid>https://kwmt27.net/2021/06/12/jetpack-compose-camerax/</guid><description>はじめにcomposeバージョンは下記です。
+Jetpack ComposeでのCameraXの実装を試したのでメモしておきたいと思います。 下の動画のようなイメージです。
 ソースはGitHubにおいてます。 https://github.com/kwmt/JetpackComposePlayGround/tree/main/camerax/src/main/java/net/kwmt27/camerax
 実行するときはConfigurationをcameraxを選択してから実行してみてください。
-CameraXはAndroidViewを使う 現在のところ、CameraXを使うにはAndroidViewを使うしかなさそうです。 以下のようにしました。
-   usecaseをバインドする usecaseをバインドしてるところは下記のところです。 使用しているUseCaseは、Preview、ImageAnalysisです。 この部分はいままでのcomposeを使わない場合と同じですね。
-   RuntimePermissionの実装 カメラはもちろんRuntimePermissionの実装が必要でそれは次のようにやっています。
+CameraXはAndroidViewを使う現在のところ、CameraXを使うにはAndroidViewを使うしかなさそうです。 以下のようにしました。
+usecaseをバインドするusecaseをバインドしてるところは下記のところです。 使用しているUseCaseは、Preview、ImageAnalysisです。 この部分はいままでのcomposeを使わない場合と同じですね。
+RuntimePermissionの実装カメラはもちろんRuntimePermissionの実装が必要でそれは次のようにやっています。
 まず、カメラパーミッションが拒否されたときの画面を作成します。
-   このとき、設定画面にstartActivityResultで行って、戻ってきたときのイベントを伝えるために callback: () -&amp;gt; Unitを渡していますので、設定画面から戻ってきたら handler.requestがよばれます。
-   handlerはPermissionHandlerという自前のクラスを作っていて、そこでカメラパーミッションが許可されてなければ、設定画面に遷移するし、許可されていれば、onGrantedというFlowに通知します。
-   以上です。</description>
-    </item>
-    
-    <item>
-      <title>Jetpack Composeでインクリメンタルサーチ(SearchBar UI)を実装するには</title>
-      <link>https://kwmt27.net/2021/05/15/jetpack-compose-searchbar/</link>
-      <pubDate>Sat, 15 May 2021 13:20:00 +0900</pubDate>
-      
-      <guid>https://kwmt27.net/2021/05/15/jetpack-compose-searchbar/</guid>
-      <description>はじめに composeバージョンは 1.0.0-beta04 です。
+このとき、設定画面にstartActivityResultで行って、戻ってきたときのイベントを伝えるために callback: () -&amp;gt; Unitを渡していますので、設定画面から戻ってきたら handler.requestがよばれます。
+handlerはPermissionHandlerという自前のクラスを作っていて、そこでカメラパーミッションが許可されてなければ、設定画面に遷移するし、許可されていれば、onGrantedというFlowに通知します。
+以上です。</description></item><item><title>Jetpack Composeでインクリメンタルサーチ(SearchBar UI)を実装するには</title><link>https://kwmt27.net/2021/05/15/jetpack-compose-searchbar/</link><pubDate>Sat, 15 May 2021 13:20:00 +0900</pubDate><guid>https://kwmt27.net/2021/05/15/jetpack-compose-searchbar/</guid><description>はじめにcomposeバージョンは 1.0.0-beta04 です。
 検索入力欄に検索した文字列を入れるとリストが絞り込まれる、いわゆるインクリメンタルサーチを実装したいとおもいます。下の動画のようなイメージです。
-SearchBarのUIを作るには？  だいたいこんな感じで作れます。
-ROOMで部分検索するには @Dao interface QrResultDao { @Query(&amp;quot;SELECT * from qr_results WHERE text LIKE &#39;%&#39; || :query || &#39;%&#39; &amp;quot; + &amp;quot;OR name LIKE &#39;%&#39; || :query || &#39;%&#39; ORDER BY updated_at DESC&amp;quot;) suspend fun search(query: String): List&amp;lt;QrResultEntity&amp;gt; }  こんな感じ。
-ViewModelの実装は  SearchQrResultUseCaseを使ってますが、基本的にはDaoのsearchまでの橋渡しなので省略。型変換とかはしています。
-SearchBarとリストをくっつけると  listを監視して、検索されたらUIに通知するみたいな感じです。
-以上です。</description>
-    </item>
-    
-    <item>
-      <title>Jetpack Compose PlayGround</title>
-      <link>https://kwmt27.net/2021/03/28/jetpack-compose-playground/</link>
-      <pubDate>Sun, 28 Mar 2021 19:00:00 +0900</pubDate>
-      
-      <guid>https://kwmt27.net/2021/03/28/jetpack-compose-playground/</guid>
-      <description>はじめに ※こちらは更新予定です。
+SearchBarのUIを作るには？ だいたいこんな感じで作れます。
+ROOMで部分検索するには@Dao interface QrResultDao { @Query(&amp;#34;SELECT * from qr_results WHERE text LIKE &amp;#39;%&amp;#39; || :query || &amp;#39;%&amp;#39; &amp;#34; + &amp;#34;OR name LIKE &amp;#39;%&amp;#39; || :query || &amp;#39;%&amp;#39; ORDER BY updated_at DESC&amp;#34;) suspend fun search(query: String): List&amp;lt;QrResultEntity&amp;gt; } こんな感じ。
+ViewModelの実装は SearchQrResultUseCaseを使ってますが、基本的にはDaoのsearchまでの橋渡しなので省略。型変換とかはしています。
+SearchBarとリストをくっつけると listを監視して、検索されたらUIに通知するみたいな感じです。
+以上です。</description></item><item><title>Jetpack Compose PlayGround</title><link>https://kwmt27.net/2021/03/28/jetpack-compose-playground/</link><pubDate>Sun, 28 Mar 2021 19:00:00 +0900</pubDate><guid>https://kwmt27.net/2021/03/28/jetpack-compose-playground/</guid><description>はじめに※こちらは更新予定です。
 確認環境は下記です。
- compose_version: 1.0.0-beta02 kotlin version: 1.4.31 Android Studio version: Android Studio Arctic Fox | 2020.3.1 Canary 12  確認したコードはGitHubにおいてます。
+compose_version: 1.0.0-beta02 kotlin version: 1.4.31 Android Studio version: Android Studio Arctic Fox | 2020.3.1 Canary 12 確認したコードはGitHubにおいてます。
 https://github.com/kwmt/JetpackComposePlayGround
-縦方向（Vertical）のリスト表示するには 縦方向（Vertical）のリストを表示するには、LazyColumn を使います。
-import androidx.compose.foundation.lazy.LazyColumn @Composable fun SampleList() { LazyColumn { items(5) { index -&amp;gt; // 各要素で表示したいUIを書く。 ListItem(index) } } }  多くのアイテムやサイズのわからないリストを表示する必要がある場合、Columnのようなレイアウトを使用すると、全てのアイテムが表示されるかどうかに関わらずレイアウトされるので、パフォーマンスに影響があります。 LazyColumnやLazyRowは表示されるアイテムのみをレイアウトするコンポーネントになります。（RecyclerViewと同じ概念）
+縦方向（Vertical）のリスト表示するには縦方向（Vertical）のリストを表示するには、LazyColumn を使います。
+import androidx.compose.foundation.lazy.LazyColumn @Composable fun SampleList() { LazyColumn { items(5) { index -&amp;gt; // 各要素で表示したいUIを書く。 ListItem(index) } } } 多くのアイテムやサイズのわからないリストを表示する必要がある場合、Columnのようなレイアウトを使用すると、全てのアイテムが表示されるかどうかに関わらずレイアウトされるので、パフォーマンスに影響があります。 LazyColumnやLazyRowは表示されるアイテムのみをレイアウトするコンポーネントになります。（RecyclerViewと同じ概念）
 ついでに、リストの各要素はComposableListItemは自作のComposable関数で、リストアイテムのUIを定義しています。
-@Composable fun ListItem(index: Int = 0) { Column { Box( modifier = Modifier .height(200.dp) .background(Color.Blue) .fillMaxWidth() ) { Text( modifier = Modifier.</description>
-    </item>
-    
-    <item>
-      <title>Jetpack Compose Dev Challenge Week3で学んだことまとめ</title>
-      <link>https://kwmt27.net/2021/03/15/jetpack-compose-dev-challenge-week3/</link>
-      <pubDate>Mon, 15 Mar 2021 12:00:00 +0900</pubDate>
-      
-      <guid>https://kwmt27.net/2021/03/15/jetpack-compose-dev-challenge-week3/</guid>
-      <description>jetpack compose
-全体にかかわること(テーマなど) 背景を入れるには Surface(color = MaterialTheme.colors.primary)  が大事
-Welcome画面 Login画面 Textの途中でリンクを入れる https://stackoverflow.com/questions/65567412/jetpack-compose-text-hyperlink-some-section-of-the-text
-EditTextの枠線の色を変更するには outlinedTextFieldColorsの部分
-OutlinedTextField( modifier = Modifier .height(56.dp) .fillMaxWidth(), value = &amp;quot;&amp;quot;, onValueChange = { /*TODO*/ }, placeholder = { Text( text = &amp;quot;Password (8+ characters)&amp;quot;, style = DevChallengeTheme.typography.body1, color = DevChallengeTheme.colors.textBody1, ) }, colors = outlinedTextFieldColors( cursorColor = DevChallengeTheme.colors.textBody1, focusedBorderColor = DevChallengeTheme.colors.textBody1.copy(alpha = ContentAlpha.high), unfocusedBorderColor = DevChallengeTheme.colors.textBody1, ), singleLine = true, )  検索ボックスを作成（SearchBar) ここが参考になりそう。 https://github.com/android/compose-samples/blob/main/Jetsnack/app/src/main/java/com/example/jetsnack/ui/home/search/Search.kt</description>
-    </item>
-    
-    <item>
-      <title>Animation and Jetpack Compose</title>
-      <link>https://kwmt27.net/2021/03/06/jetpack-compose-animation/</link>
-      <pubDate>Sat, 06 Mar 2021 12:30:00 +0900</pubDate>
-      
-      <guid>https://kwmt27.net/2021/03/06/jetpack-compose-animation/</guid>
-      <description>はじめに Jetpack Compose: Animation
-単一アニメーション @Composable fun AnimateAsStateDemo() { var blue by remember { mutableStateOf(true) } val color = if (blue) Blue else Orange Column { Button(onClick = { blue = !blue }) { Text(text = &amp;quot;CHANGE COLOR&amp;quot;) } Spacer(modifier = Modifier.height(16.dp)) Box( modifier = Modifier .size(128.dp) .background(color) ) } }  この例では、BooleanのStateの値blueを持っていて、 ボタンをクリックするとそのStateは反転します。
+@Composable fun ListItem(index: Int = 0) { Column { Box( modifier = Modifier .height(200.dp) .background(Color.Blue) .fillMaxWidth() ) { Text( modifier = Modifier.align(Alignment.Center), text = &amp;#34;index: $index&amp;#34;, style = TextStyle(color = Color.</description></item><item><title>Jetpack Compose Dev Challenge Week3で学んだことまとめ</title><link>https://kwmt27.net/2021/03/15/jetpack-compose-dev-challenge-week3/</link><pubDate>Mon, 15 Mar 2021 12:00:00 +0900</pubDate><guid>https://kwmt27.net/2021/03/15/jetpack-compose-dev-challenge-week3/</guid><description>jetpack compose
+全体にかかわること(テーマなど)背景を入れるにはSurface(color = MaterialTheme.colors.primary) が大事
+Welcome画面Login画面Textの途中でリンクを入れるhttps://stackoverflow.com/questions/65567412/jetpack-compose-text-hyperlink-some-section-of-the-text
+EditTextの枠線の色を変更するにはoutlinedTextFieldColorsの部分
+OutlinedTextField( modifier = Modifier .height(56.dp) .fillMaxWidth(), value = &amp;#34;&amp;#34;, onValueChange = { /*TODO*/ }, placeholder = { Text( text = &amp;#34;Password (8+ characters)&amp;#34;, style = DevChallengeTheme.typography.body1, color = DevChallengeTheme.colors.textBody1, ) }, colors = outlinedTextFieldColors( cursorColor = DevChallengeTheme.colors.textBody1, focusedBorderColor = DevChallengeTheme.colors.textBody1.copy(alpha = ContentAlpha.high), unfocusedBorderColor = DevChallengeTheme.colors.textBody1, ), singleLine = true, ) 検索ボックスを作成（SearchBar)ここが参考になりそう。 https://github.com/android/compose-samples/blob/main/Jetsnack/app/src/main/java/com/example/jetsnack/ui/home/search/Search.kt
+ホーム画面###BottomNavigation
+https://developer.android.com/jetpack/compose/navigation#bottom-nav https://proandroiddev.com/implement-bottom-bar-navigation-in-jetpack-compose-b530b1cd9ee2
+BottomItemを切り替えまくっても、バックで、startDestinationに戻る(cart -&amp;gt; Profileと遷移してバックし場合cartに戻っていたのをhomeに戻るようにする) navController.navigate(screen.route) { // BottomItemを切り替えまくっても、バックで、startDestinationに戻る popUpTo = navController.</description></item><item><title>Animation and Jetpack Compose</title><link>https://kwmt27.net/2021/03/06/jetpack-compose-animation/</link><pubDate>Sat, 06 Mar 2021 12:30:00 +0900</pubDate><guid>https://kwmt27.net/2021/03/06/jetpack-compose-animation/</guid><description>はじめにJetpack Compose: Animation
+単一アニメーション@Composable fun AnimateAsStateDemo() { var blue by remember { mutableStateOf(true) } val color = if (blue) Blue else Orange Column { Button(onClick = { blue = !blue }) { Text(text = &amp;#34;CHANGE COLOR&amp;#34;) } Spacer(modifier = Modifier.height(16.dp)) Box( modifier = Modifier .size(128.dp) .background(color) ) } } この例では、BooleanのStateの値blueを持っていて、 ボタンをクリックするとそのStateは反転します。
 BoxのカラーがそのBooleanの状態によって切り替わります。
 カラーの変更部分をanimateColorAsSate関数でラップすることで、簡単にアニメーションすることができます。（デフォルトはフェードアニメーションなのかな？）
-val color by animateColorAsState(if (blue) Blue else Orange)  （初回だけアニメーションしてないように見える）
-複数のアニメーションを同時に実行したい 以下はBoxのサイズとカラーの値を同時に変更しています。まだアニメーションはしていません。
-private enum class BoxState { Small, Large } @Composable fun UpdateTransitionDemo() { var boxState by remember { mutableStateOf(BoxState.</description>
-    </item>
-    
-    <item>
-      <title>State and Jetpack Compose</title>
-      <link>https://kwmt27.net/2021/03/06/jetpack-compose-state/</link>
-      <pubDate>Sat, 06 Mar 2021 12:30:00 +0900</pubDate>
-      
-      <guid>https://kwmt27.net/2021/03/06/jetpack-compose-state/</guid>
-      <description>はじめに 基本的には、書きを参考に自分なりにまとめたものです。
- State and Jetpack Compose Jetpack Compose 入門 composeバージョンは 1.0.0-beta01 です。  State Composeでは状態をStateというもので扱います。
+val color by animateColorAsState(if (blue) Blue else Orange) （初回だけアニメーションしてないように見える）
+複数のアニメーションを同時に実行したい以下はBoxのサイズとカラーの値を同時に変更しています。まだアニメーションはしていません。
+private enum class BoxState { Small, Large } @Composable fun UpdateTransitionDemo() { var boxState by remember { mutableStateOf(BoxState.</description></item><item><title>State and Jetpack Compose</title><link>https://kwmt27.net/2021/03/06/jetpack-compose-state/</link><pubDate>Sat, 06 Mar 2021 12:30:00 +0900</pubDate><guid>https://kwmt27.net/2021/03/06/jetpack-compose-state/</guid><description>はじめに基本的には、書きを参考に自分なりにまとめたものです。
+State and Jetpack Compose Jetpack Compose 入門 composeバージョンは 1.0.0-beta01 です。 StateComposeでは状態をStateというもので扱います。
 外から変更可能な MutableStateと外からは変更できないStateがあります。
-@Stable interface MutableState&amp;lt;T&amp;gt; : State&amp;lt;T&amp;gt; { override var value: T operator fun component1(): T operator fun component2(): (T) -&amp;gt; Unit }  @Stable interface State&amp;lt;T&amp;gt; { val value: T }  var expanded by remember { mutableStateOf(false) }  mutableStateOfで新しいBooleanのStateを作成しています。
+@Stable interface MutableState&amp;lt;T&amp;gt; : State&amp;lt;T&amp;gt; { override var value: T operator fun component1(): T operator fun component2(): (T) -&amp;gt; Unit } @Stable interface State&amp;lt;T&amp;gt; { val value: T } var expanded by remember { mutableStateOf(false) } mutableStateOfで新しいBooleanのStateを作成しています。
 Buttonのクリックイベントの中でその値を変更しています。
-onClick = { expanded = true }  Stateを使っている箇所が再描画されます。
-Composable関数は必要に応じて再実行されます。これをrecomposition(再構成) とよびます。</description>
-    </item>
-    
-    <item>
-      <title>Layout in Jetpack compose</title>
-      <link>https://kwmt27.net/2021/02/07/jetpack-compose-layout/</link>
-      <pubDate>Sun, 07 Feb 2021 14:30:00 +0900</pubDate>
-      
-      <guid>https://kwmt27.net/2021/02/07/jetpack-compose-layout/</guid>
-      <description>はじめに 基本的には、こちらのコードラボをメモしたものです。 https://developer.android.com/codelabs/jetpack-compose-layouts
+onClick = { expanded = true } Stateを使っている箇所が再描画されます。
+Composable関数は必要に応じて再実行されます。これをrecomposition(再構成) とよびます。
+stateを宣言する時、by はKotlinのデリゲートプロパティという機能。
+byを使わず =を使うこともできますが、expanded.value = trueのように.valueをつける必要があります。
+var expanded = remember { mutableStateOf(false) } rememberrememberもComposable関数です.</description></item><item><title>Layout in Jetpack compose</title><link>https://kwmt27.net/2021/02/07/jetpack-compose-layout/</link><pubDate>Sun, 07 Feb 2021 14:30:00 +0900</pubDate><guid>https://kwmt27.net/2021/02/07/jetpack-compose-layout/</guid><description>はじめに基本的には、こちらのコードラボをメモしたものです。 https://developer.android.com/codelabs/jetpack-compose-layouts
 試したことはこちらに置いてます。
-縦に並べるには Column を使う
-Column { Text(&amp;quot;Alfred Sisley&amp;quot;, fontWeight = FontWeight.Bold) Providers(AmbientContentAlpha provides ContentAlpha.medium) { Text(&amp;quot;3 minutes ago&amp;quot;, style = MaterialTheme.typography.body2) } }  横に並べるには Rowを使う
-Row { Surface( modifier = Modifier.preferredSize(50.dp), shape = CircleShape, color = MaterialTheme.colors.onSurface.copy(alpha = 0.2f) ) { // image goes here } Column { Text(&amp;quot;Alfred Sisley&amp;quot;, fontWeight = FontWeight.Bold) Providers(AmbientContentAlpha provides ContentAlpha.medium) { Text(&amp;quot;3 minutes ago&amp;quot;, style = MaterialTheme.typography.body2) } } }  ここでは、円形画像のプレースホルダーを作るためにSurfaceを使って、先程のColumnと横に並べています。</description>
-    </item>
-    
-    <item>
-      <title>Jetpack ComposeでBitmapを表示するには</title>
-      <link>https://kwmt27.net/2021/01/31/jetpack-compose-about-bitmap/</link>
-      <pubDate>Sun, 31 Jan 2021 22:50:00 +0900</pubDate>
-      
-      <guid>https://kwmt27.net/2021/01/31/jetpack-compose-about-bitmap/</guid>
-      <description>Jetpack ComposeでBitmapを表示するには、Image関数を使い、引数にBitmapを渡せばいいのですが、そのときImageBitmapに変換する必要があるようで、 そのためにasImageBitmap()という拡張関数が生えてるので、それを使えばよさそうです。
-import androidx.compose.foundation.Image import androidx.compose.ui.graphics.asImageBitmap Image( bitmap.asImageBitmap(), )  </description>
-    </item>
-    
-    <item>
-      <title>Jetpack Composeでダークテーマ設定変更によるステータスバーカラーの切り替え方</title>
-      <link>https://kwmt27.net/2021/01/24/jetpack-compose-about-swtich-status-bar/</link>
-      <pubDate>Sun, 24 Jan 2021 22:50:00 +0900</pubDate>
-      
-      <guid>https://kwmt27.net/2021/01/24/jetpack-compose-about-swtich-status-bar/</guid>
-      <description>はじめに Android端末でダークテーマの切り替えをしたとき、Jetpack Composeでステータスバーカラーの切りかえをする方法を調べたので、メモ。
-方法 Jetpack Composeのサンプル、Jetsnackのコードを参考にしています。
-interface SystemUiController { fun setStatusBarColor( color: Color, darkIcons: Boolean = color.luminance() &amp;gt; 0.5f ) } fun SystemUiController(window: Window): SystemUiController { return SystemUiControllerImpl(window) } /** * An [androidx.compose.runtime.Ambient] holding the current [SysUiController]. Defaults to a * no-op controller; consumers should [provide][androidx.compose.runtime.Providers] a real one. */ val SysUiController = staticAmbientOf&amp;lt;SystemUiController&amp;gt; { FakeSystemUiController } private class SystemUiControllerImpl(private val window: Window) : SystemUiController { override fun setStatusBarColor( color: Color, darkIcons: Boolean ) { window.</description>
-    </item>
-    
-    <item>
-      <title>Jetpack ComposeのAmbientについて</title>
-      <link>https://kwmt27.net/2021/01/17/jetpack-compose-about-ambient/</link>
-      <pubDate>Sun, 17 Jan 2021 22:50:00 +0900</pubDate>
-      
-      <guid>https://kwmt27.net/2021/01/17/jetpack-compose-about-ambient/</guid>
-      <description>はじめに Jetpack Composeでステータスバーのカラーを変更するにはどうすればいいか調べていたら、ambientというキーワードが出てきて、なにものかがわからなかったのでメモです。
-Ambientとは Ambientとは、FlutterのProviderのようなものです。
+縦に並べるにはColumn を使う
+Column { Text(&amp;#34;Alfred Sisley&amp;#34;, fontWeight = FontWeight.Bold) Providers(AmbientContentAlpha provides ContentAlpha.medium) { Text(&amp;#34;3 minutes ago&amp;#34;, style = MaterialTheme.typography.body2) } } 横に並べるにはRowを使う
+Row { Surface( modifier = Modifier.preferredSize(50.dp), shape = CircleShape, color = MaterialTheme.colors.onSurface.copy(alpha = 0.2f) ) { // image goes here } Column { Text(&amp;#34;Alfred Sisley&amp;#34;, fontWeight = FontWeight.Bold) Providers(AmbientContentAlpha provides ContentAlpha.medium) { Text(&amp;#34;3 minutes ago&amp;#34;, style = MaterialTheme.typography.body2) } } } ここでは、円形画像のプレースホルダーを作るためにSurfaceを使って、先程のColumnと横に並べています。
+プレースホルダーとテキストの間に、パディングをいれるには- Column { + Column( + modifier = Modifier.</description></item><item><title>Jetpack ComposeでBitmapを表示するには</title><link>https://kwmt27.net/2021/01/31/jetpack-compose-about-bitmap/</link><pubDate>Sun, 31 Jan 2021 22:50:00 +0900</pubDate><guid>https://kwmt27.net/2021/01/31/jetpack-compose-about-bitmap/</guid><description>Jetpack ComposeでBitmapを表示するには、Image関数を使い、引数にBitmapを渡せばいいのですが、そのときImageBitmapに変換する必要があるようで、 そのためにasImageBitmap()という拡張関数が生えてるので、それを使えばよさそうです。
+import androidx.compose.foundation.Image import androidx.compose.ui.graphics.asImageBitmap Image( bitmap.asImageBitmap(), )</description></item><item><title>Jetpack Composeでダークテーマ設定変更によるステータスバーカラーの切り替え方</title><link>https://kwmt27.net/2021/01/24/jetpack-compose-about-swtich-status-bar/</link><pubDate>Sun, 24 Jan 2021 22:50:00 +0900</pubDate><guid>https://kwmt27.net/2021/01/24/jetpack-compose-about-swtich-status-bar/</guid><description>はじめにAndroid端末でダークテーマの切り替えをしたとき、Jetpack Composeでステータスバーカラーの切りかえをする方法を調べたので、メモ。
+方法Jetpack Composeのサンプル、Jetsnackのコードを参考にしています。
+interface SystemUiController { fun setStatusBarColor( color: Color, darkIcons: Boolean = color.luminance() &amp;gt; 0.5f ) } fun SystemUiController(window: Window): SystemUiController { return SystemUiControllerImpl(window) } /** * An [androidx.compose.runtime.Ambient] holding the current [SysUiController]. Defaults to a * no-op controller; consumers should [provide][androidx.compose.runtime.Providers] a real one. */ val SysUiController = staticAmbientOf&amp;lt;SystemUiController&amp;gt; { FakeSystemUiController } private class SystemUiControllerImpl(private val window: Window) : SystemUiController { override fun setStatusBarColor( color: Color, darkIcons: Boolean ) { window.</description></item><item><title>Jetpack ComposeのAmbientについて</title><link>https://kwmt27.net/2021/01/17/jetpack-compose-about-ambient/</link><pubDate>Sun, 17 Jan 2021 22:50:00 +0900</pubDate><guid>https://kwmt27.net/2021/01/17/jetpack-compose-about-ambient/</guid><description>はじめにJetpack Composeでステータスバーのカラーを変更するにはどうすればいいか調べていたら、ambientというキーワードが出てきて、なにものかがわからなかったのでメモです。
+AmbientとはAmbientとは、FlutterのProviderのようなものです。
 サンプルコードを見たほうがわかりやすいと思いますので、見てみましょう。
-// ① Ambientを作ります。 val ActiveUser = ambientOf&amp;lt;User&amp;gt; { error(&amp;quot;No active user found!&amp;quot;) } @Composable fun App(user: User) { // ② `Providers`コンポーネントを使用して、ambinentに値を渡します。 Providers(ActiveUser provides user) { SomeScreen() } } // ③ツリーの間にあるコンポーネントはAmbientの値を知る必要はありません。 @Composable fun SomeScreen() { UserPhoto() } @Composable fun UserPhoto() { // ④ `current`プロパティを使うことでAmbinentの値を使うことができます。 val user = ActiveUser.current ProfileIcon(src = user.profilePhotoUrl) }  もしAmbientを使わなければ、コンポーネントに引数で渡していくことになり、渡された値が必要のないコンポーネントまで余計なものを知る必要が出てきてしまいます。
-ambientOfとstaticAmbinentOfの違いについて Jetpack Compose - What is the Difference Between ambientOf and staticAmbientOf こちらが詳しいです。</description>
-    </item>
-    
-    <item>
-      <title>Jetpack Composeを既存のアプリと共存するには</title>
-      <link>https://kwmt27.net/2021/01/16/jetpack-compose/</link>
-      <pubDate>Sat, 16 Jan 2021 22:50:00 +0900</pubDate>
-      
-      <guid>https://kwmt27.net/2021/01/16/jetpack-compose/</guid>
-      <description>現象 次のエラーが出た。
-Execution failed for task &#39;:core:presentation:prepareDebugKotlinCompileTask&#39;. &amp;gt; Could not resolve all files for configuration &#39;:core:presentation:kotlin-extension&#39;. &amp;gt; Could not find androidx.compose:compose-compiler:1.0.0-alpha08. Searched in the following locations: - https://dl.google.com/dl/android/maven2/androidx/compose/compose-compiler/1.0.0-alpha08/compose-compiler-1.0.0-alpha08.pom - https://jcenter.bintray.com/androidx/compose/compose-compiler/1.0.0-alpha08/compose-compiler-1.0.0-alpha08.pom - https://www.jitpack.io/androidx/compose/compose-compiler/1.0.0-alpha08/compose-compiler-1.0.0-alpha08.pom - https://oss.sonatype.org/content/repositories/snapshots/androidx/compose/compose-compiler/1.0.0-alpha08/compose-compiler-1.0.0-alpha08.pom - https://kotlin.bintray.com/kotlinx/androidx/compose/compose-compiler/1.0.0-alpha08/compose-compiler-1.0.0-alpha08.pom Required by: project :core:presentation Possible solution: - Declare repository providing the artifact, see the documentation at https://docs.gradle.org/current/userguide/declaring_repositories.html  原因 Android Gradle Pluginのバージョンが古かったため
-対策  classpath(&amp;quot;com.android.tools.build:gradle:4.1.0&amp;quot;) + classpath(&amp;quot;com.android.tools.build:gradle:7.0.0-alpha02&amp;quot;)  -distributionUrl=https\://services.gradle.org/distributions/gradle-6.7-all.zip +distributionUrl=https://services.gradle.org/distributions/gradle-6.7.1-all.zip  現象 AGPのバージョンを7.0.0にするとGradle Syncで以下のエラーが出る classpath(&amp;ldquo;com.</description>
-    </item>
-    
-  </channel>
-</rss>
+// ① Ambientを作ります。 val ActiveUser = ambientOf&amp;lt;User&amp;gt; { error(&amp;#34;No active user found!&amp;#34;) } @Composable fun App(user: User) { // ② `Providers`コンポーネントを使用して、ambinentに値を渡します。 Providers(ActiveUser provides user) { SomeScreen() } } // ③ツリーの間にあるコンポーネントはAmbientの値を知る必要はありません。 @Composable fun SomeScreen() { UserPhoto() } @Composable fun UserPhoto() { // ④ `current`プロパティを使うことでAmbinentの値を使うことができます。 val user = ActiveUser.current ProfileIcon(src = user.profilePhotoUrl) } もしAmbientを使わなければ、コンポーネントに引数で渡していくことになり、渡された値が必要のないコンポーネントまで余計なものを知る必要が出てきてしまいます。
+ambientOfとstaticAmbinentOfの違いについてJetpack Compose - What is the Difference Between ambientOf and staticAmbientOf こちらが詳しいです。
+各ドキュメントはこちら
+ambientOf staticAmbientOf テーマの変更、端末の言語設定など変更機会が少なく、読み込みが書き込みより多い場合に staticAmbientOfを使うそうです。</description></item><item><title>Jetpack Composeを既存のアプリと共存するには</title><link>https://kwmt27.net/2021/01/16/jetpack-compose/</link><pubDate>Sat, 16 Jan 2021 22:50:00 +0900</pubDate><guid>https://kwmt27.net/2021/01/16/jetpack-compose/</guid><description>現象次のエラーが出た。
+Execution failed for task &amp;#39;:core:presentation:prepareDebugKotlinCompileTask&amp;#39;. &amp;gt; Could not resolve all files for configuration &amp;#39;:core:presentation:kotlin-extension&amp;#39;. &amp;gt; Could not find androidx.compose:compose-compiler:1.0.0-alpha08. Searched in the following locations: - https://dl.google.com/dl/android/maven2/androidx/compose/compose-compiler/1.0.0-alpha08/compose-compiler-1.0.0-alpha08.pom - https://jcenter.bintray.com/androidx/compose/compose-compiler/1.0.0-alpha08/compose-compiler-1.0.0-alpha08.pom - https://www.jitpack.io/androidx/compose/compose-compiler/1.0.0-alpha08/compose-compiler-1.0.0-alpha08.pom - https://oss.sonatype.org/content/repositories/snapshots/androidx/compose/compose-compiler/1.0.0-alpha08/compose-compiler-1.0.0-alpha08.pom - https://kotlin.bintray.com/kotlinx/androidx/compose/compose-compiler/1.0.0-alpha08/compose-compiler-1.0.0-alpha08.pom Required by: project :core:presentation Possible solution: - Declare repository providing the artifact, see the documentation at https://docs.gradle.org/current/userguide/declaring_repositories.html 原因Android Gradle Pluginのバージョンが古かったため
+対策 classpath(&amp;#34;com.android.tools.build:gradle:4.1.0&amp;#34;) + classpath(&amp;#34;com.android.tools.build:gradle:7.0.0-alpha02&amp;#34;) -distributionUrl=https\://services.gradle.org/distributions/gradle-6.7-all.zip +distributionUrl=https://services.gradle.org/distributions/gradle-6.7.1-all.zip 現象AGPのバージョンを7.0.0にするとGradle Syncで以下のエラーが出る classpath(&amp;ldquo;com.android.tools.build:gradle:7.0.0-alpha02&amp;rdquo;)
+Unable to find method &amp;#39;&amp;#39;void com.android.build.gradle.internal.dsl.BaseAppModuleExtension.onVariants(kotlin.jvm.functions.Function1)&amp;#39;&amp;#39; &amp;#39;void com.</description></item></channel></rss>

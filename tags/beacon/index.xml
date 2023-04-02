@@ -1,35 +1,12 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
-  <channel>
-    <title>Beacon on Androg</title>
-    <link>https://kwmt27.net/tags/beacon/</link>
-    <description>Recent content in Beacon on Androg</description>
-    <generator>Hugo -- gohugo.io</generator>
-    <language>ja</language>
-    <lastBuildDate>Thu, 26 Mar 2020 00:06:00 +0900</lastBuildDate>
-    
-	<atom:link href="https://kwmt27.net/tags/beacon/index.xml" rel="self" type="application/rss+xml" />
-    
-    
-    <item>
-      <title>LINE Simple Beaconを触ってみて、自分なりの疑問点をまとめた</title>
-      <link>https://kwmt27.net/2020/03/26/i-tried-to-use-line-simple-beacon-and-summarized-my-own-questions/</link>
-      <pubDate>Thu, 26 Mar 2020 00:06:00 +0900</pubDate>
-      
-      <guid>https://kwmt27.net/2020/03/26/i-tried-to-use-line-simple-beacon-and-summarized-my-own-questions/</guid>
-      <description>基本的にこちらの記事を参考にすれば、すぐ分かる人は分かるかと思いますが、僕自身が少しハマったことや疑問点があったので、それを忘れないうちにまとめておこうかと思います。
-HWID(端末ID)はLINE@ MANAGERページの方にある ブログ記事の通り進めていくと、LINE@ MANAGERとLINE Developerのページの２つのページで確認したり設定することになります。
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>beacon on Androg</title><link>https://kwmt27.net/tags/beacon/</link><description>Recent content in beacon on Androg</description><generator>Hugo -- gohugo.io</generator><language>ja</language><lastBuildDate>Thu, 26 Mar 2020 00:06:00 +0900</lastBuildDate><atom:link href="https://kwmt27.net/tags/beacon/index.xml" rel="self" type="application/rss+xml"/><item><title>LINE Simple Beaconを触ってみて、自分なりの疑問点をまとめた</title><link>https://kwmt27.net/2020/03/26/i-tried-to-use-line-simple-beacon-and-summarized-my-own-questions/</link><pubDate>Thu, 26 Mar 2020 00:06:00 +0900</pubDate><guid>https://kwmt27.net/2020/03/26/i-tried-to-use-line-simple-beacon-and-summarized-my-own-questions/</guid><description>基本的にこちらの記事を参考にすれば、すぐ分かる人は分かるかと思いますが、僕自身が少しハマったことや疑問点があったので、それを忘れないうちにまとめておこうかと思います。
+HWID(端末ID)はLINE@ MANAGERページの方にあるブログ記事の通り進めていくと、LINE@ MANAGERとLINE Developerのページの２つのページで確認したり設定することになります。
 HWIDはこちらから発行できるのですが、LINE@ Managerで使用しているbotアカウントを選択して、左メニューのLINE Beacon -&amp;gt; アカウント連携 にある端末IDもHWIDを示していますので、そちらでも確認できます。
-HWIDとは？ スマートフォンがRaspberry Piの受信圏内に出入りしたときに、Beacon EventのWebhookを投げれる状態にするもの。 ブログ記事にあるとおりにラズパイ側で設定するだけでいい。ただ、これだけでは投げる先がわかならないので、投げる先の登録は LINE Developersページで登録する必要があります。
-LINE Developersページに行くには？ LINE@ Managerから設定したいBotアカウントを選択して、左メニューのアカウント設定-&amp;gt;Bot設定とたどります。 すると、下図のようなリンクがあるので、そこをクリックするといけます。
-(LINE Dvelopersページに行くのに、毎回迷子になってました（汗）)
-WebhookのURLは何を指定したらいいの？ サーバーを準備する必要があり、そのURLを指定します。 私はHeroku＋Goを使用しました。Getting Started on Heroku with Goなどを参考にWebhookでBeaconEventを受け取れるようにサーバーを準備します。
+HWIDとは？スマートフォンがRaspberry Piの受信圏内に出入りしたときに、Beacon EventのWebhookを投げれる状態にするもの。 ブログ記事にあるとおりにラズパイ側で設定するだけでいい。ただ、これだけでは投げる先がわかならないので、投げる先の登録は LINE Developersページで登録する必要があります。
+LINE Developersページに行くには？LINE@ Managerから設定したいBotアカウントを選択して、左メニューのアカウント設定-&amp;gt;Bot設定とたどります。 すると、下図のようなリンクがあるので、そこをクリックするといけます。
+Go to LINE Developers page.png (LINE Dvelopersページに行くのに、毎回迷子になってました（汗）)
+WebhookのURLは何を指定したらいいの？サーバーを準備する必要があり、そのURLを指定します。 私はHeroku＋Goを使用しました。Getting Started on Heroku with Goなどを参考にWebhookでBeaconEventを受け取れるようにサーバーを準備します。
 ただ単に受けるだけなら、下記のような感じでいいです。
-http.HandleFunc(&amp;quot;/callback&amp;quot;, func(w http.ResponseWriter, req *http.Request) { log.Println(req) }) http.ListenAndServe(&amp;quot;&amp;quot;, nil)  ただ、これだけだとEventが来たときスルーさせるだけなので、Eventが来たことを知る必要があるのと、Eventが来たらどうするのか、たとえばLINEのメッセージに送るとかをしたいと思いますので、それに必要なのがこちらのline-bot-sdkです。
+http.HandleFunc(&amp;#34;/callback&amp;#34;, func(w http.ResponseWriter, req *http.Request) { log.Println(req) }) http.ListenAndServe(&amp;#34;&amp;#34;, nil) ただ、これだけだとEventが来たときスルーさせるだけなので、Eventが来たことを知る必要があるのと、Eventが来たらどうするのか、たとえばLINEのメッセージに送るとかをしたいと思いますので、それに必要なのがこちらのline-bot-sdkです。
 Channel SecretとChannel Access Tokenを指定する必要がありますが、これはLINE Developersページに記載されていますので、確認してみてください。
 設定したりパースしたりする部分は省略しますが、Beacon Eventが来たことを判定にするには、下記のように書きます。
-for _, event := range events { if event.Type == linebot.EventTypeBeacon { // Beacon Eventが来た。ここでLINEメッセージを送ったりする。 } }  LINEメッセージを送るには、eventの中にあるreplyTokenを使用して、下記のように書くと、ここでははろーというメッセージが届くようになります。</description>
-    </item>
-    
-  </channel>
-</rss>
+for _, event := range events { if event.Type == linebot.EventTypeBeacon { // Beacon Eventが来た。ここでLINEメッセージを送ったりする。 } } LINEメッセージを送るには、eventの中にあるreplyTokenを使用して、下記のように書くと、ここでははろーというメッセージが届くようになります。</description></item></channel></rss>

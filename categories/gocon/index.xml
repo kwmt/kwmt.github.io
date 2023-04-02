@@ -1,29 +1,6 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
-  <channel>
-    <title>Gocon on Androg</title>
-    <link>https://kwmt27.net/categories/gocon/</link>
-    <description>Recent content in Gocon on Androg</description>
-    <generator>Hugo -- gohugo.io</generator>
-    <language>ja</language>
-    <lastBuildDate>Wed, 27 Apr 2016 10:09:38 +0900</lastBuildDate>
-    
-	<atom:link href="https://kwmt27.net/categories/gocon/index.xml" rel="self" type="application/rss+xml" />
-    
-    
-    <item>
-      <title>GoCon 2016 springに行ってきた</title>
-      <link>https://kwmt27.net/2016/04/27/gocon-2016-spring/</link>
-      <pubDate>Wed, 27 Apr 2016 10:09:38 +0900</pubDate>
-      
-      <guid>https://kwmt27.net/2016/04/27/gocon-2016-spring/</guid>
-      <description>4&amp;frasl;23(土)は、GoCon2016 Springに行ってきました。
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>GoCon on Androg</title><link>https://kwmt27.net/categories/gocon/</link><description>Recent content in GoCon on Androg</description><generator>Hugo -- gohugo.io</generator><language>ja</language><lastBuildDate>Wed, 27 Apr 2016 10:09:38 +0900</lastBuildDate><atom:link href="https://kwmt27.net/categories/gocon/index.xml" rel="self" type="application/rss+xml"/><item><title>GoCon 2016 springに行ってきた</title><link>https://kwmt27.net/2016/04/27/gocon-2016-spring/</link><pubDate>Wed, 27 Apr 2016 10:09:38 +0900</pubDate><guid>https://kwmt27.net/2016/04/27/gocon-2016-spring/</guid><description>4/23(土)は、GoCon2016 Springに行ってきました。
 イワタプロが資料一覧をまとめてくださってましたので、乗っかります
 資料一覧
 toggeterはこちら
 概要だけ書いておこう。
- Daveさん:エラーの話 Makiさん:APIサーバーを書きたくない話 motemenさん:Goコードを読む話 shibukawaさん:GUIの話 hirataさん:elastic beatの話 kazegusuriさん:gRPC導入 鶴岡さん:GoとGAEのweb app開発の話 vvakameさん:webフレームワーク(ucon)作成した話 stanakaさん:コントリビュートしたときの話 yoshiki nakagawaさん:Goサーバーのプロダクション環境の話 kaneshinさん:Cloud Vision APIをGoでやってみた話 methaneさん:パフォーマンスチューニングの話  あとLTも盛り沢山 ストリートファイター４をGoをつかって操作の話はもりあがりましたね。 https://github.com/cero-t/cero-macro.go https://twitter.com/cero_t/status/724267524963991553</description>
-    </item>
-    
-  </channel>
-</rss>
+Daveさん:エラーの話 Makiさん:APIサーバーを書きたくない話 motemenさん:Goコードを読む話 shibukawaさん:GUIの話 hirataさん:elastic beatの話 kazegusuriさん:gRPC導入 鶴岡さん:GoとGAEのweb app開発の話 vvakameさん:webフレームワーク(ucon)作成した話 stanakaさん:コントリビュートしたときの話 yoshiki nakagawaさん:Goサーバーのプロダクション環境の話 kaneshinさん:Cloud Vision APIをGoでやってみた話 methaneさん:パフォーマンスチューニングの話 あとLTも盛り沢山 ストリートファイター４をGoをつかって操作の話はもりあがりましたね。 https://github.com/cero-t/cero-macro.go https://twitter.com/cero_t/status/724267524963991553</description></item></channel></rss>

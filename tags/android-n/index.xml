@@ -1,29 +1,6 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
-  <channel>
-    <title>Android N on Androg</title>
-    <link>https://kwmt27.net/tags/android-n/</link>
-    <description>Recent content in Android N on Androg</description>
-    <generator>Hugo -- gohugo.io</generator>
-    <language>ja</language>
-    <lastBuildDate>Wed, 27 Apr 2016 12:23:03 +0900</lastBuildDate>
-    
-	<atom:link href="https://kwmt27.net/tags/android-n/index.xml" rel="self" type="application/rss+xml" />
-    
-    
-    <item>
-      <title>Google Developers Summit Tokyo 2016 | Android に行ってきた</title>
-      <link>https://kwmt27.net/2016/04/27/google-developers-summit/</link>
-      <pubDate>Wed, 27 Apr 2016 12:23:03 +0900</pubDate>
-      
-      <guid>https://kwmt27.net/2016/04/27/google-developers-summit/</guid>
-      <description>はじめに 4&amp;frasl;25(月)は、Google Developers Summit Tokyo 2016に行ってきました。
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Android N on Androg</title><link>https://kwmt27.net/tags/android-n/</link><description>Recent content in Android N on Androg</description><generator>Hugo -- gohugo.io</generator><language>ja</language><lastBuildDate>Wed, 27 Apr 2016 12:23:03 +0900</lastBuildDate><atom:link href="https://kwmt27.net/tags/android-n/index.xml" rel="self" type="application/rss+xml"/><item><title>Google Developers Summit Tokyo 2016 | Android に行ってきた</title><link>https://kwmt27.net/2016/04/27/google-developers-summit/</link><pubDate>Wed, 27 Apr 2016 12:23:03 +0900</pubDate><guid>https://kwmt27.net/2016/04/27/google-developers-summit/</guid><description>はじめに4/25(月)は、Google Developers Summit Tokyo 2016に行ってきました。
 まとめようかと思ったけど、この方の記事が超まとまってて、書くことが何もないので、こちらのリンクだけはらせて頂きます。まとめありがとうございます！ http://yuki312.blogspot.jp/2016/04/google-developers-summit-tokyo-2016.html?m=1
 だけど、ぜんぶではないが自分もメモとってたので、わかりにくいけどメモをペタッと。
-メモ 7月から9月(第三四半期)に最終版 本日はPreview2のステージ
+メモ7月から9月(第三四半期)に最終版 本日はPreview2のステージ
 www.google.com/android/beta より登録 対象:Nexus6以降 http://www.sli.do/ 1656
-江川さん 複数バージョンの共存 applicationのファイル名を変更すればよいだけ。 なるべくtoolバージョンをあげて、targetSDKはあとであげることが可能 AS2.1 JDK8のインストール必須 Jack and Jill Jack and Jill Androidno新しいツールチェイン Jack:コンパイラ Jill:リンカ 特徴 classにする工程がない Android NはJackでコンパイルされている 問題 Preview時に実行 AS2.1 に関するフィードバッグ http://b.android.com &amp;quot;Android Studio Bug&amp;quot;, &amp;quot;Jack bug report&amp;quot;を選択して投稿 Android Studio BugだとAndroid Studio担当者にアサインされる。featureだとAS担当者にアサインされない可能性がある DEXについて dexInProcess デフォルトでtrue ひとつのVM メモリ不足対策 gradle.propertiesにorg.grdle jv シュリンク機能 不要メソッドを消去したい 接続中に特化したtパッケージの生成 例：複数端末接続していた場合、xxhdpiがいらない端末であれば、そのリソースを含まないようにデプロイする（Android Studio経由） Instant Run 下記のような場合、パフォーマンスが落ちる問題が起きる multiDexEnabled trueかつminSdkVersion 20の場合 Dexに含まれるメソッド数が本来の数より増える Jackと併用負荷 Android Emulator2 App Indexing支援  荒木さん Android N Preview4まではAPIが変わる可能性がある Preview4は24に変わる予定 過去の端末もプレビューできるようになる予定 マルチウィンドウ Picture in Picture(TV) TV限定フローティングウィンドウのようにぽこっと出る 二分割 自由形式 OEMのボードによる リサイズ問題 新しいAPIはない。これまで通り。best practiceに従っている限り綺麗に表示されるハズ リサイズ ライフサイクル これまで通り リサイズはこれまでの画面回転と一緒。 active ON onResumeが呼ばれている active OFF onPauseが呼ばれてとまってる 動画上で、twitterが下した場合 onPauseで動画を止めてはだめ。onStopで止める。 既存のアプリはマルチウィンドウを許可されている状態になっている。 ただし、縦固定しているとマルチウィンドウにはならない。 マルチウィンドの判定のAPI追加 マルチウィンドウ切り替え 分割、自由形式は アプリから制御できない。右側の□ボタンを長押することだけしかできない 通知 直接返信 通知から直接返信できる グループ化 カスタムビュー setContentはdeprecated Java8 Android向けのJava8はJackでないとコンパイルできない ``` android{ jackOptions { enabled true } } ``` ラムダ button.</description>
-    </item>
-    
-  </channel>
-</rss>
+江川さん複数バージョンの共存 applicationのファイル名を変更すればよいだけ。 なるべくtoolバージョンをあげて、targetSDKはあとであげることが可能 AS2.1 JDK8のインストール必須 Jack and Jill Jack and Jill Androidno新しいツールチェイン Jack:コンパイラ Jill:リンカ 特徴 classにする工程がない Android NはJackでコンパイルされている 問題 Preview時に実行 AS2.1 に関するフィードバッグ http://b.android.com &amp;quot;Android Studio Bug&amp;quot;, &amp;quot;Jack bug report&amp;quot;を選択して投稿 Android Studio BugだとAndroid Studio担当者にアサインされる。featureだとAS担当者にアサインされない可能性がある DEXについて dexInProcess デフォルトでtrue ひとつのVM メモリ不足対策 gradle.propertiesにorg.grdle jv シュリンク機能 不要メソッドを消去したい 接続中に特化したtパッケージの生成 例：複数端末接続していた場合、xxhdpiがいらない端末であれば、そのリソースを含まないようにデプロイする（Android Studio経由） Instant Run 下記のような場合、パフォーマンスが落ちる問題が起きる multiDexEnabled trueかつminSdkVersion 20の場合 Dexに含まれるメソッド数が本来の数より増える Jackと併用負荷 Android Emulator2 App Indexing支援 荒木さんAndroid N Preview4まではAPIが変わる可能性がある Preview4は24に変わる予定 過去の端末もプレビューできるようになる予定 マルチウィンドウ Picture in Picture(TV) TV限定フローティングウィンドウのようにぽこっと出る 二分割 自由形式 OEMのボードによる リサイズ問題 新しいAPIはない。これまで通り。best practiceに従っている限り綺麗に表示されるハズ リサイズ ライフサイクル これまで通り リサイズはこれまでの画面回転と一緒。 active ON onResumeが呼ばれている active OFF onPauseが呼ばれてとまってる 動画上で、twitterが下した場合 onPauseで動画を止めてはだめ。onStopで止める。 既存のアプリはマルチウィンドウを許可されている状態になっている。 ただし、縦固定しているとマルチウィンドウにはならない。 マルチウィンドの判定のAPI追加 マルチウィンドウ切り替え 分割、自由形式は アプリから制御できない。右側の□ボタンを長押することだけしかできない 通知 直接返信 通知から直接返信できる グループ化 カスタムビュー setContentはdeprecated Java8 Android向けのJava8はJackでないとコンパイルできない ``` android{ jackOptions { enabled true } } ``` ラムダ button.</description></item></channel></rss>

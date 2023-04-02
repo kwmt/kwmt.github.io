@@ -1,30 +1,10 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
-  <channel>
-    <title>State on Androg</title>
-    <link>https://kwmt27.net/tags/state/</link>
-    <description>Recent content in State on Androg</description>
-    <generator>Hugo -- gohugo.io</generator>
-    <language>ja</language>
-    <lastBuildDate>Sat, 06 Mar 2021 12:30:00 +0900</lastBuildDate>
-    
-	<atom:link href="https://kwmt27.net/tags/state/index.xml" rel="self" type="application/rss+xml" />
-    
-    
-    <item>
-      <title>State and Jetpack Compose</title>
-      <link>https://kwmt27.net/2021/03/06/jetpack-compose-state/</link>
-      <pubDate>Sat, 06 Mar 2021 12:30:00 +0900</pubDate>
-      
-      <guid>https://kwmt27.net/2021/03/06/jetpack-compose-state/</guid>
-      <description>はじめに 基本的には、書きを参考に自分なりにまとめたものです。
- State and Jetpack Compose Jetpack Compose 入門 composeバージョンは 1.0.0-beta01 です。  State Composeでは状態をStateというもので扱います。
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>State on Androg</title><link>https://kwmt27.net/tags/state/</link><description>Recent content in State on Androg</description><generator>Hugo -- gohugo.io</generator><language>ja</language><lastBuildDate>Sat, 06 Mar 2021 12:30:00 +0900</lastBuildDate><atom:link href="https://kwmt27.net/tags/state/index.xml" rel="self" type="application/rss+xml"/><item><title>State and Jetpack Compose</title><link>https://kwmt27.net/2021/03/06/jetpack-compose-state/</link><pubDate>Sat, 06 Mar 2021 12:30:00 +0900</pubDate><guid>https://kwmt27.net/2021/03/06/jetpack-compose-state/</guid><description>はじめに基本的には、書きを参考に自分なりにまとめたものです。
+State and Jetpack Compose Jetpack Compose 入門 composeバージョンは 1.0.0-beta01 です。 StateComposeでは状態をStateというもので扱います。
 外から変更可能な MutableStateと外からは変更できないStateがあります。
-@Stable interface MutableState&amp;lt;T&amp;gt; : State&amp;lt;T&amp;gt; { override var value: T operator fun component1(): T operator fun component2(): (T) -&amp;gt; Unit }  @Stable interface State&amp;lt;T&amp;gt; { val value: T }  var expanded by remember { mutableStateOf(false) }  mutableStateOfで新しいBooleanのStateを作成しています。
+@Stable interface MutableState&amp;lt;T&amp;gt; : State&amp;lt;T&amp;gt; { override var value: T operator fun component1(): T operator fun component2(): (T) -&amp;gt; Unit } @Stable interface State&amp;lt;T&amp;gt; { val value: T } var expanded by remember { mutableStateOf(false) } mutableStateOfで新しいBooleanのStateを作成しています。
 Buttonのクリックイベントの中でその値を変更しています。
-onClick = { expanded = true }  Stateを使っている箇所が再描画されます。
-Composable関数は必要に応じて再実行されます。これをrecomposition(再構成) とよびます。</description>
-    </item>
-    
-  </channel>
-</rss>
+onClick = { expanded = true } Stateを使っている箇所が再描画されます。
+Composable関数は必要に応じて再実行されます。これをrecomposition(再構成) とよびます。
+stateを宣言する時、by はKotlinのデリゲートプロパティという機能。
+byを使わず =を使うこともできますが、expanded.value = trueのように.valueをつける必要があります。
+var expanded = remember { mutableStateOf(false) } rememberrememberもComposable関数です.</description></item></channel></rss>

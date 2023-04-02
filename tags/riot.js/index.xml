@@ -1,26 +1,3 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
-  <channel>
-    <title>Riot.js on Androg</title>
-    <link>https://kwmt27.net/tags/riot.js/</link>
-    <description>Recent content in Riot.js on Androg</description>
-    <generator>Hugo -- gohugo.io</generator>
-    <language>ja</language>
-    <lastBuildDate>Thu, 19 Jan 2017 00:32:48 +0900</lastBuildDate>
-    
-	<atom:link href="https://kwmt27.net/tags/riot.js/index.xml" rel="self" type="application/rss+xml" />
-    
-    
-    <item>
-      <title>CSSで横スクロールしたい &#43; Riot.js</title>
-      <link>https://kwmt27.net/2017/01/19/i-want-to-side-scroll-by-css/</link>
-      <pubDate>Thu, 19 Jan 2017 00:32:48 +0900</pubDate>
-      
-      <guid>https://kwmt27.net/2017/01/19/i-want-to-side-scroll-by-css/</guid>
-      <description>横スクロールしたい &amp;lt;ul&amp;gt; &amp;lt;li&amp;gt;要素1&amp;lt;/li&amp;gt; &amp;lt;li&amp;gt;要素2&amp;lt;/li&amp;gt; &amp;lt;li&amp;gt;要素3&amp;lt;/li&amp;gt; &amp;lt;li&amp;gt;要素4&amp;lt;/li&amp;gt; &amp;lt;/ul&amp;gt;  とHTMLがなっているとき
- /*画像リストを横スクロール*/ ul { overflow-x: scroll; white-space: nowrap; } li { display: inline-block; padding-right: 5px; }  とする。 liはブロック要素なのでdisplay: inline-block;でインラインブロック化して横な並びになります。white-space: nowrap;で改行も半角スペースにすると横のサイズからはみ出て、それをoverflow-x: scroll;でスクロールさせます。
-サンプル https://embed.plnkr.co/awNm98DSBsyTar0sLnY3/</description>
-    </item>
-    
-  </channel>
-</rss>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Riot.js on Androg</title><link>https://kwmt27.net/tags/riot.js/</link><description>Recent content in Riot.js on Androg</description><generator>Hugo -- gohugo.io</generator><language>ja</language><lastBuildDate>Thu, 19 Jan 2017 00:32:48 +0900</lastBuildDate><atom:link href="https://kwmt27.net/tags/riot.js/index.xml" rel="self" type="application/rss+xml"/><item><title>CSSで横スクロールしたい + Riot.js</title><link>https://kwmt27.net/2017/01/19/i-want-to-side-scroll-by-css/</link><pubDate>Thu, 19 Jan 2017 00:32:48 +0900</pubDate><guid>https://kwmt27.net/2017/01/19/i-want-to-side-scroll-by-css/</guid><description>横スクロールしたい &amp;lt;ul&amp;gt; &amp;lt;li&amp;gt;要素1&amp;lt;/li&amp;gt; &amp;lt;li&amp;gt;要素2&amp;lt;/li&amp;gt; &amp;lt;li&amp;gt;要素3&amp;lt;/li&amp;gt; &amp;lt;li&amp;gt;要素4&amp;lt;/li&amp;gt; &amp;lt;/ul&amp;gt; とHTMLがなっているとき
+/*画像リストを横スクロール*/ ul { overflow-x: scroll; white-space: nowrap; } li { display: inline-block; padding-right: 5px; } とする。 liはブロック要素なのでdisplay: inline-block;でインラインブロック化して横な並びになります。white-space: nowrap;で改行も半角スペースにすると横のサイズからはみ出て、それをoverflow-x: scroll;でスクロールさせます。
+サンプルhttps://embed.plnkr.co/awNm98DSBsyTar0sLnY3/</description></item></channel></rss>

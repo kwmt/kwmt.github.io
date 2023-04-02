@@ -1,35 +1,14 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
-  <channel>
-    <title>Blog on Androg</title>
-    <link>https://kwmt27.net/categories/blog/</link>
-    <description>Recent content in Blog on Androg</description>
-    <generator>Hugo -- gohugo.io</generator>
-    <language>ja</language>
-    <lastBuildDate>Sun, 07 Feb 2016 13:19:40 +0900</lastBuildDate>
-    
-	<atom:link href="https://kwmt27.net/categories/blog/index.xml" rel="self" type="application/rss+xml" />
-    
-    
-    <item>
-      <title>WordpressからHugoに移行した時のメモ</title>
-      <link>https://kwmt27.net/2016/02/07/wordpress-to-hugo/</link>
-      <pubDate>Sun, 07 Feb 2016 13:19:40 +0900</pubDate>
-      
-      <guid>https://kwmt27.net/2016/02/07/wordpress-to-hugo/</guid>
-      <description>WordpressからHugoに移行してみたので、そのときやったメモを残しておこうかと思います。
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>blog on Androg</title><link>https://kwmt27.net/categories/blog/</link><description>Recent content in blog on Androg</description><generator>Hugo -- gohugo.io</generator><language>ja</language><lastBuildDate>Sun, 07 Feb 2016 13:19:40 +0900</lastBuildDate><atom:link href="https://kwmt27.net/categories/blog/index.xml" rel="self" type="application/rss+xml"/><item><title>WordpressからHugoに移行した時のメモ</title><link>https://kwmt27.net/2016/02/07/wordpress-to-hugo/</link><pubDate>Sun, 07 Feb 2016 13:19:40 +0900</pubDate><guid>https://kwmt27.net/2016/02/07/wordpress-to-hugo/</guid><description>WordpressからHugoに移行してみたので、そのときやったメモを残しておこうかと思います。
 おおまかにやったこととしては以下です。
- WordpressからHugoに変換 Github Pagesでホスティング GithubにプッシュでWerker CIを使って自動ビルド&amp;amp;デプロイ  Wordpressの記事をHugoのマークダウンに変換 1.Wordpress置いてるサーバーログインして wordpress to hugoプラグインをダウンロードします。(wordpressのプラグイン検索ではみつからなかった)
-$ git clone https://github.com/SchumacherFM/wordpress-to-hugo-exporter.git wp-content/plugins/wordpress-to-hugo-exporte  2.変換を実行します。
-$ cd wp-content/plugins/wordpress-to-hugo-exporte $ php hugo-export-cli.php This is your file! /tmp/wp-hugo.zip  3.変換されたwp-hugo.zipをローカルにダウンロードします。
+WordpressからHugoに変換 Github Pagesでホスティング GithubにプッシュでWerker CIを使って自動ビルド&amp;amp;デプロイ Wordpressの記事をHugoのマークダウンに変換1.Wordpress置いてるサーバーログインして wordpress to hugoプラグインをダウンロードします。(wordpressのプラグイン検索ではみつからなかった)
+$ git clone https://github.com/SchumacherFM/wordpress-to-hugo-exporter.git wp-content/plugins/wordpress-to-hugo-exporte 2.変換を実行します。
+$ cd wp-content/plugins/wordpress-to-hugo-exporte $ php hugo-export-cli.php This is your file! /tmp/wp-hugo.zip 3.変換されたwp-hugo.zipをローカルにダウンロードします。
 4.画像パスなどがWPとHugoではことなるので、変換します。
- hugo-export/post を content/postに移動 hugo-export/images を content/uploadsに移動してuploadsをimagesにリネーム  のように一括置換すればよいでしょう。これでもパスが異なることがあるかも。
-Hugoで公開する準備 Githubで、2つrepositoryを作成します。
- hugo_gh_blog : 名前はなんでもOKです。これはblogのバージョン管理用です。ブログ記事を書いたらコチラにプッシュします。 &amp;lt;username&amp;gt;.github.io : こちらが公開用になります。(デプロイ先です)  cloneしてきたhugo_gh_blogで hugo new site .してHugoサイトを作成します。 その辺りは Hugoの公式サイトQuick startを見て下さい。
-テーマ テーマは こちらにまとまってるので、こちらからダウンロードします。
+hugo-export/post を content/postに移動 hugo-export/images を content/uploadsに移動してuploadsをimagesにリネーム のように一括置換すればよいでしょう。これでもパスが異なることがあるかも。
+Hugoで公開する準備Githubで、2つrepositoryを作成します。
+hugo_gh_blog : 名前はなんでもOKです。これはblogのバージョン管理用です。ブログ記事を書いたらコチラにプッシュします。 &amp;lt;username&amp;gt;.github.io : こちらが公開用になります。(デプロイ先です) cloneしてきたhugo_gh_blogで hugo new site .してHugoサイトを作成します。 その辺りは Hugoの公式サイトQuick startを見て下さい。
+テーマテーマは こちらにまとまってるので、こちらからダウンロードします。
 ぼくはcrispというテーマをカスタマイズしています。
-% git clone https://github.</description>
-    </item>
-    
-  </channel>
-</rss>
+% git clone https://github.com/kwmt/hugo-theme-crisp themes/hugo-theme-crisp として、themesの下にテーマをcloneします。
+% hugo server --theme=hugo-theme-crisp で確認できます。
+git管理テーマはhugo_gh_blogレポジトリにaddしてしまいました。git submoduleの使い方がよくわからなくて。 ので、thmemes/hugo-theme-crisp/.git は削除しています。</description></item></channel></rss>

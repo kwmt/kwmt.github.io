@@ -1,32 +1,9 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
-  <channel>
-    <title>Textformfield on Androg</title>
-    <link>https://kwmt27.net/tags/textformfield/</link>
-    <description>Recent content in Textformfield on Androg</description>
-    <generator>Hugo -- gohugo.io</generator>
-    <language>ja</language>
-    <lastBuildDate>Wed, 22 Aug 2018 23:35:00 +0900</lastBuildDate>
-    
-	<atom:link href="https://kwmt27.net/tags/textformfield/index.xml" rel="self" type="application/rss+xml" />
-    
-    
-    <item>
-      <title>Flutterでテキストフィールドが最大3行になるようにするには</title>
-      <link>https://kwmt27.net/2018/08/22/flutter-textfield/</link>
-      <pubDate>Wed, 22 Aug 2018 23:35:00 +0900</pubDate>
-      
-      <guid>https://kwmt27.net/2018/08/22/flutter-textfield/</guid>
-      <description>やりたいこと Flutterで、LINEでメッセージ入力するときのように、テキストフィールドが最大3行になるようにしたい。 つまり、下の動画のようにしたい。
- コード例とポイント説明 ポイントとなる部分だけのコードと説明します。
- TextEditingControllerを使って、TextFieldに入力されたテキスト取得できるようにしておきます。
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>TextFormField on Androg</title><link>https://kwmt27.net/tags/textformfield/</link><description>Recent content in TextFormField on Androg</description><generator>Hugo -- gohugo.io</generator><language>ja</language><lastBuildDate>Wed, 22 Aug 2018 23:35:00 +0900</lastBuildDate><atom:link href="https://kwmt27.net/tags/textformfield/index.xml" rel="self" type="application/rss+xml"/><item><title>Flutterでテキストフィールドが最大3行になるようにするには</title><link>https://kwmt27.net/2018/08/22/flutter-textfield/</link><pubDate>Wed, 22 Aug 2018 23:35:00 +0900</pubDate><guid>https://kwmt27.net/2018/08/22/flutter-textfield/</guid><description>やりたいことFlutterで、LINEでメッセージ入力するときのように、テキストフィールドが最大3行になるようにしたい。 つまり、下の動画のようにしたい。
+コード例とポイント説明ポイントとなる部分だけのコードと説明します。
+TextEditingControllerを使って、TextFieldに入力されたテキスト取得できるようにしておきます。
 また、TextFieldになにか変更があったら通知されるlistenerを登録します。
-_textEditingController.addListener(_textEditListener);  このとき通知される関数はここでは_textEditListenerとしていて、変更があるたびに _maxLinesにセットされます。
+_textEditingController.addListener(_textEditListener); このとき通知される関数はここでは_textEditListenerとしていて、変更があるたびに _maxLinesにセットされます。
 次に、TextFormFieldのプロパティのkeyboardTypeは複数行に最適なmultilineを設定し、キーボードのエンターキーに当たる部分の改行できるように変更します。
-keyboardType: TextInputType.multiline, textInputAction: TextInputAction.newline,  maxLinesはnullを指定すると、どこまででも改行します。
-maxLines: _maxLines  これらを組み合わせて、テキストが入力されるたびに改行コードを数え、改行コードが2つ以上(全体としては3行になっている)の場合は、maxLinesを3に設定すればいいので、_textEditListener関数で次のようにしています。
-void _textEditListener() { setState(() { // TextFieldに改行が2つ以上入っていたら、3行以上になるので、3行までに止める。 _maxLines = &#39;\n&#39;.allMatches(_textEditingController.text).length &amp;gt;= 2 ? 3 : null; }); }  これで最初の動画のような動きになります。</description>
-    </item>
-    
-  </channel>
-</rss>
+keyboardType: TextInputType.multiline, textInputAction: TextInputAction.newline, maxLinesはnullを指定すると、どこまででも改行します。
+maxLines: _maxLines これらを組み合わせて、テキストが入力されるたびに改行コードを数え、改行コードが2つ以上(全体としては3行になっている)の場合は、maxLinesを3に設定すればいいので、_textEditListener関数で次のようにしています。
+void _textEditListener() { setState(() { // TextFieldに改行が2つ以上入っていたら、3行以上になるので、3行までに止める。 _maxLines = &amp;#39;\n&amp;#39;.allMatches(_textEditingController.text).length &amp;gt;= 2 ? 3 : null; }); } これで最初の動画のような動きになります。</description></item></channel></rss>

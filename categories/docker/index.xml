@@ -1,50 +1,5 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
-  <channel>
-    <title>Docker on Androg</title>
-    <link>https://kwmt27.net/categories/docker/</link>
-    <description>Recent content in Docker on Androg</description>
-    <generator>Hugo -- gohugo.io</generator>
-    <language>ja</language>
-    <lastBuildDate>Thu, 26 Mar 2020 00:05:00 +0900</lastBuildDate>
-    
-	<atom:link href="https://kwmt27.net/categories/docker/index.xml" rel="self" type="application/rss+xml" />
-    
-    
-    <item>
-      <title>dockerコンテナのNameを変更するには</title>
-      <link>https://kwmt27.net/2020/03/26/to-change-thename-of-a-docker-container/</link>
-      <pubDate>Thu, 26 Mar 2020 00:05:00 +0900</pubDate>
-      
-      <guid>https://kwmt27.net/2020/03/26/to-change-thename-of-a-docker-container/</guid>
-      <description>方法 $ docker rename &amp;lt;CONTAINER ID&amp;gt; &amp;lt;NEW NAME&amp;gt;  &amp;lt;CONTAINER ID&amp;gt; には、 docker ps -a で表示されるIDを指定。 &amp;lt;NEW NAME&amp;gt; には、変更したい名前を指定する。
-例 変更前 % docker ps -a CONTAINER ID IMAGE COMMAND CREATED STATUS PORTS NAMES 8618bc25dc49 ubuntu:16.10 &amp;quot;/bin/bash&amp;quot; 15 minutes ago Exited (0) 15 minutes ago prickly_brown  変更後 % docker ps -a CONTAINER ID IMAGE COMMAND CREATED STATUS PORTS NAMES 8618bc25dc49 ubuntu:16.10 &amp;quot;/bin/bash&amp;quot; 21 minutes ago Exited (0) 21 minutes ago rename_test  NAMESの prickly_brown が rename_test に変わってるのがわかると思います。</description>
-    </item>
-    
-    <item>
-      <title>Go言語で作ったAPIサーバーがのったコンテナをDockerで使ってみる</title>
-      <link>https://kwmt27.net/2016/02/07/how-to-use-gozen-with-docker/</link>
-      <pubDate>Sun, 07 Feb 2016 13:35:31 +0900</pubDate>
-      
-      <guid>https://kwmt27.net/2016/02/07/how-to-use-gozen-with-docker/</guid>
-      <description>Mac OSにdocker-toolboxをインストールし、VM(machine)を立ち上げる 1.docker-toolbox をインストールします。
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Docker on Androg</title><link>https://kwmt27.net/categories/docker/</link><description>Recent content in Docker on Androg</description><generator>Hugo -- gohugo.io</generator><language>ja</language><lastBuildDate>Thu, 26 Mar 2020 00:05:00 +0900</lastBuildDate><atom:link href="https://kwmt27.net/categories/docker/index.xml" rel="self" type="application/rss+xml"/><item><title>dockerコンテナのNameを変更するには</title><link>https://kwmt27.net/2020/03/26/to-change-thename-of-a-docker-container/</link><pubDate>Thu, 26 Mar 2020 00:05:00 +0900</pubDate><guid>https://kwmt27.net/2020/03/26/to-change-thename-of-a-docker-container/</guid><description>方法$ docker rename &amp;lt;CONTAINER ID&amp;gt; &amp;lt;NEW NAME&amp;gt; &amp;lt;CONTAINER ID&amp;gt; には、 docker ps -a で表示されるIDを指定。 &amp;lt;NEW NAME&amp;gt; には、変更したい名前を指定する。
+例変更前% docker ps -a CONTAINER ID IMAGE COMMAND CREATED STATUS PORTS NAMES 8618bc25dc49 ubuntu:16.10 &amp;#34;/bin/bash&amp;#34; 15 minutes ago Exited (0) 15 minutes ago prickly_brown 変更後% docker ps -a CONTAINER ID IMAGE COMMAND CREATED STATUS PORTS NAMES 8618bc25dc49 ubuntu:16.10 &amp;#34;/bin/bash&amp;#34; 21 minutes ago Exited (0) 21 minutes ago rename_test NAMESの prickly_brown が rename_test に変わってるのがわかると思います。</description></item><item><title>Go言語で作ったAPIサーバーがのったコンテナをDockerで使ってみる</title><link>https://kwmt27.net/2016/02/07/how-to-use-gozen-with-docker/</link><pubDate>Sun, 07 Feb 2016 13:35:31 +0900</pubDate><guid>https://kwmt27.net/2016/02/07/how-to-use-gozen-with-docker/</guid><description>Mac OSにdocker-toolboxをインストールし、VM(machine)を立ち上げる1.docker-toolbox をインストールします。
 2.インストールが完了すると、 docker quickstart terminal というのがありますのでそれを起動します。
 すると、ターミナルが立ち上がり、下記のようなログが流れます。
-bash --login &#39;/Applications/Docker/Docker Quickstart Terminal.app/Contents/Resources/Scripts/start.sh&#39; Last login: Thu Jan 21 15:14:12 on ttys017 % ~ % bash --login &#39;/Applications/Docker/Docker Quickstart Terminal.app/Contents/Resources/Scripts/start.sh&#39; Creating CA: /Users/kwmt/.docker/machine/certs/ca.pem Creating client certificate: /Users/kwmt/.docker/machine/certs/cert.pem Running pre-create checks... Creating machine... (default) Copying /Users/kwmt/.docker/machine/cache/boot2docker.iso to /Users/kwmt/.docker/machine/machines/default/boot2docker.iso... (default) Creating VirtualBox VM... (default) Creating SSH key... (default) Starting the VM... (default) Waiting for an IP... Waiting for machine to be running, this may take a few minutes.</description>
-    </item>
-    
-    <item>
-      <title>Dockerを導入した際の作業メモ</title>
-      <link>https://kwmt27.net/index.php/2014/12/12/docker/</link>
-      <pubDate>Fri, 12 Dec 2014 00:00:00 +0000</pubDate>
-      
-      <guid>https://kwmt27.net/index.php/2014/12/12/docker/</guid>
-      <description>&lt;h2 id=&#34;はじめに&#34;&gt;はじめに&lt;/h2&gt;
-
-&lt;p&gt;AWSで運用していたこのWordpressをさくらVPSに移行するにあたって、ついでに&lt;a href=&#34;https://www.docker.com/&#34; target=&#34;_blank&#34;&gt;Docker&lt;/a&gt;も勉強しようかなぁと思って、さくらVPSに&lt;a href=&#34;https://coreos.com/&#34; target=&#34;_blank&#34;&gt;CoreOS&lt;/a&gt;を載せて、Dockerでnginx + wordpressを動かすためにDockerについていろいろ調べたので、それのメモ。&lt;/p&gt;
-
-&lt;p&gt;&lt;/p&gt;</description>
-    </item>
-    
-  </channel>
-</rss>
+bash --login &amp;#39;/Applications/Docker/Docker Quickstart Terminal.app/Contents/Resources/Scripts/start.sh&amp;#39; Last login: Thu Jan 21 15:14:12 on ttys017 % ~ % bash --login &amp;#39;/Applications/Docker/Docker Quickstart Terminal.app/Contents/Resources/Scripts/start.sh&amp;#39; Creating CA: /Users/kwmt/.docker/machine/certs/ca.pem Creating client certificate: /Users/kwmt/.docker/machine/certs/cert.pem Running pre-create checks... Creating machine... (default) Copying /Users/kwmt/.docker/machine/cache/boot2docker.iso to /Users/kwmt/.docker/machine/machines/default/boot2docker.iso... (default) Creating VirtualBox VM... (default) Creating SSH key... (default) Starting the VM... (default) Waiting for an IP... Waiting for machine to be running, this may take a few minutes.</description></item><item><title>Dockerを導入した際の作業メモ</title><link>https://kwmt27.net/index.php/2014/12/12/docker/</link><pubDate>Fri, 12 Dec 2014 00:00:00 +0000</pubDate><guid>https://kwmt27.net/index.php/2014/12/12/docker/</guid><description>&lt;h2 id="はじめに">はじめに&lt;a class="anchorjs-link" href="#%e3%81%af%e3%81%98%e3%82%81%e3%81%ab">&lt;/a>&lt;/h2>&lt;p>AWSで運用していたこのWordpressをさくらVPSに移行するにあたって、ついでに&lt;!-- raw HTML omitted -->Docker&lt;!-- raw HTML omitted -->も勉強しようかなぁと思って、さくらVPSに&lt;!-- raw HTML omitted -->CoreOS&lt;!-- raw HTML omitted -->を載せて、Dockerでnginx + wordpressを動かすためにDockerについていろいろ調べたので、それのメモ。&lt;/p></description></item></channel></rss>

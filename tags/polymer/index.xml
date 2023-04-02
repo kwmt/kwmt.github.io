@@ -1,65 +1,19 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
-  <channel>
-    <title>Polymer on Androg</title>
-    <link>https://kwmt27.net/tags/polymer/</link>
-    <description>Recent content in Polymer on Androg</description>
-    <generator>Hugo -- gohugo.io</generator>
-    <language>ja</language>
-    <lastBuildDate>Tue, 23 Jun 2015 00:00:00 +0000</lastBuildDate>
-    
-	<atom:link href="https://kwmt27.net/tags/polymer/index.xml" rel="self" type="application/rss+xml" />
-    
-    
-    <item>
-      <title>はじめてのPolymer1.0(Webコンポーネントの作り方)</title>
-      <link>https://kwmt27.net/index.php/2015/06/23/how-to-make-web-component/</link>
-      <pubDate>Tue, 23 Jun 2015 00:00:00 +0000</pubDate>
-      
-      <guid>https://kwmt27.net/index.php/2015/06/23/how-to-make-web-component/</guid>
-      <description>&lt;h2 id=&#34;はじめに&#34;&gt;はじめに&lt;/h2&gt;
-
-&lt;p&gt;&lt;a href=&#34;https://sites.google.com/site/devfestjapan/&#34; target=&#34;_blank&#34;&gt;Google I/O報告会 2015 東京会場&lt;/a&gt;のブレイクアウトセッションの中でWebコンポーネントの作り方をライブコーディングで紹介して頂きまして、一緒に実際にやって、はじめての自分にとってはすっごくわかりやすくて面白かったので残しておこうとメモ。（公開してもいいことは確認済みです）&lt;/p&gt;
-
-&lt;p&gt;当日は、下記の前提がインストールされてなかったので動かすところはできませんでしたが、いまこの記事を書きながら実際に動かしてみています。&lt;/p&gt;
-
-&lt;h2 id=&#34;前提&#34;&gt;前提&lt;/h2&gt;
-
-&lt;ol&gt;
-&lt;li&gt;&lt;a href=&#34;http://qiita.com/oreo3@github/items/eb790fc091aa28af8d33&#34; target=&#34;_blank&#34;&gt;npmをインストールする&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;http://qiita.com/oreo3@github/items/eb790fc091aa28af8d33&#34; target=&#34;_blank&#34;&gt;Bowerをインストールする&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;code&gt;$HOME/polymer/devfest&lt;/code&gt;ディレクトリがあるとします。&lt;/li&gt;
-&lt;/ol&gt;
-
-&lt;h2 id=&#34;前提の補足&#34;&gt;前提の補足&lt;/h2&gt;
-
-&lt;p&gt;&lt;strong&gt;&lt;code&gt;$ nodebrew install latest&lt;/code&gt;でソースからインストールしたが、&lt;code&gt;node -v&lt;/code&gt;などと打つと&lt;code&gt;command not found: node&lt;/code&gt;と言われた時の対処法&lt;/strong&gt;&lt;/p&gt;
-
-&lt;p&gt;→バージョンを指定するだけ。&lt;/p&gt;
-
-&lt;h3 id=&#34;指定するには&#34;&gt;指定するには？&lt;/h3&gt;
-
-&lt;p&gt;1.インストールされてるバージョンを確認&lt;/p&gt;
-
-&lt;pre class=&#34;go&#34;&gt;$ nodebrew ls
-v0.12.5
-&lt;/pre&gt;
-
-&lt;p&gt;2.v0.12.5を指定する&lt;/p&gt;
-
-&lt;pre class=&#34;go&#34;&gt;$ nodebrew use v0.12.5
-&lt;/pre&gt;
-
-&lt;p&gt;3.確認&lt;/p&gt;
-
-&lt;pre class=&#34;go&#34;&gt;% node -v
-v0.12.5
-&lt;/pre&gt;
-
-&lt;h2 id=&#34;webコンポーネントの作り方-ここからライブコーディングでした&#34;&gt;Webコンポーネントの作り方(ここからライブコーディングでした)&lt;/h2&gt;
-
-&lt;p&gt;&lt;/p&gt;</description>
-    </item>
-    
-  </channel>
-</rss>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>polymer on Androg</title><link>https://kwmt27.net/tags/polymer/</link><description>Recent content in polymer on Androg</description><generator>Hugo -- gohugo.io</generator><language>ja</language><lastBuildDate>Tue, 23 Jun 2015 00:00:00 +0000</lastBuildDate><atom:link href="https://kwmt27.net/tags/polymer/index.xml" rel="self" type="application/rss+xml"/><item><title>はじめてのPolymer1.0(Webコンポーネントの作り方)</title><link>https://kwmt27.net/index.php/2015/06/23/how-to-make-web-component/</link><pubDate>Tue, 23 Jun 2015 00:00:00 +0000</pubDate><guid>https://kwmt27.net/index.php/2015/06/23/how-to-make-web-component/</guid><description>&lt;h2 id="はじめに">はじめに&lt;a class="anchorjs-link" href="#%e3%81%af%e3%81%98%e3%82%81%e3%81%ab">&lt;/a>&lt;/h2>&lt;p>&lt;!-- raw HTML omitted -->Google I/O報告会 2015 東京会場&lt;!-- raw HTML omitted -->のブレイクアウトセッションの中でWebコンポーネントの作り方をライブコーディングで紹介して頂きまして、一緒に実際にやって、はじめての自分にとってはすっごくわかりやすくて面白かったので残しておこうとメモ。（公開してもいいことは確認済みです）&lt;/p>
+&lt;p>当日は、下記の前提がインストールされてなかったので動かすところはできませんでしたが、いまこの記事を書きながら実際に動かしてみています。&lt;/p>
+&lt;h2 id="前提">前提&lt;a class="anchorjs-link" href="#%e5%89%8d%e6%8f%90">&lt;/a>&lt;/h2>&lt;ol>
+&lt;li>&lt;!-- raw HTML omitted -->npmをインストールする&lt;!-- raw HTML omitted -->&lt;/li>
+&lt;li>&lt;!-- raw HTML omitted -->Bowerをインストールする&lt;!-- raw HTML omitted -->&lt;/li>
+&lt;li>&lt;code>$HOME/polymer/devfest&lt;/code>ディレクトリがあるとします。&lt;/li>
+&lt;/ol>
+&lt;h2 id="前提の補足">前提の補足&lt;a class="anchorjs-link" href="#%e5%89%8d%e6%8f%90%e3%81%ae%e8%a3%9c%e8%b6%b3">&lt;/a>&lt;/h2>&lt;p>&lt;strong>&lt;code>$ nodebrew install latest&lt;/code>でソースからインストールしたが、&lt;code>node -v&lt;/code>などと打つと&lt;code>command not found: node&lt;/code>と言われた時の対処法&lt;/strong>&lt;/p>
+&lt;p>→バージョンを指定するだけ。&lt;/p>
+&lt;h3 id="指定するには">指定するには？&lt;a class="anchorjs-link" href="#%e6%8c%87%e5%ae%9a%e3%81%99%e3%82%8b%e3%81%ab%e3%81%af">&lt;/a>&lt;/h3>&lt;p>1.インストールされてるバージョンを確認&lt;/p>
+&lt;!-- raw HTML omitted -->
+&lt;!-- raw HTML omitted -->
+&lt;p>2.v0.12.5を指定する&lt;/p>
+&lt;!-- raw HTML omitted -->
+&lt;!-- raw HTML omitted -->
+&lt;p>3.確認&lt;/p>
+&lt;!-- raw HTML omitted -->
+&lt;!-- raw HTML omitted -->
+&lt;h2 id="webコンポーネントの作り方ここからライブコーディングでした">Webコンポーネントの作り方(ここからライブコーディングでした)&lt;a class="anchorjs-link" href="#web%e3%82%b3%e3%83%b3%e3%83%9d%e3%83%bc%e3%83%8d%e3%83%b3%e3%83%88%e3%81%ae%e4%bd%9c%e3%82%8a%e6%96%b9%e3%81%93%e3%81%93%e3%81%8b%e3%82%89%e3%83%a9%e3%82%a4%e3%83%96%e3%82%b3%e3%83%bc%e3%83%87%e3%82%a3%e3%83%b3%e3%82%b0%e3%81%a7%e3%81%97%e3%81%9f">&lt;/a>&lt;/h2></description></item></channel></rss>

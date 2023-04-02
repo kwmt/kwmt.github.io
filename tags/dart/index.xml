@@ -1,78 +1,32 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
-  <channel>
-    <title>Dart on Androg</title>
-    <link>https://kwmt27.net/tags/dart/</link>
-    <description>Recent content in Dart on Androg</description>
-    <generator>Hugo -- gohugo.io</generator>
-    <language>ja</language>
-    <lastBuildDate>Tue, 27 Nov 2018 21:50:00 +0900</lastBuildDate>
-    
-	<atom:link href="https://kwmt27.net/tags/dart/index.xml" rel="self" type="application/rss+xml" />
-    
-    
-    <item>
-      <title>DartのfirstWhere</title>
-      <link>https://kwmt27.net/2018/11/27/dart-firstwhere/</link>
-      <pubDate>Tue, 27 Nov 2018 21:50:00 +0900</pubDate>
-      
-      <guid>https://kwmt27.net/2018/11/27/dart-firstwhere/</guid>
-      <description>下記のような感じで書いていて、条件に一致しない場合は、
-members.firstWhere((member) =&amp;gt; _lastMessage.fromUserId == member.userId);   Bad state: No element
- と出ます。
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Dart on Androg</title><link>https://kwmt27.net/tags/dart/</link><description>Recent content in Dart on Androg</description><generator>Hugo -- gohugo.io</generator><language>ja</language><lastBuildDate>Tue, 27 Nov 2018 21:50:00 +0900</lastBuildDate><atom:link href="https://kwmt27.net/tags/dart/index.xml" rel="self" type="application/rss+xml"/><item><title>DartのfirstWhere</title><link>https://kwmt27.net/2018/11/27/dart-firstwhere/</link><pubDate>Tue, 27 Nov 2018 21:50:00 +0900</pubDate><guid>https://kwmt27.net/2018/11/27/dart-firstwhere/</guid><description>下記のような感じで書いていて、条件に一致しない場合は、
+members.firstWhere((member) =&amp;gt; _lastMessage.fromUserId == member.userId); Bad state: No element
+と出ます。
 仕様にも書いてました。
-/** * Returns the first element that satisfies the given predicate [test]. * * Iterates through elements and returns the first to satisfy [test]. * * If no element satisfies [test], the result of invoking the [orElse] * function is returned. * If [orElse] is omitted, it defaults to throwing a [StateError]. */ E firstWhere(bool test(E element), {E orElse()}) { for (E element in this) { if (test(element)) return element; } if (orElse !</description>
-    </item>
-    
-    <item>
-      <title>Dartのenumからの文字列取得について</title>
-      <link>https://kwmt27.net/2018/10/28/dart-enum/</link>
-      <pubDate>Sun, 28 Oct 2018 17:30:00 +0900</pubDate>
-      
-      <guid>https://kwmt27.net/2018/10/28/dart-enum/</guid>
-      <description>enum Type { Hoge, Fuga }  というenumがあったとき、このenumから“Hoge”という文字列を取得したい場合、次のようにする。
-Type.Hoge.toString().split(&#39;.&#39;)[1]  splitしなかったら、&amp;quot;Type.Hoge&amp;quot;という文字列が返る。
-dartpud(sample) https://dartpad.dartlang.org/a4a24c9a210cb0779e74c615d5ef25dd</description>
-    </item>
-    
-    <item>
-      <title>DartのMapを&lt;String, dynamic&gt;に変換するには？</title>
-      <link>https://kwmt27.net/2018/10/13/dart-map/</link>
-      <pubDate>Sat, 13 Oct 2018 13:20:00 +0900</pubDate>
-      
-      <guid>https://kwmt27.net/2018/10/13/dart-map/</guid>
-      <description>// サンプルデータ Map&amp;lt;String, bool&amp;gt; members = Map&amp;lt;String, bool&amp;gt;() ..putIfAbsent(&amp;quot;userID1&amp;quot;, () =&amp;gt; true) ..putIfAbsent(&amp;quot;userID2&amp;quot;, () =&amp;gt; true); print(members); // output: // {userID1: true, userID2: true} var transMember = members.entries.map((member) { return &amp;lt;String, dynamic&amp;gt;{member.key: member.value}; }); print(transMember); // output: // ({userID1: true}, {userID2: true})  Dartpad 動かして確認するにはこちら</description>
-    </item>
-    
-    <item>
-      <title>Dart FLIGHT SCHOOL Kyoto に行ってきた</title>
-      <link>https://kwmt27.net/index.php/2014/04/29/dart-flight-school-kyoto/</link>
-      <pubDate>Tue, 29 Apr 2014 00:00:00 +0000</pubDate>
-      
-      <guid>https://kwmt27.net/index.php/2014/04/29/dart-flight-school-kyoto/</guid>
-      <description>GoogleのDart開発チームからビデオで挨拶
+/** * Returns the first element that satisfies the given predicate [test]. * * Iterates through elements and returns the first to satisfy [test]. * * If no element satisfies [test], the result of invoking the [orElse] * function is returned. * If [orElse] is omitted, it defaults to throwing a [StateError]. */ E firstWhere(bool test(E element), {E orElse()}) { for (E element in this) { if (test(element)) return element; } if (orElse !</description></item><item><title>Dartのenumからの文字列取得について</title><link>https://kwmt27.net/2018/10/28/dart-enum/</link><pubDate>Sun, 28 Oct 2018 17:30:00 +0900</pubDate><guid>https://kwmt27.net/2018/10/28/dart-enum/</guid><description>enum Type { Hoge, Fuga } というenumがあったとき、このenumから“Hoge”という文字列を取得したい場合、次のようにする。
+Type.Hoge.toString().split(&amp;#39;.&amp;#39;)[1] splitしなかったら、&amp;quot;Type.Hoge&amp;quot;という文字列が返る。
+dartpud(sample)https://dartpad.dartlang.org/a4a24c9a210cb0779e74c615d5ef25dd</description></item><item><title>DartのMapを&lt;String, dynamic>に変換するには？</title><link>https://kwmt27.net/2018/10/13/dart-map/</link><pubDate>Sat, 13 Oct 2018 13:20:00 +0900</pubDate><guid>https://kwmt27.net/2018/10/13/dart-map/</guid><description>// サンプルデータ Map&amp;lt;String, bool&amp;gt; members = Map&amp;lt;String, bool&amp;gt;() ..putIfAbsent(&amp;#34;userID1&amp;#34;, () =&amp;gt; true) ..putIfAbsent(&amp;#34;userID2&amp;#34;, () =&amp;gt; true); print(members); // output: // {userID1: true, userID2: true} var transMember = members.entries.map((member) { return &amp;lt;String, dynamic&amp;gt;{member.key: member.value}; }); print(transMember); // output: // ({userID1: true}, {userID2: true}) Dartpad動かして確認するにはこちら</description></item><item><title>Dart FLIGHT SCHOOL Kyoto に行ってきた</title><link>https://kwmt27.net/index.php/2014/04/29/dart-flight-school-kyoto/</link><pubDate>Tue, 29 Apr 2014 00:00:00 +0000</pubDate><guid>https://kwmt27.net/index.php/2014/04/29/dart-flight-school-kyoto/</guid><description>GoogleのDart開発チームからビデオで挨拶
 Dartの基本的な文法を話してくれるスピーカーが雪の影響で遅れて、場つなぎの説明があって
 会場の注意事項とかパフォーマンスの話しとか
 型はあるけど、実行時に型情報を捨てている。
-Dartとは Googleが開発したプログラミング言語
+DartとはGoogleが開発したプログラミング言語
 JavaScriptに置き換わるブラウザ組み込みのスクリプト言語を目指して開発された
-開発環境 DartEditor
+開発環境DartEditor
 EclipseベースのIDE
 DartでHello World
-Dartの動作環境 ・DartVM搭載のブラウザで直接動作
+Dartの動作環境・DartVM搭載のブラウザで直接動作
 Dart1.1はJSより25％高速
-・&amp;#8221;dart2js&amp;#8221;でJSに変換して動かす
-Dartの歴史 2011年10月Dart発表(early preview)
+・”dart2js”でJSに変換して動かす
+Dartの歴史2011年10月Dart発表(early preview)
 2013年11月SDK1.0正式リリース
 2014年2月 Dart FLIGHT SCHOOL
 Jsはネストが深くなる→Callback Hell→Dartなら深くならない
-参考：What&amp;#8217;s New in Dart :Youtube
+参考：What’s New in Dart :Youtube
 ローカル変数
 querySelector(xxxxx)
 ServerSide Dart
 サーバーもクライアントもDartで書ける
 FlogCはdart2jsになる前のもの。
-&amp;#8212;&amp;#8212;
+——
 前半：文法まわり
 class Hug{ ←クラスが作れる
 final num strength;
@@ -84,32 +38,23 @@ JavascriptはJqueryとかCoffeeスクリプトとかいろんなものを入れ�
 Dartはthisはthis。javaの感覚で使ってよい
 後半：ライブラリなど
 Pub(package manager for Dart) https://pub.dartlang.org
-Bootjack is a porting of Twitter Bootstrap 3.</description>
-    </item>
-    
-    <item>
-      <title>Dartをインストールしてみた。</title>
-      <link>https://kwmt27.net/index.php/2012/01/02/dart%E3%82%92%E3%82%A4%E3%83%B3%E3%82%B9%E3%83%88%E3%83%BC%E3%83%AB%E3%81%97%E3%81%A6%E3%81%BF%E3%81%9F/</link>
-      <pubDate>Mon, 02 Jan 2012 00:00:00 +0000</pubDate>
-      
-      <guid>https://kwmt27.net/index.php/2012/01/02/dart%E3%82%92%E3%82%A4%E3%83%B3%E3%82%B9%E3%83%88%E3%83%BC%E3%83%AB%E3%81%97%E3%81%A6%E3%81%BF%E3%81%9F/</guid>
-      <description>はじめに Dartをインストールしてみた。インストール方法は基本的に
+Bootjack is a porting of Twitter Bootstrap 3.0.x in Dart.</description></item><item><title>Dartをインストールしてみた。</title><link>https://kwmt27.net/index.php/2012/01/02/dart%E3%82%92%E3%82%A4%E3%83%B3%E3%82%B9%E3%83%88%E3%83%BC%E3%83%AB%E3%81%97%E3%81%A6%E3%81%BF%E3%81%9F/</link><pubDate>Mon, 02 Jan 2012 00:00:00 +0000</pubDate><guid>https://kwmt27.net/index.php/2012/01/02/dart%E3%82%92%E3%82%A4%E3%83%B3%E3%82%B9%E3%83%88%E3%83%BC%E3%83%AB%E3%81%97%E3%81%A6%E3%81%BF%E3%81%9F/</guid><description>はじめにDartをインストールしてみた。インストール方法は基本的に
 Googleが発表した新しいプログラミング言語「Dart」を使ってみよう！（2/3）：CodeZine
 を参考にさせてもらったが、ちょっと分からないところと、Mac OS X Lion + Xcode 4.1 では、すんなりいかないみたいだったので
 記事に補足する感じで書けたらいいかなぁと思ってます。
-インストール環境  OS:Mac OS X Lion(10.7) Xcode 4.1  さっそく開始 はじめに必要なものはMacだと、Xcodeとdepot_toolsの２つをインストールすることと
-PreparingYourMachine &amp;#8211; dart &amp;#8211;に書かれている。
+インストール環境 OS:Mac OS X Lion(10.7) Xcode 4.1 さっそく開始はじめに必要なものはMacだと、Xcodeとdepot_toolsの２つをインストールすることと
+PreparingYourMachine – dart –に書かれている。
 Xcodeはインストール済みとして、depot_toolsを上記のCodeZineに書かれている通りにインストールした。
 ちなみに、depot_toolsのインストール方法の記載の本家は（たぶん）ここ。
-次が少しはまった CodeZineの続きで、Dartのソースコードをチェックアウトしたり、gsitilの設定したり、再度gclient syncしたりします。
+次が少しはまったCodeZineの続きで、Dartのソースコードをチェックアウトしたり、gsitilの設定したり、再度gclient syncしたりします。
 で、少しはまったところですが、CodeZineに「Xcode 4.1を利用している場合」と書かれている所がありますが、これだけではうまくいかなくて、
 Building Google Dart from source (Mac OS X Lion + Xcode 4.2)
 を参考にしました。ポイントは
- tools/build.pyファイルの&amp;#8217;macosx10.6&amp;#8217;→ &amp;#8216;macosx10.7&amp;#8217; tools/gyp/configurations_xcode.gypiのGCC_VERSIONを変更 ビルドコマンドのオプションを変更。 ./tools/build.py &amp;#8211;arch=ia32 &amp;#8211;mode=release  です。これでなんとかうまくビルドしてくれるかなと思ったら、
+tools/build.pyファイルの’macosx10.6’→ ‘macosx10.7’ tools/gyp/configurations_xcode.gypiのGCC_VERSIONを変更 ビルドコマンドのオプションを変更。 ./tools/build.py –arch=ia32 –mode=release です。これでなんとかうまくビルドしてくれるかなと思ったら、
 ** BUILD FAILED **
 The following build commands failed:
-PhaseScriptExecution &amp;#8220;Action &amp;amp;#8221;generate_frogsh&amp;amp;#8221;&amp;#8221; /Users//dart/dart/xcodebuild/dart-frog.</description>
-    </item>
-    
-  </channel>
-</rss>
+PhaseScriptExecution “Action &amp;amp;#8221;generate_frogsh&amp;amp;#8221;” /Users//dart/dart/xcodebuild/dart-frog.build/Release_ia32/frogsh.build/Script-095A7D91DE56B603C848FB82.sh
+(1 failure)
+BUILD FAILED
+と出た。.shファイルの中身を見たら、${Built_PRODUCTS_DIR} という変数が使われてたので、
+どっかで生成しているのかなと思ってgrepしてみたけど、特になし。</description></item></channel></rss>

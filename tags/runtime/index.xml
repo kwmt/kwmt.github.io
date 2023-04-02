@@ -1,25 +1,2 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
-  <channel>
-    <title>Runtime on Androg</title>
-    <link>https://kwmt27.net/tags/runtime/</link>
-    <description>Recent content in Runtime on Androg</description>
-    <generator>Hugo -- gohugo.io</generator>
-    <language>ja</language>
-    <lastBuildDate>Sat, 05 Oct 2013 00:00:00 +0000</lastBuildDate>
-    
-	<atom:link href="https://kwmt27.net/tags/runtime/index.xml" rel="self" type="application/rss+xml" />
-    
-    
-    <item>
-      <title>#golang リフレクションを使って関数名を取得するには？</title>
-      <link>https://kwmt27.net/index.php/2013/10/05/golang-how-to-get-function-name-with-reflection/</link>
-      <pubDate>Sat, 05 Oct 2013 00:00:00 +0000</pubDate>
-      
-      <guid>https://kwmt27.net/index.php/2013/10/05/golang-how-to-get-function-name-with-reflection/</guid>
-      <description> &amp;#8220;reflect&amp;#8221;パッケージだけでは取得できないようで、&amp;#8220;runtime&amp;#8221;パッケージの&amp;lt;a href=&amp;quot;http://golang.org/pkg/runtime/#FuncForPC&amp;quot; target=&amp;quot;_blank&amp;quot;&amp;gt;FuncForPC&amp;lt;/a&amp;gt;という関数を使うようです。
- 参考  reflection &amp;#8211; How to get the name of a function in Go? &amp;#8211; Stack Overflow goken/goken08-reflect.md at master · goken/goken  </description>
-    </item>
-    
-  </channel>
-</rss>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>runtime on Androg</title><link>https://kwmt27.net/tags/runtime/</link><description>Recent content in runtime on Androg</description><generator>Hugo -- gohugo.io</generator><language>ja</language><lastBuildDate>Sat, 05 Oct 2013 00:00:00 +0000</lastBuildDate><atom:link href="https://kwmt27.net/tags/runtime/index.xml" rel="self" type="application/rss+xml"/><item><title>#golang リフレクションを使って関数名を取得するには？</title><link>https://kwmt27.net/index.php/2013/10/05/golang-how-to-get-function-name-with-reflection/</link><pubDate>Sat, 05 Oct 2013 00:00:00 +0000</pubDate><guid>https://kwmt27.net/index.php/2013/10/05/golang-how-to-get-function-name-with-reflection/</guid><description>“reflect”パッケージだけでは取得できないようで、“runtime”パッケージの&amp;lt;a href=&amp;quot;http://golang.org/pkg/runtime/#FuncForPC&amp;quot; target=&amp;quot;_blank&amp;quot;&amp;gt;FuncForPC&amp;lt;/a&amp;gt;という関数を使うようです。
+参考 reflection – How to get the name of a function in Go? – Stack Overflow goken/goken08-reflect.md at master · goken/goken</description></item></channel></rss>

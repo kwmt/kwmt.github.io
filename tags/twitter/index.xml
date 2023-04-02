@@ -1,46 +1,9 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
-  <channel>
-    <title>Twitter on Androg</title>
-    <link>https://kwmt27.net/tags/twitter/</link>
-    <description>Recent content in Twitter on Androg</description>
-    <generator>Hugo -- gohugo.io</generator>
-    <language>ja</language>
-    <lastBuildDate>Mon, 10 Nov 2014 00:00:00 +0000</lastBuildDate>
-    
-	<atom:link href="https://kwmt27.net/tags/twitter/index.xml" rel="self" type="application/rss+xml" />
-    
-    
-    <item>
-      <title>TwitterのFabric SDKをAndroid Studioで使ってみる</title>
-      <link>https://kwmt27.net/index.php/2014/11/10/how-to-use-twitter-fabric-sdk-with-android-studio/</link>
-      <pubDate>Mon, 10 Nov 2014 00:00:00 +0000</pubDate>
-      
-      <guid>https://kwmt27.net/index.php/2014/11/10/how-to-use-twitter-fabric-sdk-with-android-studio/</guid>
-      <description>&lt;h2 id=&#34;はじめに&#34;&gt;はじめに&lt;/h2&gt;
-
-&lt;p&gt;ひさびさTwitterをつかってアプリつくろうと思って&lt;a href=&#34;https://dev.twitter.com/&#34; target=&#34;_blank&#34;&gt;ディベロッパーサイト&lt;/a&gt;に行ったら、fabric?????とか出てきてなんじゃこれ？と思って調べてたら、10/22(現地時間)に発表されたTwitterのモバイル向け新SDKとやららしい。&lt;/p&gt;
-
-&lt;blockquote&gt;
-&lt;p&gt;&lt;a href=&#34;http://bit.ly/1CYl4HO&#34; target=&#34;_blank&#34;&gt;Twitter、モバイルアプリ向け新SDK「Fabric」発表　パスワード不要の次世代認証「Digits」リリース &amp;#8211; ITmedia ニュース&lt;/a&gt;&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;p&gt;まぁ英語でもいいんだけど、日本語の情報ないかなぁと探してみたけど、全然ない(´・ω・`)&lt;/p&gt;
-
-&lt;p&gt;ということで、Android StudioでFabric SDKのセットアップしてから、ツイートできるようになるまでを書いてみようと思います。&lt;/p&gt;
-
-&lt;h2 id=&#34;android版fabricの公式サイト&#34;&gt;Android版Fabricの公式サイト&lt;/h2&gt;
-
-&lt;p&gt;&lt;a href=&#34;https://dev.twitter.com/twitter-kit/android&#34; target=&#34;_blank&#34;&gt;&lt;a href=&#34;https://dev.twitter.com/twitter-kit/android&#34;&gt;https://dev.twitter.com/twitter-kit/android&lt;/a&gt;&lt;/a&gt;&lt;/p&gt;
-
-&lt;h2 id=&#34;確認したバージョン&#34;&gt;確認したバージョン&lt;/h2&gt;
-
-&lt;pre class=&#34;go&#34;&gt;Android Studio：0.9.2
-Fabric SDK：1.0.1
-&lt;/pre&gt;
-
-&lt;p&gt;&lt;/p&gt;</description>
-    </item>
-    
-  </channel>
-</rss>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Twitter on Androg</title><link>https://kwmt27.net/tags/twitter/</link><description>Recent content in Twitter on Androg</description><generator>Hugo -- gohugo.io</generator><language>ja</language><lastBuildDate>Mon, 10 Nov 2014 00:00:00 +0000</lastBuildDate><atom:link href="https://kwmt27.net/tags/twitter/index.xml" rel="self" type="application/rss+xml"/><item><title>TwitterのFabric SDKをAndroid Studioで使ってみる</title><link>https://kwmt27.net/index.php/2014/11/10/how-to-use-twitter-fabric-sdk-with-android-studio/</link><pubDate>Mon, 10 Nov 2014 00:00:00 +0000</pubDate><guid>https://kwmt27.net/index.php/2014/11/10/how-to-use-twitter-fabric-sdk-with-android-studio/</guid><description>&lt;h2 id="はじめに">はじめに&lt;a class="anchorjs-link" href="#%e3%81%af%e3%81%98%e3%82%81%e3%81%ab">&lt;/a>&lt;/h2>&lt;p>ひさびさTwitterをつかってアプリつくろうと思って&lt;!-- raw HTML omitted -->ディベロッパーサイト&lt;!-- raw HTML omitted -->に行ったら、fabric?????とか出てきてなんじゃこれ？と思って調べてたら、10/22(現地時間)に発表されたTwitterのモバイル向け新SDKとやららしい。&lt;/p>
+&lt;blockquote>
+&lt;p>&lt;!-- raw HTML omitted -->Twitter、モバイルアプリ向け新SDK「Fabric」発表　パスワード不要の次世代認証「Digits」リリース – ITmedia ニュース&lt;!-- raw HTML omitted -->&lt;/p>
+&lt;/blockquote>
+&lt;p>まぁ英語でもいいんだけど、日本語の情報ないかなぁと探してみたけど、全然ない(´・ω・`)&lt;/p>
+&lt;p>ということで、Android StudioでFabric SDKのセットアップしてから、ツイートできるようになるまでを書いてみようと思います。&lt;/p>
+&lt;h2 id="android版fabricの公式サイト">Android版Fabricの公式サイト&lt;a class="anchorjs-link" href="#android%e7%89%88fabric%e3%81%ae%e5%85%ac%e5%bc%8f%e3%82%b5%e3%82%a4%e3%83%88">&lt;/a>&lt;/h2>&lt;p>&lt;!-- raw HTML omitted -->&lt;a href="https://dev.twitter.com/twitter-kit/android" target="_blank">https://dev.twitter.com/twitter-kit/android&lt;/a>&lt;!-- raw HTML omitted -->&lt;/p>
+&lt;h2 id="確認したバージョン">確認したバージョン&lt;a class="anchorjs-link" href="#%e7%a2%ba%e8%aa%8d%e3%81%97%e3%81%9f%e3%83%90%e3%83%bc%e3%82%b8%e3%83%a7%e3%83%b3">&lt;/a>&lt;/h2>&lt;!-- raw HTML omitted -->
+&lt;!-- raw HTML omitted --></description></item></channel></rss>

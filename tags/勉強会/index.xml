@@ -1,78 +1,39 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
-  <channel>
-    <title>勉強会 on Androg</title>
-    <link>https://kwmt27.net/tags/%E5%8B%89%E5%BC%B7%E4%BC%9A/</link>
-    <description>Recent content in 勉強会 on Androg</description>
-    <generator>Hugo -- gohugo.io</generator>
-    <language>ja</language>
-    <lastBuildDate>Fri, 06 Dec 2019 20:25:00 +0900</lastBuildDate>
-    
-	<atom:link href="https://kwmt27.net/tags/%E5%8B%89%E5%BC%B7%E4%BC%9A/index.xml" rel="self" type="application/rss+xml" />
-    
-    
-    <item>
-      <title>Android研究&amp;発表会#3 開催レポート</title>
-      <link>https://kwmt27.net/2019/12/06/android-research-and-presentation-3/</link>
-      <pubDate>Fri, 06 Dec 2019 20:25:00 +0900</pubDate>
-      
-      <guid>https://kwmt27.net/2019/12/06/android-research-and-presentation-3/</guid>
-      <description>はじめに 2019/11/30(土)にAndroid研究&amp;amp;発表会#3という勉強会を開催したので、レポートです。
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>勉強会 on Androg</title><link>https://kwmt27.net/tags/%E5%8B%89%E5%BC%B7%E4%BC%9A/</link><description>Recent content in 勉強会 on Androg</description><generator>Hugo -- gohugo.io</generator><language>ja</language><lastBuildDate>Fri, 06 Dec 2019 20:25:00 +0900</lastBuildDate><atom:link href="https://kwmt27.net/tags/%E5%8B%89%E5%BC%B7%E4%BC%9A/index.xml" rel="self" type="application/rss+xml"/><item><title>Android研究&amp;発表会#3 開催レポート</title><link>https://kwmt27.net/2019/12/06/android-research-and-presentation-3/</link><pubDate>Fri, 06 Dec 2019 20:25:00 +0900</pubDate><guid>https://kwmt27.net/2019/12/06/android-research-and-presentation-3/</guid><description>はじめに2019/11/30(土)にAndroid研究&amp;amp;発表会#3という勉強会を開催したので、レポートです。
 今回は7名参加頂きました！これまで3回開催のうち一番多い人数です。 人数が多ければいいとは思ってませんが、興味を持ってくださり、一緒に勉強したい思ってくださる方が多いのはとてもうれしく思っています！ありがとうございますm(_ _)m
-会場変更について イベント公開時の会場を、3名ほど参加登録頂いたぐらいで、途中で会場を変更させていただきました。 理由としては、イベント公開後に、今回の会場をお借りしたakippa社の移転パーティーに参加させて頂いた時に、エンジニアの方が会場を使っていいとおっしゃってくださったので、お言葉に甘えてお借りすることにしたためです。 このことが影響したためかは不明ですが、当日1人の方が来られなくて、このことが原因であれば大変申し訳無いことをしたなと思いました。
-勉強会の様子 当日の勉強会の様子です。
+会場変更についてイベント公開時の会場を、3名ほど参加登録頂いたぐらいで、途中で会場を変更させていただきました。 理由としては、イベント公開後に、今回の会場をお借りしたakippa社の移転パーティーに参加させて頂いた時に、エンジニアの方が会場を使っていいとおっしゃってくださったので、お言葉に甘えてお借りすることにしたためです。 このことが影響したためかは不明ですが、当日1人の方が来られなくて、このことが原因であれば大変申し訳無いことをしたなと思いました。
+勉強会の様子当日の勉強会の様子です。
 まず、エントランスです。 完結でわかりやすい会場の案内を書いてくださってて、とても嬉しかったです！
-スゴイ！案内を準備してくださってる〜 感謝感謝！　#arap_osaka pic.twitter.com/DPQKfrxtKh
-&amp;mdash; yasi kawamoto (@yasi_kawamoto) November 30, 2019 
 おみやげの通りもんを持っていきました！ 無理やり感あったかもしれませんが、ぜんぶ食べて頂きました。
-Kotlin Coroutines ことはじめ 14:30から10分ほど会場案内と、この勉強会についてを軽く説明したあと、早速最初の発表として「Kotlin Coroutines ことはじめ」というタイトルで約30分ほど発表頂きました。
+Kotlin Coroutines ことはじめ14:30から10分ほど会場案内と、この勉強会についてを軽く説明したあと、早速最初の発表として「Kotlin Coroutines ことはじめ」というタイトルで約30分ほど発表頂きました。
 資料はこちらを参照ください。Coroutineの基本と仕組みが、わかりやすい図と一緒に説明いただき、理解が深まりました。
-Kotlin Coroutines ことはじめ、というお題で登壇しました。発表資料はこちらです。https://t.co/2HqHVRmpkc#arap_osaka #kotlin #android
-&amp;mdash; Mitsuhiro Inomata (@ino2222) November 30, 2019 
 会場の雰囲気はこんな感じでした。
-Jetpack compose をちょっと触ってみた 次に、「Jetpack compose をちょっと触ってみた」というタイトルで発表頂きました。
-#arap_osaka
-昨日、発表した資料です！
-Jetpack compose をちょっと触ってみたhttps://t.co/KeBdG4vcPI
-&amp;mdash; charcoJp (@charco_jp) December 1, 2019 
-こちらの方は当初Motion Layoutについての予定だったので、褒めタイムのときに「Motion Layout楽しみにしてた」というご意見も頂いたりもしました。ちなみに僕も楽しみにしてましたｗ</description>
-    </item>
-    
-    <item>
-      <title>Android研究&amp;発表会#2 開催レポート</title>
-      <link>https://kwmt27.net/2019/12/06/android-research-and-presentation-2/</link>
-      <pubDate>Fri, 06 Dec 2019 20:00:00 +0900</pubDate>
-      
-      <guid>https://kwmt27.net/2019/12/06/android-research-and-presentation-2/</guid>
-      <description>はじめに 2019/10/26(土)にAndroid研究&amp;amp;発表会#2というAndroidの勉強会を開催したので、レポートです。
-勉強会の様子 今回は主催の僕1名と参加者1名の合計2名で開催しました。 で、発表者が僕だけでしたので、参加者1名の方に発表するシュールなスタイルとなりましたw
+Jetpack compose をちょっと触ってみた次に、「Jetpack compose をちょっと触ってみた」というタイトルで発表頂きました。
+こちらの方は当初Motion Layoutについての予定だったので、褒めタイムのときに「Motion Layout楽しみにしてた」というご意見も頂いたりもしました。ちなみに僕も楽しみにしてましたｗ
+Android本体の開発について申し込み時点では発表予定なかったのですが、当日の10時ぐらいから資料を作り始めたらしく、飛び込みで発表してくださいました。
+Androidのコアな話が聞けて、とても勉強になりました。
+ということで、飛び込みLT大歓迎です！
+Retrofit2の仕組み 〜CallAdapterを理解する〜最後は僕の発表です。RetrofitというライブラリのCallAdapterについて発表しました。
+懇親会今回はconnpassで懇親会参加のアンケートをとっていたため、ぼくの独断でえんやという焼き鳥屋さんを予約してました。 参加予定の方のご都合が悪くなったみたいで、人数が大幅に減りそうでしたが、なんとか懇親できました！
+ただ、全員知っているという状況でしたがｗ
+次回次回は第4回になりますが、12月末はやはり年末で参加者も少ないだろうと予想されるので、2020/01/25(土)を予定しております。 イベント(connpass)は後ほど、#arap_osakaでお知らせしたいと思います。
+最後に発表頂いた後、褒めタイムというのを設けているのですが、今回もいろいろ褒めたり質問がたくさんでたので、よかったかなと思います。
+今回は合計参加人数が7名で、初めて参加の方が4名、発表してくださった方が3名、過去に参加くださった方が1名という感じでした。 その中で、ほんとにはじめましての方は1名でほかは面識ありでした。 仲間うち感をできるだけ出さないようにしようとしたんですが、少し難しかったかもしれません。。
+また、勉強会に関するフィードバックを頂きました。
+connpassの説明では対象者がわかりにくい これは参加者だけでなく発表者からも言われたフィードバックでした。参加者はAndroid初学者の方からでしたが、全体を通して発表が難しかった（中・上級者向け）ので、実際どこをターゲットにしているかというような内容でした。 発表者からは、資料を準備する際にどのレベルでは説明すればいいか迷ったとのことでした。 これをうけて、もう少しイベント説明内容を見直そうと思います。 会場変更前の会場だったから応募したというのもある すみません、気をつけます。。 「研究」という言葉に引っかかる Wikipediaによると「研究とは、ある特定の物事について、人間の知識を集めて考察し、実験、観察、調査などを通して調べて、その物事についての事実を深く追求する一連の過程のことである。」とのことで、深く追求したいという思いがありますのでこの言葉を使いましたが、ちょっと安易に考えた言葉でもあるので、見直してもいいかもしれません。 勉強会の主催って難しいなぁと思いつつ、また続けてほしいとのお言葉もあり、楽しく続けていきたいと思います。
+会場をお借りしましたakippa様ありがとうございました！</description></item><item><title>Android研究&amp;発表会#2 開催レポート</title><link>https://kwmt27.net/2019/12/06/android-research-and-presentation-2/</link><pubDate>Fri, 06 Dec 2019 20:00:00 +0900</pubDate><guid>https://kwmt27.net/2019/12/06/android-research-and-presentation-2/</guid><description>はじめに2019/10/26(土)にAndroid研究&amp;amp;発表会#2というAndroidの勉強会を開催したので、レポートです。
+勉強会の様子今回は主催の僕1名と参加者1名の合計2名で開催しました。 で、発表者が僕だけでしたので、参加者1名の方に発表するシュールなスタイルとなりましたw
 雰囲気です。 僕の発表資料はこちらです。
-発表資料 公開しました！https://t.co/RNnKxTuwl0 #arap_osaka
-&amp;mdash; yasi kawamoto (@yasi_kawamoto) October 26, 2019 
-途中からモクモク会に変更 お気づきかもしれませんが、発表がだいたい20分ぐらいで終わりましたので、もちろん時間が余ります。 そこで何したかっていうと、モクモク会に切り替えました。 事前にconnpass上から、「時間余ったらモクモク会するので、ノートPC持ってきて下さい」と連絡させていただいてて、持ってきて頂いてたのでもくもく会に変更できました。
+途中からモクモク会に変更お気づきかもしれませんが、発表がだいたい20分ぐらいで終わりましたので、もちろん時間が余ります。 そこで何したかっていうと、モクモク会に切り替えました。 事前にconnpass上から、「時間余ったらモクモク会するので、ノートPC持ってきて下さい」と連絡させていただいてて、持ってきて頂いてたのでもくもく会に変更できました。
 もくもく会の進め方としては、まずどんなことをもくもくするかいいあって、時間が経ったら最後にどうだったか成果のようなものを軽く発表するという形にしました。これは以前モクモク会だけのイベントをしたときにやってたことでした。
-今日は発表者が僕一人だったため、残りの時間はもくもく会になってますー #arap_osaka
-&amp;mdash; yasi kawamoto (@yasi_kawamoto) October 26, 2019 
 1人の参加者がやっていたことは、Android端末からラズパイだったかな？ちょっと忘れましたが、そういった端末にBloothoothでファイル送信して、送信したら通知がでるのを検知してアプリ上でダイアログとかを出したいとのことでした。
 やられてることも興味深かったのですが、通知領域にくる通知を自分のアプリでしることができるというのをしらなかったので、勉強になりました。 ついでにサンプル作ってみたので、ご興味ある方は見てみてください。
-NotificationLisntenerServiceで困ってた人がいたので、サンプル作った！ https://t.co/hvyEXvwMgR #arap_osaka
-&amp;mdash; yasi kawamoto (@yasi_kawamoto) October 26, 2019 
 僕の方は、 Kotlin Multiplatform project(MPP)でAndroidアプリを作っていたので、その続きをしてました。 MPPはAndroidアプリにGoogleMapを表示して、サーバーにあるストアを表示する簡単なものです。 サーバーはKtorを使っています。今回はマップにストアが表示されない不具合中だったので、その改修をしていました。
-最後に 今回は懇親会はありませんでした。 3回目もすでに終わった状態でこのレポートをかいているので、特に次回の連絡はありませんが、参加者2人以上でいれば開催していきたいと思っていますので、勉強したい方、一緒に勉強しませんか？！</description>
-    </item>
-    
-    <item>
-      <title>Android研究&amp;発表会#1 開催レポート</title>
-      <link>https://kwmt27.net/2019/10/20/android-research-and-presentation-1/</link>
-      <pubDate>Sun, 20 Oct 2019 20:25:00 +0900</pubDate>
-      
-      <guid>https://kwmt27.net/2019/10/20/android-research-and-presentation-1/</guid>
-      <description>はじめに だいぶ時間が経ってしまいましたが、Android研究&amp;amp;発表会#1 開催レポートを書いておきたいと思います。
-初の発表スタイルの勉強会を主催 2019/09/28(土)にAndroid研究&amp;amp;発表会 #1という勉強会を開催しました。
+最後に今回は懇親会はありませんでした。 3回目もすでに終わった状態でこのレポートをかいているので、特に次回の連絡はありませんが、参加者2人以上でいれば開催していきたいと思っていますので、勉強したい方、一緒に勉強しませんか？！</description></item><item><title>Android研究&amp;発表会#1 開催レポート</title><link>https://kwmt27.net/2019/10/20/android-research-and-presentation-1/</link><pubDate>Sun, 20 Oct 2019 20:25:00 +0900</pubDate><guid>https://kwmt27.net/2019/10/20/android-research-and-presentation-1/</guid><description>はじめにだいぶ時間が経ってしまいましたが、Android研究&amp;amp;発表会#1 開催レポートを書いておきたいと思います。
+初の発表スタイルの勉強会を主催2019/09/28(土)にAndroid研究&amp;amp;発表会 #1という勉強会を開催しました。
 いままでモバもく会などのもくもく会という形では主催したことありますが、発表形式での勉強会を主催したのは今回が初めてです。
 なぜ主催しようと思ったのかとかは、connpassに記載しているので、ここでは実際勉強会がどんな感じだったかを書きます。
 参加人数としては、発表してくださる方が3人、聞きに来てくださった方が2人の合計5人です。
-全体的な写真 勉強会の様子 14:00に開場、14:20から会場説明の予定でしたが、14時過ぎには全員来てくださいまして、待っててもしょうがないので勉強会をスタートさせました。
+全体的な写真 勉強会の様子14:00に開場、14:20から会場説明の予定でしたが、14時過ぎには全員来てくださいまして、待っててもしょうがないので勉強会をスタートさせました。
 画像が全体が入ってないし、荒いのですが会場案内とこの勉強会について説明しているところがこんな感じです。
 毎月月末の土曜日に開催していきたいという話しをしているところあたりです。12月は28日だからめっちゃ月末やん、まぁ忘年会も一緒にやれたらいいかもですね、とかいう会話も混ざったりして、なごやかな雰囲気でした。
 続いて、僕のLifecycleについて発表しました。その時の写真ですが、ぜんぜん写ってない・・・。時間的には40分話しました。
@@ -83,131 +44,63 @@ Android Thingsを持ってきて実演してくださったりもしました。
 時間については短くなったりオーバーしたりしてもいいとは言ったものもの、ある程度調整は必要かと思いましたw
 これでだいたい17:30ぐらいで、最初はだいぶ時間があまるんじゃないかとドキドキしていましたが、思いのほかいい感じの時間になったので、勉強会は終了して、ご飯いけるひとだけ行きました。
 そのときのビールの写真ですｗこれしかなかった。。。
-感想 という感じで、発表してくださる方もいらっしゃったし、懇親会もできて一旦成功と言っていいかなと思っています。
+感想という感じで、発表してくださる方もいらっしゃったし、懇親会もできて一旦成功と言っていいかなと思っています。
 初回なのに僕以外の人が発表してくださるのがとても嬉しかったです。
 やはり褒めるのはなかなかはずかしいのか、そんなに褒めることはなかったように思いますが、少人数だからというのもあるのでしょうが、質問がたくさん出たのはとてもよかったと思いました。
-次回 第2回もやります！のでぜひ遊びにきて下さい。 発表枠が余ってます！w
-Android研究&amp;amp;発表会 #2</description>
-    </item>
-    
-    <item>
-      <title>モバもく会#8 を開催</title>
-      <link>https://kwmt27.net/2017/12/01/mobile-mockmock-8/</link>
-      <pubDate>Fri, 01 Dec 2017 15:00:00 +0900</pubDate>
-      
-      <guid>https://kwmt27.net/2017/12/01/mobile-mockmock-8/</guid>
-      <description>2017/11/12(日)にモバもく会#8という、だいたい２，３週間に１回やっているモバイルに関連したもくもく会を開催しました。
+次回第2回もやります！のでぜひ遊びにきて下さい。 発表枠が余ってます！w
+Android研究&amp;amp;発表会 #2</description></item><item><title>モバもく会#8 を開催</title><link>https://kwmt27.net/2017/12/01/mobile-mockmock-8/</link><pubDate>Fri, 01 Dec 2017 15:00:00 +0900</pubDate><guid>https://kwmt27.net/2017/12/01/mobile-mockmock-8/</guid><description>2017/11/12(日)にモバもく会#8という、だいたい２，３週間に１回やっているモバイルに関連したもくもく会を開催しました。
 今回は3人でした。毎回ありがとうございます！自分が毎回勉強させてもらっています（感謝）
 今回みなさんがやったことは次のとおりです。
- Devfestの参加レポートを書いた  参加レポートは[こちら]()です  Instant Appsについての調査  newyork times、crosswordがインスタントアップ対応しているとのこと   僕は、Kotlin ConfのソースのAndroidを読みました。 読んだ内容は、別記事にしました.
-こちらはモバもく会のイメージです。GoogleHomeの素晴らしさについて語っています。</description>
-    </item>
-    
-    <item>
-      <title>モバもく会#6 を開催</title>
-      <link>https://kwmt27.net/2017/10/16/mobile-mockmock-6/</link>
-      <pubDate>Mon, 16 Oct 2017 15:00:00 +0900</pubDate>
-      
-      <guid>https://kwmt27.net/2017/10/16/mobile-mockmock-6/</guid>
-      <description>2017/10/15(日)にモバもく会#6という、だいたい２，３週間に１回やっているモバイルに関連したもくもく会を開催しました。
+Devfestの参加レポートを書いた 参加レポートはこちらです Instant Appsについての調査 newyork times、crosswordがインスタントアップ対応しているとのこと 僕は、Kotlin ConfのソースのAndroidを読みました。 読んだ内容は、別記事にしました.
+こちらはモバもく会のイメージです。GoogleHomeの素晴らしさについて語っています。</description></item><item><title>モバもく会#6 を開催</title><link>https://kwmt27.net/2017/10/16/mobile-mockmock-6/</link><pubDate>Mon, 16 Oct 2017 15:00:00 +0900</pubDate><guid>https://kwmt27.net/2017/10/16/mobile-mockmock-6/</guid><description>2017/10/15(日)にモバもく会#6という、だいたい２，３週間に１回やっているモバイルに関連したもくもく会を開催しました。
 今回は3人でした。毎回ありがとうございます！自分が毎回勉強させてもらっています（感謝）
 今回みなさんがやったことは次のとおりです。
- CircleCI2.0についての調査 COSMOのAndroid SDKを使ってみる  聞いた話ですが、FIDOというものがあるらしいですね。
+CircleCI2.0についての調査 COSMOのAndroid SDKを使ってみる 聞いた話ですが、FIDOというものがあるらしいですね。
 僕はクリーンアーキテクチャのサンプル を参考に自分なりに実装しようとしました。
- 参考:Architecting Android&amp;hellip;The clean way?  しようと思ったのですが、DIを実現するためにdaggerを使っているといろいろハマってしまって、それに時間取られてしまいました。。。
+参考:Architecting Android&amp;hellip;The clean way? しようと思ったのですが、DIを実現するためにdaggerを使っているといろいろハマってしまって、それに時間取られてしまいました。。。
 結論：公式ドキュメントをちゃんと読め！ということでした。
 Daggerについては、別記事に書きました。
-以上です。</description>
-    </item>
-    
-    <item>
-      <title>モバもく会#5 を開催</title>
-      <link>https://kwmt27.net/2017/10/10/mobile-mockmock-5/</link>
-      <pubDate>Tue, 10 Oct 2017 21:10:00 +0900</pubDate>
-      
-      <guid>https://kwmt27.net/2017/10/10/mobile-mockmock-5/</guid>
-      <description>10月になってしまいましたが、2017/09/24(日)にモバもく会#5という、だいたい２，３週間に１回やっているモバイルに関連したもくもく会を開催しました。
+以上です。</description></item><item><title>モバもく会#5 を開催</title><link>https://kwmt27.net/2017/10/10/mobile-mockmock-5/</link><pubDate>Tue, 10 Oct 2017 21:10:00 +0900</pubDate><guid>https://kwmt27.net/2017/10/10/mobile-mockmock-5/</guid><description>10月になってしまいましたが、2017/09/24(日)にモバもく会#5という、だいたい２，３週間に１回やっているモバイルに関連したもくもく会を開催しました。
 今回は5人でした。毎回ありがとうございます！自分が毎回勉強させてもらっています（感謝）
 今回みなさんがやったことは次のとおりです。
- Enumのメモリ消費についての調査 Spark(分散処理)の事始め iOSのUITableViewのHeightが異なるときに対応方法についての調査＆実装 以前に開催されたAndroid Thingsハッカソンの続き  僕は、support design libraryのBottomSheetのサンプル を読んで実際に試してみました。
+Enumのメモリ消費についての調査 Spark(分散処理)の事始め iOSのUITableViewのHeightが異なるときに対応方法についての調査＆実装 以前に開催されたAndroid Thingsハッカソンの続き 僕は、support design libraryのBottomSheetのサンプル を読んで実際に試してみました。
 実装コードまで読めてないのですが、軽くマテリアルデザインガイドラインを軽く呼んでみて、DeepLinkについて気になったので実装を試してみました。
 主に参考にしたブログは、Bottom sheet everythingを参考にしました。
-DeepLinkは、「こんな簡単な実装で、こんなことができるんですよ」といいたかったんですが、実際はバックの黒透明の背景（ダイアログの背景のみ）が出るだけで、内容がでるところまで出来ませんでした。。。（この日はちょっといろいろありまして。。。←言い訳^^;）</description>
-    </item>
-    
-    <item>
-      <title>モバもく会 #4 を開催</title>
-      <link>https://kwmt27.net/2017/09/19/mobile-mockmock-4/</link>
-      <pubDate>Tue, 19 Sep 2017 15:00:00 +0900</pubDate>
-      
-      <guid>https://kwmt27.net/2017/09/19/mobile-mockmock-4/</guid>
-      <description>2017/09/03(日)にモバもく会#4という、モバイルに関連したもくもく会を開催しました。
+DeepLinkは、「こんな簡単な実装で、こんなことができるんですよ」といいたかったんですが、実際はバックの黒透明の背景（ダイアログの背景のみ）が出るだけで、内容がでるところまで出来ませんでした。。。（この日はちょっといろいろありまして。。。←言い訳^^;）</description></item><item><title>モバもく会 #4 を開催</title><link>https://kwmt27.net/2017/09/19/mobile-mockmock-4/</link><pubDate>Tue, 19 Sep 2017 15:00:00 +0900</pubDate><guid>https://kwmt27.net/2017/09/19/mobile-mockmock-4/</guid><description>2017/09/03(日)にモバもく会#4という、モバイルに関連したもくもく会を開催しました。
 今回は5人でした。今回みなさんがやったことは次のとおりです。
- 一人はVR（前回の続き） 個人でAndroidアプリ(ゲーム)を作る 個人でiOSアプリを作っているが、終盤に入っていろいろ不具合を発見したので、その修正 Androidのインストール広告についての技術調査  僕は、個人的にiOSアプリを作っていて、AWSのDynamoDB・Lambda・API GatewayつかってCRUDを構築するところやっていきました。
+一人はVR（前回の続き） 個人でAndroidアプリ(ゲーム)を作る 個人でiOSアプリを作っているが、終盤に入っていろいろ不具合を発見したので、その修正 Androidのインストール広告についての技術調査 僕は、個人的にiOSアプリを作っていて、AWSのDynamoDB・Lambda・API GatewayつかってCRUDを構築するところやっていきました。
 自分的には、アプリを作るのもいいけど、ちょこちょこ時間とってできるので、こういうまとまった時間をってやるもくもく会では、やっぱり気になるソースコードとかを読んだりした方がいい気がしてきました。（参加者のみなさんが、アプリを作ったらいけないとかいう話じゃないです。念のため）
 あと、もくもく会するとだいたいお腹すく時間なので、ご飯いける方いきましょーと終わる頃に聞いていて、なんか行かないと悪いなという雰囲気にさせちゃってるかもなので申し訳ないんですが、ぜんぜん必須じゃないですよー
-今回は簡単ですが、以上です。</description>
-    </item>
-    
-    <item>
-      <title>モバもく会 #3 を開催して、Support Design LibraryのBottomNavigationViewを読んだ</title>
-      <link>https://kwmt27.net/2017/08/13/mobile-mockmock-3/</link>
-      <pubDate>Sun, 13 Aug 2017 20:00:00 +0900</pubDate>
-      
-      <guid>https://kwmt27.net/2017/08/13/mobile-mockmock-3/</guid>
-      <description> はじめに モバもく会#3という、モバイルに関連したもくもく会を開催しました。
+今回は簡単ですが、以上です。</description></item><item><title>モバもく会 #3 を開催して、Support Design LibraryのBottomNavigationViewを読んだ</title><link>https://kwmt27.net/2017/08/13/mobile-mockmock-3/</link><pubDate>Sun, 13 Aug 2017 20:00:00 +0900</pubDate><guid>https://kwmt27.net/2017/08/13/mobile-mockmock-3/</guid><description>はじめにモバもく会#3という、モバイルに関連したもくもく会を開催しました。
 今回は2人でした。
- 一人はVR（前回の続き）  僕は、support design libraryの特にBottomNavigationViewを読んでみました。
+一人はVR（前回の続き） 僕は、support design libraryの特にBottomNavigationViewを読んでみました。
 ガイドライン原文日本語訳 に書いてあるのがどのようにコードで書かれているのかという視点で見てみました。
 ちなみに、BottomNavigationというのはこのようなものです。
-まとめた内容 まとめた内容は長くなったので別記事にしました。
-終わりに  いままであんまり深く知らなかったことを見ることが出来たので、とても勉強になりました。 Support Design Librayのコードは、そんなに複雑なコードじゃなかったので、読みやすいかなと思いました。  </description>
-    </item>
-    
-    <item>
-      <title>モバもく会 #2 を開催して、Github Trending(java)を軽く読んでみた</title>
-      <link>https://kwmt27.net/2017/07/30/mobile-mockmock-2/</link>
-      <pubDate>Sun, 30 Jul 2017 18:00:00 +0900</pubDate>
-      
-      <guid>https://kwmt27.net/2017/07/30/mobile-mockmock-2/</guid>
-      <description>はじめに モバもく会 #2という、モバイルに関連したもくもく会を開催しました。
+まとめた内容まとめた内容は長くなったので別記事にしました。
+終わりに いままであんまり深く知らなかったことを見ることが出来たので、とても勉強になりました。 Support Design Librayのコードは、そんなに複雑なコードじゃなかったので、読みやすいかなと思いました。</description></item><item><title>モバもく会 #2 を開催して、Github Trending(java)を軽く読んでみた</title><link>https://kwmt27.net/2017/07/30/mobile-mockmock-2/</link><pubDate>Sun, 30 Jul 2017 18:00:00 +0900</pubDate><guid>https://kwmt27.net/2017/07/30/mobile-mockmock-2/</guid><description>はじめにモバもく会 #2という、モバイルに関連したもくもく会を開催しました。
 一人は前回来ていただいた方の話を聞いて行ってみようと思って来てくださったり、 東京中心に活動されてる方がたまたま大阪に来ていて、大阪の宿泊している場所ではやりにくいので、参加してくださったり、 家にいるとスプラトゥーンをやってしまうから、こういうもくもく会はありがたいというお声を頂き、嬉しい限りです。
 モバもく会としては、途中で帰られる方がいらっしゃったのでせっかく足を運んで来てくださってるので、帰られる方の話も聞きたいし、その方に対しても何かしら持ち帰ってほしかったので、途中で発表し合うようにしました。
 今回みなさんがやったことは次のとおりです。
- 一人は次の勉強会のための資料作成(マテリアルデザイン) 一人も次の勉強会のための資料作成（Notificationに関すること） 一人はVR 一人はお仕事でMonakcaについての調査  僕は、前回に引き続き、2017/07/30の時点のGithub Trending(java)の中から2つレポジトリを見てみました。
+一人は次の勉強会のための資料作成(マテリアルデザイン) 一人も次の勉強会のための資料作成（Notificationに関すること） 一人はVR 一人はお仕事でMonakcaについての調査 僕は、前回に引き続き、2017/07/30の時点のGithub Trending(java)の中から2つレポジトリを見てみました。
 下記は除外しています。
- SmartRefreshLayoutは前回よんだので除外 android-interview-questions spring-boot  StormPlane https://github.com/HurTeng/StormPlane
+SmartRefreshLayoutは前回よんだので除外 android-interview-questions spring-boot StormPlanehttps://github.com/HurTeng/StormPlane
 飛行機のゲームです。apkをAndroid端末にインストールして遊んだだけですｗ 飛行機を動かすのに、飛行機をタッチしないといけないのですが、指が邪魔で飛行機が全然見えなくて、ちょっとやりにくかったです。
 コードとしては、SurfaceViewを使ってゴリゴリ書いてるだけなので、僕にとって特にこれと言って新しいことはありませんでした。
 あと、Readmeとかが中国語なのでGoogle翻訳に頼りました。
-PLDroidShortVideo https://github.com/pili-engineering/PLDroidShortVideo
+PLDroidShortVideohttps://github.com/pili-engineering/PLDroidShortVideo
 snowアプリみたいなことができるライブラリのようです。
 起動してスタンプを選択して、顔にカメラを向けると、
 このようになり、保存できます。
 あと動画も撮れるようですが、スタンプを入れたまま動画の作成は出来ませんでした。
 これも中国語でした。
-まとめ 中国語のレポジトリがトレンドに入ってる来てるので、中国語も勉強しないといけないと思いましたが、よくよく考えると中国製のライブラリを実運用で使うことは無さそうなので、次からは中国製のライブラリはやめてみようかと思います。</description>
-    </item>
-    
-    <item>
-      <title>モバもく会を開催して、Github Trendingを軽く読んでみた</title>
-      <link>https://kwmt27.net/2017/07/20/mobile-mockmock/</link>
-      <pubDate>Thu, 20 Jul 2017 22:00:00 +0900</pubDate>
-      
-      <guid>https://kwmt27.net/2017/07/20/mobile-mockmock/</guid>
-      <description>はじめに モバもく会という、モバイルに関連したもくもく会を開催しました。 一人はOpenSourceにプルリクを投げたり、一人は読書をしていました。
+まとめ中国語のレポジトリがトレンドに入ってる来てるので、中国語も勉強しないといけないと思いましたが、よくよく考えると中国製のライブラリを実運用で使うことは無さそうなので、次からは中国製のライブラリはやめてみようかと思います。</description></item><item><title>モバもく会を開催して、Github Trendingを軽く読んでみた</title><link>https://kwmt27.net/2017/07/20/mobile-mockmock/</link><pubDate>Thu, 20 Jul 2017 22:00:00 +0900</pubDate><guid>https://kwmt27.net/2017/07/20/mobile-mockmock/</guid><description>はじめにモバもく会という、モバイルに関連したもくもく会を開催しました。 一人はOpenSourceにプルリクを投げたり、一人は読書をしていました。
 僕は、2017/07/17の時点のTrending in open sourceのAndroidに関係ある上位３つのサンプルをうごかしてみたのですが、そのときのまとめです。(※android-interview-questionsは除外しています)
 https://github.com/trending/java?since=weekly
-SmartRefreshLayout https://github.com/scwang90/SmartRefreshLayout
+SmartRefreshLayouthttps://github.com/scwang90/SmartRefreshLayout
 Pull to refreshのいい感じのライブラリです。 動きはReadmeに書かれてるので見てみてください。
 基本的にはRecyclerViewをSmartRefreshLayoutで包めばよいだけのようです。
-&amp;lt;android.support.v7.widget.Toolbar style=&amp;quot;@style/AppTheme.Toolbar&amp;quot; android:id=&amp;quot;@+id/toolbar&amp;quot; app:title=&amp;quot;@string/fragment_refresh_styles&amp;quot;/&amp;gt; &amp;lt;com.scwang.smartrefresh.layout.SmartRefreshLayout android:id=&amp;quot;@+id/refreshLayout&amp;quot; android:layout_width=&amp;quot;match_parent&amp;quot; android:layout_height=&amp;quot;match_parent&amp;quot; app:srlEnableLoadmore=&amp;quot;false&amp;quot; app:srlEnableHeaderTranslationContent=&amp;quot;true&amp;quot;&amp;gt; &amp;lt;android.support.v7.widget.RecyclerView android:id=&amp;quot;@+id/recyclerView&amp;quot; android:layout_width=&amp;quot;match_parent&amp;quot; android:layout_height=&amp;quot;match_parent&amp;quot; android:background=&amp;quot;@android:color/white&amp;quot; tools:listitem=&amp;quot;@android:layout/simple_list_item_2&amp;quot;/&amp;gt; &amp;lt;/com.scwang.smartrefresh.layout.SmartRefreshLayout&amp;gt;  サンプル動かしてみました。
+&amp;lt;android.support.v7.widget.Toolbar style=&amp;#34;@style/AppTheme.Toolbar&amp;#34; android:id=&amp;#34;@+id/toolbar&amp;#34; app:title=&amp;#34;@string/fragment_refresh_styles&amp;#34;/&amp;gt; &amp;lt;com.scwang.smartrefresh.layout.SmartRefreshLayout android:id=&amp;#34;@+id/refreshLayout&amp;#34; android:layout_width=&amp;#34;match_parent&amp;#34; android:layout_height=&amp;#34;match_parent&amp;#34; app:srlEnableLoadmore=&amp;#34;false&amp;#34; app:srlEnableHeaderTranslationContent=&amp;#34;true&amp;#34;&amp;gt; &amp;lt;android.support.v7.widget.RecyclerView android:id=&amp;#34;@+id/recyclerView&amp;#34; android:layout_width=&amp;#34;match_parent&amp;#34; android:layout_height=&amp;#34;match_parent&amp;#34; android:background=&amp;#34;@android:color/white&amp;#34; tools:listitem=&amp;#34;@android:layout/simple_list_item_2&amp;#34;/&amp;gt; &amp;lt;/com.scwang.smartrefresh.layout.SmartRefreshLayout&amp;gt; サンプル動かしてみました。
 「下拉可以刷新」などの中国語で書かれてるところを変更したいなぁと思ってソースを見てみました。
-
 こちらを見る限り、おそらくmHeaderTextにセットすればいいのかなぁと思ってみてたら、mHeaderTextに外から自由にセットできるメソッドがないっぽい。。
-public static String REFRESH_HEADER_PULLDOWN = &amp;quot;下拉可以刷新&amp;quot;;  とpublic static Stringでfinalではなかったので、直接書き換えてみたところ、
-index 2b056cd..fbdf4a7 100644 --- a/app/src/main/java/com/scwang/refreshlayout/fragment/RefreshStylesFragment.java +++ b/app/src/main/java/com/scwang/refreshlayout/fragment/RefreshStylesFragment.java @@ -85,6 +85,7 @@ public class RefreshStylesFragment extends Fragment implements AdapterView.OnIte @Override public void onViewCreated(View root, @Nullable Bundle savedInstanceState) { super.</description>
-    </item>
-    
-  </channel>
-</rss>
+public static String REFRESH_HEADER_PULLDOWN = &amp;#34;下拉可以刷新&amp;#34;; とpublic static Stringでfinalではなかったので、直接書き換えてみたところ、
+index 2b056cd..fbdf4a7 100644 --- a/app/src/main/java/com/scwang/refreshlayout/fragment/RefreshStylesFragment.java +++ b/app/src/main/java/com/scwang/refreshlayout/fragment/RefreshStylesFragment.java @@ -85,6 +85,7 @@ public class RefreshStylesFragment extends Fragment implements AdapterView.OnIte @Override public void onViewCreated(View root, @Nullable Bundle savedInstanceState) { super.onViewCreated(root, savedInstanceState); + ClassicsHeader.</description></item></channel></rss>

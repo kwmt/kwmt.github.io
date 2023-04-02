@@ -1,34 +1,15 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
-  <channel>
-    <title>Clean Architecture on Androg</title>
-    <link>https://kwmt27.net/tags/clean-architecture/</link>
-    <description>Recent content in Clean Architecture on Androg</description>
-    <generator>Hugo -- gohugo.io</generator>
-    <language>ja</language>
-    <lastBuildDate>Sun, 30 Sep 2018 15:45:00 +0900</lastBuildDate>
-    
-	<atom:link href="https://kwmt27.net/tags/clean-architecture/index.xml" rel="self" type="application/rss+xml" />
-    
-    
-    <item>
-      <title>AndroidやiOSのアプリ開発でいつも私がやっていることをFlutterでやってみた</title>
-      <link>https://kwmt27.net/2018/09/30/try-develop-like-native-development-with-flutter/</link>
-      <pubDate>Sun, 30 Sep 2018 15:45:00 +0900</pubDate>
-      
-      <guid>https://kwmt27.net/2018/09/30/try-develop-like-native-development-with-flutter/</guid>
-      <description>はじめに 2018/09/29(土)にGDG神戸さん主催のFlutter勉強会 (9&amp;frasl;29)が開催されました。そこで「AndroidやiOSのアプリ開発でいつも私がやっていることをFlutterでやってみた」というタイトルで約30分間発表させて頂きました。
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Clean Architecture on Androg</title><link>https://kwmt27.net/tags/clean-architecture/</link><description>Recent content in Clean Architecture on Androg</description><generator>Hugo -- gohugo.io</generator><language>ja</language><lastBuildDate>Sun, 30 Sep 2018 15:45:00 +0900</lastBuildDate><atom:link href="https://kwmt27.net/tags/clean-architecture/index.xml" rel="self" type="application/rss+xml"/><item><title>AndroidやiOSのアプリ開発でいつも私がやっていることをFlutterでやってみた</title><link>https://kwmt27.net/2018/09/30/try-develop-like-native-development-with-flutter/</link><pubDate>Sun, 30 Sep 2018 15:45:00 +0900</pubDate><guid>https://kwmt27.net/2018/09/30/try-develop-like-native-development-with-flutter/</guid><description>はじめに2018/09/29(土)にGDG神戸さん主催のFlutter勉強会 (9/29)が開催されました。そこで「AndroidやiOSのアプリ開発でいつも私がやっていることをFlutterでやってみた」というタイトルで約30分間発表させて頂きました。
 スライドはこちら
 その時の発表内容を書いておきたいと思います。基本的に原稿をもとにブログ用に加筆・修正しています。また図を参照しているところは基本的にスライドを参照いただいて、必要そうなところだけブログ内に画像を貼っています。
-冒頭 現在Flutterでチャットアプリを作っていてリリース間近なのですが、そのアプリ開発の目的の1つとして、AndroidやiOSのアプリ開発でいつも自分がやっていることはFlutterでできるのか、できるならどうするのかというのを目的に開発していました。
+冒頭現在Flutterでチャットアプリを作っていてリリース間近なのですが、そのアプリ開発の目的の1つとして、AndroidやiOSのアプリ開発でいつも自分がやっていることはFlutterでできるのか、できるならどうするのかというのを目的に開発していました。
 いつもやっていることっていうのは、3つあります。
- 1つ目は、アプリの設計をクリーンアーキテクチャという設計でやっています。 2つ目は、例えばサーバーの向き先を変えるなど、開発と本番での設定を切り替えることをやっています。 3つ目は、CI/CDサービスを使って、たとえば、git pushしたらビルドやテストを実行し、masterブランチにマージされたら関係者にアプリを配信したりしています。  これらが実現できれば、仕事にも使える可能性はありそうだなという思いで開発し始めまして、結論から言うとできそうということがわかりましたので、それぞれについて紹介したいと思います。
-クリーンアーキテクチャが実現できるか？ について見ていきましょう。
+1つ目は、アプリの設計をクリーンアーキテクチャという設計でやっています。 2つ目は、例えばサーバーの向き先を変えるなど、開発と本番での設定を切り替えることをやっています。 3つ目は、CI/CDサービスを使って、たとえば、git pushしたらビルドやテストを実行し、masterブランチにマージされたら関係者にアプリを配信したりしています。 これらが実現できれば、仕事にも使える可能性はありそうだなという思いで開発し始めまして、結論から言うとできそうということがわかりましたので、それぞれについて紹介したいと思います。
+クリーンアーキテクチャが実現できるか？について見ていきましょう。
 クリーンアーキテクチャはおそらくボブおじさんという方が考えたんだと思うんですが、ソフトウェア開発の設計方針の一つです。
 この図は下のURLから引用したものですが、 アプリのクラスがこの円のように何層かに分かれていて、ここの矢印の方向で、クラスの依存関係を決めましょうと言っているだけです。たとえば、UIはPresenterに依存できますが、PresenterはUIに依存してはいけません。ちなみにこの円の層は何層でも構いません。
 このようにすることで、
- アプリの根幹となるビジネスロジック部分がフレームワークと切り離すことができ、 ビジネスロジックをテストしやすくなったり、 UIが独立し、ビジネスロジックの変更なしにUIを変更できるようになります。 またデータベースとも独立し、たとえば、いまはFirestoreを使っているけど、AWSのdynamoDBに切り替えたりすることが容易になります。  ここまでが先程のURLにも書いてあるメリットですが、僕がもう1つ思うのは
- 基本的にどんなアプリやサーバーのソフトウェア開発でも採用できるので、どこに何があるかが統一出来て分かりやすい  ということもメリットの一つかなとも思っています。まぁ一言で言うと、メンテナンスしやすい設計ということになります。
+アプリの根幹となるビジネスロジック部分がフレームワークと切り離すことができ、 ビジネスロジックをテストしやすくなったり、 UIが独立し、ビジネスロジックの変更なしにUIを変更できるようになります。 またデータベースとも独立し、たとえば、いまはFirestoreを使っているけど、AWSのdynamoDBに切り替えたりすることが容易になります。 ここまでが先程のURLにも書いてあるメリットですが、僕がもう1つ思うのは
+基本的にどんなアプリやサーバーのソフトウェア開発でも採用できるので、どこに何があるかが統一出来て分かりやすい ということもメリットの一つかなとも思っています。まぁ一言で言うと、メンテナンスしやすい設計ということになります。
 もうちょっと図を変えて説明しますね。
 顔アイコンはアプリを使うユーザーと思ってください。 その下のScreenというのは、ユーザーがみてる画面で、何でも良いのですが、ここでは例えばチャットルーム一覧画面とします。 チャットルーム一覧のデータは、Firestoreというクラウドのデータベースに保存されているとします。 クリーンアーキテクチャは、このチャットルーム一覧画面がFirestoreからどうやって取得するかの方針になります。
 チャットルーム一覧画面は、チャットルームの一覧を表示したいので、チャットルーム一覧を取得するUseCaseというクラスに依頼します。
@@ -38,15 +19,17 @@
 先程のボブおじさんの図と重ねるとこんなイメージです。
 ごちゃっとしててわかりにくいですかね、、、なんとなく関係ありそうなことがわかりますかね？
 次に、この設計をどのように実現しているかを見ていきたいと思いますが、実現するためにには、
- 言語としてインターフェイスがあることと、 DIができること  が必要になります。
+言語としてインターフェイスがあることと、 DIができること が必要になります。
 まずDartにインターフェイスがあるかですが、結論から言うとあります。 interfaceというキーワードのインターフェイスではないのですが、クラスを定義すると、そのクラスの同名のインタフェースが暗黙的に定義されるという仕様です。また抽象メソッドのみをもつjavaのインターフェイスのようにするには、abstractキーワードで抽象クラスを作成して実現できます。
 次にDIですが、詳しくは説明しませんが、DIとはDependency injectionの略で、一言で言うと、「必要なものを外から渡すこと」です。これはだいたいコンストラクタの引数にインスタンスを渡せればよくって、Dartは普通にそれができるので、DIができるかというよりは、依存関係を簡単に解決してくれるDIプラグインはあるか？に言いかえた方が良いかもしれません。 AndroidではDagger2やkodein、iOSではSwinjectとか使っている方が多いでしょうか。このようなプラグインをpub.dartで探しますと、 flutter_simple_dependency_injection というプラグインがあったので、それを使います。
 後ほど使い方の例をお見せしますが、名前にあるように使い方はほんとにsimpleです。AndroidのDagger2のように、なぜビルドエラーになるのか悩まされることはありません。
 さて、インターフェイスがあって、DIプラグインもあるので、先程の例で挙げたチャットルーム一覧画面のところを具体的に実装して行きたいと思います。
 まずチャットルーム一覧を表示したいのでRoomというクラスを作り、あるユーザーのルーム一覧を取得したいのでUserというクラスを、ドメインのモデルに作っておきます。
 次にルームリストを取得するというUseCaseの名前を FetchRoomListUseCase としてUseCaseを作ります。これにはexecuteメソッドをもたせ、抽象クラスとして定義します。 これを抽象クラスにしているのは、presentation層とdomain層の境界を疎結合にしたいためです。 また、executeメソッドの戻り値の型をFutureとしていますが、これはJavascriptのPromiseのようなもので、infrastructure層からpresentation層にデータを伝えるために重要な役割になるものです。
-FetchRoomListUseCaseを実装するのは、FetchRoomListUseCaseImplクラスです。 FetchRoomListUseCaseImplクラスは、Repositoryからチャットルーム一覧を取得したいので、まだ作成していないですが、RoomRepositoryをもたせています。</description>
-    </item>
-    
-  </channel>
-</rss>
+FetchRoomListUseCaseを実装するのは、FetchRoomListUseCaseImplクラスです。 FetchRoomListUseCaseImplクラスは、Repositoryからチャットルーム一覧を取得したいので、まだ作成していないですが、RoomRepositoryをもたせています。
+RoomRepositoryは抽象クラスとし、 fetchRoomListという抽象メソッドを定義しておきます。 このfetchRoomListメソッドを実装するのは、ここではFirestoreからデータを取得したいのでFirestoreDatasourceというクラスを作成し、そのクラスで実装します。
+具体的にFirestoreに保存してあるチャットルーム一覧を取得する処理を書きます。 この取得に成功すると、先程のFutureの仕組みでpresentation層のチャットルーム一覧画面に伝わるようになります。
+これでUseCase以降のチャットルーム一覧を取得するのに必要なクラスを作成したので、あとはそれをつなぎます。
+たとえば、これは先程のFirestoreDatasourceのコンストラクタの部分ですが 、FirestoreDatasouceはfirestoreがほしいと要求しているので、firestoreインスタンスを生成して、DIプラグインから取得したinjectorにfirestoreをセットします。真ん中あたりのところです。
+次に一番下のあたりで、injectorにFirestoreDatasourceインスタンスを生成してセットしたいのですが、このときinjectorからFirestoreインスタンスを取得することができるようになっているので、Firestoreインスタンスを取得して、FirestoreDatasourceの引数に渡してあげます。 このようにして依存関係を解決していくだけです。
+UseCaseなども同様に依存関係を解決すると、このようになります。 ここまででFetchRoomListUseCaseまでインスタンス生成できたことになります。</description></item></channel></rss>

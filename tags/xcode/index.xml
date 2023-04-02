@@ -1,26 +1,3 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
-  <channel>
-    <title>Xcode on Androg</title>
-    <link>https://kwmt27.net/tags/xcode/</link>
-    <description>Recent content in Xcode on Androg</description>
-    <generator>Hugo -- gohugo.io</generator>
-    <language>ja</language>
-    <lastBuildDate>Wed, 01 Oct 2014 00:00:00 +0000</lastBuildDate>
-    
-	<atom:link href="https://kwmt27.net/tags/xcode/index.xml" rel="self" type="application/rss+xml" />
-    
-    
-    <item>
-      <title>xcode で controlを押しながら接続出来ない場合の対処方法</title>
-      <link>https://kwmt27.net/index.php/2014/10/01/cannot-create-connections-in-xcode6-storyboard/</link>
-      <pubDate>Wed, 01 Oct 2014 00:00:00 +0000</pubDate>
-      
-      <guid>https://kwmt27.net/index.php/2014/10/01/cannot-create-connections-in-xcode6-storyboard/</guid>
-      <description>現象 TableViewなどのViewをcontrol押しながら、ヘッダーファイルにドラッグしても、うんともすんともないことがある。
-原因 ViewControllerとクラスが対応付けがされてないため。
-対処 ViewControllerを選択し、&amp;#8221;Show the identity inspection&amp;#8221;をクリックし、Custom Classで対応付けたいクラスを選択する。</description>
-    </item>
-    
-  </channel>
-</rss>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>xcode on Androg</title><link>https://kwmt27.net/tags/xcode/</link><description>Recent content in xcode on Androg</description><generator>Hugo -- gohugo.io</generator><language>ja</language><lastBuildDate>Wed, 01 Oct 2014 00:00:00 +0000</lastBuildDate><atom:link href="https://kwmt27.net/tags/xcode/index.xml" rel="self" type="application/rss+xml"/><item><title>xcode で controlを押しながら接続出来ない場合の対処方法</title><link>https://kwmt27.net/index.php/2014/10/01/cannot-create-connections-in-xcode6-storyboard/</link><pubDate>Wed, 01 Oct 2014 00:00:00 +0000</pubDate><guid>https://kwmt27.net/index.php/2014/10/01/cannot-create-connections-in-xcode6-storyboard/</guid><description>現象TableViewなどのViewをcontrol押しながら、ヘッダーファイルにドラッグしても、うんともすんともないことがある。
+原因ViewControllerとクラスが対応付けがされてないため。
+対処ViewControllerを選択し、”Show the identity inspection”をクリックし、Custom Classで対応付けたいクラスを選択する。</description></item></channel></rss>

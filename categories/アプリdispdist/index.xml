@@ -1,48 +1,9 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
-  <channel>
-    <title>アプリdispdist on Androg</title>
-    <link>https://kwmt27.net/categories/%E3%82%A2%E3%83%97%E3%83%AAdispdist/</link>
-    <description>Recent content in アプリdispdist on Androg</description>
-    <generator>Hugo -- gohugo.io</generator>
-    <language>ja</language>
-    <lastBuildDate>Wed, 11 Aug 2010 00:00:00 +0000</lastBuildDate>
-    
-	<atom:link href="https://kwmt27.net/categories/%E3%82%A2%E3%83%97%E3%83%AAdispdist/index.xml" rel="self" type="application/rss+xml" />
-    
-    
-    <item>
-      <title>DispDist概要</title>
-      <link>https://kwmt27.net/index.php/2010/08/11/dispdist%E6%A6%82%E8%A6%81/</link>
-      <pubDate>Wed, 11 Aug 2010 00:00:00 +0000</pubDate>
-      
-      <guid>https://kwmt27.net/index.php/2010/08/11/dispdist%E6%A6%82%E8%A6%81/</guid>
-      <description>&lt;!--shinobi1--&gt;
-
-&lt;noscript&gt;
-  &lt;a href=&#34;http://x8.ushimairi.com/bin/gg?151361401&#34; target=&#34;_blank&#34;&gt;&lt;br /&gt; &lt;img src=&#34;http://x8.ushimairi.com/bin/ll?151361401&#34; border=&#34;0&#34; /&gt;&lt;/a&gt;&lt;br /&gt; &lt;span style=&#34;font-size:9px&#34;&gt;&lt;img style=&#34;margin:0;vertical-align:text-bottom;&#34; src=&#34;http://img.shinobi.jp/tadaima/fj.gif&#34; width=&#34;19&#34; height=&#34;11&#34; /&gt; &lt;a href=&#34;http://roll_screen.jpnz.jp&#34; target=&#34;_blank&#34;&gt;ロールスクリーン&lt;/a&gt; &lt;a href=&#34;http://kanagawa.jpnz.jp&#34; target=&#34;_blank&#34;&gt;賃貸　川崎&lt;/a&gt;&lt;/span&gt;
-&lt;/noscript&gt;
-
-&lt;!--shinobi2--&gt;
-
-&lt;p&gt;&lt;img  alt=&#34;dispdistロゴ&#34;
-src=&#34;http://androg.up.seesaa.net/image/dispdist_icon-thumbnail2.png&#34; width=&#34;72&#34; height=&#34;72&#34; border=&#34;0&#34; align=&#34;right&#34;
-pbsrc=&#34;http://androg.up.seesaa.net/image/dispdist_icon.png&#34;
-class=&#34;PopBoxImageSmall&#34;
-onclick=&#34;Pop(this,100,&#39;PopBoxImageLarge&#39;);&#34; /&gt;&lt;/p&gt;
-
-&lt;p&gt;「DispDist」は、JavaもAndroidもオブジェクト指向もほぼ初めての僕が、&lt;/p&gt;
-
-&lt;p&gt;アプリを作ろうと思い立ってから19日間でとりあえず完成させた処女作品です。&lt;/p&gt;
-
-&lt;p&gt;少しでも役に立つものを作りたいと思って作ったのですが、&lt;/p&gt;
-
-&lt;p&gt;Android端末を持っていないので、実機での動作確認をせずリリースしたので、バグだらけです。&lt;/p&gt;
-
-&lt;p&gt;ですので、あまりお勧めはしませんが、一応どういうものか簡単に説明します。&lt;/p&gt;
-
-&lt;p&gt;&lt;/p&gt;</description>
-    </item>
-    
-  </channel>
-</rss>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>アプリ：DispDist on Androg</title><link>https://kwmt27.net/categories/%E3%82%A2%E3%83%97%E3%83%AAdispdist/</link><description>Recent content in アプリ：DispDist on Androg</description><generator>Hugo -- gohugo.io</generator><language>ja</language><lastBuildDate>Wed, 11 Aug 2010 00:00:00 +0000</lastBuildDate><atom:link href="https://kwmt27.net/categories/%E3%82%A2%E3%83%97%E3%83%AAdispdist/index.xml" rel="self" type="application/rss+xml"/><item><title>DispDist概要</title><link>https://kwmt27.net/index.php/2010/08/11/dispdist%E6%A6%82%E8%A6%81/</link><pubDate>Wed, 11 Aug 2010 00:00:00 +0000</pubDate><guid>https://kwmt27.net/index.php/2010/08/11/dispdist%E6%A6%82%E8%A6%81/</guid><description>&lt;!-- raw HTML omitted -->
+&lt;!-- raw HTML omitted -->
+&lt;!-- raw HTML omitted -->
+&lt;p>&lt;!-- raw HTML omitted -->&lt;/p>
+&lt;p>「DispDist」は、JavaもAndroidもオブジェクト指向もほぼ初めての僕が、&lt;/p>
+&lt;p>アプリを作ろうと思い立ってから19日間でとりあえず完成させた処女作品です。&lt;/p>
+&lt;p>少しでも役に立つものを作りたいと思って作ったのですが、&lt;/p>
+&lt;p>Android端末を持っていないので、実機での動作確認をせずリリースしたので、バグだらけです。&lt;/p>
+&lt;p>ですので、あまりお勧めはしませんが、一応どういうものか簡単に説明します。&lt;/p></description></item></channel></rss>

@@ -1,26 +1,3 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
-  <channel>
-    <title>1.2 on Androg</title>
-    <link>https://kwmt27.net/tags/1.2/</link>
-    <description>Recent content in 1.2 on Androg</description>
-    <generator>Hugo -- gohugo.io</generator>
-    <language>ja</language>
-    <lastBuildDate>Mon, 23 Dec 2013 00:00:00 +0000</lastBuildDate>
-    
-	<atom:link href="https://kwmt27.net/tags/1.2/index.xml" rel="self" type="application/rss+xml" />
-    
-    
-    <item>
-      <title>Go 1.2 Release Notesを翻訳しました。 #golang</title>
-      <link>https://kwmt27.net/index.php/2013/12/23/translated-go12-release-notes/</link>
-      <pubDate>Mon, 23 Dec 2013 00:00:00 +0000</pubDate>
-      
-      <guid>https://kwmt27.net/index.php/2013/12/23/translated-go12-release-notes/</guid>
-      <description>1 December 2013にGo1.2がリリースされてもうすぐで1ヶ月ですが、Go 1.2 Release Notesを翻訳しました。
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>1.2 on Androg</title><link>https://kwmt27.net/tags/1.2/</link><description>Recent content in 1.2 on Androg</description><generator>Hugo -- gohugo.io</generator><language>ja</language><lastBuildDate>Mon, 23 Dec 2013 00:00:00 +0000</lastBuildDate><atom:link href="https://kwmt27.net/tags/1.2/index.xml" rel="self" type="application/rss+xml"/><item><title>Go 1.2 Release Notesを翻訳しました。 #golang</title><link>https://kwmt27.net/index.php/2013/12/23/translated-go12-release-notes/</link><pubDate>Mon, 23 Dec 2013 00:00:00 +0000</pubDate><guid>https://kwmt27.net/index.php/2013/12/23/translated-go12-release-notes/</guid><description>1 December 2013にGo1.2がリリースされてもうすぐで1ヶ月ですが、Go 1.2 Release Notesを翻訳しました。
 https://github.com/kwmt/golangwiki/blob/master/doc/go1.2.md
-間違い等ありましたら、PR頂けるとうれしいです！</description>
-    </item>
-    
-  </channel>
-</rss>
+間違い等ありましたら、PR頂けるとうれしいです！</description></item></channel></rss>

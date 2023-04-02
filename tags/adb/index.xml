@@ -1,47 +1,15 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
-  <channel>
-    <title>Adb on Androg</title>
-    <link>https://kwmt27.net/tags/adb/</link>
-    <description>Recent content in Adb on Androg</description>
-    <generator>Hugo -- gohugo.io</generator>
-    <language>ja</language>
-    <lastBuildDate>Tue, 10 Jul 2018 21:30:00 +0900</lastBuildDate>
-    
-	<atom:link href="https://kwmt27.net/tags/adb/index.xml" rel="self" type="application/rss+xml" />
-    
-    
-    <item>
-      <title>Wifiでadb接続する</title>
-      <link>https://kwmt27.net/2018/07/10/adb-wifi/</link>
-      <pubDate>Tue, 10 Jul 2018 21:30:00 +0900</pubDate>
-      
-      <guid>https://kwmt27.net/2018/07/10/adb-wifi/</guid>
-      <description>Wifi経由でadb接続するには  端末とUSBで接続する
- 認識されてることを確認
-% adb devices List of devices attached &amp;lt;端末&amp;gt; device  adb tcpip PORTを叩く
-% adb tcpip 5555 restarting in TCP mode port: 5555  adb serverがリスタートします。
- adb connect &amp;lt;端末のIPアドレス&amp;gt;
-端末に接続します。
-% adb connect &amp;lt;端末のIPアドレス&amp;gt; connected to &amp;lt;端末のIPアドレス&amp;gt;  このようにconnectedと出たら、完了です。USB外してもadb devicesで端末が表示されるはずです。
-% adb devices List of devices attached &amp;lt;端末のIPアドレス&amp;gt;:5556 device   もし adb connectできなかったら adb connectしたときに、下記のように接続できないことがありました。
-% adb connect &amp;lt;端末のIPアドレス&amp;gt; unable to connect to &amp;lt;端末のIPアドレス&amp;gt;:5555: Operation timed out  その場合は、PORTを変えてみてください。自分の場合はこれで繋がりました。</description>
-    </item>
-    
-    <item>
-      <title>コマンドからエミュレータ閉じるには？</title>
-      <link>https://kwmt27.net/2018/03/29/kill-emulator-on-temrminal/</link>
-      <pubDate>Thu, 29 Mar 2018 16:20:00 +0900</pubDate>
-      
-      <guid>https://kwmt27.net/2018/03/29/kill-emulator-on-temrminal/</guid>
-      <description> 問題 エミュレータを複数起動している途中でMacが落ちて再起動してしまった。 再起動後いろいろソフトが立上がるが、エミュレータは立ち上がらない（少なくとも見えない）現象になってしまった。
-% adb devices List of devices attached emulator-5558	device emulator-5556	device emulator-5554	device  adb devicesとするとこのように見えるのだが、実際はエミュレータは見えない。
-対策 コマンドからエミュレータを閉じるにはどうしたらいいか調べたところ、
-adb -s emulator-5554 emu kill  とすると
-% adb devices List of devices attached  と閉じてくれた。
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>adb on Androg</title><link>https://kwmt27.net/tags/adb/</link><description>Recent content in adb on Androg</description><generator>Hugo -- gohugo.io</generator><language>ja</language><lastBuildDate>Tue, 10 Jul 2018 21:30:00 +0900</lastBuildDate><atom:link href="https://kwmt27.net/tags/adb/index.xml" rel="self" type="application/rss+xml"/><item><title>Wifiでadb接続する</title><link>https://kwmt27.net/2018/07/10/adb-wifi/</link><pubDate>Tue, 10 Jul 2018 21:30:00 +0900</pubDate><guid>https://kwmt27.net/2018/07/10/adb-wifi/</guid><description>Wifi経由でadb接続するには 端末とUSBで接続する
+認識されてることを確認
+% adb devices List of devices attached &amp;lt;端末&amp;gt; device adb tcpip PORTを叩く
+% adb tcpip 5555 restarting in TCP mode port: 5555 adb serverがリスタートします。
+adb connect &amp;lt;端末のIPアドレス&amp;gt; 端末に接続します。
+% adb connect &amp;lt;端末のIPアドレス&amp;gt; connected to &amp;lt;端末のIPアドレス&amp;gt; このようにconnectedと出たら、完了です。USB外してもadb devicesで端末が表示されるはずです。
+% adb devices List of devices attached &amp;lt;端末のIPアドレス&amp;gt;:5556 device もし adb connectできなかったらadb connectしたときに、下記のように接続できないことがありました。
+% adb connect &amp;lt;端末のIPアドレス&amp;gt; unable to connect to &amp;lt;端末のIPアドレス&amp;gt;:5555: Operation timed out その場合は、PORTを変えてみてください。自分の場合はこれで繋がりました。
+% adb tcpip 5556 restarting in TCP mode port: 5556 % adb connect &amp;lt;端末のIPアドレス&amp;gt;:5556 connected to &amp;lt;端末のIPアドレス&amp;gt;:5556</description></item><item><title>コマンドからエミュレータ閉じるには？</title><link>https://kwmt27.net/2018/03/29/kill-emulator-on-temrminal/</link><pubDate>Thu, 29 Mar 2018 16:20:00 +0900</pubDate><guid>https://kwmt27.net/2018/03/29/kill-emulator-on-temrminal/</guid><description>問題エミュレータを複数起動している途中でMacが落ちて再起動してしまった。 再起動後いろいろソフトが立上がるが、エミュレータは立ち上がらない（少なくとも見えない）現象になってしまった。
+% adb devices List of devices attached emulator-5558 device emulator-5556 device emulator-5554 device adb devicesとするとこのように見えるのだが、実際はエミュレータは見えない。
+対策コマンドからエミュレータを閉じるにはどうしたらいいか調べたところ、
+adb -s emulator-5554 emu kill とすると
+% adb devices List of devices attached と閉じてくれた。
 以上。
-参考  https://stackoverflow.com/a/20155436  </description>
-    </item>
-    
-  </channel>
-</rss>
+参考 https://stackoverflow.com/a/20155436</description></item></channel></rss>

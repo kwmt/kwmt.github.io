@@ -1,28 +1,5 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
-  <channel>
-    <title>スクロール on Androg</title>
-    <link>https://kwmt27.net/tags/%E3%82%B9%E3%82%AF%E3%83%AD%E3%83%BC%E3%83%AB/</link>
-    <description>Recent content in スクロール on Androg</description>
-    <generator>Hugo -- gohugo.io</generator>
-    <language>ja</language>
-    <lastBuildDate>Mon, 03 Sep 2018 11:15:00 +0900</lastBuildDate>
-    
-	<atom:link href="https://kwmt27.net/tags/%E3%82%B9%E3%82%AF%E3%83%AD%E3%83%BC%E3%83%AB/index.xml" rel="self" type="application/rss+xml" />
-    
-    
-    <item>
-      <title>Flutterでスクロールを検知し、ある位置までスクロールしたらWidgetを表示するには</title>
-      <link>https://kwmt27.net/2018/09/03/flutter-scroll/</link>
-      <pubDate>Mon, 03 Sep 2018 11:15:00 +0900</pubDate>
-      
-      <guid>https://kwmt27.net/2018/09/03/flutter-scroll/</guid>
-      <description>やりたいこと Flutterで、下図のように上にスクロールしてある一定の位置まで来たらWidgetを表示させ、下にスクロールしてある一定の位置まで来たら表示したWidgetを消すというのをやりたい。
-どうやって？  スクロールを検知するListenerをセットする そのListenerでスクロール位置を計算してWidgetの表示・非表示を切り替える。  1. スクロールを検知するListenerをセットする Flutter標準のScrollControllerクラスを使って、ScrollController _scrollController;と変数宣言し、initState()で初期化、dispose()で後処理しておきます。
-ScrollController _scrollController; @override void initState() { super.initState(); _scrollController = ScrollController(); } @override void dispose() { _scrollController.dispose(); super.dispose(); }  ListView.builderにScrollControllerをセットできるので、先程宣言した_scrollControllerをセットします。
-Widget _buildListView() { return ListView.builder( controller: _scrollController, reverse: true, itemCount: messages != null ? messages.length : 0, itemBuilder: (BuildContext context, int position) { return _buildMessageRow(context, position); }, ); }  _scrollControllerにスクロールを検知したときに処理をしたいリスナー(ここでは_scrollListener)を追加します。
-@override void initState() { super.initState(); _scrollController = ScrollController(); _scrollController.</description>
-    </item>
-    
-  </channel>
-</rss>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>スクロール on Androg</title><link>https://kwmt27.net/tags/%E3%82%B9%E3%82%AF%E3%83%AD%E3%83%BC%E3%83%AB/</link><description>Recent content in スクロール on Androg</description><generator>Hugo -- gohugo.io</generator><language>ja</language><lastBuildDate>Mon, 03 Sep 2018 11:15:00 +0900</lastBuildDate><atom:link href="https://kwmt27.net/tags/%E3%82%B9%E3%82%AF%E3%83%AD%E3%83%BC%E3%83%AB/index.xml" rel="self" type="application/rss+xml"/><item><title>Flutterでスクロールを検知し、ある位置までスクロールしたらWidgetを表示するには</title><link>https://kwmt27.net/2018/09/03/flutter-scroll/</link><pubDate>Mon, 03 Sep 2018 11:15:00 +0900</pubDate><guid>https://kwmt27.net/2018/09/03/flutter-scroll/</guid><description>やりたいことFlutterで、下図のように上にスクロールしてある一定の位置まで来たらWidgetを表示させ、下にスクロールしてある一定の位置まで来たら表示したWidgetを消すというのをやりたい。
+どうやって？ スクロールを検知するListenerをセットする そのListenerでスクロール位置を計算してWidgetの表示・非表示を切り替える。 1. スクロールを検知するListenerをセットするFlutter標準のScrollControllerクラスを使って、ScrollController _scrollController;と変数宣言し、initState()で初期化、dispose()で後処理しておきます。
+ScrollController _scrollController; @override void initState() { super.initState(); _scrollController = ScrollController(); } @override void dispose() { _scrollController.dispose(); super.dispose(); } ListView.builderにScrollControllerをセットできるので、先程宣言した_scrollControllerをセットします。
+Widget _buildListView() { return ListView.builder( controller: _scrollController, reverse: true, itemCount: messages != null ? messages.length : 0, itemBuilder: (BuildContext context, int position) { return _buildMessageRow(context, position); }, ); } _scrollControllerにスクロールを検知したときに処理をしたいリスナー(ここでは_scrollListener)を追加します。
+@override void initState() { super.initState(); _scrollController = ScrollController(); _scrollController.addListener(_scrollListener); // ←追加 } void _scrollListener() { // スクロールを検知したときに呼ばれる } これで、スクロールを検知することができるようになりました。</description></item></channel></rss>

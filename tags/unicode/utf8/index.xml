@@ -1,31 +1,8 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
-  <channel>
-    <title>Unicode/Utf8 on Androg</title>
-    <link>https://kwmt27.net/tags/unicode/utf8/</link>
-    <description>Recent content in Unicode/Utf8 on Androg</description>
-    <generator>Hugo -- gohugo.io</generator>
-    <language>ja</language>
-    <lastBuildDate>Wed, 09 Oct 2013 00:00:00 +0000</lastBuildDate>
-    
-	<atom:link href="https://kwmt27.net/tags/unicode/utf8/index.xml" rel="self" type="application/rss+xml" />
-    
-    
-    <item>
-      <title>#golang 文字数をカウントするには？</title>
-      <link>https://kwmt27.net/index.php/2013/10/10/how-to-count-number-of-string-golang/</link>
-      <pubDate>Wed, 09 Oct 2013 00:00:00 +0000</pubDate>
-      
-      <guid>https://kwmt27.net/index.php/2013/10/10/how-to-count-number-of-string-golang/</guid>
-      <description>文字数をカウントしたい！ そう思ってすぐ思いついたのは、stringsパッケージのCount関数。
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>unicode/utf8 on Androg</title><link>https://kwmt27.net/tags/unicode/utf8/</link><description>Recent content in unicode/utf8 on Androg</description><generator>Hugo -- gohugo.io</generator><language>ja</language><atom:link href="https://kwmt27.net/tags/unicode/utf8/index.xml" rel="self" type="application/rss+xml"/><item><title>#golang 文字数をカウントするには？</title><link>https://kwmt27.net/index.php/2013/10/10/how-to-count-number-of-string-golang/</link><pubDate>Wed, 09 Oct 2013 00:00:00 +0000</pubDate><guid>https://kwmt27.net/index.php/2013/10/10/how-to-count-number-of-string-golang/</guid><description>文字数をカウントしたい！そう思ってすぐ思いついたのは、stringsパッケージのCount関数。
 Exampleのあったので、確認のためRunしてみる。
 なぜか期待する文字数の +1 になる。srcを見てみたところ、+1されてる・・・。なんで？
 とツイートしたら、ロブ・パイク先生からお返事頂きました！
-@yasi_kawamoto All strings contain the empty string.  &amp;mdash; Rob Pike (@rob_pike) October 9, 2013  でも、あれ？ strings#Countの例にあるけど、
-fmt.Println(strings.Count(&#34;cheese&#34;, &#34;e&#34;))  これは、3と出力しますよね。
-fmt.Println(strings.Count(&#34;five&#34;, &#34;&#34;))  これは、なんで5を出力するの？すべての文字列にempty stringが&amp;#8221;含まれてる&amp;#8221;んなら、1じゃないのかな！？この答えは、たぶんプログラミング言語の基本な気がする&amp;#8230;ちょっと調べてみよう。
-とにかく、期待する文字数をカウントするには、Count関数でも使われているunicode/utf8パッケージのRuneCountInString関数を使えばよさそうだ。</description>
-    </item>
-    
-  </channel>
-</rss>
+でも、あれ？ strings#Countの例にあるけど、
+これは、3と出力しますよね。
+これは、なんで5を出力するの？すべての文字列にempty stringが”含まれてる”んなら、1じゃないのかな！？この答えは、たぶんプログラミング言語の基本な気がする…ちょっと調べてみよう。
+とにかく、期待する文字数をカウントするには、Count関数でも使われているunicode/utf8パッケージのRuneCountInString関数を使えばよさそうだ。</description></item></channel></rss>

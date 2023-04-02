@@ -1,31 +1,8 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
-  <channel>
-    <title>Mockito2 on Androg</title>
-    <link>https://kwmt27.net/tags/mockito2/</link>
-    <description>Recent content in Mockito2 on Androg</description>
-    <generator>Hugo -- gohugo.io</generator>
-    <language>ja</language>
-    <lastBuildDate>Mon, 30 Oct 2017 11:20:00 +0900</lastBuildDate>
-    
-	<atom:link href="https://kwmt27.net/tags/mockito2/index.xml" rel="self" type="application/rss+xml" />
-    
-    
-    <item>
-      <title>KotlinでMockito2を使ってfinal classをモック化するには</title>
-      <link>https://kwmt27.net/2017/10/30/mock-kotlin-class-with-mockito2/</link>
-      <pubDate>Mon, 30 Oct 2017 11:20:00 +0900</pubDate>
-      
-      <guid>https://kwmt27.net/2017/10/30/mock-kotlin-class-with-mockito2/</guid>
-      <description> 環境 Android Studio: 2.3.3 Kotlin: 1.1.51 Mokito: 2.11.0
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Mockito2 on Androg</title><link>https://kwmt27.net/tags/mockito2/</link><description>Recent content in Mockito2 on Androg</description><generator>Hugo -- gohugo.io</generator><language>ja</language><lastBuildDate>Mon, 30 Oct 2017 11:20:00 +0900</lastBuildDate><atom:link href="https://kwmt27.net/tags/mockito2/index.xml" rel="self" type="application/rss+xml"/><item><title>KotlinでMockito2を使ってfinal classをモック化するには</title><link>https://kwmt27.net/2017/10/30/mock-kotlin-class-with-mockito2/</link><pubDate>Mon, 30 Oct 2017 11:20:00 +0900</pubDate><guid>https://kwmt27.net/2017/10/30/mock-kotlin-class-with-mockito2/</guid><description>環境Android Studio: 2.3.3 Kotlin: 1.1.51 Mokito: 2.11.0
 build.gradleにはmockito-coreを指定
-testCompile &amp;quot;org.mockito:mockito-core:2.11.0&amp;quot;  問題 kotlinで普通にクラスを作成すると、final classです。
-class EventsDataSourceManager @Inject constructor(private val eventsRemoteDataSource: EventsRemoteDataSource) { fun eventEntities(user:String, page:Int): Single&amp;lt;List&amp;lt;EventEntity&amp;gt;&amp;gt; { // リモートかキャッシュを使うかの判断をココでやるとよさそう return eventsRemoteDataSource.eventEntities(user, page) } }  その状態でmockitoを使って、モック化しようとすると、「Mockitoはfinal classはモック化できない」とエラーにになります。
-org.mockito.exceptions.base.MockitoException: Cannot mock/spy class net.kwmt27.codesearch.infrastructure.repository.datesource.EventsDataSourceManager Mockito cannot mock/spy because : - final class  対策 これを可能にするには、
-test/resources/mockito-extensions  フォルダを作成し、mockito-extensionsフォルダに、org.mockito.plugins.MockMakerファイルを作成します。 org.mockito.plugins.MockMakerファイルには、下記のテキストを入力しておきます。
-mock-maker-inline  この状態でもう一度テストを実行します。 すると、テストが実行されます。
-参考  How to mock final classes on Kotlin using Mockito 2 (KAD 23) Mock the unmockable: opt-in mocking of final classes/methods(公式wiki)  </description>
-    </item>
-    
-  </channel>
-</rss>
+testCompile &amp;#34;org.mockito:mockito-core:2.11.0&amp;#34; 問題kotlinで普通にクラスを作成すると、final classです。
+class EventsDataSourceManager @Inject constructor(private val eventsRemoteDataSource: EventsRemoteDataSource) { fun eventEntities(user:String, page:Int): Single&amp;lt;List&amp;lt;EventEntity&amp;gt;&amp;gt; { // リモートかキャッシュを使うかの判断をココでやるとよさそう return eventsRemoteDataSource.eventEntities(user, page) } } その状態でmockitoを使って、モック化しようとすると、「Mockitoはfinal classはモック化できない」とエラーにになります。
+org.mockito.exceptions.base.MockitoException: Cannot mock/spy class net.kwmt27.codesearch.infrastructure.repository.datesource.EventsDataSourceManager Mockito cannot mock/spy because : - final class 対策これを可能にするには、
+test/resources/mockito-extensions フォルダを作成し、mockito-extensionsフォルダに、org.mockito.plugins.MockMakerファイルを作成します。 org.mockito.plugins.MockMakerファイルには、下記のテキストを入力しておきます。
+mock-maker-inline この状態でもう一度テストを実行します。 すると、テストが実行されます。
+参考 How to mock final classes on Kotlin using Mockito 2 (KAD 23) Mock the unmockable: opt-in mocking of final classes/methods(公式wiki)</description></item></channel></rss>

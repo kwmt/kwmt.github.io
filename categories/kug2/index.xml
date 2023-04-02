@@ -1,25 +1,2 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
-  <channel>
-    <title>Kug2 on Androg</title>
-    <link>https://kwmt27.net/categories/kug2/</link>
-    <description>Recent content in Kug2 on Androg</description>
-    <generator>Hugo -- gohugo.io</generator>
-    <language>ja</language>
-    <lastBuildDate>Sun, 17 Apr 2016 13:32:22 +0900</lastBuildDate>
-    
-	<atom:link href="https://kwmt27.net/categories/kug2/index.xml" rel="self" type="application/rss+xml" />
-    
-    
-    <item>
-      <title>第3回 関西golang勉強会メモ</title>
-      <link>https://kwmt27.net/2016/04/17/study-golang-in-kug2/</link>
-      <pubDate>Sun, 17 Apr 2016 13:32:22 +0900</pubDate>
-      
-      <guid>https://kwmt27.net/2016/04/17/study-golang-in-kug2/</guid>
-      <description> 第3回 関西golang勉強会　に行ってきたメモです。
-テレビ連動プラットフォームでのGo @ingtk at HROID * GoMock https://github.com/golang/mock * go-errors/erros スタックトレースエラー表示できる https://github.com/go-errors/errors * コードバレッジ gocov * デバッガ delve https://github.com/derekparker/delve ターミナルでブレイクポイントはってステップ実行できる プロセス動いてるものをアタッチして実行できるので本番で動いているものをデバッグできるので便利 *プロファイル pprof listコマンドで関数内に入ることができる  go破壊(gohakai) hattori hideo at KLab * Go破壊とは httpサーバー用の負荷テストツール https://github.com/KLab/gohakai fan-out  マスターオブreflectパッケージ2 @tenntenn http://www.slideshare.net/takuyaueda967/reflect-ii  goでp2pしよう！ @nobonobo http://golang.rdy.jp/go-p2p/#/  俺と生活とgolang @みゅうみゅう </description>
-    </item>
-    
-  </channel>
-</rss>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>kug2 on Androg</title><link>https://kwmt27.net/categories/kug2/</link><description>Recent content in kug2 on Androg</description><generator>Hugo -- gohugo.io</generator><language>ja</language><lastBuildDate>Sun, 17 Apr 2016 13:32:22 +0900</lastBuildDate><atom:link href="https://kwmt27.net/categories/kug2/index.xml" rel="self" type="application/rss+xml"/><item><title>第3回 関西golang勉強会メモ</title><link>https://kwmt27.net/2016/04/17/study-golang-in-kug2/</link><pubDate>Sun, 17 Apr 2016 13:32:22 +0900</pubDate><guid>https://kwmt27.net/2016/04/17/study-golang-in-kug2/</guid><description>第3回 関西golang勉強会　に行ってきたメモです。
+テレビ連動プラットフォームでのGo @ingtk at HROID* GoMock https://github.com/golang/mock * go-errors/erros スタックトレースエラー表示できる https://github.com/go-errors/errors * コードバレッジ gocov * デバッガ delve https://github.com/derekparker/delve ターミナルでブレイクポイントはってステップ実行できる プロセス動いてるものをアタッチして実行できるので本番で動いているものをデバッグできるので便利 *プロファイル pprof listコマンドで関数内に入ることができる go破壊(gohakai) hattori hideo at KLab* Go破壊とは httpサーバー用の負荷テストツール https://github.com/KLab/gohakai fan-out マスターオブreflectパッケージ2 @tenntennhttp://www.slideshare.net/takuyaueda967/reflect-ii goでp2pしよう！ @nobonobohttp://golang.rdy.jp/go-p2p/#/ 俺と生活とgolang @みゅうみゅう</description></item></channel></rss>

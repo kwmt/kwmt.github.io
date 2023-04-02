@@ -1,26 +1,3 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
-  <channel>
-    <title>Enum on Androg</title>
-    <link>https://kwmt27.net/tags/enum/</link>
-    <description>Recent content in Enum on Androg</description>
-    <generator>Hugo -- gohugo.io</generator>
-    <language>ja</language>
-    <lastBuildDate>Sun, 28 Oct 2018 17:30:00 +0900</lastBuildDate>
-    
-	<atom:link href="https://kwmt27.net/tags/enum/index.xml" rel="self" type="application/rss+xml" />
-    
-    
-    <item>
-      <title>Dartのenumからの文字列取得について</title>
-      <link>https://kwmt27.net/2018/10/28/dart-enum/</link>
-      <pubDate>Sun, 28 Oct 2018 17:30:00 +0900</pubDate>
-      
-      <guid>https://kwmt27.net/2018/10/28/dart-enum/</guid>
-      <description>enum Type { Hoge, Fuga }  というenumがあったとき、このenumから“Hoge”という文字列を取得したい場合、次のようにする。
-Type.Hoge.toString().split(&#39;.&#39;)[1]  splitしなかったら、&amp;quot;Type.Hoge&amp;quot;という文字列が返る。
-dartpud(sample) https://dartpad.dartlang.org/a4a24c9a210cb0779e74c615d5ef25dd</description>
-    </item>
-    
-  </channel>
-</rss>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>enum on Androg</title><link>https://kwmt27.net/tags/enum/</link><description>Recent content in enum on Androg</description><generator>Hugo -- gohugo.io</generator><language>ja</language><lastBuildDate>Sun, 28 Oct 2018 17:30:00 +0900</lastBuildDate><atom:link href="https://kwmt27.net/tags/enum/index.xml" rel="self" type="application/rss+xml"/><item><title>Dartのenumからの文字列取得について</title><link>https://kwmt27.net/2018/10/28/dart-enum/</link><pubDate>Sun, 28 Oct 2018 17:30:00 +0900</pubDate><guid>https://kwmt27.net/2018/10/28/dart-enum/</guid><description>enum Type { Hoge, Fuga } というenumがあったとき、このenumから“Hoge”という文字列を取得したい場合、次のようにする。
+Type.Hoge.toString().split(&amp;#39;.&amp;#39;)[1] splitしなかったら、&amp;quot;Type.Hoge&amp;quot;という文字列が返る。
+dartpud(sample)https://dartpad.dartlang.org/a4a24c9a210cb0779e74c615d5ef25dd</description></item></channel></rss>

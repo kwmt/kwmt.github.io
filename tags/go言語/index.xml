@@ -1,711 +1,195 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
-  <channel>
-    <title>Go言語 on Androg</title>
-    <link>https://kwmt27.net/tags/go%E8%A8%80%E8%AA%9E/</link>
-    <description>Recent content in Go言語 on Androg</description>
-    <generator>Hugo -- gohugo.io</generator>
-    <language>ja</language>
-    <lastBuildDate>Sun, 07 Feb 2016 13:35:31 +0900</lastBuildDate>
-    
-	<atom:link href="https://kwmt27.net/tags/go%E8%A8%80%E8%AA%9E/index.xml" rel="self" type="application/rss+xml" />
-    
-    
-    <item>
-      <title>Go言語で作ったAPIサーバーがのったコンテナをDockerで使ってみる</title>
-      <link>https://kwmt27.net/2016/02/07/how-to-use-gozen-with-docker/</link>
-      <pubDate>Sun, 07 Feb 2016 13:35:31 +0900</pubDate>
-      
-      <guid>https://kwmt27.net/2016/02/07/how-to-use-gozen-with-docker/</guid>
-      <description>Mac OSにdocker-toolboxをインストールし、VM(machine)を立ち上げる 1.docker-toolbox をインストールします。
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Go言語 on Androg</title><link>https://kwmt27.net/tags/go%E8%A8%80%E8%AA%9E/</link><description>Recent content in Go言語 on Androg</description><generator>Hugo -- gohugo.io</generator><language>ja</language><lastBuildDate>Sun, 07 Feb 2016 13:35:31 +0900</lastBuildDate><atom:link href="https://kwmt27.net/tags/go%E8%A8%80%E8%AA%9E/index.xml" rel="self" type="application/rss+xml"/><item><title>Go言語で作ったAPIサーバーがのったコンテナをDockerで使ってみる</title><link>https://kwmt27.net/2016/02/07/how-to-use-gozen-with-docker/</link><pubDate>Sun, 07 Feb 2016 13:35:31 +0900</pubDate><guid>https://kwmt27.net/2016/02/07/how-to-use-gozen-with-docker/</guid><description>Mac OSにdocker-toolboxをインストールし、VM(machine)を立ち上げる1.docker-toolbox をインストールします。
 2.インストールが完了すると、 docker quickstart terminal というのがありますのでそれを起動します。
 すると、ターミナルが立ち上がり、下記のようなログが流れます。
-bash --login &#39;/Applications/Docker/Docker Quickstart Terminal.app/Contents/Resources/Scripts/start.sh&#39; Last login: Thu Jan 21 15:14:12 on ttys017 % ~ % bash --login &#39;/Applications/Docker/Docker Quickstart Terminal.app/Contents/Resources/Scripts/start.sh&#39; Creating CA: /Users/kwmt/.docker/machine/certs/ca.pem Creating client certificate: /Users/kwmt/.docker/machine/certs/cert.pem Running pre-create checks... Creating machine... (default) Copying /Users/kwmt/.docker/machine/cache/boot2docker.iso to /Users/kwmt/.docker/machine/machines/default/boot2docker.iso... (default) Creating VirtualBox VM... (default) Creating SSH key... (default) Starting the VM... (default) Waiting for an IP... Waiting for machine to be running, this may take a few minutes.</description>
-    </item>
-    
-    <item>
-      <title>GoCon 2015 summer 参加メモ。</title>
-      <link>https://kwmt27.net/index.php/2015/06/23/gocon-2015-summer/</link>
-      <pubDate>Tue, 23 Jun 2015 00:00:00 +0000</pubDate>
-      
-      <guid>https://kwmt27.net/index.php/2015/06/23/gocon-2015-summer/</guid>
-      <description>GoCon 2015 summer イベントページ http://gocon.connpass.com/event/14063/
-GoCon資料まとめ http://qiita.com/t-sato/items/a5d1a309733e765533ce
+bash --login &amp;#39;/Applications/Docker/Docker Quickstart Terminal.app/Contents/Resources/Scripts/start.sh&amp;#39; Last login: Thu Jan 21 15:14:12 on ttys017 % ~ % bash --login &amp;#39;/Applications/Docker/Docker Quickstart Terminal.app/Contents/Resources/Scripts/start.sh&amp;#39; Creating CA: /Users/kwmt/.docker/machine/certs/ca.pem Creating client certificate: /Users/kwmt/.docker/machine/certs/cert.pem Running pre-create checks... Creating machine... (default) Copying /Users/kwmt/.docker/machine/cache/boot2docker.iso to /Users/kwmt/.docker/machine/machines/default/boot2docker.iso... (default) Creating VirtualBox VM... (default) Creating SSH key... (default) Starting the VM... (default) Waiting for an IP... Waiting for machine to be running, this may take a few minutes.</description></item><item><title>GoCon 2015 summer 参加メモ。</title><link>https://kwmt27.net/index.php/2015/06/23/gocon-2015-summer/</link><pubDate>Tue, 23 Jun 2015 00:00:00 +0000</pubDate><guid>https://kwmt27.net/index.php/2015/06/23/gocon-2015-summer/</guid><description>GoCon 2015 summer イベントページhttp://gocon.connpass.com/event/14063/
+GoCon資料まとめhttp://qiita.com/t-sato/items/a5d1a309733e765533ce
 あとでまとめようと思ったけどすでにまとめてくれてた人がいたので、のっかる。
 が、キーノートの@francesc さんの資料がまだ公開されてない模様。
-Sourcegraph &amp;#8211; GitHub上でオブジェクト/メソッドジャンプを可能に
-gomobileはやっぱ気になりますね。 https://godoc.org/golang.org/x/mobile/cmd/gomobile
-gRPCも気になる。</description>
-    </item>
-    
-    <item>
-      <title>構造体にフィールドを追加しないで、JSONに動的にフィールドを追加したい #golang</title>
-      <link>https://kwmt27.net/index.php/2014/09/23/how-to-add-a-field-to-the-json-output-without-including-it-in-the-struct/</link>
-      <pubDate>Tue, 23 Sep 2014 00:00:00 +0000</pubDate>
-      
-      <guid>https://kwmt27.net/index.php/2014/09/23/how-to-add-a-field-to-the-json-output-without-including-it-in-the-struct/</guid>
-      <description>&lt;h2 id=&#34;はじめに&#34;&gt;はじめに&lt;/h2&gt;
-
-&lt;p&gt;JSONを返したい場合、定義済みの構造体に対して&lt;code&gt;json.Marshal&lt;/code&gt;とかして、JSONにしていたのですが、下記の&lt;code&gt;Book&lt;/code&gt;構造体の例だと、返せるフィールドは&lt;code&gt;Title,Author&lt;/code&gt;だけになってしまいます。&lt;/p&gt;
-
-&lt;pre class=&#34;go&#34;&gt;type Book struct {
-    Title  string
-    Author string
-}
-
-response, _ := json.Marshal(book)
-fmt.Fprintf(w, string(response))
-&lt;/pre&gt;
-
-&lt;p&gt;それ以外のフィールドも動的に追加するにはどうしたらか調べたので書いておこうかと思います。&lt;/p&gt;
-
-&lt;p&gt;&lt;/p&gt;</description>
-    </item>
-    
-    <item>
-      <title>Genmaiを使ってみた。 #golang</title>
-      <link>https://kwmt27.net/index.php/2014/09/22/try-using-genmai-of-orm-for-golang/</link>
-      <pubDate>Mon, 22 Sep 2014 00:00:00 +0000</pubDate>
-      
-      <guid>https://kwmt27.net/index.php/2014/09/22/try-using-genmai-of-orm-for-golang/</guid>
-      <description>&lt;p&gt;ORM for golangの&lt;a href=&#34;http://bit.ly/1ucuNGX&#34; target=&#34;_blank&#34;&gt;Genmai&lt;/a&gt;を使って、MySQLにアクセスしてみた。&lt;/p&gt;
-
-&lt;p&gt;使い方は以下の様な感じです。&lt;/p&gt;
-
-&lt;p&gt;テーブルを定義します。&lt;/p&gt;
-
-&lt;pre class=&#34;go&#34;&gt;// ユーザーテーブル
-type User struct {
-    Id    int `db:&#34;pk&#34;`
-    Name  string
-    genmai.TimeStamp
-}
-&lt;/pre&gt;
-
-&lt;p&gt;&lt;/p&gt;</description>
-    </item>
-    
-    <item>
-      <title>Intellij IDEAで #golang を使えるようにする。</title>
-      <link>https://kwmt27.net/index.php/2014/09/10/how-to-use-golang-with-intellij-idea/</link>
-      <pubDate>Wed, 10 Sep 2014 00:00:00 +0000</pubDate>
-      
-      <guid>https://kwmt27.net/index.php/2014/09/10/how-to-use-golang-with-intellij-idea/</guid>
-      <description>&lt;p&gt;ひさびさGoの記事を書く気がします。いままで、どちらかというとIDEなんて不要だ！秀丸で十分だ！ｗ と思ってた人でしたが、Intellij IDEAは素晴らしい！ので、Intellij IDEAでGo言語を使えるようにする設定を書いておこうかと思います。&lt;/p&gt;
-
-&lt;ul&gt;
-&lt;li&gt;Intellij IDEA version:13.1.2&lt;/li&gt;
-&lt;li&gt;go-lang-idea-plugin version:0.9.15.3&lt;/li&gt;
-&lt;li&gt;golang version:1.2 darwin/amd64&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;&lt;/p&gt;</description>
-    </item>
-    
-    <item>
-      <title>Go 1.2 Release Notesを翻訳しました。 #golang</title>
-      <link>https://kwmt27.net/index.php/2013/12/23/translated-go12-release-notes/</link>
-      <pubDate>Mon, 23 Dec 2013 00:00:00 +0000</pubDate>
-      
-      <guid>https://kwmt27.net/index.php/2013/12/23/translated-go12-release-notes/</guid>
-      <description>1 December 2013にGo1.2がリリースされてもうすぐで1ヶ月ですが、Go 1.2 Release Notesを翻訳しました。
+Sourcegraph – GitHub上でオブジェクト/メソッドジャンプを可能に
+gomobileはやっぱ気になりますね。https://godoc.org/golang.org/x/mobile/cmd/gomobile
+gRPCも気になる。</description></item><item><title>構造体にフィールドを追加しないで、JSONに動的にフィールドを追加したい #golang</title><link>https://kwmt27.net/index.php/2014/09/23/how-to-add-a-field-to-the-json-output-without-including-it-in-the-struct/</link><pubDate>Tue, 23 Sep 2014 00:00:00 +0000</pubDate><guid>https://kwmt27.net/index.php/2014/09/23/how-to-add-a-field-to-the-json-output-without-including-it-in-the-struct/</guid><description>&lt;h2 id="はじめに">はじめに&lt;a class="anchorjs-link" href="#%e3%81%af%e3%81%98%e3%82%81%e3%81%ab">&lt;/a>&lt;/h2>&lt;p>JSONを返したい場合、定義済みの構造体に対して&lt;code>json.Marshal&lt;/code>とかして、JSONにしていたのですが、下記の&lt;code>Book&lt;/code>構造体の例だと、返せるフィールドは&lt;code>Title,Author&lt;/code>だけになってしまいます。&lt;/p>
+&lt;!-- raw HTML omitted -->
+&lt;!-- raw HTML omitted -->
+&lt;p>それ以外のフィールドも動的に追加するにはどうしたらか調べたので書いておこうかと思います。&lt;/p></description></item><item><title>Genmaiを使ってみた。 #golang</title><link>https://kwmt27.net/index.php/2014/09/22/try-using-genmai-of-orm-for-golang/</link><pubDate>Mon, 22 Sep 2014 00:00:00 +0000</pubDate><guid>https://kwmt27.net/index.php/2014/09/22/try-using-genmai-of-orm-for-golang/</guid><description>&lt;p>ORM for golangの&lt;!-- raw HTML omitted -->Genmai&lt;!-- raw HTML omitted -->を使って、MySQLにアクセスしてみた。&lt;/p>
+&lt;p>使い方は以下の様な感じです。&lt;/p>
+&lt;p>テーブルを定義します。&lt;/p>
+&lt;!-- raw HTML omitted -->
+&lt;!-- raw HTML omitted --></description></item><item><title>Intellij IDEAで #golang を使えるようにする。</title><link>https://kwmt27.net/index.php/2014/09/10/how-to-use-golang-with-intellij-idea/</link><pubDate>Wed, 10 Sep 2014 00:00:00 +0000</pubDate><guid>https://kwmt27.net/index.php/2014/09/10/how-to-use-golang-with-intellij-idea/</guid><description>&lt;p>ひさびさGoの記事を書く気がします。いままで、どちらかというとIDEなんて不要だ！秀丸で十分だ！ｗ と思ってた人でしたが、Intellij IDEAは素晴らしい！ので、Intellij IDEAでGo言語を使えるようにする設定を書いておこうかと思います。&lt;/p>
+&lt;ul>
+&lt;li>Intellij IDEA version:13.1.2&lt;/li>
+&lt;li>go-lang-idea-plugin version:0.9.15.3&lt;/li>
+&lt;li>golang version:1.2 darwin/amd64&lt;/li>
+&lt;/ul></description></item><item><title>Go 1.2 Release Notesを翻訳しました。 #golang</title><link>https://kwmt27.net/index.php/2013/12/23/translated-go12-release-notes/</link><pubDate>Mon, 23 Dec 2013 00:00:00 +0000</pubDate><guid>https://kwmt27.net/index.php/2013/12/23/translated-go12-release-notes/</guid><description>1 December 2013にGo1.2がリリースされてもうすぐで1ヶ月ですが、Go 1.2 Release Notesを翻訳しました。
 https://github.com/kwmt/golangwiki/blob/master/doc/go1.2.md
-間違い等ありましたら、PR頂けるとうれしいです！</description>
-    </item>
-    
-    <item>
-      <title>#golang でマッチングサイトを作った時の感想。</title>
-      <link>https://kwmt27.net/index.php/2013/12/18/golang-advent-calendar-2013/</link>
-      <pubDate>Wed, 18 Dec 2013 00:00:00 +0000</pubDate>
-      
-      <guid>https://kwmt27.net/index.php/2013/12/18/golang-advent-calendar-2013/</guid>
-      <description>&lt;p&gt;この記事は &lt;a href=&#34;http://qiita.com/advent-calendar/2013/go&#34; target=&#34;_blank&#34;&gt;Go Advent Calendar 2013&lt;/a&gt; の 18 日目の投稿です。&lt;/p&gt;
-
-&lt;h2 id=&#34;はじめに&#34;&gt;はじめに&lt;/h2&gt;
-
-&lt;p&gt;今年もいろいろと行われていますAdvent Calendarですが、初めて参加させて頂きます。プログラミング界隈のプロフェッショナルな方々の中で書くというのは、ただ1人で家で書いてるだけなのに、ちょっと緊張しちゃってます(^^ゞ　&lt;/p&gt;
-
-&lt;p&gt;簡単にGo歴を。&lt;a href=&#34;http://bit.ly/1dJqET7&#34; target=&#34;_blank&#34;&gt;2012年1月に勉強会&lt;/a&gt;に参加してから、シンプルで守備範囲が広そうで強力で、なにより楽しいと感じ、それから自分で勉強したりして発表させて頂いたりしました(&lt;a href=&#34;http://www.slideshare.net/yasi_life/presentations&#34; target=&#34;_blank&#34;&gt;slideshare&lt;/a&gt;)。&lt;a href=&#34;http://go-talks-kwmt.appspot.com/2013/gocon-spring.slide#1&#34; target=&#34;_blank&#34;&gt;神戸からGoCon Springに参加&lt;/a&gt;したり、&lt;a href=&#34;http://bit.ly/1dJqv20&#34; target=&#34;_blank&#34;&gt;神戸から名古屋の勉強会に参加&lt;/a&gt;したりしました。&lt;/p&gt;
-
-&lt;p&gt;そんな中、今年の10月に、マッチングサイトを作ってほしいという話があり、言語は何でもいいとのことだったので、担当者に&amp;#8221;Goはキマスよ&amp;#8221;と訴え続け、Goで作らせて頂きました。&lt;/p&gt;
-
-&lt;p&gt;そこで、よく「Goで何ができるの？」って聞かれますので、「マッチングサイトが作れますよ」という事例を紹介したいところなのですが、そのマッチングサイトは、まだオープンしておらず、残念ながらリンクやスクリーンショットを貼ることができません。ので、そのマッチングサイトを作った時の&amp;#8221;機能&amp;#8221;と&amp;#8221;構成&amp;#8221;を簡単に説明した後、&amp;#8221;感想&amp;#8221;を書いていきたいと思います。&lt;/p&gt;
-
-&lt;p&gt;&lt;/p&gt;</description>
-    </item>
-    
-    <item>
-      <title>第1回大阪Go勉強会の課題をやってなかったので、いまさらながらやってみた。 #阪Go</title>
-      <link>https://kwmt27.net/index.php/2013/11/19/hango-exercises/</link>
-      <pubDate>Tue, 19 Nov 2013 00:00:00 +0000</pubDate>
-      
-      <guid>https://kwmt27.net/index.php/2013/11/19/hango-exercises/</guid>
-      <description>&lt;p&gt;課題は、&lt;a href=&#34;https://github.com/todoa2c/hango/blob/master/vol01.md&#34;&gt;こちら&lt;/a&gt;です。&lt;/p&gt;
-
-&lt;p&gt;先生のコードとは少し違かったので、めもっとく。&lt;/p&gt;
-
-&lt;p&gt;&lt;/p&gt;</description>
-    </item>
-    
-    <item>
-      <title>#golang Examplesの仕組みについて</title>
-      <link>https://kwmt27.net/index.php/2013/11/08/about_exmaples_construction/</link>
-      <pubDate>Fri, 08 Nov 2013 00:00:00 +0000</pubDate>
-      
-      <guid>https://kwmt27.net/index.php/2013/11/08/about_exmaples_construction/</guid>
-      <description>&lt;p&gt;岡山で開催中のGolang Cafeの参加者の&lt;a href=&#34;http://d.hatena.ne.jp/taknb2nch/20131107/1383807901&#34; target=&#34;_blank&#34;&gt;ブログ記事&lt;/a&gt;を見て、Examplesの仕組みが気になって調べた時にGoogle+に投稿した内容です。&lt;/p&gt;
-
-&lt;p&gt;&lt;/p&gt;</description>
-    </item>
-    
-    <item>
-      <title>#golang mapからstructに変換するには？</title>
-      <link>https://kwmt27.net/index.php/2013/10/13/how-to-convert-from-map-to-struct/</link>
-      <pubDate>Sat, 12 Oct 2013 00:00:00 +0000</pubDate>
-      
-      <guid>https://kwmt27.net/index.php/2013/10/13/how-to-convert-from-map-to-struct/</guid>
-      <description>&lt;h2 id=&#34;reflect-pkgを使った方法&#34;&gt;reflect pkgを使った方法&lt;/h2&gt;
-
-&lt;p&gt;最初はなんとなくリフレクションを使ってやるのかなぁと思って、調べてたらこんな感じのが出てました。（&lt;a href=&#34;http://bit.ly/1axEplM&#34; target=&#34;_blank&#34;&gt;参考リンク&lt;/a&gt;）&lt;/p&gt;
-
-&lt;script type=&#34;text/javascript&#34; src=&#34;https://gist.github.com/6938201.js?file=&#34; &gt;&lt;/script&gt;
-
-&lt;p&gt;&lt;a href=&#34;http://play.golang.org/p/5Inl2jO7zL&#34; target=&#34;_blank&#34;&gt;&lt;a href=&#34;http://play.golang.org/p/5Inl2jO7zL&#34;&gt;http://play.golang.org/p/5Inl2jO7zL&lt;/a&gt;&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;/p&gt;</description>
-    </item>
-    
-    <item>
-      <title>#golang リフレクションを使って、キャストするには？</title>
-      <link>https://kwmt27.net/index.php/2013/10/09/how-to-cast-with-reflect-of-golang/</link>
-      <pubDate>Wed, 09 Oct 2013 00:00:00 +0000</pubDate>
-      
-      <guid>https://kwmt27.net/index.php/2013/10/09/how-to-cast-with-reflect-of-golang/</guid>
-      <description>  http://play.golang.org/p/gvadP4k1Bo
-strconv.FormatIntの第一引数は&amp;#8221;int64&amp;#8243;型で、strconv.FormatUintの第一引数は&amp;#8221;uint64&amp;#8243;型です。
+間違い等ありましたら、PR頂けるとうれしいです！</description></item><item><title>#golang でマッチングサイトを作った時の感想。</title><link>https://kwmt27.net/index.php/2013/12/18/golang-advent-calendar-2013/</link><pubDate>Wed, 18 Dec 2013 00:00:00 +0000</pubDate><guid>https://kwmt27.net/index.php/2013/12/18/golang-advent-calendar-2013/</guid><description>&lt;p>この記事は &lt;!-- raw HTML omitted -->Go Advent Calendar 2013&lt;!-- raw HTML omitted --> の 18 日目の投稿です。&lt;/p>
+&lt;h2 id="はじめに">はじめに&lt;a class="anchorjs-link" href="#%e3%81%af%e3%81%98%e3%82%81%e3%81%ab">&lt;/a>&lt;/h2>&lt;p>今年もいろいろと行われていますAdvent Calendarですが、初めて参加させて頂きます。プログラミング界隈のプロフェッショナルな方々の中で書くというのは、ただ1人で家で書いてるだけなのに、ちょっと緊張しちゃってます(^^ゞ　&lt;/p>
+&lt;p>簡単にGo歴を。&lt;!-- raw HTML omitted -->2012年1月に勉強会&lt;!-- raw HTML omitted -->に参加してから、シンプルで守備範囲が広そうで強力で、なにより楽しいと感じ、それから自分で勉強したりして発表させて頂いたりしました(&lt;!-- raw HTML omitted -->slideshare&lt;!-- raw HTML omitted -->)。&lt;!-- raw HTML omitted -->神戸からGoCon Springに参加&lt;!-- raw HTML omitted -->したり、&lt;!-- raw HTML omitted -->神戸から名古屋の勉強会に参加&lt;!-- raw HTML omitted -->したりしました。&lt;/p>
+&lt;p>そんな中、今年の10月に、マッチングサイトを作ってほしいという話があり、言語は何でもいいとのことだったので、担当者に”Goはキマスよ”と訴え続け、Goで作らせて頂きました。&lt;/p>
+&lt;p>そこで、よく「Goで何ができるの？」って聞かれますので、「マッチングサイトが作れますよ」という事例を紹介したいところなのですが、そのマッチングサイトは、まだオープンしておらず、残念ながらリンクやスクリーンショットを貼ることができません。ので、そのマッチングサイトを作った時の”機能”と”構成”を簡単に説明した後、”感想”を書いていきたいと思います。&lt;/p></description></item><item><title>第1回大阪Go勉強会の課題をやってなかったので、いまさらながらやってみた。 #阪Go</title><link>https://kwmt27.net/index.php/2013/11/19/hango-exercises/</link><pubDate>Tue, 19 Nov 2013 00:00:00 +0000</pubDate><guid>https://kwmt27.net/index.php/2013/11/19/hango-exercises/</guid><description>&lt;p>課題は、&lt;a href="https://github.com/todoa2c/hango/blob/master/vol01.md" target="_blank">こちら&lt;/a>です。&lt;/p>
+&lt;p>先生のコードとは少し違かったので、めもっとく。&lt;/p></description></item><item><title>#golang Examplesの仕組みについて</title><link>https://kwmt27.net/index.php/2013/11/08/about_exmaples_construction/</link><pubDate>Fri, 08 Nov 2013 00:00:00 +0000</pubDate><guid>https://kwmt27.net/index.php/2013/11/08/about_exmaples_construction/</guid><description>&lt;p>岡山で開催中のGolang Cafeの参加者の&lt;!-- raw HTML omitted -->ブログ記事&lt;!-- raw HTML omitted -->を見て、Examplesの仕組みが気になって調べた時にGoogle+に投稿した内容です。&lt;/p></description></item><item><title>#golang mapからstructに変換するには？</title><link>https://kwmt27.net/index.php/2013/10/13/how-to-convert-from-map-to-struct/</link><pubDate>Sat, 12 Oct 2013 00:00:00 +0000</pubDate><guid>https://kwmt27.net/index.php/2013/10/13/how-to-convert-from-map-to-struct/</guid><description>&lt;h2 id="reflect-pkgを使った方法">reflect pkgを使った方法&lt;a class="anchorjs-link" href="#reflect-pkg%e3%82%92%e4%bd%bf%e3%81%a3%e3%81%9f%e6%96%b9%e6%b3%95">&lt;/a>&lt;/h2>&lt;p>最初はなんとなくリフレクションを使ってやるのかなぁと思って、調べてたらこんな感じのが出てました。（&lt;!-- raw HTML omitted -->参考リンク&lt;!-- raw HTML omitted -->）&lt;/p>
+&lt;script type="text/javascript" src="https://gist.github.com/6938201.js?file=" >&lt;/script>
+&lt;p>&lt;!-- raw HTML omitted -->&lt;a href="http://play.golang.org/p/5Inl2jO7zL" target="_blank">http://play.golang.org/p/5Inl2jO7zL&lt;/a>&lt;!-- raw HTML omitted -->&lt;/p></description></item><item><title>#golang リフレクションを使って、キャストするには？</title><link>https://kwmt27.net/index.php/2013/10/09/how-to-cast-with-reflect-of-golang/</link><pubDate>Wed, 09 Oct 2013 00:00:00 +0000</pubDate><guid>https://kwmt27.net/index.php/2013/10/09/how-to-cast-with-reflect-of-golang/</guid><description> http://play.golang.org/p/gvadP4k1Bo
+strconv.FormatIntの第一引数は”int64″型で、strconv.FormatUintの第一引数は”uint64″型です。
 たとえば、ただ100と書くとint型になりますので、fv.Callの引数のところで、キャストしてあげる必要があります。キャストするには、reflectパッケージのConvertメソッドを使います。
 ほとんど同じ処理で、ある一部分だけ異なる関数を使っているという場合に役に立つと思います。
 ちなみに、このConvertメソッドは、go1.1のリリース時に追加されました。
 http://golang.org/doc/go1.1#reflect
-参考  goken/goken08-reflect.md at master · goken/goken http://golang.org/pkg/reflect/#Value.Convert #golang リフレクションを使って、関数の引数の型を取得するには？ | Androg #golang リフレクションを使って、関数をコールするには？ | Androg  </description>
-    </item>
-    
-    <item>
-      <title>#golang リフレクションを使って、関数の引数の型を取得するには？</title>
-      <link>https://kwmt27.net/index.php/2013/10/09/how-to-get-function-arg-type-with-reflect-of-golang/</link>
-      <pubDate>Wed, 09 Oct 2013 00:00:00 +0000</pubDate>
-      
-      <guid>https://kwmt27.net/index.php/2013/10/09/how-to-get-function-arg-type-with-reflect-of-golang/</guid>
-      <description>  参考  goken/goken08-reflect.md at master · goken/goken http://golang.org/src/pkg/reflect/type.go?#L157  </description>
-    </item>
-    
-    <item>
-      <title>#golang リフレクションを使って、関数をコールするには？</title>
-      <link>https://kwmt27.net/index.php/2013/10/09/how-to-call-function-with-reflect-of-golang/</link>
-      <pubDate>Wed, 09 Oct 2013 00:00:00 +0000</pubDate>
-      
-      <guid>https://kwmt27.net/index.php/2013/10/09/how-to-call-function-with-reflect-of-golang/</guid>
-      <description>  参考  goken/goken08-reflect.md at master · goken/goken http://golang.org/pkg/reflect/#Value.Call  </description>
-    </item>
-    
-    <item>
-      <title>#golang 文字数をカウントするには？</title>
-      <link>https://kwmt27.net/index.php/2013/10/10/how-to-count-number-of-string-golang/</link>
-      <pubDate>Wed, 09 Oct 2013 00:00:00 +0000</pubDate>
-      
-      <guid>https://kwmt27.net/index.php/2013/10/10/how-to-count-number-of-string-golang/</guid>
-      <description>文字数をカウントしたい！ そう思ってすぐ思いついたのは、stringsパッケージのCount関数。
+参考 goken/goken08-reflect.md at master · goken/goken http://golang.org/pkg/reflect/#Value.Convert #golang リフレクションを使って、関数の引数の型を取得するには？ | Androg #golang リフレクションを使って、関数をコールするには？ | Androg</description></item><item><title>#golang リフレクションを使って、関数の引数の型を取得するには？</title><link>https://kwmt27.net/index.php/2013/10/09/how-to-get-function-arg-type-with-reflect-of-golang/</link><pubDate>Wed, 09 Oct 2013 00:00:00 +0000</pubDate><guid>https://kwmt27.net/index.php/2013/10/09/how-to-get-function-arg-type-with-reflect-of-golang/</guid><description> 参考 goken/goken08-reflect.md at master · goken/goken http://golang.org/src/pkg/reflect/type.go?#L157</description></item><item><title>#golang リフレクションを使って、関数をコールするには？</title><link>https://kwmt27.net/index.php/2013/10/09/how-to-call-function-with-reflect-of-golang/</link><pubDate>Wed, 09 Oct 2013 00:00:00 +0000</pubDate><guid>https://kwmt27.net/index.php/2013/10/09/how-to-call-function-with-reflect-of-golang/</guid><description> 参考 goken/goken08-reflect.md at master · goken/goken http://golang.org/pkg/reflect/#Value.Call</description></item><item><title>#golang 文字数をカウントするには？</title><link>https://kwmt27.net/index.php/2013/10/10/how-to-count-number-of-string-golang/</link><pubDate>Wed, 09 Oct 2013 00:00:00 +0000</pubDate><guid>https://kwmt27.net/index.php/2013/10/10/how-to-count-number-of-string-golang/</guid><description>文字数をカウントしたい！そう思ってすぐ思いついたのは、stringsパッケージのCount関数。
 Exampleのあったので、確認のためRunしてみる。
 なぜか期待する文字数の +1 になる。srcを見てみたところ、+1されてる・・・。なんで？
 とツイートしたら、ロブ・パイク先生からお返事頂きました！
-@yasi_kawamoto All strings contain the empty string.  &amp;mdash; Rob Pike (@rob_pike) October 9, 2013  でも、あれ？ strings#Countの例にあるけど、
-fmt.Println(strings.Count(&#34;cheese&#34;, &#34;e&#34;))  これは、3と出力しますよね。
-fmt.Println(strings.Count(&#34;five&#34;, &#34;&#34;))  これは、なんで5を出力するの？すべての文字列にempty stringが&amp;#8221;含まれてる&amp;#8221;んなら、1じゃないのかな！？この答えは、たぶんプログラミング言語の基本な気がする&amp;#8230;ちょっと調べてみよう。
-とにかく、期待する文字数をカウントするには、Count関数でも使われているunicode/utf8パッケージのRuneCountInString関数を使えばよさそうだ。</description>
-    </item>
-    
-    <item>
-      <title>#golang リフレクションを使って関数名を取得するには？</title>
-      <link>https://kwmt27.net/index.php/2013/10/05/golang-how-to-get-function-name-with-reflection/</link>
-      <pubDate>Sat, 05 Oct 2013 00:00:00 +0000</pubDate>
-      
-      <guid>https://kwmt27.net/index.php/2013/10/05/golang-how-to-get-function-name-with-reflection/</guid>
-      <description> &amp;#8220;reflect&amp;#8221;パッケージだけでは取得できないようで、&amp;#8220;runtime&amp;#8221;パッケージの&amp;lt;a href=&amp;quot;http://golang.org/pkg/runtime/#FuncForPC&amp;quot; target=&amp;quot;_blank&amp;quot;&amp;gt;FuncForPC&amp;lt;/a&amp;gt;という関数を使うようです。
- 参考  reflection &amp;#8211; How to get the name of a function in Go? &amp;#8211; Stack Overflow goken/goken08-reflect.md at master · goken/goken  </description>
-    </item>
-    
-    <item>
-      <title>#golang 関数の引数をオプション的に扱うには？</title>
-      <link>https://kwmt27.net/index.php/2013/10/06/golang-function-arg-option/</link>
-      <pubDate>Sat, 05 Oct 2013 00:00:00 +0000</pubDate>
-      
-      <guid>https://kwmt27.net/index.php/2013/10/06/golang-function-arg-option/</guid>
-      <description>分かりやすい言葉が思いつかなかったのすが、関数の引数をオプション的に扱うというのは、関数の引数をとってもとならなくても良いように関数を定義することです。それには&amp;lt;a href=&amp;quot;http://golang.org/ref/spec#Passing_arguments_to_..._parameters&amp;quot; target=&amp;quot;_blank&amp;quot;&amp;gt;...&amp;lt;/a&amp;gt;パラメータを使うと良さそうです。
- http://play.golang.org/p/kRLQLIWkxN
+でも、あれ？ strings#Countの例にあるけど、
+これは、3と出力しますよね。
+これは、なんで5を出力するの？すべての文字列にempty stringが”含まれてる”んなら、1じゃないのかな！？この答えは、たぶんプログラミング言語の基本な気がする…ちょっと調べてみよう。
+とにかく、期待する文字数をカウントするには、Count関数でも使われているunicode/utf8パッケージのRuneCountInString関数を使えばよさそうだ。</description></item><item><title>#golang リフレクションを使って関数名を取得するには？</title><link>https://kwmt27.net/index.php/2013/10/05/golang-how-to-get-function-name-with-reflection/</link><pubDate>Sat, 05 Oct 2013 00:00:00 +0000</pubDate><guid>https://kwmt27.net/index.php/2013/10/05/golang-how-to-get-function-name-with-reflection/</guid><description>“reflect”パッケージだけでは取得できないようで、“runtime”パッケージの&amp;lt;a href=&amp;quot;http://golang.org/pkg/runtime/#FuncForPC&amp;quot; target=&amp;quot;_blank&amp;quot;&amp;gt;FuncForPC&amp;lt;/a&amp;gt;という関数を使うようです。
+参考 reflection – How to get the name of a function in Go? – Stack Overflow goken/goken08-reflect.md at master · goken/goken</description></item><item><title>#golang 関数の引数をオプション的に扱うには？</title><link>https://kwmt27.net/index.php/2013/10/06/golang-function-arg-option/</link><pubDate>Sat, 05 Oct 2013 00:00:00 +0000</pubDate><guid>https://kwmt27.net/index.php/2013/10/06/golang-function-arg-option/</guid><description>分かりやすい言葉が思いつかなかったのすが、関数の引数をオプション的に扱うというのは、関数の引数をとってもとならなくても良いように関数を定義することです。それには&amp;lt;a href=&amp;quot;http://golang.org/ref/spec#Passing_arguments_to_..._parameters&amp;quot; target=&amp;quot;_blank&amp;quot;&amp;gt;...&amp;lt;/a&amp;gt;パラメータを使うと良さそうです。
+http://play.golang.org/p/kRLQLIWkxN
 ただし、&amp;lt;a href=&amp;quot;http://golang.org/ref/spec#Passing_arguments_to_..._parameters&amp;quot; target=&amp;quot;_blank&amp;quot;&amp;gt;...&amp;lt;/a&amp;gt;パラメータは、引数の最後でしか使えませんので、注意が必要です。つまり、
-func f(s ...string, i int)  のようなことはできないということです。ちなみに、こうすると次のエラーがでます。
-can only use ... as final argument in list  </description>
-    </item>
-    
-    <item>
-      <title>#Nginx &#43; #golang (FastCGI)&#43; #MySQL を使ったWebアプリケーションを書くための準備</title>
-      <link>https://kwmt27.net/index.php/2013/10/03/nginx-golang-fcgi-mysql/</link>
-      <pubDate>Wed, 02 Oct 2013 00:00:00 +0000</pubDate>
-      
-      <guid>https://kwmt27.net/index.php/2013/10/03/nginx-golang-fcgi-mysql/</guid>
-      <description>&lt;h2 id=&#34;はじめに&#34;&gt;はじめに&lt;/h2&gt;
-
-&lt;p&gt;下記の記事をみたら分かりやすいかもしれませんが、英語なので、実際にやった方法も交えてメモしておこうと思います。（似てるところもありますが、翻訳ではありません。）&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&#34;http://mwholt.blogspot.jp/2013/05/writing-go-golang-web-app-with-nginx.html&#34; target=&#34;_blank&#34;&gt;Writing a Go (&amp;#8220;golang&amp;#8221;) Web App with nginx, FastCGI, MySQL, JSON&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;前提として、Go言語でWebサーバーをつくって動かすと言うと２種類の方法があります。&lt;/p&gt;
-
-&lt;p&gt;１つは、Go言語の&lt;a href=&#34;http://golang.org/pkg/net/http/&#34; target=&#34;_blank&#34;&gt;&amp;#8220;net/http&amp;#8221;&lt;/a&gt;パッケージというのがありますので、これを使ってGo自体でWebサーバーを作ってしまうことができます。&lt;/p&gt;
-
-&lt;p&gt;もう1つは、ApacheやNginxなどのWebサーバー上で、CGI(正確にはFastCGI)としてGo言語を動かす方法です。これはNginx+PHP-FPMのようなもに近いイメージだと思います。&lt;/p&gt;
-
-&lt;p&gt;Nginxを使うか使わないかは、こちらの&lt;a href=&#34;http://stackoverflow.com/questions/17776584/webserver-for-go-golang-webservices-using-nginx-or-not&#34; title=&#34;Webserver for Go (golang) webservices: using NGINX or not?&#34; target=&#34;_blank&#34;&gt;Stackoverflow&lt;/a&gt;をみると、&lt;/p&gt;
-
-&lt;blockquote&gt;
-&lt;p&gt;Go HTTPサーバーはいいんだけど、Webサーバーを一から作るのは大変だよ、Nginxを使った方が簡単だよ&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;p&gt;みたいな感じで、Nginxつかった方がいいよという結論になってます。&lt;/p&gt;
-
-&lt;p&gt;この記事では、2つ目の方法のNginx+golang(FastCGI)でWebアプリケーションを作る準備をメモしたいと思います。&lt;/p&gt;
-
-&lt;p&gt;データベースとしては、MySQLを使いたいと思います。&lt;/p&gt;
-
-&lt;h2 id=&#34;使用環境&#34;&gt;使用環境&lt;/h2&gt;
-
-&lt;pre class=&#34;go&#34;&gt;サーバOS:CentOS release 6.4
-Webサーバ:nginx-1.4.1
-データベース:mysql  Ver 14.14 Distrib 5.5.27
-&lt;/pre&gt;
-
-&lt;p&gt;&lt;/p&gt;</description>
-    </item>
-    
-    <item>
-      <title>#golang リフレクションを使って、構造体フィールドの値を取得するには？</title>
-      <link>https://kwmt27.net/index.php/2013/10/02/get-field-value-of-struct-with-reflect-golang/</link>
-      <pubDate>Wed, 02 Oct 2013 00:00:00 +0000</pubDate>
-      
-      <guid>https://kwmt27.net/index.php/2013/10/02/get-field-value-of-struct-with-reflect-golang/</guid>
-      <description> リフレクションを使って、構造体フィールドの値を取得するには？
- http://play.golang.org/p/Tp5S6AVDB8
-参考  Go研 Vol.8  </description>
-    </item>
-    
-    <item>
-      <title>#golang リフレクションを使って、構造体フィールドの値を変更するには？</title>
-      <link>https://kwmt27.net/index.php/2013/10/02/change-struct-field-value-with-reflect-golang/</link>
-      <pubDate>Wed, 02 Oct 2013 00:00:00 +0000</pubDate>
-      
-      <guid>https://kwmt27.net/index.php/2013/10/02/change-struct-field-value-with-reflect-golang/</guid>
-      <description> リフレクションを使って、構造体フィールドの値を変更するには？
- 参考  Go研 Vol.8  </description>
-    </item>
-    
-    <item>
-      <title>#golang 画像ファイルをbase64 encode/decode するには</title>
-      <link>https://kwmt27.net/index.php/2013/09/29/golang-base64-encode-decode/</link>
-      <pubDate>Sun, 29 Sep 2013 00:00:00 +0000</pubDate>
-      
-      <guid>https://kwmt27.net/index.php/2013/09/29/golang-base64-encode-decode/</guid>
-      <description>&lt;p&gt;ある適当な画像（ここでは&amp;#8221;image.jpg&amp;#8221;）をbase64エンコードした文字列に変換したあと、変換された文字列をデコードして画像ファイル（ここでは&amp;#8221;encode_and_decord.jpg&amp;#8221;）を作成する。&lt;/p&gt;
-
-&lt;p&gt;（同じ画像ファイルが作成されるだけですが&amp;#8230;）&lt;/p&gt;
-
-&lt;p&gt;&lt;/p&gt;</description>
-    </item>
-    
-    <item>
-      <title>#golang メールを送信するには</title>
-      <link>https://kwmt27.net/index.php/2013/09/26/how-to-send-mail-with-golang/</link>
-      <pubDate>Thu, 26 Sep 2013 00:00:00 +0000</pubDate>
-      
-      <guid>https://kwmt27.net/index.php/2013/09/26/how-to-send-mail-with-golang/</guid>
-      <description>&lt;h2 id=&#34;最初に&#34;&gt;最初に&lt;/h2&gt;
-
-&lt;p&gt;Go言語でのメール送信方法について、&lt;a href=&#34;#smtp&#34;&gt;SMTP(ポート25番)を使った方法&lt;/a&gt;と&lt;a href=&#34;#smtpovertls&#34;&gt;Gmailを使ってメールを送信する方法(SMTP over TLS)&lt;/a&gt;をメモしておこうと思います。&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&#34;http://golang.org/pkg/net/smtp/&#34; target=&#34;_blank&#34;&gt;net/smtp&lt;/a&gt;パッケージを使用します。&lt;/p&gt;
-
-&lt;p&gt;基本的には、go-wikiページにある &lt;a href=&#34;http://bit.ly/1dFcSBs&#34; target=&#34;_blank&#34;&gt;SendingMail&lt;/a&gt;を参考にしています。&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&#34;http://www.puni.net/~mimori/smtp/ref.html&#34; target=&#34;_blank&#34;&gt;SMTPコマンドリファレンス&lt;/a&gt;のような仕様を読みながら、&lt;a href=&#34;http://golang.org/pkg/net/smtp/&#34; target=&#34;_blank&#34;&gt;net/smtp&lt;/a&gt;パッケージのソースを読んだら理解が深まりました。感想としては、そのままwrapしてるだけって感じでした。&lt;/p&gt;
-
-&lt;p&gt;&lt;/p&gt;</description>
-    </item>
-    
-    <item>
-      <title>第1回 #阪Go で GDG Kobeの活動内容を紹介してきました。</title>
-      <link>https://kwmt27.net/index.php/2013/09/20/hango/</link>
-      <pubDate>Fri, 20 Sep 2013 00:00:00 +0000</pubDate>
-      
-      <guid>https://kwmt27.net/index.php/2013/09/20/hango/</guid>
-      <description>というのを、GDG Kobeブログに投稿しました。（初投稿）
-GDG Kobeの活動内容の紹介 in 第1回 #阪Go</description>
-    </item>
-    
-    <item>
-      <title>#golang PHPerがGo言語を学ぶ理由</title>
-      <link>https://kwmt27.net/index.php/2013/09/13/why-phper-should-learn-golang/</link>
-      <pubDate>Fri, 13 Sep 2013 00:00:00 +0000</pubDate>
-      
-      <guid>https://kwmt27.net/index.php/2013/09/13/why-phper-should-learn-golang/</guid>
-      <description>&lt;p&gt;&lt;font color=&#34;red&#34;&gt;この記事は、mikespookさんの2012/8/10の記事&lt;a href=&#34;http://mikespook.com/2012/08/why-you-php-guys-should-learn-golang/&#34; target=&#34;_blank&#34;&gt;Why you PHP guys should learn Golang&lt;/a&gt;の非公式翻訳です。詳細はこの記事をご参照下さい。&lt;/p&gt;&lt;/p&gt;
-
-&lt;p&gt;
-  This post is the Japanese translated post of mikespook&amp;#8217;s post:&lt;a href=&#34;http://mikespook.com/2012/08/why-you-php-guys-should-learn-golang/&#34; target=&#34;_blank&#34;&gt;Why you PHP guys should learn Golang&lt;/a&gt;.&lt;br /&gt; &lt;/font&gt;
-&lt;/p&gt;
-
-&lt;p&gt;
-  1年前の記事ですが、興味深かったので、翻訳してみました。&lt;br /&gt; 翻訳にミスなどがありましたら、ご連絡頂けると嬉しいです。
-&lt;/p&gt;
-
-&lt;h1&gt;
-  PHPerがGo言語を学ぶ理由
-&lt;/h1&gt;
-
-&lt;p&gt;
-  &lt;a href=&#34;http://kwmt27.net/index.php/2013/09/13/why-phper-should-learn-golang/gopher-talks/&#34; rel=&#34;attachment wp-att-825&#34;&gt;&lt;img src=&#34;http://kwmt27.net/images/2013/09/gopher-talks.png&#34; alt=&#34;gopher-talks&#34; width=&#34;132&#34; height=&#34;100&#34; class=&#34;alignleft size-full wp-image-825&#34; /&gt;&lt;/a&gt;
-&lt;/p&gt;
-
-&lt;p&gt;
-  &lt;a href=&#34;http://golang.org/&#34; target=&#34;_blank&#34;&gt;Go あるいは Go言語&lt;/a&gt;はオープンソースで、コミュニティがあり、早くて、一貫性が有り、スケーラブルで、生産的言語で、Googleによって考案されました。&lt;br /&gt; おおくのアプリケーションがGoで構築されています。Rob Pikeは&lt;a href=&#34;http://commandcenter.blogspot.com/2012/06/less-is-exponentially-more.html&#34; target=&#34;_blank&#34;&gt;&amp;#8220;我々は、C++プログラマが代替としてGoに目をむけることを期待している&amp;#8221;&lt;/a&gt;と言っているけれども、私は、&lt;strong&gt;PHPerがGo言語を学ぶべきだ&lt;/strong&gt;と考えています。&lt;br /&gt; それがなぜかをお話しましょう。
-&lt;/p&gt;
-
-&lt;p&gt;
-  
-&lt;/p&gt;</description>
-    </item>
-    
-    <item>
-      <title>#golang bzip2データから復元するには？</title>
-      <link>https://kwmt27.net/index.php/2013/08/31/golang-compress-bzip2/</link>
-      <pubDate>Sat, 31 Aug 2013 00:00:00 +0000</pubDate>
-      
-      <guid>https://kwmt27.net/index.php/2013/08/31/golang-compress-bzip2/</guid>
-      <description>compress/bzip2の使い方
-golang編  bzip2.NewReaderするだけで復元できるのですね。
+のようなことはできないということです。ちなみに、こうすると次のエラーがでます。</description></item><item><title>#golang リフレクションを使って、構造体フィールドの値を取得するには？</title><link>https://kwmt27.net/index.php/2013/10/02/get-field-value-of-struct-with-reflect-golang/</link><pubDate>Wed, 02 Oct 2013 00:00:00 +0000</pubDate><guid>https://kwmt27.net/index.php/2013/10/02/get-field-value-of-struct-with-reflect-golang/</guid><description>リフレクションを使って、構造体フィールドの値を取得するには？
+http://play.golang.org/p/Tp5S6AVDB8
+参考 Go研 Vol.8</description></item><item><title>#golang リフレクションを使って、構造体フィールドの値を変更するには？</title><link>https://kwmt27.net/index.php/2013/10/02/change-struct-field-value-with-reflect-golang/</link><pubDate>Wed, 02 Oct 2013 00:00:00 +0000</pubDate><guid>https://kwmt27.net/index.php/2013/10/02/change-struct-field-value-with-reflect-golang/</guid><description>リフレクションを使って、構造体フィールドの値を変更するには？
+参考 Go研 Vol.8</description></item><item><title>#Nginx + #golang (FastCGI)+ #MySQL を使ったWebアプリケーションを書くための準備</title><link>https://kwmt27.net/index.php/2013/10/03/nginx-golang-fcgi-mysql/</link><pubDate>Wed, 02 Oct 2013 00:00:00 +0000</pubDate><guid>https://kwmt27.net/index.php/2013/10/03/nginx-golang-fcgi-mysql/</guid><description>&lt;h2 id="はじめに">はじめに&lt;a class="anchorjs-link" href="#%e3%81%af%e3%81%98%e3%82%81%e3%81%ab">&lt;/a>&lt;/h2>&lt;p>下記の記事をみたら分かりやすいかもしれませんが、英語なので、実際にやった方法も交えてメモしておこうと思います。（似てるところもありますが、翻訳ではありません。）&lt;/p>
+&lt;p>&lt;!-- raw HTML omitted -->Writing a Go (“golang”) Web App with nginx, FastCGI, MySQL, JSON&lt;!-- raw HTML omitted -->&lt;/p>
+&lt;p>前提として、Go言語でWebサーバーをつくって動かすと言うと２種類の方法があります。&lt;/p>
+&lt;p>１つは、Go言語の&lt;!-- raw HTML omitted -->“net/http”&lt;!-- raw HTML omitted -->パッケージというのがありますので、これを使ってGo自体でWebサーバーを作ってしまうことができます。&lt;/p>
+&lt;p>もう1つは、ApacheやNginxなどのWebサーバー上で、CGI(正確にはFastCGI)としてGo言語を動かす方法です。これはNginx+PHP-FPMのようなもに近いイメージだと思います。&lt;/p>
+&lt;p>Nginxを使うか使わないかは、こちらの&lt;!-- raw HTML omitted -->Stackoverflow&lt;!-- raw HTML omitted -->をみると、&lt;/p>
+&lt;blockquote>
+&lt;p>Go HTTPサーバーはいいんだけど、Webサーバーを一から作るのは大変だよ、Nginxを使った方が簡単だよ&lt;/p>
+&lt;/blockquote>
+&lt;p>みたいな感じで、Nginxつかった方がいいよという結論になってます。&lt;/p>
+&lt;p>この記事では、2つ目の方法のNginx+golang(FastCGI)でWebアプリケーションを作る準備をメモしたいと思います。&lt;/p>
+&lt;p>データベースとしては、MySQLを使いたいと思います。&lt;/p>
+&lt;h2 id="使用環境">使用環境&lt;a class="anchorjs-link" href="#%e4%bd%bf%e7%94%a8%e7%92%b0%e5%a2%83">&lt;/a>&lt;/h2>&lt;!-- raw HTML omitted -->
+&lt;!-- raw HTML omitted --></description></item><item><title>#golang 画像ファイルをbase64 encode/decode するには</title><link>https://kwmt27.net/index.php/2013/09/29/golang-base64-encode-decode/</link><pubDate>Sun, 29 Sep 2013 00:00:00 +0000</pubDate><guid>https://kwmt27.net/index.php/2013/09/29/golang-base64-encode-decode/</guid><description>&lt;p>ある適当な画像（ここでは”image.jpg”）をbase64エンコードした文字列に変換したあと、変換された文字列をデコードして画像ファイル（ここでは”encode_and_decord.jpg”）を作成する。&lt;/p>
+&lt;p>（同じ画像ファイルが作成されるだけですが…）&lt;/p></description></item><item><title>#golang メールを送信するには</title><link>https://kwmt27.net/index.php/2013/09/26/how-to-send-mail-with-golang/</link><pubDate>Thu, 26 Sep 2013 00:00:00 +0000</pubDate><guid>https://kwmt27.net/index.php/2013/09/26/how-to-send-mail-with-golang/</guid><description>&lt;h2 id="最初に">最初に&lt;a class="anchorjs-link" href="#%e6%9c%80%e5%88%9d%e3%81%ab">&lt;/a>&lt;/h2>&lt;p>Go言語でのメール送信方法について、&lt;a href="https://kwmt27.net/#smtp">SMTP(ポート25番)を使った方法&lt;/a>と&lt;a href="https://kwmt27.net/#smtpovertls">Gmailを使ってメールを送信する方法(SMTP over TLS)&lt;/a>をメモしておこうと思います。&lt;/p>
+&lt;p>&lt;!-- raw HTML omitted -->net/smtp&lt;!-- raw HTML omitted -->パッケージを使用します。&lt;/p>
+&lt;p>基本的には、go-wikiページにある &lt;!-- raw HTML omitted -->SendingMail&lt;!-- raw HTML omitted -->を参考にしています。&lt;/p>
+&lt;p>&lt;!-- raw HTML omitted -->SMTPコマンドリファレンス&lt;!-- raw HTML omitted -->のような仕様を読みながら、&lt;!-- raw HTML omitted -->net/smtp&lt;!-- raw HTML omitted -->パッケージのソースを読んだら理解が深まりました。感想としては、そのままwrapしてるだけって感じでした。&lt;/p></description></item><item><title>第1回 #阪Go で GDG Kobeの活動内容を紹介してきました。</title><link>https://kwmt27.net/index.php/2013/09/20/hango/</link><pubDate>Fri, 20 Sep 2013 00:00:00 +0000</pubDate><guid>https://kwmt27.net/index.php/2013/09/20/hango/</guid><description>というのを、GDG Kobeブログに投稿しました。（初投稿）
+GDG Kobeの活動内容の紹介 in 第1回 #阪Go</description></item><item><title>#golang PHPerがGo言語を学ぶ理由</title><link>https://kwmt27.net/index.php/2013/09/13/why-phper-should-learn-golang/</link><pubDate>Fri, 13 Sep 2013 00:00:00 +0000</pubDate><guid>https://kwmt27.net/index.php/2013/09/13/why-phper-should-learn-golang/</guid><description>&lt;p>&lt;!-- raw HTML omitted -->この記事は、mikespookさんの2012/8/10の記事&lt;!-- raw HTML omitted -->Why you PHP guys should learn Golang&lt;!-- raw HTML omitted -->の非公式翻訳です。詳細はこの記事をご参照下さい。&lt;!-- raw HTML omitted -->&lt;/p>
+&lt;!-- raw HTML omitted -->
+&lt;!-- raw HTML omitted -->
+&lt;!-- raw HTML omitted -->
+&lt;!-- raw HTML omitted -->
+&lt;!-- raw HTML omitted -->
+&lt;!-- raw HTML omitted --></description></item><item><title>#golang bzip2データから復元するには？</title><link>https://kwmt27.net/index.php/2013/08/31/golang-compress-bzip2/</link><pubDate>Sat, 31 Aug 2013 00:00:00 +0000</pubDate><guid>https://kwmt27.net/index.php/2013/08/31/golang-compress-bzip2/</guid><description>compress/bzip2の使い方
+golang編 bzip2.NewReaderするだけで復元できるのですね。
 関数名が少し微妙な気もするけど、まぁいいか。
-python編  参考 http://golang.org/pkg/compress/bzip2/</description>
-    </item>
-    
-    <item>
-      <title>#golang zipファイルのコメントを取得するには？</title>
-      <link>https://kwmt27.net/index.php/2013/08/31/golang-archive-zip/</link>
-      <pubDate>Sat, 31 Aug 2013 00:00:00 +0000</pubDate>
-      
-      <guid>https://kwmt27.net/index.php/2013/08/31/golang-archive-zip/</guid>
-      <description>archive/zipパッケージの使い方
-golang編  下記で実行できる
-% go run archive_zip.go 90052 ※引数の数字はchannel.zipにreadme.txtに書いてある。
-python編  参考 http://golang.org/pkg/archive/zip/</description>
-    </item>
-    
-    <item>
-      <title>#golang 座標点となるリストからその座標点間に線を引くには？</title>
-      <link>https://kwmt27.net/index.php/2013/07/11/draw-line-from-list/</link>
-      <pubDate>Thu, 11 Jul 2013 00:00:00 +0000</pubDate>
-      
-      <guid>https://kwmt27.net/index.php/2013/07/11/draw-line-from-list/</guid>
-      <description>Pythonの http://effbot.org/imagingbook/imagedraw.htm#tag-ImageDraw.Draw.line のようなことしたい
- 参考 golang-nuts MLでいろいろ教えていただきました。
+python編 参考http://golang.org/pkg/compress/bzip2/</description></item><item><title>#golang zipファイルのコメントを取得するには？</title><link>https://kwmt27.net/index.php/2013/08/31/golang-archive-zip/</link><pubDate>Sat, 31 Aug 2013 00:00:00 +0000</pubDate><guid>https://kwmt27.net/index.php/2013/08/31/golang-archive-zip/</guid><description>archive/zipパッケージの使い方
+golang編 下記で実行できる
+※引数の数字はchannel.zipにreadme.txtに書いてある。
+python編 参考http://golang.org/pkg/archive/zip/</description></item><item><title>#golang 座標点となるリストからその座標点間に線を引くには？</title><link>https://kwmt27.net/index.php/2013/07/11/draw-line-from-list/</link><pubDate>Thu, 11 Jul 2013 00:00:00 +0000</pubDate><guid>https://kwmt27.net/index.php/2013/07/11/draw-line-from-list/</guid><description>Pythonの http://effbot.org/imagingbook/imagedraw.htm#tag-ImageDraw.Draw.line のようなことしたい
+参考golang-nuts MLでいろいろ教えていただきました。
 https://groups.google.com/forum/#!topic/golang-nuts/xyO1FpegElE
 あと、image/drawのサンプルをpushしました。
-https://github.com/golang-samples/image/blob/master/draw/main.go</description>
-    </item>
-    
-    <item>
-      <title>#golang htmlパッケージについて</title>
-      <link>https://kwmt27.net/index.php/2013/06/25/html%E3%83%91%E3%83%83%E3%82%B1%E3%83%BC%E3%82%B8%E3%81%AB%E3%81%A4%E3%81%84%E3%81%A6/</link>
-      <pubDate>Tue, 25 Jun 2013 00:00:00 +0000</pubDate>
-      
-      <guid>https://kwmt27.net/index.php/2013/06/25/html%E3%83%91%E3%83%83%E3%82%B1%E3%83%BC%E3%82%B8%E3%81%AB%E3%81%A4%E3%81%84%E3%81%A6/</guid>
-      <description> htmlパッケージの使い方を学ぶために、 http://godoc.org/code.google.com/p/go.net/html を使ってGoogle検索した結果をリスト化するだけのプログラム作ってみました。
+https://github.com/golang-samples/image/blob/master/draw/main.go</description></item><item><title>#golang htmlパッケージについて</title><link>https://kwmt27.net/index.php/2013/06/25/html%E3%83%91%E3%83%83%E3%82%B1%E3%83%BC%E3%82%B8%E3%81%AB%E3%81%A4%E3%81%84%E3%81%A6/</link><pubDate>Tue, 25 Jun 2013 00:00:00 +0000</pubDate><guid>https://kwmt27.net/index.php/2013/06/25/html%E3%83%91%E3%83%83%E3%82%B1%E3%83%BC%E3%82%B8%E3%81%AB%E3%81%A4%E3%81%84%E3%81%A6/</guid><description>htmlパッケージの使い方を学ぶために、 http://godoc.org/code.google.com/p/go.net/html を使ってGoogle検索した結果をリスト化するだけのプログラム作ってみました。
 ソースは下記です。
 kwmt/gosearch · GitHub https://github.com/kwmt/gosearch
-注意 文字化けします。
-をテンプレートに書くと、ベタ書きした文字はちゃんと表示されるのですが、Getで返ってきた文字が化けしてしまいます。
+注意文字化けします。
 逆にmetaを書かないと、Getで返ってきた文字は化けしません。基本的なところと思うのですが、対処方法が分からず。。。
 分かる方、教えて頂けると助かりますm(__)m
-上記解決しました。 mattnさんのつぶやきを参考にさせて頂きました。
-go言語は、内部でutf-8で処理されるのでShift_JIS等を扱う時はmahoniaというパッケージを使いましょう。 #golang  &amp;mdash; mattn (@mattn_jp) June 25, 2013  mahoniaパッケージ(doc)をgetして、取得したTextを、Shift_JISからUTF-8に変換しました。
+上記解決しました。mattnさんのつぶやきを参考にさせて頂きました。
+mahoniaパッケージ(doc)をgetして、取得したTextを、Shift_JISからUTF-8に変換しました。
 本当は、下記ブログのようにHTMLをパースしてキャラクタセットを得るべきだと思いますが、Shift_JISとわかっていることと、テストなので直接指定しました。(GitHub L99)
-参考  Lingr のGo言語部屋に golang_bot 作った。 http://mattn.kaoriya.net/software/lang/go/20130411122207.htm  </description>
-    </item>
-    
-    <item>
-      <title>あなたがGOROOTを本当に設定しなくていい理由</title>
-      <link>https://kwmt27.net/index.php/2013/06/14/you-dont-need-to-set-goroot-really/</link>
-      <pubDate>Fri, 14 Jun 2013 00:00:00 +0000</pubDate>
-      
-      <guid>https://kwmt27.net/index.php/2013/06/14/you-dont-need-to-set-goroot-really/</guid>
-      <description>この記事は、Dave Cheneyさんの記事You don’t need to set GOROOT, reallyの非公式翻訳です。詳細は上記記事をご参照下さい。
- This post is the Japanese translated post of Dave Cheney&amp;#8217;s post.
- はじめに   これは、Goをコンパイルしたりするとき、なぜ $GOROOTを設定しておく必要がないかを説明するという短いポストになります。 TL;DR   Go1.0とそれ以降のバージョンでコンパイルして使うとき、一般には[1]$GOROOT環境変数を設定する必要はありません。  実際には、使うコンピュータにGoの複数のバージョンがあるなら、$GOROOTを設定すると、プログラムをデバッグしにくくなります。  $GOPATHを設定する必要があります。Go1.0以降強く推奨されていまして、Go1.1リリースでは、必須となりました。 なぜGOROOTは、もはや必要とされないのでしょうか？   まだこの記事読んでますか？すばらしい。さて、いくつかの経緯がありました。  Goの環境変数について   Goを昔からやっていた人は、$GOROOTだけなく、$GOOSと$GOARCHの環境変数が必要だった時代を覚えているかもしれません。これらはMakefileがビルドシステムの基盤となっていたため必要でした。たくさんのインクルードが使われており、そのベースパスとして$GOROOTが使われていました。  go toolが導入されたことによって、Go 1.0以降、$GOOSと$GOARCHはオプションとなりました。ビルドスクリプトがホストのOSやCPUアーキテクチャを検出できるようにしました。Go1.0のリリースで、cmd/distのビルドツールの導入で
-$GOOS,$GOARCHが真のオプションになりました。これらは今はクロスコンパイルするときだけ使われます。  Go1.0は、ワークスペースをベースとなった$GOPATHを導入しました。ここまで読んできた方は、$GOPATH ワークスペースが何であるかをおそらくわかっていると思います。しかし、分からない場合は、golang.orgのドキュメントかこちらの動画を参照して下さい。  $GOOSや$GOARCHが必要ないことは分かった。けど、$GOROOTについては？   $GOROOTはいつも、Goインストールしたルートへの参照として定義されてきました。ビルドシステムに基づいた古いMakefileでは、これはベースパスとして使われていました。Go1.0から($GOPATH/pkg/tool/$GOOS_$GOARCH/に保存された)コンパイラや($GOPATH/pkg/$GOOS_$GOARCH/にある)標準ライブラリを探すgo toolで使われています。もしあなたがjavaユーザーなら、$GOROOTは$JAVA_HOMEに似ています。  Goをソースからコンパイルするとき、$GOROOTの値は自動的に発見され[2]、ソースツリーからgo toolの中に埋め込まれました。go envを実行するとこのことを確認することができます。 % echo $GOROOT % go env GOROOT /home/dfc/go   あなたがウェブサイトhttps://golang.</description>
-    </item>
-    
-    <item>
-      <title>GoCon報告会で報告させて頂きました。</title>
-      <link>https://kwmt27.net/index.php/2013/06/03/gocon/</link>
-      <pubDate>Sun, 02 Jun 2013 00:00:00 +0000</pubDate>
-      
-      <guid>https://kwmt27.net/index.php/2013/06/03/gocon/</guid>
-      <description> イベント 渡米放浪記(Google IOなど) / GoCon報告会 / BigQuery Ideathon + Hackathon
+参考 Lingr のGo言語部屋に golang_bot 作った。 http://mattn.kaoriya.net/software/lang/go/20130411122207.htm</description></item><item><title>あなたがGOROOTを本当に設定しなくていい理由</title><link>https://kwmt27.net/index.php/2013/06/14/you-dont-need-to-set-goroot-really/</link><pubDate>Fri, 14 Jun 2013 00:00:00 +0000</pubDate><guid>https://kwmt27.net/index.php/2013/06/14/you-dont-need-to-set-goroot-really/</guid><description>この記事は、Dave Cheneyさんの記事You don’t need to set GOROOT, reallyの非公式翻訳です。詳細は上記記事をご参照下さい。</description></item><item><title>GoCon報告会で報告させて頂きました。</title><link>https://kwmt27.net/index.php/2013/06/03/gocon/</link><pubDate>Sun, 02 Jun 2013 00:00:00 +0000</pubDate><guid>https://kwmt27.net/index.php/2013/06/03/gocon/</guid><description>イベント渡米放浪記(Google IOなど) / GoCon報告会 / BigQuery Ideathon + Hackathon
 https://plus.google.com/u/0/events/cb7qvi8rjccej62i79l48mgdcfg
-報告資料 http://go-talks-kwmt.appspot.com/2013/gocon-spring.slide#1
+報告資料http://go-talks-kwmt.appspot.com/2013/gocon-spring.slide#1
 ブログにそのまま載せれるように文字多めで書きました。
 私にとって人生で大きな出来事もこっそり書いてたりしてます。
 みなさま今後ともよろしくお願い致します。
 GoConに行った時のブログ書いていなかったので、ちょうどよかったです。
-使用プレゼンツール  ツール：https://code.google.com/p/go/source/browse/?repo=talks   GoDoc：https://godoc.org/golang.org/x/tools/cmd/present   ↓↓移動したそうです(2014.5.15追記)   GoDoc：http://godoc.org/code.google.com/p/go.tools/cmd/present   </description>
-    </item>
-    
-    <item>
-      <title>#golang OpenIDのライブラリ</title>
-      <link>https://kwmt27.net/index.php/2013/05/01/openid/</link>
-      <pubDate>Wed, 01 May 2013 00:00:00 +0000</pubDate>
-      
-      <guid>https://kwmt27.net/index.php/2013/05/01/openid/</guid>
-      <description> OpenIDのライブラリ golangのOpenIDのライブラリありまっせというだけ。
+使用プレゼンツール</description></item><item><title>#golang OpenIDのライブラリ</title><link>https://kwmt27.net/index.php/2013/05/01/openid/</link><pubDate>Wed, 01 May 2013 00:00:00 +0000</pubDate><guid>https://kwmt27.net/index.php/2013/05/01/openid/</guid><description>OpenIDのライブラリgolangのOpenIDのライブラリありまっせというだけ。
 https://github.com/yohcop/openid.go
 別のライブラリもあるけど、上の方がsample{.broken_link}もあって楽チン！?
 https://github.com/fduraffourg/go-openid{.broken_link}
 sampleはOpenIDの仕組みがわかれば簡単。だけど、OpenID発行サイトで認証されたユーザーのIDが返ってくるんだけど、そこからユーザー情報（メールアドレスとか）に変換する方法が不明。。GAEならすぐできそうなんだけど。。。
-セキュリティの参考情報  OpenIDに仕掛けられやすい5つの攻撃 http://thinkit.co.jp/article/835/1 「FacebookやOpenIDでログイン」に複数の弱点――セキュリティ研究者が指摘 http://www.computerworld.jp/topics/592/202071{.broken_link}  </description>
-    </item>
-    
-    <item>
-      <title>#golang debugログを埋め込むには？</title>
-      <link>https://kwmt27.net/index.php/2013/04/09/golang-debug%E3%83%AD%E3%82%B0%E3%82%92%E5%9F%8B%E3%82%81%E8%BE%BC%E3%82%80%E3%81%AB%E3%81%AF/</link>
-      <pubDate>Tue, 09 Apr 2013 00:00:00 +0000</pubDate>
-      
-      <guid>https://kwmt27.net/index.php/2013/04/09/golang-debug%E3%83%AD%E3%82%B0%E3%82%92%E5%9F%8B%E3%82%81%E8%BE%BC%E3%82%80%E3%81%AB%E3%81%AF/</guid>
-      <description> たまたまgolang.orgのコードみてたら、debugログの書き方が良い感じだったので、忘れないようにメモ。
- 参考  http://golang.org/src/pkg/net/mail/message.go  </description>
-    </item>
-    
-    <item>
-      <title>#golang が簡単にインストールできるgoinstallを作りました。</title>
-      <link>https://kwmt27.net/index.php/2013/03/31/golang_goinstall/</link>
-      <pubDate>Sun, 31 Mar 2013 00:00:00 +0000</pubDate>
-      
-      <guid>https://kwmt27.net/index.php/2013/03/31/golang_goinstall/</guid>
-      <description>はじめに 最近AWSを触ってて、インスタンス立ち上げるごとに、”Go言語環境が入っていない！&amp;#8221; &amp;#8220;gccも入ってない！&amp;#8221; &amp;#8220;Mercurialも入ってない&amp;#8221;って思うんです。
+セキュリティの参考情報 OpenIDに仕掛けられやすい5つの攻撃 http://thinkit.co.jp/article/835/1 「FacebookやOpenIDでログイン」に複数の弱点――セキュリティ研究者が指摘 http://www.computerworld.jp/topics/592/202071{.broken_link}</description></item><item><title>#golang debugログを埋め込むには？</title><link>https://kwmt27.net/index.php/2013/04/09/golang-debug%E3%83%AD%E3%82%B0%E3%82%92%E5%9F%8B%E3%82%81%E8%BE%BC%E3%82%80%E3%81%AB%E3%81%AF%EF%BC%9F/</link><pubDate>Tue, 09 Apr 2013 00:00:00 +0000</pubDate><guid>https://kwmt27.net/index.php/2013/04/09/golang-debug%E3%83%AD%E3%82%B0%E3%82%92%E5%9F%8B%E3%82%81%E8%BE%BC%E3%82%80%E3%81%AB%E3%81%AF%EF%BC%9F/</guid><description>たまたまgolang.orgのコードみてたら、debugログの書き方が良い感じだったので、忘れないようにメモ。
+参考 http://golang.org/src/pkg/net/mail/message.go</description></item><item><title>#golang が簡単にインストールできるgoinstallを作りました。</title><link>https://kwmt27.net/index.php/2013/03/31/golang_goinstall/</link><pubDate>Sun, 31 Mar 2013 00:00:00 +0000</pubDate><guid>https://kwmt27.net/index.php/2013/03/31/golang_goinstall/</guid><description>はじめに最近AWSを触ってて、インスタンス立ち上げるごとに、”Go言語環境が入っていない！” “gccも入ってない！” “Mercurialも入ってない”って思うんです。
 それで毎回手動でコツコツいれるんですが、インスタンス立ち上げた瞬間は、Goだけならまだしもgccすら入っていない状態なので、いくら慣れたとはいっても、めんどくさくなってきました。
-そこで コマンド一発でそれらが全てインストールできたらいいのになぁと思ったので、コマンド一発で（ソースから）インストールできるスクリプト書きました。
+そこでコマンド一発でそれらが全てインストールできたらいいのになぁと思ったので、コマンド一発で（ソースから）インストールできるスクリプト書きました。
 まぁAWSのAMIという機能でGo言語環境が入ったイメージを作っておくのもひとつの手かもしれませんが、AWS以外のLinux環境にも簡単にインストールできるようにしたかったので、スクリプトにしました。
 基本Linuxの対応だけでいいかなぁと思ったのですが、Macユーザーにも使ってもらえるように、Macも対応しました。ただし、下にも書きましたがMacな人はgccとMercurialがインストールされてる前提ですが・・・。
-対応環境 下記画像のLinuxとMacを確認しています。ただし、MacはgccとMercurialがインストールされていることが前提です。Linuxに関しては、もしgcc, Mercurialがインストールされていなかったら、インストールします。
+対応環境下記画像のLinuxとMacを確認しています。ただし、MacはgccとMercurialがインストールされていることが前提です。Linuxに関しては、もしgcc, Mercurialがインストールされていなかったら、インストールします。
 試してないですが、Cent OS,Ubuntu以外にもDebian,Fedoraなどもインストールできると思います。シェルは、bash,csh,tcshに対応しています。
-インストール＆使い方 ダウンロードして、実行するだけ。
-gitがインストールされている場合 $ git clone https://github.com/kwmt/goinstall $ cd goinstall/ $ sudo ./goinstall.sh &amp;lt;login_user&amp;gt; $ source ~/.bashrc (bashを使っている場合) $ go version go version gox.x.x (xは数字) 
-gitがインストールされていない場合 $ wget https://raw.github.com/kwmt/goinstall/master/goinstall.sh $ wget https://raw.github.com/kwmt/goinstall/master/gosetting.sh $ chmod +x goinstall.sh gosetting.sh $ sudo ./goinstall.sh &amp;lt;login_user&amp;gt; $ source ~/.bashrc (bashを使っている場合) $ go version go version gox.x.x (xは数字) 
-go versionとタイプしてみてバージョンが表示されたら、インストールおよびPath設定完了です。</description>
-    </item>
-    
-    <item>
-      <title>#golang テンプレート関数を自作するには？</title>
-      <link>https://kwmt27.net/index.php/2013/03/24/golang-%E3%83%86%E3%83%B3%E3%83%97%E3%83%AC%E3%83%BC%E3%83%88%E9%96%A2%E6%95%B0%E3%82%92%E8%87%AA%E4%BD%9C%E3%81%99%E3%82%8B%E3%81%AB%E3%81%AF/</link>
-      <pubDate>Sun, 24 Mar 2013 00:00:00 +0000</pubDate>
-      
-      <guid>https://kwmt27.net/index.php/2013/03/24/golang-%E3%83%86%E3%83%B3%E3%83%97%E3%83%AC%E3%83%BC%E3%83%88%E9%96%A2%E6%95%B0%E3%82%92%E8%87%AA%E4%BD%9C%E3%81%99%E3%82%8B%E3%81%AB%E3%81%AF/</guid>
-      <description>Go言語の&amp;#8221;text/template&amp;#8221;パッケージで使用出来るテンプレートの関数は、文字列を出力するprint、ある引数の長さを出力するlenや配列の要素を出力するindexなどありますが(本家,翻訳参照)、このようなテンプレート関数を自作することができます。
-サンプル 下記は、golang.orgにあるサンプルを翻訳したものですが、テンプレート関数として{{title .}} のようにすると、titleがstrings.Titleの処理を行うような関数として作成できますという例です。
- これは，型FuncMap（単なるmap）で、&amp;#8221;作成したいテンプレート関数&amp;#8221;:処理したい関数 を定義して、template.Funcs関数で、テンプレートに先ほど定義したFuncMapを登録しています。</description>
-    </item>
-    
-    <item>
-      <title>#golang のtext/templateパッケージ</title>
-      <link>https://kwmt27.net/index.php/2013/03/23/golang-%E3%81%AEtexttemplate%E3%83%91%E3%83%83%E3%82%B1%E3%83%BC%E3%82%B8/</link>
-      <pubDate>Sat, 23 Mar 2013 00:00:00 +0000</pubDate>
-      
-      <guid>https://kwmt27.net/index.php/2013/03/23/golang-%E3%81%AEtexttemplate%E3%83%91%E3%83%83%E3%82%B1%E3%83%BC%E3%82%B8/</guid>
-      <description>text/templateパッケージ一通り完了。
+インストール＆使い方ダウンロードして、実行するだけ。
+gitがインストールされている場合
+gitがインストールされていない場合
+go versionとタイプしてみてバージョンが表示されたら、インストールおよびPath設定完了です。
+インストール先は、/usr/local/go です。
+AWSでインスタンスを立ち上げたときは、gitは入っていないと思うので、”gitがインストールされていない場合”のようにするか、gitをインストールしてもいいですね。どちらがよいか分かりませんが、少なくともgoinstallを実行する前に2手間ぐらいあるのは面倒ですので、何とかしたいですが、そこは仕方ないかもしれません。
+公式ページInstalling Go from sourceではGoをソースからインストールすると、ビルドする手順となっているのですが、そのビルドに少し時間がかかります。
+AWSのAmazon LinuxとUbuntuで測ったところ、
+Amazon Linux:37分
+Ubutu:20分
+でした。ご参考まで。
+最後に今後はいずれMacにgccが入ってない状態から、インストールできるようにしたいです。あと、Windows対応も・・・。
+これでgopher増えること間違いなし？！
+フィードバックをお待ちしております。
+参考Installing Go from source</description></item><item><title>#golang テンプレート関数を自作するには？</title><link>https://kwmt27.net/index.php/2013/03/24/golang-%E3%83%86%E3%83%B3%E3%83%97%E3%83%AC%E3%83%BC%E3%83%88%E9%96%A2%E6%95%B0%E3%82%92%E8%87%AA%E4%BD%9C%E3%81%99%E3%82%8B%E3%81%AB%E3%81%AF/</link><pubDate>Sun, 24 Mar 2013 00:00:00 +0000</pubDate><guid>https://kwmt27.net/index.php/2013/03/24/golang-%E3%83%86%E3%83%B3%E3%83%97%E3%83%AC%E3%83%BC%E3%83%88%E9%96%A2%E6%95%B0%E3%82%92%E8%87%AA%E4%BD%9C%E3%81%99%E3%82%8B%E3%81%AB%E3%81%AF/</guid><description>Go言語の”text/template”パッケージで使用出来るテンプレートの関数は、文字列を出力するprint、ある引数の長さを出力するlenや配列の要素を出力するindexなどありますが(本家,翻訳参照)、このようなテンプレート関数を自作することができます。
+サンプル下記は、golang.orgにあるサンプルを翻訳したものですが、テンプレート関数として{{title .}} のようにすると、titleがstrings.Titleの処理を行うような関数として作成できますという例です。
+これは，型FuncMap（単なるmap）で、”作成したいテンプレート関数”:処理したい関数 を定義して、template.Funcs関数で、テンプレートに先ほど定義したFuncMapを登録しています。</description></item><item><title>#golang のtext/templateパッケージ</title><link>https://kwmt27.net/index.php/2013/03/23/golang-%E3%81%AEtexttemplate%E3%83%91%E3%83%83%E3%82%B1%E3%83%BC%E3%82%B8/</link><pubDate>Sat, 23 Mar 2013 00:00:00 +0000</pubDate><guid>https://kwmt27.net/index.php/2013/03/23/golang-%E3%81%AEtexttemplate%E3%83%91%E3%83%83%E3%82%B1%E3%83%BC%E3%82%B8/</guid><description>text/templateパッケージ一通り完了。
 都合上、英語のままでのところもあります。
 決して分からなかったわけではありまｓｎ（訳：プルリクお願いします）
 https://github.com/kwmt/golangwiki/blob/master/pkg/text/template/template.md
 公式ページはこちら
-http://golang.org/pkg/text/template/</description>
-    </item>
-    
-    <item>
-      <title>#golang 複数のテンプレートファイルを簡単にParseするには</title>
-      <link>https://kwmt27.net/index.php/2013/03/18/golang-%E8%A4%87%E6%95%B0%E3%81%AE%E3%83%86%E3%83%B3%E3%83%97%E3%83%AC%E3%83%BC%E3%83%88%E3%83%95%E3%82%A1%E3%82%A4%E3%83%AB%E3%82%92%E7%B0%A1%E5%8D%98%E3%81%ABparse%E3%81%99%E3%82%8B%E3%81%AB/</link>
-      <pubDate>Mon, 18 Mar 2013 00:00:00 +0000</pubDate>
-      
-      <guid>https://kwmt27.net/index.php/2013/03/18/golang-%E8%A4%87%E6%95%B0%E3%81%AE%E3%83%86%E3%83%B3%E3%83%97%E3%83%AC%E3%83%BC%E3%83%88%E3%83%95%E3%82%A1%E3%82%A4%E3%83%AB%E3%82%92%E7%B0%A1%E5%8D%98%E3%81%ABparse%E3%81%99%E3%82%8B%E3%81%AB/</guid>
-      <description>「golangでhtmlファイルの一部を別ファイルに分けるには」で、テンプレートファイルを分割するエントリを書きました。分割したファイルをパースする関数は、template.ParseFiles(filenames &amp;#8230;string)です。分割したファイルが２，３個ならこのParserFiles関数でよいと思いますが、もっと多くなったらファイルパスをゴリゴリ書かないといけません。
+http://golang.org/pkg/text/template/</description></item><item><title>#golang 複数のテンプレートファイルを簡単にParseするには</title><link>https://kwmt27.net/index.php/2013/03/18/golang-%E8%A4%87%E6%95%B0%E3%81%AE%E3%83%86%E3%83%B3%E3%83%97%E3%83%AC%E3%83%BC%E3%83%88%E3%83%95%E3%82%A1%E3%82%A4%E3%83%AB%E3%82%92%E7%B0%A1%E5%8D%98%E3%81%ABparse%E3%81%99%E3%82%8B%E3%81%AB/</link><pubDate>Mon, 18 Mar 2013 00:00:00 +0000</pubDate><guid>https://kwmt27.net/index.php/2013/03/18/golang-%E8%A4%87%E6%95%B0%E3%81%AE%E3%83%86%E3%83%B3%E3%83%97%E3%83%AC%E3%83%BC%E3%83%88%E3%83%95%E3%82%A1%E3%82%A4%E3%83%AB%E3%82%92%E7%B0%A1%E5%8D%98%E3%81%ABparse%E3%81%99%E3%82%8B%E3%81%AB/</guid><description>「golangでhtmlファイルの一部を別ファイルに分けるには」で、テンプレートファイルを分割するエントリを書きました。分割したファイルをパースする関数は、template.ParseFiles(filenames …string)です。分割したファイルが２，３個ならこのParserFiles関数でよいと思いますが、もっと多くなったらファイルパスをゴリゴリ書かないといけません。
 ゴリゴリ書かなくてもいい方法があります。それは、template.ParseGlob関数を使用することです。ファイルをパターン化することができます。
 まずは下記のコードを見て下さい。(golang.orgのExampleの訳です)
- 上記のコードは、$TMPDIR/template+suffixというディレクトリに、T0.tmpl, T1.tmpl, T2.tmpl という３つのファイルがあった時（このコードではテスト用に作成していますが）、パターン(pattern)を
-$TMPDIR/template+suffix/*.tmpl  として、template.ParseGlobに渡しています。これで、
-template.ParseFiles(&#34;dir/T0.tmpl&#34;,&#34;&#34;dir/T1.tmpl&#34;, &#34;dir/T2.tmpl&#34;) ※dir = &#34;$TMPDIR/template+suffix&#34;とおいています。  と書いたことと同じになります。
-追記(2013/3/19) 上記の例の場合は、T0.tmplが親となって、T1、T2を呼び出しているため、上記patternで最初に見つかるT0.tmplが生成されるテンプレートの名前となるので、特に問題ないのですが、たとえば、T1.tmplが親となって、T0とT2を呼び出すようにした場合は、なにも表示されません。（ためしに、上記コードの3行目と5行目のcontens要素を入れかえて実行してみて下さい)
+上記のコードは、$TMPDIR/template+suffixというディレクトリに、T0.tmpl, T1.tmpl, T2.tmpl という３つのファイルがあった時（このコードではテスト用に作成していますが）、パターン(pattern)を
+として、template.ParseGlobに渡しています。これで、
+と書いたことと同じになります。
+追記(2013/3/19)上記の例の場合は、T0.tmplが親となって、T1、T2を呼び出しているため、上記patternで最初に見つかるT0.tmplが生成されるテンプレートの名前となるので、特に問題ないのですが、たとえば、T1.tmplが親となって、T0とT2を呼び出すようにした場合は、なにも表示されません。（ためしに、上記コードの3行目と5行目のcontens要素を入れかえて実行してみて下さい)
 これを回避するには、template.New(&amp;quot;T1.tmpl&amp;quot;)でテンプレートを生成して、その生成されたテンプレートに対して、ParseGlob(patter)とします。具体的には次のようにします。
- これは、たとえばテンプレートファイルとして、main.tmpl、header.tmpl、footer.tmplというファイルがあるとき、パターンを &amp;#8220;*.tmpl&amp;#8221;としてParseGlobすると、生成されたテンプレート名はfooter.tmplになり、main.tmplをテンプレートとしたいときに有効です。（このサンプルはこちら）
-参考 ここに上記Exampleの全体のソースをおいてます。(cloneすればすぐに確かめることができるようにしています)</description>
-    </item>
-    
-    <item>
-      <title>130209に #gdgkobe で #golang の発表させて頂きました。</title>
-      <link>https://kwmt27.net/index.php/2013/02/10/130209%E3%81%AB-gdgkobe-%E3%81%A7-golang-%E3%81%AE%E7%99%BA%E8%A1%A8%E3%81%95%E3%81%9B%E3%81%A6%E9%A0%82%E3%81%8D%E3%81%BE%E3%81%97%E3%81%9F/</link>
-      <pubDate>Sun, 10 Feb 2013 00:00:00 +0000</pubDate>
-      
-      <guid>https://kwmt27.net/index.php/2013/02/10/130209%E3%81%AB-gdgkobe-%E3%81%A7-golang-%E3%81%AE%E7%99%BA%E8%A1%A8%E3%81%95%E3%81%9B%E3%81%A6%E9%A0%82%E3%81%8D%E3%81%BE%E3%81%97%E3%81%9F/</guid>
-      <description>内容は、Go言語でWebアプリの作り方です。
-公式ページの Writing Web Applicationsを分かりやすく解説したつもりです。
- Go言語によるwebアプリの作り方   </description>
-    </item>
-    
-    <item>
-      <title>#golang html/template: 構造体メンバにスライスがあるとき、html側でスライスの要素を指定するには？</title>
-      <link>https://kwmt27.net/index.php/2013/01/15/golang-htmltemplate-%E6%A7%8B%E9%80%A0%E4%BD%93%E3%83%A1%E3%83%B3%E3%83%90%E3%81%AB%E3%82%B9%E3%83%A9%E3%82%A4%E3%82%B9%E3%81%8C%E3%81%82%E3%82%8B%E3%81%A8%E3%81%8Dhtml%E5%81%B4%E3%81%A7/</link>
-      <pubDate>Tue, 15 Jan 2013 00:00:00 +0000</pubDate>
-      
-      <guid>https://kwmt27.net/index.php/2013/01/15/golang-htmltemplate-%E6%A7%8B%E9%80%A0%E4%BD%93%E3%83%A1%E3%83%B3%E3%83%90%E3%81%AB%E3%82%B9%E3%83%A9%E3%82%A4%E3%82%B9%E3%81%8C%E3%81%82%E3%82%8B%E3%81%A8%E3%81%8Dhtml%E5%81%B4%E3%81%A7/</guid>
-      <description> 先に答えを書くと、 indexを使います。
+これは、たとえばテンプレートファイルとして、main.tmpl、header.tmpl、footer.tmplというファイルがあるとき、パターンを “*.tmpl”としてParseGlobすると、生成されたテンプレート名はfooter.tmplになり、main.tmplをテンプレートとしたいときに有効です。（このサンプルはこちら）
+参考ここに上記Exampleの全体のソースをおいてます。(cloneすればすぐに確かめることができるようにしています)</description></item><item><title>130209に #gdgkobe で #golang の発表させて頂きました。</title><link>https://kwmt27.net/index.php/2013/02/10/130209%E3%81%AB-gdgkobe-%E3%81%A7-golang-%E3%81%AE%E7%99%BA%E8%A1%A8%E3%81%95%E3%81%9B%E3%81%A6%E9%A0%82%E3%81%8D%E3%81%BE%E3%81%97%E3%81%9F%E3%80%82/</link><pubDate>Sun, 10 Feb 2013 00:00:00 +0000</pubDate><guid>https://kwmt27.net/index.php/2013/02/10/130209%E3%81%AB-gdgkobe-%E3%81%A7-golang-%E3%81%AE%E7%99%BA%E8%A1%A8%E3%81%95%E3%81%9B%E3%81%A6%E9%A0%82%E3%81%8D%E3%81%BE%E3%81%97%E3%81%9F%E3%80%82/</guid><description>内容は、Go言語でWebアプリの作り方です。
+公式ページの Writing Web Applicationsを分かりやすく解説したつもりです。</description></item><item><title>#golang html/template: 構造体メンバにスライスがあるとき、html側でスライスの要素を指定するには？</title><link>https://kwmt27.net/index.php/2013/01/15/golang-htmltemplate-%E6%A7%8B%E9%80%A0%E4%BD%93%E3%83%A1%E3%83%B3%E3%83%90%E3%81%AB%E3%82%B9%E3%83%A9%E3%82%A4%E3%82%B9%E3%81%8C%E3%81%82%E3%82%8B%E3%81%A8%E3%81%8Dhtml%E5%81%B4%E3%81%A7/</link><pubDate>Tue, 15 Jan 2013 00:00:00 +0000</pubDate><guid>https://kwmt27.net/index.php/2013/01/15/golang-htmltemplate-%E6%A7%8B%E9%80%A0%E4%BD%93%E3%83%A1%E3%83%B3%E3%83%90%E3%81%AB%E3%82%B9%E3%83%A9%E3%82%A4%E3%82%B9%E3%81%8C%E3%81%82%E3%82%8B%E3%81%A8%E3%81%8Dhtml%E5%81%B4%E3%81%A7/</guid><description>先に答えを書くと、 indexを使います。
 例えば、goファイル内で次のように構造体のメンバにスライスHotelsを定義した場合、
-type Body struct { PagingInfo PagingInfo `xml:&amp;quot;SimpleHotelSearch&amp;amp;gt;paginginfo&amp;quot;` Hotels []Hotel `xml:&amp;quot;SimpleHotelSearch&amp;amp;gt;hotel&amp;quot;` }  htmlファイルでは、次のように記述します。
-[]Hotelsの0番目の要素は{{index .Hotels 0}}です。 &amp;lt;!-- Hotels[0]と同じ意味です。 --&amp;gt;  参考  text/templateパッケージのFunctions http://golang.org/pkg/text/template/#hdr-Functions text/templateパッケージのテストソース(indexで検索) http://golang.org/src/pkg/text/template/exec_test.go stackoverflow: golang html/template: how to index a slice element? http://stackoverflow.com/questions/12701452/golang-html-template-how-to-index-a-slice-element  </description>
-    </item>
-    
-    <item>
-      <title>「プログラミング言語Goフレーズブック」と「基礎からわかる Go言語」を読みました。 #golang</title>
-      <link>https://kwmt27.net/index.php/2012/12/23/%E3%83%97%E3%83%AD%E3%82%B0%E3%83%A9%E3%83%9F%E3%83%B3%E3%82%B0%E8%A8%80%E8%AA%9Ego%E3%83%95%E3%83%AC%E3%83%BC%E3%82%BA%E3%83%96%E3%83%83%E3%82%AF%E3%81%A8%E5%9F%BA%E7%A4%8E</link>
-      <pubDate>Sun, 23 Dec 2012 00:00:00 +0000</pubDate>
-      
-      <guid>https://kwmt27.net/index.php/2012/12/23/%E3%83%97%E3%83%AD%E3%82%B0%E3%83%A9%E3%83%9F%E3%83%B3%E3%82%B0%E8%A8%80%E8%AA%9Ego%E3%83%95%E3%83%AC%E3%83%BC%E3%82%BA%E3%83%96%E3%83%83%E3%82%AF%E3%81%A8%E5%9F%BA%E7%A4%8E</guid>
-      <description>&lt;p&gt;2012/10/4発売の「プログラミング言語Goフレーズブック」（以下、フレーズブック）と&lt;/p&gt;
-
-&lt;p&gt;2012/11/21発売の「基礎からわかる Go言語」（以下、基礎Go）をようやく読み終えました。&lt;/p&gt;
-
-&lt;p&gt;&lt;/p&gt;</description>
-    </item>
-    
-    <item>
-      <title>golangからMySQLを使うには</title>
-      <link>https://kwmt27.net/index.php/2012/09/06/golang%E3%81%8B%E3%82%89mysql%E3%82%92%E4%BD%BF%E3%81%86%E3%81%AB%E3%81%AF/</link>
-      <pubDate>Thu, 06 Sep 2012 00:00:00 +0000</pubDate>
-      
-      <guid>https://kwmt27.net/index.php/2012/09/06/golang%E3%81%8B%E3%82%89mysql%E3%82%92%E4%BD%BF%E3%81%86%E3%81%AB%E3%81%AF/</guid>
-      <description>まえおき 今回はMacにMySQLをインストールして、golangからアクセスしてみます。
+type Body struct { PagingInfo PagingInfo `xml:&amp;#34;SimpleHotelSearch&amp;amp;gt;paginginfo&amp;#34;` Hotels []Hotel `xml:&amp;#34;SimpleHotelSearch&amp;amp;gt;hotel&amp;#34;` } htmlファイルでは、次のように記述します。
+[]Hotelsの0番目の要素は{{index .Hotels 0}}です。 &amp;lt;!-- Hotels[0]と同じ意味です。 --&amp;gt; 参考 text/templateパッケージのFunctions http://golang.org/pkg/text/template/#hdr-Functions text/templateパッケージのテストソース(indexで検索) http://golang.org/src/pkg/text/template/exec_test.go stackoverflow: golang html/template: how to index a slice element? http://stackoverflow.com/questions/12701452/golang-html-template-how-to-index-a-slice-element</description></item><item><title>「プログラミング言語Goフレーズブック」と「基礎からわかる Go言語」を読みました。 #golang</title><link>https://kwmt27.net/index.php/2012/12/23/%E3%83%97%E3%83%AD%E3%82%B0%E3%83%A9%E3%83%9F%E3%83%B3%E3%82%B0%E8%A8%80%E8%AA%9Ego%E3%83%95%E3%83%AC%E3%83%BC%E3%82%BA%E3%83%96%E3%83%83%E3%82%AF%E3%81%A8%E5%9F%BA%E7%A4%8E</link><pubDate>Sun, 23 Dec 2012 00:00:00 +0000</pubDate><guid>https://kwmt27.net/index.php/2012/12/23/%E3%83%97%E3%83%AD%E3%82%B0%E3%83%A9%E3%83%9F%E3%83%B3%E3%82%B0%E8%A8%80%E8%AA%9Ego%E3%83%95%E3%83%AC%E3%83%BC%E3%82%BA%E3%83%96%E3%83%83%E3%82%AF%E3%81%A8%E5%9F%BA%E7%A4%8E</guid><description>&lt;p>2012/10/4発売の「プログラミング言語Goフレーズブック」（以下、フレーズブック）と&lt;/p>
+&lt;p>2012/11/21発売の「基礎からわかる Go言語」（以下、基礎Go）をようやく読み終えました。&lt;/p></description></item><item><title>golangからMySQLを使うには</title><link>https://kwmt27.net/index.php/2012/09/06/golang%E3%81%8B%E3%82%89mysql%E3%82%92%E4%BD%BF%E3%81%86%E3%81%AB%E3%81%AF/</link><pubDate>Thu, 06 Sep 2012 00:00:00 +0000</pubDate><guid>https://kwmt27.net/index.php/2012/09/06/golang%E3%81%8B%E3%82%89mysql%E3%82%92%E4%BD%BF%E3%81%86%E3%81%AB%E3%81%AF/</guid><description>まえおき今回はMacにMySQLをインストールして、golangからアクセスしてみます。
 MacにMySQLをインストールする方法はググればわかるので、MySQLがインストールされているものとします。
 golangからMySQLにかぎらずデータベースにアクセスするライブラリを、
 すでに多くの人が作ってくれているので、そのライブラリのどれかを使わせてもらいます。
 (go-wikiにいろいろあります。)
 ここでは、mymysqlというライブラリを使ってmysqlにアクセスしてみます。
-準備 まずは、mymysqlをインストールしましょう。
-$ go get github.com/ziutek/mymysql/thrsafe $ go get github.com/ziutek/mymysql/autorc $ go get github.com/ziutek/mymysql/godrv  次に、mysqlを起動して
-% mysql -u root -p  データベース、ユーザーを作って、パスワードを設定します。
-mysql create database mymysqltest; Query OK, 1 row affected (0.00 sec) mysql grant all privileges on mymysqltest.* to mymysqltestuser@localhost; Query OK, 0 rows affected (0.00 sec) mysql set password for mymysqltestuser@localhost = password(&#34;TestPassw9&#34;); Query OK, 0 rows affected (0.00 sec)  サンプルを編集して実行して確認する 次にmymysqlのサンプルを編集して実行してみます。サンプルの場所は</description>
-    </item>
-    
-    <item>
-      <title>Go言語のソースファイルをVimでシンタックスハイライトするには</title>
-      <link>https://kwmt27.net/index.php/2012/09/01/go%E8%A8%80%E8%AA%9E%E3%81%AE%E3%82%BD%E3%83%BC%E3%82%B9%E3%83%95%E3%82%A1%E3%82%A4%E3%83%AB%E3%82%92vim%E3%81%A7%E3%82%B7%E3%83%B3%E3%82%BF%E3%83%83%E3%82%AF%E3%82%B9%E3%83%8F%E3%82%A4%E3%83%A9/</link>
-      <pubDate>Sat, 01 Sep 2012 00:00:00 +0000</pubDate>
-      
-      <guid>https://kwmt27.net/index.php/2012/09/01/go%E8%A8%80%E8%AA%9E%E3%81%AE%E3%82%BD%E3%83%BC%E3%82%B9%E3%83%95%E3%82%A1%E3%82%A4%E3%83%AB%E3%82%92vim%E3%81%A7%E3%82%B7%E3%83%B3%E3%82%BF%E3%83%83%E3%82%AF%E3%82%B9%E3%83%8F%E3%82%A4%E3%83%A9/</guid>
-      <description>設定方法は$GOROOT/misc/vim/readme.txtに書かれている。
-mkdir -p $HOME/.vim/ftdetect mkdir -p $HOME/.vim/syntax mkdir -p $HOME/.vim/autoload/go ln -s $GOROOT/misc/vim/ftdetect/gofiletype.vim $HOME/.vim/ftdetect/ ln -s $GOROOT/misc/vim/syntax/go.vim $HOME/.vim/syntax ln -s $GOROOT/misc/vim/autoload/go/complete.vim $HOME/.vim/autoload/go echo &#34;syntax on&#34;  $HOME/.vimrc  これだけ実行すれば、シンタックスハイライトされる。
+準備まずは、mymysqlをインストールしましょう。
+次に、mysqlを起動して
+データベース、ユーザーを作って、パスワードを設定します。
+サンプルを編集して実行して確認する次にmymysqlのサンプルを編集して実行してみます。サンプルの場所は
+で、編集箇所は、サンプルからユーザーとデータベース名を変更しているので、
+のように変更します。あとは、実行すると、
+という感じになります。db.Query(&amp;quot;drop table A&amp;quot;)を実行している箇所をコメントアウトして、
+mysql側でselect * from A;とした結果は、
+となっていたので、golangからmysqlへアクセスしていることが分かったと思います。</description></item><item><title>Go言語のソースファイルをVimでシンタックスハイライトするには</title><link>https://kwmt27.net/index.php/2012/09/01/go%E8%A8%80%E8%AA%9E%E3%81%AE%E3%82%BD%E3%83%BC%E3%82%B9%E3%83%95%E3%82%A1%E3%82%A4%E3%83%AB%E3%82%92vim%E3%81%A7%E3%82%B7%E3%83%B3%E3%82%BF%E3%83%83%E3%82%AF%E3%82%B9%E3%83%8F%E3%82%A4%E3%83%A9/</link><pubDate>Sat, 01 Sep 2012 00:00:00 +0000</pubDate><guid>https://kwmt27.net/index.php/2012/09/01/go%E8%A8%80%E8%AA%9E%E3%81%AE%E3%82%BD%E3%83%BC%E3%82%B9%E3%83%95%E3%82%A1%E3%82%A4%E3%83%AB%E3%82%92vim%E3%81%A7%E3%82%B7%E3%83%B3%E3%82%BF%E3%83%83%E3%82%AF%E3%82%B9%E3%83%8F%E3%82%A4%E3%83%A9/</guid><description>設定方法は$GOROOT/misc/vim/readme.txtに書かれている。
+これだけ実行すれば、シンタックスハイライトされる。
 これを実行するのはめんどくさいという方のために、上のコマンドをコピーしただけですが、シェルスクリプトファイルを置きました。ダウンロードして、実行権限($chmod +x govim.sh)付けて、$./govim.shと実行してください。
-コマンドが分かる人にはわかると思いますが、やってることをちょっと説明すると、ホームディレクトリに.vimディレクトリとかファイル作って、シンボリックリンク貼って、.vimrcファイルを作ってsyntax onと記述してるだけ。(すでに.vimrcファイルがある場合も追記になるので安心。)</description>
-    </item>
-    
-    <item>
-      <title>120825にGDGKOBEのGo言語勉強会で発表してきた</title>
-      <link>https://kwmt27.net/index.php/2012/08/27/120825%E3%81%ABgdgkobe%E3%81%AEgo%E8%A8%80%E8%AA%9E%E5%8B%89%E5%BC%B7%E4%BC%9A%E3%81%A7%E7%99%BA%E8%A1%A8%E3%81%97%E3%81%A6%E3%81%8D%E3%81%9F/</link>
-      <pubDate>Sun, 26 Aug 2012 00:00:00 +0000</pubDate>
-      
-      <guid>https://kwmt27.net/index.php/2012/08/27/120825%E3%81%ABgdgkobe%E3%81%AEgo%E8%A8%80%E8%AA%9E%E5%8B%89%E5%BC%B7%E4%BC%9A%E3%81%A7%E7%99%BA%E8%A1%A8%E3%81%97%E3%81%A6%E3%81%8D%E3%81%9F/</guid>
-      <description>資料です。
+コマンドが分かる人にはわかると思いますが、やってることをちょっと説明すると、ホームディレクトリに.vimディレクトリとかファイル作って、シンボリックリンク貼って、.vimrcファイルを作ってsyntax onと記述してるだけ。(すでに.vimrcファイルがある場合も追記になるので安心。)</description></item><item><title>120825にGDGKOBEのGo言語勉強会で発表してきた</title><link>https://kwmt27.net/index.php/2012/08/27/120825%E3%81%ABgdgkobe%E3%81%AEgo%E8%A8%80%E8%AA%9E%E5%8B%89%E5%BC%B7%E4%BC%9A%E3%81%A7%E7%99%BA%E8%A1%A8%E3%81%97%E3%81%A6%E3%81%8D%E3%81%9F/</link><pubDate>Sun, 26 Aug 2012 00:00:00 +0000</pubDate><guid>https://kwmt27.net/index.php/2012/08/27/120825%E3%81%ABgdgkobe%E3%81%AEgo%E8%A8%80%E8%AA%9E%E5%8B%89%E5%BC%B7%E4%BC%9A%E3%81%A7%E7%99%BA%E8%A1%A8%E3%81%97%E3%81%A6%E3%81%8D%E3%81%9F/</guid><description>資料です。
 Go言語の特徴の一つであるスライス(slice)についてです。
 サンプルコード
 https://github.com/kwmt/120825_GDGKOBE_GO/tree/master/example
 Go Playground
-http://play.golang.org/</description>
-    </item>
-    
-    <item>
-      <title>golangのvimのシンタックスハイライトの設定方法</title>
-      <link>https://kwmt27.net/index.php/2012/08/09/golang%E3%81%AEvim%E3%81%AE%E3%82%B7%E3%83%B3%E3%82%BF%E3%83%83%E3%82%AF%E3%82%B9%E3%83%8F%E3%82%A4%E3%83%A9%E3%82%A4%E3%83%88%E3%81%AE%E8%A8%AD%E5%AE%9A%E6%96%B9%E6%B3%95/</link>
-      <pubDate>Thu, 09 Aug 2012 00:00:00 +0000</pubDate>
-      
-      <guid>https://kwmt27.net/index.php/2012/08/09/golang%E3%81%AEvim%E3%81%AE%E3%82%B7%E3%83%B3%E3%82%BF%E3%83%83%E3%82%AF%E3%82%B9%E3%83%8F%E3%82%A4%E3%83%A9%E3%82%A4%E3%83%88%E3%81%AE%E8%A8%AD%E5%AE%9A%E6%96%B9%E6%B3%95/</guid>
-      <description>golangのvimのシンタックスハイライトの設定方法は
+http://play.golang.org/</description></item><item><title>golangのvimのシンタックスハイライトの設定方法</title><link>https://kwmt27.net/index.php/2012/08/09/golang%E3%81%AEvim%E3%81%AE%E3%82%B7%E3%83%B3%E3%82%BF%E3%83%83%E3%82%AF%E3%82%B9%E3%83%8F%E3%82%A4%E3%83%A9%E3%82%A4%E3%83%88%E3%81%AE%E8%A8%AD%E5%AE%9A%E6%96%B9%E6%B3%95/</link><pubDate>Thu, 09 Aug 2012 00:00:00 +0000</pubDate><guid>https://kwmt27.net/index.php/2012/08/09/golang%E3%81%AEvim%E3%81%AE%E3%82%B7%E3%83%B3%E3%82%BF%E3%83%83%E3%82%AF%E3%82%B9%E3%83%8F%E3%82%A4%E3%83%A9%E3%82%A4%E3%83%88%E3%81%AE%E8%A8%AD%E5%AE%9A%E6%96%B9%E6%B3%95/</guid><description>golangのvimのシンタックスハイライトの設定方法は
 $GOROOT/misc/vim/readme.txt
 に記載あり。
 またubuntuでは
 「Sorry, the command is not available in this version: syntax on」
 と出たので、下記を参考させてもらったら、できた。
 http://www.kano4.com/105
-以上。</description>
-    </item>
-    
-    <item>
-      <title>golangで文字列を数値に変換するには？</title>
-      <link>https://kwmt27.net/index.php/2012/07/09/golang%E3%81%A7%E6%96%87%E5%AD%97%E5%88%97%E3%82%92%E6%95%B0%E5%80%A4%E3%81%AB%E5%A4%89%E6%8F%9B%E3%81%99%E3%82%8B%E3%81%AB%E3%81%AF/</link>
-      <pubDate>Mon, 09 Jul 2012 00:00:00 +0000</pubDate>
-      
-      <guid>https://kwmt27.net/index.php/2012/07/09/golang%E3%81%A7%E6%96%87%E5%AD%97%E5%88%97%E3%82%92%E6%95%B0%E5%80%A4%E3%81%AB%E5%A4%89%E6%8F%9B%E3%81%99%E3%82%8B%E3%81%AB%E3%81%AF/</guid>
-      <description>与えられた文字列が数値と判断できる場合に、数値として返して欲しい時、次の関数がある。
+以上。</description></item><item><title>golangで文字列を数値に変換するには？</title><link>https://kwmt27.net/index.php/2012/07/09/golang%E3%81%A7%E6%96%87%E5%AD%97%E5%88%97%E3%82%92%E6%95%B0%E5%80%A4%E3%81%AB%E5%A4%89%E6%8F%9B%E3%81%99%E3%82%8B%E3%81%AB%E3%81%AF/</link><pubDate>Mon, 09 Jul 2012 00:00:00 +0000</pubDate><guid>https://kwmt27.net/index.php/2012/07/09/golang%E3%81%A7%E6%96%87%E5%AD%97%E5%88%97%E3%82%92%E6%95%B0%E5%80%A4%E3%81%AB%E5%A4%89%E6%8F%9B%E3%81%99%E3%82%8B%E3%81%AB%E3%81%AF/</guid><description>与えられた文字列が数値と判断できる場合に、数値として返して欲しい時、次の関数がある。
 strconvパッケージの
-func ParseInt(s string, base int, bitSize int) (i int64, err error) s:数値に変換したい文字列 base:何進数とか(10進数なら10) bitSize:何ビットとして認識してほしいか (0, 8, 16, 32, 64はそれぞれint, int8, int16, int32, int64に対応)  このParseIntをラップして短くしてるのが、
-func Atoi(s string) (i int, err error) { i64, err := ParseInt(s, 10, 0) return int(i64), err }  です。ParseIntの戻り値はint64でしたが、Atoiの戻り値はintです。
+このParseIntをラップして短くしてるのが、
+です。ParseIntの戻り値はint64でしたが、Atoiの戻り値はintです。
 使い方は、こんな感じ。
-i, _ := strconv.Atoi(&#34;100&#34;) j, _ := strconv.Atoi(&#34;200&#34;) i = i+j // i,jはintなので計算ができる fmt.Printf(&#34;i=%d¥n&#34;, i) // i=300  参考  Package strconv http://golang.</description>
-    </item>
-    
-    <item>
-      <title>golangでかかった処理時間を計算するには？</title>
-      <link>https://kwmt27.net/index.php/2012/07/06/golang%E3%81%A7%E3%81%8B%E3%81%8B%E3%81%A3%E3%81%9F%E5%87%A6%E7%90%86%E6%99%82%E9%96%93%E3%82%92%E8%A8%88%E7%AE%97%E3%81%99%E3%82%8B%E3%81%AB%E3%81%AF/</link>
-      <pubDate>Fri, 06 Jul 2012 00:00:00 +0000</pubDate>
-      
-      <guid>https://kwmt27.net/index.php/2012/07/06/golang%E3%81%A7%E3%81%8B%E3%81%8B%E3%81%A3%E3%81%9F%E5%87%A6%E7%90%86%E6%99%82%E9%96%93%E3%82%92%E8%A8%88%E7%AE%97%E3%81%99%E3%82%8B%E3%81%AB%E3%81%AF/</guid>
-      <description>start := time.Now(); // 処理 end := time.Now(); fmt.Printf(&#34;%f秒\n&#34;,(end.Sub(start)).Seconds())  end.&amp;lt;a href=&amp;quot;http://golang.org/pkg/time/#Time.Sub&amp;quot;&amp;gt;Sub&amp;lt;/a&amp;gt;(start) は、end &amp;#8211; start
-&amp;lt;a href=&amp;quot;http://golang.org/pkg/time/#Duration.Seconds&amp;quot;&amp;gt;Seconds()関数&amp;lt;/a&amp;gt;は、float64を返します。</description>
-    </item>
-    
-    <item>
-      <title>golangで数値を文字列に変換するには？</title>
-      <link>https://kwmt27.net/index.php/2012/07/07/golang%E3%81%A7%E6%95%B0%E5%80%A4%E3%82%92%E6%96%87%E5%AD%97%E5%88%97%E3%81%AB%E5%A4%89%E6%8F%9B%E3%81%99%E3%82%8B%E3%81%AB%E3%81%AF/</link>
-      <pubDate>Fri, 06 Jul 2012 00:00:00 +0000</pubDate>
-      
-      <guid>https://kwmt27.net/index.php/2012/07/07/golang%E3%81%A7%E6%95%B0%E5%80%A4%E3%82%92%E6%96%87%E5%AD%97%E5%88%97%E3%81%AB%E5%A4%89%E6%8F%9B%E3%81%99%E3%82%8B%E3%81%AB%E3%81%AF/</guid>
-      <description>import &#34;strconv&#34; strNum := strconv.FormatUint(num, 10)  &amp;lt;a href=&amp;quot;http://golang.org/pkg/strconv/#FormatUint&amp;quot;&amp;gt;FormatUint&amp;lt;/a&amp;gt;関数の引数
+参考 Package strconv http://golang.org/pkg/strconv/</description></item><item><title>golangでかかった処理時間を計算するには？</title><link>https://kwmt27.net/index.php/2012/07/06/golang%E3%81%A7%E3%81%8B%E3%81%8B%E3%81%A3%E3%81%9F%E5%87%A6%E7%90%86%E6%99%82%E9%96%93%E3%82%92%E8%A8%88%E7%AE%97%E3%81%99%E3%82%8B%E3%81%AB%E3%81%AF%EF%BC%9F/</link><pubDate>Fri, 06 Jul 2012 00:00:00 +0000</pubDate><guid>https://kwmt27.net/index.php/2012/07/06/golang%E3%81%A7%E3%81%8B%E3%81%8B%E3%81%A3%E3%81%9F%E5%87%A6%E7%90%86%E6%99%82%E9%96%93%E3%82%92%E8%A8%88%E7%AE%97%E3%81%99%E3%82%8B%E3%81%AB%E3%81%AF%EF%BC%9F/</guid><description>end.&amp;lt;a href=&amp;quot;http://golang.org/pkg/time/#Time.Sub&amp;quot;&amp;gt;Sub&amp;lt;/a&amp;gt;(start) は、end – start
+&amp;lt;a href=&amp;quot;http://golang.org/pkg/time/#Duration.Seconds&amp;quot;&amp;gt;Seconds()関数&amp;lt;/a&amp;gt;は、float64を返します。</description></item><item><title>golangで数値を文字列に変換するには？</title><link>https://kwmt27.net/index.php/2012/07/07/golang%E3%81%A7%E6%95%B0%E5%80%A4%E3%82%92%E6%96%87%E5%AD%97%E5%88%97%E3%81%AB%E5%A4%89%E6%8F%9B%E3%81%99%E3%82%8B%E3%81%AB%E3%81%AF/</link><pubDate>Fri, 06 Jul 2012 00:00:00 +0000</pubDate><guid>https://kwmt27.net/index.php/2012/07/07/golang%E3%81%A7%E6%95%B0%E5%80%A4%E3%82%92%E6%96%87%E5%AD%97%E5%88%97%E3%81%AB%E5%A4%89%E6%8F%9B%E3%81%99%E3%82%8B%E3%81%AB%E3%81%AF/</guid><description>&amp;lt;a href=&amp;quot;http://golang.org/pkg/strconv/#FormatUint&amp;quot;&amp;gt;FormatUint&amp;lt;/a&amp;gt;関数の引数
 numはuint64で、10は何者かよく分からなかったけど、10進数のこと。strNumはstringとなります。
 2つ目の引数10が良くわかないと書いたけど、下記のコードで確かめたら10進数だとわかった。例えば、1つ目の数値を123とします。
-package main import ( &amp;quot;fmt&amp;quot; &amp;quot;strconv&amp;quot; ) func main() { fmt.Println(&amp;quot;(i, strNum)&amp;quot;) for i := 2; i &amp;lt; 37; i++ { strNum := strconv.FormatUint(uint64(123), i) fmt.Printf(&amp;quot;(%d, %s)\n&amp;quot;, i, strNum) } }  結果、下記のようになった。
-(i, strNum) (2, 1111011) (3, 11120) (4, 1323) (5, 443) (6, 323) (7, 234) (8, 173) (9, 146) (10, 123) (11, 102) (12, a3) (13, 96) (14, 8b) (15, 83) (16, 7b) (17, 74) (18, 6f) (19, 69) (20, 63) (21, 5i) (22, 5d) (23, 58) (24, 53) (25, 4n) (26, 4j) (27, 4f) (28, 4b) (29, 47) (30, 43) (31, 3u) (32, 3r) (33, 3o) (34, 3l) (35, 3i) (36, 3f)  ソースにもあるけど、iがi &amp;lt; 2またはi &amp;gt; 37だとpanicになります。</description>
-    </item>
-    
-    <item>
-      <title>Writing Web Applicationss を翻訳しました。</title>
-      <link>https://kwmt27.net/index.php/2012/06/30/writing-web-applicationss-%E3%82%92%E7%BF%BB%E8%A8%B3%E3%81%97%E3%81%BE%E3%81%97%E3%81%9F/</link>
-      <pubDate>Sat, 30 Jun 2012 00:00:00 +0000</pubDate>
-      
-      <guid>https://kwmt27.net/index.php/2012/06/30/writing-web-applicationss-%E3%82%92%E7%BF%BB%E8%A8%B3%E3%81%97%E3%81%BE%E3%81%97%E3%81%9F/</guid>
-      <description>Writing Web Applicationss を翻訳しました。
+package main import ( &amp;#34;fmt&amp;#34; &amp;#34;strconv&amp;#34; ) func main() { fmt.Println(&amp;#34;(i, strNum)&amp;#34;) for i := 2; i &amp;lt; 37; i++ { strNum := strconv.FormatUint(uint64(123), i) fmt.Printf(&amp;#34;(%d, %s)\n&amp;#34;, i, strNum) } } 結果、下記のようになった。
+ソースにもあるけど、iがi &amp;lt; 2またはi &amp;gt; 37だとpanicになります。</description></item><item><title>Writing Web Applicationss を翻訳しました。</title><link>https://kwmt27.net/index.php/2012/06/30/writing-web-applicationss-%E3%82%92%E7%BF%BB%E8%A8%B3%E3%81%97%E3%81%BE%E3%81%97%E3%81%9F/</link><pubDate>Sat, 30 Jun 2012 00:00:00 +0000</pubDate><guid>https://kwmt27.net/index.php/2012/06/30/writing-web-applicationss-%E3%82%92%E7%BF%BB%E8%A8%B3%E3%81%97%E3%81%BE%E3%81%97%E3%81%9F/</guid><description>Writing Web Applicationss を翻訳しました。
 GitHubにおいてます。
 https://github.com/kwmt/golangwiki/blob/master/doc/articles/wiki.md
 株式会社エイベルさんが書かれた記事には大変お世話になっていますが、バージョンが古いので書きなおした形です。
-（翻訳中にエイベルさんの訳はほとんど見てません）</description>
-    </item>
-    
-    <item>
-      <title>Slices: usage and internalsを翻訳しました。</title>
-      <link>https://kwmt27.net/index.php/2012/06/20/slices-usage-and-internals%E3%82%92%E7%BF%BB%E8%A8%B3%E3%81%97%E3%81%BE%E3%81%97%E3%81%9F/</link>
-      <pubDate>Tue, 19 Jun 2012 00:00:00 +0000</pubDate>
-      
-      <guid>https://kwmt27.net/index.php/2012/06/20/slices-usage-and-internals%E3%82%92%E7%BF%BB%E8%A8%B3%E3%81%97%E3%81%BE%E3%81%97%E3%81%9F/</guid>
-      <description>Slices: usage and internals を（むちゃくちゃな日本語ですが）翻訳しました。
+（翻訳中にエイベルさんの訳はほとんど見てません）</description></item><item><title>Slices: usage and internalsを翻訳しました。</title><link>https://kwmt27.net/index.php/2012/06/20/slices-usage-and-internals%E3%82%92%E7%BF%BB%E8%A8%B3%E3%81%97%E3%81%BE%E3%81%97%E3%81%9F%E3%80%82/</link><pubDate>Tue, 19 Jun 2012 00:00:00 +0000</pubDate><guid>https://kwmt27.net/index.php/2012/06/20/slices-usage-and-internals%E3%82%92%E7%BF%BB%E8%A8%B3%E3%81%97%E3%81%BE%E3%81%97%E3%81%9F%E3%80%82/</guid><description>Slices: usage and internals を（むちゃくちゃな日本語ですが）翻訳しました。
 Githubにおいてます。
 https://github.com/kwmt/golangwiki/blob/master/doc/articles/slices_usage_and_internals.md
 注意）
@@ -713,211 +197,92 @@ https://github.com/kwmt/golangwiki/blob/master/doc/articles/slices_usage_and_int
 嘘の訳してるかもしれません。
 英語が分かる人は原文読んだ方がいいです。
 だれかpull reequestしてください。
-徐々に修正して行く予定です。</description>
-    </item>
-    
-    <item>
-      <title>golangでhtmlファイルの一部を別ファイルに分けるには</title>
-      <link>https://kwmt27.net/index.php/2012/06/05/golang%E3%81%A7html%E3%83%95%E3%82%A1%E3%82%A4%E3%83%AB%E3%81%AE%E4%B8%80%E9%83%A8%E3%82%92%E5%88%A5%E3%83%95%E3%82%A1%E3%82%A4%E3%83%AB%E3%81%AB%E5%88%86%E3%81%91%E3%82%8B%E3%81%AB%E3%81%AF/</link>
-      <pubDate>Tue, 05 Jun 2012 00:00:00 +0000</pubDate>
-      
-      <guid>https://kwmt27.net/index.php/2012/06/05/golang%E3%81%A7html%E3%83%95%E3%82%A1%E3%82%A4%E3%83%AB%E3%81%AE%E4%B8%80%E9%83%A8%E3%82%92%E5%88%A5%E3%83%95%E3%82%A1%E3%82%A4%E3%83%AB%E3%81%AB%E5%88%86%E3%81%91%E3%82%8B%E3%81%AB%E3%81%AF/</guid>
-      <description>&lt;h2 id=&#34;まえおき&#34;&gt;まえおき&lt;/h2&gt;
-
-&lt;p&gt;&lt;a href=&#34;http://kwmt27.net/index.php/2012/05/24/golang%e3%81%a7twitter%e3%81%ae%e3%82%bf%e3%82%a4%e3%83%a0%e3%83%a9%e3%82%a4%e3%83%b3%e3%82%92%e3%83%96%e3%83%a9%e3%82%a6%e3%82%b6%e3%81%ab%e8%a1%a8%e7%a4%ba%e3%81%95%e3%81%9b%e3%81%a6%e3%81%bf/&#34; title=&#34;golangでTwitterのタイムラインをブラウザに表示させてみた。&#34; target=&#34;_blank&#34;&gt;前回のエントリー&lt;/a&gt;で、「&lt;code&gt;template.ParseFiles()&lt;/code&gt;の引数には、&lt;/p&gt;
-
-&lt;p&gt;複数ファイルを指定することができ、&lt;/p&gt;
-
-&lt;p&gt;たとえば、header.html、main.html、footer.htmlなどに分けることができます。」と書きましたが、&lt;/p&gt;
-
-&lt;p&gt;具体的にどうしたらよいかをまとめておこうと思います。&lt;/p&gt;
-
-&lt;h2 id=&#34;どうしたいのか&#34;&gt;どうしたいのか&lt;/h2&gt;
-
-&lt;p&gt;前回と同じHTMLですが、このファイルを&lt;code&gt;main.html&lt;/code&gt;としましょう。&lt;/p&gt;
-
-&lt;pre&gt;&lt;code&gt;&amp;lt;!DOCTYPE html&amp;gt;
-&amp;lt;html lang=&amp;quot;ja&amp;quot;&amp;gt;
+徐々に修正して行く予定です。</description></item><item><title>golangでhtmlファイルの一部を別ファイルに分けるには</title><link>https://kwmt27.net/index.php/2012/06/05/golang%E3%81%A7html%E3%83%95%E3%82%A1%E3%82%A4%E3%83%AB%E3%81%AE%E4%B8%80%E9%83%A8%E3%82%92%E5%88%A5%E3%83%95%E3%82%A1%E3%82%A4%E3%83%AB%E3%81%AB%E5%88%86%E3%81%91%E3%82%8B%E3%81%AB%E3%81%AF/</link><pubDate>Tue, 05 Jun 2012 00:00:00 +0000</pubDate><guid>https://kwmt27.net/index.php/2012/06/05/golang%E3%81%A7html%E3%83%95%E3%82%A1%E3%82%A4%E3%83%AB%E3%81%AE%E4%B8%80%E9%83%A8%E3%82%92%E5%88%A5%E3%83%95%E3%82%A1%E3%82%A4%E3%83%AB%E3%81%AB%E5%88%86%E3%81%91%E3%82%8B%E3%81%AB%E3%81%AF/</guid><description>&lt;h2 id="まえおき">まえおき&lt;a class="anchorjs-link" href="#%e3%81%be%e3%81%88%e3%81%8a%e3%81%8d">&lt;/a>&lt;/h2>&lt;p>&lt;!-- raw HTML omitted -->前回のエントリー&lt;!-- raw HTML omitted -->で、「&lt;code>template.ParseFiles()&lt;/code>の引数には、&lt;/p>
+&lt;p>複数ファイルを指定することができ、&lt;/p>
+&lt;p>たとえば、header.html、main.html、footer.htmlなどに分けることができます。」と書きましたが、&lt;/p>
+&lt;p>具体的にどうしたらよいかをまとめておこうと思います。&lt;/p>
+&lt;h2 id="どうしたいのか">どうしたいのか&lt;a class="anchorjs-link" href="#%e3%81%a9%e3%81%86%e3%81%97%e3%81%9f%e3%81%84%e3%81%ae%e3%81%8b">&lt;/a>&lt;/h2>&lt;p>前回と同じHTMLですが、このファイルを&lt;code>main.html&lt;/code>としましょう。&lt;/p>
+&lt;pre tabindex="0">&lt;code>&amp;lt;!DOCTYPE html&amp;gt;
+&amp;lt;html lang=&amp;#34;ja&amp;#34;&amp;gt;
 &amp;lt;head&amp;gt;
-&amp;lt;meta charset=&amp;quot;UTF-8&amp;quot;&amp;gt;
-&amp;lt;style type=&amp;quot;text/css&amp;quot;&amp;gt;
-    div.tl  {width:600px;}
-    table,td {border: solid; border-collapse: collapse;}
+&amp;lt;meta charset=&amp;#34;UTF-8&amp;#34;&amp;gt;
+&amp;lt;style type=&amp;#34;text/css&amp;#34;&amp;gt;
+div.tl {width:600px;}
+table,td {border: solid; border-collapse: collapse;}
 &amp;lt;/style&amp;gt;
 &amp;lt;/head&amp;gt;
 &amp;lt;body&amp;gt;
-&amp;lt;div class=&amp;quot;tl&amp;quot;&amp;gt;
+&amp;lt;div class=&amp;#34;tl&amp;#34;&amp;gt;
 &amp;lt;table border cellspacing=0&amp;gt;
 {{range .}}
-    &amp;lt;tr&amp;gt;
-    &amp;lt;td&amp;gt;
-    日時：{{.Created_at}}&amp;lt;br/&amp;gt;
-    ツイート：{{.Text}} &amp;lt;br/&amp;gt;
-    スクリーン名：{{.User.Screen_name}}
-    &amp;lt;/td&amp;gt;
-    &amp;lt;/tr&amp;gt;
+&amp;lt;tr&amp;gt;
+&amp;lt;td&amp;gt;
+日時：{{.Created_at}}&amp;lt;br/&amp;gt;
+ツイート：{{.Text}} &amp;lt;br/&amp;gt;
+スクリーン名：{{.User.Screen_name}}
+&amp;lt;/td&amp;gt;
+&amp;lt;/tr&amp;gt;
 {{end}}
 &amp;lt;/table&amp;gt;
 &amp;lt;/div&amp;gt;
 &amp;lt;/body&amp;gt;
 &amp;lt;/html&amp;gt;
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;これを、たとえば、ツイッターの内容の部分を別ファイルにするということを考えます。&lt;/p&gt;
-
-&lt;p&gt;&lt;/p&gt;</description>
-    </item>
-    
-    <item>
-      <title>golangでTwitterのタイムラインをブラウザに表示させてみた。</title>
-      <link>https://kwmt27.net/index.php/2012/05/24/golang%E3%81%A7twitter%E3%81%AE%E3%82%BF%E3%82%A4%E3%83%A0%E3%83%A9%E3%82%A4%E3%83%B3%E3%82%92%E3%83%96%E3%83%A9%E3%82%A6%E3%82%B6%E3%81%AB%E8%A1%A8%E7%A4%BA%E3%81%95%E3%81%9B%E3%81%A6%E3%81%BF/</link>
-      <pubDate>Wed, 23 May 2012 00:00:00 +0000</pubDate>
-      
-      <guid>https://kwmt27.net/index.php/2012/05/24/golang%E3%81%A7twitter%E3%81%AE%E3%82%BF%E3%82%A4%E3%83%A0%E3%83%A9%E3%82%A4%E3%83%B3%E3%82%92%E3%83%96%E3%83%A9%E3%82%A6%E3%82%B6%E3%81%AB%E8%A1%A8%E7%A4%BA%E3%81%95%E3%81%9B%E3%81%A6%E3%81%BF/</guid>
-      <description>&lt;h2 id=&#34;まえおき&#34;&gt;まえおき&lt;/h2&gt;
-
-&lt;p&gt;Andrew Gerrandさんのgithubはgolangの宝の宝庫。その中に&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&#34;https://github.com/nf/gotweet&#34;&gt;https://github.com/nf/gotweet&lt;/a&gt;{.broken_link}というTwitter APIを使うサンプルがあったので（2013/04/07追加 リポジトリが削除されてました）、&lt;/p&gt;
-
-&lt;p&gt;参考にさせてもらって、それに&lt;a href=&#34;http://androg.seesaa.net/article/267361381.html&#34;&gt;GAEのチュートリアル&lt;/a&gt;をあわせて、&lt;/p&gt;
-
-&lt;p&gt;Twitterのuser_timelineをブラウザに表示させるようにしてみました。&lt;/p&gt;
-
-&lt;h2 id=&#34;準備&#34;&gt;準備&lt;/h2&gt;
-
-&lt;p&gt;gotweetのプロジェクトをcloneします。（あとで名前をgotweet_changeプロジェクトに変更しています）&lt;/p&gt;
-
-&lt;pre class=&#34;terminal&#34;&gt;% cd workspace/
-% git clone github.com/nf/gotweet
-&lt;/pre&gt;
-
-&lt;p&gt;READMEにも書かれてますが、mrjonesさんのoauthライブラリを使用するので、まずインストールしてください。&lt;/p&gt;
-
-&lt;p&gt;go install とありますが、うまく動かなかったので、clone しています。&lt;/p&gt;
-
-&lt;p&gt;（goファイルのimport文には&lt;code&gt;&amp;quot;github.com/mrjones/oauth&amp;quot;&lt;/code&gt;となっているのを&lt;/p&gt;
-
-&lt;p&gt;&lt;code&gt;&amp;quot;oauth&amp;quot;&lt;/code&gt;と変更しています。）&lt;/p&gt;
-
-&lt;pre class=&#34;terminal&#34;&gt;% git clone github.com/mrjones/oauth
-&lt;/pre&gt;
-
-&lt;p&gt;clone先のディレクトリは、僕が確認したのは、myappのGAEのプロジェクトだとすると、myappディレクトリの直下においてください。&lt;/p&gt;
-
-&lt;p&gt;下図のようなイメージです。&lt;/p&gt;
-
-&lt;pre class=&#34;terminal&#34;&gt;gotweet_change/
-app.yaml
-hello/
-hello.go
-oauth/
-template/
-tweet.html
-&lt;/pre&gt;
-
-&lt;p&gt;READMEには、ドキュメントを読んでください、と書いています。&lt;code&gt;oauth&lt;/code&gt;ライブラリの使い方の説明などが書いています。&lt;/p&gt;
-
-&lt;p&gt;（まだ軽くしか読んでないので、いずれちゃんと読みます。。）&lt;/p&gt;
-
-&lt;pre class=&#34;terminal&#34;&gt;% godoc github.com/mrjones/oauth | less
-&lt;/pre&gt;
-
-&lt;p&gt;実際にTwitterAPIを使用する際は、&lt;/p&gt;
-
-&lt;p&gt;Consumer IDとConsumer Secret を&lt;a href=&#34;http://dev.twitter.com/apps/new&#34;&gt;Twitter　Devloperサイト&lt;/a&gt;{.broken_link}から取得しておいてください。&lt;/p&gt;
-
-&lt;h2 id=&#34;ソースごにょごにょ&#34;&gt;ソースごにょごにょ&lt;/h2&gt;
-
-&lt;p&gt;全体のソースは&lt;a href=&#34;https://github.com/kwmt/gotweet_change&#34;&gt;github&lt;/a&gt;にあげました。&lt;/p&gt;
-
-&lt;p&gt;忘れそうなポイントだけ書いておくことにします。&lt;/p&gt;
-
-&lt;p&gt;&lt;/p&gt;</description>
-    </item>
-    
-    <item>
-      <title>Go1をソースからインストールした。</title>
-      <link>https://kwmt27.net/index.php/2012/05/19/go1%E3%82%92%E3%82%BD%E3%83%BC%E3%82%B9%E3%81%8B%E3%82%89%E3%82%A4%E3%83%B3%E3%82%B9%E3%83%88%E3%83%BC%E3%83%AB%E3%81%97%E3%81%9F/</link>
-      <pubDate>Sat, 19 May 2012 00:00:00 +0000</pubDate>
-      
-      <guid>https://kwmt27.net/index.php/2012/05/19/go1%E3%82%92%E3%82%BD%E3%83%BC%E3%82%B9%E3%81%8B%E3%82%89%E3%82%A4%E3%83%B3%E3%82%B9%E3%83%88%E3%83%BC%E3%83%AB%E3%81%97%E3%81%9F/</guid>
-      <description>まえおき Goのインストールは基本的には、下記URLから。
+&lt;/code>&lt;/pre>&lt;p>これを、たとえば、ツイッターの内容の部分を別ファイルにするということを考えます。&lt;/p></description></item><item><title>golangでTwitterのタイムラインをブラウザに表示させてみた。</title><link>https://kwmt27.net/index.php/2012/05/24/golang%E3%81%A7twitter%E3%81%AE%E3%82%BF%E3%82%A4%E3%83%A0%E3%83%A9%E3%82%A4%E3%83%B3%E3%82%92%E3%83%96%E3%83%A9%E3%82%A6%E3%82%B6%E3%81%AB%E8%A1%A8%E7%A4%BA%E3%81%95%E3%81%9B%E3%81%A6%E3%81%BF/</link><pubDate>Wed, 23 May 2012 00:00:00 +0000</pubDate><guid>https://kwmt27.net/index.php/2012/05/24/golang%E3%81%A7twitter%E3%81%AE%E3%82%BF%E3%82%A4%E3%83%A0%E3%83%A9%E3%82%A4%E3%83%B3%E3%82%92%E3%83%96%E3%83%A9%E3%82%A6%E3%82%B6%E3%81%AB%E8%A1%A8%E7%A4%BA%E3%81%95%E3%81%9B%E3%81%A6%E3%81%BF/</guid><description>&lt;h2 id="まえおき">まえおき&lt;a class="anchorjs-link" href="#%e3%81%be%e3%81%88%e3%81%8a%e3%81%8d">&lt;/a>&lt;/h2>&lt;p>Andrew Gerrandさんのgithubはgolangの宝の宝庫。その中に&lt;/p>
+&lt;p>&lt;a href="https://github.com/nf/gotweet" target="_blank">https://github.com/nf/gotweet&lt;/a>{.broken_link}というTwitter APIを使うサンプルがあったので（2013/04/07追加 リポジトリが削除されてました）、&lt;/p>
+&lt;p>参考にさせてもらって、それに&lt;a href="http://androg.seesaa.net/article/267361381.html" target="_blank">GAEのチュートリアル&lt;/a>をあわせて、&lt;/p>
+&lt;p>Twitterのuser_timelineをブラウザに表示させるようにしてみました。&lt;/p>
+&lt;h2 id="準備">準備&lt;a class="anchorjs-link" href="#%e6%ba%96%e5%82%99">&lt;/a>&lt;/h2>&lt;p>gotweetのプロジェクトをcloneします。（あとで名前をgotweet_changeプロジェクトに変更しています）&lt;/p>
+&lt;!-- raw HTML omitted -->
+&lt;!-- raw HTML omitted -->
+&lt;p>READMEにも書かれてますが、mrjonesさんのoauthライブラリを使用するので、まずインストールしてください。&lt;/p>
+&lt;p>go install とありますが、うまく動かなかったので、clone しています。&lt;/p>
+&lt;p>（goファイルのimport文には&lt;code>&amp;quot;github.com/mrjones/oauth&amp;quot;&lt;/code>となっているのを&lt;/p>
+&lt;p>&lt;code>&amp;quot;oauth&amp;quot;&lt;/code>と変更しています。）&lt;/p>
+&lt;!-- raw HTML omitted -->
+&lt;!-- raw HTML omitted -->
+&lt;p>clone先のディレクトリは、僕が確認したのは、myappのGAEのプロジェクトだとすると、myappディレクトリの直下においてください。&lt;/p>
+&lt;p>下図のようなイメージです。&lt;/p>
+&lt;!-- raw HTML omitted -->
+&lt;!-- raw HTML omitted -->
+&lt;p>READMEには、ドキュメントを読んでください、と書いています。&lt;code>oauth&lt;/code>ライブラリの使い方の説明などが書いています。&lt;/p>
+&lt;p>（まだ軽くしか読んでないので、いずれちゃんと読みます。。）&lt;/p>
+&lt;!-- raw HTML omitted -->
+&lt;!-- raw HTML omitted -->
+&lt;p>実際にTwitterAPIを使用する際は、&lt;/p>
+&lt;p>Consumer IDとConsumer Secret を&lt;a href="http://dev.twitter.com/apps/new" target="_blank">Twitter　Devloperサイト&lt;/a>{.broken_link}から取得しておいてください。&lt;/p>
+&lt;h2 id="ソースごにょごにょ">ソースごにょごにょ&lt;a class="anchorjs-link" href="#%e3%82%bd%e3%83%bc%e3%82%b9%e3%81%94%e3%81%ab%e3%82%87%e3%81%94%e3%81%ab%e3%82%87">&lt;/a>&lt;/h2>&lt;p>全体のソースは&lt;a href="https://github.com/kwmt/gotweet_change" target="_blank">github&lt;/a>にあげました。&lt;/p>
+&lt;p>忘れそうなポイントだけ書いておくことにします。&lt;/p></description></item><item><title>Go1をソースからインストールした。</title><link>https://kwmt27.net/index.php/2012/05/19/go1%E3%82%92%E3%82%BD%E3%83%BC%E3%82%B9%E3%81%8B%E3%82%89%E3%82%A4%E3%83%B3%E3%82%B9%E3%83%88%E3%83%BC%E3%83%AB%E3%81%97%E3%81%9F/</link><pubDate>Sat, 19 May 2012 00:00:00 +0000</pubDate><guid>https://kwmt27.net/index.php/2012/05/19/go1%E3%82%92%E3%82%BD%E3%83%BC%E3%82%B9%E3%81%8B%E3%82%89%E3%82%A4%E3%83%B3%E3%82%B9%E3%83%88%E3%83%BC%E3%83%AB%E3%81%97%E3%81%9F/</guid><description>まえおきGoのインストールは基本的には、下記URLから。
 http://golang.org/doc/install
 Mac OS　Xだと、packageで用意されてます。
 ソースからインストールするには、下記URLから。
 http://golang.org/doc/install/source
 簡単に書くと、Mercurialで落として、
 bashたたいて、hello world実行できればOK。以下は実際にやった操作と結果。
-実際の操作と結果 % hg clone -u release https://code.google.com/p/go 警告: code.google.com の証明書(fingerprint は 8f:xx:xx:xx:xx....) 検証は省略 (設定ファイルの hostfingerprints ないし web.cacerts 設定を確認のこと) 複製先ディレクトリ: go 全チェンジセットを取得中 チェンジセットを追加中 マニフェストを追加中 ファイルの変更を追加中 13156 のチェンジセット(49748 の変更を 7222 ファイルに適用)を追加（+5個のヘッド） ブランチ release-branch.go1 へ更新中 ファイル状態: 更新数 3206、 マージ数 0、 削除数 0、 衝突未解消数 0 %  % cd go/src % ./all.bash Building C Bootstrap tool. cmd/dist Building compilers and Go bootstrap tool for host, darwin/amd64 ALL TESTS PASSED --- Installed Go for darwin/amd64 in /home/you/go Installed commands in /home/you/go/bin %  % cd .</description>
-    </item>
-    
-    <item>
-      <title>Google App EngineのGo言語(GAE/Go)のチュートリアルをやったメモ。</title>
-      <link>https://kwmt27.net/index.php/2012/04/27/google-app-engine%E3%81%AEgo%E8%A8%80%E8%AA%9Egaego%E3%81%AE%E3%83%81%E3%83%A5%E3%83%BC%E3%83%88%E3%83%AA%E3%82%A2%E3%83%AB%E3%82%92%E3%82%84%E3%81%A3%E3%81%9F%E3%83%A1%E3%83%A2/</link>
-      <pubDate>Fri, 27 Apr 2012 00:00:00 +0000</pubDate>
-      
-      <guid>https://kwmt27.net/index.php/2012/04/27/google-app-engine%E3%81%AEgo%E8%A8%80%E8%AA%9Egaego%E3%81%AE%E3%83%81%E3%83%A5%E3%83%BC%E3%83%88%E3%83%AA%E3%82%A2%E3%83%AB%E3%82%92%E3%82%84%E3%81%A3%E3%81%9F%E3%83%A1%E3%83%A2/</guid>
-      <description>&lt;h2 id=&#34;はじめに&#34;&gt;はじめに&lt;/h2&gt;
-
-&lt;p&gt;2012/04/15に東海GTUG主催の&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&#34;http://www.zusaar.com/event/234051&#34;&gt;「[愛知/名古屋]作ればわかる！ Google App Engineハンズオン #1（東海GTUG）」&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;に参加しました。&lt;/p&gt;
-
-&lt;p&gt;この本は一度写経したことがあって、せっかく著者さんがいらっしゃるので、もう一度やるのもありだったのですが、&lt;/p&gt;
-
-&lt;p&gt;GAE/Goチームができてたので、そちらに惹かれ&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&#34;https://developers.google.com/appengine/docs/go/gettingstarted/&#34;&gt;GAE/Goのチュートリアル&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;をすることにしました。&lt;/p&gt;
-
-&lt;p&gt;さて、チュートリアルは&lt;/p&gt;
-
-&lt;p&gt;&lt;a target=&#34;_blank&#34; href=&#34;https://developers.google.com/appengine/docs/go/gettingstarted/introduction&#34;&gt;イントロダクション&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;があって、&lt;/p&gt;
-
-&lt;p&gt;次にGAE/Goの&lt;/p&gt;
-
-&lt;p&gt;&lt;a target=&#34;_blank&#34; href=&#34;https://developers.google.com/appengine/docs/go/gettingstarted/devenvironment&#34;&gt;環境構築&lt;/a&gt;です。&lt;/p&gt;
-
-&lt;p&gt;最終的にはデプロイまでのチュートリアルがあります。実際にチュートリアルを最後までやって、忘れないためにメモと気づいた事などを書いていきます。&lt;/p&gt;
-
-&lt;p&gt;&lt;/p&gt;</description>
-    </item>
-    
-    <item>
-      <title>Go言語でテキストファイルを読み込むには＆書き込むには</title>
-      <link>https://kwmt27.net/index.php/2012/04/22/go%E8%A8%80%E8%AA%9E%E3%81%A7%E3%83%86%E3%82%AD%E3%82%B9%E3%83%88%E3%83%95%E3%82%A1%E3%82%A4%E3%83%AB%E3%82%92%E8%AA%AD%E3%81%BF%E8%BE%BC%E3%82%80%E3%81%AB%E3%81%AF%E6%9B%B8%E3%81%8D%E8%BE%BC/</link>
-      <pubDate>Sun, 22 Apr 2012 00:00:00 +0000</pubDate>
-      
-      <guid>https://kwmt27.net/index.php/2012/04/22/go%E8%A8%80%E8%AA%9E%E3%81%A7%E3%83%86%E3%82%AD%E3%82%B9%E3%83%88%E3%83%95%E3%82%A1%E3%82%A4%E3%83%AB%E3%82%92%E8%AA%AD%E3%81%BF%E8%BE%BC%E3%82%80%E3%81%AB%E3%81%AF%E6%9B%B8%E3%81%8D%E8%BE%BC/</guid>
-      <description>さっそくソース package main import ( &amp;quot;fmt&amp;quot; &amp;quot;io/ioutil&amp;quot; ) const INPUT_FILE = &amp;quot;input.txt&amp;quot; const OUTPUT_FILE = &amp;quot;output.txt&amp;quot; func main() { // ファイルの読み込み contents, err := ioutil.ReadFile(INPUT_FILE) // ReadFileの戻り値は []byte if err != nil { fmt.Println(contents, err) return } // １文字ずつ出力 for i := 0; i &amp;lt; len(contents); i++ { print(string(contents[i])) // 改行は &#39;\n&#39; } // 一気に出力 println(string(contents)) // ファイルに書き込み ioutil.WriteFile(OUTPUT_FILE, contents, 0644) // 0644はpermission }  参考  How to read/write from/to file?</description>
-    </item>
-    
-    <item>
-      <title>Go言語勉強会に行って来ました。</title>
-      <link>https://kwmt27.net/index.php/2012/01/31/go%E8%A8%80%E8%AA%9E%E5%8B%89%E5%BC%B7%E4%BC%9A%E3%81%AB%E8%A1%8C%E3%81%A3%E3%81%A6%E6%9D%A5%E3%81%BE%E3%81%97%E3%81%9F/</link>
-      <pubDate>Tue, 31 Jan 2012 00:00:00 +0000</pubDate>
-      
-      <guid>https://kwmt27.net/index.php/2012/01/31/go%E8%A8%80%E8%AA%9E%E5%8B%89%E5%BC%B7%E4%BC%9A%E3%81%AB%E8%A1%8C%E3%81%A3%E3%81%A6%E6%9D%A5%E3%81%BE%E3%81%97%E3%81%9F/</guid>
-      <description>Hello，世界 2012/01/31に神戸GTUG主催のGo言語勉強会に参加しました。
+実際の操作と結果 ちょっとこまってること。先日GAE/Goをインストールしたのですが、
+GAEのディレクトリのgoコマンドと、上記でインストールしたgoコマンドがかぶってしまって、GAE/GoをやりたいときはGAEディレクトリのgoコマンドを、
+GAEじゃないgoをやりたいときはそちらのgoコマンドを使いわけたいのだが、どうしたらいいか分からないので、直打ちにいっている
+というダサい感じになってしまってるのが、困ってることでした。ちょい面倒なだけなんで、いいんですが。（たぶんshellの設定で行けそうな気がするけど、分からない^^;）</description></item><item><title>Google App EngineのGo言語(GAE/Go)のチュートリアルをやったメモ。</title><link>https://kwmt27.net/index.php/2012/04/27/google-app-engine%E3%81%AEgo%E8%A8%80%E8%AA%9Egaego%E3%81%AE%E3%83%81%E3%83%A5%E3%83%BC%E3%83%88%E3%83%AA%E3%82%A2%E3%83%AB%E3%82%92%E3%82%84%E3%81%A3%E3%81%9F%E3%83%A1%E3%83%A2/</link><pubDate>Fri, 27 Apr 2012 00:00:00 +0000</pubDate><guid>https://kwmt27.net/index.php/2012/04/27/google-app-engine%E3%81%AEgo%E8%A8%80%E8%AA%9Egaego%E3%81%AE%E3%83%81%E3%83%A5%E3%83%BC%E3%83%88%E3%83%AA%E3%82%A2%E3%83%AB%E3%82%92%E3%82%84%E3%81%A3%E3%81%9F%E3%83%A1%E3%83%A2/</guid><description>&lt;h2 id="はじめに">はじめに&lt;a class="anchorjs-link" href="#%e3%81%af%e3%81%98%e3%82%81%e3%81%ab">&lt;/a>&lt;/h2>&lt;p>2012/04/15に東海GTUG主催の&lt;/p>
+&lt;p>&lt;a href="http://www.zusaar.com/event/234051" target="_blank">「[愛知/名古屋]作ればわかる！ Google App Engineハンズオン #1（東海GTUG）」&lt;/a>&lt;/p>
+&lt;p>に参加しました。&lt;/p>
+&lt;p>この本は一度写経したことがあって、せっかく著者さんがいらっしゃるので、もう一度やるのもありだったのですが、&lt;/p>
+&lt;p>GAE/Goチームができてたので、そちらに惹かれ&lt;/p>
+&lt;p>&lt;a href="https://developers.google.com/appengine/docs/go/gettingstarted/" target="_blank">GAE/Goのチュートリアル&lt;/a>&lt;/p>
+&lt;p>をすることにしました。&lt;/p>
+&lt;p>さて、チュートリアルは&lt;/p>
+&lt;p>&lt;!-- raw HTML omitted -->イントロダクション&lt;!-- raw HTML omitted -->&lt;/p>
+&lt;p>があって、&lt;/p>
+&lt;p>次にGAE/Goの&lt;/p>
+&lt;p>&lt;!-- raw HTML omitted -->環境構築&lt;!-- raw HTML omitted -->です。&lt;/p>
+&lt;p>最終的にはデプロイまでのチュートリアルがあります。実際にチュートリアルを最後までやって、忘れないためにメモと気づいた事などを書いていきます。&lt;/p></description></item><item><title>Go言語でテキストファイルを読み込むには＆書き込むには</title><link>https://kwmt27.net/index.php/2012/04/22/go%E8%A8%80%E8%AA%9E%E3%81%A7%E3%83%86%E3%82%AD%E3%82%B9%E3%83%88%E3%83%95%E3%82%A1%E3%82%A4%E3%83%AB%E3%82%92%E8%AA%AD%E3%81%BF%E8%BE%BC%E3%82%80%E3%81%AB%E3%81%AF%E6%9B%B8%E3%81%8D%E8%BE%BC/</link><pubDate>Sun, 22 Apr 2012 00:00:00 +0000</pubDate><guid>https://kwmt27.net/index.php/2012/04/22/go%E8%A8%80%E8%AA%9E%E3%81%A7%E3%83%86%E3%82%AD%E3%82%B9%E3%83%88%E3%83%95%E3%82%A1%E3%82%A4%E3%83%AB%E3%82%92%E8%AA%AD%E3%81%BF%E8%BE%BC%E3%82%80%E3%81%AB%E3%81%AF%E6%9B%B8%E3%81%8D%E8%BE%BC/</guid><description>さっそくソースpackage main import ( &amp;#34;fmt&amp;#34; &amp;#34;io/ioutil&amp;#34; ) const INPUT_FILE = &amp;#34;input.txt&amp;#34; const OUTPUT_FILE = &amp;#34;output.txt&amp;#34; func main() { // ファイルの読み込み contents, err := ioutil.ReadFile(INPUT_FILE) // ReadFileの戻り値は []byte if err != nil { fmt.Println(contents, err) return } // １文字ずつ出力 for i := 0; i &amp;lt; len(contents); i++ { print(string(contents[i])) // 改行は &amp;#39;\n&amp;#39; } // 一気に出力 println(string(contents)) // ファイルに書き込み ioutil.WriteFile(OUTPUT_FILE, contents, 0644) // 0644はpermission } 参考 How to read/write from/to file? Source file src/pkg/io/ioutil/ioutil.</description></item><item><title>Go言語勉強会に行って来ました。</title><link>https://kwmt27.net/index.php/2012/01/31/go%E8%A8%80%E8%AA%9E%E5%8B%89%E5%BC%B7%E4%BC%9A%E3%81%AB%E8%A1%8C%E3%81%A3%E3%81%A6%E6%9D%A5%E3%81%BE%E3%81%97%E3%81%9F/</link><pubDate>Tue, 31 Jan 2012 00:00:00 +0000</pubDate><guid>https://kwmt27.net/index.php/2012/01/31/go%E8%A8%80%E8%AA%9E%E5%8B%89%E5%BC%B7%E4%BC%9A%E3%81%AB%E8%A1%8C%E3%81%A3%E3%81%A6%E6%9D%A5%E3%81%BE%E3%81%97%E3%81%9F/</guid><description>Hello，世界2012/01/31に神戸GTUG主催のGo言語勉強会に参加しました。
 内容は、A Tour of Goの
 日本語版を解説して頂きながらGo言語について学びました。
 上記の日本語版を開くと画面左側にソース、右側にソースの解説が載っています。
 さて、左側のソースをみると、次のようになっています。
-package main import &#34;fmt&#34; func main() { fmt.Println(&#34;Hello, 世界&#34;) }  １行目はpackage mainとなっていて、５行目のmain()と名前が一致してなければなりません。６行目のPrintlnの最初が大文字となっていまが、これはPublicを意味していて、
+１行目はpackage mainとなっていて、５行目のmain()と名前が一致してなければなりません。６行目のPrintlnの最初が大文字となっていまが、これはPublicを意味していて、
 小文字だったらprivateです。とセクションごとに説明を頂きましたが、重要そうなところだけメモっときます。
-型が変数名の後ろにくる http://go-tour-jp.appspot.com/#6
-package main import &amp;quot;fmt&amp;quot; func add(x int, y int) int { return x + y } func main() { fmt.Println(add(42, 13)) }  上記のfunc add(x &amp;lt;font color=&amp;quot;red&amp;quot;&amp;gt;int&amp;lt;/font&amp;gt;, y &amp;lt;font color=&amp;quot;red&amp;quot;&amp;gt;int&amp;lt;/font&amp;gt;) &amp;lt;font color=&amp;quot;red&amp;quot;&amp;gt;int&amp;lt;/font&amp;gt;の赤文字のように、
+型が変数名の後ろにくるhttp://go-tour-jp.appspot.com/#6
+package main import &amp;#34;fmt&amp;#34; func add(x int, y int) int { return x + y } func main() { fmt.Println(add(42, 13)) } 上記のfunc add(x &amp;lt;font color=&amp;quot;red&amp;quot;&amp;gt;int&amp;lt;/font&amp;gt;, y &amp;lt;font color=&amp;quot;red&amp;quot;&amp;gt;int&amp;lt;/font&amp;gt;) &amp;lt;font color=&amp;quot;red&amp;quot;&amp;gt;int&amp;lt;/font&amp;gt;の赤文字のように、
 型が変数x,yの後ろに来ているのがわかります。
 また、上記のように (x int, y int)と型がxとyの型が同じ場合、 (x, y int)とまとめることができます。
-複数の戻り値を返せる http://go-tour-jp.appspot.com/#8
-package main import &amp;quot;fmt&amp;quot; func swap(x, y string) (string, string) { return y, x } func main() { a, b := swap(&amp;quot;hello&amp;quot;, &amp;quot;world&amp;quot;) fmt.</description>
-    </item>
-    
-  </channel>
-</rss>
+複数の戻り値を返せるhttp://go-tour-jp.appspot.com/#8
+package main import &amp;#34;fmt&amp;#34; func swap(x, y string) (string, string) { return y, x } func main() { a, b := swap(&amp;#34;hello&amp;#34;, &amp;#34;world&amp;#34;) fmt.</description></item></channel></rss>

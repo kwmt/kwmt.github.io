@@ -1,49 +1,18 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
-  <channel>
-    <title>Go on Androg</title>
-    <link>https://kwmt27.net/categories/go/</link>
-    <description>Recent content in Go on Androg</description>
-    <generator>Hugo -- gohugo.io</generator>
-    <language>ja</language>
-    <lastBuildDate>Thu, 26 Mar 2020 00:20:00 +0900</lastBuildDate>
-    
-	<atom:link href="https://kwmt27.net/categories/go/index.xml" rel="self" type="application/rss+xml" />
-    
-    
-    <item>
-      <title>dep(Go dependency tool)を自作ライブラリに使ってみた</title>
-      <link>https://kwmt27.net/2020/03/26/i-tried-to-use-dep-in-my-library/</link>
-      <pubDate>Thu, 26 Mar 2020 00:20:00 +0900</pubDate>
-      
-      <guid>https://kwmt27.net/2020/03/26/i-tried-to-use-dep-in-my-library/</guid>
-      <description>はじめに 1個だけの外部ライブラリに依存している（超かんたんな）自作ライブラリgithub.com/kwmt/combineを例に、depコマンドを使ってみた内容をメモしておこうと思います。
-基本的な使い方 インストールと初期化 depのインストールは、プロジェクトルートに移動して、go getします。
-$ cd $GOPATH/src/github.com/kwmt/combine $ go get -u github.com/golang/dep/...  次のコマンドで初期化します。
-$ dep init  でgithubログインを促されましたが、manifest.jsonとlock.jsonが作成されます。1
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Go on Androg</title><link>https://kwmt27.net/categories/go/</link><description>Recent content in Go on Androg</description><generator>Hugo -- gohugo.io</generator><language>ja</language><lastBuildDate>Thu, 26 Mar 2020 00:20:00 +0900</lastBuildDate><atom:link href="https://kwmt27.net/categories/go/index.xml" rel="self" type="application/rss+xml"/><item><title>dep(Go dependency tool)を自作ライブラリに使ってみた</title><link>https://kwmt27.net/2020/03/26/i-tried-to-use-dep-in-my-library/</link><pubDate>Thu, 26 Mar 2020 00:20:00 +0900</pubDate><guid>https://kwmt27.net/2020/03/26/i-tried-to-use-dep-in-my-library/</guid><description>はじめに1個だけの外部ライブラリに依存している（超かんたんな）自作ライブラリgithub.com/kwmt/combineを例に、depコマンドを使ってみた内容をメモしておこうと思います。
+基本的な使い方インストールと初期化depのインストールは、プロジェクトルートに移動して、go getします。
+$ cd $GOPATH/src/github.com/kwmt/combine $ go get -u github.com/golang/dep/... 次のコマンドで初期化します。
+$ dep init でgithubログインを促されましたが、manifest.jsonとlock.jsonが作成されます。1
 このとき、すでに依存ライブラリを見つけてくれていて、下記のように依存ライブラリが記述されています。2
-{ &amp;quot;dependencies&amp;quot;: { &amp;quot;github.com/kwmt/go-utils&amp;quot;: { &amp;quot;branch&amp;quot;: &amp;quot;master&amp;quot; } } }  { &amp;quot;memo&amp;quot;: &amp;quot;&amp;quot;, &amp;quot;projects&amp;quot;: [ { &amp;quot;name&amp;quot;: &amp;quot;github.com/kwmt/go-utils&amp;quot;, &amp;quot;branch&amp;quot;: &amp;quot;master&amp;quot;, &amp;quot;revision&amp;quot;: &amp;quot;7431874e8437574169c0fb50e811d790fc1ed2ab&amp;quot;, &amp;quot;packages&amp;quot;: [ &amp;quot;.&amp;quot; ] } ] }  依存ライブラリのダウンロード ここまでではまだ依存ライブラリはダウンロードされてないので、
-$ dep ensure -update  とします。するとvendorディレクトリが作成されて、そのなかに依存ライブラリがダウンロードされます
-$ ls vendor/github.com/kwmt/ go-utils  状態を確認 dep statusコマンドは、プロジェクトの依存関係の状態を見ることが出来ます。</description>
-    </item>
-    
-    <item>
-      <title>Go Modulesで簡単バージョン管理</title>
-      <link>https://kwmt27.net/2020/03/26/easy-version-control-with-go-modules/</link>
-      <pubDate>Thu, 26 Mar 2020 00:12:00 +0900</pubDate>
-      
-      <guid>https://kwmt27.net/2020/03/26/easy-version-control-with-go-modules/</guid>
-      <description>はじめに go1.11からGo Modulesというのがサポートされていたので、簡単に使い方をご紹介します。
+{ &amp;#34;dependencies&amp;#34;: { &amp;#34;github.com/kwmt/go-utils&amp;#34;: { &amp;#34;branch&amp;#34;: &amp;#34;master&amp;#34; } } } { &amp;#34;memo&amp;#34;: &amp;#34;&amp;#34;, &amp;#34;projects&amp;#34;: [ { &amp;#34;name&amp;#34;: &amp;#34;github.com/kwmt/go-utils&amp;#34;, &amp;#34;branch&amp;#34;: &amp;#34;master&amp;#34;, &amp;#34;revision&amp;#34;: &amp;#34;7431874e8437574169c0fb50e811d790fc1ed2ab&amp;#34;, &amp;#34;packages&amp;#34;: [ &amp;#34;.&amp;#34; ] } ] } 依存ライブラリのダウンロードここまでではまだ依存ライブラリはダウンロードされてないので、
+$ dep ensure -update とします。するとvendorディレクトリが作成されて、そのなかに依存ライブラリがダウンロードされます
+$ ls vendor/github.com/kwmt/ go-utils 状態を確認dep statusコマンドは、プロジェクトの依存関係の状態を見ることが出来ます。
+$ dep status PROJECT CONSTRAINT VERSION REVISION LATEST PKGS USED github.com/kwmt/go-utils branch master branch master 7431874 7431874 1 おまけ-vオプションで詳細なログを出力$ dep init -v dep: Finding dependencies for &amp;#34;github.</description></item><item><title>Go Modulesで簡単バージョン管理</title><link>https://kwmt27.net/2020/03/26/easy-version-control-with-go-modules/</link><pubDate>Thu, 26 Mar 2020 00:12:00 +0900</pubDate><guid>https://kwmt27.net/2020/03/26/easy-version-control-with-go-modules/</guid><description>はじめにgo1.11からGo Modulesというのがサポートされていたので、簡単に使い方をご紹介します。
 これは簡単に言うとバージョン管理ツールです。 Go 1.11時点ではexperimentalで、最終的にGo1.13で取り込まれるようです。
-package main import ( &amp;quot;fmt&amp;quot; &amp;quot;rsc.io/quote&amp;quot; ) func main() { fmt.Println(quote.Hello()) }  という&amp;rdquo;rsc.io/quote&amp;rdquo;に依存したプログラムがあるとき、go buildとすると自動的にgo getしてくれるというものです。
-使い方 例として、GOPATHに次のプロジェクトを作成した前提で、使い方を見ていきます。
-$ mkdir -p $GOPATH/github.com/kwmt/gomod-sample $ cd $GOPATH/github.com/kwmt/gomod-sample  まず、go modコマンドというのがあるのですが、そのコマンドを使うためには、GO111MODULEという環境変数をonに設定する必要があります。
-export GO111MODULE=on  次にgo mod initで初期化します。
-% go mod init github.com/kwmt/gomod-sample go: creating new go.mod: module github.com/kwmt/gomod-sample  すると、go.modというファイルが作成されます。
-% ls go.mod  ちなみに、go.modファイルの中身は下記のようになっています。
-module github.com/kwmt/gomod-sample  Quick Startにあるように、下記のような&amp;ldquo;rsc.io/quote&amp;rdquo;というライブラリに依存したプログラムhello.goを作成します。
-% cat &amp;lt;&amp;lt;EOF &amp;gt; hello.go package main import ( &amp;quot;fmt&amp;quot; &amp;quot;rsc.</description>
-    </item>
-    
-  </channel>
-</rss>
+package main import ( &amp;#34;fmt&amp;#34; &amp;#34;rsc.io/quote&amp;#34; ) func main() { fmt.Println(quote.Hello()) } という&amp;quot;rsc.io/quote&amp;quot;に依存したプログラムがあるとき、go buildとすると自動的にgo getしてくれるというものです。
+使い方例として、GOPATHに次のプロジェクトを作成した前提で、使い方を見ていきます。
+$ mkdir -p $GOPATH/github.com/kwmt/gomod-sample $ cd $GOPATH/github.com/kwmt/gomod-sample まず、go modコマンドというのがあるのですが、そのコマンドを使うためには、GO111MODULEという環境変数をonに設定する必要があります。
+export GO111MODULE=on 次にgo mod initで初期化します。
+% go mod init github.com/kwmt/gomod-sample go: creating new go.mod: module github.com/kwmt/gomod-sample すると、go.modというファイルが作成されます。
+% ls go.mod ちなみに、go.modファイルの中身は下記のようになっています。
+module github.com/kwmt/gomod-sample Quick Startにあるように、下記のような&amp;ldquo;rsc.io/quote&amp;rdquo;というライブラリに依存したプログラムhello.goを作成します。
+% cat &amp;lt;&amp;lt;EOF &amp;gt; hello.go package main import ( &amp;#34;fmt&amp;#34; &amp;#34;rsc.io/quote&amp;#34; ) func main() { fmt.</description></item></channel></rss>

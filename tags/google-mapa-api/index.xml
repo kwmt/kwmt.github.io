@@ -1,29 +1,6 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
-  <channel>
-    <title>Google Mapa Api on Androg</title>
-    <link>https://kwmt27.net/tags/google-mapa-api/</link>
-    <description>Recent content in Google Mapa Api on Androg</description>
-    <generator>Hugo -- gohugo.io</generator>
-    <language>ja</language>
-    <lastBuildDate>Wed, 30 Jan 2013 00:00:00 +0000</lastBuildDate>
-    
-	<atom:link href="https://kwmt27.net/tags/google-mapa-api/index.xml" rel="self" type="application/rss+xml" />
-    
-    
-    <item>
-      <title>【Google Maps API v3】情報ウィンドウをクリックした時、何か処理させるには？</title>
-      <link>https://kwmt27.net/index.php/2013/01/30/google-maps-api-v3%E6%83%85%E5%A0%B1%E3%82%A6%E3%82%A3%E3%83%B3%E3%83%89%E3%82%A6%E3%82%92%E3%82%AF%E3%83%AA%E3%83%83%E3%82%AF%E3%81%97%E3%81%9F%E6%99%82%E4%BD%95%E3%81%8B/</link>
-      <pubDate>Wed, 30 Jan 2013 00:00:00 +0000</pubDate>
-      
-      <guid>https://kwmt27.net/index.php/2013/01/30/google-maps-api-v3%E6%83%85%E5%A0%B1%E3%82%A6%E3%82%A3%E3%83%B3%E3%83%89%E3%82%A6%E3%82%92%E3%82%AF%E3%83%AA%E3%83%83%E3%82%AF%E3%81%97%E3%81%9F%E6%99%82%E4%BD%95%E3%81%8B/</guid>
-      <description>はじめに Google Maps API v3を触っていて、マーカーをクリックしたときに何か処理させる方法は結構書かれているのですが、
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Google Mapa API on Androg</title><link>https://kwmt27.net/tags/google-mapa-api/</link><description>Recent content in Google Mapa API on Androg</description><generator>Hugo -- gohugo.io</generator><language>ja</language><lastBuildDate>Wed, 30 Jan 2013 00:00:00 +0000</lastBuildDate><atom:link href="https://kwmt27.net/tags/google-mapa-api/index.xml" rel="self" type="application/rss+xml"/><item><title>【Google Maps API v3】情報ウィンドウをクリックした時、何か処理させるには？</title><link>https://kwmt27.net/index.php/2013/01/30/google-maps-api-v3%E6%83%85%E5%A0%B1%E3%82%A6%E3%82%A3%E3%83%B3%E3%83%89%E3%82%A6%E3%82%92%E3%82%AF%E3%83%AA%E3%83%83%E3%82%AF%E3%81%97%E3%81%9F%E6%99%82%E4%BD%95%E3%81%8B/</link><pubDate>Wed, 30 Jan 2013 00:00:00 +0000</pubDate><guid>https://kwmt27.net/index.php/2013/01/30/google-maps-api-v3%E6%83%85%E5%A0%B1%E3%82%A6%E3%82%A3%E3%83%B3%E3%83%89%E3%82%A6%E3%82%92%E3%82%AF%E3%83%AA%E3%83%83%E3%82%AF%E3%81%97%E3%81%9F%E6%99%82%E4%BD%95%E3%81%8B/</guid><description>はじめにGoogle Maps API v3を触っていて、マーカーをクリックしたときに何か処理させる方法は結構書かれているのですが、
 情報ウィンドウ(google.maps.InfoWindow())をクリックした時に何か処理させる方法が日本語ではあまり見つけれれなかったので、メモします。
-したいこと ここで一番やりたいことはタイトルどおりですが、下記のプログラムで何をしたいかを書いておくと、
- マップのロード時に複数の地点（ここでは4地点）にマーカーを置く それぞれのマーカーをクリックすると、情報ウィンドウを表示させる 情報ウィンドウに書かれている文字列をクリックすると、そのクリックした位置の周りがよく見えるようにある程度ズームする  と、こんな感じです。
- 参考 上記のプログラムは、stackoverflowをめっちゃ参考にしてます。このstackoverflowではInfoBoxの例もあります。InfoBoxとは、情報ウィンドウのように吹き出しタイプではなくて、
-単なる四角のテキストボックスのようなものを作れるライブラリです。</description>
-    </item>
-    
-  </channel>
-</rss>
+したいことここで一番やりたいことはタイトルどおりですが、下記のプログラムで何をしたいかを書いておくと、
+マップのロード時に複数の地点（ここでは4地点）にマーカーを置く それぞれのマーカーをクリックすると、情報ウィンドウを表示させる 情報ウィンドウに書かれている文字列をクリックすると、そのクリックした位置の周りがよく見えるようにある程度ズームする と、こんな感じです。
+参考上記のプログラムは、stackoverflowをめっちゃ参考にしてます。このstackoverflowではInfoBoxの例もあります。InfoBoxとは、情報ウィンドウのように吹き出しタイプではなくて、
+単なる四角のテキストボックスのようなものを作れるライブラリです。</description></item></channel></rss>
