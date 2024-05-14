@@ -40,7 +40,7 @@ index 2b056cd..fbdf4a7 100644 --- a/app/src/main/java/com/scwang/refreshlayout/f
 on Thu, Jul 20, 2017</span></div></div></div></div></header><article><div class=container><div class=row><div class="col-lg-8 col-lg-offset-2
 col-md-10 col-md-offset-1
 post-container"><h2 id=はじめに>はじめに<a class=anchorjs-link href=#%e3%81%af%e3%81%98%e3%82%81%e3%81%ab></a></h2><p>モバもく会という、モバイルに関連したもくもく会を開催しました。
-一人はOpenSourceにプルリクを投げたり、一人は読書をしていました。</p><p>僕は、2017/07/17の時点のTrending in open sourceのAndroidに関係ある上位３つのサンプルをうごかしてみたのですが、そのときのまとめです。(※android-interview-questionsは除外しています)</p><p><a href="https://github.com/trending/java?since=weekly" target=_blank>https://github.com/trending/java?since=weekly</a></p><h2 id=smartrefreshlayout>SmartRefreshLayout<a class=anchorjs-link href=#smartrefreshlayout></a></h2><p><a href=https://github.com/scwang90/SmartRefreshLayout target=_blank>https://github.com/scwang90/SmartRefreshLayout</a></p><p>Pull to refreshのいい感じのライブラリです。
+一人はOpenSourceにプルリクを投げたり、一人は読書をしていました。</p><p>僕は、2017/07/17の時点のTrending in open sourceのAndroidに関係ある上位３つのサンプルをうごかしてみたのですが、そのときのまとめです。(※android-interview-questionsは除外しています)</p><p><a href="https://github.com/trending/java?since=weekly" target=_blank>https://github.com/trending/java?since=weekly</a></p><figure><img src=/images/2017/07/mobamock/trending.png></figure><h2 id=smartrefreshlayout>SmartRefreshLayout<a class=anchorjs-link href=#smartrefreshlayout></a></h2><p><a href=https://github.com/scwang90/SmartRefreshLayout target=_blank>https://github.com/scwang90/SmartRefreshLayout</a></p><p>Pull to refreshのいい感じのライブラリです。
 動きはReadmeに書かれてるので見てみてください。</p><p>基本的には<code>RecyclerView</code>を<code>SmartRefreshLayout</code>で包めばよいだけのようです。</p><pre tabindex=0><code>&lt;android.support.v7.widget.Toolbar 
 style=&#34;@style/AppTheme.Toolbar&#34;
         android:id=&#34;@+id/toolbar&#34;
@@ -59,7 +59,7 @@ style=&#34;@style/AppTheme.Toolbar&#34;
             android:background=&#34;@android:color/white&#34;
             tools:listitem=&#34;@android:layout/simple_list_item_2&#34;/&gt;
     &lt;/com.scwang.smartrefresh.layout.SmartRefreshLayout&gt;
-</code></pre><p>サンプル動かしてみました。</p><p>「下拉可以刷新」などの中国語で書かれてるところを変更したいなぁと思ってソースを見てみました。</p><p></p><p>こちらを見る限り、おそらく<code>mHeaderText</code>にセットすればいいのかなぁと思ってみてたら、<code>mHeaderText</code>に外から自由にセットできるメソッドがないっぽい。。</p><pre tabindex=0><code>public static String REFRESH_HEADER_PULLDOWN = &#34;下拉可以刷新&#34;;
+</code></pre><p>サンプル動かしてみました。</p><figure><img src=/images/2017/07/mobamock/before.png width=300></figure><p>「下拉可以刷新」などの中国語で書かれてるところを変更したいなぁと思ってソースを見てみました。</p><p></p><p>こちらを見る限り、おそらく<code>mHeaderText</code>にセットすればいいのかなぁと思ってみてたら、<code>mHeaderText</code>に外から自由にセットできるメソッドがないっぽい。。</p><pre tabindex=0><code>public static String REFRESH_HEADER_PULLDOWN = &#34;下拉可以刷新&#34;;
 </code></pre><p>とpublic static Stringでfinalではなかったので、直接書き換えてみたところ、</p><pre tabindex=0><code>index 2b056cd..fbdf4a7 100644
 --- a/app/src/main/java/com/scwang/refreshlayout/fragment/RefreshStylesFragment.java
 +++ b/app/src/main/java/com/scwang/refreshlayout/fragment/RefreshStylesFragment.java
@@ -71,7 +71,7 @@ style=&#34;@style/AppTheme.Toolbar&#34;
  
          View view = root.findViewById(recyclerView);
          if (view instanceof RecyclerView) {
-</code></pre><p>下記のように変更出来ました。</p><p>Pull to refreshとは直接関係ありません、サンプルソースを見ていてこれは使っていきたいなぁと思ったのが、</p><p>enum TabFragmentとして列挙型としている点です。</p><p>たまたま「現場で役立つシステム設計の原則」という本の中で　~区分オブジェクト~ として紹介されてることでしたので、Androidなどではこのように使うといいのかと一つ勉強になりました。
+</code></pre><p>下記のように変更出来ました。</p><figure><img src=/images/2017/07/mobamock/after.png width=300></figure><p>Pull to refreshとは直接関係ありません、サンプルソースを見ていてこれは使っていきたいなぁと思ったのが、</p><p>enum TabFragmentとして列挙型としている点です。</p><p>たまたま「現場で役立つシステム設計の原則」という本の中で　~区分オブジェクト~ として紹介されてることでしたので、Androidなどではこのように使うといいのかと一つ勉強になりました。
 タブで使われるフラグメントが一覧でわかりやすく、タブを追加したいときも容易に追加できそうなことがわかります。</p><p>あと、Android Studioの使い方ですが、下図にあるように、
 <code>//&lt;editor-fold desc="background"></code>や<code>//&lt;editor-fold desc="API"></code>とコメントがあるのが気になりました。</p><p><code>editor-fold</code> とあるので、使い方はなんとなく想像つくと思うのですが、</p><p>折りたたむとこうなりました。
 メソッド単位で折りたためるのは知っていたのですが、</p><pre tabindex=0><code>//&lt;editor-fold desc=&#34;background&#34;&gt;
