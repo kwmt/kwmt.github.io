@@ -160,7 +160,7 @@ post-container"><h1 id=はじめに>はじめに<a class=anchorjs-link href=#%e3
 </span></span><span style=display:flex><span>        }
 </span></span><span style=display:flex><span>    }
 </span></span><span style=display:flex><span>}
-</span></span></code></pre></div><p>次のようにレイアウトされ、</p><p>上記で仕込んだログは次のようになります。</p><pre tabindex=0><code>D/MyOwnColumn: maxWidth:1080, maxHeight:1977
+</span></span></code></pre></div><p>次のようにレイアウトされ、</p><figure><img src=/images/2021/02/layout/myowncolumn_complete.png width=300></figure><p>上記で仕込んだログは次のようになります。</p><pre tabindex=0><code>D/MyOwnColumn: maxWidth:1080, maxHeight:1977
 D/MyOwnColumn: yPosition:0
 D/MyOwnColumn: placeable.height:52
 D/MyOwnColumn: yPosition:52
@@ -170,7 +170,7 @@ D/MyOwnColumn: placeable.height:52
 D/MyOwnColumn: yPosition:156
 D/MyOwnColumn: placeable.height:52
 D/MyOwnColumn: yPosition:208
-</code></pre><p>ちなみに、標準の<code>Column</code>の場合は次のようになります。</p><h3 id=複雑なカスタムレイアウト>複雑なカスタムレイアウト<a class=anchorjs-link href=#%e8%a4%87%e9%9b%91%e3%81%aa%e3%82%ab%e3%82%b9%e3%82%bf%e3%83%a0%e3%83%ac%e3%82%a4%e3%82%a2%e3%82%a6%e3%83%88></a></h3><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-kotlin data-lang=kotlin><span style=display:flex><span><span style=color:#a6e22e>@Composable</span>
+</code></pre><p>ちなみに、標準の<code>Column</code>の場合は次のようになります。</p><figure><img src=/images/2021/02/layout/column.png width=300></figure><h3 id=複雑なカスタムレイアウト>複雑なカスタムレイアウト<a class=anchorjs-link href=#%e8%a4%87%e9%9b%91%e3%81%aa%e3%82%ab%e3%82%b9%e3%82%bf%e3%83%a0%e3%83%ac%e3%82%a4%e3%82%a2%e3%82%a6%e3%83%88></a></h3><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-kotlin data-lang=kotlin><span style=display:flex><span><span style=color:#a6e22e>@Composable</span>
 </span></span><span style=display:flex><span><span style=color:#66d9ef>fun</span> <span style=color:#a6e22e>StaggeredGrid</span>(
 </span></span><span style=display:flex><span>    modifier: Modifier = Modifier,
 </span></span><span style=display:flex><span>    rows: Int = <span style=color:#ae81ff>3</span>,
