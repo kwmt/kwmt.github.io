@@ -5,7 +5,9 @@
 <span class=icon-bar></span>
 <span class=icon-bar></span></button>
 <a class=navbar-brand href=https://kwmt27.net/>Androg</a></div><div id=huxblog_navbar><div class=navbar-collapse><ul class="nav navbar-nav navbar-right"><li class=search-icon><a href=javascript:void(0)><i class="fa fa-search"></i></a></li></ul></div></div></div></nav><script>var $body=document.body,$toggle=document.querySelector(".navbar-toggle"),$navbar=document.querySelector("#huxblog_navbar"),$collapse=document.querySelector(".navbar-collapse"),__HuxNav__={close:function(){$navbar.className=" ",setTimeout(function(){$navbar.className.indexOf("in")<0&&($collapse.style.height="0px")},400)},open:function(){$collapse.style.height="auto",$navbar.className+=" in"}};$toggle.addEventListener("click",function(){$navbar.className.indexOf("in")>0?__HuxNav__.close():__HuxNav__.open()}),document.addEventListener("click",function(e){if(e.target==$toggle)return;if(e.target.className=="icon-bar")return;__HuxNav__.close()})</script><div class=search-page><div class=search-icon-close-container><span class=search-icon-close><i class="fa fa-chevron-down"></i></span></div><div class="search-main container"><div class=row><div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1"><form></form><input type=text id=search-input placeholder="$ grep..."></form><div id=search-results class=mini-post-list></div></div></div></div></div><header class="intro-header style-text"><div class=container><div class=row><div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1"><div class=site-heading><h1>Androg</h1><span class=subheading></span></div></div></div></div></header><div class=container><div class=row><div class="col-lg-8 col-lg-offset-1 col-md-8 col-md-offset-1 col-sm-12
-col-xs-12 postlist-container"><div class=post-preview><a href=/index.php/2015/12/31/looking-back-2015/><h2 class=post-title>2015年の振り返り</h2><div class=post-content-preview>昨年に引き続き、今年で3回目の振り返りを書いておこう。
+col-xs-12 postlist-container"><div class=post-preview><a href=/2016/02/07/wordpress-to-hugo/><h2 class=post-title>WordpressからHugoに移行した時のメモ</h2><div class=post-content-preview>WordpressからHugoに移行してみたので、そのときやったメモを残しておこうかと思います。
+おおまかにやったこととしては以下です。
+WordpressからHugoに変換 Github Pagesでホスティング GithubにプッシュでWerker CIを使って自動ビルド&amp;amp;デプロイ Wordpressの記事をHugoのマークダウンに変 …</div></a><p class=post-meta>Posted by on Sun, Feb 7, 2016</p></div><hr><div class=post-preview><a href=/index.php/2015/12/31/looking-back-2015/><h2 class=post-title>2015年の振り返り</h2><div class=post-content-preview>昨年に引き続き、今年で3回目の振り返りを書いておこう。
 ふりかえり仕事開発2014年半ばぐらいからはじまった新規iOSアプリ案件(Tアプリ)。この案件からswiftで開発し始めました。たしかswift1.0だったかな。
 このときはswiftが初めてだったし、iOSもこの案件の前にobjcでpush通知周りをちょろっと書いたぐらいだったので、昨年の今の時期も仕 …</div></a><p class=post-meta>Posted by kwmt on Thu, Dec 31, 2015</p></div><hr><div class=post-preview><a href=/index.php/2015/06/23/gocon-2015-summer/><h2 class=post-title>GoCon 2015 summer 参加メモ。</h2><div class=post-content-preview>GoCon 2015 summer イベントページhttp://gocon.connpass.com/event/14063/
 GoCon資料まとめhttp://qiita.com/t-sato/items/a5d1a309733e765533ce
@@ -27,9 +29,7 @@ Keynote Androidはぬいて説明
 詳しく …</div></a><p class=post-meta>Posted by kwmt on Tue, Dec 9, 2014</p></div><hr><div class=post-preview><a href=/index.php/2014/11/19/notice_when_install_android_wearable_apps/><h2 class=post-title>android wear appのインストール時の注意点</h2><div class=post-content-preview>開発時（といいますか、デバッグキーを使ってビルドしている時）は、携帯端末とWearable端末に別々にインストールしないと、携帯端末だけにインストールしても自動的にWearable端末にインストールされません。
 リリースキーを使って署名している場合は、自動的にインストールされます。
 参考Install the Wearable App</div></a><p class=post-meta>Posted by kwmt on Wed, Nov 19, 2014</p></div><hr><div class=post-preview><a href=/index.php/2014/11/10/how-to-use-twitter-fabric-sdk-with-android-studio/><h2 class=post-title>TwitterのFabric SDKをAndroid Studioで使ってみる</h2><div class=post-content-preview>はじめにひさびさTwitterをつかってアプリつくろうと思ってディベロッパーサイトに行ったら、fabric?????とか出てきてなんじゃこれ？と思って調べてたら、10/22(現地時間)に発表されたTwitterのモバイル向け新SDKとやららしい。
-Twitter、モバイルアプリ向け新SDK「Fabric」発表　パスワード不要の次世代認証「Digits」リリー …</div></a><p class=post-meta>Posted by kwmt on Mon, Nov 10, 2014</p></div><hr><div class=post-preview><a href=/index.php/2014/10/01/cannot-create-connections-in-xcode6-storyboard/><h2 class=post-title>xcode で controlを押しながら接続出来ない場合の対処方法</h2><div class=post-content-preview>現象TableViewなどのViewをcontrol押しながら、ヘッダーファイルにドラッグしても、うんともすんともないことがある。
-原因ViewControllerとクラスが対応付けがされてないため。
-対処ViewControllerを選択し、”Show the identity inspection”をクリックし、Custom Classで対応付けたいクラ …</div></a><p class=post-meta>Posted by kwmt on Wed, Oct 1, 2014</p></div><hr><ul class=pager><li class=previous><a href=/page/13/>&larr; Newer Posts</a></li><li class=next><a href=/page/15/>Older Posts &rarr;</a></li></ul></div><div class="col-lg-3 col-lg-offset-0 col-md-3 col-md-offset-0 col-sm-12
+Twitter、モバイルアプリ向け新SDK「Fabric」発表　パスワード不要の次世代認証「Digits」リリー …</div></a><p class=post-meta>Posted by kwmt on Mon, Nov 10, 2014</p></div><hr><ul class=pager><li class=previous><a href=/page/13/>&larr; Newer Posts</a></li><li class=next><a href=/page/15/>Older Posts &rarr;</a></li></ul></div><div class="col-lg-3 col-lg-offset-0 col-md-3 col-md-offset-0 col-sm-12
 col-xs-12 sidebar-container"><section><h5>FEATURED TAGS</h5><div class=tags><a href=/tags/1.2/>1.2</a>
 <a href=/tags/1.2-rc1/>1.2 rc1</a>
 <a href=/tags/adb/>adb</a>
@@ -199,6 +199,7 @@ col-xs-12 sidebar-container"><section><h5>FEATURED TAGS</h5><div class=tags><a h
 <a href=/tags/%E6%8C%AF%E3%82%8A%E8%BF%94%E3%82%8A/>振り返り</a>
 <a href=/tags/%E6%97%85%E8%A1%8C%E8%A8%98/>旅行記</a>
 <a href=/tags/%E6%97%A5%E8%A8%98/>日記</a>
+<a href=/tags/%E6%A5%AD%E5%8B%99%E5%A4%96%E6%B4%BB%E5%8B%95/>業務外活動</a>
 <a href=/tags/%E6%A9%9F%E4%BC%9A%E5%AD%A6%E7%BF%92/>機会学習</a>
 <a href=/tags/%E6%A9%9F%E6%A2%B0%E5%AD%A6%E7%BF%92/>機械学習</a>
 <a href=/tags/%E7%99%BB%E5%A3%87/>登壇</a>
@@ -211,7 +212,7 @@ col-xs-12 sidebar-container"><section><h5>FEATURED TAGS</h5><div class=tags><a h
 <i class="fab fa-github fa-stack-1x fa-inverse"></i></span></a></li><li><a href=https://twitter.com/yasi_kawamoto target=_blank><span class="fa-stack fa-lg"><i class="fa fa-circle fa-stack-2x"></i>
 <i class="fab fa-twitter fa-stack-1x fa-inverse"></i></span></a></li></ul></div></section></div></div></div><footer><div class=container><div class=row><div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1"><ul class="list-inline text-center"><li><a href=https://github.com/kwmt target=_blank><span class="fa-stack fa-lg"><i class="fa fa-circle fa-stack-2x"></i>
 <i class="fab fa-github fa-stack-1x fa-inverse"></i></span></a></li><li><a href=https://twitter.com/yasi_kawamoto target=_blank><span class="fa-stack fa-lg"><i class="fa fa-circle fa-stack-2x"></i>
-<i class="fab fa-twitter fa-stack-1x fa-inverse"></i></span></a></li></ul><p class="copyright text-muted">Copyright &copy; Androg 2024<br>Powered by <a href=https://gohugo.io>Hugo</a></p></div></div></div></footer><script src=/js/jquery.min.js></script>
+<i class="fab fa-twitter fa-stack-1x fa-inverse"></i></span></a></li></ul><p class="copyright text-muted">Copyright &copy; Androg 2025<br>Powered by <a href=https://gohugo.io>Hugo</a></p></div></div></div></footer><script src=/js/jquery.min.js></script>
 <script src=/js/bootstrap.min.js crossorigin=anonymous></script>
 <script src=/js/hux-blog.min.c4ea77041cd3edbfc8b2622cd887a9a5d8760a4162d14489e36d2a3fa4c90172.js></script>
 <script src=/js/simple-jekyll-search.min.js></script>
